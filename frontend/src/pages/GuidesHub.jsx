@@ -579,7 +579,7 @@ function CountryCard({ country }) {
         </div>
 
         <p className="text-blue-400 group-hover:text-blue-300 font-medium text-sm">
-          Ver información completa →
+          {t('guides.seeFullInfo')} →
         </p>
       </div>
 

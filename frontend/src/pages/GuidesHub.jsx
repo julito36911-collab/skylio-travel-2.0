@@ -371,7 +371,7 @@ function Section({ title, items, highlight = false }) {
   );
 }
 
-// Grid para restricciones de conducción
+// Grid para restricciones de conducción (agrupado por país)
 function DrivingGrid({ cities }) {
   const { t } = useTranslation();
 
@@ -383,10 +383,66 @@ function DrivingGrid({ cities }) {
     );
   }
 
+  // Agrupar ciudades por país
+  const citiesByCountry = cities.reduce((acc, city) => {
+    if (!acc[city.country]) {
+      acc[city.country] = {
+        cities: [],
+        flag: city.flag,
+        continent: city.continent || 'Europa'
+      };
+    }
+    acc[city.country].cities.push(city);
+    return acc;
+  }, {});
+
+  // Agrupar países por continente
+  const countriesByContinent = Object.entries(citiesByCountry).reduce((acc, [country, data]) => {
+    const continent = data.continent;
+    if (!acc[continent]) {
+      acc[continent] = [];
+    }
+    acc[continent].push({ country, ...data });
+    return acc;
+  }, {});
+
+  // Ordenar continentes
+  const continentOrder = ['Europa', 'Europe', 'América', 'Americas', 'Asia', 'África', 'Africa', 'Oceanía', 'Oceania'];
+  const sortedContinents = Object.keys(countriesByContinent).sort((a, b) => {
+    return continentOrder.indexOf(a) - continentOrder.indexOf(b);
+  });
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {cities.map(city => (
-        <DrivingCard key={city.id} city={city} />
+    <div className="space-y-8">
+      {sortedContinents.map(continent => (
+        <div key={continent}>
+          {/* Título del continente */}
+          <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <span className="text-4xl">🌍</span>
+            {continent}
+          </h2>
+          
+          {/* Países del continente */}
+          <div className="space-y-6">
+            {countriesByContinent[continent].map(({ country, flag, cities: countryCities }) => (
+              <div key={country}>
+                {/* Título del país */}
+                <h3 className="text-xl font-semibold text-blue-300 mb-4 flex items-center gap-2">
+                  <span className="text-2xl">{flag}</span>
+                  {country}
+                  <span className="text-sm text-gray-400">({countryCities.length} {countryCities.length === 1 ? 'ciudad' : 'ciudades'})</span>
+                </h3>
+                
+                {/* Grid de ciudades */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-6">
+                  {countryCities.map(city => (
+                    <DrivingCard key={city.id} city={city} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   );

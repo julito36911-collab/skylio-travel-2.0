@@ -10,8 +10,9 @@
     "profile": "Perfil"
   },
   "categories": {
-    "flights": "Vuelos",
+    "travel_search": "Búsquedas de Viaje",
     "hotels": "Hoteles & Paquetes",
+    "luxury": "Lujo & Yates",
     "mobility": "Movilidad",
     "connectivity": "Conectividad",
     "experiences": "Experiencias",

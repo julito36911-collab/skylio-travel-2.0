@@ -12,16 +12,18 @@ function GuidesHub() {
   // Filtrar destinos por continente y búsqueda
   const filteredDestinations = mustSeeDestinations.filter(dest => {
     const matchesContinent = selectedContinent === 'all' || dest.continent === selectedContinent;
-    const matchesSearch = dest.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          dest.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          dest.country.toLowerCase().includes(searchQuery.toLowerCase());
+    const lowerQuery = searchQuery.toLowerCase();
+    const matchesSearch = (dest.name || '').toLowerCase().includes(lowerQuery) ||
+                          (dest.city || '').toLowerCase().includes(lowerQuery) ||
+                          (dest.country || '').toLowerCase().includes(lowerQuery);
     return matchesContinent && matchesSearch;
   });
 
   // Filtrar restricciones de conducción
   const filteredDriving = drivingRestrictions.filter(city => {
-    return city.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-           city.country.toLowerCase().includes(searchQuery.toLowerCase());
+    const lowerQuery = searchQuery.toLowerCase();
+    return (city.name || '').toLowerCase().includes(lowerQuery) ||
+           (city.country || '').toLowerCase().includes(lowerQuery);
   });
 
   return (

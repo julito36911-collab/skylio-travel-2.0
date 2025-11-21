@@ -192,7 +192,21 @@
     "foodTips": "טיפים לאוכל",
     "highlights": "אטרקציות מרכזיות",
     "safety": "בטיחות",
-    "safetyLevel": "רמה:"
+    "safetyLevel": "רמה:",
+    "mustKnow": "חובה לדעת",
+    "whatToDo": "מה לעשות",
+    "howToGetThere": "איך להגיע",
+    "prices": "מחירים",
+    "nearbyPlaces": "מקומות קרובים",
+    "importantTips": "טיפים חשובים",
+    "accessibility": "נגישות",
+    "duration": "משך זמן",
+    "drivingDetails": "פרטים",
+    "alternatives": "אלטרנטיבות",
+    "tips": "טיפים",
+    "howToPay": "איך לשלם",
+    "activeRestrictions": "הגבלות פעילות",
+    "trafficRestrictions": "הגבלות תנועה ב"
   },
   "common": {
     "back": "חזור"

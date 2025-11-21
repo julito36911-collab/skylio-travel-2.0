@@ -163,6 +163,9 @@ function App() {
           />
         </div>
 
+        {/* BUSCADOR DE PARKINGS */}
+        <ParkingFinder />
+
         {/* SECCIÓN DE GUÍAS DE VIAJE */}
         <section className="mb-8">
           <div 

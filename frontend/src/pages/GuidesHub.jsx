@@ -648,12 +648,12 @@ function CountryModal({ country, onClose }) {
           {/* Visa */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              🛂 Requisitos de Visa
+              🛂 {t('guides.visaRequirements')}
             </h3>
             <p className="text-gray-300">{country.visa.requirements}</p>
             {country.visa.schengen && (
               <span className="inline-block mt-2 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">
-                Zona Schengen
+                {t('guides.schengenZone')}
               </span>
             )}
           </div>
@@ -661,12 +661,12 @@ function CountryModal({ country, onClose }) {
           {/* Mejor época */}
           <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-2xl p-5 border border-yellow-500/20">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              ☀️ Mejor Época para Visitar
+              ☀️ {t('guides.bestTimeToVisit')}
             </h3>
             <div className="space-y-2 text-gray-300">
-              <p><span className="font-semibold text-yellow-300">Temporada alta:</span> {country.bestTime.high}</p>
-              <p><span className="font-semibold text-green-300">Media:</span> {country.bestTime.shoulder}</p>
-              <p><span className="font-semibold text-blue-300">Baja:</span> {country.bestTime.low}</p>
+              <p><span className="font-semibold text-yellow-300">{t('guides.highSeason')}</span> {country.bestTime.high}</p>
+              <p><span className="font-semibold text-green-300">{t('guides.midSeason')}</span> {country.bestTime.shoulder}</p>
+              <p><span className="font-semibold text-blue-300">{t('guides.lowSeason')}</span> {country.bestTime.low}</p>
               <p className="text-sm italic mt-2">💡 {country.bestTime.notes}</p>
             </div>
           </div>
@@ -674,40 +674,40 @@ function CountryModal({ country, onClose }) {
           {/* Presupuesto */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              💵 Presupuesto Diario
+              💵 {t('guides.dailyBudget')}
             </h3>
             <div className="space-y-2 text-gray-300">
-              <p><span className="font-semibold text-green-400">Bajo:</span> {country.budget.low}</p>
-              <p><span className="font-semibold text-yellow-400">Medio:</span> {country.budget.medium}</p>
-              <p><span className="font-semibold text-red-400">Alto:</span> {country.budget.high}</p>
+              <p><span className="font-semibold text-green-400">{t('guides.low')}</span> {country.budget.low}</p>
+              <p><span className="font-semibold text-yellow-400">{t('guides.medium')}</span> {country.budget.medium}</p>
+              <p><span className="font-semibold text-red-400">{t('guides.high')}</span> {country.budget.high}</p>
             </div>
           </div>
 
           {/* Información práctica */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              🔌 Información Práctica
+              🔌 {t('guides.practicalInfo')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-300 text-sm">
-              <div><span className="font-semibold">Voltaje:</span> {country.practical.voltage}</div>
-              <div><span className="font-semibold">Enchufe:</span> {country.practical.plugType}</div>
-              <div><span className="font-semibold">Emergencia:</span> {country.practical.emergency}</div>
-              <div><span className="font-semibold">Propina:</span> {country.practical.tipping}</div>
-              <div><span className="font-semibold">Regateo:</span> {country.practical.bargaining}</div>
+              <div><span className="font-semibold">{t('guides.voltage')}</span> {country.practical.voltage}</div>
+              <div><span className="font-semibold">{t('guides.plug')}</span> {country.practical.plugType}</div>
+              <div><span className="font-semibold">{t('guides.emergency')}</span> {country.practical.emergency}</div>
+              <div><span className="font-semibold">{t('guides.tipping')}</span> {country.practical.tipping}</div>
+              <div><span className="font-semibold">{t('guides.bargaining')}</span> {country.practical.bargaining}</div>
             </div>
           </div>
 
           {/* Cultura */}
-          <CountrySection title="🎭 Cultura y Tradiciones" items={country.culture.traditions} />
-          <CountrySection title="🎉 Festivales Importantes" items={country.culture.festivals} />
-          <CountrySection title="🤝 Etiqueta" items={country.culture.etiquette} highlight={true} />
+          <CountrySection title={`🎭 ${t('guides.cultureAndTraditions')}`} items={country.culture.traditions} />
+          <CountrySection title={`🎉 ${t('guides.importantFestivals')}`} items={country.culture.festivals} />
+          <CountrySection title={`🤝 ${t('guides.etiquette')}`} items={country.culture.etiquette} highlight={true} />
 
           {/* Comida */}
-          <CountrySection title="🍽️ Comida Típica (Debes Probar)" items={country.food.mustTry} />
-          <CountrySection title="💡 Tips de Comida" items={country.food.foodTips} />
+          <CountrySection title={`🍽️ ${t('guides.typicalFood')}`} items={country.food.mustTry} />
+          <CountrySection title={`💡 ${t('guides.foodTips')}`} items={country.food.foodTips} />
 
           {/* Lugares destacados */}
-          <CountrySection title="⭐ Lugares Destacados" items={country.highlights} />
+          <CountrySection title={`⭐ ${t('guides.highlights')}`} items={country.highlights} />
 
           {/* Seguridad */}
           <div className={`rounded-2xl p-5 border ${
@@ -716,10 +716,10 @@ function CountryModal({ country, onClose }) {
               : 'bg-yellow-500/10 border-yellow-500/30'
           }`}>
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              🛡️ Seguridad
+              🛡️ {t('guides.safety')}
             </h3>
             <p className="text-lg font-semibold mb-3 text-gray-200">
-              Nivel: {country.safety.level}
+              {t('guides.safetyLevel')} {country.safety.level}
             </p>
             {country.safety.warnings && country.safety.warnings.length > 0 && (
               <ul className="space-y-2">

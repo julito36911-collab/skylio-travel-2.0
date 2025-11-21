@@ -10,8 +10,9 @@
     "profile": "פרופיל"
   },
   "categories": {
-    "flights": "טיסות",
+    "travel_search": "חיפוש נסיעות",
     "hotels": "מלונות וחבילות",
+    "luxury": "יוקרה ויאכטות",
     "mobility": "ניידות",
     "connectivity": "קישוריות",
     "experiences": "חוויות",

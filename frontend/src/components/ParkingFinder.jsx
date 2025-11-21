@@ -13,10 +13,12 @@ function ParkingFinder() {
       return;
     }
 
-    // Formato correcto para Google Maps search
-    // Opción 1: Búsqueda simple de parking cerca del destino
-    const searchQuery = `parking near ${destination}`;
-    const parkingUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`;
+    // Formato correcto para Google Maps search con múltiples opciones
+    // Opción 1: Usar el formato más simple y confiable
+    const searchQuery = `parking ${destination}`;
+    
+    // Construir URL con el formato correcto de Google Maps
+    const parkingUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}`;
     
     // Abrir en nueva pestaña
     window.open(parkingUrl, '_blank', 'noopener,noreferrer');

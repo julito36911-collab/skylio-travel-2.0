@@ -2,45 +2,71 @@ import { useState, useEffect } from 'react';
 import { Newspaper, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-// IMPORTANTE: Reemplaza con tu API Key de NewsAPI.org (OPCIONAL - La función está desactivada por defecto)
-const API_KEY = '';
-const ENABLE_NEWS = false; // Cambiar a true cuando tengas API key
+// CONFIGURACIÓN DE NEWSAPI
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY || '';
+const ENABLE_NEWS = !!API_KEY; // Se activa automáticamente si hay API key
+const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 horas
+
+// FILTROS INTELIGENTES POR IDIOMA
+const KEYWORDS = {
+  es: '(viajes OR turismo OR vacaciones) AND (destinos OR aerolíneas OR hoteles OR vuelos OR aeropuerto OR pasajeros)',
+  en: '(travel OR tourism OR vacation) AND (destination OR airlines OR hotels OR flights OR airport)',
+  he: 'נסיעות OR יעד OR תיירות OR חברות תעופה OR בתי מלון OR טיסות OR חופשה'
+};
 
 const NewsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!ENABLE_NEWS || !API_KEY) {
+    if (!ENABLE_NEWS) {
       setLoading(false);
       return;
     }
 
     const fetchNews = async () => {
-      const cachedNews = localStorage.getItem('skylio_news_cache');
-      const cachedTime = localStorage.getItem('skylio_news_time');
-      const now = new Date().getTime();
+      const currentLanguage = i18n.language;
+      // Si el idioma es hebreo, buscar en inglés (más contenido disponible)
+      const searchLanguage = currentLanguage === 'he' ? 'en' : currentLanguage;
+      
+      // Verificar caché por idioma
+      const cacheKey = `skylio_news_${currentLanguage}`;
+      const cacheTimeKey = `skylio_news_time_${currentLanguage}`;
+      const cachedNews = localStorage.getItem(cacheKey);
+      const cachedTime = localStorage.getItem(cacheTimeKey);
+      const now = Date.now();
 
-      if (cachedNews && cachedTime && (now - cachedTime < 6 * 60 * 60 * 1000)) {
-          setNews(JSON.parse(cachedNews));
-          setLoading(false);
-          return;
+      // Si hay caché válido (menos de 6 horas), usarlo
+      if (cachedNews && cachedTime && (now - parseInt(cachedTime) < CACHE_DURATION)) {
+        console.log(`✅ Usando caché para idioma: ${currentLanguage}`);
+        setNews(JSON.parse(cachedNews));
+        setLoading(false);
+        return;
       }
 
       try {
-        const query = '(viaje OR turismo OR vacaciones) AND (destino OR hotel OR aerolínea) OR (travel OR tourism OR vacation) AND (destination OR hotel OR airline)';
-        const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=es&sortBy=publishedAt&pageSize=6&apiKey=${API_KEY}`;
+        console.log(`📡 Obteniendo noticias frescas para idioma: ${currentLanguage}`);
+        
+        const keywords = KEYWORDS[searchLanguage] || KEYWORDS.en;
+        const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(keywords)}&language=${searchLanguage}&sortBy=publishedAt&pageSize=8&apiKey=${API_KEY}`;
         
         const response = await fetch(url);
         const data = await response.json();
 
-        if (data.status === 'ok') {
-          const validArticles = data.articles.filter(article => article.urlToImage && article.title && article.description).slice(0, 6);
+        if (data.status === 'ok' && data.articles) {
+          // Filtrar artículos válidos (con imagen, título y descripción)
+          const validArticles = data.articles
+            .filter(article => article.urlToImage && article.title && article.description)
+            .slice(0, 6);
+          
+          console.log(`✅ ${validArticles.length} noticias guardadas en caché para ${currentLanguage}`);
+          
           setNews(validArticles);
-          localStorage.setItem('skylio_news_cache', JSON.stringify(validArticles));
-          localStorage.setItem('skylio_news_time', now);
+          // Guardar en caché por idioma
+          localStorage.setItem(cacheKey, JSON.stringify(validArticles));
+          localStorage.setItem(cacheTimeKey, now.toString());
         } else {
           throw new Error(data.message || 'Error al obtener noticias');
         }
@@ -53,7 +79,7 @@ const NewsSection = () => {
     };
 
     fetchNews();
-  }, []);
+  }, [i18n.language]); // Re-fetch cuando cambia el idioma
 
   if (!ENABLE_NEWS || error) return null;
 

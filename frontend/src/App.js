@@ -57,6 +57,7 @@ const GlassCard = ({ partner, className = '', children, tall = false, onClick })
 function App() {
   const { t } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
+  const [showGuidesHub, setShowGuidesHub] = useState(false);
 
   const handleCardClick = (partner) => {
     if (partner.type === 'widget' || partner.type.startsWith('search_')) {

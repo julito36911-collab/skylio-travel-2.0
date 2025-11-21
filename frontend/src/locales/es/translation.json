@@ -210,6 +210,22 @@
     "city": "ciudad",
     "cities": "ciudades"
   },
+  "cities": {
+    "title": "Ciudades",
+    "publicTransport": "Transporte Público",
+    "transportTypes": "Tipos de Transporte",
+    "howToBuyTickets": "Cómo Comprar Tickets",
+    "prices": "Precios",
+    "officialMaps": "Mapas Oficiales",
+    "usefulApps": "Apps Útiles",
+    "commonScams": "Estafas Comunes",
+    "tips": "Consejos Prácticos",
+    "downloadMap": "Descargar Mapa",
+    "viewOfficialSite": "Ver Sitio Oficial",
+    "topAttractions": "Atracciones Principales",
+    "neighborhoods": "Barrios Importantes",
+    "climate": "Clima"
+  },
   "parking": {
     "title": "Encuentra Parking Seguro",
     "subtitle": "Busca estacionamientos confiables cerca de tu destino",

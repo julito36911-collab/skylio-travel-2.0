@@ -206,7 +206,9 @@
     "tips": "Tips",
     "howToPay": "How to Pay",
     "activeRestrictions": "Active Restrictions",
-    "trafficRestrictions": "Traffic restrictions in"
+    "trafficRestrictions": "Traffic restrictions in",
+    "city": "city",
+    "cities": "cities"
   },
   "common": {
     "back": "Back"

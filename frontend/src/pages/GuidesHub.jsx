@@ -290,14 +290,14 @@ function DestinationModal({ destination, onClose }) {
           </div>
 
           {/* Datos esenciales */}
-          <Section title="📌 Debes Saber" items={destination.mustKnow} />
+          <Section title={`📌 ${t('guides.mustKnow')}`} items={destination.mustKnow} />
 
           {/* Qué hacer */}
-          <Section title="✨ Qué Hacer" items={destination.whatToDo} />
+          <Section title={`✨ ${t('guides.whatToDo')}`} items={destination.whatToDo} />
 
           {/* Cómo llegar */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">🚌 Cómo Llegar</h3>
+            <h3 className="text-xl font-bold text-white mb-4">🚌 {t('guides.howToGetThere')}</h3>
             <div className="space-y-2">
               {Object.entries(destination.howToGetThere).map(([key, value]) => (
                 <p key={key} className="text-gray-300">

@@ -10,9 +10,13 @@
     "profile": "Profile"
   },
   "categories": {
+    "flights": "Flights",
+    "hotels": "Hotels & Packages",
     "mobility": "Mobility",
     "connectivity": "Connectivity",
+    "experiences": "Experiences",
     "essentials": "Essentials",
+    "more_services": "More Services",
     "travel_essentials": "Travel Essentials",
     "latest_news": "Latest Travel News"
   },

@@ -761,9 +761,1171 @@ export const mustSeeDestinations = [
     
     weather: { temp: 28, condition: 'Caluroso', icon: '☀️' },
     lastUpdated: '2025-11-20'
-  }
+  },
 
-  // Continuará con más destinos en próximo bloque...
+  // ===== ASIA =====
+  {
+    id: 'taj-mahal',
+    name: 'Taj Mahal',
+    city: 'Agra',
+    country: 'India',
+    continent: 'Asia',
+    flag: '🇮🇳',
+    coordinates: { lat: 27.1751, lon: 78.0421 },
+    category: 'Monumento Histórico',
+    
+    description: 'Mausoleo de mármol blanco construido 1632-1653 por emperador Shah Jahan para su esposa Mumtaz Mahal. Obra maestra del arte mogol.',
+    
+    mustKnow: [
+      'Construido 1632-1653 (22 años)',
+      '20,000 trabajadores',
+      'Mármol blanco con incrustaciones de piedras preciosas',
+      'Patrimonio UNESCO desde 1983',
+      'Una de las 7 Maravillas del Mundo Moderno',
+      'Cambia de color según luz del día'
+    ],
+    
+    whatToDo: [
+      'Ver al amanecer (luz dorada increíble)',
+      'Jardines mogoles (Charbagh)',
+      'Mezquita y Casa de Huéspedes laterales',
+      'Río Yamuna (vista trasera)',
+      'Fuerte de Agra (2 km)',
+      'Fotos desde Mehtab Bagh (jardín cruzando río)'
+    ],
+    
+    howToGetThere: {
+      train: 'Delhi → Agra: 2-3h (Gatimaan Express recomendado)',
+      car: 'Delhi por autopista: 3-4h (230 km)',
+      flight: 'No hay aeropuerto comercial en Agra',
+      local: 'Auto-rickshaw o taxi desde estación'
+    },
+    
+    tickets: {
+      foreigner: '₹1,100 (~$13)',
+      indian: '₹50',
+      free: 'Menores 15 años',
+      booking: 'Online o taquilla (filas)',
+      closed: 'Viernes (mezquita activa)',
+      url: 'https://www.tajmahal.gov.in'
+    },
+    
+    bestTime: {
+      season: 'Oct-marzo (clima fresco)',
+      timeOfDay: 'Amanecer (6 AM) - mágico',
+      avoid: 'Abril-junio (45°C+), monzón julio-sept'
+    },
+    
+    nearby: [
+      'Fuerte de Agra',
+      'Fatehpur Sikri (40 km)',
+      'Tumba de Itimad-ud-Daulah (Baby Taj)',
+      'Mehtab Bagh (vista del Taj)',
+      'Delhi (230 km) y Jaipur (240 km)'
+    ],
+    
+    tips: [
+      'Ve al AMANECER (menos gente, mejor luz)',
+      'Prohibido comida, trípodes, drones',
+      'Cubrezapatos incluidos (mármol)',
+      'Contrata guía (₹500-1000, vale la pena)',
+      'Cuidado con estafadores fuera',
+      'Lleva solo lo básico (seguridad estricta)',
+      'Luna llena = apertura nocturna especial'
+    ],
+    
+    accessibility: 'Rampa y silla de ruedas disponible. Piso de mármol liso.',
+    duration: '2-3 horas',
+    
+    weather: { temp: 22, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'gran-muralla-china',
+    name: 'Gran Muralla China',
+    city: 'Pekín',
+    country: 'China',
+    continent: 'Asia',
+    flag: '🇨🇳',
+    coordinates: { lat: 40.4319, lon: 116.5704 },
+    category: 'Monumento Histórico',
+    
+    description: 'Sistema de fortificaciones de 21,000 km construido desde siglo VII a.C. hasta siglo XVII. La estructura humana más larga del mundo.',
+    
+    mustKnow: [
+      'Más de 21,000 km de longitud total',
+      'Construida durante 2,000+ años',
+      'Dinastía Ming (1368-1644) construyó mayoría actual',
+      'Patrimonio UNESCO desde 1987',
+      'No visible desde el espacio (mito)',
+      'Secciones más visitadas cerca de Pekín'
+    ],
+    
+    whatToDo: [
+      'Badaling (más turística, accesible)',
+      'Mutianyu (menos gente, tobogán)',
+      'Jinshanling (hiking, fotogénica)',
+      'Simatai (nocturna, iluminada)',
+      'Jiankou (salvaje, NO restaurada)',
+      'Huanghuacheng (muralla en agua)'
+    ],
+    
+    howToGetThere: {
+      badaling: 'Tren S2 desde Pekín Norte (1.5h, ¥6)',
+      mutianyu: 'Bus 916 + taxi, o tour (2h)',
+      tour: 'Tours desde Pekín $40-80',
+      car: 'Taxi privado (negociar precio)'
+    },
+    
+    tickets: {
+      badaling: '¥40 (~$5.5) + teleférico ¥140',
+      mutianyu: '¥45 + teleférico/tobogán ¥120',
+      jinshanling: '¥65',
+      simatai_night: '¥150 (especial)'
+    },
+    
+    bestTime: {
+      season: 'Abril-mayo u sept-oct',
+      timeOfDay: 'Mañana temprano (evitar multitudes)',
+      avoid: 'Feriados chinos (Año Nuevo, Golden Week)'
+    },
+    
+    nearby: [
+      'Ciudad Prohibida',
+      'Templo del Cielo',
+      'Palacio de Verano',
+      'Tumbas Ming',
+      'Hutongs de Pekín'
+    ],
+    
+    tips: [
+      'Mutianyu > Badaling (menos gente, más bonito)',
+      'Lleva agua y snacks (limitado en muralla)',
+      'Zapatos cómodos (escaleras empinadas)',
+      'Puede hacer frío en invierno (-10°C)',
+      'Secciones salvajes PELIGROSAS (Jiankou)',
+      'Tobogán en Mutianyu = diversión',
+      'Evita feriados chinos (enjambre humano)',
+      'Contrata tour o ve en transporte público'
+    ],
+    
+    accessibility: 'Badaling accesible. Otras secciones NO (escaleras empinadas).',
+    duration: '3-4 horas (más viaje ida/vuelta)',
+    
+    weather: { temp: 10, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'angkor-wat',
+    name: 'Angkor Wat',
+    city: 'Siem Reap',
+    country: 'Camboya',
+    continent: 'Asia',
+    flag: '🇰🇭',
+    coordinates: { lat: 13.4125, lon: 103.8670 },
+    category: 'Templo / Arqueología',
+    
+    description: 'Complejo de templos jemer del siglo XII. El monumento religioso más grande del mundo, símbolo de Camboya.',
+    
+    mustKnow: [
+      'Construido siglo XII por rey Suryavarman II',
+      'Dedicado a dios Vishnu',
+      'Monumento religioso MÁS GRANDE del mundo',
+      'Patrimonio UNESCO desde 1992',
+      '400+ templos en complejo Angkor',
+      'Mejor ejemplo de arquitectura jemer'
+    ],
+    
+    whatToDo: [
+      'Amanecer en Angkor Wat (ICÓNICO)',
+      'Angkor Thom y Bayon (caras gigantes)',
+      'Ta Prohm (templo con árboles, Tomb Raider)',
+      'Banteay Srei (tallas detalladas)',
+      'Circuito pequeño (1 día)',
+      'Circuito grande (2-3 días)'
+    ],
+    
+    howToGetThere: {
+      flight: 'Siem Reap International Airport',
+      tuk_tuk: '$15-20/día (forma más común)',
+      bike: '$2/día (solo si tienes energía)',
+      car: '$30-50/día con conductor',
+      from_town: '6 km de Siem Reap'
+    },
+    
+    tickets: {
+      one_day: '$37',
+      three_day: '$62 (uso en 10 días)',
+      seven_day: '$72 (uso en 1 mes)',
+      sunrise: 'Incluido (llega 5 AM)',
+      booking: 'Compra en taquilla con foto'
+    },
+    
+    bestTime: {
+      season: 'Nov-marzo (seco, fresco)',
+      timeOfDay: 'Amanecer 5:30 AM (Angkor Wat)',
+      avoid: 'Abril (45°C+), monzón junio-oct',
+      crowds: 'Evita feriados camboayanos'
+    },
+    
+    nearby: [
+      'Bayon (templo de caras)',
+      'Ta Prohm (árboles gigantes)',
+      'Banteay Srei',
+      'Tonlé Sap (lago flotante)',
+      'Pub Street Siem Reap (noche)'
+    ],
+    
+    tips: [
+      'Compra pase 3 días (vale la pena)',
+      'Contrata tuk-tuk por día ($15-20)',
+      'Amanecer en Angkor Wat = IMPERDIBLE',
+      'Lleva: agua, protector solar, sombrero',
+      'Dress code: hombros y rodillas cubiertos',
+      'Temprano menos calor y gente',
+      'Ta Prohm mejor 2-3 PM (luz)',
+      'Cuidado monos (roban comida)'
+    ],
+    
+    accessibility: 'Terreno irregular. Difícil silla de ruedas.',
+    duration: '3-4 días ideal (mínimo 1 día)',
+    
+    weather: { temp: 30, condition: 'Caluroso y húmedo', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'monte-fuji',
+    name: 'Monte Fuji',
+    city: 'Shizuoka / Yamanashi',
+    country: 'Japón',
+    continent: 'Asia',
+    flag: '🇯🇵',
+    coordinates: { lat: 35.3606, lon: 138.7274 },
+    category: 'Naturaleza / Montaña',
+    
+    description: 'Montaña sagrada y volcán activo de 3,776m. Símbolo de Japón, perfectamente simétrica, coronada de nieve.',
+    
+    mustKnow: [
+      'Altura: 3,776m (montaña más alta de Japón)',
+      'Volcán activo (última erupción 1707)',
+      'Patrimonio UNESCO desde 2013',
+      'Sagrada en sintoísmo y budismo',
+      'Escalable solo julio-agosto',
+      'Visible desde Tokio (100 km) en día claro'
+    ],
+    
+    whatToDo: [
+      'Escalada hasta la cima (julio-agosto)',
+      'Amanecer desde cumbre (Goraiko)',
+      '5ta estación (2,305m - accesible auto)',
+      'Lagos Fuji Five (Kawaguchi más popular)',
+      'Pagoda Chureito (foto icónica con Fuji)',
+      'Aokigahara Forest (bosque misterioso)'
+    ],
+    
+    howToGetThere: {
+      tokyo: 'Tren a Kawaguchiko (2h, ¥4,130) + bus',
+      bus: 'Shinjuku → 5ta estación (2.5h, ¥2,800)',
+      climbing: '5ta estación = punto de inicio',
+      best_view: 'Lago Kawaguchiko o Hakone'
+    },
+    
+    tickets: {
+      climbing_fee: '¥1,000 (voluntario pero esperado)',
+      fifth_station: 'Gratis',
+      hut_overnight: '¥8,000-12,000 (con comidas)',
+      kawaguchiko_ropeway: '¥900'
+    },
+    
+    bestTime: {
+      climbing: 'Julio-agosto SOLAMENTE',
+      viewing: 'Nov-feb (más despejado, nieve en cima)',
+      avoid: 'Junio-julio (temporada lluvias, nublado)',
+      cherry_blossom: 'Abril (Chureito pagoda con flores)'
+    },
+    
+    nearby: [
+      'Lagos Fuji Five',
+      'Hakone (onsen y vistas)',
+      'Pagoda Chureito',
+      'Aokigahara Forest',
+      'Gotemba Premium Outlets'
+    ],
+    
+    tips: [
+      'Escalada SOLO julio-agosto (resto cerrado/peligroso)',
+      'Ruta Yoshida (más popular)',
+      'Duerme en refugio de montaña (ver amanecer)',
+      'Lleva ropa abrigada (cima = 5°C verano)',
+      'Oxígeno limitado en cima',
+      'Bastón para sellos (recuerdo)',
+      'NO escales de noche sin experiencia',
+      'Para solo ver: Kawaguchiko perfecto'
+    ],
+    
+    accessibility: '5ta estación accesible. Escalada NO.',
+    duration: '6-10 horas subir + 3-5 bajar (o 2 días con pernocta)',
+    
+    weather: { temp: 5, condition: 'Frío en cima', icon: '🌤️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'petra',
+    name: 'Petra',
+    city: 'Wadi Musa',
+    country: 'Jordania',
+    continent: 'Asia',
+    flag: '🇯🇴',
+    coordinates: { lat: 30.3285, lon: 35.4444 },
+    category: 'Arqueología',
+    
+    description: 'Ciudad nabatea tallada en roca rosada ~300 a.C. "Ciudad Rosa" accesible por el Siq. Una de las 7 Maravillas del Mundo Moderno.',
+    
+    mustKnow: [
+      'Fundada por nabateos ~300 a.C.',
+      'Tallada completamente en roca',
+      'Redescubierta en 1812',
+      'Patrimonio UNESCO desde 1985',
+      'Una de las 7 Maravillas del Mundo Moderno',
+      'Más de 800 monumentos'
+    ],
+    
+    whatToDo: [
+      'Caminar por el Siq (cañón de 1.2 km)',
+      'El Tesoro (Al-Khazneh - icónico)',
+      'Calle de las Fachadas',
+      'Teatro Romano',
+      'Subir al Monasterio (800 escalones)',
+      'Petra by Night (velas, 3x semana)'
+    ],
+    
+    howToGetThere: {
+      amman: 'Bus JETT (3h, JD 10) o taxi privado',
+      aqaba: '2 horas (130 km)',
+      airport: 'Aeropuerto Queen Alia (Amman) más cercano',
+      town: 'Hoteles en Wadi Musa (caminando a entrada)'
+    },
+    
+    tickets: {
+      one_day: 'JD 50 (~$70) extranjeros',
+      two_day: 'JD 55',
+      three_day: 'JD 60',
+      jordan_pass: 'JD 70-80 (incluye visa + Petra 2-3 días)',
+      petra_night: 'JD 17 adicional'
+    },
+    
+    bestTime: {
+      season: 'Marzo-mayo o sept-nov',
+      timeOfDay: 'Amanecer (8 AM entrada, luz en Tesoro)',
+      avoid: 'Verano (40°C+ y sin sombra)'
+    },
+    
+    nearby: [
+      'Pequeña Petra',
+      'Wadi Rum (desierto, 1.5h)',
+      'Mar Muerto (3h)',
+      'Aqaba (playa, Mar Rojo)',
+      'Jerash (ruinas romanas)'
+    ],
+    
+    tips: [
+      'Compra Jordan Pass (ahorra dinero)',
+      'Llega temprano (9 AM ya está caliente)',
+      'Lleva MUCHA agua',
+      'Zapatos cómodos hiking',
+      'Monasterio = IMPERDIBLE (800 escalones)',
+      'Petra by Night bonito pero turístico',
+      'Burros/camellos disponibles (negocia precio)',
+      '2 días ideal para ver todo sin prisa'
+    ],
+    
+    accessibility: 'Entrada hasta Tesoro aceptable. Resto NO accesible (escaleras, terreno irregular).',
+    duration: '1 día mínimo (2 días ideal)',
+    
+    weather: { temp: 25, condition: 'Soleado y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== ÁFRICA =====
+  {
+    id: 'piramides-giza',
+    name: 'Pirámides de Giza',
+    city: 'El Cairo',
+    country: 'Egipto',
+    continent: 'África',
+    flag: '🇪🇬',
+    coordinates: { lat: 29.9792, lon: 31.1342 },
+    category: 'Arqueología',
+    
+    description: 'Únicas sobrevivientes de las 7 Maravillas del Mundo Antiguo. Pirámides de Keops, Kefrén y Micerinos (~2560 a.C.) y la Gran Esfinge.',
+    
+    mustKnow: [
+      'Construidas ~2560 a.C. (4,500+ años)',
+      'Gran Pirámide (Keops): 146m original',
+      'Única maravilla antigua que sobrevive',
+      'Patrimonio UNESCO desde 1979',
+      '2.3 millones de bloques de piedra',
+      'Esfinge: 73m largo, 20m alto'
+    ],
+    
+    whatToDo: [
+      'Explorar las 3 pirámides principales',
+      'Interior de Gran Pirámide (cámara del rey)',
+      'Gran Esfinge',
+      'Museo del Barco Solar',
+      'Paseo en camello (típico pero turístico)',
+      'Show luz y sonido nocturno'
+    ],
+    
+    howToGetThere: {
+      cairo: 'Uber/taxi desde centro (30-40 min)',
+      metro: 'M2 hasta Giza + micro/taxi',
+      bus: 'Bus 355 o 357 desde Tahrir',
+      tour: 'Tours desde hoteles ($40-60)'
+    },
+    
+    tickets: {
+      complex: 'EGP 540 (~$11)',
+      inside_kheops: 'EGP 900 adicional',
+      inside_khafre: 'EGP 100 adicional',
+      solar_boat: 'EGP 100',
+      student: '50% descuento con ISIC'
+    },
+    
+    bestTime: {
+      season: 'Nov-febrero (fresco)',
+      timeOfDay: 'Amanecer (8 AM) o atardecer',
+      avoid: 'Mayo-agosto (45°C+, insoportable)'
+    },
+    
+    nearby: [
+      'Saqqara (pirámide escalonada)',
+      'Memphis (antigua capital)',
+      'Museo Egipcio (Cairo)',
+      'Khan el-Khalili (bazar)',
+      'Cairo Islámico'
+    ],
+    
+    tips: [
+      'Ve TEMPRANO (8 AM, antes del calor)',
+      'Contrata guía oficial (evita estafadores)',
+      'Negocia TODO (camellos, recuerdos)',
+      'No aceptes "regalos gratis" (trampa)',
+      'Lleva agua, sombrero, protector solar',
+      'Interior de pirámides = claustrofóbico',
+      'Cuidado con vendedores agresivos',
+      'Dress modesto (respeto cultura)'
+    ],
+    
+    accessibility: 'Terreno de arena. Interior pirámides NO accesible (pasillos estrechos).',
+    duration: '3-4 horas (medio día)',
+    
+    weather: { temp: 20, condition: 'Templado y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'kilimanjaro',
+    name: 'Monte Kilimanjaro',
+    city: 'Moshi',
+    country: 'Tanzania',
+    continent: 'África',
+    flag: '🇹🇿',
+    coordinates: { lat: -3.0674, lon: 37.3556 },
+    category: 'Naturaleza / Montaña',
+    
+    description: 'Montaña más alta de África (5,895m). Volcán inactivo con glaciares en la cima. Escalable sin experiencia técnica.',
+    
+    mustKnow: [
+      'Altura: 5,895m (19,341 pies)',
+      'Montaña independiente más alta del mundo',
+      '3 conos volcánicos: Kibo, Mawenzi, Shira',
+      'Glaciares en cumbre (desapareciendo)',
+      'Patrimonio UNESCO',
+      'No requiere escalada técnica'
+    ],
+    
+    whatToDo: [
+      'Escalada a Uhuru Peak (cima)',
+      'Ruta Marangu (5-6 días)',
+      'Ruta Machame (6-7 días, más escénica)',
+      'Ruta Lemosho (7-8 días, mejor aclimatación)',
+      'Safari en Arusha después',
+      'Visitar plantaciones de café en Moshi'
+    ],
+    
+    howToGetThere: {
+      flight: 'Kilimanjaro Airport (JRO)',
+      moshi: 'Base town, hoteles y operadores',
+      arusha: '1.5h de Moshi (alternativa)',
+      tanzania_visa: '$50-100 en llegada'
+    },
+    
+    tickets: {
+      park_fees: '$800-900 (solo fees, 6 días)',
+      total_climb: '$1,500-3,000 (incluye guía, porteadores, comida)',
+      mandatory: 'Guía obligatorio (no puedes ir solo)',
+      tip: '$200-300 propinas esperadas (guías/porteadores)'
+    },
+    
+    bestTime: {
+      season: 'Enero-marzo o junio-octubre (seco)',
+      avoid: 'Abril-mayo (lluvias fuertes)',
+      summit_night: '-20°C en cima'
+    },
+    
+    nearby: [
+      'Parque Nacional Arusha',
+      'Cráter Ngorongoro',
+      'Serengeti',
+      'Lago Manyara',
+      'Zanzibar (post-escalada descanso)'
+    ],
+    
+    tips: [
+      'Entrena 3-6 meses antes (cardio)',
+      'Aclimatación = clave del éxito (60-70% llegan)',
+      'Rutas más largas = mejor aclimatación',
+      'Machame más bonita que Marangu',
+      'Lleva ropa térmica (-20°C en cima)',
+      'Mal de altura es REAL (pole pole = despacio)',
+      'Diamox ayuda (consulta médico)',
+      'Propina guías es obligatoria culturalmente'
+    ],
+    
+    accessibility: 'NO accesible. Requiere buena condición física.',
+    duration: '5-8 días según ruta',
+    
+    weather: { temp: -10, condition: 'Frío en cima', icon: '❄️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'cataratas-victoria',
+    name: 'Cataratas Victoria',
+    city: 'Livingstone / Victoria Falls',
+    country: 'Zambia / Zimbabue',
+    continent: 'África',
+    flag: '🇿🇲🇿🇼',
+    coordinates: { lat: -17.9244, lon: 25.8567 },
+    category: 'Naturaleza',
+    
+    description: 'Una de las cataratas más grandes del mundo. 1,708m de ancho, 108m de altura. "El Humo que Truena" (nombre local).',
+    
+    mustKnow: [
+      'Ancho: 1,708m | Alto: 108m',
+      'Río Zambeze',
+      'Patrimonio UNESCO',
+      'Descubiertas (occidentales) por Livingstone 1855',
+      'Mayor caudal: marzo-mayo',
+      'Menor: nov-dic (pero mejor para ver)',
+      'Nombre local: Mosi-oa-Tunya'
+    ],
+    
+    whatToDo: [
+      'Caminar por senderos (lado Zambia o Zimbabue)',
+      'Devil\'s Pool (piscina al borde, sept-dic)',
+      'Bungee jumping desde puente (111m)',
+      'Rafting río Zambeze (rápidos clase V)',
+      'Vuelo en helicóptero ($160)',
+      'Sunset cruise en río'
+    ],
+    
+    howToGetThere: {
+      flights: 'Aeropuerto Livingstone (Zambia) o Victoria Falls (Zimbabue)',
+      border: 'Puente entre países (fácil cruzar)',
+      from_town: 'Livingstone o Victoria Falls town'
+    },
+    
+    tickets: {
+      zambia: '$20 USD',
+      zimbabwe: '$30 USD',
+      both: '$50 (visa KAZA - ambos lados)',
+      devils_pool: '$130-150',
+      helicopter: '$160 (15 min)',
+      bungee: '$160'
+    },
+    
+    bestTime: {
+      season: 'Feb-mayo (máximo agua, mucho spray)',
+      low_water: 'Sept-dic (mejor para Devil\'s Pool)',
+      avoid: 'Agosto (muy seco, poco impresionante)'
+    },
+    
+    nearby: [
+      'Chobe National Park (Botsuana)',
+      'Hwange National Park (Zimbabue)',
+      'Livingstone town (museo)',
+      'Río Zambeze (safaris)',
+      'Puente Victoria Falls (histórico)'
+    ],
+    
+    tips: [
+      'Ve lado de Zambia Y Zimbabue (diferente vista)',
+      'Zimbabue = mejores vistas (70% de catarata)',
+      'Zambia = puedes nadar en Devil\'s Pool',
+      'Lleva impermeable (spray te empapa)',
+      'Mejor: feb-abril (más agua, más spray)',
+      'Helicóptero = experiencia increíble',
+      'Combina con safari en Chobe',
+      'Visa KAZA cubre ambos países'
+    ],
+    
+    accessibility: 'Senderos pavimentados lado Zimbabue. Zambia más irregular.',
+    duration: '2-3 horas ver cataratas, 2-3 días para actividades',
+    
+    weather: { temp: 28, condition: 'Caluroso', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'table-mountain',
+    name: 'Table Mountain',
+    city: 'Ciudad del Cabo',
+    country: 'Sudáfrica',
+    continent: 'África',
+    flag: '🇿🇦',
+    coordinates: { lat: -33.9628, lon: 18.4098 },
+    category: 'Naturaleza / Montaña',
+    
+    description: 'Montaña icónica de cima plana que domina Ciudad del Cabo. 1,085m de altura. Parte de las 7 Maravillas Naturales.',
+    
+    mustKnow: [
+      'Altura: 1,085m',
+      'Parte de las 7 Maravillas Naturales',
+      '3km de largo, 1.5km ancho (cima)',
+      'Teleférico rotatorio (360° vistas)',
+      'Fynbos (flora única)',
+      '"Mantel" de nubes característico'
+    ],
+    
+    whatToDo: [
+      'Subir en teleférico (5 min)',
+      'Hiking: Platteklip Gorge (2-3h subida)',
+      'Vistas 360° de Ciudad del Cabo',
+      'Comer en restaurante de cima',
+      'Lion\'s Head (montaña vecina, hiking)',
+      'Sunset desde la cima'
+    ],
+    
+    howToGetThere: {
+      cable_car: 'Lower Cableway Station',
+      uber: '15 min desde centro ($5-8)',
+      bus: 'MyCiTi bus Route 110',
+      hiking: 'Varios senderos desde ciudad'
+    },
+    
+    tickets: {
+      return_cable: 'R 430 (~$23) adulto',
+      one_way: 'R 240 (si bajas caminando)',
+      online: '15% descuento comprando online',
+      table_mountain_pass: 'R 550 (subidas ilimitadas 7 días)'
+    },
+    
+    bestTime: {
+      season: 'Oct-marzo (verano)',
+      timeOfDay: 'Mañana temprano (menos viento) o sunset',
+      avoid: 'Invierno (junio-agosto) = mucho viento y cerrado'
+    },
+    
+    nearby: [
+      'V&A Waterfront',
+      'Robben Island (prisión Mandela)',
+      'Cabo de Buena Esperanza',
+      'Camps Bay (playa)',
+      'Boulders Beach (pingüinos)'
+    ],
+    
+    tips: [
+      'Compra ticket online (descuento + evita fila)',
+      'Ve temprano (menos viento, mejor para teleférico)',
+      '"Mantel" de nubes = cerrado (check webcam)',
+      'Lleva chamarra (frío y viento arriba)',
+      'Si haces hiking: agua, protector solar',
+      'Teleférico cierra con viento fuerte',
+      'Sunset increíble (reserva ticket tarde)',
+      'Combina con pingüinos en Boulders Beach'
+    ],
+    
+    accessibility: 'Teleférico accesible. Hiking NO.',
+    duration: '2-3 horas (con teleférico), 4-5h (hiking)',
+    
+    weather: { temp: 18, condition: 'Ventoso', icon: '🌤️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'serengeti',
+    name: 'Parque Nacional Serengeti',
+    city: 'Arusha',
+    country: 'Tanzania',
+    continent: 'África',
+    flag: '🇹🇿',
+    coordinates: { lat: -2.3333, lon: 34.8333 },
+    category: 'Naturaleza / Safari',
+    
+    description: 'Ecosistema de 30,000 km² famoso por la Gran Migración (2 millones de animales). Safari africano por excelencia.',
+    
+    mustKnow: [
+      '30,000 km² de sabana',
+      'Gran Migración: 2 millones ñus + cebras',
+      'Big Five: león, leopardo, elefante, búfalo, rinoceronte',
+      'Patrimonio UNESCO',
+      '3,000+ leones',
+      'Significado: "llanuras sin fin" (maasai)'
+    ],
+    
+    whatToDo: [
+      'Game drive (safari en 4x4)',
+      'Gran Migración (junio-julio)',
+      'Hot air balloon safari ($599)',
+      'Cruce del río (julio-agosto)',
+      'Visitar Maasai village',
+      'Ngorongoro Crater (combo)'
+    ],
+    
+    howToGetThere: {
+      flight: 'Kilimanjaro Airport → Arusha',
+      drive: 'Arusha → Serengeti (6-8h)',
+      fly_in: 'Vuelos chárter a pistas en parque',
+      combo: 'Ruta: Arusha → Ngorongoro → Serengeti'
+    },
+    
+    tickets: {
+      entry: '$70/día (extranjero adulto)',
+      vehicle: '$40/día',
+      total_safari: '$2,000-5,000 (3-5 días todo incluido)',
+      balloon: '$599',
+      camping: '$30-50 (público) | $200-1,000 (lodges)'
+    },
+    
+    bestTime: {
+      migration: 'Junio-julio (cruce río Grumeti)',
+      calving: 'Enero-febrero (nacimientos)',
+      dry: 'Junio-octubre (mejor para ver animales)',
+      avoid: 'Marzo-mayo (temporada lluvias, difícil acceso)'
+    },
+    
+    nearby: [
+      'Cráter Ngorongoro (IMPERDIBLE)',
+      'Garganta Olduvai (cuna humanidad)',
+      'Lago Manyara',
+      'Tarangire National Park',
+      'Zanzibar (después del safari)'
+    ],
+    
+    tips: [
+      'Mínimo 3 días para Serengeti',
+      'Combina con Ngorongoro (mejor ruta)',
+      'Balloon safari = CARO pero increíble',
+      'Gran Migración = timing específico',
+      'Lleva: binoculares, zoom camera, protector solar',
+      'Alojamiento: lodges > camping (comodidad)',
+      'Guía/conductor hace la diferencia',
+      'Enero-feb = nacimientos (depredadores activos)'
+    ],
+    
+    accessibility: 'Safaris adaptables para movilidad reducida.',
+    duration: '3-7 días ideal',
+    
+    weather: { temp: 25, condition: 'Cálido', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== OCEANÍA =====
+  {
+    id: 'opera-sydney',
+    name: 'Ópera de Sídney',
+    city: 'Sídney',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -33.8568, lon: 151.2153 },
+    category: 'Arquitectura',
+    
+    description: 'Obra maestra arquitectónica de 1973 con techo de velas icónico. Centro de artes escénicas más famoso del mundo.',
+    
+    mustKnow: [
+      'Inaugurada en 1973',
+      'Diseñada por Jørn Utzon',
+      'Patrimonio UNESCO desde 2007',
+      '1,056 "velas" de techo',
+      '10 años construcción (1963-1973)',
+      'Costo: $102 millones (presupuesto era $7M)'
+    ],
+    
+    whatToDo: [
+      'Tour guiado (1 hora)',
+      'Ver espectáculo (ópera, ballet, teatro)',
+      'Fotos desde Circular Quay',
+      'Cena en restaurantes (Bennelong)',
+      'Backstage tour',
+      'Vivid Sydney (mayo-junio, proyecciones)'
+    ],
+    
+    howToGetThere: {
+      train: 'Circular Quay station (5 min walk)',
+      ferry: 'Circular Quay (pintoresco)',
+      bus: 'Múltiples rutas',
+      walking: '15 min desde The Rocks'
+    },
+    
+    tickets: {
+      tour: 'A$ 42 (~$28)',
+      show: 'A$ 80-300 según evento',
+      backstage: 'A$ 175',
+      free: 'Caminar alrededor gratis'
+    },
+    
+    bestTime: {
+      season: 'Todo el año',
+      timeOfDay: 'Amanecer, atardecer, o noche iluminada',
+      special: 'Vivid Sydney (mayo-junio) = proyecciones'
+    },
+    
+    nearby: [
+      'Sydney Harbour Bridge',
+      'The Rocks (barrio histórico)',
+      'Royal Botanic Gardens',
+      'Circular Quay',
+      'Darling Harbour',
+      'Taronga Zoo'
+    ],
+    
+    tips: [
+      'Tour vale la pena (historia fascinante)',
+      'Reserva shows con anticipación',
+      'Fotos mejores desde Mrs Macquarie\'s Chair',
+      'Gratis caminar y ver exterior',
+      'Vivid Sydney = increíble (proyecciones)',
+      'Comer en Opera Bar (vistas)',
+      'Llega en ferry (vista icónica)',
+      'Combina con Bridge Climb'
+    ],
+    
+    accessibility: 'Completamente accesible.',
+    duration: '1-2 horas (tour) o 3-4h (show + cena)',
+    
+    weather: { temp: 22, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'gran-barrera-coral',
+    name: 'Gran Barrera de Coral',
+    city: 'Cairns / Whitsundays',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -18.2871, lon: 147.6992 },
+    category: 'Naturaleza / Marina',
+    
+    description: 'Sistema de arrecifes más grande del mundo. 2,300 km de largo, visible desde el espacio. Patrimonio en peligro.',
+    
+    mustKnow: [
+      '2,300 km de longitud',
+      'Sistema de arrecifes MÁS GRANDE del mundo',
+      '3,000 arrecifes individuales',
+      'Patrimonio UNESCO (en peligro)',
+      '900 islas',
+      'Visible desde el espacio',
+      'Amenazado por cambio climático'
+    ],
+    
+    whatToDo: [
+      'Snorkeling (mejor opción)',
+      'Buceo (PADI certificado)',
+      'Vuelo escénico en helicóptero',
+      'Great Barrier Reef Drive (isla Hamilton)',
+      'Heart Reef (corazón natural, solo aéreo)',
+      'Whitehaven Beach (arena blanca)'
+    ],
+    
+    howToGetThere: {
+      cairns: 'Base más popular (norte)',
+      port_douglas: '1h norte de Cairns (menos turístico)',
+      whitsundays: 'Airlie Beach (centro)',
+      boat: 'Tours diarios desde Cairns ($100-200)',
+      liveaboard: 'Cruceros 2-3 días ($500-1,000)'
+    },
+    
+    tickets: {
+      day_trip: 'A$ 150-250',
+      diving: 'A$ 80-150 extra',
+      scenic_flight: 'A$ 200-400',
+      liveaboard: 'A$ 600-1,500 (2-3 días)',
+      reef_tax: 'A$ 20 (conservación)'
+    },
+    
+    bestTime: {
+      season: 'Mayo-octubre (seco, mejor visibilidad)',
+      avoid: 'Nov-abril (temporada medusas, lluvias)',
+      water_temp: '22-28°C según temporada'
+    },
+    
+    nearby: [
+      'Cairns (ciudad base)',
+      'Daintree Rainforest',
+      'Kuranda (pueblo en montañas)',
+      'Islas Whitsundays',
+      'Whitehaven Beach'
+    ],
+    
+    tips: [
+      'Snorkeling > buceo (ambos ven igual)',
+      'Cairns = más opciones de tours',
+      'Port Douglas = menos gente',
+      'Lleva lycra/wetsuit (medusas nov-abril)',
+      'Dramamine si te mareas (mar puede ser bravo)',
+      'Vuelo escénico = CARO pero vale la pena',
+      'Liveaboard mejor para buceadores',
+      'Check clima (cancelan con mal tiempo)',
+      'Biodegradable sunscreen SOLAMENTE'
+    ],
+    
+    accessibility: 'Barcos adaptados disponibles. Snorkeling más accesible.',
+    duration: '1 día (tour) a 3 días (liveaboard)',
+    
+    weather: { temp: 26, condition: 'Tropical', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'milford-sound',
+    name: 'Milford Sound',
+    city: 'Fiordland',
+    country: 'Nueva Zelanda',
+    continent: 'Oceanía',
+    flag: '🇳🇿',
+    coordinates: { lat: -44.6719, lon: 168.6760 },
+    category: 'Naturaleza / Fiordo',
+    
+    description: 'Fiordo glaciar con acantilados de 1,200m, cascadas y vida marina. Llamado "octava maravilla del mundo" por Rudyard Kipling.',
+    
+    mustKnow: [
+      'Fiordo excavado por glaciares',
+      'Acantilados hasta 1,200m',
+      'Cascadas permanentes + cientos con lluvia',
+      'Patrimonio UNESCO (Fiordland)',
+      'Lluvias: 200+ días al año',
+      '"Octava maravilla" - Rudyard Kipling'
+    ],
+    
+    whatToDo: [
+      'Crucero en fiordo (1.5-2h)',
+      'Kayak en fiordo',
+      'Milford Track (hiking 4 días)',
+      'Vuelo escénico desde Queenstown',
+      'Ver focas, delfines, pingüinos',
+      'Underwater Observatory'
+    ],
+    
+    howToGetThere: {
+      drive: 'Te Anau: 2h (120 km) | Queenstown: 4h (290 km)',
+      tour: 'Bus tours desde Queenstown ($80-150)',
+      flight: 'Vuelo escénico + crucero ($500+)',
+      road: 'Ruta escénica increíble (túnel Homer)'
+    },
+    
+    tickets: {
+      cruise: 'NZ$ 90-150 (~$55-90)',
+      scenic_flight: 'NZ$ 400-600',
+      kayak: 'NZ$ 200',
+      milford_track: 'NZ$ 300+ (huts + transporte)'
+    },
+    
+    bestTime: {
+      season: 'Nov-abril (verano austral)',
+      avoid: 'Junio-agosto (nevado, caminos difíciles)',
+      rain: 'Lluvia = MÁS bonito (cascadas)',
+      crowds: 'Enero-feb más lleno'
+    },
+    
+    nearby: [
+      'Doubtful Sound (menos turístico)',
+      'Te Anau (pueblo base)',
+      'Mirror Lakes',
+      'Homer Tunnel',
+      'Queenstown (4h drive)'
+    ],
+    
+    tips: [
+      'Lluvia hace más bonito (cascadas)',
+      'Ve TEMPRANO (primeros cruceros, menos gente)',
+      'Crucero > kayak (ves más)',
+      'Drive escénico increíble',
+      'Lleva: chamarra, impermeable',
+      'Llena tanque en Te Anau (última gasolinera)',
+      'Avalanchas posibles invierno',
+      'Milford Track requiere reserva meses antes',
+      'Vuelo desde Queenstown = caro pero espectacular'
+    ],
+    
+    accessibility: 'Cruceros accesibles. Hiking NO.',
+    duration: '1 día (desde Queenstown) o 4 días (Milford Track)',
+    
+    weather: { temp: 14, condition: 'Lluvioso', icon: '🌧️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'uluru',
+    name: 'Uluru (Ayers Rock)',
+    city: 'Northern Territory',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -25.3444, lon: 131.0369 },
+    category: 'Naturaleza / Sagrado',
+    
+    description: 'Monolito de arenisca sagrado de 348m. Sitio espiritual aborígen Anangu. Cambia de color con luz del día.',
+    
+    mustKnow: [
+      'Altura: 348m sobre llanura',
+      'Circunferencia: 9.4 km',
+      'Edad: 600 millones de años',
+      'Sagrado para pueblo Anangu',
+      'Escalada prohibida desde 2019 (respeto)',
+      'Cambia color: rojo-naranja-púrpura'
+    ],
+    
+    whatToDo: [
+      'Base Walk (10.6 km, 3.5h)',
+      'Sunset viewing (color increíble)',
+      'Sunrise viewing',
+      'Kata Tjuta (The Olgas, 50 km)',
+      'Field of Light installation',
+      'Cultural tour con guía Anangu'
+    ],
+    
+    howToGetThere: {
+      flight: 'Ayers Rock Airport (directo desde ciudades)',
+      drive: 'Alice Springs: 450 km (5h)',
+      resort: 'Yulara (pueblo turístico a 20 min)',
+      tour: 'Tours desde resort'
+    },
+    
+    tickets: {
+      park_entry: 'A$ 38 (3 días)',
+      cultural_tour: 'A$ 150-200',
+      field_of_light: 'A$ 45',
+      camel_tour: 'A$ 75',
+      helicopter: 'A$ 200-400'
+    },
+    
+    bestTime: {
+      season: 'Abril-octubre (fresco)',
+      timeOfDay: 'Sunset (color rojo-naranja increíble)',
+      avoid: 'Dic-feb (45°C+, insoportable)'
+    },
+    
+    nearby: [
+      'Kata Tjuta (The Olgas)',
+      'Kings Canyon (3h)',
+      'Alice Springs (5h)',
+      'West MacDonnell Ranges'
+    ],
+    
+    tips: [
+      'NO ESCALES (prohibido y irrespetuoso)',
+      'Sunset/sunrise = mejores momentos',
+      'Base Walk temprano (antes del calor)',
+      'Lleva: 3L agua, sombrero, protector solar',
+      'Respeta sitios sagrados (no fotos donde prohibido)',
+      'Alojamiento en Yulara (caro pero única opción)',
+      'Tour cultural con Anangu vale la pena',
+      'Field of Light (instalación) = bonito de noche',
+      'Combina con Kata Tjuta (mismo día)'
+    ],
+    
+    accessibility: 'Senderos pavimentados disponibles. Base Walk moderado.',
+    duration: '2-3 días (incluye Kata Tjuta)',
+    
+    weather: { temp: 30, condition: 'Caluroso y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'hobbiton',
+    name: 'Hobbiton',
+    city: 'Matamata',
+    country: 'Nueva Zelanda',
+    continent: 'Oceanía',
+    flag: '🇳🇿',
+    coordinates: { lat: -37.8722, lon: 175.6833 },
+    category: 'Cine / Experiencia',
+    
+    description: 'Set de filmación permanente de El Señor de los Anillos y El Hobbit. 44 agujeros hobbit en Comarca preservada.',
+    
+    mustKnow: [
+      'Construido para El Señor de los Anillos (1999)',
+      'Reconstruido permanentemente para El Hobbit',
+      '44 agujeros hobbit',
+      '5 hectáreas de Comarca',
+      'Jardines reales mantenidos',
+      'Green Dragon Inn (cerveza incluida)'
+    ],
+    
+    whatToDo: [
+      'Tour guiado (2h, OBLIGATORIO)',
+      'Visitar agujeros hobbit',
+      'Bag End (casa Bilbo)',
+      'Green Dragon Inn (cerveza)',
+      'Jardines de la Comarca',
+      'Molino de agua',
+      'Evening Banquet Tour (cena, $200)'
+    ],
+    
+    howToGetThere: {
+      auckland: '2.5h drive (175 km)',
+      rotorua: '1h drive',
+      matamata: 'Pueblo base (15 min)',
+      shuttle: 'Desde Matamata i-Site (incluido en tour)'
+    },
+    
+    tickets: {
+      adult: 'NZ$ 89 (~$54)',
+      youth: 'NZ$ 44.50',
+      child: 'Gratis (8 años o menos)',
+      evening_banquet: 'NZ$ 200+ (cena incluida)',
+      booking: 'OBLIGATORIO online (se llena)'
+    },
+    
+    bestTime: {
+      season: 'Todo el año',
+      timeOfDay: 'Mañana (mejor luz) o evening banquet',
+      avoid: 'Vacaciones escolares NZ (más niños)'
+    },
+    
+    nearby: [
+      'Waitomo Caves (glowworms, 1h)',
+      'Rotorua (geotérmica, 1h)',
+      'Auckland (2.5h)',
+      'Tauranga (playas, 1.5h)'
+    ],
+    
+    tips: [
+      'RESERVA con semanas de anticipación',
+      'Tour guiado es obligatorio (no puedes ir solo)',
+      'Cerveza en Green Dragon incluida',
+      'Jardines son REALES (jardineros tiempo completo)',
+      'Fans de LOTR = experiencia increíble',
+      'No-fans también lo disfrutan',
+      'Combina con Waitomo Caves',
+      'Evening Banquet = CARO pero especial',
+      'Zapatos cómodos (mucho caminar en pasto)'
+    ],
+    
+    accessibility: 'Caminos de pasto. Difícil silla de ruedas.',
+    duration: '2 horas (tour estándar), 4h (evening banquet)',
+    
+    weather: { temp: 18, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  }
 ];
 
 // Funciones helper

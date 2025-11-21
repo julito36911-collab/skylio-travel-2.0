@@ -175,13 +175,6 @@ function App() {
             />
 
             <CategoryAccordion
-              title={categoryHoteles.title}
-              icon={categoryHoteles.icon}
-              partners={categoryHoteles.partners}
-              onPartnerClick={handleCardClick}
-            />
-
-            <CategoryAccordion
               title={categoryLujo.title}
               icon={categoryLujo.icon}
               partners={categoryLujo.partners}

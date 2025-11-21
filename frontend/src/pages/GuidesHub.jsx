@@ -84,15 +84,28 @@ function GuidesHub() {
       });
     }
 
+    // Determinar continente basado en el país
+    const getContinent = (country) => {
+      const europeanCountries = ['Italia', 'Italy', 'Francia', 'France', 'España', 'Spain', 'Reino Unido', 'United Kingdom', 'Alemania', 'Germany', 'Países Bajos', 'Netherlands'];
+      const americanCountries = ['Estados Unidos', 'United States', 'USA', 'México', 'Mexico', 'Canadá', 'Canada', 'Brasil', 'Brazil', 'Argentina', 'Chile', 'Colombia', 'Perú', 'Peru'];
+      const asianCountries = ['Japón', 'Japan', 'China', 'India', 'Tailandia', 'Thailand', 'Singapur', 'Singapore'];
+      
+      if (europeanCountries.includes(country)) return 'Europa';
+      if (americanCountries.includes(country)) return 'América';
+      if (asianCountries.includes(country)) return 'Asia';
+      return 'Europa'; // Default
+    };
+
     return {
       ...city,
       name: city.city,
+      continent: getContinent(city.country),
       hasLEZ: city.restrictions?.some(r => r.type === 'LEZ'),
       hasZTL: city.restrictions?.some(r => r.type === 'ZTL'),
       hasCongestionCharge: city.restrictions?.some(r => r.type === 'CONGESTION_CHARGE'),
       details,
       alternatives,
-      description: city.restrictions?.[0]?.description || `Restricciones de tráfico en ${city.city}`
+      description: city.restrictions?.[0]?.description || `${t('guides.trafficRestrictions')} ${city.city}`
     };
   });
 

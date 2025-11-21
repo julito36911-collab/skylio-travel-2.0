@@ -154,8 +154,8 @@ function GuidesHub() {
           />
         </div>
 
-        {/* Continent Filter (solo para destinos) */}
-        {activeTab === 'destinations' && (
+        {/* Continent Filter (para destinos y países) */}
+        {(activeTab === 'destinations' || activeTab === 'countries') && (
           <div className="flex justify-center gap-3 mb-8 flex-wrap">
             <button
               onClick={() => setSelectedContinent('all')}

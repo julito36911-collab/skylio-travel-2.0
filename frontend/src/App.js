@@ -162,6 +162,49 @@ function App() {
           />
         </div>
 
+        {/* SECCIÓN DE GUÍAS DE VIAJE */}
+        <section className="mb-8">
+          <div 
+            onClick={() => setShowGuidesHub(true)}
+            className="glass-card p-6 cursor-pointer group hover:scale-[1.02] transition-all duration-300 bg-gradient-to-br from-purple-600/20 via-blue-600/10 to-transparent border-2 border-purple-500/20 hover:border-purple-400/40"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm">
+                    <BookOpen size={28} className="text-purple-300" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      {t('guides.hub_title', 'Guías de Viaje Completas')}
+                    </h3>
+                    <p className="text-sm text-gray-400">
+                      {t('guides.hub_subtitle', '30+ destinos • Restricciones de conducción • Tips esenciales')}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-2 flex-wrap mt-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-200 rounded-full text-xs font-semibold flex items-center gap-1">
+                    <MapPin size={12} /> 25+ Destinos Imperdibles
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs font-semibold flex items-center gap-1">
+                    🚗 35+ Ciudades con Restricciones
+                  </span>
+                  <span className="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-xs font-semibold">
+                    ✨ Datos Demo
+                  </span>
+                </div>
+              </div>
+              <div className="text-4xl group-hover:scale-110 transition-transform">
+                🌍
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-end text-purple-400 group-hover:text-purple-300 font-semibold text-sm">
+              Explorar guías →
+            </div>
+          </div>
+        </section>
+
         {/* CATEGORÍAS EN ACORDEONES */}
         <section className="mb-8">
           <h3 className="text-lg font-bold mb-4 flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">

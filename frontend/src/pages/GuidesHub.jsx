@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { drivingRestrictions } from '../data/drivingRestrictions';
 import { mustSeeDestinations, continents } from '../data/mustSeeDestinations';

@@ -1,0 +1,150 @@
+{
+  "app": {
+    "title": "Skylio",
+    "tagline": "לאן אנחנו נוסעים היום?"
+  },
+  "nav": {
+    "explore": "חקור",
+    "guide": "מדריך",
+    "offers": "הצעות",
+    "profile": "פרופיל"
+  },
+  "categories": {
+    "mobility": "ניידות",
+    "connectivity": "קישוריות",
+    "essentials": "חיוניים",
+    "travel_essentials": "חיוני לטיול",
+    "latest_news": "חדשות טיולים אחרונות"
+  },
+  "partners": {
+    "aviasales": {
+      "name": "Aviasales",
+      "description": "חיפוש טיסות גלובלי",
+      "category": "טיסות"
+    },
+    "expedia": {
+      "name": "Expedia",
+      "description": "טיסה + מלון",
+      "category": "חבילות",
+      "badge": "מבצע"
+    },
+    "hotels_com": {
+      "name": "Hotels.com",
+      "description": "צבור לילות חינם",
+      "category": "מלונות",
+      "badge": "מותג מוביל"
+    },
+    "searadar": {
+      "name": "SEARADAR",
+      "description": "קונסיירז' ימי",
+      "category": "יאכטות ולוקסוס",
+      "badge": "פרמיום"
+    },
+    "economybookings": {
+      "name": "EconomyB.",
+      "description": "השכרת רכב גלובלית",
+      "category": "רכבים"
+    },
+    "localrent": {
+      "name": "LocalRent",
+      "description": "השכרה מקומית",
+      "category": "מקומי",
+      "badge": "ללא פיקדון"
+    },
+    "gettransfer": {
+      "name": "Transfers",
+      "description": "העברות משדה התעופה",
+      "category": "מונית"
+    },
+    "kiwitaxi": {
+      "name": "KiwiTaxi",
+      "description": "מונית גלובלית",
+      "category": "מונית"
+    },
+    "kiwicom_flights": {
+      "name": "Kiwi.com",
+      "description": "חיפוש רב-מודאלי",
+      "category": "טיסות+",
+      "badge": "חדש"
+    },
+    "airalo": {
+      "name": "Airalo eSIM",
+      "description": "נתונים סלולריים גלובליים",
+      "category": "נתונים",
+      "badge": "מוביל"
+    },
+    "saily": {
+      "name": "Saily",
+      "description": "eSIM לטיולים",
+      "category": "נתונים"
+    },
+    "klook": {
+      "name": "Klook",
+      "description": "טיולים ופעילויות",
+      "category": "טיולים"
+    },
+    "tiqets": {
+      "name": "Tiqets",
+      "description": "כרטיסים למוזיאונים",
+      "category": "מוזיאונים"
+    },
+    "radicalstorage": {
+      "name": "מטען",
+      "description": "אחסון מטען",
+      "category": "אחסון"
+    },
+    "ekta": {
+      "name": "EKTA ביטוח",
+      "description": "ביטוח נסיעות",
+      "category": "בריאות"
+    }
+  },
+  "forms": {
+    "hotels": {
+      "title": "חפש מלון (Hotels.com)",
+      "destination": "יעד / עיר",
+      "destination_placeholder": "לדוגמה: מדריד, קנקון, דיסני...",
+      "dates": "תאריכי שהייה",
+      "dates_placeholder": "בחר כניסה ויציאה",
+      "adults": "מבוגרים (+18)",
+      "children": "ילדים (0-17)",
+      "children_none": "0 (ללא ילדים)",
+      "children_ages": "גילאי הילדים (חובה):",
+      "baby": "תינוק (<1)",
+      "year": "שנה",
+      "years": "שנים",
+      "submit": "חפש הצעות ב-Hotels.com"
+    },
+    "expedia": {
+      "title": "חפש חבילת טיסה + מלון",
+      "origin": "מוצא (מאיפה אתה טס?)",
+      "origin_placeholder": "לדוגמה: מדריד, ברצלונה...",
+      "destination": "יעד (איפה אתה נשאר?)",
+      "destination_placeholder": "לדוגמה: פריז, ניו יורק...",
+      "dates": "תאריכי נסיעה הלוך ושוב",
+      "dates_placeholder": "בחר הלוך וחזור",
+      "adults": "מבוגרים (+18)",
+      "children": "ילדים (0-17)",
+      "children_none": "0 (ללא ילדים)",
+      "children_ages": "גילאי הילדים (חובה):",
+      "baby": "תינוק (<1)",
+      "year": "שנה",
+      "years": "שנים",
+      "submit": "חפש חבילות ב-Expedia"
+    },
+    "flights": {
+      "title": "חפש טיסות"
+    },
+    "cars": {
+      "title": "השכרת רכב"
+    },
+    "kiwi": {
+      "title": "חפש טיסות ומסלולים (Kiwi.com)"
+    }
+  },
+  "messages": {
+    "select_dates": "אנא בחר תאריכי כניסה ויציאה.",
+    "loading": "טוען...",
+    "loading_search": "טוען חיפוש..."
+  }
+}

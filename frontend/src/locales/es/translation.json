@@ -1,0 +1,150 @@
+{
+  "app": {
+    "title": "Skylio",
+    "tagline": "¿A dónde vamos hoy?"
+  },
+  "nav": {
+    "explore": "Explorar",
+    "guide": "Guía",
+    "offers": "Ofertas",
+    "profile": "Perfil"
+  },
+  "categories": {
+    "mobility": "Movilidad",
+    "connectivity": "Conectividad",
+    "essentials": "Esenciales",
+    "travel_essentials": "Imprescindibles de Viaje",
+    "latest_news": "Últimas Noticias de Viajes"
+  },
+  "partners": {
+    "aviasales": {
+      "name": "Aviasales",
+      "description": "Buscador global de vuelos",
+      "category": "Vuelos"
+    },
+    "expedia": {
+      "name": "Expedia",
+      "description": "Vuelo + Hotel",
+      "category": "Paquetes",
+      "badge": "Oferta"
+    },
+    "hotels_com": {
+      "name": "Hotels.com",
+      "description": "Acumula noches",
+      "category": "Hoteles",
+      "badge": "Top Brand"
+    },
+    "searadar": {
+      "name": "SEARADAR",
+      "description": "Concierge náutico",
+      "category": "Yates y Lujo",
+      "badge": "Premium"
+    },
+    "economybookings": {
+      "name": "EconomyB.",
+      "description": "Renta de autos global",
+      "category": "Auto"
+    },
+    "localrent": {
+      "name": "LocalRent",
+      "description": "Renta local",
+      "category": "Local",
+      "badge": "Sin Depósito"
+    },
+    "gettransfer": {
+      "name": "Transfers",
+      "description": "Traslados",
+      "category": "Taxi"
+    },
+    "kiwitaxi": {
+      "name": "KiwiTaxi",
+      "description": "Taxi global",
+      "category": "Taxi"
+    },
+    "kiwicom_flights": {
+      "name": "Kiwi.com",
+      "description": "Buscador Multimodal",
+      "category": "Vuelos+",
+      "badge": "Nuevo"
+    },
+    "airalo": {
+      "name": "Airalo eSIM",
+      "description": "Datos móviles globales",
+      "category": "Datos",
+      "badge": "Top"
+    },
+    "saily": {
+      "name": "Saily",
+      "description": "eSIM de viaje",
+      "category": "Datos"
+    },
+    "klook": {
+      "name": "Klook",
+      "description": "Tours y actividades",
+      "category": "Tours"
+    },
+    "tiqets": {
+      "name": "Tiqets",
+      "description": "Entradas a museos",
+      "category": "Museos"
+    },
+    "radicalstorage": {
+      "name": "Equipaje",
+      "description": "Guarda equipaje",
+      "category": "Guarda"
+    },
+    "ekta": {
+      "name": "EKTA Seguros",
+      "description": "Seguro de viaje",
+      "category": "Salud"
+    }
+  },
+  "forms": {
+    "hotels": {
+      "title": "Buscar Hotel (Hotels.com)",
+      "destination": "Destino / Ciudad",
+      "destination_placeholder": "Ej: Madrid, Cancún, Disney...",
+      "dates": "Fechas de Estancia",
+      "dates_placeholder": "Selecciona entrada y salida",
+      "adults": "Adultos (+18)",
+      "children": "Niños (0-17)",
+      "children_none": "0 (Sin niños)",
+      "children_ages": "Edades de los niños (obligatorio):",
+      "baby": "Bebé (<1)",
+      "year": "año",
+      "years": "años",
+      "submit": "Buscar Ofertas en Hotels.com"
+    },
+    "expedia": {
+      "title": "Buscar Paquete Vuelo + Hotel",
+      "origin": "Origen (¿Desde dónde vuelas?)",
+      "origin_placeholder": "Ej: Madrid, Barcelona...",
+      "destination": "Destino (¿Dónde te alojas?)",
+      "destination_placeholder": "Ej: París, Nueva York...",
+      "dates": "Fechas de Ida y Vuelta",
+      "dates_placeholder": "Selecciona ida y vuelta",
+      "adults": "Adultos (+18)",
+      "children": "Niños (0-17)",
+      "children_none": "0 (Sin niños)",
+      "children_ages": "Edades de los niños (obligatorio):",
+      "baby": "Bebé (<1)",
+      "year": "año",
+      "years": "años",
+      "submit": "Buscar Paquetes en Expedia"
+    },
+    "flights": {
+      "title": "Buscar Vuelos"
+    },
+    "cars": {
+      "title": "Alquiler de Autos"
+    },
+    "kiwi": {
+      "title": "Buscar Vuelos y Rutas (Kiwi.com)"
+    }
+  },
+  "messages": {
+    "select_dates": "Por favor selecciona las fechas de entrada y salida.",
+    "loading": "Cargando...",
+    "loading_search": "Cargando buscador..."
+  }
+}

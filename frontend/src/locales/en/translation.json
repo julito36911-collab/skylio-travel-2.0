@@ -1,0 +1,150 @@
+{
+  "app": {
+    "title": "Skylio",
+    "tagline": "Where are we going today?"
+  },
+  "nav": {
+    "explore": "Explore",
+    "guide": "Guide",
+    "offers": "Offers",
+    "profile": "Profile"
+  },
+  "categories": {
+    "mobility": "Mobility",
+    "connectivity": "Connectivity",
+    "essentials": "Essentials",
+    "travel_essentials": "Travel Essentials",
+    "latest_news": "Latest Travel News"
+  },
+  "partners": {
+    "aviasales": {
+      "name": "Aviasales",
+      "description": "Global flight search",
+      "category": "Flights"
+    },
+    "expedia": {
+      "name": "Expedia",
+      "description": "Flight + Hotel",
+      "category": "Packages",
+      "badge": "Deal"
+    },
+    "hotels_com": {
+      "name": "Hotels.com",
+      "description": "Earn free nights",
+      "category": "Hotels",
+      "badge": "Top Brand"
+    },
+    "searadar": {
+      "name": "SEARADAR",
+      "description": "Nautical concierge",
+      "category": "Yachts & Luxury",
+      "badge": "Premium"
+    },
+    "economybookings": {
+      "name": "EconomyB.",
+      "description": "Global car rental",
+      "category": "Cars"
+    },
+    "localrent": {
+      "name": "LocalRent",
+      "description": "Local rental",
+      "category": "Local",
+      "badge": "No Deposit"
+    },
+    "gettransfer": {
+      "name": "Transfers",
+      "description": "Airport transfers",
+      "category": "Taxi"
+    },
+    "kiwitaxi": {
+      "name": "KiwiTaxi",
+      "description": "Global taxi",
+      "category": "Taxi"
+    },
+    "kiwicom_flights": {
+      "name": "Kiwi.com",
+      "description": "Multimodal search",
+      "category": "Flights+",
+      "badge": "New"
+    },
+    "airalo": {
+      "name": "Airalo eSIM",
+      "description": "Global mobile data",
+      "category": "Data",
+      "badge": "Top"
+    },
+    "saily": {
+      "name": "Saily",
+      "description": "Travel eSIM",
+      "category": "Data"
+    },
+    "klook": {
+      "name": "Klook",
+      "description": "Tours & activities",
+      "category": "Tours"
+    },
+    "tiqets": {
+      "name": "Tiqets",
+      "description": "Museum tickets",
+      "category": "Museums"
+    },
+    "radicalstorage": {
+      "name": "Luggage",
+      "description": "Luggage storage",
+      "category": "Storage"
+    },
+    "ekta": {
+      "name": "EKTA Insurance",
+      "description": "Travel insurance",
+      "category": "Health"
+    }
+  },
+  "forms": {
+    "hotels": {
+      "title": "Search Hotel (Hotels.com)",
+      "destination": "Destination / City",
+      "destination_placeholder": "E.g: Madrid, Cancun, Disney...",
+      "dates": "Stay Dates",
+      "dates_placeholder": "Select check-in and check-out",
+      "adults": "Adults (+18)",
+      "children": "Children (0-17)",
+      "children_none": "0 (No children)",
+      "children_ages": "Children ages (required):",
+      "baby": "Baby (<1)",
+      "year": "year",
+      "years": "years",
+      "submit": "Search Hotels.com Deals"
+    },
+    "expedia": {
+      "title": "Search Flight + Hotel Package",
+      "origin": "Origin (Where are you flying from?)",
+      "origin_placeholder": "E.g: Madrid, Barcelona...",
+      "destination": "Destination (Where are you staying?)",
+      "destination_placeholder": "E.g: Paris, New York...",
+      "dates": "Round Trip Dates",
+      "dates_placeholder": "Select outbound and return",
+      "adults": "Adults (+18)",
+      "children": "Children (0-17)",
+      "children_none": "0 (No children)",
+      "children_ages": "Children ages (required):",
+      "baby": "Baby (<1)",
+      "year": "year",
+      "years": "years",
+      "submit": "Search Expedia Packages"
+    },
+    "flights": {
+      "title": "Search Flights"
+    },
+    "cars": {
+      "title": "Car Rental"
+    },
+    "kiwi": {
+      "title": "Search Flights & Routes (Kiwi.com)"
+    }
+  },
+  "messages": {
+    "select_dates": "Please select check-in and check-out dates.",
+    "loading": "Loading...",
+    "loading_search": "Loading search..."
+  }
+}

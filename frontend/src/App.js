@@ -65,17 +65,50 @@ function App() {
     }
   };
 
-  // Helpers de datos
+  // PRINCIPALES - Siempre visibles
   const heroFlight = partners.find(p => p.id === 'aviasales');
-  const featuredExpedia = partners.find(p => p.id === 'expedia');
-  const featuredYacht = partners.find(p => p.id === 'searadar');
   const heroHotelsCom = partners.find(p => p.id === 'hotels_com');
   const economyBookings = partners.find(p => p.id === 'economybookings');
-  const kiwiFlights = partners.find(p => p.id === 'kiwicom_flights');
 
-  const techCluster = partners.filter(p => ['airalo', 'saily'].includes(p.id));
-  const mobilityCluster = partners.filter(p => ['economybookings', 'localrent', 'gettransfer', 'kiwitaxi', 'kiwicom_flights'].includes(p.id));
-  const extrasCluster = partners.filter(p => ['ekta', 'radicalstorage', 'tiqets'].includes(p.id));
+  // CATEGORÍAS - En acordeones
+  const categoryVuelos = {
+    title: t('categories.flights', 'Vuelos'),
+    icon: Plane,
+    partners: partners.filter(p => ['kiwicom_flights', 'expedia'].includes(p.id))
+  };
+
+  const categoryHoteles = {
+    title: t('categories.hotels', 'Hoteles & Paquetes'),
+    icon: Hotel,
+    partners: partners.filter(p => ['expedia', 'searadar'].includes(p.id))
+  };
+
+  const categoryMovilidad = {
+    title: t('categories.mobility', 'Movilidad'),
+    icon: Car,
+    partners: partners.filter(p => ['localrent', 'gettransfer', 'kiwitaxi'].includes(p.id))
+  };
+
+  const categoryConectividad = {
+    title: t('categories.connectivity', 'Conectividad'),
+    icon: Wifi,
+    partners: partners.filter(p => ['airalo', 'saily'].includes(p.id))
+  };
+
+  const categoryExperiencias = {
+    title: t('categories.experiences', 'Experiencias'),
+    icon: Compass,
+    partners: partners.filter(p => ['klook', 'tiqets'].includes(p.id))
+  };
+
+  const categoryEsenciales = {
+    title: t('categories.essentials', 'Esenciales'),
+    icon: Shield,
+    partners: partners.filter(p => ['ekta', 'radicalstorage'].includes(p.id))
+  };
+
+  const kiwiFlights = partners.find(p => p.id === 'kiwicom_flights');
+  const featuredExpedia = partners.find(p => p.id === 'expedia');
 
   return (
     <div className="pb-28">

@@ -1127,6 +1127,8 @@ function CityModal({ city, countryName, onClose }) {
       </div>
     </div>
   );
+
+  return ReactDOM.createPortal(modalContent, document.body);
 }
 
 // Helper: iconos según categoría

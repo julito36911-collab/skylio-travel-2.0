@@ -477,34 +477,34 @@ function DrivingModal({ city, onClose }) {
           <div className="flex gap-3 flex-wrap">
             {city.hasLEZ && (
               <span className="px-4 py-2 bg-red-500/30 text-red-200 rounded-full font-semibold">
-                ⚠️ LEZ Activa
+                ⚠️ LEZ {t('guides.activeRestrictions').split(' ')[1] || 'Active'}
               </span>
             )}
             {city.hasZTL && (
               <span className="px-4 py-2 bg-orange-500/30 text-orange-200 rounded-full font-semibold">
-                🚫 ZTL Activa
+                🚫 ZTL {t('guides.activeRestrictions').split(' ')[1] || 'Active'}
               </span>
             )}
             {city.hasCongestionCharge && (
               <span className="px-4 py-2 bg-yellow-500/30 text-yellow-200 rounded-full font-semibold">
-                💰 Cargo por Congestión
+                💰 {t('guides.activeRestrictions')}
               </span>
             )}
           </div>
 
           {/* Detalles */}
-          {city.details && <Section title="📋 Detalles" items={city.details} />}
+          {city.details && <Section title={`📋 ${t('guides.drivingDetails')}`} items={city.details} />}
 
           {/* Alternativas */}
-          {city.alternatives && <Section title="🚇 Alternativas" items={city.alternatives} />}
+          {city.alternatives && <Section title={`🚇 ${t('guides.alternatives')}`} items={city.alternatives} />}
 
           {/* Tips */}
-          {city.tips && <Section title="💡 Tips" items={city.tips} highlight={true} />}
+          {city.tips && <Section title={`💡 ${t('guides.tips')}`} items={city.tips} highlight={true} />}
 
           {/* Info adicional */}
           {city.payment && (
             <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-2">💳 Cómo Pagar</h3>
+              <h3 className="text-xl font-bold text-white mb-2">💳 {t('guides.howToPay')}</h3>
               <p className="text-gray-300">{city.payment}</p>
             </div>
           )}

@@ -44,6 +44,16 @@ function GuidesHub() {
            (city.country || '').toLowerCase().includes(lowerQuery);
   });
 
+  // Filtrar países
+  const filteredCountries = countriesData.filter(country => {
+    const matchesContinent = selectedContinent === 'all' || country.continent === selectedContinent;
+    const lowerQuery = searchQuery.toLowerCase();
+    const matchesSearch = (country.name || '').toLowerCase().includes(lowerQuery) ||
+                          (country.capital || '').toLowerCase().includes(lowerQuery) ||
+                          (country.mainCities || []).some(city => city.toLowerCase().includes(lowerQuery));
+    return matchesContinent && matchesSearch;
+  });
+
   // Transform driving data for easier rendering
   const transformedDriving = filteredDriving.map(city => {
     // Extract simple details from complex structure

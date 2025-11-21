@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Newspaper, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { demoNews } from '../../data/demoNews';
 
 // CONFIGURACIÓN DE NEWSAPI
 const API_KEY = process.env.REACT_APP_NEWS_API_KEY || '';
 const ENABLE_NEWS = !!API_KEY; // Se activa automáticamente si hay API key
 const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 horas
+const USE_DEMO_MODE = true; // Cambiar a false en producción con dominio real
 
 // DEBUG: Verificar que se carga correctamente
 console.log('🔍 NewsSection - API_KEY:', API_KEY ? 'Configurada ✅' : 'NO configurada ❌');
 console.log('🔍 NewsSection - ENABLE_NEWS:', ENABLE_NEWS);
+console.log('🔍 NewsSection - USE_DEMO_MODE:', USE_DEMO_MODE);
 
 // FILTROS INTELIGENTES POR IDIOMA
 const KEYWORDS = {

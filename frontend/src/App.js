@@ -136,49 +136,82 @@ function App() {
           {t('app.tagline')}
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-min">
-
-          {/* SECCIÓN HERO */}
+        {/* SECCIÓN PRINCIPAL - 3 Cards Grandes */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <GlassCard
             partner={heroFlight}
             tall
             onClick={() => handleCardClick(heroFlight)}
-            className="col-span-1 md:col-span-2 h-[220px] bg-gradient-to-br from-blue-600/10 via-transparent to-transparent"
+            className="h-[200px] bg-gradient-to-br from-blue-600/10 via-transparent to-transparent"
           />
 
           <GlassCard
             partner={heroHotelsCom}
             tall
             onClick={() => handleCardClick(heroHotelsCom)}
-            className="col-span-1 md:col-span-2 h-[220px] bg-gradient-to-br from-red-600/10 via-transparent to-transparent"
+            className="h-[200px] bg-gradient-to-br from-red-600/10 via-transparent to-transparent"
           />
 
-          <GlassCard partner={featuredExpedia} onClick={() => handleCardClick(featuredExpedia)} className="col-span-2 md:col-span-3 bg-gradient-to-r from-yellow-600/5 to-orange-600/5" />
-          <GlassCard partner={featuredYacht} className="col-span-1 md:col-span-1 border-amber-500/20 bg-gradient-to-b from-amber-900/5 to-transparent" />
-
-          {techCluster.map(partner => (<GlassCard key={partner.id} partner={partner} onClick={() => handleCardClick(partner)} className="col-span-1" />))}
-
-          <div className="col-span-2 grid grid-cols-2 gap-3 mt-2">
-            <h3 className="col-span-2 text-xs uppercase tracking-wider text-slate-500 font-semibold ml-1">{t('categories.mobility')}</h3>
-            {mobilityCluster.map(partner => (<GlassCard key={partner.id} partner={partner} onClick={() => handleCardClick(partner)} className="aspect-[4/3]" />))}
-          </div>
-
-          <div className="col-span-2 grid grid-cols-2 gap-3 mt-2">
-             <h3 className="col-span-2 text-xs uppercase tracking-wider text-slate-500 font-semibold ml-1">{t('categories.essentials')}</h3>
-            {extrasCluster.map(partner => (<GlassCard key={partner.id} partner={partner} onClick={() => handleCardClick(partner)} className="" />))}
-          </div>
+          <GlassCard
+            partner={economyBookings}
+            tall
+            onClick={() => handleCardClick(economyBookings)}
+            className="h-[200px] bg-gradient-to-br from-yellow-600/10 via-transparent to-transparent"
+          />
         </div>
 
-        <NewsSection />
-
-        <section className="mb-6">
+        {/* CATEGORÍAS EN ACORDEONES */}
+        <section className="mb-8">
           <h3 className="text-lg font-bold mb-4 flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-            <ShoppingBag size={20} className="text-slate-100"/> {t('categories.travel_essentials')}
+            <Tag size={20} className="text-slate-100"/> {t('categories.more_services', 'Más Servicios')}
           </h3>
-          <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide snap-x">
-            {[1, 2, 3].map(i => (<div key={i} className="glass-card min-w-[140px] h-[160px] flex items-center justify-center text-slate-600 snap-center shrink-0 bg-white/5">Producto {i} (Amazon)</div>))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <CategoryAccordion
+              title={categoryVuelos.title}
+              icon={categoryVuelos.icon}
+              partners={categoryVuelos.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
+              title={categoryHoteles.title}
+              icon={categoryHoteles.icon}
+              partners={categoryHoteles.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
+              title={categoryMovilidad.title}
+              icon={categoryMovilidad.icon}
+              partners={categoryMovilidad.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
+              title={categoryConectividad.title}
+              icon={categoryConectividad.icon}
+              partners={categoryConectividad.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
+              title={categoryExperiencias.title}
+              icon={categoryExperiencias.icon}
+              partners={categoryExperiencias.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
+              title={categoryEsenciales.title}
+              icon={categoryEsenciales.icon}
+              partners={categoryEsenciales.partners}
+              onPartnerClick={handleCardClick}
+            />
           </div>
         </section>
+
+        <NewsSection />
       </main>
 
       {/* MODALES */}

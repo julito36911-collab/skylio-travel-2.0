@@ -210,6 +210,18 @@
     "city": "city",
     "cities": "cities"
   },
+  "parking": {
+    "title": "Find Safe Parking",
+    "subtitle": "Search for reliable parking near your destination",
+    "inputPlaceholder": "Ex: Eiffel Tower, Paris or Colosseum, Rome",
+    "buttonSearch": "Search Parking",
+    "howItWorks": "How it works?",
+    "step1": "Enter your destination (city, address or tourist spot)",
+    "step2": "We'll open Google Maps with safe, paid parking nearby",
+    "step3": "Choose the best parking and navigate there",
+    "tips": "💡 We'll search for paid and public parking which are usually safer",
+    "example": "Example: 'Sagrada Familia, Barcelona' or 'Times Square, New York'"
+  },
   "common": {
     "back": "Back"
   }

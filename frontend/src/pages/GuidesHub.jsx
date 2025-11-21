@@ -149,7 +149,7 @@ function GuidesHub() {
         {activeTab === 'destinations' ? (
           <DestinationsGrid destinations={filteredDestinations} />
         ) : (
-          <DrivingGrid cities={filteredDriving} />
+          <DrivingGrid cities={transformedDriving} />
         )}
       </div>
     </div>

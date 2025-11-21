@@ -10,9 +10,13 @@
     "profile": "פרופיל"
   },
   "categories": {
+    "flights": "טיסות",
+    "hotels": "מלונות וחבילות",
     "mobility": "ניידות",
     "connectivity": "קישוריות",
+    "experiences": "חוויות",
     "essentials": "חיוניים",
+    "more_services": "שירותים נוספים",
     "travel_essentials": "חיוני לטיול",
     "latest_news": "חדשות טיולים אחרונות"
   },

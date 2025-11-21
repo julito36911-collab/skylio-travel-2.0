@@ -892,6 +892,8 @@ function CityCard({ city, countryName }) {
 // Modal con información completa de la ciudad
 function CityModal({ city, countryName, onClose }) {
   const { t } = useTranslation();
+  
+  console.log('🏙️ CityModal rendering for:', city.name);
 
   const modalContent = (
     <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onClick={onClose}>

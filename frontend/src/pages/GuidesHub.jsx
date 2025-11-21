@@ -22,8 +22,50 @@ function GuidesHub() {
   // Filtrar restricciones de conducción
   const filteredDriving = drivingRestrictions.filter(city => {
     const lowerQuery = searchQuery.toLowerCase();
-    return (city.name || '').toLowerCase().includes(lowerQuery) ||
+    return (city.city || '').toLowerCase().includes(lowerQuery) ||
            (city.country || '').toLowerCase().includes(lowerQuery);
+  });
+
+  // Transform driving data for easier rendering
+  const transformedDriving = filteredDriving.map(city => {
+    // Extract simple details from complex structure
+    const details = [];
+    if (city.restrictions && city.restrictions.length > 0) {
+      city.restrictions.forEach(r => {
+        details.push(`${r.type}: ${r.description || r.name}`);
+        if (r.schedule) {
+          details.push(`Horario: Lun-Vie ${r.schedule.weekdays || 'Variable'}`);
+        }
+        if (r.fines) {
+          details.push(`Multa: ${r.fines.amount} ${r.fines.currency}`);
+        }
+      });
+    }
+
+    // Extract alternatives as strings
+    const alternatives = [];
+    if (city.alternatives && city.alternatives.length > 0) {
+      city.alternatives.forEach(alt => {
+        if (alt.type === 'PARKING') {
+          alternatives.push(`🅿️ ${alt.name}: ${alt.price} - ${alt.recommendation || alt.distance}`);
+        } else if (alt.type === 'PUBLIC_TRANSPORT') {
+          alternatives.push(`🚇 Transporte Público: ${alt.options?.join(', ') || ''} - Ticket: ${alt.ticketPrice}`);
+        } else if (alt.type === 'BIKE_SCOOTER') {
+          alternatives.push(`🛴 Scooters: ${alt.services?.join(', ') || ''}`);
+        }
+      });
+    }
+
+    return {
+      ...city,
+      name: city.city,
+      hasLEZ: city.restrictions?.some(r => r.type === 'LEZ'),
+      hasZTL: city.restrictions?.some(r => r.type === 'ZTL'),
+      hasCongestionCharge: city.restrictions?.some(r => r.type === 'CONGESTION_CHARGE'),
+      details,
+      alternatives,
+      description: city.restrictions?.[0]?.description || `Restricciones de tráfico en ${city.city}`
+    };
   });
 
   return (

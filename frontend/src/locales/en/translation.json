@@ -151,5 +151,19 @@
     "select_dates": "Please select check-in and check-out dates.",
     "loading": "Loading...",
     "loading_search": "Loading search..."
+  },
+  "guides": {
+    "hub_title": "Complete Travel Guides",
+    "hub_subtitle": "30+ destinations • Driving restrictions • Essential tips",
+    "title": "Travel Guides",
+    "subtitle": "Essential information for your next destinations",
+    "destinations": "Must-See Destinations",
+    "driving": "Driving Restrictions",
+    "search": "Search destination, city or country...",
+    "all": "All",
+    "noResults": "No results found"
+  },
+  "common": {
+    "back": "Back"
   }
 }

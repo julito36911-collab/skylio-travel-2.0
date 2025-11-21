@@ -13,18 +13,28 @@ function ParkingFinder() {
       return;
     }
 
-    // Formato correcto para Google Maps search con múltiples opciones
-    // Opción 1: Usar el formato más simple y confiable
-    const searchQuery = `parking ${destination}`;
+    // Múltiples formatos de URL para máxima compatibilidad
+    // Formato 1: Búsqueda directa (más simple)
+    const searchQuery1 = `parking ${destination}`;
+    const url1 = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery1)}`;
     
-    // Construir URL con el formato correcto de Google Maps
-    const parkingUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}`;
+    // Formato 2: Con parámetros query (más explícito)
+    const searchQuery2 = `parking+${destination.replace(/,/g, '').replace(/\s+/g, '+')}`;
+    const url2 = `https://www.google.com/maps/search/?api=1&query=${searchQuery2}`;
     
-    // Abrir en nueva pestaña
-    window.open(parkingUrl, '_blank', 'noopener,noreferrer');
+    // Formato 3: Búsqueda con place_id fallback
+    const url3 = `https://www.google.com/maps/search/parking+near+${encodeURIComponent(destination)}`;
     
-    console.log('Búsqueda de parking:', searchQuery);
-    console.log('URL generada:', parkingUrl);
+    // Intentar abrir con el formato 3 (más confiable en pruebas)
+    const finalUrl = url3;
+    
+    window.open(finalUrl, '_blank', 'noopener,noreferrer');
+    
+    console.log('Búsqueda de parking:', destination);
+    console.log('URLs generadas:');
+    console.log('1:', url1);
+    console.log('2:', url2);
+    console.log('3 (usado):', url3);
   };
 
   const handleKeyPress = (e) => {

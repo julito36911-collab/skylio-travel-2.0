@@ -206,7 +206,9 @@
     "tips": "טיפים",
     "howToPay": "איך לשלם",
     "activeRestrictions": "הגבלות פעילות",
-    "trafficRestrictions": "הגבלות תנועה ב"
+    "trafficRestrictions": "הגבלות תנועה ב",
+    "city": "עיר",
+    "cities": "ערים"
   },
   "common": {
     "back": "חזור"

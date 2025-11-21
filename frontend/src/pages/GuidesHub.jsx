@@ -869,7 +869,6 @@ function CityCard({ city, countryName }) {
       <div
         onClick={(e) => {
           e.stopPropagation();
-          console.log('🎯 CityCard clicked:', city.name);
           setShowCityModal(true);
         }}
         className="cursor-pointer bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 group"

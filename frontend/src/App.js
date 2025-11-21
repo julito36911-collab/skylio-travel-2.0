@@ -188,6 +188,13 @@ function App() {
             />
 
             <CategoryAccordion
+              title={categoryLujo.title}
+              icon={categoryLujo.icon}
+              partners={categoryLujo.partners}
+              onPartnerClick={handleCardClick}
+            />
+
+            <CategoryAccordion
               title={categoryMovilidad.title}
               icon={categoryMovilidad.icon}
               partners={categoryMovilidad.partners}

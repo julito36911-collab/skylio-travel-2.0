@@ -4,10 +4,28 @@ import { drivingRestrictions } from '../data/drivingRestrictions';
 import { mustSeeDestinations, continents } from '../data/mustSeeDestinations';
 
 function GuidesHub() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState('destinations');
   const [selectedContinent, setSelectedContinent] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Cargar datos de países según idioma activo
+  const getCountriesData = () => {
+    try {
+      if (i18n.language === 'es') {
+        return require('../data/countriesGuide_es').countriesGuide;
+      } else if (i18n.language === 'he') {
+        return require('../data/countriesGuide_he').countriesGuide;
+      } else {
+        return require('../data/countriesGuide_en').countriesGuide;
+      }
+    } catch (error) {
+      console.error('Error loading countries data:', error);
+      return [];
+    }
+  };
+
+  const countriesData = getCountriesData();
 
   // Filtrar destinos por continente y búsqueda
   const filteredDestinations = mustSeeDestinations.filter(dest => {

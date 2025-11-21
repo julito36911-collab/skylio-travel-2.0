@@ -484,9 +484,1083 @@ export const countriesGuide = [
     }
   },
 
-  // Continuaré con más países en el siguiente bloque...
-  // Faltan: Grecia, Países Bajos, Suiza, Portugal, Austria, Croacia, Turquía, República Checa, Polonia, Noruega
+  {
+    id: 'grecia',
+    name: 'Grecia',
+    continent: 'Europa',
+    flag: '🇬🇷',
+    capital: 'Atenas',
+    population: '10.7 millones',
+    languages: ['Griego'],
+    currency: { code: 'EUR', symbol: '€', name: 'Euro' },
+    timezone: 'EET (UTC+2)',
+    
+    mainCities: ['Atenas', 'Tesalónica', 'Santorini', 'Mykonos', 'Creta', 'Rodas', 'Corfú'],
+    
+    visa: {
+      schengen: true,
+      requirements: 'Schengen - 90 días sin visa para muchos países',
+      visaOnArrival: false
+    },
+    
+    bestTime: {
+      high: 'Julio-Agosto (muy caluroso y lleno)',
+      shoulder: 'Mayo-Junio, Sept-Oct (perfecto)',
+      low: 'Nov-Abril (frío, islas cerradas)',
+      notes: 'Primavera = flores, menos gente, clima ideal'
+    },
+    
+    budget: {
+      low: '€40-60/día',
+      medium: '€70-120/día',
+      high: '€150+/día'
+    },
+    
+    practical: {
+      voltage: '230V',
+      plugType: 'C, F',
+      emergency: '112',
+      tipping: '5-10% si el servicio fue bueno',
+      bargaining: 'Común en mercados y tiendas pequeñas'
+    },
+    
+    culture: {
+      traditions: [
+        'Siesta después del almuerzo',
+        'Cena muy tarde (21-23h)',
+        'Familia y amigos son prioridad',
+        'Hospitalidad excepcional con turistas'
+      ],
+      festivals: [
+        'Carnaval de Patras (febrero-marzo)',
+        'Pascua Ortodoxa (fecha variable)',
+        'Festival de Atenas (verano)',
+        'Ochi Day (28 octubre)'
+      ],
+      etiquette: [
+        'Saluda con "Yassas" (hola)',
+        'No señales con la mano abierta',
+        'Viste modesto en monasterios',
+        'Acepta café griego cuando te ofrezcan'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Moussaka',
+        'Souvlaki y gyros',
+        'Ensalada griega con queso feta',
+        'Tzatziki',
+        'Baklava',
+        'Ouzo (bebida anisada)'
+      ],
+      foodTips: [
+        'Tavernas locales = auténtico y barato',
+        'Pide mezze para compartir',
+        'Agua gratis en restaurantes'
+      ]
+    },
+    
+    highlights: [
+      'Acrópolis y Partenón (Atenas)',
+      'Santorini (puestas de sol)',
+      'Mykonos (fiesta y playas)',
+      'Meteora (monasterios en rocas)',
+      'Delfos (sitio arqueológico)',
+      'Crucero por las islas griegas'
+    ],
+    
+    safety: {
+      level: 'Muy seguro',
+      warnings: [
+        'Carteristas en zonas turísticas de Atenas',
+        'Taxis pueden intentar cobrar de más',
+        'Calor extremo en verano (deshidratación)'
+      ]
+    }
+  },
+
+  {
+    id: 'paises-bajos',
+    name: 'Países Bajos',
+    continent: 'Europa',
+    flag: '🇳🇱',
+    capital: 'Ámsterdam',
+    population: '17.5 millones',
+    languages: ['Neerlandés', 'Inglés (ampliamente hablado)'],
+    currency: { code: 'EUR', symbol: '€', name: 'Euro' },
+    timezone: 'CET (UTC+1)',
+    
+    mainCities: ['Ámsterdam', 'Rotterdam', 'La Haya', 'Utrecht', 'Eindhoven', 'Giethoorn'],
+    
+    visa: {
+      schengen: true,
+      requirements: 'Schengen - 90 días sin visa para muchos países',
+      visaOnArrival: false
+    },
+    
+    bestTime: {
+      high: 'Julio-Agosto (cálido)',
+      shoulder: 'Abril-Mayo (tulipanes), Sept',
+      low: 'Nov-Marzo (frío, lluvia)',
+      notes: 'Abril = tulipanes en flor (Keukenhof)'
+    },
+    
+    budget: {
+      low: '€50-80/día',
+      medium: '€100-180/día',
+      high: '€220+/día'
+    },
+    
+    practical: {
+      voltage: '230V',
+      plugType: 'C, F',
+      emergency: '112',
+      tipping: 'Redondear o 5-10%',
+      bargaining: 'Solo en mercados de pulgas'
+    },
+    
+    culture: {
+      traditions: [
+        'Bicicleta = transporte principal',
+        'Directos y honestos al hablar',
+        'Puntualidad importante',
+        'Sociedad muy liberal y tolerante'
+      ],
+      festivals: [
+        'Día del Rey (27 abril) - fiesta naranja',
+        'Desfile Gay Pride (agosto)',
+        'Temporada de tulipanes (marzo-mayo)',
+        'Nochevieja en Ámsterdam'
+      ],
+      etiquette: [
+        'Respeta los carriles bici (no camines ahí)',
+        'Quítate zapatos al entrar a casa',
+        'Dividir cuenta es normal',
+        'No toques las bicicletas de otros'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Stroopwafel (galleta caramelo)',
+        'Bitterballen (croquetas)',
+        'Quesos holandeses',
+        'Arenque crudo',
+        'Poffertjes (panqueques mini)',
+        'Licorice (regaliz)'
+      ],
+      foodTips: [
+        'Prueba comida callejera en mercados',
+        'Pannenkoeken = restaurantes de crepes',
+        'Cafeterías = café, no cannabis'
+      ]
+    },
+    
+    highlights: [
+      'Canales de Ámsterdam',
+      'Jardines Keukenhof (tulipanes)',
+      'Molinos de Kinderdijk',
+      'Museo Van Gogh',
+      'Giethoorn (Venecia del norte)',
+      'Zaanse Schans (molinos)'
+    ],
+    
+    safety: {
+      level: 'Muy seguro',
+      warnings: [
+        'Carteristas en Ámsterdam',
+        'Cuidado con bicicletas (van rápido)',
+        'Coffee shops = solo para mayores 18+',
+        'No compres drogas en la calle'
+      ]
+    }
+  },
+
+  {
+    id: 'suiza',
+    name: 'Suiza',
+    continent: 'Europa',
+    flag: '🇨🇭',
+    capital: 'Berna',
+    population: '8.7 millones',
+    languages: ['Alemán', 'Francés', 'Italiano', 'Romanche'],
+    currency: { code: 'CHF', symbol: 'Fr', name: 'Franco suizo' },
+    timezone: 'CET (UTC+1)',
+    
+    mainCities: ['Zúrich', 'Ginebra', 'Berna', 'Lucerna', 'Interlaken', 'Zermatt', 'Lugano'],
+    
+    visa: {
+      schengen: true,
+      requirements: 'Schengen - 90 días sin visa para muchos países',
+      visaOnArrival: false
+    },
+    
+    bestTime: {
+      high: 'Julio-Agosto (hiking), Dic-Feb (esquí)',
+      shoulder: 'Mayo-Junio, Sept (perfecto)',
+      low: 'Nov, Marzo-Abril (entre temporadas)',
+      notes: 'Depende si quieres montaña verde o nieve'
+    },
+    
+    budget: {
+      low: '€80-120/día (caro)',
+      medium: '€150-250/día',
+      high: '€350+/día'
+    },
+    
+    practical: {
+      voltage: '230V',
+      plugType: 'C, J (3 pines redondos)',
+      emergency: '112',
+      tipping: 'Incluido en cuenta (opcional redondear)',
+      bargaining: 'No común'
+    },
+    
+    culture: {
+      traditions: [
+        'Puntualidad extrema',
+        'Calidad sobre cantidad',
+        'Respeto por naturaleza',
+        'Multilingüe (4 idiomas oficiales)'
+      ],
+      festivals: [
+        'Fasnacht (carnaval Basilea)',
+        'Fête de l\'Escalade (Ginebra, dic)',
+        'Street Parade (Zúrich, agosto)',
+        'Cow parades (verano)'
+      ],
+      etiquette: [
+        'Sé puntual siempre',
+        'Habla en voz baja en público',
+        'Recicla correctamente',
+        'Domingo = día silencioso (no ruido)'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Fondue de queso',
+        'Raclette',
+        'Chocolate suizo',
+        'Rösti (papa rallada)',
+        'Bratwurst',
+        'Muesli'
+      ],
+      foodTips: [
+        'Muy caro - considera supermercados',
+        'Menú del día = mejor opción',
+        'Agua gratis en fuentes públicas'
+      ]
+    },
+    
+    highlights: [
+      'Matterhorn (Zermatt)',
+      'Jungfraujoch (Top of Europe)',
+      'Lago Lucerna',
+      'Cataratas del Rin',
+      'Interlaken (deportes aventura)',
+      'Trenes panorámicos'
+    ],
+    
+    safety: {
+      level: 'Extremadamente seguro',
+      warnings: [
+        'Avalanchas en montaña (respeta señales)',
+        'Muy caro (presupuesta bien)'
+      ]
+    }
+  },
+
+  {
+    id: 'portugal',
+    name: 'Portugal',
+    continent: 'Europa',
+    flag: '🇵🇹',
+    capital: 'Lisboa',
+    population: '10.3 millones',
+    languages: ['Portugués'],
+    currency: { code: 'EUR', symbol: '€', name: 'Euro' },
+    timezone: 'WET (UTC+0)',
+    
+    mainCities: ['Lisboa', 'Oporto', 'Faro', 'Coímbra', 'Braga', 'Sintra', 'Évora'],
+    
+    visa: {
+      schengen: true,
+      requirements: 'Schengen - 90 días sin visa para muchos países',
+      visaOnArrival: false
+    },
+    
+    bestTime: {
+      high: 'Junio-Agosto (caluroso)',
+      shoulder: 'Abril-Mayo, Sept-Oct (perfecto)',
+      low: 'Nov-Marzo (lluvioso pero templado)',
+      notes: 'Clima suave todo el año'
+    },
+    
+    budget: {
+      low: '€35-60/día (muy económico)',
+      medium: '€70-130/día',
+      high: '€180+/día'
+    },
+    
+    practical: {
+      voltage: '230V',
+      plugType: 'C, F',
+      emergency: '112',
+      tipping: '5-10% opcional',
+      bargaining: 'Poco común'
+    },
+    
+    culture: {
+      traditions: [
+        'Fado (música melancólica)',
+        'Azulejos (azulejos decorativos)',
+        'Café y pastelería en cada esquina',
+        'Ritmo de vida relajado'
+      ],
+      festivals: [
+        'Fiestas de Lisboa (junio)',
+        'São João (Oporto, 23-24 junio)',
+        'Carnaval (febrero)',
+        'Festival de Fado'
+      ],
+      etiquette: [
+        'Saluda con dos besos',
+        'Aprende "obrigado/a"',
+        'Respeta siesta (14-17h)',
+        'Cena tarde (20-22h)'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Bacalhau (bacalao - 1000 recetas)',
+        'Pastéis de nata (tarta de crema)',
+        'Francesinha (sándwich Oporto)',
+        'Sardinas asadas',
+        'Caldo verde',
+        'Vino de Oporto'
+      ],
+      foodTips: [
+        'Muy barato comparado con Europa',
+        'Tascas = restaurantes tradicionales',
+        'Pão, manteiga, azeitonas = se pagan (couvert)'
+      ]
+    },
+    
+    highlights: [
+      'Alfama (Lisboa)',
+      'Torre de Belém',
+      'Palacio da Pena (Sintra)',
+      'Livraria Lello (Oporto)',
+      'Playas del Algarve',
+      'Valle del Duero'
+    ],
+    
+    safety: {
+      level: 'Muy seguro',
+      warnings: [
+        'Carteristas en tranvía 28 (Lisboa)',
+        'Estafas de menú turístico',
+        'Colinas empinadas (calzado cómodo)'
+      ]
+    }
+  },
+
+  {
+    id: 'austria',
+    name: 'Austria',
+    continent: 'Europa',
+    flag: '🇦🇹',
+    capital: 'Viena',
+    population: '9 millones',
+    languages: ['Alemán'],
+    currency: { code: 'EUR', symbol: '€', name: 'Euro' },
+    timezone: 'CET (UTC+1)',
+    
+    mainCities: ['Viena', 'Salzburgo', 'Innsbruck', 'Graz', 'Hallstatt'],
+    
+    visa: {
+      schengen: true,
+      requirements: 'Schengen - 90 días sin visa para muchos países',
+      visaOnArrival: false
+    },
+    
+    bestTime: {
+      high: 'Julio-Agosto, Dic-Enero (esquí)',
+      shoulder: 'Mayo-Junio, Sept',
+      low: 'Nov, Marzo-Abril',
+      notes: 'Diciembre = mercados navideños mágicos'
+    },
+    
+    budget: {
+      low: '€50-80/día',
+      medium: '€100-170/día',
+      high: '€220+/día'
+    },
+    
+    practical: {
+      voltage: '230V',
+      plugType: 'C, F',
+      emergency: '112',
+      tipping: '5-10%',
+      bargaining: 'No'
+    },
+    
+    culture: {
+      traditions: [
+        'Música clásica (Mozart, Strauss)',
+        'Cafés tradicionales',
+        'Ópera y teatro',
+        'Montañas y naturaleza'
+      ],
+      festivals: [
+        'Festival de Salzburgo (verano)',
+        'Baile de Ópera de Viena (febrero)',
+        'Mercados Navideños',
+        'Año Nuevo en Viena'
+      ],
+      etiquette: [
+        'Formalidad en saludos',
+        'Puntualidad esperada',
+        'Silencio en transporte público',
+        'Viste bien para ópera/conciertos'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Wiener Schnitzel',
+        'Apfelstrudel',
+        'Sachertorte (tarta chocolate)',
+        'Tafelspitz',
+        'Kaiserschmarrn',
+        'Café vienés'
+      ],
+      foodTips: [
+        'Heuriger = tabernas de vino locales',
+        'Café tradicional = experiencia cultural',
+        'Porciones grandes'
+      ]
+    },
+    
+    highlights: [
+      'Palacio Schönbrunn (Viena)',
+      'Casa de Mozart (Salzburgo)',
+      'Hallstatt (pueblo de cuento)',
+      'Alpes tiroleses',
+      'Valle Wachau',
+      'Ópera de Viena'
+    ],
+    
+    safety: {
+      level: 'Muy seguro',
+      warnings: [
+        'Carteristas en zonas turísticas',
+        'Avalanchas en Alpes'
+      ]
+    }
+  },
+
+  // ===== AMÉRICA (8 países) =====
+  {
+    id: 'estados-unidos',
+    name: 'Estados Unidos',
+    continent: 'América',
+    flag: '🇺🇸',
+    capital: 'Washington D.C.',
+    population: '331 millones',
+    languages: ['Inglés', 'Español'],
+    currency: { code: 'USD', symbol: '$', name: 'Dólar' },
+    timezone: 'Múltiples (6 zonas)',
+    
+    mainCities: ['Nueva York', 'Los Ángeles', 'Chicago', 'Miami', 'Las Vegas', 'San Francisco', 'Orlando'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'ESTA o visa según nacionalidad',
+      visaOnArrival: 'ESTA online (países elegibles)'
+    },
+    
+    bestTime: {
+      high: 'Varía por región',
+      shoulder: 'Primavera y otoño generalmente',
+      low: 'Depende del destino',
+      notes: 'País enorme - clima varía mucho por zona'
+    },
+    
+    budget: {
+      low: '$60-100/día',
+      medium: '$150-250/día',
+      high: '$350+/día'
+    },
+    
+    practical: {
+      voltage: '120V',
+      plugType: 'A, B',
+      emergency: '911',
+      tipping: '15-20% obligatorio en restaurantes',
+      bargaining: 'No común'
+    },
+    
+    culture: {
+      traditions: [
+        'Propinas son obligatorias',
+        'Cultura de auto (transporte público limitado)',
+        'Amigables y conversadores',
+        'Diversidad cultural enorme'
+      ],
+      festivals: [
+        '4 de Julio (Independencia)',
+        'Thanksgiving (noviembre)',
+        'Halloween (31 octubre)',
+        'Super Bowl (febrero)'
+      ],
+      etiquette: [
+        'Propina 15-20% siempre',
+        'Distancia personal (no tocar)',
+        'Small talk es común',
+        'Muestra ID siempre (menores 21 no alcohol)'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Hamburguesas',
+        'BBQ (varía por estado)',
+        'Hot dogs de Nueva York',
+        'Tex-Mex',
+        'Apple pie',
+        'Buffalo wings'
+      ],
+      foodTips: [
+        'Porciones gigantes',
+        'Fast food en todas partes',
+        'Diners = experiencia clásica',
+        'Agua con hielo gratis'
+      ]
+    },
+    
+    highlights: [
+      'Estatua de la Libertad (NY)',
+      'Gran Cañón',
+      'Parques Disney',
+      'Golden Gate (San Francisco)',
+      'Las Vegas Strip',
+      'Parques nacionales (Yellowstone, Yosemite)'
+    ],
+    
+    safety: {
+      level: 'Varía por ciudad',
+      warnings: [
+        'Evita barrios peligrosos de noche',
+        'Crimen con armas en algunas zonas',
+        'Seguro médico MUY importante (carísimo)',
+        'No dejes objetos en auto visible'
+      ]
+    }
+  },
+
+  {
+    id: 'mexico',
+    name: 'México',
+    continent: 'América',
+    flag: '🇲🇽',
+    capital: 'Ciudad de México',
+    population: '128 millones',
+    languages: ['Español'],
+    currency: { code: 'MXN', symbol: '$', name: 'Peso mexicano' },
+    timezone: 'Múltiples (4 zonas)',
+    
+    mainCities: ['Ciudad de México', 'Guadalajara', 'Cancún', 'Playa del Carmen', 'Oaxaca', 'Mérida', 'Puerto Vallarta'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'Sin visa para turismo (muchos países) - hasta 180 días',
+      visaOnArrival: 'Tarjeta de turista en aeropuerto'
+    },
+    
+    bestTime: {
+      high: 'Dic-Abril (seco)',
+      shoulder: 'Nov, Mayo',
+      low: 'Junio-Oct (lluvias, huracanes en costa)',
+      notes: 'Costa = calor todo el año'
+    },
+    
+    budget: {
+      low: '$25-40/día (muy económico)',
+      medium: '$50-100/día',
+      high: '$150+/día'
+    },
+    
+    practical: {
+      voltage: '127V',
+      plugType: 'A, B',
+      emergency: '911',
+      tipping: '10-15% en restaurantes',
+      bargaining: 'Común en mercados'
+    },
+    
+    culture: {
+      traditions: [
+        'Familia es lo primero',
+        'Música mariachi',
+        'Día de Muertos (noviembre)',
+        'Comida = evento social importante'
+      ],
+      festivals: [
+        'Día de Muertos (1-2 noviembre)',
+        'Independencia (15-16 sept)',
+        'Semana Santa',
+        'Carnaval (Veracruz, Mazatlán)'
+      ],
+      etiquette: [
+        'Saluda con beso en mejilla',
+        'Mexicanos son muy amigables',
+        'No bebas agua del grifo',
+        'Hora mexicana = más flexible'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Tacos al pastor',
+        'Mole',
+        'Pozole',
+        'Tamales',
+        'Guacamole fresco',
+        'Tequila y mezcal'
+      ],
+      foodTips: [
+        'Comida callejera = auténtica y barata',
+        'Puestos con fila larga = buena señal',
+        'Picante puede ser MUY picante',
+        'Agua embotellada siempre'
+      ]
+    },
+    
+    highlights: [
+      'Chichén Itzá',
+      'Teotihuacán',
+      'Playas de Riviera Maya',
+      'Cenotes de Yucatán',
+      'Guanajuato',
+      'Barrancas del Cobre'
+    ],
+    
+    safety: {
+      level: 'Varía mucho por zona',
+      warnings: [
+        'Evita zonas fronterizas peligrosas',
+        'No tomes taxis en calle (usa Uber/Didi)',
+        'No muestres objetos caros',
+        'Zonas turísticas generalmente seguras',
+        'No bebas agua del grifo'
+      ]
+    }
+  },
+
+  {
+    id: 'canada',
+    name: 'Canadá',
+    continent: 'América',
+    flag: '🇨🇦',
+    capital: 'Ottawa',
+    population: '38 millones',
+    languages: ['Inglés', 'Francés'],
+    currency: { code: 'CAD', symbol: 'C$', name: 'Dólar canadiense' },
+    timezone: 'Múltiples (6 zonas)',
+    
+    mainCities: ['Toronto', 'Vancouver', 'Montreal', 'Quebec', 'Calgary', 'Ottawa', 'Banff'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'eTA online o visa según nacionalidad',
+      visaOnArrival: 'eTA para países elegibles'
+    },
+    
+    bestTime: {
+      high: 'Junio-Agosto (cálido)',
+      shoulder: 'Mayo, Sept (agradable)',
+      low: 'Oct-Abril (muy frío)',
+      notes: 'Invierno = -20°C o más frío. Verano = perfecto'
+    },
+    
+    budget: {
+      low: 'C$70-100/día',
+      medium: 'C$130-220/día',
+      high: 'C$300+/día'
+    },
+    
+    practical: {
+      voltage: '120V',
+      plugType: 'A, B',
+      emergency: '911',
+      tipping: '15-20%',
+      bargaining: 'No'
+    },
+    
+    culture: {
+      traditions: [
+        'Multiculturalismo',
+        'Hockey = deporte nacional',
+        'Bilingüe (inglés y francés)',
+        'Personas muy educadas'
+      ],
+      festivals: [
+        'Día de Canadá (1 julio)',
+        'Carnaval de Quebec (invierno)',
+        'Festival de Jazz (Montreal)',
+        'Calgary Stampede (julio)'
+      ],
+      etiquette: [
+        'Canadienses son extremadamente educados',
+        '"Sorry" se dice por todo',
+        'Hacer fila es sagrado',
+        'Diversidad cultural respetada'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Poutine (papas con queso y gravy)',
+        'Jarabe de maple auténtico',
+        'Montreal smoked meat',
+        'Butter tarts',
+        'Nanaimo bars',
+        'Tourtière'
+      ],
+      foodTips: [
+        'Tim Hortons = institución canadiense',
+        'Comida multicultural excelente',
+        'Porciones grandes',
+        'Precios + impuestos (no incluidos)'
+      ]
+    },
+    
+    highlights: [
+      'Cataratas del Niágara',
+      'Montañas Rocosas y Banff',
+      'Quebec (ciudad europea)',
+      'Toronto CN Tower',
+      'Vancouver y Stanley Park',
+      'Aurora boreal (Yukón)'
+    ],
+    
+    safety: {
+      level: 'Extremadamente seguro',
+      warnings: [
+        'Osos en parques nacionales (respeta reglas)',
+        'Frío extremo en invierno (hipotermia)',
+        'Distancias enormes entre ciudades'
+      ]
+    }
+  },
+
+  {
+    id: 'brasil',
+    name: 'Brasil',
+    continent: 'América',
+    flag: '🇧🇷',
+    capital: 'Brasilia',
+    population: '214 millones',
+    languages: ['Portugués'],
+    currency: { code: 'BRL', symbol: 'R$', name: 'Real' },
+    timezone: 'Múltiples (4 zonas)',
+    
+    mainCities: ['Río de Janeiro', 'São Paulo', 'Salvador', 'Brasilia', 'Florianópolis', 'Foz do Iguaçu', 'Manaos'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'Sin visa para turismo (muchos países) - 90 días',
+      visaOnArrival: 'Depende de nacionalidad'
+    },
+    
+    bestTime: {
+      high: 'Dic-Marzo (verano - calor)',
+      shoulder: 'Abril-Mayo, Sept-Nov',
+      low: 'Junio-Agosto (invierno templado)',
+      notes: 'Carnaval = febrero (muy lleno y caro)'
+    },
+    
+    budget: {
+      low: '$30-50/día',
+      medium: '$60-120/día',
+      high: '$180+/día'
+    },
+    
+    practical: {
+      voltage: '127V / 220V (varía)',
+      plugType: 'C, N',
+      emergency: '190 (policía), 192 (ambulancia)',
+      tipping: '10% incluido en cuenta',
+      bargaining: 'En mercados y playas'
+    },
+    
+    culture: {
+      traditions: [
+        'Carnaval es lo más grande',
+        'Fútbol = pasión nacional',
+        'Samba y bossa nova',
+        'Gente muy sociable y alegre'
+      ],
+      festivals: [
+        'Carnaval (febrero - RÍO)',
+        'Año Nuevo en Copacabana',
+        'Festa Junina (junio)',
+        'Réveillon (31 diciembre)'
+      ],
+      etiquette: [
+        'Saludo con beso en mejilla',
+        'Brasileños son cálidos y táctiles',
+        'Aprende portugués básico (no español)',
+        'Llegar tarde es normal'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Feijoada',
+        'Churrasco (barbacoa)',
+        'Açaí bowl',
+        'Pão de queijo',
+        'Moqueca',
+        'Caipirinha'
+      ],
+      foodTips: [
+        'Rodizio = buffet de carne ilimitado',
+        'Kilo restaurantes = paga por peso',
+        'Comida de playa (caro pero vale)',
+        'Jugos frescos increíbles'
+      ]
+    },
+    
+    highlights: [
+      'Cristo Redentor (Río)',
+      'Pan de Azúcar',
+      'Cataratas Iguazú',
+      'Amazonas',
+      'Playas de Río',
+      'Fernando de Noronha'
+    ],
+    
+    safety: {
+      level: 'Cuidado necesario',
+      warnings: [
+        'No mostrar objetos caros',
+        'Evita favelas sin guía local',
+        'Robos comunes en zonas turísticas',
+        'No resistas si te roban',
+        'Uber más seguro que taxi',
+        'No camines solo de noche'
+      ]
+    }
+  },
+
+  {
+    id: 'japon',
+    name: 'Japón',
+    continent: 'Asia',
+    flag: '🇯🇵',
+    capital: 'Tokio',
+    population: '125 millones',
+    languages: ['Japonés'],
+    currency: { code: 'JPY', symbol: '¥', name: 'Yen' },
+    timezone: 'JST (UTC+9)',
+    
+    mainCities: ['Tokio', 'Kioto', 'Osaka', 'Hiroshima', 'Nara', 'Hakone', 'Sapporo'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'Sin visa 90 días para muchos países',
+      visaOnArrival: 'Sello en aeropuerto'
+    },
+    
+    bestTime: {
+      high: 'Marzo-Abril (sakura), Oct-Nov (otoño)',
+      shoulder: 'Mayo-Junio, Sept',
+      low: 'Julio-Agosto (calor húmedo), Dic-Feb (frío)',
+      notes: 'Sakura = cerezos en flor (espectacular)'
+    },
+    
+    budget: {
+      low: '¥6,000-9,000/día ($40-60)',
+      medium: '¥12,000-20,000/día ($80-140)',
+      high: '¥25,000+/día ($170+)'
+    },
+    
+    practical: {
+      voltage: '100V',
+      plugType: 'A, B',
+      emergency: '110 (policía), 119 (ambulancia)',
+      tipping: 'NO SE DA PROPINA (ofensivo)',
+      bargaining: 'No común'
+    },
+    
+    culture: {
+      traditions: [
+        'Respeto y cortesía extremos',
+        'Quítate zapatos en casas/templos',
+        'Reverencia al saludar',
+        'Puntualidad extrema'
+      ],
+      festivals: [
+        'Hanami - Cherry Blossom (primavera)',
+        'Golden Week (finales abril-mayo)',
+        'Obon (agosto)',
+        'Año Nuevo (1-3 enero - todo cierra)'
+      ],
+      etiquette: [
+        'Reverencia al saludar',
+        'No comer caminando',
+        'Silencio en tren',
+        'No propinas NUNCA',
+        'Quita zapatos donde indicado',
+        'No usar teléfono en tren'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Sushi y sashimi auténtico',
+        'Ramen',
+        'Tempura',
+        'Okonomiyaki',
+        'Takoyaki',
+        'Matcha todo'
+      ],
+      foodTips: [
+        'Konbini (7-Eleven) = comida buena y barata',
+        'Vending machines en todas partes',
+        'Menú con fotos o modelos plásticos',
+        'Slurp tu ramen (no es mala educación)'
+      ]
+    },
+    
+    highlights: [
+      'Monte Fuji',
+      'Templos de Kioto',
+      'Shibuya Crossing (Tokio)',
+      'Hiroshima Peace Memorial',
+      'Bambi en Nara',
+      'Onsen (baños termales)'
+    ],
+    
+    safety: {
+      level: 'Extremadamente seguro',
+      warnings: [
+        'Terremotos posibles',
+        'Tifones en verano',
+        'Crimen casi inexistente'
+      ]
+    }
+  },
+
+  {
+    id: 'tailandia',
+    name: 'Tailandia',
+    continent: 'Asia',
+    flag: '🇹🇭',
+    capital: 'Bangkok',
+    population: '70 millones',
+    languages: ['Tailandés'],
+    currency: { code: 'THB', symbol: '฿', name: 'Baht' },
+    timezone: 'ICT (UTC+7)',
+    
+    mainCities: ['Bangkok', 'Chiang Mai', 'Phuket', 'Pattaya', 'Krabi', 'Ayutthaya', 'Chiang Rai'],
+    
+    visa: {
+      schengen: false,
+      requirements: 'Sin visa 30-60 días para muchos países',
+      visaOnArrival: 'Sello gratuito en aeropuerto'
+    },
+    
+    bestTime: {
+      high: 'Nov-Feb (fresco y seco)',
+      shoulder: 'Marzo-Mayo (calor extremo)',
+      low: 'Junio-Oct (monzón)',
+      notes: 'Norte más fresco que islas del sur'
+    },
+    
+    budget: {
+      low: '$25-40/día (muy barato)',
+      medium: '$50-90/día',
+      high: '$150+/día'
+    },
+    
+    practical: {
+      voltage: '220V',
+      plugType: 'A, B, C, O',
+      emergency: '191 (policía), 1669 (ambulancia)',
+      tipping: 'No obligatorio, redondear',
+      bargaining: 'Esperado en mercados (no tiendas)'
+    },
+    
+    culture: {
+      traditions: [
+        'Budismo es central',
+        'Rey y familia real = sagrados',
+        'Mai pen rai (no pasa nada - actitud relajada)',
+        'Sonrisas siempre'
+      ],
+      festivals: [
+        'Songkran (Año Nuevo - guerra de agua, abril)',
+        'Loy Krathong (nov - linternas flotantes)',
+        'Full Moon Party (Koh Phangan)',
+        'Yi Peng (linternas cielo, nov)'
+      ],
+      etiquette: [
+        'Wai = saludo (manos juntas)',
+        'NO toques cabeza de nadie',
+        'Quita zapatos en templos y casas',
+        'Nunca insultes a la familia real',
+        'Pies son sucios (no apuntes con ellos)',
+        'Viste modesto en templos'
+      ]
+    },
+    
+    food: {
+      mustTry: [
+        'Pad Thai',
+        'Tom Yum Goong (sopa picante)',
+        'Green Curry',
+        'Mango Sticky Rice',
+        'Som Tam (ensalada papaya)',
+        'Satay'
+      ],
+      foodTips: [
+        'Comida callejera = deliciosa y barata',
+        'Pide "mai phet" si no quieres picante',
+        'Mercados nocturnos = experiencia',
+        'Agua embotellada siempre'
+      ]
+    },
+    
+    highlights: [
+      'Grand Palace (Bangkok)',
+      'Templo del Buda Reclinado',
+      'Islas Phi Phi',
+      'Templo Blanco (Chiang Rai)',
+      'Santuario de elefantes',
+      'Railay Beach'
+    ],
+    
+    safety: {
+      level: 'Generalmente seguro',
+      warnings: [
+        'Estafas comunes (tuk-tuk, taxi)',
+        'No alquiles moto sin experiencia',
+        'Drogas = pena muy severa',
+        'Respeta leyes de lesa majestad',
+        'Cuidado con "ping pong shows" (estafa)',
+        'Protestas políticas ocasionales'
+      ]
+    }
+  }
 ];
+
+// Resto de funciones helper permanecen igual...
 
 // Funciones helper
 export const getCountryById = (id) => {

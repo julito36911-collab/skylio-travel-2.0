@@ -210,6 +210,18 @@
     "city": "ciudad",
     "cities": "ciudades"
   },
+  "parking": {
+    "title": "Encuentra Parking Seguro",
+    "subtitle": "Busca estacionamientos confiables cerca de tu destino",
+    "inputPlaceholder": "Ej: Torre Eiffel, París o Coliseo, Roma",
+    "buttonSearch": "Buscar Parkings",
+    "howItWorks": "¿Cómo funciona?",
+    "step1": "Escribe tu destino (ciudad, dirección o lugar turístico)",
+    "step2": "Te abriremos Google Maps con parkings seguros y pagados cercanos",
+    "step3": "Elige el parking que más te convenga y navega hacia allí",
+    "tips": "💡 Buscaremos parkings pagados y públicos que suelen ser más seguros",
+    "example": "Ejemplo: 'Sagrada Familia, Barcelona' o 'Times Square, New York'"
+  },
   "common": {
     "back": "Volver"
   }

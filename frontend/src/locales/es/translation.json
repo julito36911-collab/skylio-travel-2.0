@@ -151,5 +151,19 @@
     "select_dates": "Por favor selecciona las fechas de entrada y salida.",
     "loading": "Cargando...",
     "loading_search": "Cargando buscador..."
+  },
+  "guides": {
+    "hub_title": "Guías de Viaje Completas",
+    "hub_subtitle": "30+ destinos • Restricciones de conducción • Tips esenciales",
+    "title": "Guías de Viaje",
+    "subtitle": "Información esencial para tus próximos destinos",
+    "destinations": "Destinos Imperdibles",
+    "driving": "Restricciones de Conducción",
+    "search": "Buscar destino, ciudad o país...",
+    "all": "Todos",
+    "noResults": "No se encontraron resultados"
+  },
+  "common": {
+    "back": "Volver"
   }
 }

@@ -72,7 +72,7 @@ function App() {
 
   // CATEGORÍAS - En acordeones
   const categoryVuelos = {
-    title: t('categories.flights', 'Vuelos'),
+    title: t('categories.travel_search', 'Búsquedas de Viaje'),
     icon: Plane,
     partners: partners.filter(p => ['kiwicom_flights', 'expedia'].includes(p.id))
   };

@@ -16,6 +16,224 @@ export const countriesGuide = [
     
     mainCities: ['פריז', 'מרסיי', 'ליון', 'ניס', 'טולוז', 'בורדו', 'שטרסבורג'],
     
+    cities: [
+      {
+        id: 'paris',
+        name: 'פריז',
+        population: '2.2 מיליון',
+        
+        airports: [
+          {
+            name: 'שארל דה גול (CDG)',
+            distance: '25 ק"מ צפונית-מזרחית',
+            toCity: [
+              {
+                method: 'RER B (רכבת)',
+                duration: '30-40 דקות',
+                price: '€11.45',
+                frequency: 'כל 10-15 דקות',
+                hours: '5:00 - 23:50',
+                stops: 'Gare du Nord, Châtelet-Les Halles, Saint-Michel',
+                notes: 'האופציה הזולה ביותר. קנה כרטיס במכונות.'
+              },
+              {
+                method: 'Roissybus',
+                duration: '60 דקות',
+                price: '€16.60',
+                frequency: 'כל 15-20 דקות',
+                hours: '6:00 - 00:30',
+                stops: 'ישיר לאופרה',
+                notes: 'נוח עם מזוודות. Wi-Fi חינם.'
+              },
+              {
+                method: 'אוטובוס 350 / 351',
+                duration: '70-90 דקות',
+                price: '€2.10 (כרטיס t+)',
+                frequency: 'כל 30 דקות',
+                hours: '6:00 - 23:00',
+                stops: 'מספר תחנות בפריז',
+                notes: 'זול מאוד אבל איטי. למטיילים בתקציב.'
+              },
+              {
+                method: 'מונית רשמית',
+                duration: '30-60 דקות (תלוי בתנועה)',
+                price: '€50-60 תעריף קבוע',
+                frequency: 'תמיד זמין',
+                hours: '24/7',
+                stops: 'מדלת לדלת',
+                notes: 'תעריף קבוע למרכז פריז. מקסימום 4 אנשים.'
+              },
+              {
+                method: 'Uber',
+                duration: '30-60 דקות',
+                price: '€45-70',
+                frequency: 'לפי דרישה',
+                hours: '24/7',
+                stops: 'מדלת לדלת',
+                notes: 'המחיר משתנה לפי הביקוש.'
+              }
+            ]
+          },
+          {
+            name: 'אורלי (ORY)',
+            distance: '14 ק"מ דרומית',
+            toCity: [
+              {
+                method: 'Orlyval + RER B',
+                duration: '35-45 דקות',
+                price: '€14.50',
+                frequency: 'כל 4-8 דקות',
+                hours: '6:00 - 23:00',
+                stops: 'אוטומטי לאנתוני, ואז RER B למרכז',
+                notes: 'מהיר אבל יקר.'
+              },
+              {
+                method: 'חשמלית T7 + מטרו',
+                duration: '50-70 דקות',
+                price: '€2.10',
+                frequency: 'כל 8 דקות',
+                hours: '5:30 - 00:30',
+                stops: 'T7 ל-Villejuif, ואז מטרו 7',
+                notes: 'הזול ביותר. אופציה חכמה.'
+              },
+              {
+                method: 'OrlyBus',
+                duration: '30-40 דקות',
+                price: '€11.20',
+                frequency: 'כל 10-20 דקות',
+                hours: '6:00 - 00:00',
+                stops: 'ישיר ל-Denfert-Rochereau',
+                notes: 'יחס טוב בין מחיר לאיכות.'
+              },
+              {
+                method: 'מונית רשמית',
+                duration: '20-40 דקות',
+                price: '€35-40 תעריף קבוע',
+                frequency: '24/7',
+                hours: '24/7',
+                stops: 'מדלת לדלת',
+                notes: 'תעריף קבוע. זול יותר מ-CDG.'
+              }
+            ]
+          },
+          {
+            name: 'בווה (BVA)',
+            distance: '85 ק"מ צפונה',
+            toCity: [
+              {
+                method: 'אוטובוס רשמי של שדה התעופה',
+                duration: '75-90 דקות',
+                price: '€17 (€34 הלוך חזור)',
+                frequency: 'מתואם עם טיסות',
+                hours: 'לפי לוחות זמנים של טיסות',
+                stops: 'Porte Maillot (פריז)',
+                notes: 'תחבורה ציבורית יחידה. הזמן מקוון.'
+              },
+              {
+                method: 'מונית/Uber',
+                duration: '70-90 דקות',
+                price: '€150-200',
+                frequency: '24/7',
+                hours: '24/7',
+                stops: 'מדלת לדלת',
+                notes: 'יקר מאוד. רק אם הכרחי.'
+              }
+            ]
+          }
+        ],
+        
+        publicTransport: {
+          types: [
+            {
+              name: 'מטרו',
+              lines: '16 קווים, 308 תחנות',
+              hours: '5:30 - 1:15 (שישי/שבת עד 2:15)',
+              frequency: 'כל 2-8 דקות'
+            },
+            {
+              name: 'RER',
+              lines: '5 קווים (A, B, C, D, E)',
+              hours: '5:00 - 00:30',
+              frequency: 'כל 10-20 דקות'
+            },
+            {
+              name: 'אוטובוס',
+              lines: '60+ קווים',
+              hours: '6:30 - 20:30 (חלקם 24 שעות)',
+              frequency: 'כל 5-15 דקות'
+            },
+            {
+              name: 'חשמלית',
+              lines: '9 קווים',
+              hours: '5:30 - 00:30',
+              frequency: 'כל 4-8 דקות'
+            }
+          ],
+          
+          tickets: [
+            { type: 'כרטיס t+', price: '€2.10', validity: '90 דקות (מטרו/אוטובוס/חשמלית, ללא העברה RER)' },
+            { type: 'חבילת 10 כרטיסים', price: '€17.35', validity: 'חיסכון של 15%' },
+            { type: 'Mobilis יום אחד', price: '€8.45', validity: 'אזורים 1-2, ללא הגבלה' },
+            { type: 'Paris Visite יום אחד', price: '€13.55', validity: 'אזורים 1-3, כולל הנחות' },
+            { type: 'Paris Visite 5 ימים', price: '€43.30', validity: 'אידיאלי לתיירים' },
+            { type: 'Navigo שבועי', price: '€30', validity: 'שני-ראשון, כל האזורים' }
+          ],
+          
+          whereToBuy: [
+            'מכונות אוטומטיות בתחנות (כרטיסי אשראי)',
+            'קופות בתחנות גדולות',
+            'אפליקציית "Bonjour RATP" - כרטיסים דיגיטליים',
+            'אפליקציית "Île-de-France Mobilités"',
+            'חנויות טבק - פיזי בלבד'
+          ],
+          
+          officialMaps: [
+            {
+              name: 'מפת מטרו PDF',
+              url: 'https://www.ratp.fr/sites/default/files/plans-lignes/Plans-essentiels/Plan-Metro.pdf'
+            },
+            {
+              name: 'מפות אינטראקטיביות RATP',
+              url: 'https://www.ratp.fr/en/plans-lignes'
+            }
+          ],
+          
+          apps: [
+            'Bonjour RATP (רשמי)',
+            'Citymapper Paris (הטוב ביותר)',
+            'Google Maps'
+          ],
+          
+          scams: [
+            '⚠️ מוכרי כרטיסים מזויפים מחוץ לתחנות',
+            '⚠️ כייסים בקווים 1, 4, 9 (תיירותיים)',
+            '⚠️ "עוזרים" במכונות שגונבים כרטיסים',
+            '⚠️ פקחים מזויפים מבקשים כרטיסים מחוץ לרכבת',
+            '⚠️ אנשים מבקשים לחתום על עצומות'
+          ],
+          
+          tips: [
+            'תמיד אמת את הכרטיס שלך (קנס €60)',
+            'שמור את הכרטיס עד שאתה יוצא',
+            'RER B לשדה התעופה = הזול ביותר',
+            'מטרו אחרון 1:00 (2:00 בסופי שבוע)',
+            'ילדים מתחת לגיל 4 חינם',
+            'WiFi חינם בתחנות עיקריות'
+          ]
+        },
+        
+        topAttractions: ['מגדל אייפל', 'הלובר', 'שער הניצחון', 'נוטר-דאם', 'סקרה-קר'],
+        
+        neighborhoods: [
+          '1 - הלובר (מוזיאונים)',
+          '4 - לה מארה (אופנה)',
+          '5 - הרובע הלטיני (אוניברסיטה)',
+          '18 - מונמארטר (אמנותי)',
+          '7 - מגדל אייפל'
+        ]
+      }
+    ],
+    
     visa: {
       schengen: true,
       requirements: 'שנגן - 90 יום ללא ויזה למדינות רבות',

@@ -443,7 +443,7 @@ function DrivingGrid({ cities }) {
                 <h3 className="text-xl font-semibold text-blue-300 mb-4 flex items-center gap-2">
                   <span className="text-2xl">{flag}</span>
                   {country}
-                  <span className="text-sm text-gray-400">({countryCities.length} {countryCities.length === 1 ? 'ciudad' : 'ciudades'})</span>
+                  <span className="text-sm text-gray-400">({countryCities.length} {countryCities.length === 1 ? t('guides.city') : t('guides.cities')})</span>
                 </h3>
                 
                 {/* Grid de ciudades */}

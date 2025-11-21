@@ -280,13 +280,39 @@ function App() {
         <ExpediaForm partnerData={featuredExpedia} onClose={() => setActiveModal(null)} />
       </Modal>
 
+      {/* MODAL DE GUÍAS */}
+      {showGuidesHub && (
+        <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm" onClick={() => setShowGuidesHub(false)}>
+          <div className="h-full overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="min-h-full">
+              <div className="sticky top-0 z-10 bg-gray-900/95 backdrop-blur-md px-6 py-4 border-b border-white/10">
+                <button
+                  onClick={() => setShowGuidesHub(false)}
+                  className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                  <span className="font-semibold">{t('common.back', 'Volver')}</span>
+                </button>
+              </div>
+              <GuidesHub />
+            </div>
+          </div>
+        </div>
+      )}
+
       <nav className="glass-dock fixed bottom-0 left-0 right-0 p-3 flex justify-around items-center z-50 md:hidden safe-area-bottom">
         <button className="flex flex-col items-center gap-1.5 p-1 text-blue-400 relative" data-testid="nav-explore">
           <Search size={22} strokeWidth={2.5} />
           <span className="text-[9px] font-bold tracking-wide">{t('nav.explore')}</span>
           <span className="absolute -bottom-2 w-1 h-1 bg-blue-400 rounded-full"></span>
         </button>
-        <button className="flex flex-col items-center gap-1.5 p-1 text-slate-500 hover:text-slate-300 transition" data-testid="nav-guide">
+        <button 
+          onClick={() => setShowGuidesHub(true)}
+          className="flex flex-col items-center gap-1.5 p-1 text-slate-500 hover:text-slate-300 transition" 
+          data-testid="nav-guide"
+        >
           <MapIcon size={22} />
           <span className="text-[9px] font-medium tracking-wide">{t('nav.guide')}</span>
         </button>

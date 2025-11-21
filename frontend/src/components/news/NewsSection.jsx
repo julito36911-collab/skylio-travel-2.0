@@ -35,7 +35,19 @@ const NewsSection = () => {
 
     const fetchNews = async () => {
       const currentLanguage = i18n.language;
-      // Si el idioma es hebreo, buscar en inglés (más contenido disponible)
+      
+      // MODO DEMO: Usar noticias de ejemplo
+      if (USE_DEMO_MODE) {
+        console.log(`🎭 Modo DEMO: Usando noticias de ejemplo para ${currentLanguage}`);
+        setTimeout(() => {
+          const demoArticles = demoNews[currentLanguage] || demoNews.en;
+          setNews(demoArticles);
+          setLoading(false);
+        }, 800); // Simular delay de red
+        return;
+      }
+
+      // MODO PRODUCCIÓN: Usar NewsAPI real
       const searchLanguage = currentLanguage === 'he' ? 'en' : currentLanguage;
       
       // Verificar caché por idioma
@@ -78,8 +90,10 @@ const NewsSection = () => {
           throw new Error(data.message || 'Error al obtener noticias');
         }
       } catch (err) {
-        console.error("Error fetching news:", err);
-        setError("No se pudieron cargar las noticias recientes.");
+        console.error("⚠️ Error en NewsAPI, usando noticias demo:", err);
+        // Fallback a noticias demo si hay error
+        const demoArticles = demoNews[currentLanguage] || demoNews.en;
+        setNews(demoArticles);
       } finally {
         setLoading(false);
       }
@@ -88,7 +102,7 @@ const NewsSection = () => {
     fetchNews();
   }, [i18n.language]); // Re-fetch cuando cambia el idioma
 
-  if (!ENABLE_NEWS || error) return null;
+  if (!ENABLE_NEWS) return null;
 
   return (
     <section className="mt-8 mb-8">

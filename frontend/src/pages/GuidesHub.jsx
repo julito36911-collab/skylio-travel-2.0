@@ -893,7 +893,7 @@ function CityCard({ city, countryName }) {
 function CityModal({ city, countryName, onClose }) {
   const { t } = useTranslation();
 
-  return (
+  const modalContent = (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={onClose}>
       <div
         className="bg-gray-900 rounded-3xl max-w-6xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"

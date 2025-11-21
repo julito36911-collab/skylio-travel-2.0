@@ -442,6 +442,8 @@ function DrivingCard({ city }) {
 
 // Modal con detalles de restricciones de conducción
 function DrivingModal({ city, onClose }) {
+  const { t } = useTranslation();
+  
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
       <div

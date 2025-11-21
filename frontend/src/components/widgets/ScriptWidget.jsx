@@ -1,0 +1,46 @@
+import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+
+const ScriptWidget = ({ scriptSrc }) => {
+  const containerRef = useRef(null);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    if (!scriptSrc || !containerRef.current) return;
+
+    console.log("Cargando widget desde:", scriptSrc);
+    containerRef.current.innerHTML = '';
+
+    const script = document.createElement('script');
+    let finalSrc = scriptSrc;
+    if (scriptSrc.includes('<script')) {
+        const srcMatch = scriptSrc.match(/src="([^"]+)"/);
+        if (srcMatch) {
+            finalSrc = srcMatch[1];
+        }
+    }
+
+    script.src = finalSrc;
+    script.async = true;
+    script.charset = 'UTF-8';
+    containerRef.current.appendChild(script);
+
+    return () => {
+      if (containerRef.current) {
+         console.log("Desmontando widget...");
+         containerRef.current.innerHTML = '';
+      }
+    };
+  }, [scriptSrc]);
+
+  return (
+    <div 
+      ref={containerRef} 
+      className="widget-container min-h-[300px] md:min-h-[400px] bg-white rounded-xl overflow-hidden relative z-20 shadow-inner flex justify-center items-center"
+    >
+      <span className="text-slate-400 text-sm animate-pulse">{t('messages.loading_search')}</span>
+    </div>
+  );
+};
+
+export default ScriptWidget;

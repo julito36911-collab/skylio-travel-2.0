@@ -592,6 +592,8 @@ function CountryCard({ country }) {
 
 // Modal con detalles completos del país
 function CountryModal({ country, onClose }) {
+  const { t } = useTranslation();
+  
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
       <div

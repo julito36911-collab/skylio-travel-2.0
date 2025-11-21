@@ -117,10 +117,10 @@ const NewsSection = () => {
         )}
       </div>
       
-      <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x -mx-4 px-4 md:mx-0 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {loading ? (
           [1, 2, 3].map(i => (
-            <div key={i} className="glass-card min-w-[280px] h-[200px] flex items-center justify-center snap-center shrink-0 bg-white/5 animate-pulse">
+            <div key={i} className="glass-card h-[280px] flex items-center justify-center bg-white/5 animate-pulse">
               <span className="text-slate-500 text-sm">{t('messages.loading')}</span>
             </div>
           ))
@@ -131,17 +131,18 @@ const NewsSection = () => {
               href={article.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="glass-card min-w-[280px] md:min-w-[320px] snap-center shrink-0 flex flex-col overflow-hidden group no-underline hover:scale-[1.02] transition-transform"
+              className="glass-card flex flex-col overflow-hidden group no-underline hover:scale-[1.02] transition-transform"
             >
-              <div className="h-32 w-full overflow-hidden relative">
+              <div className="h-40 w-full overflow-hidden relative">
                  <img src={article.urlToImage} alt={article.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onError={(e) => e.target.style.display = 'none'} />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                  <span className="absolute bottom-2 right-2 text-[10px] text-slate-300 bg-black/50 px-1.5 py-0.5 rounded-full">
                     {new Date(article.publishedAt).toLocaleDateString()}
                  </span>
               </div>
-              <div className="p-3 flex-grow flex flex-col justify-between bg-white/5">
+              <div className="p-4 flex-grow flex flex-col justify-between bg-white/5">
                 <h4 className="text-sm font-bold leading-tight mb-2 text-slate-100 line-clamp-2 group-hover:text-blue-400 transition-colors">{article.title}</h4>
+                <p className="text-xs text-slate-400 mb-3 line-clamp-2">{article.description}</p>
                 <div className="flex justify-between items-end mt-auto">
                    <span className="text-[10px] text-slate-400 font-medium">{article.source.name}</span>
                    <ExternalLink size={14} className="text-slate-500 group-hover:text-blue-400 transition-colors"/>

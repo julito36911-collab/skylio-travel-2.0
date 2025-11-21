@@ -13,18 +13,16 @@ function ParkingFinder() {
       return;
     }
 
-    // Buscar parkings seguros (paid + public parking) cerca del destino
-    const searchTerms = [
-      `paid parking near ${destination}`,
-      `public parking near ${destination}`,
-      `secure parking near ${destination}`
-    ];
-
-    // Usar el primer término para la búsqueda principal
-    const parkingUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchTerms[0])}`;
+    // Formato correcto para Google Maps search
+    // Opción 1: Búsqueda simple de parking cerca del destino
+    const searchQuery = `parking near ${destination}`;
+    const parkingUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`;
     
     // Abrir en nueva pestaña
     window.open(parkingUrl, '_blank', 'noopener,noreferrer');
+    
+    console.log('Búsqueda de parking:', searchQuery);
+    console.log('URL generada:', parkingUrl);
   };
 
   const handleKeyPress = (e) => {

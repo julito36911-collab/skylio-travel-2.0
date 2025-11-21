@@ -110,10 +110,10 @@ function GuidesHub() {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex justify-center gap-3 mb-8 flex-wrap">
           <button
-            onClick={() => setActiveTab('destinations')}
-            className={`px-8 py-3 rounded-2xl font-semibold transition-all ${
+            onClick={() => { setActiveTab('destinations'); setSelectedContinent('all'); }}
+            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
               activeTab === 'destinations'
                 ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
                 : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -122,8 +122,18 @@ function GuidesHub() {
             🌍 {t('guides.destinations', 'Destinos Imperdibles')}
           </button>
           <button
-            onClick={() => setActiveTab('driving')}
-            className={`px-8 py-3 rounded-2xl font-semibold transition-all ${
+            onClick={() => { setActiveTab('countries'); setSelectedContinent('all'); }}
+            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
+              activeTab === 'countries'
+                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+            }`}
+          >
+            🏳️ {t('guides.countries', 'Países')}
+          </button>
+          <button
+            onClick={() => { setActiveTab('driving'); setSelectedContinent('all'); }}
+            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
               activeTab === 'driving'
                 ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
                 : 'bg-white/10 text-gray-300 hover:bg-white/20'

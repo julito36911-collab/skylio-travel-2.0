@@ -510,6 +510,262 @@ function DrivingModal({ city, onClose }) {
   );
 }
 
+// Grid para países
+function CountriesGrid({ countries }) {
+  const { t } = useTranslation();
+
+  if (countries.length === 0) {
+    return (
+      <div className="text-center text-gray-400 py-12">
+        {t('guides.noResults', 'No se encontraron resultados')}
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {countries.map(country => (
+        <CountryCard key={country.id} country={country} />
+      ))}
+    </div>
+  );
+}
+
+// Tarjeta individual de país
+function CountryCard({ country }) {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <>
+      <div
+        onClick={() => setShowDetails(true)}
+        className="group cursor-pointer bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 hover:shadow-2xl"
+      >
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-5xl">{country.flag}</span>
+              <div>
+                <h3 className="text-2xl font-bold text-white">{country.name}</h3>
+                <p className="text-gray-300 text-sm">{country.capital}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-2 mb-4">
+          <p className="text-gray-300 text-sm">
+            <span className="font-semibold text-blue-400">💬</span> {country.languages.join(', ')}
+          </p>
+          <p className="text-gray-300 text-sm">
+            <span className="font-semibold text-green-400">💰</span> {country.currency.name} ({country.currency.symbol})
+          </p>
+          <p className="text-gray-300 text-sm">
+            <span className="font-semibold text-purple-400">👥</span> {country.population}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2 mb-3">
+          {country.mainCities.slice(0, 3).map((city, idx) => (
+            <span key={idx} className="text-xs px-2 py-1 bg-blue-500/20 text-blue-200 rounded-full">
+              {city}
+            </span>
+          ))}
+          {country.mainCities.length > 3 && (
+            <span className="text-xs px-2 py-1 bg-gray-500/20 text-gray-300 rounded-full">
+              +{country.mainCities.length - 3}
+            </span>
+          )}
+        </div>
+
+        <p className="text-blue-400 group-hover:text-blue-300 font-medium text-sm">
+          Ver información completa →
+        </p>
+      </div>
+
+      {showDetails && (
+        <CountryModal country={country} onClose={() => setShowDetails(false)} />
+      )}
+    </>
+  );
+}
+
+// Modal con detalles completos del país
+function CountryModal({ country, onClose }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
+      <div
+        className="bg-gray-900 rounded-3xl max-w-5xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="sticky top-0 bg-gradient-to-r from-indigo-600 to-blue-600 p-6 rounded-t-3xl z-10">
+          <div className="flex items-start justify-between">
+            <div className="flex items-center gap-4">
+              <span className="text-6xl">{country.flag}</span>
+              <div>
+                <h2 className="text-4xl font-bold text-white mb-1">{country.name}</h2>
+                <p className="text-xl text-blue-100">{country.capital} • {country.continent}</p>
+              </div>
+            </div>
+            <button
+              onClick={onClose}
+              className="text-white hover:bg-white/20 rounded-full p-2 transition-all"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 space-y-6">
+          {/* Información básica */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoCard icon="💬" title="Idioma(s)" value={country.languages.join(', ')} />
+            <InfoCard icon="💰" title="Moneda" value={`${country.currency.name} (${country.currency.code})`} />
+            <InfoCard icon="👥" title="Población" value={country.population} />
+            <InfoCard icon="🕐" title="Zona Horaria" value={country.timezone} />
+          </div>
+
+          {/* Ciudades principales */}
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              🏙️ Ciudades Principales
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {country.mainCities.map((city, idx) => (
+                <span key={idx} className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm font-medium">
+                  {city}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Visa */}
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              🛂 Requisitos de Visa
+            </h3>
+            <p className="text-gray-300">{country.visa.requirements}</p>
+            {country.visa.schengen && (
+              <span className="inline-block mt-2 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">
+                Zona Schengen
+              </span>
+            )}
+          </div>
+
+          {/* Mejor época */}
+          <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-2xl p-5 border border-yellow-500/20">
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              ☀️ Mejor Época para Visitar
+            </h3>
+            <div className="space-y-2 text-gray-300">
+              <p><span className="font-semibold text-yellow-300">Temporada alta:</span> {country.bestTime.high}</p>
+              <p><span className="font-semibold text-green-300">Media:</span> {country.bestTime.shoulder}</p>
+              <p><span className="font-semibold text-blue-300">Baja:</span> {country.bestTime.low}</p>
+              <p className="text-sm italic mt-2">💡 {country.bestTime.notes}</p>
+            </div>
+          </div>
+
+          {/* Presupuesto */}
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              💵 Presupuesto Diario
+            </h3>
+            <div className="space-y-2 text-gray-300">
+              <p><span className="font-semibold text-green-400">Bajo:</span> {country.budget.low}</p>
+              <p><span className="font-semibold text-yellow-400">Medio:</span> {country.budget.medium}</p>
+              <p><span className="font-semibold text-red-400">Alto:</span> {country.budget.high}</p>
+            </div>
+          </div>
+
+          {/* Información práctica */}
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              🔌 Información Práctica
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-300 text-sm">
+              <div><span className="font-semibold">Voltaje:</span> {country.practical.voltage}</div>
+              <div><span className="font-semibold">Enchufe:</span> {country.practical.plugType}</div>
+              <div><span className="font-semibold">Emergencia:</span> {country.practical.emergency}</div>
+              <div><span className="font-semibold">Propina:</span> {country.practical.tipping}</div>
+              <div><span className="font-semibold">Regateo:</span> {country.practical.bargaining}</div>
+            </div>
+          </div>
+
+          {/* Cultura */}
+          <CountrySection title="🎭 Cultura y Tradiciones" items={country.culture.traditions} />
+          <CountrySection title="🎉 Festivales Importantes" items={country.culture.festivals} />
+          <CountrySection title="🤝 Etiqueta" items={country.culture.etiquette} highlight={true} />
+
+          {/* Comida */}
+          <CountrySection title="🍽️ Comida Típica (Debes Probar)" items={country.food.mustTry} />
+          <CountrySection title="💡 Tips de Comida" items={country.food.foodTips} />
+
+          {/* Lugares destacados */}
+          <CountrySection title="⭐ Lugares Destacados" items={country.highlights} />
+
+          {/* Seguridad */}
+          <div className={`rounded-2xl p-5 border ${
+            country.safety.level.includes('seguro') || country.safety.level.includes('safe')
+              ? 'bg-green-500/10 border-green-500/30'
+              : 'bg-yellow-500/10 border-yellow-500/30'
+          }`}>
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              🛡️ Seguridad
+            </h3>
+            <p className="text-lg font-semibold mb-3 text-gray-200">
+              Nivel: {country.safety.level}
+            </p>
+            {country.safety.warnings && country.safety.warnings.length > 0 && (
+              <ul className="space-y-2">
+                {country.safety.warnings.map((warning, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-gray-300 text-sm">
+                    <span className="text-yellow-400 mt-1">⚠️</span>
+                    <span>{warning}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Componente para tarjetas de información
+function InfoCard({ icon, title, value }) {
+  return (
+    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+      <p className="text-gray-400 text-xs mb-1 flex items-center gap-2">
+        <span className="text-lg">{icon}</span>
+        {title}
+      </p>
+      <p className="text-white font-medium">{value}</p>
+    </div>
+  );
+}
+
+// Componente reutilizable para secciones de país
+function CountrySection({ title, items, highlight = false }) {
+  return (
+    <div className={`rounded-2xl p-5 border ${highlight ? 'bg-blue-500/10 border-blue-500/30' : 'bg-white/5 border-white/10'}`}>
+      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {items.map((item, index) => (
+          <li key={index} className="flex items-start gap-2 text-gray-300">
+            <span className={`mt-1 ${highlight ? 'text-blue-400' : 'text-green-400'}`}>•</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 // Helper: iconos según categoría
 function getCategoryIcon(category) {
   const icons = {

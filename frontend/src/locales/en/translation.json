@@ -10,8 +10,9 @@
     "profile": "Profile"
   },
   "categories": {
-    "flights": "Flights",
+    "travel_search": "Travel Search",
     "hotels": "Hotels & Packages",
+    "luxury": "Luxury & Yachts",
     "mobility": "Mobility",
     "connectivity": "Connectivity",
     "experiences": "Experiences",

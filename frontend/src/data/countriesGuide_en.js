@@ -16,6 +16,224 @@ export const countriesGuide = [
     
     mainCities: ['Paris', 'Marseille', 'Lyon', 'Nice', 'Toulouse', 'Bordeaux', 'Strasbourg'],
     
+    cities: [
+      {
+        id: 'paris',
+        name: 'Paris',
+        population: '2.2 million',
+        
+        airports: [
+          {
+            name: 'Charles de Gaulle (CDG)',
+            distance: '25 km northeast',
+            toCity: [
+              {
+                method: 'RER B (train)',
+                duration: '30-40 min',
+                price: '€11.45',
+                frequency: 'Every 10-15 min',
+                hours: '5:00 AM - 11:50 PM',
+                stops: 'Gare du Nord, Châtelet-Les Halles, Saint-Michel',
+                notes: 'CHEAPEST option. Buy ticket at machines.'
+              },
+              {
+                method: 'Roissybus',
+                duration: '60 min',
+                price: '€16.60',
+                frequency: 'Every 15-20 min',
+                hours: '6:00 AM - 12:30 AM',
+                stops: 'Direct to Opera',
+                notes: 'Comfortable with luggage. Free Wi-Fi.'
+              },
+              {
+                method: 'Bus 350 / 351',
+                duration: '70-90 min',
+                price: '€2.10 (t+ ticket)',
+                frequency: 'Every 30 min',
+                hours: '6:00 AM - 11:00 PM',
+                stops: 'Several stops in Paris',
+                notes: 'VERY cheap but slow. For budget travelers.'
+              },
+              {
+                method: 'Official taxi',
+                duration: '30-60 min (depends on traffic)',
+                price: '€50-60 flat rate',
+                frequency: 'Always available',
+                hours: '24/7',
+                stops: 'Door to door',
+                notes: 'Flat rate to Paris center. Max 4 people.'
+              },
+              {
+                method: 'Uber',
+                duration: '30-60 min',
+                price: '€45-70',
+                frequency: 'On demand',
+                hours: '24/7',
+                stops: 'Door to door',
+                notes: 'Price varies by demand.'
+              }
+            ]
+          },
+          {
+            name: 'Orly (ORY)',
+            distance: '14 km south',
+            toCity: [
+              {
+                method: 'Orlyval + RER B',
+                duration: '35-45 min',
+                price: '€14.50',
+                frequency: 'Every 4-8 min',
+                hours: '6:00 AM - 11:00 PM',
+                stops: 'Automatic to Antony, then RER B to center',
+                notes: 'Fast but expensive.'
+              },
+              {
+                method: 'Tram T7 + Metro',
+                duration: '50-70 min',
+                price: '€2.10',
+                frequency: 'Every 8 min',
+                hours: '5:30 AM - 12:30 AM',
+                stops: 'T7 to Villejuif, then Metro 7',
+                notes: 'CHEAPEST. Smart option.'
+              },
+              {
+                method: 'OrlyBus',
+                duration: '30-40 min',
+                price: '€11.20',
+                frequency: 'Every 10-20 min',
+                hours: '6:00 AM - 12:00 AM',
+                stops: 'Direct to Denfert-Rochereau',
+                notes: 'Good value for money.'
+              },
+              {
+                method: 'Official taxi',
+                duration: '20-40 min',
+                price: '€35-40 flat rate',
+                frequency: '24/7',
+                hours: '24/7',
+                stops: 'Door to door',
+                notes: 'Flat rate. Cheaper than CDG.'
+              }
+            ]
+          },
+          {
+            name: 'Beauvais (BVA)',
+            distance: '85 km north',
+            toCity: [
+              {
+                method: 'Official airport bus',
+                duration: '75-90 min',
+                price: '€17 (€34 round trip)',
+                frequency: 'Coordinated with flights',
+                hours: 'According to flight schedules',
+                stops: 'Porte Maillot (Paris)',
+                notes: 'ONLY public transport. Book online.'
+              },
+              {
+                method: 'Taxi/Uber',
+                duration: '70-90 min',
+                price: '€150-200',
+                frequency: '24/7',
+                hours: '24/7',
+                stops: 'Door to door',
+                notes: 'VERY expensive. Only if necessary.'
+              }
+            ]
+          }
+        ],
+        
+        publicTransport: {
+          types: [
+            {
+              name: 'Metro',
+              lines: '16 lines, 308 stations',
+              hours: '5:30 AM - 1:15 AM (Fri/Sat until 2:15 AM)',
+              frequency: 'Every 2-8 minutes'
+            },
+            {
+              name: 'RER',
+              lines: '5 lines (A, B, C, D, E)',
+              hours: '5:00 AM - 12:30 AM',
+              frequency: 'Every 10-20 minutes'
+            },
+            {
+              name: 'Bus',
+              lines: '60+ lines',
+              hours: '6:30 AM - 8:30 PM (some 24h)',
+              frequency: 'Every 5-15 minutes'
+            },
+            {
+              name: 'Tram',
+              lines: '9 lines',
+              hours: '5:30 AM - 12:30 AM',
+              frequency: 'Every 4-8 minutes'
+            }
+          ],
+          
+          tickets: [
+            { type: 'Ticket t+', price: '€2.10', validity: '90 min (metro/bus/tram, no RER transfer)' },
+            { type: 'Carnet 10 tickets', price: '€17.35', validity: '15% savings' },
+            { type: 'Mobilis 1 day', price: '€8.45', validity: 'Zones 1-2, unlimited' },
+            { type: 'Paris Visite 1 day', price: '€13.55', validity: 'Zones 1-3, includes discounts' },
+            { type: 'Paris Visite 5 days', price: '€43.30', validity: 'Ideal for tourists' },
+            { type: 'Navigo Weekly', price: '€30', validity: 'Mon-Sun, all zones' }
+          ],
+          
+          whereToBuy: [
+            'Automatic machines at stations (credit cards)',
+            'Ticket offices at major stations',
+            '"Bonjour RATP" app - digital tickets',
+            '"Île-de-France Mobilités" app',
+            'Tabacs (shops) - physical only'
+          ],
+          
+          officialMaps: [
+            {
+              name: 'Metro Map PDF',
+              url: 'https://www.ratp.fr/sites/default/files/plans-lignes/Plans-essentiels/Plan-Metro.pdf'
+            },
+            {
+              name: 'RATP Interactive Maps',
+              url: 'https://www.ratp.fr/en/plans-lignes'
+            }
+          ],
+          
+          apps: [
+            'Bonjour RATP (official)',
+            'Citymapper Paris (best)',
+            'Google Maps'
+          ],
+          
+          scams: [
+            '⚠️ Fake ticket sellers outside stations',
+            '⚠️ Pickpockets on lines 1, 4, 9 (touristy)',
+            '⚠️ "Helpers" at machines who steal cards',
+            '⚠️ Fake inspectors asking for tickets outside trains',
+            '⚠️ People asking to sign petitions'
+          ],
+          
+          tips: [
+            'ALWAYS validate your ticket (€60 fine)',
+            'Keep ticket until you exit',
+            'RER B to airport = cheapest',
+            'Last metro 1 AM (2 AM weekends)',
+            'Kids <4 years free',
+            'Free WiFi at main stations'
+          ]
+        },
+        
+        topAttractions: ['Eiffel Tower', 'Louvre', 'Arc de Triomphe', 'Notre-Dame', 'Sacré-Cœur'],
+        
+        neighborhoods: [
+          '1st - Louvre (museums)',
+          '4th - Le Marais (fashion)',
+          '5th - Latin Quarter (university)',
+          '18th - Montmartre (artistic)',
+          '7th - Eiffel Tower'
+        ]
+      }
+    ],
+    
     visa: {
       schengen: true,
       requirements: 'Schengen - 90 days visa-free for many countries',

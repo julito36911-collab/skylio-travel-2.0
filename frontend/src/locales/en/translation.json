@@ -210,6 +210,22 @@
     "city": "city",
     "cities": "cities"
   },
+  "cities": {
+    "title": "Cities",
+    "publicTransport": "Public Transport",
+    "transportTypes": "Transport Types",
+    "howToBuyTickets": "How to Buy Tickets",
+    "prices": "Prices",
+    "officialMaps": "Official Maps",
+    "usefulApps": "Useful Apps",
+    "commonScams": "Common Scams",
+    "tips": "Practical Tips",
+    "downloadMap": "Download Map",
+    "viewOfficialSite": "View Official Site",
+    "topAttractions": "Top Attractions",
+    "neighborhoods": "Important Neighborhoods",
+    "climate": "Climate"
+  },
   "parking": {
     "title": "Find Safe Parking",
     "subtitle": "Search for reliable parking near your destination",

@@ -858,6 +858,276 @@ function CountrySection({ title, items, highlight = false }) {
   );
 }
 
+// Tarjeta de ciudad (clickeable para ver detalles)
+function CityCard({ city, countryName }) {
+  const { t } = useTranslation();
+  const [showCityModal, setShowCityModal] = useState(false);
+
+  return (
+    <>
+      <div
+        onClick={() => setShowCityModal(true)}
+        className="cursor-pointer bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 group"
+      >
+        <h4 className="text-lg font-bold text-white mb-2">{city.name}</h4>
+        <p className="text-sm text-gray-300 mb-2">👥 {city.population}</p>
+        <div className="flex items-center justify-between text-xs">
+          <span className="text-blue-300">
+            {city.airports?.length || 0} aeropuerto(s)
+          </span>
+          <span className="text-blue-400 group-hover:text-blue-300 font-medium">
+            Ver detalles →
+          </span>
+        </div>
+      </div>
+
+      {showCityModal && (
+        <CityModal city={city} countryName={countryName} onClose={() => setShowCityModal(false)} />
+      )}
+    </>
+  );
+}
+
+// Modal con información completa de la ciudad
+function CityModal({ city, countryName, onClose }) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={onClose}>
+      <div
+        className="bg-gray-900 rounded-3xl max-w-6xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="sticky top-0 bg-gradient-to-r from-green-600 to-teal-600 p-6 rounded-t-3xl z-10">
+          <div className="flex items-start justify-between">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-1">{city.name}</h2>
+              <p className="text-xl text-green-100">{countryName} • 👥 {city.population}</p>
+            </div>
+            <button
+              onClick={onClose}
+              className="text-white hover:bg-white/20 rounded-full p-2 transition-all"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 space-y-6">
+          
+          {/* Aeropuertos y cómo llegar */}
+          {city.airports && city.airports.length > 0 && (
+            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border-2 border-blue-500/30">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                ✈️ Aeropuertos - Cómo Llegar al Centro
+              </h3>
+              
+              {city.airports.map((airport, idx) => (
+                <div key={idx} className="mb-6 last:mb-0">
+                  <div className="bg-white/10 rounded-xl p-4 mb-4">
+                    <h4 className="text-xl font-bold text-blue-300 mb-2">{airport.name}</h4>
+                    <p className="text-gray-300">📍 {airport.distance}</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {airport.toCity.map((option, optIdx) => (
+                      <div key={optIdx} className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-green-500/50 transition-all">
+                        <div className="flex items-start justify-between mb-2">
+                          <div className="flex-1">
+                            <h5 className="text-lg font-bold text-white mb-1">{option.method}</h5>
+                            <p className="text-sm text-gray-400 italic">{option.notes}</p>
+                          </div>
+                          <span className="text-2xl font-bold text-green-400">{option.price}</span>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3 text-sm">
+                          <div>
+                            <p className="text-gray-400">⏱️ Duración</p>
+                            <p className="text-white font-semibold">{option.duration}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-400">🔄 Frecuencia</p>
+                            <p className="text-white font-semibold">{option.frequency}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-400">🕐 Horario</p>
+                            <p className="text-white font-semibold">{option.hours}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-400">🚏 Paradas</p>
+                            <p className="text-white font-semibold text-xs">{option.stops}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Transporte Público */}
+          {city.publicTransport && (
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                🚇 {t('cities.publicTransport')}
+              </h3>
+
+              {/* Tipos de transporte */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-blue-300 mb-3">{t('cities.transportTypes')}</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {city.publicTransport.types.map((type, idx) => (
+                    <div key={idx} className="bg-white/5 rounded-lg p-3 border border-white/10">
+                      <p className="font-bold text-white mb-1">{type.name}</p>
+                      <p className="text-xs text-gray-400 mb-2">{type.lines}</p>
+                      <p className="text-xs text-gray-300">🕐 {type.hours}</p>
+                      <p className="text-xs text-green-400">🔄 {type.frequency}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Precios de tickets */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-green-300 mb-3">{t('cities.prices')}</h4>
+                <div className="space-y-2">
+                  {city.publicTransport.tickets.map((ticket, idx) => (
+                    <div key={idx} className="flex items-center justify-between bg-white/5 rounded-lg p-3">
+                      <div className="flex-1">
+                        <p className="font-semibold text-white">{ticket.type}</p>
+                        <p className="text-xs text-gray-400">{ticket.validity}</p>
+                      </div>
+                      <span className="text-lg font-bold text-green-400">{ticket.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dónde comprar */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-yellow-300 mb-3">{t('cities.howToBuyTickets')}</h4>
+                <ul className="space-y-2">
+                  {city.publicTransport.whereToBuy.map((place, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-gray-300">
+                      <span className="text-yellow-400">•</span>
+                      <span>{place}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Mapas oficiales */}
+              {city.publicTransport.officialMaps && (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">{t('cities.officialMaps')}</h4>
+                  <div className="space-y-2">
+                    {city.publicTransport.officialMaps.map((map, idx) => (
+                      <a
+                        key={idx}
+                        href={map.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block bg-purple-500/20 hover:bg-purple-500/30 rounded-lg p-3 border border-purple-500/30 transition-all group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="font-semibold text-white group-hover:text-purple-300">{map.name}</span>
+                          <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Apps recomendadas */}
+              {city.publicTransport.apps && (
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">{t('cities.usefulApps')}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {city.publicTransport.apps.map((app, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-sm">
+                        📱 {app}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Estafas comunes */}
+              {city.publicTransport.scams && (
+                <div className="mb-6 bg-red-500/10 rounded-xl p-4 border border-red-500/30">
+                  <h4 className="text-lg font-semibold text-red-300 mb-3 flex items-center gap-2">
+                    ⚠️ {t('cities.commonScams')}
+                  </h4>
+                  <ul className="space-y-2">
+                    {city.publicTransport.scams.map((scam, idx) => (
+                      <li key={idx} className="text-sm text-gray-300">
+                        {scam}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Tips */}
+              {city.publicTransport.tips && (
+                <div className="bg-green-500/10 rounded-xl p-4 border border-green-500/30">
+                  <h4 className="text-lg font-semibold text-green-300 mb-3 flex items-center gap-2">
+                    💡 {t('cities.tips')}
+                  </h4>
+                  <ul className="space-y-2">
+                    {city.publicTransport.tips.map((tip, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-gray-300 text-sm">
+                        <span className="text-green-400">✓</span>
+                        <span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Atracciones principales */}
+          {city.topAttractions && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">{t('cities.topAttractions')}</h3>
+              <div className="flex flex-wrap gap-2">
+                {city.topAttractions.map((attraction, idx) => (
+                  <span key={idx} className="px-3 py-1 bg-yellow-500/20 text-yellow-200 rounded-full text-sm">
+                    ⭐ {attraction}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Barrios */}
+          {city.neighborhoods && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3">{t('cities.neighborhoods')}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {city.neighborhoods.map((neighborhood, idx) => (
+                  <div key={idx} className="text-sm text-gray-300">
+                    📍 {neighborhood}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Helper: iconos según categoría
 function getCategoryIcon(category) {
   const icons = {

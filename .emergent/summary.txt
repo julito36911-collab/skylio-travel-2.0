@@ -1,0 +1,92 @@
+<analysis>
+The trajectory details the iterative development of the Skylio Hub React application, guided by a Spanish-speaking user's requests. The AI engineer started by migrating a Vite project and implementing a multi-language Content and Guides section using static data. A key architectural decision was made mid-development: shifting from a single data source with i18n keys for content to creating separate, fully translated data files for each language (e.g., , ) to handle large blocks of text, as requested by the user.
+
+Development followed a clear pattern:
+1.  The user requests a new feature (e.g., country guides, parking finder, city transport info).
+2.  The AI engineer creates a plan, often proposing an incremental approach (build UI for a few items first).
+3.  The engineer implements the feature by creating/modifying data files, React components (primarily within the monolithic ), and adding translation keys.
+4.  The user provides feedback, often identifying bugs or missing translations (e.g., hardcoded labels, incorrect Google Maps URL).
+5.  The engineer debugs and fixes the issues.
+
+The most recent work involves nesting detailed City Guides (with public transport info) within the Country Guides. An issue arose when attempting to display the city details modal, which the user flagged with a screenshot.
+
+The user's primary language is Spanish. The next agent must respond in Spanish.
+</analysis>
+
+<product_requirements>
+The project, Skylio Hub, is a single-page travel affiliate application designed to be a one-stop-shop for travelers.
+
+**Core Requirements:**
+*   **Affiliate Integration:** Consolidate multiple travel affiliate partners (e.g., Aviasales, Expedia, Hotels.com) into a unified interface.
+*   **Multi-language Support:** The application must be fully functional and translated into Spanish, English, and Hebrew, including Right-to-Left (RTL) support for Hebrew.
+
+**Implemented & In-Progress Features:**
+*   **Main Dashboard:** Features three primary partners and groups the rest into collapsible accordions.
+*   **News Section:** Displays travel news from NewsAPI, with a Demo Mode using static data for local development.
+*   **Content & Guides Section:** A major feature built as a modal () containing multiple guides:
+    *   **Must-See Destinations:** A guide to iconic global landmarks.
+    *   **Driving Restrictions:** A guide detailing traffic zones (LEZ, ZTL) in major cities, grouped by continent and country.
+    *   **Country Guides:** Detailed information on the 35 most touristic countries, with content fully translated in language-specific data files.
+    *   **City Guides (In Progress):** Nested within country guides, this section will provide deep dives into major cities, with a focus on detailed public transport information, including airport-to-city transit options, costs, and maps.
+*   **Parking Finder:** A standalone utility on the main page that generates a direct Google Maps search link to find reliable parking near a user-specified destination, without requiring a Google Maps API key.
+</product_requirements>
+
+<key_technical_concepts>
+- **Framework:** React (Create React App).
+- **Styling:** Tailwind CSS for a Glassmorphism dark mode UI.
+- **Internationalization (i18n):**  for UI labels. A key pattern is using separate, language-specific data files (e.g., , ) for large content blocks.
+- **Data Handling:** Static JavaScript files in  serve as a database for all guide content.
+- **URL Generation:** Using formatted strings to create deep links for external services like Google Maps, avoiding API key requirements.
+</key_technical_concepts>
+
+<code_architecture>
+The application is a standard Create React App project. All recent feature development has been concentrated on the frontend, particularly within a single large component that acts as a hub for all guide-related content.
+
+**Directory Structure:**
+
+
+**Key File Analysis:**
+- ****
+  - **Importance:** This has become the core component for the Content and Guides feature. It manages its own state for active tabs (Destinations, Driving, Countries), search queries, and the display of multiple modals (Destination details, Driving details, Country details, and now City details). It also contains the data transformation logic for the driving restrictions guide.
+  - **Changes:** This file has grown significantly. It was created to house the guides and has been repeatedly modified to add new tabs, grids of cards, and detail modals for each new guide type (Countries, Cities). It now imports data from multiple language-specific files and uses the  language to select the correct data source. It contains the logic for rendering , , and the new .
+
+- **** (and , )
+  - **Importance:** These files represent a key architectural shift to support fully translated content. They hold an array of country objects, containing details like visa info, currency, culture, etc.
+  - **Changes:** Created to solve the multi-language content requirement. Most recently, the structure of the objects within  was modified to include a nested  array, which contains detailed objects for each city, including a comprehensive  section.
+
+- ****
+  - **Importance:** The main application entry point. It manages the overall layout and the visibility of top-level modals.
+  - **Changes:** It was modified to add the main Guides button and the new  component directly onto the main page.
+
+- ****
+  - **Importance:** A new, self-contained component that provides the Find Safe Parking feature.
+  - **Changes:** Created from scratch. Its internal logic for generating the Google Maps URL was debugged and refactored multiple times to fix a user-reported bug and ensure the generated link works correctly.
+
+- ****
+  - **Importance:** These files are essential for the app's multi-language capability.
+  - **Changes:** They have been extensively updated with new keys to support all the UI labels for the new features, including the parking finder, country guides, city guides, and all the labels inside the various modals (e.g., Visa Requirements, Public Transport, Airport Connections). This was a recurring task after user feedback pointed out hardcoded text.
+</code_architecture>
+
+<pending_tasks>
+- Fix the bug preventing the  from displaying correctly when a city is clicked from within the .
+- Complete data entry for the remaining ~24 countries in all three language files (, , ).
+- Populate the detailed city/transport guides for all major cities within each country.
+- Fulfill earlier requests to integrate real APIs for weather (OpenWeatherMap) and currency conversion (ExchangeRate-API) once the static content phase is complete.
+</pending_tasks>
+
+<current_work>
+The immediate task is to implement the City Guides feature, which nests detailed city information within each country. The user specifically requested that each city guide contain a thorough section on public transportation, including detailed instructions and prices for getting from the airport(s) to the city center.
+
+To achieve this, the following steps were taken:
+1.  The data structure in  was updated. A  array was added to the France country object. This array contains a detailed object for Paris, which includes a  property with comprehensive information on airport connections (RER B, RoissyBus), ticket purchasing, and potential scams.
+2.  The  component was significantly modified:
+    *   Logic was added to the  to render a list of  components if the country has a  array.
+    *   A new  component was created inside  to display the detailed city information.
+    *   State management (, ) was added to control the visibility of the new .
+
+The work stopped immediately after the user clicked on the Paris city badge from within the France country modal. The user uploaded a screenshot and a one-word message, hay, indicating that the expected  did not appear correctly, and there is a bug to be fixed.
+</current_work>
+
+<optional_next_step>
+Analyze the user's screenshot () and debug the  component to fix the issue preventing the  from opening correctly.
+</optional_next_step>

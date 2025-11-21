@@ -533,6 +533,7 @@ function CountriesGrid({ countries }) {
 
 // Tarjeta individual de país
 function CountryCard({ country }) {
+  const { t } = useTranslation();
   const [showDetails, setShowDetails] = useState(false);
 
   return (

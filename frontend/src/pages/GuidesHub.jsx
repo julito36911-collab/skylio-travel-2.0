@@ -625,16 +625,16 @@ function CountryModal({ country, onClose }) {
         <div className="p-6 space-y-6">
           {/* Información básica */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InfoCard icon="💬" title="Idioma(s)" value={country.languages.join(', ')} />
-            <InfoCard icon="💰" title="Moneda" value={`${country.currency.name} (${country.currency.code})`} />
-            <InfoCard icon="👥" title="Población" value={country.population} />
-            <InfoCard icon="🕐" title="Zona Horaria" value={country.timezone} />
+            <InfoCard icon="💬" title={t('guides.language')} value={country.languages.join(', ')} />
+            <InfoCard icon="💰" title={t('guides.currency')} value={`${country.currency.name} (${country.currency.code})`} />
+            <InfoCard icon="👥" title={t('guides.population')} value={country.population} />
+            <InfoCard icon="🕐" title={t('guides.timezone')} value={country.timezone} />
           </div>
 
           {/* Ciudades principales */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              🏙️ Ciudades Principales
+              🏙️ {t('guides.mainCities')}
             </h3>
             <div className="flex flex-wrap gap-2">
               {country.mainCities.map((city, idx) => (

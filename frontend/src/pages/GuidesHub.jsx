@@ -332,19 +332,19 @@ function DestinationModal({ destination, onClose }) {
           </div>
 
           {/* Lugares cercanos */}
-          <Section title="📍 Lugares Cercanos" items={destination.nearby} />
+          <Section title={`📍 ${t('guides.nearbyPlaces')}`} items={destination.nearby} />
 
           {/* Tips */}
-          <Section title="💡 Tips Importantes" items={destination.tips} highlight={true} />
+          <Section title={`💡 ${t('guides.importantTips')}`} items={destination.tips} highlight={true} />
 
           {/* Info adicional */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-              <p className="text-gray-400 text-sm mb-1">♿ Accesibilidad</p>
+              <p className="text-gray-400 text-sm mb-1">♿ {t('guides.accessibility')}</p>
               <p className="text-white">{destination.accessibility}</p>
             </div>
             <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-              <p className="text-gray-400 text-sm mb-1">⏱️ Duración</p>
+              <p className="text-gray-400 text-sm mb-1">⏱️ {t('guides.duration')}</p>
               <p className="text-white">{destination.duration}</p>
             </div>
           </div>

@@ -184,11 +184,9 @@ function GuidesHub() {
         )}
 
         {/* Content */}
-        {activeTab === 'destinations' ? (
-          <DestinationsGrid destinations={filteredDestinations} />
-        ) : (
-          <DrivingGrid cities={transformedDriving} />
-        )}
+        {activeTab === 'destinations' && <DestinationsGrid destinations={filteredDestinations} />}
+        {activeTab === 'countries' && <CountriesGrid countries={filteredCountries} />}
+        {activeTab === 'driving' && <DrivingGrid cities={transformedDriving} />}
       </div>
     </div>
   );

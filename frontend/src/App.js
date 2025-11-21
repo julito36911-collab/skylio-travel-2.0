@@ -80,7 +80,13 @@ function App() {
   const categoryHoteles = {
     title: t('categories.hotels', 'Hoteles & Paquetes'),
     icon: Hotel,
-    partners: partners.filter(p => ['expedia', 'searadar'].includes(p.id))
+    partners: partners.filter(p => ['expedia'].includes(p.id))
+  };
+
+  const categoryLujo = {
+    title: t('categories.luxury', 'Lujo & Yates'),
+    icon: Anchor,
+    partners: partners.filter(p => ['searadar'].includes(p.id))
   };
 
   const categoryMovilidad = {

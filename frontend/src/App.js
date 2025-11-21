@@ -77,12 +77,6 @@ function App() {
     partners: partners.filter(p => ['kiwicom_flights', 'expedia'].includes(p.id))
   };
 
-  const categoryHoteles = {
-    title: t('categories.hotels', 'Hoteles & Paquetes'),
-    icon: Hotel,
-    partners: partners.filter(p => ['expedia'].includes(p.id))
-  };
-
   const categoryLujo = {
     title: t('categories.luxury', 'Lujo & Yates'),
     icon: Anchor,

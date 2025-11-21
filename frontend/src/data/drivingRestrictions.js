@@ -1013,6 +1013,624 @@ export const drivingRestrictions = [
     usefulApps: ['MyTransport', 'Grab', 'Parking.sg'],
     weather: { temp: 30, condition: 'Caluroso y húmedo', icon: '🌡️' },
     lastUpdated: '2025-11-15'
+  },
+
+  // ===== USA CITIES =====
+  {
+    id: 'new-york',
+    city: 'Nueva York',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 40.7128, lon: -74.0060 },
+    timezone: 'America/New_York',
+    
+    severity: 'HIGH',
+    
+    restrictions: [
+      {
+        type: 'CONGESTION_PRICING',
+        name: 'Central Business District Toll',
+        description: 'Peaje de congestión en Manhattan (2024)',
+        schedule: {
+          weekdays: 'Lun-Vie 05:00 - 21:00',
+          weekend: 'Fines de semana 09:00 - 21:00'
+        },
+        fines: {
+          amount: 15,
+          currency: 'USD',
+          daily: true,
+          notes: 'Al sur de calle 60 en Manhattan'
+        }
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Subway (24/7)', 'Bus MTA', 'PATH', 'Ferry'],
+        ticketPrice: '$2.90',
+        weekPass: '$34',
+        notes: 'Sistema más grande de USA'
+      },
+      {
+        type: 'PARKING',
+        name: 'Garages periféricos',
+        price: '$30-60/día en Manhattan',
+        recommendation: 'Evitar auto en Manhattan'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 25, highway: 55, unit: 'mph' },
+      fuelAvgPrice: { petrol: 3.50, diesel: 4.20, unit: 'USD/gal' },
+      alcoholLimit: 0.08
+    },
+    
+    tips: [
+      'Manhattan es MUY difícil para conducir',
+      'Parking carísimo ($50-70/día)',
+      'Subway funciona 24/7',
+      'Tráfico intenso siempre',
+      'Uber/Lyft muy accesibles',
+      'Auto solo útil para salir de la ciudad'
+    ],
+    
+    usefulApps: ['Citymapper', 'MTA', 'SpotHero', 'Waze'],
+    weather: { temp: 12, condition: 'Frío', icon: '❄️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'los-angeles',
+    city: 'Los Ángeles',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 34.0522, lon: -118.2437 },
+    timezone: 'America/Los_Angeles',
+    
+    severity: 'MEDIUM',
+    
+    restrictions: [
+      {
+        type: 'HOV_LANES',
+        name: 'Carriles para vehículos compartidos',
+        description: 'Carriles HOV/Carpool en autopistas',
+        schedule: {
+          weekdays: 'Lun-Vie 05:00 - 09:00 y 15:00 - 19:00',
+          notes: 'Mínimo 2-3 ocupantes según carril'
+        },
+        fines: {
+          amount: 490,
+          currency: 'USD',
+          notes: 'Multa por uso indebido de carril HOV'
+        }
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Metro Rail', 'Metro Bus'],
+        ticketPrice: '$1.75',
+        dayPass: '$7',
+        notes: 'Limitado comparado con otras ciudades'
+      },
+      {
+        type: 'RIDE_SHARE',
+        services: ['Uber', 'Lyft'],
+        notes: 'Muy populares, tráfico pesado'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 25, freeway: 65, unit: 'mph' },
+      fuelAvgPrice: { petrol: 4.50, diesel: 5.00, unit: 'USD/gal' },
+      alcoholLimit: 0.08,
+      notes: 'Ciudad diseñada para autos'
+    },
+    
+    tips: [
+      'Auto es casi necesario en LA',
+      'Tráfico terrible 07:00-10:00 y 16:00-19:00',
+      'Autopistas gratis (excepto algunas Express Lanes)',
+      'Parking relativamente fácil vs NYC',
+      'Waze es esencial para evitar tráfico',
+      'Distancias muy largas entre puntos'
+    ],
+    
+    usefulApps: ['Waze', 'SpotHero', 'Metro LA', 'FasTrak'],
+    weather: { temp: 22, condition: 'Soleado', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'las-vegas',
+    city: 'Las Vegas',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 36.1699, lon: -115.1398 },
+    timezone: 'America/Los_Angeles',
+    
+    severity: 'LOW',
+    
+    restrictions: [
+      {
+        type: 'STRIP_RESTRICTIONS',
+        name: 'Restricciones en el Strip',
+        description: 'Tráfico lento, estacionamiento regulado',
+        notes: 'Strip muy congestionado viernes-domingo'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'MONORAIL',
+        options: ['Las Vegas Monorail'],
+        ticketPrice: '$5',
+        dayPass: '$15',
+        notes: 'Conecta hoteles principales del Strip'
+      },
+      {
+        type: 'WALKING',
+        recommendation: 'Caminar en el Strip',
+        notes: 'Distancias engañan, parece cerca pero no lo es'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 25, highway: 75, unit: 'mph' },
+      fuelAvgPrice: { petrol: 3.80, diesel: 4.10, unit: 'USD/gal' },
+      alcoholLimit: 0.08
+    },
+    
+    tips: [
+      'Parking gratis en casi todos los casinos',
+      'Strip muy lento en coche (caminar es mejor)',
+      'Uber/Lyft baratos',
+      'Auto útil para ir al Gran Cañón',
+      'Calor extremo en verano (45°C)',
+      'No beber alcohol abierto en el auto'
+    ],
+    
+    usefulApps: ['Waze', 'Uber', 'RTC (bus)'],
+    weather: { temp: 28, condition: 'Caluroso', icon: '🌡️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'chicago',
+    city: 'Chicago',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 41.8781, lon: -87.6298 },
+    timezone: 'America/Chicago',
+    
+    severity: 'MEDIUM',
+    
+    restrictions: [
+      {
+        type: 'PARKING',
+        name: 'Parking restrictions estrictas',
+        description: 'Regulación de parking muy estricta',
+        fines: {
+          amount: 100,
+          currency: 'USD',
+          notes: 'Multas + grúa común'
+        }
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['CTA L Train', 'CTA Bus', 'Metra'],
+        ticketPrice: '$2.50',
+        dayPass: '$5',
+        notes: 'Excelente sistema de transporte'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 30, highway: 55, unit: 'mph' },
+      fuelAvgPrice: { petrol: 3.60, diesel: 4.00, unit: 'USD/gal' },
+      alcoholLimit: 0.08
+    },
+    
+    tips: [
+      'Inviernos brutales (-20°C común)',
+      'Parking difícil en Loop',
+      'L Train muy eficiente',
+      'Traffic pesado en rush hour',
+      'Grúas muy activas (cuidado con señales)'
+    ],
+    
+    usefulApps: ['Ventra', 'SpotHero', 'Transit'],
+    weather: { temp: 5, condition: 'Frío', icon: '❄️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'miami',
+    city: 'Miami',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 25.7617, lon: -80.1918 },
+    timezone: 'America/New_York',
+    
+    severity: 'LOW',
+    
+    restrictions: [
+      {
+        type: 'BEACH_RESTRICTIONS',
+        name: 'Restricciones en zonas de playa',
+        description: 'Parking limitado en South Beach',
+        notes: 'Fines de semana muy congestionado'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Metrorail', 'Metromover (gratis en Downtown)', 'Metrobus'],
+        ticketPrice: '$2.25',
+        dayPass: '$5.65'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 30, highway: 70, unit: 'mph' },
+      fuelAvgPrice: { petrol: 3.40, diesel: 3.90, unit: 'USD/gal' },
+      alcoholLimit: 0.08
+    },
+    
+    tips: [
+      'Auto recomendado (ciudad extensa)',
+      'South Beach parking caro ($3-5/hora)',
+      'Tráfico moderado comparado con NYC/LA',
+      'Keys accesibles en auto',
+      'Conductor agresivo común',
+      'Free trolleys en varias zonas'
+    ],
+    
+    usefulApps: ['Waze', 'Miami Parking Authority', 'Freebee (shuttle gratis)'],
+    weather: { temp: 26, condition: 'Caluroso y húmedo', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'orlando',
+    city: 'Orlando',
+    country: 'Estados Unidos',
+    countryCode: 'US',
+    flag: '🇺🇸',
+    coordinates: { lat: 28.5383, lon: -81.3792 },
+    timezone: 'America/New_York',
+    
+    severity: 'LOW',
+    
+    restrictions: [
+      {
+        type: 'THEME_PARK_TRAFFIC',
+        name: 'Congestión en zonas de parques',
+        description: 'I-4 muy congestionada hacia parques',
+        notes: 'Peor en temporada alta y fines de semana'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'SHUTTLE',
+        options: ['Shuttles de hoteles', 'Lynx bus'],
+        notes: 'Muchos hoteles ofrecen shuttle a parques'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 30, highway: 70, unit: 'mph' },
+      fuelAvgPrice: { petrol: 3.20, diesel: 3.70, unit: 'USD/gal' },
+      alcoholLimit: 0.08
+    },
+    
+    tips: [
+      'Auto casi obligatorio',
+      'Parking en parques: $25-30/día',
+      'I-4 es pesadilla en rush hour',
+      'Distancias largas entre atracciones',
+      'Universal/Disney tienen parking propio',
+      'Uber/Lyft útiles entre parques'
+    ],
+    
+    usefulApps: ['Waze', 'My Disney Experience', 'Universal Orlando'],
+    weather: { temp: 24, condition: 'Caluroso', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== LATIN AMERICA =====
+  {
+    id: 'buenos-aires',
+    city: 'Buenos Aires',
+    country: 'Argentina',
+    countryCode: 'AR',
+    flag: '🇦🇷',
+    coordinates: { lat: -34.6037, lon: -58.3816 },
+    timezone: 'America/Argentina/Buenos_Aires',
+    
+    severity: 'MEDIUM',
+    
+    restrictions: [
+      {
+        type: 'PARKING',
+        name: 'Estacionamiento regulado',
+        description: 'Parking medido en zonas céntricas',
+        fines: {
+          amount: 5000,
+          currency: 'ARS',
+          notes: '~$5 USD'
+        }
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Subte (6 líneas)', 'Colectivos (150+ líneas)', 'Tren'],
+        ticketPrice: '125 ARS (~$0.15)',
+        notes: 'Sistema extenso y muy barato'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 40, avenidas: 60, autopista: 130, unit: 'km/h' },
+      fuelAvgPrice: { petrol: 800, diesel: 900, unit: 'ARS/L' },
+      alcoholLimit: 0.5
+    },
+    
+    tips: [
+      'Tráfico caótico pero manejable',
+      'Subte muy eficiente y barato',
+      'Cuidado con motos (circulan entre autos)',
+      'Estacionar en la calle relativamente fácil',
+      'Apps de parking obligatorias en zonas reguladas',
+      'Conductor porteño es agresivo'
+    ],
+    
+    usefulApps: ['BA Móvil', 'Cómo Llego', 'Waze'],
+    weather: { temp: 20, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'bogota',
+    city: 'Bogotá',
+    country: 'Colombia',
+    countryCode: 'CO',
+    flag: '🇨🇴',
+    coordinates: { lat: 4.7110, lon: -74.0721 },
+    timezone: 'America/Bogota',
+    
+    severity: 'HIGH',
+    
+    restrictions: [
+      {
+        type: 'PICO_Y_PLACA',
+        name: 'Pico y Placa',
+        description: 'Restricción por último dígito de placa',
+        schedule: {
+          weekdays: 'Lun-Vie 06:00 - 08:30 y 15:00 - 19:30',
+          notes: 'Varía según último dígito'
+        },
+        fines: {
+          amount: 468000,
+          currency: 'COP',
+          notes: '~$120 USD'
+        },
+        rules: {
+          '0-1': 'Lunes',
+          '2-3': 'Martes',
+          '4-5': 'Miércoles',
+          '6-7': 'Jueves',
+          '8-9': 'Viernes'
+        }
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['TransMilenio (BRT)', 'SITP buses'],
+        ticketPrice: '3100 COP (~$0.80)',
+        notes: 'TransMilenio eficiente pero lleno'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 50, autopista: 80, unit: 'km/h' },
+      fuelAvgPrice: { petrol: 14000, diesel: 13500, unit: 'COP/gal' },
+      alcoholLimit: 0.0,
+      notes: 'Ley seca: 0 tolerancia alcohol'
+    },
+    
+    tips: [
+      'Pico y Placa ESTRICTO (verifica antes)',
+      'Tráfico terrible en horas pico',
+      'TransMilenio útil pero lleno',
+      'Uber/Didi muy usados',
+      'Altura (2600m) afecta rendimiento del auto',
+      'Ciclovía dominical (cierre de calles)'
+    ],
+    
+    usefulApps: ['Waze', 'Moovit', 'Tappsi', 'Mi Movilidad Bogotá'],
+    weather: { temp: 14, condition: 'Fresco', icon: '🌧️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'lima',
+    city: 'Lima',
+    country: 'Perú',
+    countryCode: 'PE',
+    flag: '🇵🇪',
+    coordinates: { lat: -12.0464, lon: -77.0428 },
+    timezone: 'America/Lima',
+    
+    severity: 'MEDIUM',
+    
+    restrictions: [
+      {
+        type: 'PICO_Y_PLACA',
+        name: 'Restricción vehicular',
+        description: 'Solo en algunas zonas y horarios',
+        notes: 'Menos estricto que Bogotá'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Metropolitano (BRT)', 'Línea 1 Metro', 'Combis/Buses'],
+        ticketPrice: 'S/ 2.50 (~$0.70)',
+        notes: 'Sistema en desarrollo'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 60, via_expresa: 80, panamericana: 100, unit: 'km/h' },
+      fuelAvgPrice: { petrol: 15, diesel: 13, unit: 'PEN/gal' },
+      alcoholLimit: 0.5
+    },
+    
+    tips: [
+      'Tráfico caótico, conductor agresivo',
+      'Combis (minibuses) muy impredecibles',
+      'Uber/Cabify seguros y económicos',
+      'Parking en centros comerciales seguro',
+      'Evitar conducir de noche en zonas no conocidas',
+      'Niebla (garúa) común mayo-octubre'
+    ],
+    
+    usefulApps: ['Waze', 'Moovit', 'Beat (taxi)'],
+    weather: { temp: 22, condition: 'Nublado', icon: '☁️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'rio-de-janeiro',
+    city: 'Río de Janeiro',
+    country: 'Brasil',
+    countryCode: 'BR',
+    flag: '🇧🇷',
+    coordinates: { lat: -22.9068, lon: -43.1729 },
+    timezone: 'America/Sao_Paulo',
+    
+    severity: 'LOW',
+    
+    restrictions: [
+      {
+        type: 'RODIZIO',
+        name: 'Rodízio (en algunas zonas)',
+        description: 'Restricción por placa en zonas específicas',
+        notes: 'Menos común que en São Paulo'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['Metro (3 líneas)', 'BRT', 'Bus convencional'],
+        ticketPrice: 'R$ 4.70 (~$1)',
+        notes: 'Metro limitado pero eficiente'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'right',
+      speedLimits: { urban: 60, via_expressa: 90, unit: 'km/h' },
+      fuelAvgPrice: { petrol: 6.20, diesel: 5.80, unit: 'BRL/L' },
+      alcoholLimit: 0.0,
+      notes: 'Ley seca: 0 tolerancia'
+    },
+    
+    tips: [
+      'Tráfico pesado pero menos caótico que CDMX',
+      'Túneles y vías costeras congestionadas',
+      'Auto útil para playas alejadas',
+      'Uber muy usado y confiable',
+      'Cuidado en favelas (no entrar en auto)',
+      'Parking de playa R$ 20-40',
+      'Conductor carioca más relajado'
+    ],
+    
+    usefulApps: ['Waze', '99 (taxi app)', 'Moovit'],
+    weather: { temp: 28, condition: 'Caluroso', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== ASIA =====
+  {
+    id: 'tokyo',
+    city: 'Tokio',
+    country: 'Japón',
+    countryCode: 'JP',
+    flag: '🇯🇵',
+    coordinates: { lat: 35.6762, lon: 139.6503 },
+    timezone: 'Asia/Tokyo',
+    
+    severity: 'MEDIUM',
+    
+    restrictions: [
+      {
+        type: 'PARKING',
+        name: 'Certificado de estacionamiento',
+        description: 'Necesitas demostrar que tienes dónde aparcar para comprar auto',
+        notes: 'Parking escaso y carísimo'
+      }
+    ],
+    
+    alternatives: [
+      {
+        type: 'PUBLIC_TRANSPORT',
+        options: ['JR Lines', 'Metro (13 líneas)', 'Trenes privados'],
+        ticketPrice: '¥170-320 (~$1-2)',
+        dayPass: '¥600-900',
+        notes: 'Mejor sistema de transporte del mundo'
+      }
+    ],
+    
+    generalInfo: {
+      drivingSide: 'left',
+      speedLimits: { urban: 40, expressway: 100, unit: 'km/h' },
+      fuelAvgPrice: { petrol: 170, diesel: 150, unit: 'JPY/L' },
+      alcoholLimit: 0.0,
+      notes: 'Tolerancia CERO al alcohol'
+    },
+    
+    tips: [
+      'Auto NO recomendado en Tokio',
+      'Transporte público perfecto',
+      'Parking ¥300-500/hora (¥3000-5000/día)',
+      'Autopistas de pago caras',
+      'GPS en japonés complicado',
+      'Auto útil para áreas rurales',
+      'Multas por exceso muy altas'
+    ],
+    
+    usefulApps: ['Google Maps Japan', 'Navitime', 'Japan Transit Planner'],
+    weather: { temp: 15, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
   }
 ];
 

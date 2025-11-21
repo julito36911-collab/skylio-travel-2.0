@@ -106,9 +106,16 @@ const NewsSection = () => {
 
   return (
     <section className="mt-8 mb-8">
-      <h3 className="text-lg font-bold mb-4 flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-        <Newspaper size={20} className="text-slate-100"/> {t('categories.latest_news')}
-      </h3>
+      <div className="flex items-center gap-2 mb-4">
+        <h3 className="text-lg font-bold flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+          <Newspaper size={20} className="text-slate-100"/> {t('categories.latest_news')}
+        </h3>
+        {USE_DEMO_MODE && (
+          <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full text-blue-300 border border-blue-400/30">
+            Demo
+          </span>
+        )}
+      </div>
       
       <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x -mx-4 px-4 md:mx-0 md:px-0">
         {loading ? (

@@ -192,7 +192,21 @@
     "foodTips": "Tips de Comida",
     "highlights": "Lugares Destacados",
     "safety": "Seguridad",
-    "safetyLevel": "Nivel:"
+    "safetyLevel": "Nivel:",
+    "mustKnow": "Debes Saber",
+    "whatToDo": "Qué Hacer",
+    "howToGetThere": "Cómo Llegar",
+    "prices": "Precios",
+    "nearbyPlaces": "Lugares Cercanos",
+    "importantTips": "Tips Importantes",
+    "accessibility": "Accesibilidad",
+    "duration": "Duración",
+    "drivingDetails": "Detalles",
+    "alternatives": "Alternativas",
+    "tips": "Tips",
+    "howToPay": "Cómo Pagar",
+    "activeRestrictions": "Restricciones Activas",
+    "trafficRestrictions": "Restricciones de tráfico en"
   },
   "common": {
     "back": "Volver"

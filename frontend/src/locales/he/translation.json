@@ -210,6 +210,22 @@
     "city": "עיר",
     "cities": "ערים"
   },
+  "cities": {
+    "title": "ערים",
+    "publicTransport": "תחבורה ציבורית",
+    "transportTypes": "סוגי תחבורה",
+    "howToBuyTickets": "איך לקנות כרטיסים",
+    "prices": "מחירים",
+    "officialMaps": "מפות רשמיות",
+    "usefulApps": "אפליקציות שימושיות",
+    "commonScams": "הונאות נפוצות",
+    "tips": "טיפים מעשיים",
+    "downloadMap": "הורד מפה",
+    "viewOfficialSite": "צפה באתר הרשמי",
+    "topAttractions": "אטרקציות מובילות",
+    "neighborhoods": "שכונות חשובות",
+    "climate": "אקלים"
+  },
   "parking": {
     "title": "מצא חניה בטוחה",
     "subtitle": "חפש חניונים אמינים ליד היעד שלך",

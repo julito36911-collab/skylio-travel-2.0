@@ -705,19 +705,35 @@ function CountryModal({ country, onClose }) {
             <InfoCard icon="🕐" title={t('guides.timezone')} value={country.timezone} />
           </div>
 
-          {/* Ciudades principales */}
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              🏙️ {t('guides.mainCities')}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {country.mainCities.map((city, idx) => (
-                <span key={idx} className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm font-medium">
-                  {city}
-                </span>
-              ))}
+          {/* Ciudades con información detallada */}
+          {country.cities && country.cities.length > 0 && (
+            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-5 border border-blue-500/30">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                🏙️ {t('guides.mainCities')} - {t('cities.title')}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {country.cities.map((city) => (
+                  <CityCard key={city.id} city={city} countryName={country.name} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* Ciudades solo nombres (si no hay info detallada) */}
+          {(!country.cities || country.cities.length === 0) && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                🏙️ {t('guides.mainCities')}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {country.mainCities.map((city, idx) => (
+                  <span key={idx} className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm font-medium">
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Visa */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">

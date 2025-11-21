@@ -309,7 +309,7 @@ function DestinationModal({ destination, onClose }) {
 
           {/* Tickets */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">🎫 Precios</h3>
+            <h3 className="text-xl font-bold text-white mb-4">🎫 {t('guides.prices')}</h3>
             <div className="space-y-2">
               {Object.entries(destination.tickets).map(([key, value]) => (
                 <p key={key} className="text-gray-300">

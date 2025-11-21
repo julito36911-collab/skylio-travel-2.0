@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { partners } from './data/partners';
-import { Search, Map as MapIcon, Tag, User, Bell, ShoppingBag, Menu } from 'lucide-react';
+import { Search, Map as MapIcon, Tag, User, Bell, ShoppingBag, Menu, Plane, Hotel, Car, Wifi, Compass, Shield } from 'lucide-react';
 import Modal from './components/ui/Modal';
 import ScriptWidget from './components/widgets/ScriptWidget';
 import HotelsForm from './components/search/HotelsForm';
 import ExpediaForm from './components/search/ExpediaForm';
 import NewsSection from './components/news/NewsSection';
 import LanguageSwitcher from './components/ui/LanguageSwitcher';
+import CategoryAccordion from './components/ui/CategoryAccordion';
 import './App.css';
 
 // Componente GlassCard

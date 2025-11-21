@@ -321,7 +321,7 @@ function DestinationModal({ destination, onClose }) {
 
           {/* Mejor momento */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">📅 Mejor Momento para Visitar</h3>
+            <h3 className="text-xl font-bold text-white mb-4">📅 {t('guides.bestTimeToVisit')}</h3>
             <div className="space-y-2">
               {Object.entries(destination.bestTime).map(([key, value]) => (
                 <p key={key} className="text-gray-300">

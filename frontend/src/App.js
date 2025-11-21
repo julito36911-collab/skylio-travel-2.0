@@ -10,6 +10,7 @@ import NewsSection from './components/news/NewsSection';
 import LanguageSwitcher from './components/ui/LanguageSwitcher';
 import CategoryAccordion from './components/ui/CategoryAccordion';
 import GuidesHub from './pages/GuidesHub';
+import ParkingFinder from './components/ParkingFinder';
 import './App.css';
 
 // Componente GlassCard

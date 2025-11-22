@@ -418,21 +418,21 @@ export const mustSeeDestinations = [
     description: 'Ciudad inca del siglo XV en montañas de los Andes a 2,430m. Maravilla del Mundo y sitio más icónico de Sudamérica.',
     
     mustKnow: [
-      'Construida ~1450 por Inca Pachacútec',
-      'Redescubierta por Hiram Bingham en 1911',
-      'Una de las 7 Maravillas del Mundo Moderno',
-      'Patrimonio UNESCO desde 1983',
-      '2,430m altitud (menos que Cusco 3,400m)',
-      'Significado: "Montaña Vieja" en quechua'
+      'Fue construida aproximadamente en 1450 bajo el mandato del emperador inca Pachacútec como residencia real y santuario religioso',
+      'Permaneció oculta durante siglos hasta que fue redescubierta por el explorador estadounidense Hiram Bingham en 1911',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, siendo el sitio arqueológico más emblemático de Sudamérica',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1983, reconociendo su extraordinario valor cultural',
+      'Se encuentra a 2,430 metros de altitud, curiosamente más bajo que la ciudad de Cusco que está a 3,400 metros',
+      'Su nombre significa "Montaña Vieja" en idioma quechua, refiriéndose al pico que domina el sitio'
     ],
     
     whatToDo: [
-      'Recorrer la ciudadela (2-4 horas)',
-      'Subir Huayna Picchu o Montaña Machu Picchu (vistas)',
-      'Ver Templo del Sol, Plaza Principal, Intihuatana',
-      'Fotos desde mirador clásico',
-      'Puente Inca (opcional)',
-      'Aguas Calientes (pueblo base)'
+      'Recorre la asombrosa ciudadela completa dedicándole entre 2 y 4 horas para apreciar todos sus rincones',
+      'Sube a Huayna Picchu o a la Montaña Machu Picchu para obtener vistas panorámicas absolutamente espectaculares del complejo',
+      'Visita los lugares sagrados como el Templo del Sol, la Plaza Principal y el enigmático Intihuatana (reloj solar)',
+      'Captura la foto clásica desde el mirador principal, la imagen más icónica de Machu Picchu',
+      'Aventúrate hasta el Puente Inca si te sientes valiente, una experiencia opcional pero emocionante',
+      'Explora Aguas Calientes, el encantador pueblo base donde pasarás la noche antes o después de tu visita'
     ],
     
     howToGetThere: {

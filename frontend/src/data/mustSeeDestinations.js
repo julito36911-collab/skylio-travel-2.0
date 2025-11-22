@@ -337,6 +337,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 45.4408, lon: 12.3155 },
     category: 'Ciudad / Experiencia',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Venecia',
+      en: 'https://en.wikipedia.org/wiki/Venice',
+      he: 'https://he.wikipedia.org/wiki/%D7%95%D7%A0%D7%A6%D7%99%D7%94'
+    },
+    
     description: 'Ciudad única construida sobre 118 islas con 150 canales y 400 puentes. Sin autos, solo góndolas y vaporettos.',
     
     mustKnow: [

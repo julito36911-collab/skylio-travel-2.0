@@ -647,21 +647,21 @@ export const mustSeeDestinations = [
     description: 'Intersección icónica en Manhattan, "Cruce del Mundo". Pantallas LED gigantes, teatros de Broadway, energía 24/7.',
     
     mustKnow: [
-      'Antes llamada "Longacre Square"',
-      'Rebautizada 1904 (NY Times Tower)',
-      '300,000-400,000 peatones diarios',
-      'Ball Drop de Año Nuevo (1 millón personas)',
-      'Completamente peatonal desde 2009',
-      'Iluminada 24/7 con publicidad LED'
+      'Originalmente era conocida como "Longacre Square" antes de su transformación en el icónico Times Square',
+      'Fue rebautizada en 1904 cuando el New York Times construyó su torre sede en la intersección',
+      'Recibe entre 300,000 y 400,000 peatones diariamente, convirtiéndola en una de las zonas más transitadas del mundo',
+      'La famosa celebración del Ball Drop de Año Nuevo atrae a más de 1 millón de personas cada 31 de diciembre',
+      'Se convirtió en zona completamente peatonal en 2009, eliminando el tráfico vehicular del área central',
+      'Permanece iluminada las 24 horas del día, los 7 días de la semana con deslumbrantes pantallas LED publicitarias'
     ],
     
     whatToDo: [
-      'Fotos con las pantallas gigantes',
-      'Ver show de Broadway',
-      'M&M\'s World (4 pisos)',
-      'Visitar tiendas icónicas (Disney, Nike, Hershey\'s)',
-      'Comer en Ellen\'s Stardust Diner (camareros cantan)',
-      'Ver estatuas vivientes (propina esperada)'
+      'Toma fotografías épicas rodeado de las gigantescas pantallas LED que iluminan toda la plaza',
+      'Asiste a un espectacular show de Broadway en alguno de los históricos teatros que rodean la zona',
+      'Visita M&M\'s World, una tienda de 4 pisos dedicada enteramente a los famosos chocolates de colores',
+      'Explora las tiendas icónicas como Disney Store, Nike flagship y Hershey\'s Chocolate World',
+      'Disfruta de una comida única en Ellen\'s Stardust Diner donde los camareros son cantantes profesionales',
+      'Observa y fotografía a las coloridas estatuas vivientes, pero recuerda que esperan propina por las fotos'
     ],
     
     howToGetThere: {

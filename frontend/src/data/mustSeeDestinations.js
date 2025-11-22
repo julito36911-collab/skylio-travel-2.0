@@ -1495,21 +1495,21 @@ export const mustSeeDestinations = [
     description: 'Ecosistema de 30,000 km² famoso por la Gran Migración (2 millones de animales). Safari africano por excelencia.',
     
     mustKnow: [
-      '30,000 km² de sabana',
-      'Gran Migración: 2 millones ñus + cebras',
-      'Big Five: león, leopardo, elefante, búfalo, rinoceronte',
-      'Patrimonio UNESCO',
-      '3,000+ leones',
-      'Significado: "llanuras sin fin" (maasai)'
+      'Se extiende por 30,000 kilómetros cuadrados de sabana prístina, siendo uno de los ecosistemas más grandes de África',
+      'Es el escenario de la Gran Migración, donde más de 2 millones de ñus y cebras recorren las llanuras en busca de pastos frescos',
+      'Hogar de los Big Five africanos: león, leopardo, elefante africano, búfalo y rinoceronte negro',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único y vital',
+      'Alberga la mayor concentración de leones de África con más de 3,000 individuos viviendo en el parque',
+      'Su nombre proviene del idioma maasai "Siringet" que significa "el lugar donde la tierra se extiende eternamente"'
     ],
     
     whatToDo: [
-      'Game drive (safari en 4x4)',
-      'Gran Migración (junio-julio)',
-      'Hot air balloon safari ($599)',
-      'Cruce del río (julio-agosto)',
-      'Visitar Maasai village',
-      'Ngorongoro Crater (combo)'
+      'Embárcate en un emocionante game drive en vehículo 4x4 para observar la increíble vida salvaje en su hábitat natural',
+      'Presencia la espectacular Gran Migración durante junio y julio cuando millones de animales cruzan las llanuras',
+      'Experimenta un mágico safari en globo aerostático al amanecer con champagne al aterrizar ($599)',
+      'Observa el dramático cruce del río Mara donde cocodrilos esperan a los ñus durante julio y agosto',
+      'Visita una auténtica aldea Maasai para conocer la cultura y tradiciones de este pueblo guerrero',
+      'Combina tu safari con el impresionante Cráter Ngorongoro, una caldera volcánica llena de vida salvaje'
     ],
     
     howToGetThere: {

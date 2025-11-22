@@ -102,28 +102,20 @@ async def travel_assistant(query: TravelQuery):
         # Determine response language
         language_name = "Spanish" if query.language == "es" else "English"
         
-        # Create detailed prompt for travel information
-        system_message = f"You are an expert travel advisor. Provide comprehensive, well-organized travel information. IMPORTANT: You MUST respond in {language_name} language."
+        # Create flexible prompt that responds to specific questions
+        system_message = f"""You are an expert travel advisor with deep knowledge about destinations worldwide. 
         
-        user_message = f"""Provide comprehensive travel information about {query.destination} for travelers planning their trip. 
+CRITICAL INSTRUCTIONS:
+1. You MUST respond in {language_name} language ONLY.
+2. Answer EXACTLY what the user is asking - don't give generic information if they ask something specific.
+3. If they ask about "romantic tours", talk about romantic tours, not general city info.
+4. If they ask about "budget hotels", focus on budget accommodation recommendations.
+5. If they only mention a city name without specific question, then provide comprehensive travel information.
+6. Be conversational, helpful, and specific to their needs."""
+        
+        user_message = f"""{query.destination}
 
-CRITICAL: Your entire response MUST be in {language_name}.
-
-Include:
-
-1. **Hotels Recommended** (list 3-4 options with different budgets: budget, mid-range, luxury)
-2. **Airlines** that fly to {query.destination} (mention major carriers and airports)
-3. **Must-Visit Places** (top 5-7 tourist attractions)
-4. **Recommended Tours** (suggest 2-3 popular tour options)
-5. **Travel Tips for Different Groups**:
-   - For Couples (romantic activities)
-   - For Families with Children (kid-friendly attractions)
-   - For Solo Travelers (safety tips and activities)
-6. **Best Time to Visit** (mention season and weather)
-7. **Budget Estimate** (approximate daily budget in USD)
-8. **Practical Tips** (visa requirements, local currency, language)
-
-Keep the response organized, informative, and practical. Use clear sections with headers."""
+Remember: Respond in {language_name} and answer exactly what was asked."""
         
         payload = {
             "model": "llama-3.3-70b-versatile",

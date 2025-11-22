@@ -1299,4 +1299,95 @@ function getCategoryIcon(category) {
   return icons[category] || '🌍';
 }
 
+// AI Assistant Modal Component
+function AIAssistantModal({ isOpen, onClose, loading, error, response, destination }) {
+  if (!isOpen) return null;
+
+  return ReactDOM.createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={onClose}>
+      <div 
+        className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl max-w-4xl w-full max-h-[85vh] overflow-hidden shadow-2xl border border-white/10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-6 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">✨</span>
+            <div>
+              <h2 className="text-2xl font-bold text-white">Asistente de Viajes IA</h2>
+              <p className="text-white/80 text-sm">Información sobre: {destination}</p>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-white/80 hover:text-white text-3xl leading-none transition-colors"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-8 overflow-y-auto max-h-[calc(85vh-120px)]">
+          {loading && (
+            <div className="flex flex-col items-center justify-center py-16">
+              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500 mb-4"></div>
+              <p className="text-white/80 text-lg">Generando información completa sobre {destination}...</p>
+              <p className="text-white/60 text-sm mt-2">Esto puede tomar 20-30 segundos</p>
+            </div>
+          )}
+
+          {error && (
+            <div className="bg-red-500/20 border border-red-500/50 rounded-2xl p-6">
+              <div className="flex items-start gap-3">
+                <span className="text-3xl">⚠️</span>
+                <div>
+                  <h3 className="text-white font-semibold mb-2">Error</h3>
+                  <p className="text-white/80">{error}</p>
+                  {error.includes('HUGGINGFACE_API_KEY') && (
+                    <div className="mt-4 p-4 bg-white/5 rounded-lg">
+                      <p className="text-white/70 text-sm mb-2">Para configurar tu API key:</p>
+                      <ol className="text-white/60 text-sm space-y-1 list-decimal list-inside">
+                        <li>Ve a <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">huggingface.co/settings/tokens</a></li>
+                        <li>Crea un token nuevo (es gratis)</li>
+                        <li>Agrega HUGGINGFACE_API_KEY="tu_token" en el archivo /app/backend/.env</li>
+                        <li>Reinicia el backend: sudo supervisorctl restart backend</li>
+                      </ol>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {response && !loading && (
+            <div className="prose prose-invert max-w-none">
+              <div className="text-white/90 whitespace-pre-wrap leading-relaxed space-y-4">
+                {response.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="text-white/80 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="px-8 py-4 bg-white/5 border-t border-white/10 flex justify-between items-center">
+          <p className="text-white/50 text-sm">
+            Powered by Hugging Face - Meta Llama 3.1 8B
+          </p>
+          <button
+            onClick={onClose}
+            className="px-6 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-white font-medium transition-colors"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 export default GuidesHub;

@@ -421,6 +421,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: -13.1631, lon: -72.5450 },
     category: 'Sitio Arqueológico',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Machu_Picchu',
+      en: 'https://en.wikipedia.org/wiki/Machu_Picchu',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%A6%27%D7%95_%D7%A4%D7%99%D7%A7%D7%A6%27%D7%95'
+    },
+    
     description: 'Ciudad inca del siglo XV en montañas de los Andes a 2,430m. Maravilla del Mundo y sitio más icónico de Sudamérica.',
     
     mustKnow: [

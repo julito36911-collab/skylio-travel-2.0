@@ -90,8 +90,9 @@ async def travel_assistant(query: TravelQuery):
                 detail="HUGGINGFACE_API_KEY not configured. Please add it to your .env file."
             )
         
-        # Hugging Face Inference API endpoint - using smaller model for faster response
-        api_url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
+        # Hugging Face Inference API endpoint - using free tier compatible model
+        # Using Google's FLAN-T5 which is available for free inference
+        api_url = "https://api-inference.huggingface.co/models/google/flan-t5-large"
         
         headers = {
             "Authorization": f"Bearer {hf_api_key}",

@@ -1274,7 +1274,19 @@ function CityModal({ city, countryName, onClose }) {
     </div>
   );
 
-  return ReactDOM.createPortal(modalContent, document.body);
+  return (
+    <>
+      {ReactDOM.createPortal(guideModalContent, document.body)}
+      <AIAssistantModal
+        isOpen={showAIModal}
+        onClose={() => setShowAIModal(false)}
+        loading={aiLoading}
+        error={aiError}
+        response={aiResponse}
+        destination={searchQuery}
+      />
+    </>
+  );
 }
 
 // Helper: iconos según categoría

@@ -279,8 +279,29 @@ function DestinationModal({ destination, onClose }) {
         {/* Header */}
         <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-t-3xl">
           <div className="flex items-start justify-between">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-2">{destination.name}</h2>
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <h2 className="text-4xl font-bold text-white">{destination.name}</h2>
+                {destination.wikiLinks && (
+                  <a
+                    href={destination.wikiLinks[i18n.language] || destination.wikiLinks.en}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/30 hover:border-white/50"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span className="text-white text-sm font-semibold">Wikipedia</span>
+                    <svg 
+                      className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+              </div>
               <p className="text-xl text-blue-100">
                 {destination.flag} {destination.city}, {destination.country}
               </p>

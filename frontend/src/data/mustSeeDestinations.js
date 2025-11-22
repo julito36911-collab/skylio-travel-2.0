@@ -93,6 +93,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 41.8902, lon: 12.4922 },
     category: 'Monumento Histórico',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Coliseo',
+      en: 'https://en.wikipedia.org/wiki/Colosseum',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%95%D7%9C%D7%95%D7%A1%D7%99%D7%90%D7%95%D7%9D'
+    },
+    
     description: 'Anfiteatro más grande jamás construido (80 d.C.), símbolo del Imperio Romano donde gladiadores combatían ante 50,000 espectadores.',
     
     mustKnow: [

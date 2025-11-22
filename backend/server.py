@@ -131,8 +131,8 @@ IMPORTANTE: Tu respuesta en español debe ser TAN DETALLADA como si respondieras
 
 Remember: Respond in {language_name} and answer exactly what was asked.{detail_instruction}"""
         
-        # Adjust max_tokens based on language (Spanish needs more tokens for same content)
-        max_tokens = 2000 if query.language == "es" else 1500
+        # Use same max_tokens for both languages to ensure similar length responses
+        max_tokens = 1800
         
         payload = {
             "model": "llama-3.3-70b-versatile",

@@ -1110,21 +1110,21 @@ export const mustSeeDestinations = [
     description: 'Ciudad nabatea tallada en roca rosada ~300 a.C. "Ciudad Rosa" accesible por el Siq. Una de las 7 Maravillas del Mundo Moderno.',
     
     mustKnow: [
-      'Fundada por nabateos ~300 a.C.',
-      'Tallada completamente en roca',
-      'Redescubierta en 1812',
-      'Patrimonio UNESCO desde 1985',
-      'Una de las 7 Maravillas del Mundo Moderno',
-      'Más de 800 monumentos'
+      'Fue fundada por los nabateos alrededor del año 300 a.C. como su capital y centro comercial en las rutas de las especias',
+      'Toda la ciudad está tallada directamente en las paredes de roca arenisca de color rosa y rojo',
+      'Permaneció perdida para el mundo occidental hasta que fue redescubierta por el explorador suizo Johann Ludwig Burckhardt en 1812',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1985, reconociendo su extraordinario valor arqueológico',
+      'Fue elegida como una de las 7 Maravillas del Mundo Moderno en 2007, siendo el orgullo de Jordania',
+      'El sitio arqueológico contiene más de 800 monumentos tallados, tumbas, templos y estructuras'
     ],
     
     whatToDo: [
-      'Caminar por el Siq (cañón de 1.2 km)',
-      'El Tesoro (Al-Khazneh - icónico)',
-      'Calle de las Fachadas',
-      'Teatro Romano',
-      'Subir al Monasterio (800 escalones)',
-      'Petra by Night (velas, 3x semana)'
+      'Camina por el dramático Siq, un impresionante cañón de 1.2 kilómetros de longitud que sirve como entrada a la ciudad',
+      'Maravíllate con El Tesoro (Al-Khazneh), la fachada más icónica de Petra que aparece súbitamente al final del Siq',
+      'Explora la Calle de las Fachadas con sus numerosas tumbas monumentales talladas en la roca',
+      'Visita el imponente Teatro Romano excavado en la ladera de la montaña con capacidad para 3,000 espectadores',
+      'Sube los 800 escalones hasta el Monasterio (Ad-Deir), la estructura más grande de Petra con vistas espectaculares',
+      'Experimenta Petra by Night, donde el camino al Tesoro se ilumina con miles de velas (3 veces por semana)'
     ],
     
     howToGetThere: {

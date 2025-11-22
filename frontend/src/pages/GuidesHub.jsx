@@ -14,6 +14,7 @@ function GuidesHub() {
   const [aiResponse, setAiResponse] = useState('');
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState('');
+  const [showGuideModal, setShowGuideModal] = useState(true);
 
   // Cargar datos de países según idioma activo
   const getCountriesData = () => {

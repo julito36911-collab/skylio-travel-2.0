@@ -1488,24 +1488,30 @@ export const mustSeeDestinations = [
     coordinates: { lat: -33.9628, lon: 18.4098 },
     category: 'Naturaleza / Montaña',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa',
+      en: 'https://en.wikipedia.org/wiki/Table_Mountain',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%94%D7%A9%D7%95%D7%9C%D7%97%D7%9F'
+    },
+    
     description: 'Montaña icónica de cima plana que domina Ciudad del Cabo. 1,085m de altura. Parte de las 7 Maravillas Naturales.',
     
     mustKnow: [
-      'Altura: 1,085m',
-      'Parte de las 7 Maravillas Naturales',
-      '3km de largo, 1.5km ancho (cima)',
-      'Teleférico rotatorio (360° vistas)',
-      'Fynbos (flora única)',
-      '"Mantel" de nubes característico'
+      'Se eleva majestuosamente a 1,085 metros sobre el nivel del mar, siendo el símbolo más reconocible de Ciudad del Cabo',
+      'Fue elegida como una de las 7 Nuevas Maravillas de la Naturaleza en 2011 por votación mundial',
+      'Su cima plana mide aproximadamente 3 kilómetros de largo por 1.5 kilómetros de ancho, creando una meseta natural única',
+      'El teleférico rotatorio gira 360 grados durante el ascenso, ofreciendo vistas panorámicas espectaculares a todos los pasajeros',
+      'Alberga más de 2,200 especies de plantas, muchas endémicas del fynbos, un tipo de vegetación único en el mundo',
+      'Es famosa por su característico "mantel" de nubes que cubre la cima cuando el viento del sureste sopla sobre la montaña'
     ],
     
     whatToDo: [
-      'Subir en teleférico (5 min)',
-      'Hiking: Platteklip Gorge (2-3h subida)',
-      'Vistas 360° de Ciudad del Cabo',
-      'Comer en restaurante de cima',
-      'Lion\'s Head (montaña vecina, hiking)',
-      'Sunset desde la cima'
+      'Sube cómodamente en el moderno teleférico rotatorio que te lleva a la cima en solo 5 minutos con vistas panorámicas',
+      'Desafíate con el hiking por Platteklip Gorge, la ruta más directa pero empinada que toma 2-3 horas de ascenso',
+      'Disfruta de las vistas de 360 grados de Ciudad del Cabo, el océano Atlántico y las montañas circundantes',
+      'Relájate con una comida o café en el restaurante de la cima mientras contemplas las vistas espectaculares',
+      'Complementa tu visita con una caminata a Lion\'s Head, la montaña vecina que ofrece perspectivas diferentes',
+      'Presencia un atardecer mágico desde la cima mientras el sol se hunde en el Océano Atlántico'
     ],
     
     howToGetThere: {

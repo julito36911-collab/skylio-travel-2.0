@@ -1272,12 +1272,9 @@ function CityModal({ city, countryName, onClose }) {
         </div>
       </div>
 
-    </div>
-  );
+      </div>
 
-  return (
-    <>
-      {ReactDOM.createPortal(guideModalContent, document.body)}
+      {/* AI Assistant Modal */}
       <AIAssistantModal
         isOpen={showAIModal}
         onClose={() => setShowAIModal(false)}
@@ -1286,6 +1283,7 @@ function CityModal({ city, countryName, onClose }) {
         response={aiResponse}
         destination={searchQuery}
       />
+    </div>
     </>
   );
 }

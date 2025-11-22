@@ -10,6 +10,10 @@ function GuidesHub() {
   const [activeTab, setActiveTab] = useState('destinations');
   const [selectedContinent, setSelectedContinent] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [showAIModal, setShowAIModal] = useState(false);
+  const [aiResponse, setAiResponse] = useState('');
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
 
   // Cargar datos de países según idioma activo
   const getCountriesData = () => {

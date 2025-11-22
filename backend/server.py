@@ -40,6 +40,7 @@ class StatusCheckCreate(BaseModel):
 
 class TravelQuery(BaseModel):
     destination: str
+    language: str = "es"
 
 class TravelAssistantResponse(BaseModel):
     response: str

@@ -99,10 +99,17 @@ async def travel_assistant(query: TravelQuery):
             "Content-Type": "application/json"
         }
         
-        # Create detailed prompt for travel information
-        system_message = "You are an expert travel advisor. Provide comprehensive, well-organized travel information."
+        # Determine response language
+        language_name = "Spanish" if query.language == "es" else "English"
         
-        user_message = f"""Provide comprehensive travel information about {query.destination} for travelers planning their trip. Include:
+        # Create detailed prompt for travel information
+        system_message = f"You are an expert travel advisor. Provide comprehensive, well-organized travel information. IMPORTANT: You MUST respond in {language_name} language."
+        
+        user_message = f"""Provide comprehensive travel information about {query.destination} for travelers planning their trip. 
+
+CRITICAL: Your entire response MUST be in {language_name}.
+
+Include:
 
 1. **Hotels Recommended** (list 3-4 options with different budgets: budget, mid-range, luxury)
 2. **Airlines** that fly to {query.destination} (mention major carriers and airports)

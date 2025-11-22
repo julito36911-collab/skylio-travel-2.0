@@ -208,7 +208,11 @@
     "activeRestrictions": "Active Restrictions",
     "trafficRestrictions": "Traffic restrictions in",
     "city": "city",
-    "cities": "cities"
+    "cities": "cities",
+    "aiSearch": "Search with AI",
+    "aiSearching": "Searching...",
+    "aiEmptyError": "Please enter a destination to search",
+    "aiError": "Error getting information from AI assistant. Please try again."
   },
   "cities": {
     "title": "Cities",

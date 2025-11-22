@@ -1141,8 +1141,92 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'kilimanjaro', name: 'Mount Kilimanjaro', city: 'Moshi', country: 'Tanzania', continent: 'Africa', flag: '🇹🇿', coordinates: { lat: -3.0674, lon: 37.3556 }, category: 'Mountain', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Kilimanjaro', en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A7%D7%99%D7%9C%D7%99%D7%9E%D7%A0%D7%92%27%D7%90%D7%A8%D7%95' }, description: 'Africa\'s highest mountain (5,895m). Inactive volcano. Climbable without technical skills.', mustKnow: ['5,895m altitude', 'Highest mountain in Africa', 'No technical climbing required'], whatToDo: ['Climb to Uhuru Peak', 'Marangu or Machame route', 'See glaciers at summit'], tips: ['Acclimatize properly', 'Choose 6-7 day route'], prices: { budget: '$1500-2000', medium: '$2500-3500', high: '$5000+' }, bestTime: { season: 'Jan-March & June-Oct', weather: 'Dry', icon: '🏔️' }, avoid: 'April-May (rainy)', accessibility: 'Strenuous', duration: '5-9 days', nearby: ['Serengeti', 'Arusha'], transportation: { flight: 'To Kilimanjaro Airport', bus: 'To Moshi' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'kilimanjaro',
+    name: 'Mount Kilimanjaro',
+    city: 'Moshi',
+    country: 'Tanzania',
+    continent: 'Africa',
+    flag: '🇹🇿',
+    coordinates: { lat: -3.0674, lon: 37.3556 },
+    category: 'Nature / Mountain',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Kilimanjaro',
+      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=FMi9qJMBmWc',
+      en: 'https://www.youtube.com/watch?v=BZDs5rB-u34'
+    },
+    
+    description: 'Africa\'s highest mountain (5,895m). Dormant volcano. Climbable without technical skills.',
+    
+    mustKnow: [
+      'At 5,895 meters high (19,341 feet), it is the highest mountain on the African continent and its most emblematic peak',
+      'It is the tallest freestanding (not part of a mountain range) mountain in the world, rising solitary above the savanna',
+      'Composed of three dormant volcanic cones: Kibo (the highest), Mawenzi and Shira, each with its own geological history',
+      'Its millennial glaciers at the summit are rapidly disappearing due to climate change, potentially extinct within decades',
+      'Declared a UNESCO World Heritage Site, protecting this unique ecosystem ranging from tropical rainforest to alpine desert',
+      'Requires no technical climbing skills, making it accessible to people in good physical condition without prior mountaineering experience'
+    ],
+    
+    whatToDo: [
+      'Embark on the adventure of climbing to Uhuru Peak, the highest point in Africa, to live an unforgettable experience',
+      'Choose the Marangu Route of 5-6 days, known as the "Coca-Cola route" for being the most established with huts',
+      'Opt for the Machame Route of 6-7 days, considered the most scenic with spectacular views and varied landscapes',
+      'Consider the Lemosho Route of 7-8 days which offers the best acclimatization and highest summit success rates',
+      'Complement your adventure with a safari in Arusha to see African wildlife after your climb',
+      'Visit coffee plantations around Moshi to learn about the Tanzanian coffee process and relax post-climb'
+    ],
+    
+    howToGetThere: {
+      flight: 'Kilimanjaro Airport (JRO)',
+      moshi: 'Base town, hotels and operators',
+      arusha: '1.5h from Moshi (alternative)',
+      tanzania_visa: '$50-100 on arrival'
+    },
+    
+    tickets: {
+      park_fees: '$800-900 (fees only, 6 days)',
+      total_climb: '$1,500-3,000 (includes guide, porters, food)',
+      mandatory: 'Guide mandatory (cannot go alone)',
+      tip: '$200-300 tips expected (guides/porters)'
+    },
+    
+    bestTime: {
+      season: 'January-March or June-October (dry)',
+      avoid: 'April-May (heavy rains)',
+      summit_night: '-20°C at summit'
+    },
+    
+    nearby: [
+      'Arusha National Park',
+      'Ngorongoro Crater',
+      'Serengeti',
+      'Lake Manyara',
+      'Zanzibar (post-climb rest)'
+    ],
+    
+    tips: [
+      'Train 3-6 months before (cardio)',
+      'Acclimatization = key to success (60-70% reach summit)',
+      'Longer routes = better acclimatization',
+      'Machame prettier than Marangu',
+      'Bring thermal clothing (-20°C at summit)',
+      'Altitude sickness is REAL (pole pole = slowly)',
+      'Diamox helps (consult doctor)',
+      'Guide tips culturally mandatory'
+    ],
+    
+    accessibility: 'NOT accessible. Requires good physical condition',
+    duration: '5-8 days depending on route',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'cataratas-victoria', name: 'Victoria Falls', city: 'Livingstone', country: 'Zambia/Zimbabwe', continent: 'Africa', flag: '🇿🇲🇿🇼', coordinates: { lat: -17.9244, lon: 25.8567 }, category: 'Nature', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria', en: 'https://en.wikipedia.org/wiki/Victoria_Falls', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94' }, description: 'One of world\'s largest waterfalls. 1,708m wide, 108m high. "The Smoke that Thunders".', mustKnow: ['1,708m wide', 'Greater flow March-May', 'UNESCO World Heritage'], whatToDo: ['Devil\'s Pool swim', 'Bungee jumping', 'Helicopter flight'], tips: ['Visit both sides', 'Bring raincoat'], prices: { budget: '$30-60/day', medium: '$100-200/day', high: '$400+/day' }, bestTime: { season: 'Feb-May (full flow)', weather: 'Wet', icon: '💦' }, avoid: 'Nov-Dec (low water)', accessibility: 'Walkways accessible', duration: '2-3 days', nearby: ['Chobe National Park', 'Zambezi River'], transportation: { flight: 'To Livingstone/Victoria Falls', shuttle: 'Between sides' }, lastUpdated: '2025-11-20' },
   

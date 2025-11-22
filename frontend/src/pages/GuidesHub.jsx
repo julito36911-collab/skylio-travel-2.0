@@ -897,7 +897,7 @@ function CityModal({ city, countryName, onClose }) {
   const { t } = useTranslation();
 
   const modalContent = (
-    <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onClick={onClose}>
+    <div className="fixed inset-0 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" style={{ zIndex: 9999 }} onClick={onClose}>
       <div
         className="bg-gray-900 rounded-3xl max-w-6xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
         onClick={(e) => e.stopPropagation()}

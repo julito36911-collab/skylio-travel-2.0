@@ -230,13 +230,13 @@ export const mustSeeDestinations = [
     ],
     
     tips: [
-      'Reserva con 2-3 MESES de anticipación',
-      'Mejor torre: Natividad (más bonita)',
-      'Si tienes miedo alturas, no subas (escaleras estrechas)',
-      'Audioguía incluida (muy informativa)',
-      'Dress code: hombros y rodillas cubiertos',
-      'Prohibido mochilas grandes',
-      'Fotos OK pero no flash'
+      'Reserva tus entradas con 2 o 3 meses de anticipación, especialmente si planeas viajar en temporada alta',
+      'Si vas a subir a las torres, elige la de la Natividad que ofrece las vistas más espectaculares y detalles arquitectónicos',
+      'Ten en cuenta que las escaleras de las torres son bastante estrechas y empinadas, no recomendable si sufres de vértigo',
+      'La audioguía está incluida en el precio de entrada y es extremadamente informativa, no te la pierdas',
+      'Respeta el código de vestimenta: los hombros y las rodillas deben estar cubiertos para entrar a la basílica',
+      'Las mochilas grandes no están permitidas y no hay consigna disponible, viaja ligero',
+      'Puedes tomar todas las fotos que quieras, pero recuerda que el uso de flash está estrictamente prohibido'
     ],
     
     accessibility: 'Accesible planta baja. Torres NO accesibles silla ruedas.',

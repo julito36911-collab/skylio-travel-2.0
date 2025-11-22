@@ -368,43 +368,51 @@ function DestinationModal({ destination, onClose }) {
           <Section title={`✨ ${t('guides.whatToDo')}`} items={destination.whatToDo} />
 
           {/* Cómo llegar */}
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">🚌 {t('guides.howToGetThere')}</h3>
-            <div className="space-y-2">
-              {Object.entries(destination.howToGetThere).map(([key, value]) => (
-                <p key={key} className="text-gray-300">
-                  <span className="font-semibold capitalize text-blue-400">{key.replace(/_/g, ' ')}:</span> {value}
-                </p>
-              ))}
+          {destination.howToGetThere && Object.keys(destination.howToGetThere).length > 0 && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4">🚌 {t('guides.howToGetThere')}</h3>
+              <div className="space-y-2">
+                {Object.entries(destination.howToGetThere).map(([key, value]) => (
+                  <p key={key} className="text-gray-300">
+                    <span className="font-semibold capitalize text-blue-400">{key.replace(/_/g, ' ')}:</span> {value}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Tickets */}
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">🎫 {t('guides.prices')}</h3>
-            <div className="space-y-2">
-              {Object.entries(destination.tickets).map(([key, value]) => (
-                <p key={key} className="text-gray-300">
-                  <span className="font-semibold capitalize text-green-400">{key.replace(/_/g, ' ')}:</span> {value}
-                </p>
-              ))}
+          {destination.tickets && Object.keys(destination.tickets).length > 0 && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4">🎫 {t('guides.prices')}</h3>
+              <div className="space-y-2">
+                {Object.entries(destination.tickets).map(([key, value]) => (
+                  <p key={key} className="text-gray-300">
+                    <span className="font-semibold capitalize text-green-400">{key.replace(/_/g, ' ')}:</span> {value}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Mejor momento */}
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">📅 {t('guides.bestTimeToVisit')}</h3>
-            <div className="space-y-2">
-              {Object.entries(destination.bestTime).map(([key, value]) => (
-                <p key={key} className="text-gray-300">
-                  <span className="font-semibold capitalize text-yellow-400">{key.replace(/_/g, ' ')}:</span> {value}
-                </p>
-              ))}
+          {destination.bestTime && (
+            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4">📅 {t('guides.bestTimeToVisit')}</h3>
+              <div className="space-y-2">
+                {Object.entries(destination.bestTime).map(([key, value]) => (
+                  <p key={key} className="text-gray-300">
+                    <span className="font-semibold capitalize text-yellow-400">{key.replace(/_/g, ' ')}:</span> {value}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Lugares cercanos */}
-          <Section title={`📍 ${t('guides.nearbyPlaces')}`} items={destination.nearby} />
+          {destination.nearby && destination.nearby.length > 0 && (
+            <Section title={`📍 ${t('guides.nearbyPlaces')}`} items={destination.nearby} />
+          )}
 
           {/* Tips */}
           <Section title={`💡 ${t('guides.importantTips')}`} items={destination.tips} highlight={true} />

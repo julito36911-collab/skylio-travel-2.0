@@ -280,8 +280,10 @@ function DestinationModal({ destination, onClose }) {
         <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-t-3xl">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3 mb-2 flex-wrap">
                 <h2 className="text-4xl font-bold text-white">{destination.name}</h2>
+                
+                {/* Wikipedia Button */}
                 {destination.wikiLinks && (
                   <a
                     href={destination.wikiLinks[i18n.language] || destination.wikiLinks.en}
@@ -291,6 +293,30 @@ function DestinationModal({ destination, onClose }) {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <span className="text-white text-sm font-semibold">Wikipedia</span>
+                    <svg 
+                      className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+                
+                {/* YouTube Button */}
+                {destination.youtubeLinks && (
+                  <a
+                    href={destination.youtubeLinks[i18n.language] || destination.youtubeLinks.en}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 px-4 py-2 bg-red-600/80 hover:bg-red-600 backdrop-blur-sm rounded-full transition-all border border-red-500/50 hover:border-red-400"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <span className="text-white text-sm font-semibold">YouTube</span>
                     <svg 
                       className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" 
                       fill="none" 

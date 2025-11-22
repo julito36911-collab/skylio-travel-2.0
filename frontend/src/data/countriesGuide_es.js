@@ -34,7 +34,7 @@ export const countriesGuide = [
                 frequency: 'Cada 10-15 min',
                 hours: '5:00 AM - 11:50 PM',
                 stops: 'Gare du Nord, Châtelet-Les Halles, Saint-Michel',
-                notes: 'La opción MÁS barata. Compra ticket en máquinas.'
+                notes: 'Esta es la opción MÁS económica para llegar al centro. Puedes comprar tu ticket en las máquinas automáticas del aeropuerto.'
               },
               {
                 method: 'Roissybus',
@@ -43,7 +43,7 @@ export const countriesGuide = [
                 frequency: 'Cada 15-20 min',
                 hours: '6:00 AM - 12:30 AM',
                 stops: 'Directo a Ópera',
-                notes: 'Cómodo con equipaje. Wi-Fi gratis.'
+                notes: 'Opción muy cómoda si viajas con equipaje pesado. Además, cuenta con Wi-Fi gratuito durante todo el trayecto.'
               },
               {
                 method: 'Bus 350 / 351',
@@ -52,7 +52,7 @@ export const countriesGuide = [
                 frequency: 'Cada 30 min',
                 hours: '6:00 AM - 11:00 PM',
                 stops: 'Varias paradas en París',
-                notes: 'MUY barato pero lento. Para presupuesto bajo.'
+                notes: 'La opción más barata de todas, ideal si viajas con presupuesto ajustado y no tienes prisa.'
               },
               {
                 method: 'Taxi oficial',
@@ -61,7 +61,7 @@ export const countriesGuide = [
                 frequency: 'Siempre disponible',
                 hours: '24/7',
                 stops: 'Puerta a puerta',
-                notes: 'Tarifa plana a París centro. Máximo 4 personas.'
+                notes: 'Cuenta con tarifa plana al centro de París. Puede acomodar hasta 4 personas con equipaje.'
               },
               {
                 method: 'Uber',
@@ -70,7 +70,7 @@ export const countriesGuide = [
                 frequency: 'Bajo demanda',
                 hours: '24/7',
                 stops: 'Puerta a puerta',
-                notes: 'Precio varía según demanda.'
+                notes: 'El precio fluctúa dependiendo de la demanda en tiempo real, especialmente en horas pico.'
               }
             ]
           },

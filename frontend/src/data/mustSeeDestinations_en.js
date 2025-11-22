@@ -882,11 +882,265 @@ export const mustSeeDestinations = [
     lastUpdated: '2025-11-20'
   },
   
-  { id: 'angkor-wat', name: 'Angkor Wat', city: 'Siem Reap', country: 'Cambodia', continent: 'Asia', flag: '🇰🇭', coordinates: { lat: 13.4125, lon: 103.8670 }, category: 'Temple', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Angkor_Wat', en: 'https://en.wikipedia.org/wiki/Angkor_Wat', he: 'https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%92%D7%A7%D7%95%D7%A8_%D7%95%D7%95%D7%90%D7%98' }, description: '12th century Khmer temple complex. World\'s largest religious monument.', mustKnow: ['Built in 12th century', 'Largest religious monument', '400+ temples in complex'], whatToDo: ['Sunrise at Angkor Wat', 'Bayon temple', 'Ta Prohm (Tomb Raider)'], tips: ['Book 2-3 months advance', 'Hire guide'], prices: { budget: '$20-40/day', medium: '$60-120/day', high: '$200+/day' }, bestTime: { season: 'Nov-Feb (dry)', weather: 'Cool', icon: '☀️' }, avoid: 'April-May (extreme heat)', accessibility: 'Difficult, many stairs', duration: '2-3 days', nearby: ['Tonle Sap Lake', 'Pub Street'], transportation: { tuktuk: 'Main transport', bicycle: 'Available for rent' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'angkor-wat',
+    name: 'Angkor Wat',
+    city: 'Siem Reap',
+    country: 'Cambodia',
+    continent: 'Asia',
+    flag: '🇰🇭',
+    coordinates: { lat: 13.4125, lon: 103.8670 },
+    category: 'Temple / Archaeology',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Angkor_Wat',
+      en: 'https://en.wikipedia.org/wiki/Angkor_Wat'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=3HGWnBG0zR4',
+      en: 'https://www.youtube.com/watch?v=YU_0FYbP47s'
+    },
+    
+    description: '12th century Khmer temple complex. World\'s largest religious monument, symbol of Cambodia.',
+    
+    mustKnow: [
+      'Built in the 12th century under the reign of King Suryavarman II as his state temple and capital',
+      'Originally dedicated to the Hindu god Vishnu, though later converted to a Buddhist temple',
+      'It is the LARGEST religious monument in the world, covering an area of approximately 162 hectares',
+      'Declared a UNESCO World Heritage Site in 1992, being the national symbol of Cambodia',
+      'The Angkor archaeological complex contains more than 400 temples distributed over an extensive area',
+      'Represents the best preserved example of classical Khmer architecture and its aesthetic perfection'
+    ],
+    
+    whatToDo: [
+      'Witness the sunrise at Angkor Wat reflecting in the front pond, an absolutely ICONIC and unmissable experience',
+      'Explore Angkor Thom and the Bayon temple with its 216 enigmatic giant carved faces watching you from all directions',
+      'Visit Ta Prohm, the mystical temple embraced by enormous ancient tree roots, famous for appearing in Tomb Raider',
+      'Discover Banteay Srei, known for its extraordinary carvings in pink sandstone of incredible detail',
+      'Do the small circuit if you only have 1 day to see the most important temples',
+      'Dedicate 2-3 days to the grand circuit if you want to explore the complete complex in greater depth'
+    ],
+    
+    howToGetThere: {
+      flight: 'Siem Reap International Airport',
+      tuk_tuk: '$15-20/day (most common way)',
+      bike: '$2/day (only if you have energy)',
+      car: '$30-50/day with driver',
+      from_town: '6 km from Siem Reap'
+    },
+    
+    tickets: {
+      one_day: '$37',
+      three_day: '$62 (use within 10 days)',
+      seven_day: '$72 (use within 1 month)',
+      sunrise: 'Included (arrive 5 AM)',
+      booking: 'Buy at ticket office with photo'
+    },
+    
+    bestTime: {
+      season: 'Nov-March (dry, cool)',
+      timeOfDay: 'Sunrise 5:30 AM (Angkor Wat)',
+      avoid: 'April (45°C+), monsoon June-Oct',
+      crowds: 'Avoid Cambodian holidays'
+    },
+    
+    nearby: [
+      'Bayon (temple of faces)',
+      'Ta Prohm (giant trees)',
+      'Banteay Srei',
+      'Tonlé Sap (floating lake)',
+      'Pub Street Siem Reap (nightlife)'
+    ],
+    
+    tips: [
+      'Buy 3-day pass (worth it)',
+      'Hire tuk-tuk per day ($15-20)',
+      'Sunrise at Angkor Wat = UNMISSABLE',
+      'Bring: water, sunscreen, hat',
+      'Dress code: shoulders and knees covered',
+      'Early less heat and people',
+      'Ta Prohm best 2-3 PM (light)',
+      'Watch out for monkeys (steal food)'
+    ],
+    
+    accessibility: 'Irregular terrain. Difficult for wheelchairs',
+    duration: '3-4 days ideal (minimum 1 day)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
-  { id: 'monte-fuji', name: 'Mount Fuji', city: 'Shizuoka', country: 'Japan', continent: 'Asia', flag: '🇯🇵', coordinates: { lat: 35.3606, lon: 138.7274 }, category: 'Mountain', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Monte_Fuji', en: 'https://en.wikipedia.org/wiki/Mount_Fuji', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A4%D7%95%D7%92%27%D7%99' }, description: 'Sacred mountain, active volcano 3,776m. Symbol of Japan, perfectly symmetrical.', mustKnow: ['3,776m height', 'Active volcano (last eruption 1707)', 'Climbable July-August only'], whatToDo: ['Climb to summit', 'Sunrise from top', 'Visit Fuji Five Lakes'], tips: ['Acclimatize properly', 'Book huts in advance'], prices: { budget: '¥3000-6000/day', medium: '¥10000-20000/day', high: '¥30000+/day' }, bestTime: { season: 'July-August (climbing)', weather: 'Clear', icon: '🗻' }, avoid: 'Winter (closed)', accessibility: 'Challenging climb', duration: '1-2 days climb', nearby: ['Lake Kawaguchi', 'Hakone', 'Chureito Pagoda'], transportation: { bus: 'From Tokyo', train: 'To 5th station' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'monte-fuji',
+    name: 'Mount Fuji',
+    city: 'Shizuoka / Yamanashi',
+    country: 'Japan',
+    continent: 'Asia',
+    flag: '🇯🇵',
+    coordinates: { lat: 35.3606, lon: 138.7274 },
+    category: 'Nature / Mountain',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monte_Fuji',
+      en: 'https://en.wikipedia.org/wiki/Mount_Fuji'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=QEG2SIZoLF8',
+      en: 'https://www.youtube.com/watch?v=JxYmILDya0A'
+    },
+    
+    description: 'Sacred mountain and active volcano at 3,776m. Symbol of Japan, perfectly symmetrical, snow-capped.',
+    
+    mustKnow: [
+      'At 3,776 meters altitude, it is the highest mountain in all of Japan and its most recognizable symbol',
+      'It is an active volcano that had its last eruption in 1707, although it is currently considered low activity',
+      'Inscribed as a UNESCO World Heritage Site in 2013 as a "sacred site and source of artistic inspiration"',
+      'Considered sacred in both Shintoism and Buddhism, being an important pilgrimage site',
+      'Official climbing is only permitted during July and August when weather conditions are safe',
+      'On clear days it is visible from Tokyo, 100 kilometers away, creating a spectacular view'
+    ],
+    
+    whatToDo: [
+      'Climb to the summit during the official July-August season to live a unique experience',
+      'Witness the sunrise from the summit, known as "Goraiko", considered an unforgettable spiritual experience',
+      'Visit the 5th station located at 2,305 meters altitude, accessible by car and starting point for most climbs',
+      'Explore the Fuji Five Lakes surrounding the mountain, with Lake Kawaguchiko being the most popular and photogenic',
+      'Capture the iconic photo from Chureito Pagoda with Mount Fuji majestically in the background',
+      'Venture into the mysterious Aokigahara Forest, known for its dense foliage and unique atmosphere'
+    ],
+    
+    howToGetThere: {
+      tokyo: 'Train to Kawaguchiko (2h, ¥4,130) + bus',
+      bus: 'Shinjuku → 5th station (2.5h, ¥2,800)',
+      climbing: '5th station = starting point',
+      best_view: 'Lake Kawaguchiko or Hakone'
+    },
+    
+    tickets: {
+      climbing_fee: '¥1,000 (voluntary but expected)',
+      fifth_station: 'Free',
+      hut_overnight: '¥8,000-12,000 (with meals)',
+      kawaguchiko_ropeway: '¥900'
+    },
+    
+    bestTime: {
+      climbing: 'July-August ONLY',
+      viewing: 'Nov-Feb (clearer, snow on top)',
+      avoid: 'June-July (rainy season, cloudy)',
+      cherry_blossom: 'April (Chureito pagoda with flowers)'
+    },
+    
+    nearby: [
+      'Fuji Five Lakes',
+      'Hakone (onsen and views)',
+      'Chureito Pagoda',
+      'Aokigahara Forest',
+      'Gotemba Premium Outlets'
+    ],
+    
+    tips: [
+      'Climbing ONLY July-August (rest closed/dangerous)',
+      'Yoshida Route (most popular)',
+      'Sleep in mountain hut (see sunrise)',
+      'Bring warm clothes (summit = 5°C summer)',
+      'Limited oxygen at summit',
+      'Stick for stamps (souvenir)',
+      'DO NOT climb at night without experience',
+      'Just to see: Kawaguchiko perfect'
+    ],
+    
+    accessibility: '5th station accessible. Climb NOT accessible',
+    duration: '6-10 hours up + 3-5 down (or 2 days with overnight)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
-  { id: 'petra', name: 'Petra', city: 'Wadi Musa', country: 'Jordan', continent: 'Asia', flag: '🇯🇴', coordinates: { lat: 30.3285, lon: 35.4444 }, category: 'Archaeology', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Petra', en: 'https://en.wikipedia.org/wiki/Petra', he: 'https://he.wikipedia.org/wiki/%D7%A4%D7%98%D7%A8%D7%94' }, description: 'Nabatean city carved in pink rock ~300 BC. Accessible through the Siq canyon.', mustKnow: ['Founded ~300 BC', 'Carved entirely in rock', 'Rediscovered 1812'], whatToDo: ['Walk through Siq', 'See the Treasury', 'Climb to Monastery'], tips: ['Start very early', 'Bring lots of water'], prices: { budget: 'JOD 15-30/day', medium: 'JOD 50-100/day', high: 'JOD 200+/day' }, bestTime: { season: 'March-May & Sept-Nov', weather: 'Mild', icon: '☀️' }, avoid: 'Summer (extreme heat)', accessibility: 'Difficult terrain', duration: '1 full day', nearby: ['Wadi Rum', 'Dead Sea'], transportation: { bus: 'From Amman', taxi: 'Available' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'petra',
+    name: 'Petra',
+    city: 'Wadi Musa',
+    country: 'Jordan',
+    continent: 'Asia',
+    flag: '🇯🇴',
+    coordinates: { lat: 30.3285, lon: 35.4444 },
+    category: 'Archaeology',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Petra',
+      en: 'https://en.wikipedia.org/wiki/Petra'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=YU_0FYbP47s',
+      en: 'https://www.youtube.com/watch?v=UMiPZx6WRA0'
+    },
+    
+    description: 'Nabatean city carved in pink rock ~300 BC. "Rose City" accessible through the Siq. One of 7 Wonders of Modern World.',
+    
+    mustKnow: [
+      'Founded by the Nabateans around 300 BC as their capital and trading center on the spice routes',
+      'The entire city is carved directly into the walls of pink and red sandstone rock',
+      'Remained lost to the Western world until rediscovered by Swiss explorer Johann Ludwig Burckhardt in 1812',
+      'Declared a UNESCO World Heritage Site in 1985, recognizing its extraordinary archaeological value',
+      'Chosen as one of the 7 Wonders of the Modern World in 2007, being the pride of Jordan',
+      'The archaeological site contains more than 800 carved monuments, tombs, temples and structures'
+    ],
+    
+    whatToDo: [
+      'Walk through the dramatic Siq, an impressive 1.2-kilometer-long canyon that serves as the entrance to the city',
+      'Marvel at The Treasury (Al-Khazneh), Petra\'s most iconic facade that appears suddenly at the end of the Siq',
+      'Explore the Street of Facades with its numerous monumental tombs carved into the rock',
+      'Visit the imposing Roman Theater excavated into the mountainside with capacity for 3,000 spectators',
+      'Climb the 800 steps to the Monastery (Ad-Deir), Petra\'s largest structure with spectacular views',
+      'Experience Petra by Night, where the path to the Treasury is illuminated with thousands of candles (3 times per week)'
+    ],
+    
+    howToGetThere: {
+      amman: 'JETT bus (3h, JD 10) or private taxi',
+      aqaba: '2 hours (130 km)',
+      airport: 'Queen Alia Airport (Amman) closest',
+      town: 'Hotels in Wadi Musa (walking to entrance)'
+    },
+    
+    tickets: {
+      one_day: 'JD 50 (~$70) foreigners',
+      two_day: 'JD 55',
+      three_day: 'JD 60',
+      jordan_pass: 'JD 70-80 (includes visa + Petra 2-3 days)',
+      petra_night: 'JD 17 additional'
+    },
+    
+    bestTime: {
+      season: 'March-May or Sept-Nov',
+      timeOfDay: 'Dawn (8 AM entrance, light on Treasury)',
+      avoid: 'Summer (40°C+ and no shade)'
+    },
+    
+    nearby: [
+      'Little Petra',
+      'Wadi Rum (desert, 1.5h)',
+      'Dead Sea (3h)',
+      'Aqaba (beach, Red Sea)',
+      'Jerash (Roman ruins)'
+    ],
+    
+    tips: [
+      'Buy Jordan Pass (saves money)',
+      'Arrive early (9 AM already hot)',
+      'Bring LOTS of water',
+      'Comfortable hiking shoes',
+      'Monastery = UNMISSABLE (800 steps)',
+      'Petra by Night nice but touristy',
+      'Donkeys/camels available (negotiate price)',
+      '2 days ideal to see everything unhurried'
+    ],
+    
+    accessibility: 'Entrance to Treasury acceptable. Rest NOT accessible (stairs, uneven terrain)',
+    duration: '1 day minimum (2 days ideal)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'kilimanjaro', name: 'Mount Kilimanjaro', city: 'Moshi', country: 'Tanzania', continent: 'Africa', flag: '🇹🇿', coordinates: { lat: -3.0674, lon: 37.3556 }, category: 'Mountain', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Kilimanjaro', en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A7%D7%99%D7%9C%D7%99%D7%9E%D7%A0%D7%92%27%D7%90%D7%A8%D7%95' }, description: 'Africa\'s highest mountain (5,895m). Inactive volcano. Climbable without technical skills.', mustKnow: ['5,895m altitude', 'Highest mountain in Africa', 'No technical climbing required'], whatToDo: ['Climb to Uhuru Peak', 'Marangu or Machame route', 'See glaciers at summit'], tips: ['Acclimatize properly', 'Choose 6-7 day route'], prices: { budget: '$1500-2000', medium: '$2500-3500', high: '$5000+' }, bestTime: { season: 'Jan-March & June-Oct', weather: 'Dry', icon: '🏔️' }, avoid: 'April-May (rainy)', accessibility: 'Strenuous', duration: '5-9 days', nearby: ['Serengeti', 'Arusha'], transportation: { flight: 'To Kilimanjaro Airport', bus: 'To Moshi' }, lastUpdated: '2025-11-20' },
   

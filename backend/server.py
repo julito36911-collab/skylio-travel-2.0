@@ -77,30 +77,31 @@ async def get_status_checks():
 @api_router.post("/travel-assistant", response_model=TravelAssistantResponse)
 async def travel_assistant(query: TravelQuery):
     """
-    AI-powered travel assistant using Hugging Face's Meta-Llama-3.1-8B-Instruct
+    AI-powered travel assistant using Groq's Llama 3.3 70B model
     Provides comprehensive travel information about any destination
     """
     try:
-        # Get Hugging Face API key from environment
-        hf_api_key = os.environ.get('HUGGINGFACE_API_KEY')
+        # Get Groq API key from environment
+        groq_api_key = os.environ.get('GROQ_API_KEY')
         
-        if not hf_api_key:
+        if not groq_api_key:
             raise HTTPException(
                 status_code=500, 
-                detail="HUGGINGFACE_API_KEY not configured. Please add it to your .env file."
+                detail="GROQ_API_KEY not configured. Please add it to your .env file."
             )
         
-        # Hugging Face Inference API endpoint - using free tier compatible model
-        # Using Google's FLAN-T5 which is available for free inference
-        api_url = "https://api-inference.huggingface.co/models/google/flan-t5-large"
+        # Groq API endpoint
+        api_url = "https://api.groq.com/openai/v1/chat/completions"
         
         headers = {
-            "Authorization": f"Bearer {hf_api_key}",
+            "Authorization": f"Bearer {groq_api_key}",
             "Content-Type": "application/json"
         }
         
         # Create detailed prompt for travel information
-        prompt = f"""You are an expert travel advisor. Provide comprehensive information about {query.destination} for travelers planning their trip. Include:
+        system_message = "You are an expert travel advisor. Provide comprehensive, well-organized travel information."
+        
+        user_message = f"""Provide comprehensive travel information about {query.destination} for travelers planning their trip. Include:
 
 1. **Hotels Recommended** (list 3-4 options with different budgets: budget, mid-range, luxury)
 2. **Airlines** that fly to {query.destination} (mention major carriers and airports)
@@ -114,40 +115,29 @@ async def travel_assistant(query: TravelQuery):
 7. **Budget Estimate** (approximate daily budget in USD)
 8. **Practical Tips** (visa requirements, local currency, language)
 
-Keep the response organized, informative, and practical. Use clear sections.
-
-Destination: {query.destination}
-
-Travel Information:"""
+Keep the response organized, informative, and practical. Use clear sections with headers."""
         
         payload = {
-            "inputs": prompt,
-            "parameters": {
-                "max_new_tokens": 800,
-                "temperature": 0.7,
-                "top_p": 0.95,
-                "top_k": 50,
-                "return_full_text": False
-            }
+            "model": "llama-3.3-70b-versatile",
+            "messages": [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ],
+            "temperature": 0.7,
+            "max_tokens": 1500,
+            "top_p": 0.9
         }
         
-        # Make request to Hugging Face API
+        # Make request to Groq API
         response = requests.post(
             api_url,
             headers=headers,
             json=payload,
-            timeout=60
+            timeout=30
         )
         
-        if response.status_code == 503:
-            # Model is loading
-            raise HTTPException(
-                status_code=503,
-                detail="AI model is loading. Please try again in 20-30 seconds."
-            )
-        
         if response.status_code != 200:
-            logger.error(f"Hugging Face API error: {response.status_code} - {response.text}")
+            logger.error(f"Groq API error: {response.status_code} - {response.text}")
             raise HTTPException(
                 status_code=response.status_code,
                 detail=f"AI service error: {response.text}"
@@ -155,13 +145,10 @@ Travel Information:"""
         
         result = response.json()
         
-        # Extract generated text
-        if isinstance(result, list) and len(result) > 0:
-            generated_text = result[0].get("generated_text", "")
+        # Extract generated text from Groq response
+        if "choices" in result and len(result["choices"]) > 0:
+            generated_text = result["choices"][0]["message"]["content"]
         else:
-            generated_text = result.get("generated_text", "")
-        
-        if not generated_text:
             raise HTTPException(
                 status_code=500,
                 detail="AI did not generate a response. Please try again."

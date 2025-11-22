@@ -1404,25 +1404,31 @@ export const mustSeeDestinations = [
     coordinates: { lat: -17.9244, lon: 25.8567 },
     category: 'Naturaleza',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria',
+      en: 'https://en.wikipedia.org/wiki/Victoria_Falls',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94'
+    },
+    
     description: 'Una de las cataratas más grandes del mundo. 1,708m de ancho, 108m de altura. "El Humo que Truena" (nombre local).',
     
     mustKnow: [
-      'Ancho: 1,708m | Alto: 108m',
-      'Río Zambeze',
-      'Patrimonio UNESCO',
-      'Descubiertas (occidentales) por Livingstone 1855',
-      'Mayor caudal: marzo-mayo',
-      'Menor: nov-dic (pero mejor para ver)',
-      'Nombre local: Mosi-oa-Tunya'
+      'Miden 1,708 metros de ancho y 108 metros de altura, siendo una de las cortinas de agua más grandes y espectaculares del planeta',
+      'Son alimentadas por el poderoso río Zambeze que se precipita en el desfiladero creando una nube de vapor visible a kilómetros',
+      'Declaradas Patrimonio de la Humanidad por la UNESCO, reconociendo su belleza natural extraordinaria',
+      'Fueron "descubiertas" para el mundo occidental por el explorador David Livingstone en 1855, quien las nombró en honor a la Reina Victoria',
+      'El mayor caudal de agua ocurre entre marzo y mayo, cuando hasta 500 millones de litros caen por minuto',
+      'Durante noviembre y diciembre el caudal es menor, pero paradójicamente es el mejor momento para apreciar completamente la formación geológica',
+      'Su nombre local en idioma Lozi es "Mosi-oa-Tunya", que significa "El Humo que Truena", describiendo perfectamente el fenómeno'
     ],
     
     whatToDo: [
-      'Caminar por senderos (lado Zambia o Zimbabue)',
-      'Devil\'s Pool (piscina al borde, sept-dic)',
-      'Bungee jumping desde puente (111m)',
-      'Rafting río Zambeze (rápidos clase V)',
-      'Vuelo en helicóptero ($160)',
-      'Sunset cruise en río'
+      'Recorre los senderos panorámicos desde el lado de Zambia o Zimbabue, cada uno ofreciendo perspectivas únicas e impresionantes',
+      'Atrévete a nadar en la Devil\'s Pool, una piscina natural al borde mismo de la catarata (solo septiembre-diciembre cuando el agua es baja)',
+      'Experimenta la adrenalina del bungee jumping desde el puente Victoria Falls, saltando 111 metros hacia el desfiladero',
+      'Enfrenta los emocionantes rápidos clase V del río Zambeze en una aventura extrema de rafting',
+      'Sobrevuela las cataratas en helicóptero para apreciar su magnitud completa desde el aire ($160 por 15 minutos)',
+      'Disfruta de un romántico crucero al atardecer por el río Zambeze observando hipopótamos y cocodrilos'
     ],
     
     howToGetThere: {

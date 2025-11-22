@@ -31,13 +31,11 @@ function GuidesHub() {
 
   // Cargar datos de destinos según idioma activo
   const mustSeeDestinations = useMemo(() => {
-    if (i18n.language === 'es') {
-      return require('../data/mustSeeDestinations_es').mustSeeDestinations;
-    } else if (i18n.language === 'en') {
-      return require('../data/mustSeeDestinations_en').mustSeeDestinations;
+    if (i18n.language === 'en') {
+      return destinationsEn;
     } else {
-      // Fallback to Spanish for Hebrew or other languages
-      return require('../data/mustSeeDestinations_es').mustSeeDestinations;
+      // Spanish or Hebrew (fallback to Spanish)
+      return destinationsEs;
     }
   }, [i18n.language]);
 

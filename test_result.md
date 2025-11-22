@@ -101,3 +101,53 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Agregar guías de ciudades con información detallada de transporte público para los 35 países más turísticos"
+
+frontend:
+  - task: "City Modal Display Bug"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/GuidesHub.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Usuario reportó que al hacer clic en París, el modal de ciudad no aparecía"
+      - working: false
+        agent: "main"
+        comment: "Identificado problema de z-index. Modal se renderizaba pero quedaba debajo del CountryModal"
+      - working: true
+        agent: "main"
+        comment: "ARREGLADO: Cambié z-index a 9999 usando inline style. Modal ahora aparece correctamente sobre el CountryModal. Testeado con capturas automáticas."
+
+  - task: "City Data for France (Paris)"
+    implemented: true
+    working: true
+    file: "frontend/src/data/countriesGuide_es.js, countriesGuide_en.js, countriesGuide_he.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "París completamente implementado en 3 idiomas con info de aeropuertos, transporte público, precios, mapas, apps y advertencias"
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+
+test_plan:
+  current_focus:
+    - "Agregar ciudades para España (Madrid, Barcelona)"
+    - "Continuar agregando ciudades para los 35 países más turísticos"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "sequential"
+
+agent_communication:
+  - agent: "main"
+    message: "Bug del CityModal resuelto. Modal ahora aparece correctamente con z-index 9999. París está completo en ES/EN/HE. Listo para agregar más ciudades."

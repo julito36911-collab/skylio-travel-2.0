@@ -205,11 +205,11 @@ export const countriesGuide = [
           ],
           
           scams: [
-            '⚠️ Vendedores falsos de tickets fuera de estaciones',
-            '⚠️ Carteristas en líneas 1, 4, 9 (turísticas)',
-            '⚠️ "Ayudantes" en máquinas que roban tarjetas',
-            '⚠️ Revisores falsos pidiendo tickets fuera del tren',
-            '⚠️ Personas pidiendo firmar peticiones'
+            '⚠️ Ten cuidado con vendedores falsos que ofrecen tickets a precio reducido fuera de las estaciones',
+            '⚠️ Las líneas 1, 4 y 9 son muy turísticas y frecuentadas por carteristas, mantén tus pertenencias vigiladas',
+            '⚠️ Desconfía de "ayudantes" amistosos en las máquinas expendedoras que podrían robar tu tarjeta de crédito',
+            '⚠️ Los revisores auténticos siempre llevan uniforme oficial; no entregues tu ticket a personas sospechosas fuera del tren',
+            '⚠️ Evita a las personas que te piden firmar peticiones cerca de las estaciones, es una distracción común para robar'
           ],
           
           tips: [

@@ -212,7 +212,16 @@
     "aiSearch": "Search with AI",
     "aiSearching": "Searching...",
     "aiEmptyError": "Please enter a destination to search",
-    "aiError": "Error getting information from AI assistant. Please try again."
+    "aiError": "Error getting information from AI assistant. Please try again.",
+    "aiAssistant": "AI Assistant",
+    "aiDescription": "Ask about any destination in the world and get detailed information",
+    "aiPlaceholder": "Example: \"Tell me about Tokyo, what to see, where to eat, how to get around...\" or \"Plan 3 days in Paris\"",
+    "aiGenerating": "Generating complete information...",
+    "aiWait": "This may take a few seconds",
+    "aiExamples": "Example questions:",
+    "aiExample1": "What hotels do you recommend in Barcelona for families?",
+    "aiExample2": "Plan 5 days in Tokyo with a medium budget",
+    "aiExample3": "Romantic tours in Venice for couples"
   },
   "cities": {
     "title": "Cities",

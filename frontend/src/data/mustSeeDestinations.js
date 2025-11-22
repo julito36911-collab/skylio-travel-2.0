@@ -1167,6 +1167,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 30.3285, lon: 35.4444 },
     category: 'Arqueología',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Petra',
+      en: 'https://en.wikipedia.org/wiki/Petra',
+      he: 'https://he.wikipedia.org/wiki/%D7%A4%D7%98%D7%A8%D7%94'
+    },
+    
     description: 'Ciudad nabatea tallada en roca rosada ~300 a.C. "Ciudad Rosa" accesible por el Siq. Una de las 7 Maravillas del Mundo Moderno.',
     
     mustKnow: [

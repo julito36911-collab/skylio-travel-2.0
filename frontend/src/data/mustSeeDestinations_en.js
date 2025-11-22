@@ -707,8 +707,93 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'cataratas-iguazu', name: 'Iguazu Falls', city: 'Puerto Iguazú', country: 'Argentina/Brazil', continent: 'America', flag: '🇦🇷🇧🇷', coordinates: { lat: -25.6953, lon: -54.4367 }, category: 'Nature', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA', en: 'https://en.wikipedia.org/wiki/Iguazu_Falls', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%90%D7%99%D7%92%D7%95%D7%90%D7%A1%D7%95' }, description: 'System of 275 waterfalls. Up to 82m high. Greater flow than Niagara and Victoria combined.', mustKnow: ['275 individual waterfalls', '2.7 km wide', 'Devil\'s Throat is most impressive'], whatToDo: ['Devil\'s Throat walkway', 'Boat safari', 'Brazilian side panoramic view'], tips: ['Visit both sides (Argentina and Brazil)', 'Bring waterproof clothing'], prices: { budget: '$30-50/day', medium: '$80-150/day', high: '$ 200+/day' }, bestTime: { season: 'March-May & Sept-Nov', weather: 'Moderate flow', icon: '☀️' }, avoid: 'Jan-Feb (extreme heat)', accessibility: 'Walkways accessible', duration: '1-2 days', nearby: ['Bird Park', 'Itaipu Dam'], transportation: { bus: 'From Puerto Iguazú', taxi: 'Available' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'cataratas-iguazu',
+    name: 'Iguazu Falls',
+    city: 'Puerto Iguazú',
+    country: 'Argentina / Brazil',
+    continent: 'America',
+    flag: '🇦🇷🇧🇷',
+    coordinates: { lat: -25.6953, lon: -54.4367 },
+    category: 'Nature',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA',
+      en: 'https://en.wikipedia.org/wiki/Iguazu_Falls'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=ztvk0xDjz6Q',
+      en: 'https://www.youtube.com/watch?v=FfMxwp5U4Hk'
+    },
+    
+    description: '275 waterfalls on Argentina-Brazil border. Bigger than Niagara, wider than Victoria. "Devil\'s Throat" is the most impressive.',
+    
+    mustKnow: [
+      'This impressive system is composed of 275 individual waterfalls that majestically extend along the border',
+      'The waterfall complex spans a total width of 2.7 kilometers of pure natural beauty',
+      'The falls reach heights of up to 82 meters, with Devil\'s Throat being the highest and most striking',
+      'They carry more water than Niagara Falls and Victoria Falls combined',
+      'Declared a UNESCO World Heritage Site, protecting this unique ecosystem',
+      'First Lady Eleanor Roosevelt exclaimed upon seeing them: "Poor Niagara!" recognizing their superiority'
+    ],
+    
+    whatToDo: [
+      'Visit the spectacular Devil\'s Throat from the Argentine side, an absolutely UNMISSABLE experience that will leave you breathless',
+      'Walk the upper and lower walkways that allow you to appreciate the falls from multiple unique perspectives',
+      'Dare to take the boat Safari that takes you directly under the waterfalls, prepare to get completely soaked',
+      'Experience the adrenaline of the Great Adventure in a rubber boat, navigating the rapids of the Iguazu River',
+      'Explore the Macuco Trail to observe the fascinating jungle wildlife of the region',
+      'Cross to the Brazilian side for the most photogenic panoramic view of the entire waterfall complex'
+    ],
+    
+    howToGetThere: {
+      flights: 'Buenos Aires → Iguazu (2h) | São Paulo → Foz (2h)',
+      bus: 'Puerto Iguazú (Argentine side) ↔ Foz do Iguaçu (Brazilian side)',
+      shuttle: 'Hotels → parks (frequent)',
+      border: 'Easy to cross border (bring passport)'
+    },
+    
+    tickets: {
+      argentina: '$15 USD (foreigners)',
+      brasil: '$18 USD (National Park)',
+      both: 'Worth visiting both sides',
+      boat: '$20 USD (Great Adventure)'
+    },
+    
+    bestTime: {
+      season: 'March-May or August-October',
+      timeOfDay: 'Early morning (fewer people)',
+      avoid: 'Dec-Feb (extreme heat 40°C, very humid)',
+      water: 'More water in summer, less in winter'
+    },
+    
+    nearby: [
+      'Three Borders Landmark (Argentina-Brazil-Paraguay)',
+      'Bird Park (Brazil - bird sanctuary)',
+      'Jesuit ruins',
+      'Itaipu Dam (Brazil)',
+      'Duty Free (Paraguay)'
+    ],
+    
+    tips: [
+      'Visit BOTH sides (different perspective)',
+      'Argentine = being AT the falls (better)',
+      'Brazilian = panoramic view (incredible photos)',
+      'Bring raincoat for Devil\'s Throat',
+      'Change of clothes if you do boat safari',
+      'Non-slip shoes (wet walkways)',
+      'Waterproof sunscreen',
+      '2 days minimum (1 per side)'
+    ],
+    
+    accessibility: 'Walkways accessible. Boat safari NOT accessible',
+    duration: '1 day per side (2 days total recommended)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'times-square', name: 'Times Square', city: 'New York', country: 'United States', continent: 'America', flag: '🇺🇸', coordinates: { lat: 40.7580, lon: -73.9855 }, category: 'City', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Times_Square', en: 'https://en.wikipedia.org/wiki/Times_Square', he: 'https://he.wikipedia.org/wiki/%D7%98%D7%99%D7%99%D7%9E%D7%A1_%D7%A1%D7%A7%D7%95%D7%95%D7%90%D7%A8' }, description: 'Iconic Manhattan intersection. Illuminated 24/7. Broadway epicenter and New Year celebration.', mustKnow: ['300,000-400,000 pedestrians daily', 'New Year Ball Drop attracts 1 million', 'Pedestrian zone since 2009'], whatToDo: ['Broadway show', 'M&M\'s World', 'Photos with giant screens'], tips: ['Very crowded always', 'Watch for pickpockets'], prices: { budget: '$60-100/day', medium: '$200-350/day', high: '$600+/day' }, bestTime: { season: 'Year-round', weather: 'Any', icon: '🌆' }, avoid: 'New Year (extremely crowded)', accessibility: 'Fully accessible', duration: '1-2 hours', nearby: ['Central Park', 'Empire State', 'Rockefeller Center'], transportation: { metro: 'Multiple lines', bus: 'Many routes' }, lastUpdated: '2025-11-20' },
   

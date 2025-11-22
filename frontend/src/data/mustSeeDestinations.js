@@ -1655,24 +1655,30 @@ export const mustSeeDestinations = [
     coordinates: { lat: -33.8568, lon: 151.2153 },
     category: 'Arquitectura',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney',
+      en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House',
+      he: 'https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%90%D7%95%D7%A4%D7%A8%D7%94_%D7%A9%D7%9C_%D7%A1%D7%99%D7%93%D7%A0%D7%99'
+    },
+    
     description: 'Obra maestra arquitectónica de 1973 con techo de velas icónico. Centro de artes escénicas más famoso del mundo.',
     
     mustKnow: [
-      'Inaugurada en 1973',
-      'Diseñada por Jørn Utzon',
-      'Patrimonio UNESCO desde 2007',
-      '1,056 "velas" de techo',
-      '10 años construcción (1963-1973)',
-      'Costo: $102 millones (presupuesto era $7M)'
+      'Fue inaugurada oficialmente el 20 de octubre de 1973 por la Reina Isabel II, convirtiéndose instantáneamente en ícono mundial',
+      'Diseñada por el arquitecto danés Jørn Utzon, cuya visión revolucionaria cambió la arquitectura moderna para siempre',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 2007, reconociendo su diseño arquitectónico único e innovador',
+      'Su distintivo techo está compuesto por 1,056 "velas" de concreto prefabricado cubiertas con más de un millón de azulejos cerámicos suecos',
+      'La construcción tomó 10 años desde 1963 hasta 1973, enfrentando numerosos desafíos técnicos y de ingeniería',
+      'El costo final alcanzó los $102 millones de dólares australianos, superando dramáticamente el presupuesto inicial de solo $7 millones'
     ],
     
     whatToDo: [
-      'Tour guiado (1 hora)',
-      'Ver espectáculo (ópera, ballet, teatro)',
-      'Fotos desde Circular Quay',
-      'Cena en restaurantes (Bennelong)',
-      'Backstage tour',
-      'Vivid Sydney (mayo-junio, proyecciones)'
+      'Únete a un tour guiado de 1 hora para descubrir los secretos arquitectónicos y la fascinante historia de su construcción',
+      'Asiste a un espectáculo de ópera, ballet o teatro para experimentar la acústica excepcional de sus salas',
+      'Captura fotografías icónicas desde Circular Quay con el puente del puerto de Sídney de fondo',
+      'Disfruta de una elegante cena en el restaurante Bennelong ubicado dentro de las famosas velas',
+      'Reserva el exclusivo backstage tour para explorar áreas normalmente cerradas al público',
+      'Visita durante Vivid Sydney en mayo-junio cuando proyecciones luminosas transforman el edificio en arte digital'
     ],
     
     howToGetThere: {

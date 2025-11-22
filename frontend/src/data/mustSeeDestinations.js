@@ -22,11 +22,11 @@ export const mustSeeDestinations = [
     description: 'Icono mundial de París, la "Dama de Hierro" de 330m de altura construida en 1889 para la Exposición Universal.',
     
     mustKnow: [
-      'Construida por Gustave Eiffel en 1889',
-      '7 millones de visitantes al año',
-      'Iluminada cada noche con 20,000 bombillas',
-      '3 niveles accesibles (276m altura máxima)',
-      'Originalmente iba a ser desmontada en 1909'
+      'Fue construida por el ingeniero Gustave Eiffel en 1889 como entrada monumental a la Exposición Universal',
+      'Recibe más de 7 millones de visitantes al año, siendo el monumento de pago más visitado del mundo',
+      'Cada noche, la torre se ilumina con un espectáculo de 20,000 bombillas que centellean durante 5 minutos cada hora',
+      'Cuenta con 3 niveles accesibles al público, alcanzando una altura máxima de 276 metros en su cima',
+      'Originalmente fue diseñada como estructura temporal y estaba programada para ser desmontada en 1909, pero se salvó gracias a su utilidad como antena de radio'
     ],
     
     whatToDo: [

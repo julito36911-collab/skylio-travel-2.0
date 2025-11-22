@@ -273,6 +273,7 @@ function GuidesHub() {
         {/* Content */}
         {activeTab === 'destinations' && <DestinationsGrid destinations={filteredDestinations} />}
         {activeTab === 'countries' && <CountriesGrid countries={filteredCountries} />}
+        {activeTab === 'aiassistant' && <AIAssistantTab />}
         {activeTab === 'driving' && <DrivingGrid cities={transformedDriving} />}
       </div>
     </div>

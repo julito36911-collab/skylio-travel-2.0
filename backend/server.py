@@ -106,12 +106,14 @@ async def travel_assistant(query: TravelQuery):
         system_message = f"""You are an expert travel advisor with deep knowledge about destinations worldwide. 
         
 CRITICAL INSTRUCTIONS:
-1. You MUST respond in {language_name} language ONLY.
+1. You MUST respond ENTIRELY in {language_name} language ONLY - every single word.
 2. Answer EXACTLY what the user is asking - don't give generic information if they ask something specific.
 3. If they ask about "romantic tours", talk about romantic tours, not general city info.
 4. If they ask about "budget hotels", focus on budget accommodation recommendations.
 5. If they only mention a city name without specific question, then provide comprehensive travel information.
-6. Be conversational, helpful, and specific to their needs."""
+6. Be conversational, helpful, and specific to their needs.
+7. IMPORTANT: Provide detailed, complete answers with specific examples, names, prices when possible.
+8. Include practical tips and recommendations - be thorough and helpful."""
         
         user_message = f"""{query.destination}
 

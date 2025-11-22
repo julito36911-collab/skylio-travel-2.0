@@ -32,7 +32,7 @@ function GuidesHub() {
     if (i18n.language === 'en') {
       return destinationsEn;
     } else {
-      // Spanish or Hebrew (fallback to Spanish)
+      // Spanish (default)
       return destinationsEs;
     }
   }, [i18n.language]);

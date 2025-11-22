@@ -1322,24 +1322,30 @@ export const mustSeeDestinations = [
     coordinates: { lat: -3.0674, lon: 37.3556 },
     category: 'Naturaleza / Montaña',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Kilimanjaro',
+      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A7%D7%99%D7%9C%D7%99%D7%9E%D7%A0%D7%92%27%D7%90%D7%A8%D7%95'
+    },
+    
     description: 'Montaña más alta de África (5,895m). Volcán inactivo con glaciares en la cima. Escalable sin experiencia técnica.',
     
     mustKnow: [
-      'Altura: 5,895m (19,341 pies)',
-      'Montaña independiente más alta del mundo',
-      '3 conos volcánicos: Kibo, Mawenzi, Shira',
-      'Glaciares en cumbre (desapareciendo)',
-      'Patrimonio UNESCO',
-      'No requiere escalada técnica'
+      'Con sus 5,895 metros de altura (19,341 pies), es la montaña más alta del continente africano y su pico más emblemático',
+      'Es la montaña independiente (no forma parte de una cordillera) más alta del mundo, elevándose solitariamente sobre la sabana',
+      'Está compuesta por tres conos volcánicos dormidos: Kibo (el más alto), Mawenzi y Shira, cada uno con su propia historia geológica',
+      'Sus glaciares milenarios en la cumbre están desapareciendo rápidamente debido al cambio climático, pudiendo extinguirse en décadas',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único que va desde selva tropical hasta desierto alpino',
+      'No requiere habilidades técnicas de escalada, lo que lo hace accesible para personas en buena condición física sin experiencia montañera previa'
     ],
     
     whatToDo: [
-      'Escalada a Uhuru Peak (cima)',
-      'Ruta Marangu (5-6 días)',
-      'Ruta Machame (6-7 días, más escénica)',
-      'Ruta Lemosho (7-8 días, mejor aclimatación)',
-      'Safari en Arusha después',
-      'Visitar plantaciones de café en Moshi'
+      'Embárcate en la aventura de escalar hasta Uhuru Peak, el punto más alto de África, para vivir una experiencia inolvidable',
+      'Elige la Ruta Marangu de 5-6 días, conocida como la "ruta Coca-Cola" por ser la más establecida con cabañas',
+      'Opta por la Ruta Machame de 6-7 días, considerada la más escénica con vistas espectaculares y paisajes variados',
+      'Considera la Ruta Lemosho de 7-8 días que ofrece la mejor aclimatación y las mayores tasas de éxito para alcanzar la cumbre',
+      'Complementa tu aventura con un safari en Arusha para ver la vida salvaje africana después de tu escalada',
+      'Visita las plantaciones de café alrededor de Moshi para conocer el proceso del café tanzano y relajarte post-escalada'
     ],
     
     howToGetThere: {

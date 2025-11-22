@@ -1665,10 +1665,264 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'milford-sound', name: 'Milford Sound', city: 'Fiordland', country: 'New Zealand', continent: 'Oceania', flag: '🇳🇿', coordinates: { lat: -44.6719, lon: 168.6760 }, category: 'Fjord', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Milford_Sound', en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%9C%D7%A4%D7%95%D7%A8%D7%93_%D7%A1%D7%90%D7%95%D7%A0%D7%93' }, description: 'Glacier fjord with 1,200m cliffs, waterfalls and marine life. "8th wonder of the world".', mustKnow: ['Glacier-carved fjord', '1,200m cliffs', '200+ rain days/year'], whatToDo: ['Cruise (1.5-2h)', 'Kayaking', 'Milford Track hike'], tips: ['Book ahead', 'Expect rain'], prices: { budget: 'NZ$80-150/day', medium: 'NZ$250-400/day', high: 'NZ$700+/day' }, bestTime: { season: 'Oct-April', weather: 'Variable', icon: '🌧️' }, avoid: 'Winter (roads may close)', accessibility: 'Cruise accessible', duration: '1 day trip', nearby: ['Queenstown', 'Te Anau'], transportation: { car: '4h from Queenstown', bus: 'Tour buses', flight: 'Scenic flights' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'milford-sound',
+    name: 'Milford Sound',
+    city: 'Fiordland National Park',
+    country: 'New Zealand',
+    continent: 'Oceania',
+    flag: '🇳🇿',
+    coordinates: { lat: -44.6719, lon: 168.6760 },
+    category: 'Nature / Fjord',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Milford_Sound',
+      en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=nJqxKJHR_Ss',
+      en: 'https://www.youtube.com/watch?v=P8fKrDhR9lE'
+    },
+    
+    description: 'Glacier-carved fjord with 1,200m cliffs, waterfalls and marine life. Rudyard Kipling called it "8th wonder of the world".',
+    
+    mustKnow: [
+      'Carved by glaciers over 100,000 years, this dramatic 15-kilometer fjord extends inland from the Tasman Sea',
+      'Mitre Peak rises 1,692 meters straight from the water, creating one of the world\'s most photographed scenes',
+      'Receives an average of 200 days of rain per year (7 meters annually), making it one of the wettest places on Earth',
+      'The frequent rain creates hundreds of temporary waterfalls cascading down the vertical cliffs',
+      'Home to resident dolphins, fur seals, penguins and occasionally whales',
+      'Part of Te Wahipounamu UNESCO World Heritage Site protecting Fiordland\'s pristine wilderness'
+    ],
+    
+    whatToDo: [
+      'Take a scenic cruise (1.5-2 hours) to fully appreciate the fjord\'s dramatic scale and waterfalls',
+      'Kayak through the sound for an intimate, quiet experience surrounded by towering cliffs',
+      'Hike the famous Milford Track, considered one of the finest walks in the world (4-5 days)',
+      'Take a scenic flight from Queenstown combining aerial views with boat cruise',
+      'Dive or snorkel in the unique underwater observatory to see rare black coral',
+      'Visit in the rain - the fjord is most spectacular with thousands of waterfalls'
+    ],
+    
+    howToGetThere: {
+      from_queenstown: '4 hours drive through spectacular scenery',
+      from_te_anau: '2 hours drive (120 km)',
+      coach: 'Day trip coaches from Queenstown',
+      scenic_flight: 'Fly from Queenstown (combine with cruise)',
+      warning: 'Road can close in winter due to avalanche risk'
+    },
+    
+    tickets: {
+      cruise: 'NZ$95-125 (1.5-2 hours)',
+      coach_cruise: 'NZ$230-280 (from Queenstown)',
+      kayak: 'NZ$189+ (guided tour)',
+      scenic_flight: 'NZ$450+ (fly-cruise-fly)',
+      park_entry: 'Free'
+    },
+    
+    bestTime: {
+      season: 'Oct-April (summer, roads open)',
+      rain: 'Rain makes it MORE spectacular (more waterfalls)',
+      avoid: 'June-Aug (road closures, cold)',
+      wildlife: 'Nov-Feb (seal pups, penguin chicks)'
+    },
+    
+    nearby: [
+      'Te Anau (gateway town)',
+      'Doubtful Sound (less touristy)',
+      'Queenstown (adventure capital)',
+      'Milford Track',
+      'Homer Tunnel'
+    ],
+    
+    tips: [
+      'Book 2-3 months ahead (summer)',
+      'EXPECT rain - bring waterproof jacket',
+      'Rain = better experience (more waterfalls)',
+      'Sandflies VICIOUS (bring strong repellent)',
+      'Drive yourself for flexibility',
+      'Overnight cruise more peaceful (no day crowds)',
+      'Check road conditions (avalanche risk winter)',
+      'Early morning cruise = fewer people'
+    ],
+    
+    accessibility: 'Cruise boats wheelchair accessible',
+    duration: 'Full day from Queenstown (or overnight)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
-  { id: 'uluru', name: 'Uluru (Ayers Rock)', city: 'Northern Territory', country: 'Australia', continent: 'Oceania', flag: '🇦🇺', coordinates: { lat: -25.3444, lon: 131.0369 }, category: 'Sacred', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Uluru', en: 'https://en.wikipedia.org/wiki/Uluru', he: 'https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%95%D7%A8%D7%95' }, description: 'Sacred 348m sandstone monolith. Anangu Aboriginal spiritual site. Changes color with daylight.', mustKnow: ['348m high', '9.4 km circumference', '600 million years old'], whatToDo: ['Base Walk (10.6 km)', 'Sunset viewing', 'Kata Tjuta visit'], tips: ['No climbing (sacred)', 'Bring water'], prices: { budget: 'A$100-200/day', medium: 'A$300-500/day', high: 'A$800+/day' }, bestTime: { season: 'April-Sept', weather: 'Cool', icon: '🌅' }, avoid: 'Dec-Feb (extreme heat)', accessibility: 'Difficult', duration: '2 days', nearby: ['Kata Tjuta', 'Kings Canyon'], transportation: { car: 'From Alice Springs', flight: 'To Ayers Rock Airport' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'uluru',
+    name: 'Uluru (Ayers Rock)',
+    city: 'Northern Territory',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -25.3444, lon: 131.0369 },
+    category: 'Sacred / Nature',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Uluru',
+      en: 'https://en.wikipedia.org/wiki/Uluru'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=fNRa8GXxpzE',
+      en: 'https://www.youtube.com/watch?v=00aVNMYLYzI'
+    },
+    
+    description: 'Sacred 348m sandstone monolith. Anangu Aboriginal spiritual site. Changes color dramatically with daylight.',
+    
+    mustKnow: [
+      'Rising 348 meters above the desert, with most of its bulk hidden underground, Uluru is one of Earth\'s largest monoliths',
+      'The rock is approximately 600 million years old, formed from ancient seabed sediment',
+      'Sacred to the Anangu Aboriginal people for over 30,000 years, with deep spiritual and cultural significance',
+      'Climbing was permanently closed in October 2019 out of respect for indigenous custodians',
+      'The rock dramatically changes color throughout the day - from terracotta at sunrise to burning red at sunset',
+      'Inscribed as a UNESCO World Heritage Site both for its natural features and cultural importance'
+    ],
+    
+    whatToDo: [
+      'Walk the 10.6 km Base Walk circumnavigating Uluru, taking 3-4 hours at a comfortable pace',
+      'Witness the spectacular sunrise or sunset when the rock glows in vibrant reds and oranges',
+      'Take a guided Mala Walk to learn about Aboriginal culture, stories and rock art',
+      'Visit nearby Kata Tjuta (The Olgas), equally impressive rock domes 50km away',
+      'Experience the Field of Light art installation with 50,000 illuminated spheres surrounding Uluru',
+      'Join a guided dot painting workshop to learn traditional Aboriginal art techniques'
+    ],
+    
+    howToGetThere: {
+      flight: 'Connellan Airport (Ayers Rock Airport)',
+      alice_springs: '450 km (5-6 hours drive)',
+      resort: 'Stay at Yulara resort village (20 km from rock)'
+    },
+    
+    tickets: {
+      park_pass: 'A$38 (3 days)',
+      guided_tour: 'A$120-200',
+      field_of_light: 'A$42-52',
+      camel_tour: 'A$80-150',
+      helicopter: 'A$300+ (scenic flight)'
+    },
+    
+    bestTime: {
+      season: 'April-Sept (mild weather)',
+      sunrise_sunset: 'Best viewing times',
+      avoid: 'Dec-Feb (extreme heat 40-45°C)',
+      winter: 'June-Aug (cool, can be near 0°C at night)'
+    },
+    
+    nearby: [
+      'Kata Tjuta / The Olgas (35 km)',
+      'Kings Canyon (300 km)',
+      'Alice Springs (450 km)',
+      'Yulara resort village'
+    ],
+    
+    tips: [
+      'Do NOT climb (closed since 2019, disrespectful)',
+      'Bring LOTS of water (extremely dry)',
+      'Sunrise AND sunset are both essential',
+      'Flies relentless - bring fly net',
+      'Book accommodation months ahead',
+      'Base Walk best done early morning',
+      'Respect sacred sites (photography restrictions)',
+      'Minimum 2 days to see Uluru + Kata Tjuta properly'
+    ],
+    
+    accessibility: 'Parts of Base Walk accessible. Uneven terrain overall',
+    duration: '2-3 days recommended',
+    
+    lastUpdated: '2025-11-20'
+  },
   
-  { id: 'hobbiton', name: 'Hobbiton Movie Set', city: 'Matamata', country: 'New Zealand', continent: 'Oceania', flag: '🇳🇿', coordinates: { lat: -37.8722, lon: 175.6833 }, category: 'Cinema', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Hobbiton', en: 'https://en.wikipedia.org/wiki/Hobbiton_Movie_Set', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%95%D7%91%D7%99%D7%98%D7%95%D7%9F_(%D7%A4%D7%9C%D7%98%D7%95)' }, description: 'Permanent film set from Lord of the Rings and The Hobbit. 44 hobbit holes in preserved Shire.', mustKnow: ['Built for LOTR 1999', 'Permanently rebuilt for Hobbit', '44 hobbit holes'], whatToDo: ['Guided tour (2h)', 'Bag End visit', 'Green Dragon Inn beer'], tips: ['Book 2-3 months ahead', 'Tours mandatory'], prices: { budget: 'NZ$80-150/day', medium: 'NZ$200-350/day', high: 'NZ$600+/day' }, bestTime: { season: 'Oct-April', weather: 'Mild', icon: '🌿' }, avoid: 'School holidays (crowded)', accessibility: 'Guided tour only', duration: '2 hours', nearby: ['Rotorua', 'Waitomo Caves'], transportation: { car: '2h from Auckland', shuttle: 'From Matamata i-Site' }, lastUpdated: '2025-11-20' }
+  {
+    id: 'hobbiton',
+    name: 'Hobbiton Movie Set',
+    city: 'Matamata',
+    country: 'New Zealand',
+    continent: 'Oceania',
+    flag: '🇳🇿',
+    coordinates: { lat: -37.8722, lon: 175.6833 },
+    category: 'Cinema / Experience',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Hobbiton',
+      en: 'https://en.wikipedia.org/wiki/Hobbiton_Movie_Set'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=eOlFRLjG29Q',
+      en: 'https://www.youtube.com/watch?v=fHhpRmPhq3g'
+    },
+    
+    description: 'Permanent film set from Lord of the Rings and The Hobbit. 44 hobbit holes in preserved Shire village.',
+    
+    mustKnow: [
+      'Originally built in 1999 for "The Lord of the Rings" trilogy as a temporary set',
+      'Completely rebuilt in 2010 as a permanent attraction for "The Hobbit" films with weatherproof materials',
+      'Contains 44 unique hobbit holes of different sizes (to create perspective illusion)',
+      'Set on the Alexander family sheep farm which continues to operate around the set',
+      'The Party Tree was specially imported from nearby and dressed with artificial leaves',
+      'Receives over 500,000 visitors annually, making it New Zealand\'s most popular film set attraction'
+    ],
+    
+    whatToDo: [
+      'Take the mandatory 2-hour guided tour through the 12-acre Shire movie set',
+      'Visit Bag End, Bilbo and Frodo\'s iconic home at the top of the hill',
+      'Explore the meticulously maintained gardens with vegetables and flowers',
+      'Enjoy a complimentary drink at the Green Dragon Inn, the functioning hobbit pub',
+      'Photograph the iconic Mill and double-arched bridge over the stream',
+      'Browse authentic props and learn behind-the-scenes stories from knowledgeable guides'
+    ],
+    
+    howToGetThere: {
+      auckland: '2 hours drive south (175 km)',
+      rotorua: '1 hour drive',
+      shuttle: 'From Matamata i-Site to set',
+      tours: 'Organized tours from Auckland/Rotorua include transport'
+    },
+    
+    tickets: {
+      adult: 'NZ$89 (2-hour guided tour)',
+      child: 'NZ$44 (under 16)',
+      evening_tour: 'NZ$195 (includes banquet feast)',
+      private_tour: 'NZ$795+ (exclusive access)'
+    },
+    
+    bestTime: {
+      season: 'Oct-April (warmer, greener)',
+      timeOfDay: 'Morning tours less crowded',
+      avoid: 'School holidays (very busy)',
+      weather: 'Can be muddy after rain'
+    },
+    
+    nearby: [
+      'Waitomo Glowworm Caves (1 hour)',
+      'Rotorua (geothermal wonders)',
+      'Matamata town',
+      'Hamilton city'
+    ],
+    
+    tips: [
+      'Book 2-3 months ahead (sells out)',
+      'Tours MANDATORY (cannot visit independently)',
+      'Wear comfortable walking shoes',
+      'Photography allowed (bring camera)',
+      'Evening banquet tour magical but expensive',
+      'Souvenir shop at end of tour',
+      'No inside access to hobbit holes',
+      'Allow 3 hours total (including waiting)'
+    ],
+    
+    accessibility: 'Wheelchairs and mobility scooters available (book ahead)',
+    duration: '2 hours (guided tour)',
+    
+    lastUpdated: '2025-11-20'
+  }
 ];
+

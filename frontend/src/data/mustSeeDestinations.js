@@ -102,11 +102,11 @@ export const mustSeeDestinations = [
     description: 'Anfiteatro más grande jamás construido (80 d.C.), símbolo del Imperio Romano donde gladiadores combatían ante 50,000 espectadores.',
     
     mustKnow: [
-      'Construido entre 72-80 d.C. por emperadores Flavios',
-      'Capacidad: 50,000-80,000 espectadores',
-      'Patrimonio de la Humanidad UNESCO (1980)',
-      'Una de las 7 Maravillas del Mundo Moderno',
-      'Dañado por terremotos y saqueos medievales'
+      'Fue construido entre los años 72 y 80 d.C. bajo el mandato de los emperadores de la dinastía Flavia',
+      'Tenía capacidad para albergar entre 50,000 y 80,000 espectadores que presenciaban combates de gladiadores y espectáculos públicos',
+      'Declarado Patrimonio de la Humanidad por la UNESCO en 1980, reconociendo su invaluable importancia histórica',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, seleccionado por votación mundial en 2007',
+      'A lo largo de los siglos ha sufrido daños considerables debido a terremotos devastadores y saqueos durante la época medieval'
     ],
     
     whatToDo: [

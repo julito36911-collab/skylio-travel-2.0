@@ -1738,25 +1738,31 @@ export const mustSeeDestinations = [
     coordinates: { lat: -18.2871, lon: 147.6992 },
     category: 'Naturaleza / Marina',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral',
+      en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%AA_%D7%94%D7%92%D7%93%D7%95%D7%9C%D7%94'
+    },
+    
     description: 'Sistema de arrecifes más grande del mundo. 2,300 km de largo, visible desde el espacio. Patrimonio en peligro.',
     
     mustKnow: [
-      '2,300 km de longitud',
-      'Sistema de arrecifes MÁS GRANDE del mundo',
-      '3,000 arrecifes individuales',
-      'Patrimonio UNESCO (en peligro)',
-      '900 islas',
-      'Visible desde el espacio',
-      'Amenazado por cambio climático'
+      'Se extiende por 2,300 kilómetros a lo largo de la costa noreste de Australia, siendo la estructura viva más grande del planeta',
+      'Es el sistema de arrecifes de coral MÁS GRANDE del mundo, hogar de biodiversidad marina incomparable',
+      'Está compuesta por aproximadamente 3,000 arrecifes individuales y cientos de islas tropicales',
+      'Declarada Patrimonio de la Humanidad por la UNESCO, pero actualmente figura en la lista de sitios en peligro',
+      'Incluye más de 900 islas dispersas a lo largo de su extensión, muchas deshabitadas y prístinas',
+      'Es uno de los pocos organismos vivos visible desde el espacio, testimonio de su escala monumental',
+      'Enfrenta amenazas graves por el cambio climático, blanqueamiento de coral y contaminación, requiriendo urgente conservación'
     ],
     
     whatToDo: [
-      'Snorkeling (mejor opción)',
-      'Buceo (PADI certificado)',
-      'Vuelo escénico en helicóptero',
-      'Great Barrier Reef Drive (isla Hamilton)',
-      'Heart Reef (corazón natural, solo aéreo)',
-      'Whitehaven Beach (arena blanca)'
+      'Experimenta el snorkeling para explorar los jardines de coral poco profundos y nadar entre peces tropicales de colores',
+      'Sumérgete en el buceo certificado PADI para descubrir formaciones coralinas profundas y vida marina más grande',
+      'Sobrevuela el arrecife en helicóptero para apreciar la magnitud y belleza del sistema desde una perspectiva aérea espectacular',
+      'Recorre el Great Barrier Reef Drive en la Isla Hamilton, una ruta panorámica con vistas impresionantes',
+      'Admira el famoso Heart Reef, una formación de coral natural en forma de corazón solo visible desde el aire',
+      'Relájate en Whitehaven Beach, considerada una de las playas de arena más blanca y pura del mundo'
     ],
     
     howToGetThere: {

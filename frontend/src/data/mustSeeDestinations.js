@@ -68,12 +68,12 @@ export const mustSeeDestinations = [
     ],
     
     tips: [
-      'Compra tickets online con MESES de anticipación',
-      'Ve temprano (8:30 AM apertura) o tarde (después 8 PM)',
-      'Miércoles-domingo más llenos',
-      'Lleva snacks (comida dentro es cara)',
-      'Cuidado con carteristas en la zona',
-      'Prohibido drones y selfie sticks'
+      'Reserva tus entradas online con varios meses de anticipación, ya que los cupos se agotan rápidamente, especialmente en temporada alta',
+      'Planifica tu visita temprano en la mañana (apertura a las 8:30 AM) o al final de la tarde (después de las 8 PM) para evitar las multitudes',
+      'Ten en cuenta que los días entre miércoles y domingo suelen estar más concurridos que los lunes y martes',
+      'Lleva algunos snacks y bebidas contigo, ya que los precios dentro de la torre son bastante elevados',
+      'Mantén tus pertenencias seguras en todo momento, pues la zona es conocida por la presencia de carteristas que aprovechan las aglomeraciones',
+      'Recuerda que está prohibido el uso de drones y palos selfie por razones de seguridad'
     ],
     
     accessibility: 'Ascensores hasta 2do piso. Cima no accesible silla de ruedas.',

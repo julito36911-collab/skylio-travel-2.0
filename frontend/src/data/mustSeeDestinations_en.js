@@ -1316,10 +1316,180 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'table-mountain', name: 'Table Mountain', city: 'Cape Town', country: 'South Africa', continent: 'Africa', flag: '🇿🇦', coordinates: { lat: -33.9628, lon: 18.4098 }, category: 'Mountain', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa', en: 'https://en.wikipedia.org/wiki/Table_Mountain', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%94%D7%A9%D7%95%D7%9C%D7%97%D7%9F' }, description: 'Iconic flat-topped mountain dominating Cape Town. 1,085m height. Part of 7 Natural Wonders.', mustKnow: ['1,085m altitude', '7 Natural Wonders', '360° rotating cable car'], whatToDo: ['Cable car to top', 'Hike Platteklip Gorge', '360° views'], tips: ['Check weather', 'Book cable car online'], prices: { budget: 'R300-600/day', medium: 'R1000-2000/day', high: 'R4000+/day' }, bestTime: { season: 'Oct-April', weather: 'Clear', icon: '☀️' }, avoid: 'Winter (cloudy)', accessibility: 'Cable car available', duration: '3-4 hours', nearby: ['V&A Waterfront', 'Cape Point'], transportation: { uber: 'Recommended', bus: 'MyCiti' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'table-mountain',
+    name: 'Table Mountain',
+    city: 'Cape Town',
+    country: 'South Africa',
+    continent: 'Africa',
+    flag: '🇿🇦',
+    coordinates: { lat: -33.9628, lon: 18.4098 },
+    category: 'Nature / Mountain',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa',
+      en: 'https://en.wikipedia.org/wiki/Table_Mountain'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=X0RjW8TqJ-8',
+      en: 'https://www.youtube.com/watch?v=SjBnQXJML3U'
+    },
+    
+    description: 'Iconic flat-topped mountain dominating Cape Town. 1,085m height. Part of 7 Natural Wonders of the World.',
+    
+    mustKnow: [
+      'Its distinctive flat summit rises 1,085 meters above sea level, being Cape Town\'s most recognizable landmark',
+      'Officially one of the New 7 Wonders of Nature, voted worldwide in 2011',
+      'The famous "tablecloth" of clouds that cover the summit is caused by southeast winds pushing moist air up the mountain',
+      'Houses over 1,470 floral species, more than the entire United Kingdom',
+      'The rotating cable car offers 360-degree views during the 5-minute ascent',
+      'Declared a UNESCO World Heritage Site as part of the Cape Floral Kingdom'
+    ],
+    
+    whatToDo: [
+      'Take the iconic rotating cable car to the summit for breathtaking 360-degree views of Cape Town and the Atlantic',
+      'Hike the Platteklip Gorge route (2-3 hours up) for a challenging but rewarding climbing experience',
+      'Walk the various trails at the summit exploring the diverse fynbos vegetation',
+      'Watch the sunset from the top, when the city lights start twinkling below',
+      'Spot the rock hyraxes (dassies), small furry mammals that live on the mountain',
+      'Visit Lion\'s Head nearby for an alternative panoramic viewpoint'
+    ],
+    
+    howToGetThere: {
+      uber: 'Recommended from city center (15 min)',
+      bus: 'MyCiti bus routes',
+      car: 'Parking available at Lower Cable Station',
+      walking: 'From city center ~45 min'
+    },
+    
+    tickets: {
+      cable_car: 'R395 (~$21) return',
+      online_discount: 'Book online for discount',
+      hike: 'Free (cable car down R200)',
+      annual_pass: 'R975 (unlimited rides)'
+    },
+    
+    bestTime: {
+      season: 'Oct-April (summer, clearer)',
+      timeOfDay: 'Early morning or late afternoon',
+      avoid: 'Winter (June-Aug) - often cloudy',
+      weather: 'Check wind - cable car closes if too windy'
+    },
+    
+    nearby: [
+      'V&A Waterfront',
+      'Cape Point',
+      'Lion\'s Head',
+      'Camps Bay beach',
+      'Kirstenbosch Botanical Gardens'
+    ],
+    
+    tips: [
+      'Check weather forecast (often cloudy/windy)',
+      'Book cable car online in advance',
+      'Cable car closes if wind >60 km/h',
+      'Bring jacket (10°C cooler at top)',
+      'Sunset slots sell out fast',
+      'If hiking: start early, bring LOTS of water',
+      'Free WiFi at summit',
+      'Restaurant at top (expensive but convenient)'
+    ],
+    
+    accessibility: 'Cable car fully accessible. Hiking NOT accessible',
+    duration: '2-4 hours (including cable car wait)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
-  { id: 'serengeti', name: 'Serengeti National Park', city: 'Arusha', country: 'Tanzania', continent: 'Africa', flag: '🇹🇿', coordinates: { lat: -2.3333, lon: 34.8333 }, category: 'Safari', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Parque_nacional_del_Serengueti', en: 'https://en.wikipedia.org/wiki/Serengeti_National_Park', he: 'https://he.wikipedia.org/wiki/%D7%A1%D7%A8%D7%A0%D7%92%D7%98%D7%99' }, description: '30,000 km² ecosystem famous for Great Migration (2 million animals). Quintessential African safari.', mustKnow: ['30,000 km² savanna', 'Great Migration June-July', '3,000+ lions'], whatToDo: ['Game drive', 'Hot air balloon safari', 'River crossing'], tips: ['Book 6+ months advance', 'Bring binoculars'], prices: { budget: '$150-250/day', medium: '$350-600/day', high: '$1000+/day' }, bestTime: { season: 'June-July (migration)', weather: 'Dry', icon: '🦁' }, avoid: 'April-May (rainy)', accessibility: '4x4 required', duration: '3-5 days', nearby: ['Ngorongoro Crater', 'Zanzibar'], transportation: { flight: 'To Seronera', safari: 'Organized tours' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'serengeti',
+    name: 'Serengeti National Park',
+    city: 'Arusha',
+    country: 'Tanzania',
+    continent: 'Africa',
+    flag: '🇹🇿',
+    coordinates: { lat: -2.3333, lon: 34.8333 },
+    category: 'Nature / Safari',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Parque_nacional_del_Serengueti',
+      en: 'https://en.wikipedia.org/wiki/Serengeti_National_Park'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=VnSLRzu5gPc',
+      en: 'https://www.youtube.com/watch?v=dQ0FFh9fLBQ'
+    },
+    
+    description: '30,000 km² ecosystem famous for Great Migration (2 million animals). Quintessential African safari experience.',
+    
+    mustKnow: [
+      'Covering 30,000 square kilometers, it is one of Africa\'s largest and most famous ecosystems',
+      'Home to the Great Migration, where over 2 million wildebeest, zebras and gazelles move in a circular pattern',
+      'Houses approximately 3,000 lions, the largest concentration of big cats in Africa',
+      'Declared a UNESCO World Heritage Site in 1981, protecting this unique wilderness',
+      'The name "Serengeti" comes from the Maasai word "Siringet" meaning "endless plains"',
+      'Migration timing varies: June-July northern Serengeti, Dec-March southern plains'
+    ],
+    
+    whatToDo: [
+      'Experience early morning and late afternoon game drives when animals are most active',
+      'Take an unforgettable hot air balloon safari at sunrise floating over the plains ($550-600)',
+      'Witness dramatic river crossings during the Great Migration (July-August)',
+      'Visit the Ngorongoro Crater adjacent to the park, often called "Africa\'s Eden"',
+      'Stay in a tented camp inside the park for the authentic safari experience',
+      'Spot the Big Five: lion, leopard, elephant, buffalo and rhino (rhinos are rare)'
+    ],
+    
+    howToGetThere: {
+      flight: 'Fly to Seronera airstrip (central Serengeti)',
+      arusha: '7-8 hours drive from Arusha',
+      mwanza: '4-5 hours from Mwanza',
+      organized: 'Safari tours handle all logistics'
+    },
+    
+    tickets: {
+      park_fee: '$70 per person per day',
+      vehicle: '$40 per vehicle per day',
+      guide: '$20-30 per day',
+      total_safari: '$150-250/day (budget) to $1,000+/day (luxury)',
+      camping: '$50-80/night (public campsites)'
+    },
+    
+    bestTime: {
+      migration: 'June-July (northern Serengeti) or Dec-March (southern plains)',
+      dry_season: 'June-Oct (easier to spot animals)',
+      calving: 'Jan-Feb (thousands of births, dramatic predator action)',
+      avoid: 'April-May (heavy rains, muddy roads)'
+    },
+    
+    nearby: [
+      'Ngorongoro Crater',
+      'Lake Manyara',
+      'Olduvai Gorge',
+      'Zanzibar (post-safari beach)',
+      'Maasai villages'
+    ],
+    
+    tips: [
+      'Book 6-12 months in advance (especially for migration season)',
+      'Bring binoculars and telephoto lens',
+      'Pack neutral-colored clothing (no bright colors)',
+      'Malaria prophylaxis recommended',
+      'Dusty - bring face mask/bandana',
+      'Early morning drives = best animal viewing',
+      '4x4 vehicle essential (not regular car)',
+      'Minimum 3 days to experience properly'
+    ],
+    
+    accessibility: '4x4 vehicles required. NOT wheelchair accessible',
+    duration: '3-7 days (3 minimum recommended)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'opera-sydney', name: 'Sydney Opera House', city: 'Sydney', country: 'Australia', continent: 'Oceania', flag: '🇦🇺', coordinates: { lat: -33.8568, lon: 151.2153 }, category: 'Architecture', wikiLinks: { es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney', en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House', he: 'https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%90%D7%95%D7%A4%D7%A8%D7%94_%D7%A9%D7%9C_%D7%A1%D7%99%D7%93%D7%A0%D7%99' }, description: '1973 architectural masterpiece with iconic sail roof. World\'s most famous performing arts center.', mustKnow: ['Inaugurated 1973', 'Designed by Jørn Utzon', 'UNESCO World Heritage since 2007'], whatToDo: ['Guided tour', 'Attend show', 'Dine at Bennelong'], tips: ['Book shows months ahead', 'Visit during Vivid Sydney'], prices: { budget: 'A$80-150/day', medium: 'A$250-400/day', high: 'A$700+/day' }, bestTime: { season: 'Year-round', weather: 'Mild', icon: '🎭' }, avoid: 'None', accessibility: 'Fully accessible', duration: '2-3 hours', nearby: ['Harbour Bridge', 'The Rocks', 'Circular Quay'], transportation: { ferry: 'Circular Quay', train: 'Circular Quay', bus: 'Multiple routes' }, lastUpdated: '2025-11-20' },
   

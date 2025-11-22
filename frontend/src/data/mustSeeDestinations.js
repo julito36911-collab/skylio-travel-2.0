@@ -1078,6 +1078,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 35.3606, lon: 138.7274 },
     category: 'Naturaleza / Montaña',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monte_Fuji',
+      en: 'https://en.wikipedia.org/wiki/Mount_Fuji',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A4%D7%95%D7%92%27%D7%99'
+    },
+    
     description: 'Montaña sagrada y volcán activo de 3,776m. Símbolo de Japón, perfectamente simétrica, coronada de nieve.',
     
     mustKnow: [

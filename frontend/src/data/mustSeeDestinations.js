@@ -1824,24 +1824,30 @@ export const mustSeeDestinations = [
     coordinates: { lat: -44.6719, lon: 168.6760 },
     category: 'Naturaleza / Fiordo',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Milford_Sound',
+      en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%9C%D7%A4%D7%95%D7%A8%D7%93_%D7%A1%D7%90%D7%95%D7%A0%D7%93'
+    },
+    
     description: 'Fiordo glaciar con acantilados de 1,200m, cascadas y vida marina. Llamado "octava maravilla del mundo" por Rudyard Kipling.',
     
     mustKnow: [
-      'Fiordo excavado por glaciares',
-      'Acantilados hasta 1,200m',
-      'Cascadas permanentes + cientos con lluvia',
-      'Patrimonio UNESCO (Fiordland)',
-      'Lluvias: 200+ días al año',
-      '"Octava maravilla" - Rudyard Kipling'
+      'Es un fiordo espectacular excavado por glaciares durante las eras de hielo hace miles de años',
+      'Sus dramáticos acantilados se elevan verticalmente hasta 1,200 metros directamente desde el agua del fiordo',
+      'Cuenta con cascadas permanentes como Stirling Falls y Bowen Falls, más cientos de cascadas temporales cuando llueve',
+      'Forma parte del Parque Nacional Fiordland, declarado Patrimonio de la Humanidad por la UNESCO',
+      'Recibe más de 200 días de lluvia al año, siendo uno de los lugares más húmedos de Nueva Zelanda',
+      'Fue descrito como la "octava maravilla del mundo" por el famoso escritor Rudyard Kipling tras su visita'
     ],
     
     whatToDo: [
-      'Crucero en fiordo (1.5-2h)',
-      'Kayak en fiordo',
-      'Milford Track (hiking 4 días)',
-      'Vuelo escénico desde Queenstown',
-      'Ver focas, delfines, pingüinos',
-      'Underwater Observatory'
+      'Embárcate en un crucero panorámico de 1.5-2 horas navegando entre acantilados gigantes y cascadas espectaculares',
+      'Rema en kayak por las aguas tranquilas del fiordo para una experiencia más íntima y silenciosa con la naturaleza',
+      'Desafíate con el legendario Milford Track, considerado una de las mejores caminatas del mundo (4 días de trekking)',
+      'Sobrevuela el fiordo en un vuelo escénico desde Queenstown para apreciar la magnificencia desde el aire',
+      'Observa la abundante vida marina incluyendo focas neozelandesas, delfines Héctor y pingüinos de Fiordland',
+      'Visita el Underwater Observatory, un observatorio submarino único que te sumerge 10 metros bajo la superficie'
     ],
     
     howToGetThere: {

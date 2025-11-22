@@ -118,23 +118,30 @@ CRITICAL INSTRUCTIONS:
         
         user_message = f"""{query.destination}
 
-Important instructions:
+CRITICAL: Read the user's query carefully and respond accordingly:
+
+**OPTION A - If the query is SPECIFIC** (like "nightlife in...", "what to do at night in...", "vegan restaurants in...", "budget hotels in...", "activities with kids in..."):
+→ Answer ONLY about what they asked
+→ Focus EXCLUSIVELY on their specific question
+→ Do NOT give general city information unless asked
+→ Be detailed about the specific topic they want
+
+**OPTION B - If the query is JUST A CITY NAME** (like "Paris", "Tokyo", "Barcelona"):
+→ Provide COMPREHENSIVE travel information
+→ Include these sections:
+   1. Main attractions
+   2. Airlines and airports (which airlines fly there, main airports, codes)
+   3. Accommodation options (with prices)
+   4. Restaurants/food recommendations (with prices)
+   5. Practical tips
+   6. Best time to visit
+
+General instructions for BOTH options:
 - Respond in {language_name} with the SAME level of detail regardless of language
-- ALWAYS include a section about airlines that fly to this destination (major international carriers, low-cost airlines, airports)
-- Include specific names (hotels, restaurants, attractions)
-- Mention approximate prices when relevant
+- Include specific names and approximate prices when relevant
 - Give concrete recommendations with practical details
 - Use organized sections with clear headers
-- Be specific and complete, not generic
-- Keep similar length and depth in both Spanish and English
-
-If the user asks for general destination information, your response should include these sections:
-1. Main attractions
-2. **Airlines and airports** (which airlines fly there, main airports)
-3. Accommodation options
-4. Restaurants/food
-5. Practical tips
-6. Best time to visit"""
+- Be specific and complete, not generic"""
         
         # Use same max_tokens for both languages to ensure similar length responses
         max_tokens = 1800

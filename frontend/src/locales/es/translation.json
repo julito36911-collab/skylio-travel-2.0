@@ -208,6 +208,10 @@
     "activeRestrictions": "Restricciones Activas",
     "trafficRestrictions": "Restricciones de tráfico en",
     "city": "ciudad",
+    "aiSearch": "Buscar con IA",
+    "aiSearching": "Buscando...",
+    "aiEmptyError": "Por favor escribe un destino para buscar",
+    "aiError": "Error al obtener información del asistente de IA. Por favor intenta nuevamente.",
     "cities": "ciudades"
   },
   "cities": {

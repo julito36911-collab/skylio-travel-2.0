@@ -222,7 +222,13 @@ export const countriesGuide = [
           ]
         },
         
-        topAttractions: ['מגדל אייפל', 'הלובר', 'שער הניצחון', 'נוטר-דאם', 'סקרה-קר'],
+        topAttractions: [
+          { name: 'מגדל אייפל', wiki: 'https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%93%D7%9C_%D7%90%D7%99%D7%99%D7%A4%D7%9C' },
+          { name: 'הלובר', wiki: 'https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%96%D7%99%D7%90%D7%95%D7%9F_%D7%94%D7%9C%D7%95%D7%91%D7%A8' },
+          { name: 'שער הניצחון', wiki: 'https://he.wikipedia.org/wiki/%D7%A9%D7%A2%D7%A8_%D7%94%D7%A0%D7%99%D7%A6%D7%97%D7%95%D7%9F_(%D7%A4%D7%A8%D7%99%D7%96)' },
+          { name: 'נוטר-דאם', wiki: 'https://he.wikipedia.org/wiki/%D7%A0%D7%95%D7%98%D7%A8-%D7%93%D7%90%D7%9D_%D7%93%D7%94_%D7%A4%D7%90%D7%A8%D7%99' },
+          { name: 'סקרה-קר', wiki: 'https://he.wikipedia.org/wiki/%D7%91%D7%96%D7%99%D7%9C%D7%99%D7%A7%D7%AA_%D7%94%D7%9C%D7%91_%D7%94%D7%A7%D7%93%D7%95%D7%A9' }
+        ],
         
         neighborhoods: [
           '1 - הלובר (מוזיאונים)',

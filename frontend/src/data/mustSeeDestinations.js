@@ -1033,21 +1033,21 @@ export const mustSeeDestinations = [
     description: 'Montaña sagrada y volcán activo de 3,776m. Símbolo de Japón, perfectamente simétrica, coronada de nieve.',
     
     mustKnow: [
-      'Altura: 3,776m (montaña más alta de Japón)',
-      'Volcán activo (última erupción 1707)',
-      'Patrimonio UNESCO desde 2013',
-      'Sagrada en sintoísmo y budismo',
-      'Escalable solo julio-agosto',
-      'Visible desde Tokio (100 km) en día claro'
+      'Con sus 3,776 metros de altitud, es la montaña más alta de todo Japón y su símbolo más reconocible',
+      'Es un volcán activo que tuvo su última erupción en 1707, aunque actualmente se considera de baja actividad',
+      'Fue inscrito como Patrimonio de la Humanidad por la UNESCO en 2013 como "sitio sagrado y fuente de inspiración artística"',
+      'Es considerado sagrado tanto en el sintoísmo como en el budismo, siendo un importante lugar de peregrinación',
+      'La escalada oficial solo está permitida durante julio y agosto cuando las condiciones climáticas son seguras',
+      'En días despejados es visible desde Tokio, a 100 kilómetros de distancia, creando una vista espectacular'
     ],
     
     whatToDo: [
-      'Escalada hasta la cima (julio-agosto)',
-      'Amanecer desde cumbre (Goraiko)',
-      '5ta estación (2,305m - accesible auto)',
-      'Lagos Fuji Five (Kawaguchi más popular)',
-      'Pagoda Chureito (foto icónica con Fuji)',
-      'Aokigahara Forest (bosque misterioso)'
+      'Realiza la escalada hasta la cima durante la temporada oficial de julio a agosto para vivir una experiencia única',
+      'Presencia el amanecer desde la cumbre, conocido como "Goraiko", considerado una experiencia espiritual inolvidable',
+      'Visita la 5ta estación ubicada a 2,305 metros de altura, accesible en auto y punto de partida de la mayoría de escaladas',
+      'Explora los Lagos Fuji Five rodeando la montaña, siendo el Lago Kawaguchiko el más popular y fotogénico',
+      'Captura la foto icónica desde la Pagoda Chureito con el Monte Fuji majestuosamente de fondo',
+      'Aventúrate en el misterioso Bosque Aokigahara, conocido por su denso follaje y ambiente único'
     ],
     
     howToGetThere: {

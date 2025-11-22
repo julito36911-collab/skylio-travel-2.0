@@ -183,21 +183,21 @@ export const mustSeeDestinations = [
     description: 'Obra maestra de Antoni Gaudí iniciada en 1882 y aún en construcción. Basílica modernista única en el mundo con fachadas surrealistas.',
     
     mustKnow: [
-      'En construcción desde 1882 (143+ años)',
-      'Diseñada por Antoni Gaudí (1852-1926)',
-      'Completación estimada: 2026-2030',
-      'Patrimonio UNESCO desde 1984',
-      '18 torres cuando esté completa (12 apóstoles + 4 evangelistas + María + Jesús)',
-      'Gaudí está enterrado en la cripta'
+      'Esta obra maestra lleva en construcción continua desde 1882, acumulando ya más de 143 años de trabajo',
+      'Fue diseñada por el genial arquitecto modernista Antoni Gaudí, quien dedicó los últimos 15 años de su vida exclusivamente a este proyecto',
+      'Se estima que la basílica estará completamente terminada entre 2026 y 2030, coincidiendo con el centenario de la muerte de Gaudí',
+      'Ha sido reconocida como Patrimonio de la Humanidad por la UNESCO desde 1984, incluso estando aún inacabada',
+      'Cuando esté completa contará con 18 torres monumentales: 12 representando a los apóstoles, 4 a los evangelistas, una a la Virgen María y la más alta a Jesucristo',
+      'El propio Antoni Gaudí descansa eternamente enterrado en la cripta de su obra más ambiciosa'
     ],
     
     whatToDo: [
-      'Visitar interior (vitrales impresionantes)',
-      'Subir a las torres (ascensor + escaleras)',
-      'Ver fachada Natividad (lado este - Gaudí)',
-      'Ver fachada Pasión (oeste - más moderna)',
-      'Museo en sótano (maquetas y historia)',
-      'Misa dominical con coro (gratis, llega temprano)'
+      'Maravíllate con el interior de la basílica y sus espectaculares vitrales que crean un juego de luces único en el mundo',
+      'Sube a una de las torres utilizando el ascensor y las escaleras para disfrutar de vistas panorámicas de Barcelona',
+      'Admira la fachada de la Natividad en el lado este, la única completada bajo la supervisión directa de Gaudí',
+      'Observa la fachada de la Pasión en el lado oeste, diseñada con un estilo más angular y moderno',
+      'Visita el museo ubicado en el sótano donde encontrarás maquetas originales y documentación histórica del proyecto',
+      'Si es domingo, intenta asistir a la misa con coro que es gratuita, aunque debes llegar temprano para conseguir lugar'
     ],
     
     howToGetThere: {

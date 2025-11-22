@@ -585,6 +585,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: -25.6953, lon: -54.4367 },
     category: 'Naturaleza',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA',
+      en: 'https://en.wikipedia.org/wiki/Iguazu_Falls',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%90%D7%99%D7%92%D7%95%D7%90%D7%A1%D7%95'
+    },
+    
     description: '275 cascadas en frontera Argentina-Brasil. Más grandes que Niágara, más anchas que Victoria. "Garganta del Diablo" es la más impresionante.',
     
     mustKnow: [

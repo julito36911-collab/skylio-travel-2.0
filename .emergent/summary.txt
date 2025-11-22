@@ -1,92 +1,78 @@
 <analysis>
-The trajectory details the iterative development of the Skylio Hub React application, guided by a Spanish-speaking user's requests. The AI engineer started by migrating a Vite project and implementing a multi-language Content and Guides section using static data. A key architectural decision was made mid-development: shifting from a single data source with i18n keys for content to creating separate, fully translated data files for each language (e.g., , ) to handle large blocks of text, as requested by the user.
+The trajectory documents an extensive, iterative development and debugging process for the Skylio Hub React application. The work was driven by a Spanish-speaking user's requests, starting with a bug fix and evolving into major feature enhancements and architectural changes.
 
-Development followed a clear pattern:
-1.  The user requests a new feature (e.g., country guides, parking finder, city transport info).
-2.  The AI engineer creates a plan, often proposing an incremental approach (build UI for a few items first).
-3.  The engineer implements the feature by creating/modifying data files, React components (primarily within the monolithic ), and adding translation keys.
-4.  The user provides feedback, often identifying bugs or missing translations (e.g., hardcoded labels, incorrect Google Maps URL).
-5.  The engineer debugs and fixes the issues.
+A critical bug involving a non-appearing  was traced to a CSS  stacking context issue, which required significant debugging (including failed attempts with ) before being resolved by using a very high z-index value ().
 
-The most recent work involves nesting detailed City Guides (with public transport info) within the Country Guides. An issue arose when attempting to display the city details modal, which the user flagged with a screenshot.
+Subsequently, development focused on content enrichment. At the user's request, the AI engineer implemented Wikipedia and YouTube links for destinations. A major user request was to make the descriptive text more narrative and engaging, leading to a massive, manual content update across all data files.
 
-The user's primary language is Spanish. The next agent must respond in Spanish.
+A significant architectural shift occurred when the user reported that content remained in Spanish even when the UI language was changed to English. The engineer correctly diagnosed that content was stored in a single-language file (). The solution was to create separate, language-specific data files (e.g., , ) and modify the main component () to dynamically import the correct file based on the selected language.
+
+The most recent task was to fix a crash (Cannot convert undefined or null to object) that occurred after this architectural change, which was caused by an incomplete English translation file. The user has confirmed the error persists.
+
+The user's primary language is **Spanish**. The next agent **must** respond in Spanish.
 </analysis>
-
 <product_requirements>
-The project, Skylio Hub, is a single-page travel affiliate application designed to be a one-stop-shop for travelers.
+The Skylio Hub project is a travel affiliate aggregator designed as a comprehensive portal for travelers. It aims to provide a unified interface for various travel services and detailed, multi-language travel guides.
 
 **Core Requirements:**
-*   **Affiliate Integration:** Consolidate multiple travel affiliate partners (e.g., Aviasales, Expedia, Hotels.com) into a unified interface.
-*   **Multi-language Support:** The application must be fully functional and translated into Spanish, English, and Hebrew, including Right-to-Left (RTL) support for Hebrew.
+*   **Multi-language Support:** The entire application, including UI and dynamic content, must be fully functional and correctly translated into Spanish, English, and Hebrew.
+*   **Content-Rich Guides:** The application features several guide sections, with an emphasis on providing engaging, narrative, and practical information.
 
-**Implemented & In-Progress Features:**
-*   **Main Dashboard:** Features three primary partners and groups the rest into collapsible accordions.
-*   **News Section:** Displays travel news from NewsAPI, with a Demo Mode using static data for local development.
-*   **Content & Guides Section:** A major feature built as a modal () containing multiple guides:
-    *   **Must-See Destinations:** A guide to iconic global landmarks.
-    *   **Driving Restrictions:** A guide detailing traffic zones (LEZ, ZTL) in major cities, grouped by continent and country.
-    *   **Country Guides:** Detailed information on the 35 most touristic countries, with content fully translated in language-specific data files.
-    *   **City Guides (In Progress):** Nested within country guides, this section will provide deep dives into major cities, with a focus on detailed public transport information, including airport-to-city transit options, costs, and maps.
-*   **Parking Finder:** A standalone utility on the main page that generates a direct Google Maps search link to find reliable parking near a user-specified destination, without requiring a Google Maps API key.
+**Implemented Features:**
+*   **Guides Hub:** A modal containing:
+    *   **Must-See Destinations:** A guide to 25 iconic global landmarks. This section has been heavily modified to include enriched, narrative descriptions and direct links to Wikipedia and YouTube.
+    *   **Country & City Guides:** Detailed information on countries, with nested city guides. The Paris city guide is the prototype, featuring extensive public transport information.
+*   **Internationalization:** The architecture has been refactored to support fully translated content by loading language-specific data files (e.g., ).
+
+The current focus is on perfecting the content and ensuring the multi-language functionality is seamless and bug-free.
 </product_requirements>
-
 <key_technical_concepts>
-- **Framework:** React (Create React App).
-- **Styling:** Tailwind CSS for a Glassmorphism dark mode UI.
-- **Internationalization (i18n):**  for UI labels. A key pattern is using separate, language-specific data files (e.g., , ) for large content blocks.
-- **Data Handling:** Static JavaScript files in  serve as a database for all guide content.
-- **URL Generation:** Using formatted strings to create deep links for external services like Google Maps, avoiding API key requirements.
+- **Framework:** React (Vite/Create React App)
+- **Styling:** Tailwind CSS, with a focus on Glassmorphism UI and z-index management for modals.
+- **Internationalization (i18n):**
+    -  for UI string translations ( files).
+    - **Language-specific static data files** (e.g., , ) for large, translated content blocks, loaded dynamically based on the active language.
+- **Component Architecture:** A large, monolithic component () that manages state and rendering for multiple modals and content sections.
+- **DOM Manipulation:**  was attempted for modal issues, highlighting awareness of DOM stacking context.
 </key_technical_concepts>
-
 <code_architecture>
-The application is a standard Create React App project. All recent feature development has been concentrated on the frontend, particularly within a single large component that acts as a hub for all guide-related content.
+The application is a frontend-focused React project. The core logic for the guides is centralized in a single large component, which dynamically loads content from language-specific data files.
 
 **Directory Structure:**
 
 
-**Key File Analysis:**
 - ****
-  - **Importance:** This has become the core component for the Content and Guides feature. It manages its own state for active tabs (Destinations, Driving, Countries), search queries, and the display of multiple modals (Destination details, Driving details, Country details, and now City details). It also contains the data transformation logic for the driving restrictions guide.
-  - **Changes:** This file has grown significantly. It was created to house the guides and has been repeatedly modified to add new tabs, grids of cards, and detail modals for each new guide type (Countries, Cities). It now imports data from multiple language-specific files and uses the  language to select the correct data source. It contains the logic for rendering , , and the new .
-
-- **** (and , )
-  - **Importance:** These files represent a key architectural shift to support fully translated content. They hold an array of country objects, containing details like visa info, currency, culture, etc.
-  - **Changes:** Created to solve the multi-language content requirement. Most recently, the structure of the objects within  was modified to include a nested  array, which contains detailed objects for each city, including a comprehensive  section.
+    - **Importance:** This is the central hub for the entire Content and Guides feature. It manages state for active tabs, search, and all modals (, , ). It contains the logic for rendering all guides.
+    - **Summary of Changes:** This file was heavily modified to support multi-language content. It was refactored from loading a single data source to dynamically importing the correct language file ( or ) based on the  state. It also contains the  component, which is the source of the current bug. The fix will require adding conditional rendering checks within this file.
 
 - ****
-  - **Importance:** The main application entry point. It manages the overall layout and the visibility of top-level modals.
-  - **Changes:** It was modified to add the main Guides button and the new  component directly onto the main page.
+    - **Importance:** This file contains the complete, enriched, and narrative content for all 25 Must-See Destinations in Spanish. It serves as the source of truth for Spanish content.
+    - **Summary of Changes:** Originally , it was renamed to  as part of the internationalization refactor. It has been extensively updated with narrative text and links to Wikipedia and YouTube.
 
 - ****
-  - **Importance:** A new, self-contained component that provides the Find Safe Parking feature.
-  - **Changes:** Created from scratch. Its internal logic for generating the Google Maps URL was debugged and refactored multiple times to fix a user-reported bug and ensure the generated link works correctly.
+    - **Importance:** This file contains the English translations for the Must-See Destinations. Its incompleteness is the cause of the current bug.
+    - **Summary of Changes:** Created to support English content. It currently contains all 25 destinations, but only the first 10 have a complete data structure with enriched text. The remaining 15 have a simplified structure, lacking fields like  and , which causes the application to crash when their modals are opened.
 
 - ****
-  - **Importance:** These files are essential for the app's multi-language capability.
-  - **Changes:** They have been extensively updated with new keys to support all the UI labels for the new features, including the parking finder, country guides, city guides, and all the labels inside the various modals (e.g., Visa Requirements, Public Transport, Airport Connections). This was a recurring task after user feedback pointed out hardcoded text.
+    - **Importance:** This file configures the  library, setting the fallback language and detection options (e.g., from ). It is central to the app's language functionality.
 </code_architecture>
-
 <pending_tasks>
-- Fix the bug preventing the  from displaying correctly when a city is clicked from within the .
-- Complete data entry for the remaining ~24 countries in all three language files (, , ).
-- Populate the detailed city/transport guides for all major cities within each country.
-- Fulfill earlier requests to integrate real APIs for weather (OpenWeatherMap) and currency conversion (ExchangeRate-API) once the static content phase is complete.
+- Complete the translation and content enrichment for the remaining 15 destinations in  to match the detail of the first 10.
+- Create  and translate all 25 destinations into Hebrew.
+- Find and add YouTube links (English & Spanish) for the remaining 24 Must-See Destinations.
+- Populate the detailed city/transport guides for all major cities within the 35 countries.
+- Translate the Country Guides content into English and Hebrew.
 </pending_tasks>
-
 <current_work>
-The immediate task is to implement the City Guides feature, which nests detailed city information within each country. The user specifically requested that each city guide contain a thorough section on public transportation, including detailed instructions and prices for getting from the airport(s) to the city center.
+The immediate task is to fix a critical runtime error reported by the user. The error, Cannot convert undefined or null to object, occurs when the application language is set to English and the user clicks on a Must-See Destination from #11 to #25.
 
-To achieve this, the following steps were taken:
-1.  The data structure in  was updated. A  array was added to the France country object. This array contains a detailed object for Paris, which includes a  property with comprehensive information on airport connections (RER B, RoissyBus), ticket purchasing, and potential scams.
-2.  The  component was significantly modified:
-    *   Logic was added to the  to render a list of  components if the country has a  array.
-    *   A new  component was created inside  to display the detailed city information.
-    *   State management (, ) was added to control the visibility of the new .
+**Root Cause Analysis:**
+The bug was introduced after refactoring the content into language-specific files. The English data file, , was populated with all 25 destinations to prevent a previous  error. However, only the first 10 destinations have the full data structure with all fields (like , , , etc.). The remaining 15 have a simplified structure, missing these optional fields.
 
-The work stopped immediately after the user clicked on the Paris city badge from within the France country modal. The user uploaded a screenshot and a one-word message, hay, indicating that the expected  did not appear correctly, and there is a bug to be fixed.
+The  component in  attempts to render these fields without checking if they exist, causing a crash when it tries to access properties of a non-existent object (e.g.,  when  is ).
+
+The user has confirmed the error is still occurring (sigue saliendo el error). The last action planned by the previous engineer was to add conditional rendering logic within the JSX of the  to safely handle these missing data fields.
 </current_work>
-
 <optional_next_step>
-Analyze the user's screenshot () and debug the  component to fix the issue preventing the  from opening correctly.
+Fix the crash by adding conditional rendering checks inside the  component in  to ensure it only tries to render sections like How to Get There or Tickets if the corresponding data exists in the  object.
 </optional_next_step>

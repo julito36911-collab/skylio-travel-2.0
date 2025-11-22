@@ -751,6 +751,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: -22.9519, lon: -43.2105 },
     category: 'Monumento',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cristo_Redentor',
+      en: 'https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%99%D7%97_%D7%94%D7%9E%D7%A9%D7%97%D7%A8%D7%A8'
+    },
+    
     description: 'Estatua Art Deco de 30m de Jesús en cima del Cerro Corcovado (710m). Símbolo de Brasil y una de las 7 Maravillas del Mundo Moderno.',
     
     mustKnow: [

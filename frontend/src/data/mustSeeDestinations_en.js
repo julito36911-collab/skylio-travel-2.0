@@ -1577,8 +1577,94 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'gran-barrera-coral', name: 'Great Barrier Reef', city: 'Cairns', country: 'Australia', continent: 'Oceania', flag: '🇦🇺', coordinates: { lat: -18.2871, lon: 147.6992 }, category: 'Marine', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral', en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%AA_%D7%94%D7%92%D7%93%D7%95%D7%9C%D7%94' }, description: 'World\'s largest reef system. 2,300 km long, visible from space. Heritage in danger.', mustKnow: ['2,300 km length', 'Largest reef system', 'Visible from space'], whatToDo: ['Snorkeling', 'Scuba diving', 'Helicopter flight'], tips: ['Book boat tours', 'Protect from sun'], prices: { budget: 'A$100-200/day', medium: 'A$300-500/day', high: 'A$800+/day' }, bestTime: { season: 'June-Oct', weather: 'Dry', icon: '🐠' }, avoid: 'Jan-March (jellyfish season)', accessibility: 'Boat accessible', duration: '1-2 days', nearby: ['Cairns', 'Whitsundays', 'Port Douglas'], transportation: { boat: 'Day tours from Cairns', flight: 'Scenic flights' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'gran-barrera-coral',
+    name: 'Great Barrier Reef',
+    city: 'Cairns / Port Douglas',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -18.2871, lon: 147.6992 },
+    category: 'Marine / Nature',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral',
+      en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=S1WWnZbTQko',
+      en: 'https://www.youtube.com/watch?v=SzcD48ew7B0'
+    },
+    
+    description: 'World\'s largest reef system. 2,300 km long, visible from space. UNESCO Heritage in danger from climate change.',
+    
+    mustKnow: [
+      'Stretching over 2,300 kilometers along Queensland\'s coast, it is the largest living structure on Earth',
+      'Comprises over 2,900 individual reefs and 900 islands formed over millions of years',
+      'It is the only living thing visible from space, though this is actually disputed',
+      'Home to 1,500 fish species, 400 coral types, 4,000 mollusk species, and 240 bird species',
+      'Declared a UNESCO World Heritage Site in 1981, but now listed as "in danger" due to coral bleaching',
+      'Climate change has caused massive coral bleaching events in 2016, 2017, 2020, and 2022'
+    ],
+    
+    whatToDo: [
+      'Snorkel among vibrant coral gardens teeming with tropical fish in crystal-clear waters',
+      'Scuba dive to explore deeper reefs, walls, and swim with sea turtles, rays and reef sharks',
+      'Take a helicopter or seaplane flight for breathtaking aerial views of the reef',
+      'Visit the Outer Reef for pristine coral and better visibility (2 hours by boat)',
+      'Try a glass-bottom boat or semi-submersible if you don\'t want to get wet',
+      'Explore the Low Isles, sand cays surrounded by shallow reefs perfect for beginners'
+    ],
+    
+    howToGetThere: {
+      base: 'Cairns or Port Douglas (main gateways)',
+      boats: 'Day trips from Cairns marina',
+      whitsundays: 'Alternative access from Airlie Beach',
+      liveaboard: 'Multi-day boat trips'
+    },
+    
+    tickets: {
+      day_trip: 'A$180-250 (full day, includes lunch)',
+      diving: 'A$80-120 per dive (extra)',
+      helicopter: 'A$250+ (scenic flight)',
+      liveaboard: 'A$600-1,500 (2-3 days)',
+      reef_tax: 'A$7 Environmental Management Charge (included)'
+    },
+    
+    bestTime: {
+      season: 'June-October (dry season, calm seas)',
+      visibility: 'Sept-Nov (best underwater visibility)',
+      avoid: 'Jan-March (stinger jellyfish season, need stinger suit)',
+      weather: 'Tropical - warm year-round but humid summer'
+    },
+    
+    nearby: [
+      'Cairns city and beaches',
+      'Daintree Rainforest',
+      'Whitsunday Islands',
+      'Port Douglas',
+      'Green Island'
+    ],
+    
+    tips: [
+      'Book Outer Reef tours (better coral, less crowded)',
+      'Inner reef more degraded from tourism',
+      'Stinger suits mandatory Nov-May (jellyfish)',
+      'Bring reef-safe sunscreen (protect coral)',
+      'Seasickness common (take medication)',
+      'Underwater camera rental available',
+      'Get PADI certified before trip (saves time)',
+      '2-3 days ideal (try different sites)'
+    ],
+    
+    accessibility: 'Boats accessible. Underwater NOT accessible without assistance',
+    duration: '1-3 days (full day minimum)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'milford-sound', name: 'Milford Sound', city: 'Fiordland', country: 'New Zealand', continent: 'Oceania', flag: '🇳🇿', coordinates: { lat: -44.6719, lon: 168.6760 }, category: 'Fjord', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Milford_Sound', en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%9C%D7%A4%D7%95%D7%A8%D7%93_%D7%A1%D7%90%D7%95%D7%A0%D7%93' }, description: 'Glacier fjord with 1,200m cliffs, waterfalls and marine life. "8th wonder of the world".', mustKnow: ['Glacier-carved fjord', '1,200m cliffs', '200+ rain days/year'], whatToDo: ['Cruise (1.5-2h)', 'Kayaking', 'Milford Track hike'], tips: ['Book ahead', 'Expect rain'], prices: { budget: 'NZ$80-150/day', medium: 'NZ$250-400/day', high: 'NZ$700+/day' }, bestTime: { season: 'Oct-April', weather: 'Variable', icon: '🌧️' }, avoid: 'Winter (roads may close)', accessibility: 'Cruise accessible', duration: '1 day trip', nearby: ['Queenstown', 'Te Anau'], transportation: { car: '4h from Queenstown', bus: 'Tour buses', flight: 'Scenic flights' }, lastUpdated: '2025-11-20' },
   

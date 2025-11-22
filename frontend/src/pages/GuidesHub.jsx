@@ -280,6 +280,177 @@ function GuidesHub() {
   );
 }
 
+// Componente para el Asistente de IA
+function AIAssistantTab() {
+  const { t } = useTranslation();
+  const [aiQuery, setAiQuery] = useState('');
+  const [aiResponse, setAiResponse] = useState('');
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
+
+  const handleAISearch = async () => {
+    if (!aiQuery.trim()) {
+      setAiError(t('guides.aiEmptyError', 'Por favor escribe un destino para buscar'));
+      return;
+    }
+
+    setAiLoading(true);
+    setAiError('');
+    setAiResponse('');
+
+    try {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${backendUrl}/api/travel-assistant`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ destination: aiQuery }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Error al conectar con el asistente de IA');
+      }
+
+      const data = await response.json();
+      setAiResponse(data.response);
+    } catch (error) {
+      console.error('AI Error:', error);
+      setAiError(error.message || t('guides.aiError', 'Error al obtener información del asistente de IA. Por favor intenta nuevamente.'));
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <span className="text-6xl">✨</span>
+          <h2 className="text-4xl font-bold text-white">
+            {t('guides.aiAssistant', 'Asistente de Viajes IA')}
+          </h2>
+        </div>
+        <p className="text-xl text-gray-300 mb-6">
+          {t('guides.aiDescription', 'Pregunta sobre cualquier destino del mundo y obtén información detallada')}
+        </p>
+      </div>
+
+      {/* Search Section */}
+      <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl p-8 border border-purple-500/20 mb-8">
+        <div className="flex flex-col gap-4">
+          <textarea
+            placeholder={t('guides.aiPlaceholder', 'Ejemplo: "Cuéntame sobre Tokio, qué ver, dónde comer, cómo moverse..." o "Planifica 3 días en París"')}
+            value={aiQuery}
+            onChange={(e) => setAiQuery(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && !e.shiftKey && (e.preventDefault(), handleAISearch())}
+            className="w-full px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none h-32"
+            rows={4}
+          />
+          <button
+            onClick={handleAISearch}
+            disabled={aiLoading || !aiQuery.trim()}
+            className="self-center px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold flex items-center gap-3 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl text-lg"
+          >
+            <span className="text-2xl">✨</span>
+            <span>{aiLoading ? t('guides.aiSearching', 'Generando respuesta...') : t('guides.aiSearch', 'Consultar Asistente IA')}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Loading State */}
+      {aiLoading && (
+        <div className="bg-white/5 rounded-3xl p-8 border border-white/10 mb-8">
+          <div className="flex flex-col items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500 mb-4"></div>
+            <p className="text-white/80 text-lg text-center">
+              {t('guides.aiGenerating', 'Generando información completa...')}
+            </p>
+            <p className="text-white/60 text-sm mt-2 text-center">
+              {t('guides.aiWait', 'Esto puede tomar 20-30 segundos')}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Error State */}
+      {aiError && (
+        <div className="bg-red-500/20 border border-red-500/50 rounded-3xl p-8 mb-8">
+          <div className="flex items-start gap-4">
+            <span className="text-4xl">⚠️</span>
+            <div>
+              <h3 className="text-white font-semibold mb-2 text-xl">Error</h3>
+              <p className="text-white/80 mb-4">{aiError}</p>
+              {aiError.includes('HUGGINGFACE_API_KEY') && (
+                <div className="bg-white/5 rounded-2xl p-4">
+                  <p className="text-white/70 text-sm mb-2">Para configurar tu API key:</p>
+                  <ol className="text-white/60 text-sm space-y-1 list-decimal list-inside">
+                    <li>Ve a <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">huggingface.co/settings/tokens</a></li>
+                    <li>Crea un token nuevo (es gratis)</li>
+                    <li>Agrega HUGGINGFACE_API_KEY="tu_token" en el archivo /app/backend/.env</li>
+                    <li>Reinicia el backend: sudo supervisorctl restart backend</li>
+                  </ol>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Response */}
+      {aiResponse && !aiLoading && (
+        <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-3xl">🤖</span>
+            <h3 className="text-2xl font-bold text-white">
+              {t('guides.aiResponse', 'Respuesta del Asistente')}
+            </h3>
+          </div>
+          <div className="prose prose-invert max-w-none">
+            <div className="text-white/90 whitespace-pre-wrap leading-relaxed space-y-4">
+              {aiResponse.split('\n\n').map((paragraph, idx) => (
+                <p key={idx} className="text-white/80 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Examples */}
+      {!aiResponse && !aiLoading && !aiError && (
+        <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
+          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span>💡</span>
+            {t('guides.aiExamples', 'Ejemplos de consultas')}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              t('guides.aiExample1', '¿Qué ver en 3 días en Roma?'),
+              t('guides.aiExample2', 'Mejores restaurantes en Tokio'),
+              t('guides.aiExample3', 'Cómo moverse por Londres'),
+              t('guides.aiExample4', 'Presupuesto para una semana en Tailandia'),
+              t('guides.aiExample5', 'Qué hacer en Nueva York en invierno'),
+              t('guides.aiExample6', 'Guía completa de Machu Picchu')
+            ].map((example, idx) => (
+              <button
+                key={idx}
+                onClick={() => setAiQuery(example)}
+                className="text-left p-4 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 hover:border-purple-500/30 transition-all group"
+              >
+                <p className="text-white/80 group-hover:text-white">"{example}"</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // Componente para mostrar los destinos en grid
 function DestinationsGrid({ destinations }) {
   const { t } = useTranslation();

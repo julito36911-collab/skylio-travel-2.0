@@ -954,21 +954,21 @@ export const mustSeeDestinations = [
     description: 'Complejo de templos jemer del siglo XII. El monumento religioso más grande del mundo, símbolo de Camboya.',
     
     mustKnow: [
-      'Construido siglo XII por rey Suryavarman II',
-      'Dedicado a dios Vishnu',
-      'Monumento religioso MÁS GRANDE del mundo',
-      'Patrimonio UNESCO desde 1992',
-      '400+ templos en complejo Angkor',
-      'Mejor ejemplo de arquitectura jemer'
+      'Fue construido en el siglo XII bajo el reinado del rey Suryavarman II como su templo estatal y capital',
+      'Originalmente estaba dedicado al dios hindú Vishnu, aunque posteriormente se convirtió en templo budista',
+      'Es el monumento religioso MÁS GRANDE del mundo, cubriendo una superficie de aproximadamente 162 hectáreas',
+      'Declarado Patrimonio de la Humanidad por la UNESCO en 1992, siendo el símbolo nacional de Camboya',
+      'El complejo arqueológico de Angkor contiene más de 400 templos distribuidos en un área extensa',
+      'Representa el mejor ejemplo conservado de la arquitectura jemer clásica y su perfección estética'
     ],
     
     whatToDo: [
-      'Amanecer en Angkor Wat (ICÓNICO)',
-      'Angkor Thom y Bayon (caras gigantes)',
-      'Ta Prohm (templo con árboles, Tomb Raider)',
-      'Banteay Srei (tallas detalladas)',
-      'Circuito pequeño (1 día)',
-      'Circuito grande (2-3 días)'
+      'Presencia el amanecer en Angkor Wat reflejándose en el estanque frontal, una experiencia absolutamente ICÓNICA e imperdible',
+      'Explora Angkor Thom y el templo Bayon con sus 216 enigmáticas caras gigantes esculpidas mirándote desde todas direcciones',
+      'Visita Ta Prohm, el místico templo abrazado por enormes raíces de árboles centenarios, famoso por aparecer en Tomb Raider',
+      'Descubre Banteay Srei, conocido por sus extraordinarias tallas en piedra arenisca rosa de increíble detalle',
+      'Realiza el circuito pequeño si solo tienes 1 día para ver los templos más importantes',
+      'Dedica 2-3 días al circuito grande si quieres explorar el complejo completo con mayor profundidad'
     ],
     
     howToGetThere: {

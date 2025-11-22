@@ -19,6 +19,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%93%D7%9C_%D7%90%D7%99%D7%99%D7%A4%D7%9C'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=EkUeSZ8jyws',
+      en: 'https://www.youtube.com/watch?v=CVujfJHYygw'
+    },
+    
     description: 'Icono mundial de París, la "Dama de Hierro" de 330m de altura construida en 1889 para la Exposición Universal.',
     
     mustKnow: [

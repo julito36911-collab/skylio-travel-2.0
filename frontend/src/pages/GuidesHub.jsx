@@ -197,6 +197,17 @@ function GuidesHub() {
             🏳️ {t('guides.countries', 'Países')}
           </button>
           <button
+            onClick={() => { setActiveTab('aiassistant'); setSelectedContinent('all'); }}
+            className={`px-6 py-3 rounded-2xl font-semibold transition-all flex items-center gap-2 ${
+              activeTab === 'aiassistant'
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20'
+            }`}
+          >
+            <span>✨</span>
+            {t('guides.aiAssistant', 'Asistente IA')}
+          </button>
+          <button
             onClick={() => { setActiveTab('driving'); setSelectedContinent('all'); }}
             className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
               activeTab === 'driving'

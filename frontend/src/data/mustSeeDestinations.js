@@ -834,6 +834,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 27.1751, lon: 78.0421 },
     category: 'Monumento Histórico',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Taj_Mahal',
+      en: 'https://en.wikipedia.org/wiki/Taj_Mahal',
+      he: 'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%92%27_%D7%9E%D7%90%D7%94%D7%9C'
+    },
+    
     description: 'Mausoleo de mármol blanco construido 1632-1653 por emperador Shah Jahan para su esposa Mumtaz Mahal. Obra maestra del arte mogol.',
     
     mustKnow: [

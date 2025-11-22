@@ -878,21 +878,21 @@ export const mustSeeDestinations = [
     description: 'Sistema de fortificaciones de 21,000 km construido desde siglo VII a.C. hasta siglo XVII. La estructura humana más larga del mundo.',
     
     mustKnow: [
-      'Más de 21,000 km de longitud total',
-      'Construida durante 2,000+ años',
-      'Dinastía Ming (1368-1644) construyó mayoría actual',
-      'Patrimonio UNESCO desde 1987',
-      'No visible desde el espacio (mito)',
-      'Secciones más visitadas cerca de Pekín'
+      'Se extiende por más de 21,000 kilómetros a través del norte de China, siendo la estructura humana más extensa jamás construida',
+      'Su construcción tomó más de 2,000 años, desde el siglo VII a.C. hasta el siglo XVII, involucrando a millones de trabajadores',
+      'La mayor parte de la muralla que vemos hoy fue construida durante la Dinastía Ming entre 1368 y 1644',
+      'Fue declarada Patrimonio de la Humanidad por la UNESCO en 1987, reconociendo su valor histórico único',
+      'Contrario al mito popular, NO es visible desde el espacio a simple vista, según han confirmado los astronautas',
+      'Las secciones mejor preservadas y más visitadas se encuentran en los alrededores de Pekín'
     ],
     
     whatToDo: [
-      'Badaling (más turística, accesible)',
-      'Mutianyu (menos gente, tobogán)',
-      'Jinshanling (hiking, fotogénica)',
-      'Simatai (nocturna, iluminada)',
-      'Jiankou (salvaje, NO restaurada)',
-      'Huanghuacheng (muralla en agua)'
+      'Visita Badaling, la sección más turística y accesible, ideal si tienes tiempo limitado o movilidad reducida',
+      'Explora Mutianyu, menos concurrida que Badaling y con un divertido tobogán alpino para bajar',
+      'Recorre Jinshanling para hacer senderismo en una de las secciones más fotogénicas y dramáticas',
+      'Experimenta Simatai de noche, cuando la muralla está iluminada creando una atmósfera espectacular',
+      'Aventúrate a Jiankou si buscas autenticidad, una sección salvaje y NO restaurada para excursionistas experimentados',
+      'Descubre Huanghuacheng donde la muralla literalmente toca el agua de un hermoso lago'
     ],
     
     howToGetThere: {

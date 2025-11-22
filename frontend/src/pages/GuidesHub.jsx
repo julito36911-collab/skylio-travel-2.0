@@ -1103,12 +1103,35 @@ function CityModal({ city, countryName, onClose }) {
           {city.topAttractions && (
             <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-3">{t('cities.topAttractions')}</h3>
-              <div className="flex flex-wrap gap-2">
-                {city.topAttractions.map((attraction, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-yellow-500/20 text-yellow-200 rounded-full text-sm">
-                    ⭐ {attraction}
-                  </span>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {city.topAttractions.map((attraction, idx) => {
+                  const attractionData = typeof attraction === 'string' 
+                    ? { name: attraction, wiki: null } 
+                    : attraction;
+                  
+                  return (
+                    <a
+                      key={idx}
+                      href={attractionData.wiki}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between px-4 py-3 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 border border-yellow-500/30 hover:border-yellow-500/50 rounded-xl transition-all cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">⭐</span>
+                        <span className="text-white font-semibold">{attractionData.name}</span>
+                      </div>
+                      <svg 
+                        className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-all group-hover:translate-x-1" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  );
+                })}
               </div>
             </div>
           )}

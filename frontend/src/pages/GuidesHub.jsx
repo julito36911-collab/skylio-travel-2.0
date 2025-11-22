@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { drivingRestrictions } from '../data/drivingRestrictions';
-import { continents } from '../data/mustSeeDestinations';
+import { mustSeeDestinations as destinationsEs, continents } from '../data/mustSeeDestinations_es';
+import { mustSeeDestinations as destinationsEn } from '../data/mustSeeDestinations_en';
 
 function GuidesHub() {
   const { t, i18n } = useTranslation();

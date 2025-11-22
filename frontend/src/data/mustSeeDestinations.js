@@ -265,20 +265,20 @@ export const mustSeeDestinations = [
     description: 'Ciudadela antigua en colina rocosa con el Partenón, templo dedicado a Atenea (447-432 a.C.). Símbolo de la civilización occidental.',
     
     mustKnow: [
-      'Construida en Edad de Oro de Atenas (siglo V a.C.)',
-      'Partenón dedicado a diosa Atenea',
-      'Patrimonio UNESCO desde 1987',
-      'Sufrió daños por guerra, terremotos y contaminación',
-      'Muchas esculturas originales en Museo Británico (controversial)'
+      'Fue construida durante la Edad de Oro de Atenas en el siglo V a.C., bajo el liderazgo de Pericles',
+      'El majestuoso Partenón fue dedicado a Atenea, diosa de la sabiduría y protectora de la ciudad',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1987, reconociendo su valor universal excepcional',
+      'Ha sufrido daños significativos a lo largo de los siglos debido a guerras, terremotos y la contaminación atmosférica',
+      'Muchas de sus esculturas originales se encuentran en el Museo Británico de Londres, lo que genera una controversia internacional sobre su repatriación'
     ],
     
     whatToDo: [
-      'Ver Partenón (templo principal)',
-      'Erecteion (con Cariátides)',
-      'Templo de Atenea Niké',
-      'Propileos (entrada monumental)',
-      'Teatro de Dionisio (al pie)',
-      'Nuevo Museo de la Acrópolis (IMPERDIBLE)'
+      'Contempla el imponente Partenón, el templo principal y símbolo máximo de la arquitectura clásica griega',
+      'Visita el Erecteion y admira las famosas Cariátides, las columnas con forma de mujeres que sostienen el pórtico',
+      'Descubre el pequeño pero elegante Templo de Atenea Niké, dedicado a la victoria',
+      'Atraviesa los Propileos, la monumental entrada ceremonial a la Acrópolis',
+      'Explora el Teatro de Dionisio al pie de la colina, considerado la cuna del teatro occidental',
+      'No te pierdas el Nuevo Museo de la Acrópolis, una experiencia absolutamente IMPERDIBLE que contextualiza toda tu visita'
     ],
     
     howToGetThere: {

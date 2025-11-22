@@ -212,6 +212,15 @@
     "aiSearching": "Buscando...",
     "aiEmptyError": "Por favor escribe un destino para buscar",
     "aiError": "Error al obtener información del asistente de IA. Por favor intenta nuevamente.",
+    "aiAssistant": "Asistente IA",
+    "aiDescription": "Pregunta sobre cualquier destino del mundo y obtén información detallada",
+    "aiPlaceholder": "Ejemplo: \"Cuéntame sobre Tokio, qué ver, dónde comer, cómo moverse...\" o \"Planifica 3 días en París\"",
+    "aiGenerating": "Generando información completa...",
+    "aiWait": "Esto puede tomar algunos segundos",
+    "aiExamples": "Ejemplos de preguntas:",
+    "aiExample1": "¿Qué hoteles recomiendas en Barcelona para familias?",
+    "aiExample2": "Planifica 5 días en Tokyo con presupuesto medio",
+    "aiExample3": "Tours románticos en Venecia para parejas",
     "cities": "ciudades"
   },
   "cities": {

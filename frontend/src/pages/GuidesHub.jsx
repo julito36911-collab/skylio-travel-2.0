@@ -28,6 +28,25 @@ function GuidesHub() {
 
   const countriesData = getCountriesData();
 
+  // Cargar datos de destinos según idioma activo
+  const getDestinationsData = () => {
+    try {
+      if (i18n.language === 'es') {
+        return require('../data/mustSeeDestinations_es').mustSeeDestinations;
+      } else if (i18n.language === 'he') {
+        return require('../data/mustSeeDestinations_he').mustSeeDestinations;
+      } else {
+        return require('../data/mustSeeDestinations_en').mustSeeDestinations;
+      }
+    } catch (error) {
+      console.error('Error loading destinations data:', error);
+      // Fallback to Spanish if file doesn't exist
+      return require('../data/mustSeeDestinations').mustSeeDestinations;
+    }
+  };
+
+  const mustSeeDestinations = useMemo(() => getDestinationsData(), [i18n.language]);
+
   // Filtrar destinos por continente y búsqueda
   const filteredDestinations = mustSeeDestinations.filter(dest => {
     const matchesContinent = selectedContinent === 'all' || dest.continent === selectedContinent;

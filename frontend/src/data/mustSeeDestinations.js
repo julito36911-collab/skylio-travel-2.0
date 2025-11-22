@@ -570,21 +570,21 @@ export const mustSeeDestinations = [
     description: '275 cascadas en frontera Argentina-Brasil. Más grandes que Niágara, más anchas que Victoria. "Garganta del Diablo" es la más impresionante.',
     
     mustKnow: [
-      '275 cascadas individuales',
-      '2.7 km de ancho total',
-      'Hasta 82m de altura',
-      'Más agua que Niágara y Victoria juntas',
-      'Patrimonio UNESCO',
-      'Eleanor Roosevelt: "Poor Niagara!"'
+      'Este impresionante sistema está compuesto por 275 cascadas individuales que se extienden majestuosamente a lo largo de la frontera',
+      'El conjunto de cataratas abarca un ancho total de 2.7 kilómetros de pura belleza natural',
+      'Las caídas alcanzan alturas de hasta 82 metros, con la Garganta del Diablo siendo la más alta e impactante',
+      'Transportan más agua que las Cataratas del Niágara y las Cataratas Victoria combinadas',
+      'Fueron declaradas Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único',
+      'La primera dama Eleanor Roosevelt exclamó al verlas: "¡Pobre Niágara!" reconociendo su superioridad'
     ],
     
     whatToDo: [
-      'Garganta del Diablo (lado argentino - IMPERDIBLE)',
-      'Pasarelas superiores e inferiores',
-      'Safari en lancha (te mojas completo)',
-      'Gran Aventura en gomón',
-      'Sendero Macuco (fauna)',
-      'Lado brasileño (vista panorámica)'
+      'Visita la espectacular Garganta del Diablo desde el lado argentino, una experiencia absolutamente IMPERDIBLE que te dejará sin aliento',
+      'Recorre las pasarelas superiores e inferiores que te permiten apreciar las cataratas desde múltiples perspectivas únicas',
+      'Atrévete con el Safari en lancha que te lleva directamente bajo las cascadas, prepárate para mojarte completamente',
+      'Experimenta la adrenalina de la Gran Aventura en gomón, navegando por los rápidos del río Iguazú',
+      'Explora el Sendero Macuco para observar la fascinante fauna selvática de la región',
+      'Cruza al lado brasileño para obtener la vista panorámica más fotogénica del conjunto completo de cataratas'
     ],
     
     howToGetThere: {

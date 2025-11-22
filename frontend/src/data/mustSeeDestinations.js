@@ -668,6 +668,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 40.7580, lon: -73.9855 },
     category: 'Urbano / Experiencia',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Times_Square',
+      en: 'https://en.wikipedia.org/wiki/Times_Square',
+      he: 'https://he.wikipedia.org/wiki/%D7%98%D7%99%D7%99%D7%9E%D7%A1_%D7%A1%D7%A7%D7%95%D7%95%D7%90%D7%A8'
+    },
+    
     description: 'Intersección icónica en Manhattan, "Cruce del Mundo". Pantallas LED gigantes, teatros de Broadway, energía 24/7.',
     
     mustKnow: [

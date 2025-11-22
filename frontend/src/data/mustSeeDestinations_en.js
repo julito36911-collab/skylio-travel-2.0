@@ -1490,8 +1490,93 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'opera-sydney', name: 'Sydney Opera House', city: 'Sydney', country: 'Australia', continent: 'Oceania', flag: '🇦🇺', coordinates: { lat: -33.8568, lon: 151.2153 }, category: 'Architecture', wikiLinks: { es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney', en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House', he: 'https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%90%D7%95%D7%A4%D7%A8%D7%94_%D7%A9%D7%9C_%D7%A1%D7%99%D7%93%D7%A0%D7%99' }, description: '1973 architectural masterpiece with iconic sail roof. World\'s most famous performing arts center.', mustKnow: ['Inaugurated 1973', 'Designed by Jørn Utzon', 'UNESCO World Heritage since 2007'], whatToDo: ['Guided tour', 'Attend show', 'Dine at Bennelong'], tips: ['Book shows months ahead', 'Visit during Vivid Sydney'], prices: { budget: 'A$80-150/day', medium: 'A$250-400/day', high: 'A$700+/day' }, bestTime: { season: 'Year-round', weather: 'Mild', icon: '🎭' }, avoid: 'None', accessibility: 'Fully accessible', duration: '2-3 hours', nearby: ['Harbour Bridge', 'The Rocks', 'Circular Quay'], transportation: { ferry: 'Circular Quay', train: 'Circular Quay', bus: 'Multiple routes' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'opera-sydney',
+    name: 'Sydney Opera House',
+    city: 'Sydney',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -33.8568, lon: 151.2153 },
+    category: 'Architecture',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney',
+      en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=qiXdz9NHVxk',
+      en: 'https://www.youtube.com/watch?v=AhTM0Ak-iGs'
+    },
+    
+    description: '1973 architectural masterpiece with iconic sail-shaped roof. World\'s most famous performing arts center.',
+    
+    mustKnow: [
+      'Officially opened on October 20, 1973 by Queen Elizabeth II after 14 years of construction',
+      'Designed by Danish architect Jørn Utzon, who won an international design competition in 1957',
+      'The distinctive "sails" are covered with over 1 million Swedish-made white and cream tiles',
+      'Inscribed as a UNESCO World Heritage Site in 2007, one of the youngest buildings with this honor',
+      'Contains multiple venues: Concert Hall (2,679 seats), Joan Sutherland Theatre (1,507 seats), and several smaller theaters',
+      'Hosts over 1,500 performances annually, attended by more than 1.2 million people'
+    ],
+    
+    whatToDo: [
+      'Take a guided tour to explore the interior architecture and learn about its fascinating construction history',
+      'Attend a world-class performance - opera, ballet, symphony, or contemporary shows',
+      'Dine at Bennelong restaurant inside the Opera House for a memorable culinary experience',
+      'Walk around the exterior forecourt for different angles and photo opportunities',
+      'Visit during Vivid Sydney festival (May-June) when the building is transformed by light projections',
+      'Enjoy drinks at Opera Bar with stunning harbor views of the Bridge and city skyline'
+    ],
+    
+    howToGetThere: {
+      ferry: 'Circular Quay (most scenic arrival)',
+      train: 'Circular Quay station (5 min walk)',
+      bus: 'Multiple routes to Circular Quay',
+      walking: 'From CBD 15-20 min'
+    },
+    
+    tickets: {
+      tour: 'A$43 (1 hour guided tour)',
+      backstage_tour: 'A$175 (2.5 hours)',
+      performances: 'A$50-$400+ depending on show',
+      kids_tour: 'A$23 (under 16)'
+    },
+    
+    bestTime: {
+      season: 'Year-round (mild climate)',
+      vivid: 'May-June (Vivid Sydney light festival)',
+      weather: 'Sydney enjoys 300+ sunny days/year',
+      shows: 'Book 2-3 months ahead for popular performances'
+    },
+    
+    nearby: [
+      'Sydney Harbour Bridge',
+      'The Rocks historic district',
+      'Royal Botanic Gardens',
+      'Circular Quay',
+      'Museum of Contemporary Art'
+    ],
+    
+    tips: [
+      'Book tours and shows online in advance',
+      'Sunset photos from Mrs Macquarie\'s Chair (best angle)',
+      'Free to walk around exterior and forecourt',
+      'Opera Bar perfect for pre-show drinks',
+      'Dress code: smart casual for performances',
+      'Arrive 30 min early for shows',
+      'Photography allowed outside, restricted inside',
+      'Combine with Harbour Bridge climb for full experience'
+    ],
+    
+    accessibility: 'Fully wheelchair accessible with lifts',
+    duration: '1 hour (tour) or 2-4 hours (with show)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'gran-barrera-coral', name: 'Great Barrier Reef', city: 'Cairns', country: 'Australia', continent: 'Oceania', flag: '🇦🇺', coordinates: { lat: -18.2871, lon: 147.6992 }, category: 'Marine', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral', en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%AA_%D7%94%D7%92%D7%93%D7%95%D7%9C%D7%94' }, description: 'World\'s largest reef system. 2,300 km long, visible from space. Heritage in danger.', mustKnow: ['2,300 km length', 'Largest reef system', 'Visible from space'], whatToDo: ['Snorkeling', 'Scuba diving', 'Helicopter flight'], tips: ['Book boat tours', 'Protect from sun'], prices: { budget: 'A$100-200/day', medium: 'A$300-500/day', high: 'A$800+/day' }, bestTime: { season: 'June-Oct', weather: 'Dry', icon: '🐠' }, avoid: 'Jan-March (jellyfish season)', accessibility: 'Boat accessible', duration: '1-2 days', nearby: ['Cairns', 'Whitsundays', 'Port Douglas'], transportation: { boat: 'Day tours from Cairns', flight: 'Scenic flights' }, lastUpdated: '2025-11-20' },
   

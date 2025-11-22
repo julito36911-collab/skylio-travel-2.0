@@ -175,8 +175,25 @@ test_plan:
         agent: "main"
         comment: "Eliminado soporte de hebreo: archivo translation.json, archivo countriesGuide_he.js, actualizado i18n config y LanguageSwitcher. App ahora solo soporta ES/EN."
 
+  - task: "Complete English Translations for Destinations #11-25"
+    implemented: true
+    working: true
+    file: "frontend/src/data/mustSeeDestinations_en.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Usuario reportó que la información en inglés es mucho más corta que en español, quiere que sea muy parecida"
+      - working: true
+        agent: "main"
+        comment: "COMPLETADO: Todos los 15 destinos (#11-25) ahora tienen traducciones completas y narrativas en inglés con mismo nivel de detalle que español. Incluye: mustKnow (6+ puntos), whatToDo detallado, howToGetThere, tickets, bestTime, tips extensos, nearby, youtubeLinks ES/EN."
+
 agent_communication:
   - agent: "main"
     message: "Bug del CityModal resuelto. Modal ahora aparece correctamente con z-index 9999. París está completo en ES/EN/HE. Listo para agregar más ciudades."
   - agent: "main"
     message: "Arreglado crash en destinos #11-25 con validaciones condicionales. Eliminado soporte de hebreo. En proceso: completar traducción al inglés de 15 destinos restantes."
+  - agent: "main"
+    message: "COMPLETADO: Todos los 25 destinos tienen traducción completa en inglés con mismo nivel de detalle narrativo que español. App funciona perfectamente en ES/EN sin crashes."

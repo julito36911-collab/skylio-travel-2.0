@@ -365,7 +365,9 @@ function DestinationModal({ destination, onClose }) {
           <Section title={`📌 ${t('guides.mustKnow')}`} items={destination.mustKnow} />
 
           {/* Qué hacer */}
-          <Section title={`✨ ${t('guides.whatToDo')}`} items={destination.whatToDo} />
+          {destination.whatToDo && destination.whatToDo.length > 0 && (
+            <Section title={`✨ ${t('guides.whatToDo')}`} items={destination.whatToDo} />
+          )}
 
           {/* Cómo llegar */}
           {destination.howToGetThere && Object.keys(destination.howToGetThere).length > 0 && (
@@ -396,7 +398,7 @@ function DestinationModal({ destination, onClose }) {
           )}
 
           {/* Mejor momento */}
-          {destination.bestTime && (
+          {destination.bestTime && Object.keys(destination.bestTime).length > 0 && (
             <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4">📅 {t('guides.bestTimeToVisit')}</h3>
               <div className="space-y-2">

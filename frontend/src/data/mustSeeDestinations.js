@@ -1188,21 +1188,21 @@ export const mustSeeDestinations = [
     description: 'Únicas sobrevivientes de las 7 Maravillas del Mundo Antiguo. Pirámides de Keops, Kefrén y Micerinos (~2560 a.C.) y la Gran Esfinge.',
     
     mustKnow: [
-      'Construidas ~2560 a.C. (4,500+ años)',
-      'Gran Pirámide (Keops): 146m original',
-      'Única maravilla antigua que sobrevive',
-      'Patrimonio UNESCO desde 1979',
-      '2.3 millones de bloques de piedra',
-      'Esfinge: 73m largo, 20m alto'
+      'Fueron construidas alrededor del año 2560 a.C., hace más de 4,500 años durante el Reino Antiguo de Egipto',
+      'La Gran Pirámide de Keops medía originalmente 146 metros de altura, siendo la estructura más alta del mundo durante 3,800 años',
+      'Son la única de las Siete Maravillas del Mundo Antiguo que ha sobrevivido hasta nuestros días',
+      'Declaradas Patrimonio de la Humanidad por la UNESCO en 1979 como parte del complejo de las pirámides',
+      'La Gran Pirámide está compuesta por aproximadamente 2.3 millones de bloques de piedra, cada uno pesando entre 2 y 15 toneladas',
+      'La enigmática Gran Esfinge mide 73 metros de largo y 20 metros de alto, guardando las pirámides desde hace milenios'
     ],
     
     whatToDo: [
-      'Explorar las 3 pirámides principales',
-      'Interior de Gran Pirámide (cámara del rey)',
-      'Gran Esfinge',
-      'Museo del Barco Solar',
-      'Paseo en camello (típico pero turístico)',
-      'Show luz y sonido nocturno'
+      'Explora las tres pirámides principales de los faraones Keops, Kefrén y Micerinos, cada una con su propia historia',
+      'Aventúrate al interior de la Gran Pirámide para visitar la impresionante cámara del rey (entrada adicional requerida)',
+      'Contempla de cerca la misteriosa Gran Esfinge con cabeza humana y cuerpo de león',
+      'Visita el fascinante Museo del Barco Solar que exhibe una embarcación funeraria de 4,500 años perfectamente conservada',
+      'Date un paseo en camello alrededor de las pirámides, una experiencia típicamente turística pero divertida',
+      'Asiste al espectáculo nocturno de luz y sonido que narra la historia de los faraones'
     ],
     
     howToGetThere: {

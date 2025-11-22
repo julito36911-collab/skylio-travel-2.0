@@ -213,12 +213,12 @@ export const countriesGuide = [
           ],
           
           tips: [
-            'Valida SIEMPRE tu ticket (multa €60)',
-            'Guarda ticket hasta salir',
-            'RER B al aeropuerto = más barato',
-            'Último metro 1 AM (2 AM fines de semana)',
-            'Niños <4 años gratis',
-            'WiFi gratis en estaciones principales'
+            'Valida SIEMPRE tu ticket al entrar y al salir, ya que las multas por no hacerlo ascienden a €60',
+            'Conserva tu ticket durante todo el trayecto hasta que salgas completamente del sistema de transporte',
+            'Para ir al aeropuerto, la línea RER B es la opción más económica y rápida disponible',
+            'El último metro circula aproximadamente a la 1:00 AM (2:00 AM los viernes y sábados)',
+            'Los niños menores de 4 años viajan completamente gratis en todo el sistema de transporte',
+            'Aprovecha el WiFi gratuito disponible en las principales estaciones del metro'
           ]
         },
         

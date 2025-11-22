@@ -1552,6 +1552,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: -2.3333, lon: 34.8333 },
     category: 'Naturaleza / Safari',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Parque_nacional_del_Serengueti',
+      en: 'https://en.wikipedia.org/wiki/Serengeti_National_Park',
+      he: 'https://he.wikipedia.org/wiki/%D7%A1%D7%A8%D7%A0%D7%92%D7%98%D7%99'
+    },
+    
     description: 'Ecosistema de 30,000 km² famoso por la Gran Migración (2 millones de animales). Safari africano por excelencia.',
     
     mustKnow: [

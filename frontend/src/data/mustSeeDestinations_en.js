@@ -1227,8 +1227,95 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'cataratas-victoria', name: 'Victoria Falls', city: 'Livingstone', country: 'Zambia/Zimbabwe', continent: 'Africa', flag: '🇿🇲🇿🇼', coordinates: { lat: -17.9244, lon: 25.8567 }, category: 'Nature', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria', en: 'https://en.wikipedia.org/wiki/Victoria_Falls', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94' }, description: 'One of world\'s largest waterfalls. 1,708m wide, 108m high. "The Smoke that Thunders".', mustKnow: ['1,708m wide', 'Greater flow March-May', 'UNESCO World Heritage'], whatToDo: ['Devil\'s Pool swim', 'Bungee jumping', 'Helicopter flight'], tips: ['Visit both sides', 'Bring raincoat'], prices: { budget: '$30-60/day', medium: '$100-200/day', high: '$400+/day' }, bestTime: { season: 'Feb-May (full flow)', weather: 'Wet', icon: '💦' }, avoid: 'Nov-Dec (low water)', accessibility: 'Walkways accessible', duration: '2-3 days', nearby: ['Chobe National Park', 'Zambezi River'], transportation: { flight: 'To Livingstone/Victoria Falls', shuttle: 'Between sides' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'cataratas-victoria',
+    name: 'Victoria Falls',
+    city: 'Livingstone / Victoria Falls',
+    country: 'Zambia / Zimbabwe',
+    continent: 'Africa',
+    flag: '🇿🇲🇿🇼',
+    coordinates: { lat: -17.9244, lon: 25.8567 },
+    category: 'Nature',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria',
+      en: 'https://en.wikipedia.org/wiki/Victoria_Falls'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=1rZhVH7Jogc',
+      en: 'https://www.youtube.com/watch?v=5ky6vgQfU24'
+    },
+    
+    description: 'One of the world\'s largest waterfalls. 1,708m wide, 108m high. "The Smoke that Thunders" (local name).',
+    
+    mustKnow: [
+      'Measuring 1,708 meters wide and 108 meters high, it is one of the largest and most spectacular water curtains on the planet',
+      'Fed by the powerful Zambezi River plunging into the gorge creating a vapor cloud visible for kilometers',
+      'Declared a UNESCO World Heritage Site, recognizing its extraordinary natural beauty',
+      '"Discovered" for the Western world by explorer David Livingstone in 1855, who named them after Queen Victoria',
+      'Greatest water flow occurs between March and May, when up to 500 million liters fall per minute',
+      'During November-December flow is lower, but paradoxically the best time to fully appreciate the geological formation',
+      'Its local name in Lozi language is "Mosi-oa-Tunya", meaning "The Smoke that Thunders", perfectly describing the phenomenon'
+    ],
+    
+    whatToDo: [
+      'Walk the panoramic trails from the Zambia or Zimbabwe side, each offering unique and impressive perspectives',
+      'Dare to swim in Devil\'s Pool, a natural pool at the very edge of the waterfall (only Sept-Dec when water is low)',
+      'Experience the adrenaline of bungee jumping from the Victoria Falls Bridge, leaping 111 meters into the gorge',
+      'Face the exciting class V rapids of the Zambezi River in an extreme rafting adventure',
+      'Fly over the falls by helicopter to appreciate their full magnitude from the air ($160 for 15 minutes)',
+      'Enjoy a romantic sunset cruise on the Zambezi River watching hippos and crocodiles'
+    ],
+    
+    howToGetThere: {
+      flights: 'Livingstone Airport (Zambia) or Victoria Falls (Zimbabwe)',
+      border: 'Bridge between countries (easy crossing)',
+      from_town: 'Livingstone or Victoria Falls town'
+    },
+    
+    tickets: {
+      zambia: '$20 USD',
+      zimbabwe: '$30 USD',
+      both: '$50 (KAZA visa - both sides)',
+      devils_pool: '$130-150',
+      helicopter: '$160 (15 min)',
+      bungee: '$160'
+    },
+    
+    bestTime: {
+      season: 'Feb-May (maximum water, lots of spray)',
+      viewing: 'Aug-Oct (less water but better views)',
+      avoid: 'Nov-Dec (very low water)',
+      devils_pool: 'Sept-Dec only (when water low enough)'
+    },
+    
+    nearby: [
+      'Three Borders Landmark (Zambia-Zimbabwe-Botswana)',
+      'Chobe National Park (elephants)',
+      'Zambezi River cruises',
+      'Victoria Falls town (nightlife)',
+      'Livingstone Museum'
+    ],
+    
+    tips: [
+      'Visit BOTH sides (completely different experience)',
+      'Zimbabwe side = panoramic views (photos)',
+      'Zambia side = closer to falls (very wet)',
+      'Bring raincoat (you WILL get soaked)',
+      'Waterproof bag for camera/phone',
+      'Devil\'s Pool only for strong swimmers',
+      'Book helicopter early (sells out)',
+      '2-3 days to do everything relaxed'
+    ],
+    
+    accessibility: 'Walkways accessible. Devil\'s Pool NOT accessible',
+    duration: '2-3 days (to see both sides)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'table-mountain', name: 'Table Mountain', city: 'Cape Town', country: 'South Africa', continent: 'Africa', flag: '🇿🇦', coordinates: { lat: -33.9628, lon: 18.4098 }, category: 'Mountain', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa', en: 'https://en.wikipedia.org/wiki/Table_Mountain', he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%94%D7%A9%D7%95%D7%9C%D7%97%D7%9F' }, description: 'Iconic flat-topped mountain dominating Cape Town. 1,085m height. Part of 7 Natural Wonders.', mustKnow: ['1,085m altitude', '7 Natural Wonders', '360° rotating cable car'], whatToDo: ['Cable car to top', 'Hike Platteklip Gorge', '360° views'], tips: ['Check weather', 'Book cable car online'], prices: { budget: 'R300-600/day', medium: 'R1000-2000/day', high: 'R4000+/day' }, bestTime: { season: 'Oct-April', weather: 'Clear', icon: '☀️' }, avoid: 'Winter (cloudy)', accessibility: 'Cable car available', duration: '3-4 hours', nearby: ['V&A Waterfront', 'Cape Point'], transportation: { uber: 'Recommended', bus: 'MyCiti' }, lastUpdated: '2025-11-20' },
   

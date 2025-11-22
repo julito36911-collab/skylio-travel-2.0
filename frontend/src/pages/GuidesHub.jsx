@@ -1270,15 +1270,6 @@ function CityModal({ city, countryName, onClose }) {
         </div>
       </div>
 
-      {/* AI Assistant Modal */}
-      <AIAssistantModal
-        isOpen={showAIModal}
-        onClose={() => setShowAIModal(false)}
-        loading={aiLoading}
-        error={aiError}
-        response={aiResponse}
-        destination={searchQuery}
-      />
     </div>
   );
 

@@ -1908,24 +1908,30 @@ export const mustSeeDestinations = [
     coordinates: { lat: -25.3444, lon: 131.0369 },
     category: 'Naturaleza / Sagrado',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Uluru',
+      en: 'https://en.wikipedia.org/wiki/Uluru',
+      he: 'https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%95%D7%A8%D7%95'
+    },
+    
     description: 'Monolito de arenisca sagrado de 348m. Sitio espiritual aborígen Anangu. Cambia de color con luz del día.',
     
     mustKnow: [
-      'Altura: 348m sobre llanura',
-      'Circunferencia: 9.4 km',
-      'Edad: 600 millones de años',
-      'Sagrado para pueblo Anangu',
-      'Escalada prohibida desde 2019 (respeto)',
-      'Cambia color: rojo-naranja-púrpura'
+      'Se eleva majestuosamente 348 metros sobre la llanura circundante del desierto rojo australiano',
+      'Tiene una circunferencia impresionante de 9.4 kilómetros en su base, siendo uno de los monolitos más grandes del mundo',
+      'La roca tiene una antigüedad estimada de 600 millones de años, siendo testigo de eras geológicas enteras',
+      'Es un sitio profundamente sagrado para el pueblo aborigen Anangu, custodios tradicionales de esta tierra',
+      'La escalada fue prohibida definitivamente en octubre de 2019 por respeto a su significado cultural y espiritual',
+      'Cambia dramáticamente de color a lo largo del día, mostrando tonos rojos, naranjas y púrpuras según la posición del sol'
     ],
     
     whatToDo: [
-      'Base Walk (10.6 km, 3.5h)',
-      'Sunset viewing (color increíble)',
-      'Sunrise viewing',
-      'Kata Tjuta (The Olgas, 50 km)',
-      'Field of Light installation',
-      'Cultural tour con guía Anangu'
+      'Camina el Base Walk, un sendero circular de 10.6 kilómetros que rodea completamente Uluru (3.5 horas)',
+      'Presencia el atardecer cuando Uluru se transforma en tonos rojos y naranjas brillantes, un espectáculo natural inolvidable',
+      'Madruga para ver el amanecer cuando la roca parece encenderse gradualmente con la primera luz del día',
+      'Visita Kata Tjuta (The Olgas) ubicada a 50 kilómetros, un conjunto de formaciones rocosas igualmente impresionantes',
+      'Experimenta la instalación artística Field of Light con miles de esferas luminosas iluminando el desierto nocturno',
+      'Únete a un tour cultural guiado por los Anangu para comprender el profundo significado espiritual del lugar'
     ],
     
     howToGetThere: {

@@ -494,21 +494,21 @@ export const mustSeeDestinations = [
     description: 'Cañón excavado por el Río Colorado durante 5-6 millones de años. 446 km de largo, hasta 29 km de ancho y 1,800m de profundidad.',
     
     mustKnow: [
-      'Formado hace 5-6 millones de años',
-      '446 km largo, 29 km ancho, 1,800m profundo',
-      'Parque Nacional desde 1919',
-      'Patrimonio UNESCO',
-      'South Rim abierto todo el año',
-      'North Rim cerrado nov-mayo (nieve)'
+      'Esta maravilla geológica fue formada hace entre 5 y 6 millones de años por la incansable erosión del Río Colorado',
+      'Sus dimensiones son asombrosas: 446 kilómetros de largo, hasta 29 kilómetros de ancho y 1,800 metros de profundidad',
+      'Fue designado Parque Nacional en 1919, protegiendo este tesoro natural para las generaciones futuras',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, reconociendo su valor geológico único en el mundo',
+      'El South Rim (borde sur) permanece abierto durante todo el año y es el más visitado y accesible',
+      'El North Rim (borde norte) cierra de noviembre a mayo debido a las fuertes nevadas que hacen intransitables los accesos'
     ],
     
     whatToDo: [
-      'Mather Point (vista clásica South Rim)',
-      'Desert View Watchtower',
-      'Bright Angel Trail (hike al fondo)',
-      'Skywalk (pasarela de vidrio - $50 extra)',
-      'Hermit Road (atardecer)',
-      'Helicopter tour ($200-400)'
+      'Contempla las vistas desde Mather Point, el mirador clásico y más fotografiado del South Rim',
+      'Sube a la histórica Desert View Watchtower, una torre diseñada para ofrecer vistas panorámicas de 360 grados',
+      'Aventúrate por el Bright Angel Trail si quieres descender al fondo del cañón, pero prepárate para un desafío físico extremo',
+      'Camina sobre el Skywalk, una pasarela de vidrio que se proyecta sobre el abismo (requiere entrada adicional de $50)',
+      'Recorre Hermit Road al atardecer para presenciar cómo los colores del cañón se transforman con la luz dorada',
+      'Considera un tour en helicóptero para una perspectiva aérea inolvidable del cañón ($200-400)'
     ],
     
     howToGetThere: {

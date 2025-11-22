@@ -117,6 +117,9 @@ CRITICAL INSTRUCTIONS:
 
 Remember: Respond in {language_name} and answer exactly what was asked."""
         
+        # Adjust max_tokens based on language (Spanish needs more tokens for same content)
+        max_tokens = 2000 if query.language == "es" else 1500
+        
         payload = {
             "model": "llama-3.3-70b-versatile",
             "messages": [
@@ -124,7 +127,7 @@ Remember: Respond in {language_name} and answer exactly what was asked."""
                 {"role": "user", "content": user_message}
             ],
             "temperature": 0.7,
-            "max_tokens": 1500,
+            "max_tokens": max_tokens,
             "top_p": 0.9
         }
         

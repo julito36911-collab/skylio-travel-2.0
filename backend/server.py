@@ -115,9 +115,21 @@ CRITICAL INSTRUCTIONS:
 7. IMPORTANT: Provide detailed, complete answers with specific examples, names, prices when possible.
 8. Include practical tips and recommendations - be thorough and helpful."""
         
+        # Additional instructions for Spanish to ensure detailed responses
+        detail_instruction = ""
+        if query.language == "es":
+            detail_instruction = """
+
+IMPORTANTE: Tu respuesta en español debe ser TAN DETALLADA como si respondieras en inglés:
+- Incluye nombres específicos de hoteles, restaurantes, atracciones
+- Menciona precios aproximados cuando sea relevante
+- Da recomendaciones concretas con detalles prácticos
+- Usa secciones organizadas con títulos claros
+- Sé específico y completo, no genérico"""
+        
         user_message = f"""{query.destination}
 
-Remember: Respond in {language_name} and answer exactly what was asked."""
+Remember: Respond in {language_name} and answer exactly what was asked.{detail_instruction}"""
         
         # Adjust max_tokens based on language (Spanish needs more tokens for same content)
         max_tokens = 2000 if query.language == "es" else 1500

@@ -340,21 +340,21 @@ export const mustSeeDestinations = [
     description: 'Ciudad única construida sobre 118 islas con 150 canales y 400 puentes. Sin autos, solo góndolas y vaporettos.',
     
     mustKnow: [
-      'Fundada en siglo V',
-      '118 islas conectadas por 400+ puentes',
-      'Gran Canal: arteria principal (3.8 km)',
-      'Se hunde 1-2mm por año',
-      'Población: 50,000 (era 175,000 en 1950)',
-      'Patrimonio UNESCO en peligro'
+      'Fue fundada en el siglo V como refugio de las invasiones bárbaras, convirtiéndose en una potencia marítima medieval',
+      'Esta ciudad única está construida sobre 118 pequeñas islas conectadas por más de 400 puentes históricos',
+      'El Gran Canal es su arteria principal, serpenteando 3.8 kilómetros a través del corazón de la ciudad',
+      'Venecia se hunde lentamente a un ritmo de 1-2 milímetros por año debido al hundimiento del suelo y el aumento del nivel del mar',
+      'Su población ha disminuido drásticamente de 175,000 habitantes en 1950 a apenas 50,000 en la actualidad',
+      'Está declarada Patrimonio de la Humanidad por la UNESCO, pero figura en la lista de sitios en peligro debido a las inundaciones y el turismo masivo'
     ],
     
     whatToDo: [
-      'Paseo en góndola (€80-100 / 30 min)',
-      'Plaza San Marcos y Basílica',
-      'Palacio Ducal (Palazzo Ducale)',
-      'Puente de Rialto',
-      'Islas: Murano (vidrio), Burano (casas colores)',
-      'Perderse en callejones sin mapa'
+      'Disfruta de un romántico paseo en góndola tradicional recorriendo los canales más pintorescos (€80-100 por 30 minutos)',
+      'Visita la majestuosa Plaza San Marcos y la impresionante Basílica con sus mosaicos dorados bizantinos',
+      'Explora el histórico Palacio Ducal (Palazzo Ducale), antiguo centro del poder de la República de Venecia',
+      'Cruza el icónico Puente de Rialto, el más antiguo y fotografiado que atraviesa el Gran Canal',
+      'Haz excursiones a las islas cercanas: Murano famosa por su vidrio soplado artesanal, y Burano por sus casas de colores vibrantes',
+      'Piérdete deliberadamente en los estrechos callejones sin seguir el mapa, es cuando descubrirás la Venecia más auténtica'
     ],
     
     howToGetThere: {

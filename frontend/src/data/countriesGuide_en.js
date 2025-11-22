@@ -222,7 +222,13 @@ export const countriesGuide = [
           ]
         },
         
-        topAttractions: ['Eiffel Tower', 'Louvre', 'Arc de Triomphe', 'Notre-Dame', 'Sacré-Cœur'],
+        topAttractions: [
+          { name: 'Eiffel Tower', wiki: 'https://en.wikipedia.org/wiki/Eiffel_Tower' },
+          { name: 'Louvre', wiki: 'https://en.wikipedia.org/wiki/Louvre' },
+          { name: 'Arc de Triomphe', wiki: 'https://en.wikipedia.org/wiki/Arc_de_Triomphe' },
+          { name: 'Notre-Dame', wiki: 'https://en.wikipedia.org/wiki/Notre-Dame_de_Paris' },
+          { name: 'Sacré-Cœur', wiki: 'https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris' }
+        ],
         
         neighborhoods: [
           '1st - Louvre (museums)',

@@ -1,0 +1,2104 @@
+// 25 Destinos Imperdibles del Mundo - Datos Demo
+// En producción, se enriquecerán con APIs de clima, mapas, etc.
+
+export const mustSeeDestinations = [
+  // ===== EUROPA =====
+  {
+    id: 'torre-eiffel',
+    name: 'Torre Eiffel',
+    city: 'París',
+    country: 'Francia',
+    continent: 'Europa',
+    flag: '🇫🇷',
+    coordinates: { lat: 48.8584, lon: 2.2945 },
+    category: 'Monumento',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Torre_Eiffel',
+      en: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%93%D7%9C_%D7%90%D7%99%D7%99%D7%A4%D7%9C'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=EkUeSZ8jyws',
+      en: 'https://www.youtube.com/watch?v=CVujfJHYygw'
+    },
+    
+    description: 'Icono mundial de París, la "Dama de Hierro" de 330m de altura construida en 1889 para la Exposición Universal.',
+    
+    mustKnow: [
+      'Fue construida por el ingeniero Gustave Eiffel en 1889 como entrada monumental a la Exposición Universal',
+      'Recibe más de 7 millones de visitantes al año, siendo el monumento de pago más visitado del mundo',
+      'Cada noche, la torre se ilumina con un espectáculo de 20,000 bombillas que centellean durante 5 minutos cada hora',
+      'Cuenta con 3 niveles accesibles al público, alcanzando una altura máxima de 276 metros en su cima',
+      'Originalmente fue diseñada como estructura temporal y estaba programada para ser desmontada en 1909, pero se salvó gracias a su utilidad como antena de radio'
+    ],
+    
+    whatToDo: [
+      'Sube hasta la cima usando el ascensor panorámico o, si te sientes aventurero, las escaleras del primer y segundo piso',
+      'Disfruta de una cena romántica en el restaurante Jules Verne, galardonado con estrella Michelin, ubicado en el segundo piso',
+      'Relájate con un picnic típicamente parisino en los jardines del Champ de Mars con vista directa a la torre',
+      'Captura las mejores fotografías desde la explanada de Trocadéro, considerado el punto de vista más fotogénico',
+      'Presencia el mágico espectáculo de luces que ocurre cada hora al anochecer, un momento verdaderamente especial'
+    ],
+    
+    howToGetThere: {
+      metro: ['Línea 6: Bir-Hakeim', 'Línea 9: Trocadéro', 'RER C: Champ de Mars'],
+      bus: ['Líneas 42, 69, 82, 87'],
+      walking: '15 min desde Inválidos, 20 min desde Louvre',
+      parking: 'Parking Pullman Tour Eiffel (€4-5/hora)'
+    },
+    
+    tickets: {
+      adult: '€29 (cima) / €12 (2do piso)',
+      youth: '€14.50 / €6',
+      child: '€7.30 / €3',
+      free: 'Menores de 4 años',
+      booking: 'Reserva online 2-3 meses antes (sold out rápido)',
+      url: 'https://www.toureiffel.paris'
+    },
+    
+    bestTime: {
+      season: 'Primavera (abril-junio) u otoño (sept-oct)',
+      timeOfDay: 'Atardecer para ver día y noche',
+      avoid: 'Mediados de verano (muy lleno)'
+    },
+    
+    nearby: [
+      'Trocadéro y jardines',
+      'Champ de Mars',
+      'Río Sena (cruceros)',
+      'Inválidos y tumba de Napoleón',
+      'Museo del Quai Branly'
+    ],
+    
+    tips: [
+      'Reserva tus entradas online con varios meses de anticipación, ya que los cupos se agotan rápidamente, especialmente en temporada alta',
+      'Planifica tu visita temprano en la mañana (apertura a las 8:30 AM) o al final de la tarde (después de las 8 PM) para evitar las multitudes',
+      'Ten en cuenta que los días entre miércoles y domingo suelen estar más concurridos que los lunes y martes',
+      'Lleva algunos snacks y bebidas contigo, ya que los precios dentro de la torre son bastante elevados',
+      'Mantén tus pertenencias seguras en todo momento, pues la zona es conocida por la presencia de carteristas que aprovechan las aglomeraciones',
+      'Recuerda que está prohibido el uso de drones y palos selfie por razones de seguridad'
+    ],
+    
+    accessibility: 'Ascensores hasta 2do piso. Cima no accesible silla de ruedas.',
+    duration: '2-3 horas (con subida y fotos)',
+    
+    weather: { temp: 15, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'coliseo-romano',
+    name: 'Coliseo Romano',
+    city: 'Roma',
+    country: 'Italia',
+    continent: 'Europa',
+    flag: '🇮🇹',
+    coordinates: { lat: 41.8902, lon: 12.4922 },
+    category: 'Monumento Histórico',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Coliseo',
+      en: 'https://en.wikipedia.org/wiki/Colosseum',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%95%D7%9C%D7%95%D7%A1%D7%99%D7%90%D7%95%D7%9D'
+    },
+    
+    description: 'Anfiteatro más grande jamás construido (80 d.C.), símbolo del Imperio Romano donde gladiadores combatían ante 50,000 espectadores.',
+    
+    mustKnow: [
+      'Fue construido entre los años 72 y 80 d.C. bajo el mandato de los emperadores de la dinastía Flavia',
+      'Tenía capacidad para albergar entre 50,000 y 80,000 espectadores que presenciaban combates de gladiadores y espectáculos públicos',
+      'Declarado Patrimonio de la Humanidad por la UNESCO en 1980, reconociendo su invaluable importancia histórica',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, seleccionado por votación mundial en 2007',
+      'A lo largo de los siglos ha sufrido daños considerables debido a terremotos devastadores y saqueos durante la época medieval'
+    ],
+    
+    whatToDo: [
+      'Tour guiado del anfiteatro (altamente recomendado)',
+      'Visitar la arena y subsuelos (hipogeo)',
+      'Explorar Foro Romano y Palatino (mismo ticket)',
+      'Tour nocturno especial (muy atmosférico)',
+      'Realidad virtual para ver como era antes'
+    ],
+    
+    howToGetThere: {
+      metro: ['Línea B: Colosseo (salida directa)'],
+      bus: ['Líneas 51, 75, 85, 87, 118'],
+      walking: '15 min desde Fontana di Trevi',
+      parking: 'Evitar auto (ZTL). Parking Colosseo €2.20/hora'
+    },
+    
+    tickets: {
+      adult: '€18 (Coliseo + Foro + Palatino)',
+      reduced: '€4 (18-25 años UE)',
+      free: 'Menores 18 años, primer domingo del mes',
+      fullExperience: '€22 (incluye arena y subsuelos)',
+      booking: 'Online obligatorio - elige hora específica',
+      url: 'https://www.coopculture.it'
+    },
+    
+    bestTime: {
+      season: 'Primavera (marzo-mayo) u otoño (sept-nov)',
+      timeOfDay: 'Apertura 8:30 AM (menos gente) o última entrada',
+      avoid: 'Julio-agosto (calor extremo 40°C+)'
+    },
+    
+    nearby: [
+      'Foro Romano (ruinas imperiales)',
+      'Monte Palatino (origen de Roma)',
+      'Arco de Constantino',
+      'Domus Aurea (palacio de Nerón)',
+      'Basílica San Clemente'
+    ],
+    
+    tips: [
+      'COMPRA ONLINE con días/semanas antes',
+      'Tour guiado vale la pena (€30-40)',
+      'Combina con Foro y Palatino (mismo día)',
+      'Lleva agua (fuentes públicas cerca)',
+      'Usa sombrero y protector solar',
+      'Filas de seguridad largas (llega 20 min antes)',
+      'Evita "gladiadores" falsos (estafa)'
+    ],
+    
+    accessibility: 'Ascensor hasta 2do nivel. Terreno irregular en Foro.',
+    duration: '1.5-2 horas Coliseo, +2 horas Foro/Palatino',
+    
+    weather: { temp: 18, condition: 'Soleado', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'sagrada-familia',
+    name: 'Sagrada Familia',
+    city: 'Barcelona',
+    country: 'España',
+    continent: 'Europa',
+    flag: '🇪🇸',
+    coordinates: { lat: 41.4036, lon: 2.1744 },
+    category: 'Arquitectura / Religioso',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia',
+      en: 'https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia',
+      he: 'https://he.wikipedia.org/wiki/%D7%91%D7%96%D7%99%D7%9C%D7%99%D7%A7%D7%AA_%D7%94%D7%A1%D7%92%D7%A8%D7%93%D7%94_%D7%A4%D7%9E%D7%99%D7%9C%D7%99%D7%94'
+    },
+    
+    description: 'Obra maestra de Antoni Gaudí iniciada en 1882 y aún en construcción. Basílica modernista única en el mundo con fachadas surrealistas.',
+    
+    mustKnow: [
+      'Esta obra maestra lleva en construcción continua desde 1882, acumulando ya más de 143 años de trabajo',
+      'Fue diseñada por el genial arquitecto modernista Antoni Gaudí, quien dedicó los últimos 15 años de su vida exclusivamente a este proyecto',
+      'Se estima que la basílica estará completamente terminada entre 2026 y 2030, coincidiendo con el centenario de la muerte de Gaudí',
+      'Ha sido reconocida como Patrimonio de la Humanidad por la UNESCO desde 1984, incluso estando aún inacabada',
+      'Cuando esté completa contará con 18 torres monumentales: 12 representando a los apóstoles, 4 a los evangelistas, una a la Virgen María y la más alta a Jesucristo',
+      'El propio Antoni Gaudí descansa eternamente enterrado en la cripta de su obra más ambiciosa'
+    ],
+    
+    whatToDo: [
+      'Maravíllate con el interior de la basílica y sus espectaculares vitrales que crean un juego de luces único en el mundo',
+      'Sube a una de las torres utilizando el ascensor y las escaleras para disfrutar de vistas panorámicas de Barcelona',
+      'Admira la fachada de la Natividad en el lado este, la única completada bajo la supervisión directa de Gaudí',
+      'Observa la fachada de la Pasión en el lado oeste, diseñada con un estilo más angular y moderno',
+      'Visita el museo ubicado en el sótano donde encontrarás maquetas originales y documentación histórica del proyecto',
+      'Si es domingo, intenta asistir a la misa con coro que es gratuita, aunque debes llegar temprano para conseguir lugar'
+    ],
+    
+    howToGetThere: {
+      metro: ['L2 (púrpura): Sagrada Família', 'L5 (azul): Sagrada Família'],
+      bus: ['Líneas 19, 33, 34, 43, 44, 50, 51'],
+      walking: '20 min desde Paseo de Gracia',
+      parking: 'BSM Sagrada Familia €2.95/hora'
+    },
+    
+    tickets: {
+      basic: '€26 (basílica + audioguía)',
+      towers: '€36 (basílica + torre)',
+      guided: '€30 (tour guiado)',
+      booking: 'OBLIGATORIO online - se agota con meses',
+      url: 'https://sagradafamilia.org'
+    },
+    
+    bestTime: {
+      season: 'Abril-junio o sept-oct',
+      timeOfDay: '9 AM apertura (luz mañana en vitrales) o 3-4 PM (luz tarde)',
+      avoid: 'Mediodía (más lleno y luz dura)'
+    },
+    
+    nearby: [
+      'Hospital de Sant Pau (modernista)',
+      'Park Güell (otro Gaudí)',
+      'Casa Batlló y Casa Milà (Paseo de Gracia)',
+      'Recinte Modernista Sant Pau',
+      'Barrio Eixample (cuadrícula urbana única)'
+    ],
+    
+    tips: [
+      'Reserva tus entradas con 2 o 3 meses de anticipación, especialmente si planeas viajar en temporada alta',
+      'Si vas a subir a las torres, elige la de la Natividad que ofrece las vistas más espectaculares y detalles arquitectónicos',
+      'Ten en cuenta que las escaleras de las torres son bastante estrechas y empinadas, no recomendable si sufres de vértigo',
+      'La audioguía está incluida en el precio de entrada y es extremadamente informativa, no te la pierdas',
+      'Respeta el código de vestimenta: los hombros y las rodillas deben estar cubiertos para entrar a la basílica',
+      'Las mochilas grandes no están permitidas y no hay consigna disponible, viaja ligero',
+      'Puedes tomar todas las fotos que quieras, pero recuerda que el uso de flash está estrictamente prohibido'
+    ],
+    
+    accessibility: 'Accesible planta baja. Torres NO accesibles silla ruedas.',
+    duration: '1.5-2 horas (3 horas con torres)',
+    
+    weather: { temp: 16, condition: 'Soleado', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'acropolis',
+    name: 'Acrópolis de Atenas',
+    city: 'Atenas',
+    country: 'Grecia',
+    continent: 'Europa',
+    flag: '🇬🇷',
+    coordinates: { lat: 37.9715, lon: 23.7267 },
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Acr%C3%B3polis_de_Atenas',
+      en: 'https://en.wikipedia.org/wiki/Acropolis_of_Athens',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%A7%D7%A8%D7%95%D7%A4%D7%95%D7%9C%D7%99%D7%A1_%D7%A9%D7%9C_%D7%90%D7%AA%D7%95%D7%A0%D7%94'
+    },
+    category: 'Sitio Arqueológico',
+    
+    description: 'Ciudadela antigua en colina rocosa con el Partenón, templo dedicado a Atenea (447-432 a.C.). Símbolo de la civilización occidental.',
+    
+    mustKnow: [
+      'Fue construida durante la Edad de Oro de Atenas en el siglo V a.C., bajo el liderazgo de Pericles',
+      'El majestuoso Partenón fue dedicado a Atenea, diosa de la sabiduría y protectora de la ciudad',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1987, reconociendo su valor universal excepcional',
+      'Ha sufrido daños significativos a lo largo de los siglos debido a guerras, terremotos y la contaminación atmosférica',
+      'Muchas de sus esculturas originales se encuentran en el Museo Británico de Londres, lo que genera una controversia internacional sobre su repatriación'
+    ],
+    
+    whatToDo: [
+      'Contempla el imponente Partenón, el templo principal y símbolo máximo de la arquitectura clásica griega',
+      'Visita el Erecteion y admira las famosas Cariátides, las columnas con forma de mujeres que sostienen el pórtico',
+      'Descubre el pequeño pero elegante Templo de Atenea Niké, dedicado a la victoria',
+      'Atraviesa los Propileos, la monumental entrada ceremonial a la Acrópolis',
+      'Explora el Teatro de Dionisio al pie de la colina, considerado la cuna del teatro occidental',
+      'No te pierdas el Nuevo Museo de la Acrópolis, una experiencia absolutamente IMPERDIBLE que contextualiza toda tu visita'
+    ],
+    
+    howToGetThere: {
+      metro: ['Línea 2 (roja): Acropoli'],
+      bus: ['Líneas 230, 550'],
+      walking: '15-20 min desde Plaza Syntagma',
+      parking: 'Evitar auto. Parking limitado cerca'
+    },
+    
+    tickets: {
+      adult: '€20 (€10 invierno nov-mar)',
+      reduced: '€10 (estudiantes)',
+      free: '25 de marzo, 18 de mayo, último fin de semana de sept',
+      combo: '€30 (Acrópolis + 6 sitios arqueológicos, válido 5 días)',
+      museo: '€15 adicional'
+    },
+    
+    bestTime: {
+      season: 'Primavera (abril-mayo) u otoño (sept-oct)',
+      timeOfDay: '8 AM apertura o después 5 PM',
+      avoid: 'Verano mediodía (mármol refleja calor, 40°C+)'
+    },
+    
+    nearby: [
+      'Nuevo Museo de la Acrópolis (obligatorio)',
+      'Ágora Antigua',
+      'Barrio Plaka (calles pintorescas)',
+      'Colina Filopapo (mejores vistas)',
+      'Teatro de Herodes Ático'
+    ],
+    
+    tips: [
+      'Ve TEMPRANO (8 AM) - calor brutal después',
+      'Lleva agua, sombrero, protector solar',
+      'Calzado antideslizante (mármol resbaladizo)',
+      'Tickets online para evitar fila',
+      'Combo 5 días vale la pena',
+      'Museo Acrópolis es obligatorio',
+      'Pocas sombras, prepárate para sol'
+    ],
+    
+    accessibility: 'Camino pavimentado pero empinado. Ascensor disponible.',
+    duration: '2 horas (Acrópolis), +1.5 horas (museo)',
+    
+    weather: { temp: 20, condition: 'Soleado', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'venecia-canales',
+    name: 'Canales de Venecia',
+    city: 'Venecia',
+    country: 'Italia',
+    continent: 'Europa',
+    flag: '🇮🇹',
+    coordinates: { lat: 45.4408, lon: 12.3155 },
+    category: 'Ciudad / Experiencia',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Venecia',
+      en: 'https://en.wikipedia.org/wiki/Venice',
+      he: 'https://he.wikipedia.org/wiki/%D7%95%D7%A0%D7%A6%D7%99%D7%94'
+    },
+    
+    description: 'Ciudad única construida sobre 118 islas con 150 canales y 400 puentes. Sin autos, solo góndolas y vaporettos.',
+    
+    mustKnow: [
+      'Fue fundada en el siglo V como refugio de las invasiones bárbaras, convirtiéndose en una potencia marítima medieval',
+      'Esta ciudad única está construida sobre 118 pequeñas islas conectadas por más de 400 puentes históricos',
+      'El Gran Canal es su arteria principal, serpenteando 3.8 kilómetros a través del corazón de la ciudad',
+      'Venecia se hunde lentamente a un ritmo de 1-2 milímetros por año debido al hundimiento del suelo y el aumento del nivel del mar',
+      'Su población ha disminuido drásticamente de 175,000 habitantes en 1950 a apenas 50,000 en la actualidad',
+      'Está declarada Patrimonio de la Humanidad por la UNESCO, pero figura en la lista de sitios en peligro debido a las inundaciones y el turismo masivo'
+    ],
+    
+    whatToDo: [
+      'Disfruta de un romántico paseo en góndola tradicional recorriendo los canales más pintorescos (€80-100 por 30 minutos)',
+      'Visita la majestuosa Plaza San Marcos y la impresionante Basílica con sus mosaicos dorados bizantinos',
+      'Explora el histórico Palacio Ducal (Palazzo Ducale), antiguo centro del poder de la República de Venecia',
+      'Cruza el icónico Puente de Rialto, el más antiguo y fotografiado que atraviesa el Gran Canal',
+      'Haz excursiones a las islas cercanas: Murano famosa por su vidrio soplado artesanal, y Burano por sus casas de colores vibrantes',
+      'Piérdete deliberadamente en los estrechos callejones sin seguir el mapa, es cuando descubrirás la Venecia más auténtica'
+    ],
+    
+    howToGetThere: {
+      train: 'Estación Santa Lucia (llegada desde toda Europa)',
+      bus: 'Piazzale Roma (terminal buses)',
+      airport: 'Marco Polo Airport + water taxi o bus',
+      car: 'Aparcar en Tronchetto o Piazzale Roma (€30/día)',
+      vaporetto: 'Líneas 1 y 2 (€9.50 por viaje, €25 día)'
+    },
+    
+    tickets: {
+      vaporetto_single: '€9.50 (75 min)',
+      vaporetto_day: '€25',
+      gondola: '€80 (día) / €100 (noche) - 30 min',
+      museums_pass: '€30 (11 museos cívicos)',
+      church_pass: '€12 (16 iglesias)'
+    },
+    
+    bestTime: {
+      season: 'Abril-mayo o sept-oct (menos turistas)',
+      timeOfDay: 'Amanecer o atardecer para fotos',
+      avoid: 'Verano y Carnaval (imposiblemente lleno), Acqua Alta nov-feb'
+    },
+    
+    nearby: [
+      'Murano (vidrio soplado)',
+      'Burano (encaje y casas de colores)',
+      'Torcello (isla tranquila)',
+      'Lido (playa)',
+      'Verona (1.5h tren)'
+    ],
+    
+    tips: [
+      'NO vayas en julio-agosto (horda de cruceros)',
+      'Góndola es CARA, solo si vale para ti',
+      'Vaporetto Línea 1 es "góndola barata"',
+      'Come fuera de San Marcos (€30 café ahí)',
+      'Hostels/Airbnb más baratos que hoteles',
+      'Lleva calzado cómodo (caminarás mucho)',
+      'Acqua Alta inunda plazas (nov-feb)'
+    ],
+    
+    accessibility: 'Difícil con silla de ruedas (muchos puentes con escaleras).',
+    duration: '2-3 días mínimo',
+    
+    weather: { temp: 17, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== AMÉRICA =====
+  {
+    id: 'machu-picchu',
+    name: 'Machu Picchu',
+    city: 'Cusco',
+    country: 'Perú',
+    continent: 'América',
+    flag: '🇵🇪',
+    coordinates: { lat: -13.1631, lon: -72.5450 },
+    category: 'Sitio Arqueológico',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Machu_Picchu',
+      en: 'https://en.wikipedia.org/wiki/Machu_Picchu',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%A6%27%D7%95_%D7%A4%D7%99%D7%A7%D7%A6%27%D7%95'
+    },
+    
+    description: 'Ciudad inca del siglo XV en montañas de los Andes a 2,430m. Maravilla del Mundo y sitio más icónico de Sudamérica.',
+    
+    mustKnow: [
+      'Fue construida aproximadamente en 1450 bajo el mandato del emperador inca Pachacútec como residencia real y santuario religioso',
+      'Permaneció oculta durante siglos hasta que fue redescubierta por el explorador estadounidense Hiram Bingham en 1911',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, siendo el sitio arqueológico más emblemático de Sudamérica',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1983, reconociendo su extraordinario valor cultural',
+      'Se encuentra a 2,430 metros de altitud, curiosamente más bajo que la ciudad de Cusco que está a 3,400 metros',
+      'Su nombre significa "Montaña Vieja" en idioma quechua, refiriéndose al pico que domina el sitio'
+    ],
+    
+    whatToDo: [
+      'Recorre la asombrosa ciudadela completa dedicándole entre 2 y 4 horas para apreciar todos sus rincones',
+      'Sube a Huayna Picchu o a la Montaña Machu Picchu para obtener vistas panorámicas absolutamente espectaculares del complejo',
+      'Visita los lugares sagrados como el Templo del Sol, la Plaza Principal y el enigmático Intihuatana (reloj solar)',
+      'Captura la foto clásica desde el mirador principal, la imagen más icónica de Machu Picchu',
+      'Aventúrate hasta el Puente Inca si te sientes valiente, una experiencia opcional pero emocionante',
+      'Explora Aguas Calientes, el encantador pueblo base donde pasarás la noche antes o después de tu visita'
+    ],
+    
+    howToGetThere: {
+      train: 'Cusco → Ollantaytambo → Aguas Calientes (3.5h, $65-85)',
+      bus: 'Aguas Calientes → Machu Picchu (25 min, $12 subida + $12 bajada)',
+      hiking: 'Camino Inca (4 días) o Salkantay Trek (5 días)',
+      helicopter: '$500+ (muy caro, no común)'
+    },
+    
+    tickets: {
+      general: 'S/ 152 ($40) - circuito 1 y 2',
+      with_mountain: 'S/ 200 ($53) + Huayna Picchu/Montaña',
+      booking: 'OBLIGATORIO online 2-3 meses antes',
+      url: 'https://www.machupicchu.gob.pe',
+      limit: '4,500 visitantes/día en cupos horarios'
+    },
+    
+    bestTime: {
+      season: 'Mayo-sept (seco), abril-oct aceptable',
+      timeOfDay: '6 AM entrada (amanecer, menos gente)',
+      avoid: 'Dic-marzo (temporada de lluvias, Camino Inca cerrado feb)'
+    },
+    
+    nearby: [
+      'Valle Sagrado (Ollantaytambo, Pisac)',
+      'Cusco (capital inca)',
+      'Laguna Humantay',
+      'Montaña Arcoíris (Vinicunca)',
+      'Salineras de Maras'
+    ],
+    
+    tips: [
+      'RESERVA con 2-3 MESES (se agota)',
+      'Aclimátate en Cusco 2-3 días antes (altitud)',
+      'Lleva: agua, snacks, protector solar, repelente',
+      'NO hay baños dentro (ve antes)',
+      'Bastones de trekking permitidos (con punta goma)',
+      'Huayna Picchu = escaleras empinadas (no apto vértigo)',
+      'Pasaporte obligatorio (sellan como recuerdo)'
+    ],
+    
+    accessibility: 'NO accesible silla de ruedas. Terreno irregular y escaleras.',
+    duration: '1 día completo (incluye viaje desde Cusco)',
+    
+    weather: { temp: 16, condition: 'Nublado', icon: '☁️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'gran-canyon',
+    name: 'Gran Cañón',
+    city: 'Arizona',
+    country: 'Estados Unidos',
+    continent: 'América',
+    flag: '🇺🇸',
+    coordinates: { lat: 36.0544, lon: -112.1401 },
+    category: 'Naturaleza / Parque Nacional',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Ca%C3%B1%C3%B3n',
+      en: 'https://en.wikipedia.org/wiki/Grand_Canyon',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%A8%D7%A0%D7%93_%D7%A7%D7%A0%D7%99%D7%95%D7%9F'
+    },
+    
+    description: 'Cañón excavado por el Río Colorado durante 5-6 millones de años. 446 km de largo, hasta 29 km de ancho y 1,800m de profundidad.',
+    
+    mustKnow: [
+      'Esta maravilla geológica fue formada hace entre 5 y 6 millones de años por la incansable erosión del Río Colorado',
+      'Sus dimensiones son asombrosas: 446 kilómetros de largo, hasta 29 kilómetros de ancho y 1,800 metros de profundidad',
+      'Fue designado Parque Nacional en 1919, protegiendo este tesoro natural para las generaciones futuras',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, reconociendo su valor geológico único en el mundo',
+      'El South Rim (borde sur) permanece abierto durante todo el año y es el más visitado y accesible',
+      'El North Rim (borde norte) cierra de noviembre a mayo debido a las fuertes nevadas que hacen intransitables los accesos'
+    ],
+    
+    whatToDo: [
+      'Contempla las vistas desde Mather Point, el mirador clásico y más fotografiado del South Rim',
+      'Sube a la histórica Desert View Watchtower, una torre diseñada para ofrecer vistas panorámicas de 360 grados',
+      'Aventúrate por el Bright Angel Trail si quieres descender al fondo del cañón, pero prepárate para un desafío físico extremo',
+      'Camina sobre el Skywalk, una pasarela de vidrio que se proyecta sobre el abismo (requiere entrada adicional de $50)',
+      'Recorre Hermit Road al atardecer para presenciar cómo los colores del cañón se transforman con la luz dorada',
+      'Considera un tour en helicóptero para una perspectiva aérea inolvidable del cañón ($200-400)'
+    ],
+    
+    howToGetThere: {
+      car: 'Las Vegas: 4.5h (450 km) | Flagstaff: 1.5h (130 km)',
+      shuttle: 'Desde Flagstaff o Williams',
+      train: 'Grand Canyon Railway desde Williams ($70)',
+      airport: 'Flagstaff (más cercano) o Las Vegas'
+    },
+    
+    tickets: {
+      vehicle: '$35 (7 días)',
+      individual: '$20 (a pie/bici, 7 días)',
+      annual: '$70 (todos los parques nacionales)',
+      free_days: 'Algunos días al año (MLK Day, etc.)'
+    },
+    
+    bestTime: {
+      season: 'Sept-nov o marzo-mayo',
+      timeOfDay: 'Amanecer (Mather Point) o atardecer (Hopi Point)',
+      avoid: 'Julio-agosto (100°F+ en el fondo), invierno (nieve)'
+    },
+    
+    nearby: [
+      'Antelope Canyon',
+      'Horseshoe Bend',
+      'Sedona (rocas rojas)',
+      'Monument Valley',
+      'Route 66 (Williams)'
+    ],
+    
+    tips: [
+      'South Rim es más accesible (abierto todo año)',
+      'North Rim más remoto y fresco',
+      'NO bajes y subas mismo día (peligroso)',
+      'Lleva MUCHA agua si haces hiking',
+      'Altitude 2,100m (puede afectar)',
+      'Shuttle gratuito dentro del parque',
+      'Sunset increíble desde Hopi Point',
+      'Alojamiento dentro reservar con meses'
+    ],
+    
+    accessibility: 'Miradores principales accesibles. Trails NO.',
+    duration: '1 día (South Rim), 2-3 días (hiking)',
+    
+    weather: { temp: 15, condition: 'Soleado', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'cataratas-iguazu',
+    name: 'Cataratas del Iguazú',
+    city: 'Misiones / Paraná',
+    country: 'Argentina / Brasil',
+    continent: 'América',
+    flag: '🇦🇷🇧🇷',
+    coordinates: { lat: -25.6953, lon: -54.4367 },
+    category: 'Naturaleza',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA',
+      en: 'https://en.wikipedia.org/wiki/Iguazu_Falls',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%90%D7%99%D7%92%D7%95%D7%90%D7%A1%D7%95'
+    },
+    
+    description: '275 cascadas en frontera Argentina-Brasil. Más grandes que Niágara, más anchas que Victoria. "Garganta del Diablo" es la más impresionante.',
+    
+    mustKnow: [
+      'Este impresionante sistema está compuesto por 275 cascadas individuales que se extienden majestuosamente a lo largo de la frontera',
+      'El conjunto de cataratas abarca un ancho total de 2.7 kilómetros de pura belleza natural',
+      'Las caídas alcanzan alturas de hasta 82 metros, con la Garganta del Diablo siendo la más alta e impactante',
+      'Transportan más agua que las Cataratas del Niágara y las Cataratas Victoria combinadas',
+      'Fueron declaradas Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único',
+      'La primera dama Eleanor Roosevelt exclamó al verlas: "¡Pobre Niágara!" reconociendo su superioridad'
+    ],
+    
+    whatToDo: [
+      'Visita la espectacular Garganta del Diablo desde el lado argentino, una experiencia absolutamente IMPERDIBLE que te dejará sin aliento',
+      'Recorre las pasarelas superiores e inferiores que te permiten apreciar las cataratas desde múltiples perspectivas únicas',
+      'Atrévete con el Safari en lancha que te lleva directamente bajo las cascadas, prepárate para mojarte completamente',
+      'Experimenta la adrenalina de la Gran Aventura en gomón, navegando por los rápidos del río Iguazú',
+      'Explora el Sendero Macuco para observar la fascinante fauna selvática de la región',
+      'Cruza al lado brasileño para obtener la vista panorámica más fotogénica del conjunto completo de cataratas'
+    ],
+    
+    howToGetThere: {
+      flights: 'Buenos Aires → Iguazú (2h) | São Paulo → Foz (2h)',
+      bus: 'Puerto Iguazú (lado argentino) ↔ Foz do Iguaçu (lado brasileño)',
+      shuttle: 'Hoteles → parques (frecuente)',
+      border: 'Fácil cruzar frontera (llevar pasaporte)'
+    },
+    
+    tickets: {
+      argentina: '$15 USD (extranjeros)',
+      brasil: '$18 USD (Parque Nacional)',
+      both: 'Vale la pena visitar ambos lados',
+      boat: '$20 USD (Gran Aventura)'
+    },
+    
+    bestTime: {
+      season: 'Marzo-mayo o agosto-octubre',
+      timeOfDay: 'Mañana temprano (menos gente)',
+      avoid: 'Dic-feb (calor extremo 40°C, muy húmedo)',
+      water: 'Más agua en verano, menos en invierno'
+    },
+    
+    nearby: [
+      'Hito Tres Fronteras (Argentina-Brasil-Paraguay)',
+      'Parque das Aves (Brasil - santuario aves)',
+      'Ruinas jesuitas',
+      'Itaipú Dam (Brasil)',
+      'Duty Free (Paraguay)'
+    ],
+    
+    tips: [
+      'Visita AMBOS lados (diferente perspectiva)',
+      'Argentino = estar EN las cataratas (mejor)',
+      'Brasileño = vista panorámica (fotos increíbles)',
+      'Lleva impermeable para Garganta del Diablo',
+      'Ropa de cambio si haces safari en lancha',
+      'Zapatos antideslizantes (pasarelas mojadas)',
+      'Protector solar waterproof',
+      '2 días mínimo (1 por lado)'
+    ],
+    
+    accessibility: 'Pasarelas accesibles. Safari en lancha NO.',
+    duration: '1 día por lado (2 días total recomendado)',
+    
+    weather: { temp: 26, condition: 'Caluroso y húmedo', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'times-square',
+    name: 'Times Square',
+    city: 'Nueva York',
+    country: 'Estados Unidos',
+    continent: 'América',
+    flag: '🇺🇸',
+    coordinates: { lat: 40.7580, lon: -73.9855 },
+    category: 'Urbano / Experiencia',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Times_Square',
+      en: 'https://en.wikipedia.org/wiki/Times_Square',
+      he: 'https://he.wikipedia.org/wiki/%D7%98%D7%99%D7%99%D7%9E%D7%A1_%D7%A1%D7%A7%D7%95%D7%95%D7%90%D7%A8'
+    },
+    
+    description: 'Intersección icónica en Manhattan, "Cruce del Mundo". Pantallas LED gigantes, teatros de Broadway, energía 24/7.',
+    
+    mustKnow: [
+      'Originalmente era conocida como "Longacre Square" antes de su transformación en el icónico Times Square',
+      'Fue rebautizada en 1904 cuando el New York Times construyó su torre sede en la intersección',
+      'Recibe entre 300,000 y 400,000 peatones diariamente, convirtiéndola en una de las zonas más transitadas del mundo',
+      'La famosa celebración del Ball Drop de Año Nuevo atrae a más de 1 millón de personas cada 31 de diciembre',
+      'Se convirtió en zona completamente peatonal en 2009, eliminando el tráfico vehicular del área central',
+      'Permanece iluminada las 24 horas del día, los 7 días de la semana con deslumbrantes pantallas LED publicitarias'
+    ],
+    
+    whatToDo: [
+      'Toma fotografías épicas rodeado de las gigantescas pantallas LED que iluminan toda la plaza',
+      'Asiste a un espectacular show de Broadway en alguno de los históricos teatros que rodean la zona',
+      'Visita M&M\'s World, una tienda de 4 pisos dedicada enteramente a los famosos chocolates de colores',
+      'Explora las tiendas icónicas como Disney Store, Nike flagship y Hershey\'s Chocolate World',
+      'Disfruta de una comida única en Ellen\'s Stardust Diner donde los camareros son cantantes profesionales',
+      'Observa y fotografía a las coloridas estatuas vivientes, pero recuerda que esperan propina por las fotos'
+    ],
+    
+    howToGetThere: {
+      subway: ['N, Q, R, W, S, 1, 2, 3, 7 → Times Sq-42 St'],
+      walking: 'Centro de Manhattan, todo cerca',
+      bus: ['M7, M20, M42, M104'],
+      taxi: 'Evitar (tráfico horrible)'
+    },
+    
+    tickets: {
+      free: 'Gratis caminar y ver',
+      broadway: '$50-300 (TodayTix app para descuentos)',
+      attractions: 'M&M\'s, Madame Tussauds ~$30 c/u'
+    },
+    
+    bestTime: {
+      season: 'Todo el año (experiencia urbana)',
+      timeOfDay: 'Anochecer (pantallas se ven mejor)',
+      avoid: 'Año Nuevo si no quieres multitudes extremas',
+      nye: 'New Year\'s Eve = 1 millón de personas (llega 6 AM para lugar)'
+    },
+    
+    nearby: [
+      'Broadway Theaters',
+      'Rockefeller Center',
+      'Bryant Park',
+      'Grand Central Terminal',
+      'Empire State Building (15 min walk)',
+      'Central Park (15 min walk)'
+    ],
+    
+    tips: [
+      'Es una trampa turística pero vale la pena verlo',
+      'Restaurantes caros y mediocres (come fuera de TS)',
+      'Cuidado con personajes disfrazados (piden propina)',
+      'Pickpockets activos (cuidado bolsillos)',
+      'De noche es seguro (mucha gente y policía)',
+      'Mejor MIRAR que comprar (todo más caro)',
+      'TKTS booth para tickets Broadway descuento',
+      'Ve, toma fotos, y vete (no pases todo el día)'
+    ],
+    
+    accessibility: 'Completamente accesible (peatonal y plano).',
+    duration: '30 min - 1 hora (solo ver), +3 horas (Broadway)',
+    
+    weather: { temp: 12, condition: 'Frío', icon: '❄️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'cristo-redentor',
+    name: 'Cristo Redentor',
+    city: 'Río de Janeiro',
+    country: 'Brasil',
+    continent: 'América',
+    flag: '🇧🇷',
+    coordinates: { lat: -22.9519, lon: -43.2105 },
+    category: 'Monumento',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cristo_Redentor',
+      en: 'https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%99%D7%97_%D7%94%D7%9E%D7%A9%D7%97%D7%A8%D7%A8'
+    },
+    
+    description: 'Estatua Art Deco de 30m de Jesús en cima del Cerro Corcovado (710m). Símbolo de Brasil y una de las 7 Maravillas del Mundo Moderno.',
+    
+    mustKnow: [
+      'Fue inaugurado solemnemente el 12 de octubre de 1931 tras 9 años de construcción',
+      'La estatua mide 30 metros de altura, alcanzando 38 metros si se incluye el pedestal sobre el que se erige',
+      'Sus brazos extendidos abarcan una envergadura impresionante de 28 metros, simbolizando la acogida universal',
+      'Tiene un peso colosal de 635 toneladas, construida principalmente en concreto armado y piedra jabón',
+      'Fue elegida como una de las 7 Maravillas del Mundo Moderno en 2007 por votación popular mundial',
+      'Ofrece una vista panorámica de 360 grados absolutamente espectacular de toda la ciudad de Río de Janeiro'
+    ],
+    
+    whatToDo: [
+      'Sube hasta la cima del Corcovado utilizando el pintoresco tren cremallera o las vans oficiales',
+      'Maravíllate con la vista panorámica incomparable de Río, sus playas, la bahía y el Pan de Azúcar',
+      'Captura las fotografías icónicas posando junto al Cristo con los brazos abiertos',
+      'Explora el exuberante Parque Nacional Tijuca con sus senderos de hiking en la selva tropical urbana',
+      'Si tienes suerte, asiste a una de las misas dominicales que ocasionalmente se celebran a los pies de la estatua',
+      'No te pierdas el atardecer desde aquí, cuando el sol se pone sobre Río creando una atmósfera verdaderamente mágica'
+    ],
+    
+    howToGetThere: {
+      train: 'Tren Corcovado desde Cosme Velho (20 min, R$ 96.50)',
+      van: 'Vans oficiales desde Largo do Machado, Copacabana, Barra (R$ 79)',
+      hiking: 'Via Parque Lage (3h subida, gratis pero agotador)',
+      uber: 'No puede subir hasta arriba (solo hasta parking)'
+    },
+    
+    tickets: {
+      train: 'R$ 96.50 (~$19)',
+      van: 'R$ 79 (~$16)',
+      online: 'Compra online (evita fila)',
+      url: 'https://www.tremdocorcovado.rio'
+    },
+    
+    bestTime: {
+      season: 'Mayo-sept (menos lluvia)',
+      timeOfDay: 'Mañana temprano (8 AM) o atardecer',
+      avoid: 'Días nublados (no verás nada)'
+    },
+    
+    nearby: [
+      'Pan de Azúcar',
+      'Parque Nacional Tijuca',
+      'Parque Lage',
+      'Jardín Botánico',
+      'Playas: Copacabana, Ipanema'
+    ],
+    
+    tips: [
+      'Compra tickets online (fila de 1-2 horas si no)',
+      'Ve en día despejado (check pronóstico)',
+      'Mañana temprano menos lleno',
+      'Tren más cómodo que van',
+      'Lleva agua y protector solar',
+      'Puede hacer frío arriba (lleva chamarra)',
+      'Cuidado con monos (no alimentar)',
+      'Escaleras finales (115 escalones)'
+    ],
+    
+    accessibility: 'Ascensor y escaleras mecánicas hasta la base. Accesible.',
+    duration: '2-3 horas (incluye viaje)',
+    
+    weather: { temp: 28, condition: 'Caluroso', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== ASIA =====
+  {
+    id: 'taj-mahal',
+    name: 'Taj Mahal',
+    city: 'Agra',
+    country: 'India',
+    continent: 'Asia',
+    flag: '🇮🇳',
+    coordinates: { lat: 27.1751, lon: 78.0421 },
+    category: 'Monumento Histórico',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Taj_Mahal',
+      en: 'https://en.wikipedia.org/wiki/Taj_Mahal',
+      he: 'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%92%27_%D7%9E%D7%90%D7%94%D7%9C'
+    },
+    
+    description: 'Mausoleo de mármol blanco construido 1632-1653 por emperador Shah Jahan para su esposa Mumtaz Mahal. Obra maestra del arte mogol.',
+    
+    mustKnow: [
+      'Su construcción tomó 22 años, desde 1632 hasta 1653, requiriendo un esfuerzo monumental',
+      'Participaron más de 20,000 trabajadores artesanos de toda Asia en su elaboración',
+      'Está construido en mármol blanco inmaculado con intrincadas incrustaciones de piedras preciosas y semipreciosas',
+      'Fue declarado Patrimonio de la Humanidad por la UNESCO en 1983, reconociendo su belleza incomparable',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, siendo un símbolo eterno del amor',
+      'El mármol cambia mágicamente de color a lo largo del día: rosado al amanecer, blanco deslumbrante al mediodía, dorado al atardecer'
+    ],
+    
+    whatToDo: [
+      'Contempla el Taj Mahal al amanecer cuando la luz dorada crea una atmósfera verdaderamente mágica e inolvidable',
+      'Pasea por los simétricos jardines mogoles estilo Charbagh que simbolizan el paraíso terrenal',
+      'Visita la mezquita y la Casa de Huéspedes ubicadas a ambos lados del mausoleo principal',
+      'Acércate al río Yamuna para obtener una perspectiva diferente de la vista trasera del monumento',
+      'Explora el impresionante Fuerte de Agra ubicado a solo 2 kilómetros de distancia',
+      'Captura las mejores fotografías desde Mehtab Bagh, el jardín situado al otro lado del río que ofrece vistas perfectas'
+    ],
+    
+    howToGetThere: {
+      train: 'Delhi → Agra: 2-3h (Gatimaan Express recomendado)',
+      car: 'Delhi por autopista: 3-4h (230 km)',
+      flight: 'No hay aeropuerto comercial en Agra',
+      local: 'Auto-rickshaw o taxi desde estación'
+    },
+    
+    tickets: {
+      foreigner: '₹1,100 (~$13)',
+      indian: '₹50',
+      free: 'Menores 15 años',
+      booking: 'Online o taquilla (filas)',
+      closed: 'Viernes (mezquita activa)',
+      url: 'https://www.tajmahal.gov.in'
+    },
+    
+    bestTime: {
+      season: 'Oct-marzo (clima fresco)',
+      timeOfDay: 'Amanecer (6 AM) - mágico',
+      avoid: 'Abril-junio (45°C+), monzón julio-sept'
+    },
+    
+    nearby: [
+      'Fuerte de Agra',
+      'Fatehpur Sikri (40 km)',
+      'Tumba de Itimad-ud-Daulah (Baby Taj)',
+      'Mehtab Bagh (vista del Taj)',
+      'Delhi (230 km) y Jaipur (240 km)'
+    ],
+    
+    tips: [
+      'Ve al AMANECER (menos gente, mejor luz)',
+      'Prohibido comida, trípodes, drones',
+      'Cubrezapatos incluidos (mármol)',
+      'Contrata guía (₹500-1000, vale la pena)',
+      'Cuidado con estafadores fuera',
+      'Lleva solo lo básico (seguridad estricta)',
+      'Luna llena = apertura nocturna especial'
+    ],
+    
+    accessibility: 'Rampa y silla de ruedas disponible. Piso de mármol liso.',
+    duration: '2-3 horas',
+    
+    weather: { temp: 22, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'gran-muralla-china',
+    name: 'Gran Muralla China',
+    city: 'Pekín',
+    country: 'China',
+    continent: 'Asia',
+    flag: '🇨🇳',
+    coordinates: { lat: 40.4319, lon: 116.5704 },
+    category: 'Monumento Histórico',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Muralla_China',
+      en: 'https://en.wikipedia.org/wiki/Great_Wall_of_China',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%97%D7%95%D7%9E%D7%94_%D7%94%D7%A1%D7%99%D7%A0%D7%99%D7%AA'
+    },
+    
+    description: 'Sistema de fortificaciones de 21,000 km construido desde siglo VII a.C. hasta siglo XVII. La estructura humana más larga del mundo.',
+    
+    mustKnow: [
+      'Se extiende por más de 21,000 kilómetros a través del norte de China, siendo la estructura humana más extensa jamás construida',
+      'Su construcción tomó más de 2,000 años, desde el siglo VII a.C. hasta el siglo XVII, involucrando a millones de trabajadores',
+      'La mayor parte de la muralla que vemos hoy fue construida durante la Dinastía Ming entre 1368 y 1644',
+      'Fue declarada Patrimonio de la Humanidad por la UNESCO en 1987, reconociendo su valor histórico único',
+      'Contrario al mito popular, NO es visible desde el espacio a simple vista, según han confirmado los astronautas',
+      'Las secciones mejor preservadas y más visitadas se encuentran en los alrededores de Pekín'
+    ],
+    
+    whatToDo: [
+      'Visita Badaling, la sección más turística y accesible, ideal si tienes tiempo limitado o movilidad reducida',
+      'Explora Mutianyu, menos concurrida que Badaling y con un divertido tobogán alpino para bajar',
+      'Recorre Jinshanling para hacer senderismo en una de las secciones más fotogénicas y dramáticas',
+      'Experimenta Simatai de noche, cuando la muralla está iluminada creando una atmósfera espectacular',
+      'Aventúrate a Jiankou si buscas autenticidad, una sección salvaje y NO restaurada para excursionistas experimentados',
+      'Descubre Huanghuacheng donde la muralla literalmente toca el agua de un hermoso lago'
+    ],
+    
+    howToGetThere: {
+      badaling: 'Tren S2 desde Pekín Norte (1.5h, ¥6)',
+      mutianyu: 'Bus 916 + taxi, o tour (2h)',
+      tour: 'Tours desde Pekín $40-80',
+      car: 'Taxi privado (negociar precio)'
+    },
+    
+    tickets: {
+      badaling: '¥40 (~$5.5) + teleférico ¥140',
+      mutianyu: '¥45 + teleférico/tobogán ¥120',
+      jinshanling: '¥65',
+      simatai_night: '¥150 (especial)'
+    },
+    
+    bestTime: {
+      season: 'Abril-mayo u sept-oct',
+      timeOfDay: 'Mañana temprano (evitar multitudes)',
+      avoid: 'Feriados chinos (Año Nuevo, Golden Week)'
+    },
+    
+    nearby: [
+      'Ciudad Prohibida',
+      'Templo del Cielo',
+      'Palacio de Verano',
+      'Tumbas Ming',
+      'Hutongs de Pekín'
+    ],
+    
+    tips: [
+      'Mutianyu > Badaling (menos gente, más bonito)',
+      'Lleva agua y snacks (limitado en muralla)',
+      'Zapatos cómodos (escaleras empinadas)',
+      'Puede hacer frío en invierno (-10°C)',
+      'Secciones salvajes PELIGROSAS (Jiankou)',
+      'Tobogán en Mutianyu = diversión',
+      'Evita feriados chinos (enjambre humano)',
+      'Contrata tour o ve en transporte público'
+    ],
+    
+    accessibility: 'Badaling accesible. Otras secciones NO (escaleras empinadas).',
+    duration: '3-4 horas (más viaje ida/vuelta)',
+    
+    weather: { temp: 10, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'angkor-wat',
+    name: 'Angkor Wat',
+    city: 'Siem Reap',
+    country: 'Camboya',
+    continent: 'Asia',
+    flag: '🇰🇭',
+    coordinates: { lat: 13.4125, lon: 103.8670 },
+    category: 'Templo / Arqueología',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Angkor_Wat',
+      en: 'https://en.wikipedia.org/wiki/Angkor_Wat',
+      he: 'https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%92%D7%A7%D7%95%D7%A8_%D7%95%D7%95%D7%90%D7%98'
+    },
+    
+    description: 'Complejo de templos jemer del siglo XII. El monumento religioso más grande del mundo, símbolo de Camboya.',
+    
+    mustKnow: [
+      'Fue construido en el siglo XII bajo el reinado del rey Suryavarman II como su templo estatal y capital',
+      'Originalmente estaba dedicado al dios hindú Vishnu, aunque posteriormente se convirtió en templo budista',
+      'Es el monumento religioso MÁS GRANDE del mundo, cubriendo una superficie de aproximadamente 162 hectáreas',
+      'Declarado Patrimonio de la Humanidad por la UNESCO en 1992, siendo el símbolo nacional de Camboya',
+      'El complejo arqueológico de Angkor contiene más de 400 templos distribuidos en un área extensa',
+      'Representa el mejor ejemplo conservado de la arquitectura jemer clásica y su perfección estética'
+    ],
+    
+    whatToDo: [
+      'Presencia el amanecer en Angkor Wat reflejándose en el estanque frontal, una experiencia absolutamente ICÓNICA e imperdible',
+      'Explora Angkor Thom y el templo Bayon con sus 216 enigmáticas caras gigantes esculpidas mirándote desde todas direcciones',
+      'Visita Ta Prohm, el místico templo abrazado por enormes raíces de árboles centenarios, famoso por aparecer en Tomb Raider',
+      'Descubre Banteay Srei, conocido por sus extraordinarias tallas en piedra arenisca rosa de increíble detalle',
+      'Realiza el circuito pequeño si solo tienes 1 día para ver los templos más importantes',
+      'Dedica 2-3 días al circuito grande si quieres explorar el complejo completo con mayor profundidad'
+    ],
+    
+    howToGetThere: {
+      flight: 'Siem Reap International Airport',
+      tuk_tuk: '$15-20/día (forma más común)',
+      bike: '$2/día (solo si tienes energía)',
+      car: '$30-50/día con conductor',
+      from_town: '6 km de Siem Reap'
+    },
+    
+    tickets: {
+      one_day: '$37',
+      three_day: '$62 (uso en 10 días)',
+      seven_day: '$72 (uso en 1 mes)',
+      sunrise: 'Incluido (llega 5 AM)',
+      booking: 'Compra en taquilla con foto'
+    },
+    
+    bestTime: {
+      season: 'Nov-marzo (seco, fresco)',
+      timeOfDay: 'Amanecer 5:30 AM (Angkor Wat)',
+      avoid: 'Abril (45°C+), monzón junio-oct',
+      crowds: 'Evita feriados camboayanos'
+    },
+    
+    nearby: [
+      'Bayon (templo de caras)',
+      'Ta Prohm (árboles gigantes)',
+      'Banteay Srei',
+      'Tonlé Sap (lago flotante)',
+      'Pub Street Siem Reap (noche)'
+    ],
+    
+    tips: [
+      'Compra pase 3 días (vale la pena)',
+      'Contrata tuk-tuk por día ($15-20)',
+      'Amanecer en Angkor Wat = IMPERDIBLE',
+      'Lleva: agua, protector solar, sombrero',
+      'Dress code: hombros y rodillas cubiertos',
+      'Temprano menos calor y gente',
+      'Ta Prohm mejor 2-3 PM (luz)',
+      'Cuidado monos (roban comida)'
+    ],
+    
+    accessibility: 'Terreno irregular. Difícil silla de ruedas.',
+    duration: '3-4 días ideal (mínimo 1 día)',
+    
+    weather: { temp: 30, condition: 'Caluroso y húmedo', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'monte-fuji',
+    name: 'Monte Fuji',
+    city: 'Shizuoka / Yamanashi',
+    country: 'Japón',
+    continent: 'Asia',
+    flag: '🇯🇵',
+    coordinates: { lat: 35.3606, lon: 138.7274 },
+    category: 'Naturaleza / Montaña',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monte_Fuji',
+      en: 'https://en.wikipedia.org/wiki/Mount_Fuji',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A4%D7%95%D7%92%27%D7%99'
+    },
+    
+    description: 'Montaña sagrada y volcán activo de 3,776m. Símbolo de Japón, perfectamente simétrica, coronada de nieve.',
+    
+    mustKnow: [
+      'Con sus 3,776 metros de altitud, es la montaña más alta de todo Japón y su símbolo más reconocible',
+      'Es un volcán activo que tuvo su última erupción en 1707, aunque actualmente se considera de baja actividad',
+      'Fue inscrito como Patrimonio de la Humanidad por la UNESCO en 2013 como "sitio sagrado y fuente de inspiración artística"',
+      'Es considerado sagrado tanto en el sintoísmo como en el budismo, siendo un importante lugar de peregrinación',
+      'La escalada oficial solo está permitida durante julio y agosto cuando las condiciones climáticas son seguras',
+      'En días despejados es visible desde Tokio, a 100 kilómetros de distancia, creando una vista espectacular'
+    ],
+    
+    whatToDo: [
+      'Realiza la escalada hasta la cima durante la temporada oficial de julio a agosto para vivir una experiencia única',
+      'Presencia el amanecer desde la cumbre, conocido como "Goraiko", considerado una experiencia espiritual inolvidable',
+      'Visita la 5ta estación ubicada a 2,305 metros de altura, accesible en auto y punto de partida de la mayoría de escaladas',
+      'Explora los Lagos Fuji Five rodeando la montaña, siendo el Lago Kawaguchiko el más popular y fotogénico',
+      'Captura la foto icónica desde la Pagoda Chureito con el Monte Fuji majestuosamente de fondo',
+      'Aventúrate en el misterioso Bosque Aokigahara, conocido por su denso follaje y ambiente único'
+    ],
+    
+    howToGetThere: {
+      tokyo: 'Tren a Kawaguchiko (2h, ¥4,130) + bus',
+      bus: 'Shinjuku → 5ta estación (2.5h, ¥2,800)',
+      climbing: '5ta estación = punto de inicio',
+      best_view: 'Lago Kawaguchiko o Hakone'
+    },
+    
+    tickets: {
+      climbing_fee: '¥1,000 (voluntario pero esperado)',
+      fifth_station: 'Gratis',
+      hut_overnight: '¥8,000-12,000 (con comidas)',
+      kawaguchiko_ropeway: '¥900'
+    },
+    
+    bestTime: {
+      climbing: 'Julio-agosto SOLAMENTE',
+      viewing: 'Nov-feb (más despejado, nieve en cima)',
+      avoid: 'Junio-julio (temporada lluvias, nublado)',
+      cherry_blossom: 'Abril (Chureito pagoda con flores)'
+    },
+    
+    nearby: [
+      'Lagos Fuji Five',
+      'Hakone (onsen y vistas)',
+      'Pagoda Chureito',
+      'Aokigahara Forest',
+      'Gotemba Premium Outlets'
+    ],
+    
+    tips: [
+      'Escalada SOLO julio-agosto (resto cerrado/peligroso)',
+      'Ruta Yoshida (más popular)',
+      'Duerme en refugio de montaña (ver amanecer)',
+      'Lleva ropa abrigada (cima = 5°C verano)',
+      'Oxígeno limitado en cima',
+      'Bastón para sellos (recuerdo)',
+      'NO escales de noche sin experiencia',
+      'Para solo ver: Kawaguchiko perfecto'
+    ],
+    
+    accessibility: '5ta estación accesible. Escalada NO.',
+    duration: '6-10 horas subir + 3-5 bajar (o 2 días con pernocta)',
+    
+    weather: { temp: 5, condition: 'Frío en cima', icon: '🌤️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'petra',
+    name: 'Petra',
+    city: 'Wadi Musa',
+    country: 'Jordania',
+    continent: 'Asia',
+    flag: '🇯🇴',
+    coordinates: { lat: 30.3285, lon: 35.4444 },
+    category: 'Arqueología',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Petra',
+      en: 'https://en.wikipedia.org/wiki/Petra',
+      he: 'https://he.wikipedia.org/wiki/%D7%A4%D7%98%D7%A8%D7%94'
+    },
+    
+    description: 'Ciudad nabatea tallada en roca rosada ~300 a.C. "Ciudad Rosa" accesible por el Siq. Una de las 7 Maravillas del Mundo Moderno.',
+    
+    mustKnow: [
+      'Fue fundada por los nabateos alrededor del año 300 a.C. como su capital y centro comercial en las rutas de las especias',
+      'Toda la ciudad está tallada directamente en las paredes de roca arenisca de color rosa y rojo',
+      'Permaneció perdida para el mundo occidental hasta que fue redescubierta por el explorador suizo Johann Ludwig Burckhardt en 1812',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 1985, reconociendo su extraordinario valor arqueológico',
+      'Fue elegida como una de las 7 Maravillas del Mundo Moderno en 2007, siendo el orgullo de Jordania',
+      'El sitio arqueológico contiene más de 800 monumentos tallados, tumbas, templos y estructuras'
+    ],
+    
+    whatToDo: [
+      'Camina por el dramático Siq, un impresionante cañón de 1.2 kilómetros de longitud que sirve como entrada a la ciudad',
+      'Maravíllate con El Tesoro (Al-Khazneh), la fachada más icónica de Petra que aparece súbitamente al final del Siq',
+      'Explora la Calle de las Fachadas con sus numerosas tumbas monumentales talladas en la roca',
+      'Visita el imponente Teatro Romano excavado en la ladera de la montaña con capacidad para 3,000 espectadores',
+      'Sube los 800 escalones hasta el Monasterio (Ad-Deir), la estructura más grande de Petra con vistas espectaculares',
+      'Experimenta Petra by Night, donde el camino al Tesoro se ilumina con miles de velas (3 veces por semana)'
+    ],
+    
+    howToGetThere: {
+      amman: 'Bus JETT (3h, JD 10) o taxi privado',
+      aqaba: '2 horas (130 km)',
+      airport: 'Aeropuerto Queen Alia (Amman) más cercano',
+      town: 'Hoteles en Wadi Musa (caminando a entrada)'
+    },
+    
+    tickets: {
+      one_day: 'JD 50 (~$70) extranjeros',
+      two_day: 'JD 55',
+      three_day: 'JD 60',
+      jordan_pass: 'JD 70-80 (incluye visa + Petra 2-3 días)',
+      petra_night: 'JD 17 adicional'
+    },
+    
+    bestTime: {
+      season: 'Marzo-mayo o sept-nov',
+      timeOfDay: 'Amanecer (8 AM entrada, luz en Tesoro)',
+      avoid: 'Verano (40°C+ y sin sombra)'
+    },
+    
+    nearby: [
+      'Pequeña Petra',
+      'Wadi Rum (desierto, 1.5h)',
+      'Mar Muerto (3h)',
+      'Aqaba (playa, Mar Rojo)',
+      'Jerash (ruinas romanas)'
+    ],
+    
+    tips: [
+      'Compra Jordan Pass (ahorra dinero)',
+      'Llega temprano (9 AM ya está caliente)',
+      'Lleva MUCHA agua',
+      'Zapatos cómodos hiking',
+      'Monasterio = IMPERDIBLE (800 escalones)',
+      'Petra by Night bonito pero turístico',
+      'Burros/camellos disponibles (negocia precio)',
+      '2 días ideal para ver todo sin prisa'
+    ],
+    
+    accessibility: 'Entrada hasta Tesoro aceptable. Resto NO accesible (escaleras, terreno irregular).',
+    duration: '1 día mínimo (2 días ideal)',
+    
+    weather: { temp: 25, condition: 'Soleado y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== ÁFRICA =====
+  {
+    id: 'piramides-giza',
+    name: 'Pirámides de Giza',
+    city: 'El Cairo',
+    country: 'Egipto',
+    continent: 'África',
+    flag: '🇪🇬',
+    coordinates: { lat: 29.9792, lon: 31.1342 },
+    category: 'Arqueología',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Pir%C3%A1mides_de_Guiza',
+      en: 'https://en.wikipedia.org/wiki/Giza_pyramid_complex',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%99%D7%A8%D7%9E%D7%99%D7%93%D7%95%D7%AA_%D7%91%D7%92%D7%99%D7%96%D7%94'
+    },
+    
+    description: 'Únicas sobrevivientes de las 7 Maravillas del Mundo Antiguo. Pirámides de Keops, Kefrén y Micerinos (~2560 a.C.) y la Gran Esfinge.',
+    
+    mustKnow: [
+      'Fueron construidas alrededor del año 2560 a.C., hace más de 4,500 años durante el Reino Antiguo de Egipto',
+      'La Gran Pirámide de Keops medía originalmente 146 metros de altura, siendo la estructura más alta del mundo durante 3,800 años',
+      'Son la única de las Siete Maravillas del Mundo Antiguo que ha sobrevivido hasta nuestros días',
+      'Declaradas Patrimonio de la Humanidad por la UNESCO en 1979 como parte del complejo de las pirámides',
+      'La Gran Pirámide está compuesta por aproximadamente 2.3 millones de bloques de piedra, cada uno pesando entre 2 y 15 toneladas',
+      'La enigmática Gran Esfinge mide 73 metros de largo y 20 metros de alto, guardando las pirámides desde hace milenios'
+    ],
+    
+    whatToDo: [
+      'Explora las tres pirámides principales de los faraones Keops, Kefrén y Micerinos, cada una con su propia historia',
+      'Aventúrate al interior de la Gran Pirámide para visitar la impresionante cámara del rey (entrada adicional requerida)',
+      'Contempla de cerca la misteriosa Gran Esfinge con cabeza humana y cuerpo de león',
+      'Visita el fascinante Museo del Barco Solar que exhibe una embarcación funeraria de 4,500 años perfectamente conservada',
+      'Date un paseo en camello alrededor de las pirámides, una experiencia típicamente turística pero divertida',
+      'Asiste al espectáculo nocturno de luz y sonido que narra la historia de los faraones'
+    ],
+    
+    howToGetThere: {
+      cairo: 'Uber/taxi desde centro (30-40 min)',
+      metro: 'M2 hasta Giza + micro/taxi',
+      bus: 'Bus 355 o 357 desde Tahrir',
+      tour: 'Tours desde hoteles ($40-60)'
+    },
+    
+    tickets: {
+      complex: 'EGP 540 (~$11)',
+      inside_kheops: 'EGP 900 adicional',
+      inside_khafre: 'EGP 100 adicional',
+      solar_boat: 'EGP 100',
+      student: '50% descuento con ISIC'
+    },
+    
+    bestTime: {
+      season: 'Nov-febrero (fresco)',
+      timeOfDay: 'Amanecer (8 AM) o atardecer',
+      avoid: 'Mayo-agosto (45°C+, insoportable)'
+    },
+    
+    nearby: [
+      'Saqqara (pirámide escalonada)',
+      'Memphis (antigua capital)',
+      'Museo Egipcio (Cairo)',
+      'Khan el-Khalili (bazar)',
+      'Cairo Islámico'
+    ],
+    
+    tips: [
+      'Ve TEMPRANO (8 AM, antes del calor)',
+      'Contrata guía oficial (evita estafadores)',
+      'Negocia TODO (camellos, recuerdos)',
+      'No aceptes "regalos gratis" (trampa)',
+      'Lleva agua, sombrero, protector solar',
+      'Interior de pirámides = claustrofóbico',
+      'Cuidado con vendedores agresivos',
+      'Dress modesto (respeto cultura)'
+    ],
+    
+    accessibility: 'Terreno de arena. Interior pirámides NO accesible (pasillos estrechos).',
+    duration: '3-4 horas (medio día)',
+    
+    weather: { temp: 20, condition: 'Templado y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'kilimanjaro',
+    name: 'Monte Kilimanjaro',
+    city: 'Moshi',
+    country: 'Tanzania',
+    continent: 'África',
+    flag: '🇹🇿',
+    coordinates: { lat: -3.0674, lon: 37.3556 },
+    category: 'Naturaleza / Montaña',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Kilimanjaro',
+      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A7%D7%99%D7%9C%D7%99%D7%9E%D7%A0%D7%92%27%D7%90%D7%A8%D7%95'
+    },
+    
+    description: 'Montaña más alta de África (5,895m). Volcán inactivo con glaciares en la cima. Escalable sin experiencia técnica.',
+    
+    mustKnow: [
+      'Con sus 5,895 metros de altura (19,341 pies), es la montaña más alta del continente africano y su pico más emblemático',
+      'Es la montaña independiente (no forma parte de una cordillera) más alta del mundo, elevándose solitariamente sobre la sabana',
+      'Está compuesta por tres conos volcánicos dormidos: Kibo (el más alto), Mawenzi y Shira, cada uno con su propia historia geológica',
+      'Sus glaciares milenarios en la cumbre están desapareciendo rápidamente debido al cambio climático, pudiendo extinguirse en décadas',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único que va desde selva tropical hasta desierto alpino',
+      'No requiere habilidades técnicas de escalada, lo que lo hace accesible para personas en buena condición física sin experiencia montañera previa'
+    ],
+    
+    whatToDo: [
+      'Embárcate en la aventura de escalar hasta Uhuru Peak, el punto más alto de África, para vivir una experiencia inolvidable',
+      'Elige la Ruta Marangu de 5-6 días, conocida como la "ruta Coca-Cola" por ser la más establecida con cabañas',
+      'Opta por la Ruta Machame de 6-7 días, considerada la más escénica con vistas espectaculares y paisajes variados',
+      'Considera la Ruta Lemosho de 7-8 días que ofrece la mejor aclimatación y las mayores tasas de éxito para alcanzar la cumbre',
+      'Complementa tu aventura con un safari en Arusha para ver la vida salvaje africana después de tu escalada',
+      'Visita las plantaciones de café alrededor de Moshi para conocer el proceso del café tanzano y relajarte post-escalada'
+    ],
+    
+    howToGetThere: {
+      flight: 'Kilimanjaro Airport (JRO)',
+      moshi: 'Base town, hoteles y operadores',
+      arusha: '1.5h de Moshi (alternativa)',
+      tanzania_visa: '$50-100 en llegada'
+    },
+    
+    tickets: {
+      park_fees: '$800-900 (solo fees, 6 días)',
+      total_climb: '$1,500-3,000 (incluye guía, porteadores, comida)',
+      mandatory: 'Guía obligatorio (no puedes ir solo)',
+      tip: '$200-300 propinas esperadas (guías/porteadores)'
+    },
+    
+    bestTime: {
+      season: 'Enero-marzo o junio-octubre (seco)',
+      avoid: 'Abril-mayo (lluvias fuertes)',
+      summit_night: '-20°C en cima'
+    },
+    
+    nearby: [
+      'Parque Nacional Arusha',
+      'Cráter Ngorongoro',
+      'Serengeti',
+      'Lago Manyara',
+      'Zanzibar (post-escalada descanso)'
+    ],
+    
+    tips: [
+      'Entrena 3-6 meses antes (cardio)',
+      'Aclimatación = clave del éxito (60-70% llegan)',
+      'Rutas más largas = mejor aclimatación',
+      'Machame más bonita que Marangu',
+      'Lleva ropa térmica (-20°C en cima)',
+      'Mal de altura es REAL (pole pole = despacio)',
+      'Diamox ayuda (consulta médico)',
+      'Propina guías es obligatoria culturalmente'
+    ],
+    
+    accessibility: 'NO accesible. Requiere buena condición física.',
+    duration: '5-8 días según ruta',
+    
+    weather: { temp: -10, condition: 'Frío en cima', icon: '❄️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'cataratas-victoria',
+    name: 'Cataratas Victoria',
+    city: 'Livingstone / Victoria Falls',
+    country: 'Zambia / Zimbabue',
+    continent: 'África',
+    flag: '🇿🇲🇿🇼',
+    coordinates: { lat: -17.9244, lon: 25.8567 },
+    category: 'Naturaleza',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria',
+      en: 'https://en.wikipedia.org/wiki/Victoria_Falls',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94'
+    },
+    
+    description: 'Una de las cataratas más grandes del mundo. 1,708m de ancho, 108m de altura. "El Humo que Truena" (nombre local).',
+    
+    mustKnow: [
+      'Miden 1,708 metros de ancho y 108 metros de altura, siendo una de las cortinas de agua más grandes y espectaculares del planeta',
+      'Son alimentadas por el poderoso río Zambeze que se precipita en el desfiladero creando una nube de vapor visible a kilómetros',
+      'Declaradas Patrimonio de la Humanidad por la UNESCO, reconociendo su belleza natural extraordinaria',
+      'Fueron "descubiertas" para el mundo occidental por el explorador David Livingstone en 1855, quien las nombró en honor a la Reina Victoria',
+      'El mayor caudal de agua ocurre entre marzo y mayo, cuando hasta 500 millones de litros caen por minuto',
+      'Durante noviembre y diciembre el caudal es menor, pero paradójicamente es el mejor momento para apreciar completamente la formación geológica',
+      'Su nombre local en idioma Lozi es "Mosi-oa-Tunya", que significa "El Humo que Truena", describiendo perfectamente el fenómeno'
+    ],
+    
+    whatToDo: [
+      'Recorre los senderos panorámicos desde el lado de Zambia o Zimbabue, cada uno ofreciendo perspectivas únicas e impresionantes',
+      'Atrévete a nadar en la Devil\'s Pool, una piscina natural al borde mismo de la catarata (solo septiembre-diciembre cuando el agua es baja)',
+      'Experimenta la adrenalina del bungee jumping desde el puente Victoria Falls, saltando 111 metros hacia el desfiladero',
+      'Enfrenta los emocionantes rápidos clase V del río Zambeze en una aventura extrema de rafting',
+      'Sobrevuela las cataratas en helicóptero para apreciar su magnitud completa desde el aire ($160 por 15 minutos)',
+      'Disfruta de un romántico crucero al atardecer por el río Zambeze observando hipopótamos y cocodrilos'
+    ],
+    
+    howToGetThere: {
+      flights: 'Aeropuerto Livingstone (Zambia) o Victoria Falls (Zimbabue)',
+      border: 'Puente entre países (fácil cruzar)',
+      from_town: 'Livingstone o Victoria Falls town'
+    },
+    
+    tickets: {
+      zambia: '$20 USD',
+      zimbabwe: '$30 USD',
+      both: '$50 (visa KAZA - ambos lados)',
+      devils_pool: '$130-150',
+      helicopter: '$160 (15 min)',
+      bungee: '$160'
+    },
+    
+    bestTime: {
+      season: 'Feb-mayo (máximo agua, mucho spray)',
+      low_water: 'Sept-dic (mejor para Devil\'s Pool)',
+      avoid: 'Agosto (muy seco, poco impresionante)'
+    },
+    
+    nearby: [
+      'Chobe National Park (Botsuana)',
+      'Hwange National Park (Zimbabue)',
+      'Livingstone town (museo)',
+      'Río Zambeze (safaris)',
+      'Puente Victoria Falls (histórico)'
+    ],
+    
+    tips: [
+      'Ve lado de Zambia Y Zimbabue (diferente vista)',
+      'Zimbabue = mejores vistas (70% de catarata)',
+      'Zambia = puedes nadar en Devil\'s Pool',
+      'Lleva impermeable (spray te empapa)',
+      'Mejor: feb-abril (más agua, más spray)',
+      'Helicóptero = experiencia increíble',
+      'Combina con safari en Chobe',
+      'Visa KAZA cubre ambos países'
+    ],
+    
+    accessibility: 'Senderos pavimentados lado Zimbabue. Zambia más irregular.',
+    duration: '2-3 horas ver cataratas, 2-3 días para actividades',
+    
+    weather: { temp: 28, condition: 'Caluroso', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'table-mountain',
+    name: 'Table Mountain',
+    city: 'Ciudad del Cabo',
+    country: 'Sudáfrica',
+    continent: 'África',
+    flag: '🇿🇦',
+    coordinates: { lat: -33.9628, lon: 18.4098 },
+    category: 'Naturaleza / Montaña',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa',
+      en: 'https://en.wikipedia.org/wiki/Table_Mountain',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%94%D7%A9%D7%95%D7%9C%D7%97%D7%9F'
+    },
+    
+    description: 'Montaña icónica de cima plana que domina Ciudad del Cabo. 1,085m de altura. Parte de las 7 Maravillas Naturales.',
+    
+    mustKnow: [
+      'Se eleva majestuosamente a 1,085 metros sobre el nivel del mar, siendo el símbolo más reconocible de Ciudad del Cabo',
+      'Fue elegida como una de las 7 Nuevas Maravillas de la Naturaleza en 2011 por votación mundial',
+      'Su cima plana mide aproximadamente 3 kilómetros de largo por 1.5 kilómetros de ancho, creando una meseta natural única',
+      'El teleférico rotatorio gira 360 grados durante el ascenso, ofreciendo vistas panorámicas espectaculares a todos los pasajeros',
+      'Alberga más de 2,200 especies de plantas, muchas endémicas del fynbos, un tipo de vegetación único en el mundo',
+      'Es famosa por su característico "mantel" de nubes que cubre la cima cuando el viento del sureste sopla sobre la montaña'
+    ],
+    
+    whatToDo: [
+      'Sube cómodamente en el moderno teleférico rotatorio que te lleva a la cima en solo 5 minutos con vistas panorámicas',
+      'Desafíate con el hiking por Platteklip Gorge, la ruta más directa pero empinada que toma 2-3 horas de ascenso',
+      'Disfruta de las vistas de 360 grados de Ciudad del Cabo, el océano Atlántico y las montañas circundantes',
+      'Relájate con una comida o café en el restaurante de la cima mientras contemplas las vistas espectaculares',
+      'Complementa tu visita con una caminata a Lion\'s Head, la montaña vecina que ofrece perspectivas diferentes',
+      'Presencia un atardecer mágico desde la cima mientras el sol se hunde en el Océano Atlántico'
+    ],
+    
+    howToGetThere: {
+      cable_car: 'Lower Cableway Station',
+      uber: '15 min desde centro ($5-8)',
+      bus: 'MyCiTi bus Route 110',
+      hiking: 'Varios senderos desde ciudad'
+    },
+    
+    tickets: {
+      return_cable: 'R 430 (~$23) adulto',
+      one_way: 'R 240 (si bajas caminando)',
+      online: '15% descuento comprando online',
+      table_mountain_pass: 'R 550 (subidas ilimitadas 7 días)'
+    },
+    
+    bestTime: {
+      season: 'Oct-marzo (verano)',
+      timeOfDay: 'Mañana temprano (menos viento) o sunset',
+      avoid: 'Invierno (junio-agosto) = mucho viento y cerrado'
+    },
+    
+    nearby: [
+      'V&A Waterfront',
+      'Robben Island (prisión Mandela)',
+      'Cabo de Buena Esperanza',
+      'Camps Bay (playa)',
+      'Boulders Beach (pingüinos)'
+    ],
+    
+    tips: [
+      'Compra ticket online (descuento + evita fila)',
+      'Ve temprano (menos viento, mejor para teleférico)',
+      '"Mantel" de nubes = cerrado (check webcam)',
+      'Lleva chamarra (frío y viento arriba)',
+      'Si haces hiking: agua, protector solar',
+      'Teleférico cierra con viento fuerte',
+      'Sunset increíble (reserva ticket tarde)',
+      'Combina con pingüinos en Boulders Beach'
+    ],
+    
+    accessibility: 'Teleférico accesible. Hiking NO.',
+    duration: '2-3 horas (con teleférico), 4-5h (hiking)',
+    
+    weather: { temp: 18, condition: 'Ventoso', icon: '🌤️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'serengeti',
+    name: 'Parque Nacional Serengeti',
+    city: 'Arusha',
+    country: 'Tanzania',
+    continent: 'África',
+    flag: '🇹🇿',
+    coordinates: { lat: -2.3333, lon: 34.8333 },
+    category: 'Naturaleza / Safari',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Parque_nacional_del_Serengueti',
+      en: 'https://en.wikipedia.org/wiki/Serengeti_National_Park',
+      he: 'https://he.wikipedia.org/wiki/%D7%A1%D7%A8%D7%A0%D7%92%D7%98%D7%99'
+    },
+    
+    description: 'Ecosistema de 30,000 km² famoso por la Gran Migración (2 millones de animales). Safari africano por excelencia.',
+    
+    mustKnow: [
+      'Se extiende por 30,000 kilómetros cuadrados de sabana prístina, siendo uno de los ecosistemas más grandes de África',
+      'Es el escenario de la Gran Migración, donde más de 2 millones de ñus y cebras recorren las llanuras en busca de pastos frescos',
+      'Hogar de los Big Five africanos: león, leopardo, elefante africano, búfalo y rinoceronte negro',
+      'Declarado Patrimonio de la Humanidad por la UNESCO, protegiendo este ecosistema único y vital',
+      'Alberga la mayor concentración de leones de África con más de 3,000 individuos viviendo en el parque',
+      'Su nombre proviene del idioma maasai "Siringet" que significa "el lugar donde la tierra se extiende eternamente"'
+    ],
+    
+    whatToDo: [
+      'Embárcate en un emocionante game drive en vehículo 4x4 para observar la increíble vida salvaje en su hábitat natural',
+      'Presencia la espectacular Gran Migración durante junio y julio cuando millones de animales cruzan las llanuras',
+      'Experimenta un mágico safari en globo aerostático al amanecer con champagne al aterrizar ($599)',
+      'Observa el dramático cruce del río Mara donde cocodrilos esperan a los ñus durante julio y agosto',
+      'Visita una auténtica aldea Maasai para conocer la cultura y tradiciones de este pueblo guerrero',
+      'Combina tu safari con el impresionante Cráter Ngorongoro, una caldera volcánica llena de vida salvaje'
+    ],
+    
+    howToGetThere: {
+      flight: 'Kilimanjaro Airport → Arusha',
+      drive: 'Arusha → Serengeti (6-8h)',
+      fly_in: 'Vuelos chárter a pistas en parque',
+      combo: 'Ruta: Arusha → Ngorongoro → Serengeti'
+    },
+    
+    tickets: {
+      entry: '$70/día (extranjero adulto)',
+      vehicle: '$40/día',
+      total_safari: '$2,000-5,000 (3-5 días todo incluido)',
+      balloon: '$599',
+      camping: '$30-50 (público) | $200-1,000 (lodges)'
+    },
+    
+    bestTime: {
+      migration: 'Junio-julio (cruce río Grumeti)',
+      calving: 'Enero-febrero (nacimientos)',
+      dry: 'Junio-octubre (mejor para ver animales)',
+      avoid: 'Marzo-mayo (temporada lluvias, difícil acceso)'
+    },
+    
+    nearby: [
+      'Cráter Ngorongoro (IMPERDIBLE)',
+      'Garganta Olduvai (cuna humanidad)',
+      'Lago Manyara',
+      'Tarangire National Park',
+      'Zanzibar (después del safari)'
+    ],
+    
+    tips: [
+      'Mínimo 3 días para Serengeti',
+      'Combina con Ngorongoro (mejor ruta)',
+      'Balloon safari = CARO pero increíble',
+      'Gran Migración = timing específico',
+      'Lleva: binoculares, zoom camera, protector solar',
+      'Alojamiento: lodges > camping (comodidad)',
+      'Guía/conductor hace la diferencia',
+      'Enero-feb = nacimientos (depredadores activos)'
+    ],
+    
+    accessibility: 'Safaris adaptables para movilidad reducida.',
+    duration: '3-7 días ideal',
+    
+    weather: { temp: 25, condition: 'Cálido', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  // ===== OCEANÍA =====
+  {
+    id: 'opera-sydney',
+    name: 'Ópera de Sídney',
+    city: 'Sídney',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -33.8568, lon: 151.2153 },
+    category: 'Arquitectura',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney',
+      en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House',
+      he: 'https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%90%D7%95%D7%A4%D7%A8%D7%94_%D7%A9%D7%9C_%D7%A1%D7%99%D7%93%D7%A0%D7%99'
+    },
+    
+    description: 'Obra maestra arquitectónica de 1973 con techo de velas icónico. Centro de artes escénicas más famoso del mundo.',
+    
+    mustKnow: [
+      'Fue inaugurada oficialmente el 20 de octubre de 1973 por la Reina Isabel II, convirtiéndose instantáneamente en ícono mundial',
+      'Diseñada por el arquitecto danés Jørn Utzon, cuya visión revolucionaria cambió la arquitectura moderna para siempre',
+      'Declarada Patrimonio de la Humanidad por la UNESCO en 2007, reconociendo su diseño arquitectónico único e innovador',
+      'Su distintivo techo está compuesto por 1,056 "velas" de concreto prefabricado cubiertas con más de un millón de azulejos cerámicos suecos',
+      'La construcción tomó 10 años desde 1963 hasta 1973, enfrentando numerosos desafíos técnicos y de ingeniería',
+      'El costo final alcanzó los $102 millones de dólares australianos, superando dramáticamente el presupuesto inicial de solo $7 millones'
+    ],
+    
+    whatToDo: [
+      'Únete a un tour guiado de 1 hora para descubrir los secretos arquitectónicos y la fascinante historia de su construcción',
+      'Asiste a un espectáculo de ópera, ballet o teatro para experimentar la acústica excepcional de sus salas',
+      'Captura fotografías icónicas desde Circular Quay con el puente del puerto de Sídney de fondo',
+      'Disfruta de una elegante cena en el restaurante Bennelong ubicado dentro de las famosas velas',
+      'Reserva el exclusivo backstage tour para explorar áreas normalmente cerradas al público',
+      'Visita durante Vivid Sydney en mayo-junio cuando proyecciones luminosas transforman el edificio en arte digital'
+    ],
+    
+    howToGetThere: {
+      train: 'Circular Quay station (5 min walk)',
+      ferry: 'Circular Quay (pintoresco)',
+      bus: 'Múltiples rutas',
+      walking: '15 min desde The Rocks'
+    },
+    
+    tickets: {
+      tour: 'A$ 42 (~$28)',
+      show: 'A$ 80-300 según evento',
+      backstage: 'A$ 175',
+      free: 'Caminar alrededor gratis'
+    },
+    
+    bestTime: {
+      season: 'Todo el año',
+      timeOfDay: 'Amanecer, atardecer, o noche iluminada',
+      special: 'Vivid Sydney (mayo-junio) = proyecciones'
+    },
+    
+    nearby: [
+      'Sydney Harbour Bridge',
+      'The Rocks (barrio histórico)',
+      'Royal Botanic Gardens',
+      'Circular Quay',
+      'Darling Harbour',
+      'Taronga Zoo'
+    ],
+    
+    tips: [
+      'Tour vale la pena (historia fascinante)',
+      'Reserva shows con anticipación',
+      'Fotos mejores desde Mrs Macquarie\'s Chair',
+      'Gratis caminar y ver exterior',
+      'Vivid Sydney = increíble (proyecciones)',
+      'Comer en Opera Bar (vistas)',
+      'Llega en ferry (vista icónica)',
+      'Combina con Bridge Climb'
+    ],
+    
+    accessibility: 'Completamente accesible.',
+    duration: '1-2 horas (tour) o 3-4h (show + cena)',
+    
+    weather: { temp: 22, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'gran-barrera-coral',
+    name: 'Gran Barrera de Coral',
+    city: 'Cairns / Whitsundays',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -18.2871, lon: 147.6992 },
+    category: 'Naturaleza / Marina',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral',
+      en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%AA_%D7%94%D7%92%D7%93%D7%95%D7%9C%D7%94'
+    },
+    
+    description: 'Sistema de arrecifes más grande del mundo. 2,300 km de largo, visible desde el espacio. Patrimonio en peligro.',
+    
+    mustKnow: [
+      'Se extiende por 2,300 kilómetros a lo largo de la costa noreste de Australia, siendo la estructura viva más grande del planeta',
+      'Es el sistema de arrecifes de coral MÁS GRANDE del mundo, hogar de biodiversidad marina incomparable',
+      'Está compuesta por aproximadamente 3,000 arrecifes individuales y cientos de islas tropicales',
+      'Declarada Patrimonio de la Humanidad por la UNESCO, pero actualmente figura en la lista de sitios en peligro',
+      'Incluye más de 900 islas dispersas a lo largo de su extensión, muchas deshabitadas y prístinas',
+      'Es uno de los pocos organismos vivos visible desde el espacio, testimonio de su escala monumental',
+      'Enfrenta amenazas graves por el cambio climático, blanqueamiento de coral y contaminación, requiriendo urgente conservación'
+    ],
+    
+    whatToDo: [
+      'Experimenta el snorkeling para explorar los jardines de coral poco profundos y nadar entre peces tropicales de colores',
+      'Sumérgete en el buceo certificado PADI para descubrir formaciones coralinas profundas y vida marina más grande',
+      'Sobrevuela el arrecife en helicóptero para apreciar la magnitud y belleza del sistema desde una perspectiva aérea espectacular',
+      'Recorre el Great Barrier Reef Drive en la Isla Hamilton, una ruta panorámica con vistas impresionantes',
+      'Admira el famoso Heart Reef, una formación de coral natural en forma de corazón solo visible desde el aire',
+      'Relájate en Whitehaven Beach, considerada una de las playas de arena más blanca y pura del mundo'
+    ],
+    
+    howToGetThere: {
+      cairns: 'Base más popular (norte)',
+      port_douglas: '1h norte de Cairns (menos turístico)',
+      whitsundays: 'Airlie Beach (centro)',
+      boat: 'Tours diarios desde Cairns ($100-200)',
+      liveaboard: 'Cruceros 2-3 días ($500-1,000)'
+    },
+    
+    tickets: {
+      day_trip: 'A$ 150-250',
+      diving: 'A$ 80-150 extra',
+      scenic_flight: 'A$ 200-400',
+      liveaboard: 'A$ 600-1,500 (2-3 días)',
+      reef_tax: 'A$ 20 (conservación)'
+    },
+    
+    bestTime: {
+      season: 'Mayo-octubre (seco, mejor visibilidad)',
+      avoid: 'Nov-abril (temporada medusas, lluvias)',
+      water_temp: '22-28°C según temporada'
+    },
+    
+    nearby: [
+      'Cairns (ciudad base)',
+      'Daintree Rainforest',
+      'Kuranda (pueblo en montañas)',
+      'Islas Whitsundays',
+      'Whitehaven Beach'
+    ],
+    
+    tips: [
+      'Snorkeling > buceo (ambos ven igual)',
+      'Cairns = más opciones de tours',
+      'Port Douglas = menos gente',
+      'Lleva lycra/wetsuit (medusas nov-abril)',
+      'Dramamine si te mareas (mar puede ser bravo)',
+      'Vuelo escénico = CARO pero vale la pena',
+      'Liveaboard mejor para buceadores',
+      'Check clima (cancelan con mal tiempo)',
+      'Biodegradable sunscreen SOLAMENTE'
+    ],
+    
+    accessibility: 'Barcos adaptados disponibles. Snorkeling más accesible.',
+    duration: '1 día (tour) a 3 días (liveaboard)',
+    
+    weather: { temp: 26, condition: 'Tropical', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'milford-sound',
+    name: 'Milford Sound',
+    city: 'Fiordland',
+    country: 'Nueva Zelanda',
+    continent: 'Oceanía',
+    flag: '🇳🇿',
+    coordinates: { lat: -44.6719, lon: 168.6760 },
+    category: 'Naturaleza / Fiordo',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Milford_Sound',
+      en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%9C%D7%A4%D7%95%D7%A8%D7%93_%D7%A1%D7%90%D7%95%D7%A0%D7%93'
+    },
+    
+    description: 'Fiordo glaciar con acantilados de 1,200m, cascadas y vida marina. Llamado "octava maravilla del mundo" por Rudyard Kipling.',
+    
+    mustKnow: [
+      'Es un fiordo espectacular excavado por glaciares durante las eras de hielo hace miles de años',
+      'Sus dramáticos acantilados se elevan verticalmente hasta 1,200 metros directamente desde el agua del fiordo',
+      'Cuenta con cascadas permanentes como Stirling Falls y Bowen Falls, más cientos de cascadas temporales cuando llueve',
+      'Forma parte del Parque Nacional Fiordland, declarado Patrimonio de la Humanidad por la UNESCO',
+      'Recibe más de 200 días de lluvia al año, siendo uno de los lugares más húmedos de Nueva Zelanda',
+      'Fue descrito como la "octava maravilla del mundo" por el famoso escritor Rudyard Kipling tras su visita'
+    ],
+    
+    whatToDo: [
+      'Embárcate en un crucero panorámico de 1.5-2 horas navegando entre acantilados gigantes y cascadas espectaculares',
+      'Rema en kayak por las aguas tranquilas del fiordo para una experiencia más íntima y silenciosa con la naturaleza',
+      'Desafíate con el legendario Milford Track, considerado una de las mejores caminatas del mundo (4 días de trekking)',
+      'Sobrevuela el fiordo en un vuelo escénico desde Queenstown para apreciar la magnificencia desde el aire',
+      'Observa la abundante vida marina incluyendo focas neozelandesas, delfines Héctor y pingüinos de Fiordland',
+      'Visita el Underwater Observatory, un observatorio submarino único que te sumerge 10 metros bajo la superficie'
+    ],
+    
+    howToGetThere: {
+      drive: 'Te Anau: 2h (120 km) | Queenstown: 4h (290 km)',
+      tour: 'Bus tours desde Queenstown ($80-150)',
+      flight: 'Vuelo escénico + crucero ($500+)',
+      road: 'Ruta escénica increíble (túnel Homer)'
+    },
+    
+    tickets: {
+      cruise: 'NZ$ 90-150 (~$55-90)',
+      scenic_flight: 'NZ$ 400-600',
+      kayak: 'NZ$ 200',
+      milford_track: 'NZ$ 300+ (huts + transporte)'
+    },
+    
+    bestTime: {
+      season: 'Nov-abril (verano austral)',
+      avoid: 'Junio-agosto (nevado, caminos difíciles)',
+      rain: 'Lluvia = MÁS bonito (cascadas)',
+      crowds: 'Enero-feb más lleno'
+    },
+    
+    nearby: [
+      'Doubtful Sound (menos turístico)',
+      'Te Anau (pueblo base)',
+      'Mirror Lakes',
+      'Homer Tunnel',
+      'Queenstown (4h drive)'
+    ],
+    
+    tips: [
+      'Lluvia hace más bonito (cascadas)',
+      'Ve TEMPRANO (primeros cruceros, menos gente)',
+      'Crucero > kayak (ves más)',
+      'Drive escénico increíble',
+      'Lleva: chamarra, impermeable',
+      'Llena tanque en Te Anau (última gasolinera)',
+      'Avalanchas posibles invierno',
+      'Milford Track requiere reserva meses antes',
+      'Vuelo desde Queenstown = caro pero espectacular'
+    ],
+    
+    accessibility: 'Cruceros accesibles. Hiking NO.',
+    duration: '1 día (desde Queenstown) o 4 días (Milford Track)',
+    
+    weather: { temp: 14, condition: 'Lluvioso', icon: '🌧️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'uluru',
+    name: 'Uluru (Ayers Rock)',
+    city: 'Northern Territory',
+    country: 'Australia',
+    continent: 'Oceanía',
+    flag: '🇦🇺',
+    coordinates: { lat: -25.3444, lon: 131.0369 },
+    category: 'Naturaleza / Sagrado',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Uluru',
+      en: 'https://en.wikipedia.org/wiki/Uluru',
+      he: 'https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%95%D7%A8%D7%95'
+    },
+    
+    description: 'Monolito de arenisca sagrado de 348m. Sitio espiritual aborígen Anangu. Cambia de color con luz del día.',
+    
+    mustKnow: [
+      'Se eleva majestuosamente 348 metros sobre la llanura circundante del desierto rojo australiano',
+      'Tiene una circunferencia impresionante de 9.4 kilómetros en su base, siendo uno de los monolitos más grandes del mundo',
+      'La roca tiene una antigüedad estimada de 600 millones de años, siendo testigo de eras geológicas enteras',
+      'Es un sitio profundamente sagrado para el pueblo aborigen Anangu, custodios tradicionales de esta tierra',
+      'La escalada fue prohibida definitivamente en octubre de 2019 por respeto a su significado cultural y espiritual',
+      'Cambia dramáticamente de color a lo largo del día, mostrando tonos rojos, naranjas y púrpuras según la posición del sol'
+    ],
+    
+    whatToDo: [
+      'Camina el Base Walk, un sendero circular de 10.6 kilómetros que rodea completamente Uluru (3.5 horas)',
+      'Presencia el atardecer cuando Uluru se transforma en tonos rojos y naranjas brillantes, un espectáculo natural inolvidable',
+      'Madruga para ver el amanecer cuando la roca parece encenderse gradualmente con la primera luz del día',
+      'Visita Kata Tjuta (The Olgas) ubicada a 50 kilómetros, un conjunto de formaciones rocosas igualmente impresionantes',
+      'Experimenta la instalación artística Field of Light con miles de esferas luminosas iluminando el desierto nocturno',
+      'Únete a un tour cultural guiado por los Anangu para comprender el profundo significado espiritual del lugar'
+    ],
+    
+    howToGetThere: {
+      flight: 'Ayers Rock Airport (directo desde ciudades)',
+      drive: 'Alice Springs: 450 km (5h)',
+      resort: 'Yulara (pueblo turístico a 20 min)',
+      tour: 'Tours desde resort'
+    },
+    
+    tickets: {
+      park_entry: 'A$ 38 (3 días)',
+      cultural_tour: 'A$ 150-200',
+      field_of_light: 'A$ 45',
+      camel_tour: 'A$ 75',
+      helicopter: 'A$ 200-400'
+    },
+    
+    bestTime: {
+      season: 'Abril-octubre (fresco)',
+      timeOfDay: 'Sunset (color rojo-naranja increíble)',
+      avoid: 'Dic-feb (45°C+, insoportable)'
+    },
+    
+    nearby: [
+      'Kata Tjuta (The Olgas)',
+      'Kings Canyon (3h)',
+      'Alice Springs (5h)',
+      'West MacDonnell Ranges'
+    ],
+    
+    tips: [
+      'NO ESCALES (prohibido y irrespetuoso)',
+      'Sunset/sunrise = mejores momentos',
+      'Base Walk temprano (antes del calor)',
+      'Lleva: 3L agua, sombrero, protector solar',
+      'Respeta sitios sagrados (no fotos donde prohibido)',
+      'Alojamiento en Yulara (caro pero única opción)',
+      'Tour cultural con Anangu vale la pena',
+      'Field of Light (instalación) = bonito de noche',
+      'Combina con Kata Tjuta (mismo día)'
+    ],
+    
+    accessibility: 'Senderos pavimentados disponibles. Base Walk moderado.',
+    duration: '2-3 días (incluye Kata Tjuta)',
+    
+    weather: { temp: 30, condition: 'Caluroso y seco', icon: '☀️' },
+    lastUpdated: '2025-11-20'
+  },
+
+  {
+    id: 'hobbiton',
+    name: 'Hobbiton',
+    city: 'Matamata',
+    country: 'Nueva Zelanda',
+    continent: 'Oceanía',
+    flag: '🇳🇿',
+    coordinates: { lat: -37.8722, lon: 175.6833 },
+    category: 'Cine / Experiencia',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Hobbiton',
+      en: 'https://en.wikipedia.org/wiki/Hobbiton_Movie_Set',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%95%D7%91%D7%99%D7%98%D7%95%D7%9F_(%D7%A4%D7%9C%D7%98%D7%95)'
+    },
+    
+    description: 'Set de filmación permanente de El Señor de los Anillos y El Hobbit. 44 agujeros hobbit en Comarca preservada.',
+    
+    mustKnow: [
+      'Fue construido originalmente en 1999 para la trilogía de El Señor de los Anillos dirigida por Peter Jackson',
+      'Fue reconstruido permanentemente en 2011 para la trilogía de El Hobbit, convirtiéndose en atracción turística permanente',
+      'Cuenta con 44 agujeros hobbit meticulosamente construidos de diferentes tamaños para crear efectos de perspectiva',
+      'El set ocupa 5 hectáreas de colinas verdes onduladas que recrean perfectamente la Comarca de Tolkien',
+      'Los jardines son reales y se mantienen cuidadosamente durante todo el año por un equipo de jardineros dedicados',
+      'Incluye el icónico Green Dragon Inn completamente funcional donde puedes disfrutar de cerveza artesanal incluida en el tour'
+    ],
+    
+    whatToDo: [
+      'Únete al tour guiado de 2 horas que es OBLIGATORIO para visitar el set, conducido por guías expertos conocedores de la filmación',
+      'Explora los 44 agujeros hobbit fotografiándote en las icónicas puertas circulares de colores brillantes',
+      'Visita Bag End, la famosa casa de Bilbo y Frodo Baggins en lo alto de la colina con vistas espectaculares',
+      'Disfruta de una cerveza gratis en el acogedor Green Dragon Inn, reconstruido exactamente como aparece en las películas',
+      'Pasea por los exuberantes jardines de la Comarca admirando el Party Tree y las huertas de vegetales en miniatura',
+      'Fotografía el pintoresco molino de agua y el puente de piedra sobre el arroyo',
+      'Reserva el exclusivo Evening Banquet Tour para una cena festiva de hobbit con múltiples platos ($200)'
+    ],
+    
+    howToGetThere: {
+      auckland: '2.5h drive (175 km)',
+      rotorua: '1h drive',
+      matamata: 'Pueblo base (15 min)',
+      shuttle: 'Desde Matamata i-Site (incluido en tour)'
+    },
+    
+    tickets: {
+      adult: 'NZ$ 89 (~$54)',
+      youth: 'NZ$ 44.50',
+      child: 'Gratis (8 años o menos)',
+      evening_banquet: 'NZ$ 200+ (cena incluida)',
+      booking: 'OBLIGATORIO online (se llena)'
+    },
+    
+    bestTime: {
+      season: 'Todo el año',
+      timeOfDay: 'Mañana (mejor luz) o evening banquet',
+      avoid: 'Vacaciones escolares NZ (más niños)'
+    },
+    
+    nearby: [
+      'Waitomo Caves (glowworms, 1h)',
+      'Rotorua (geotérmica, 1h)',
+      'Auckland (2.5h)',
+      'Tauranga (playas, 1.5h)'
+    ],
+    
+    tips: [
+      'RESERVA con semanas de anticipación',
+      'Tour guiado es obligatorio (no puedes ir solo)',
+      'Cerveza en Green Dragon incluida',
+      'Jardines son REALES (jardineros tiempo completo)',
+      'Fans de LOTR = experiencia increíble',
+      'No-fans también lo disfrutan',
+      'Combina con Waitomo Caves',
+      'Evening Banquet = CARO pero especial',
+      'Zapatos cómodos (mucho caminar en pasto)'
+    ],
+    
+    accessibility: 'Caminos de pasto. Difícil silla de ruedas.',
+    duration: '2 horas (tour estándar), 4h (evening banquet)',
+    
+    weather: { temp: 18, condition: 'Templado', icon: '⛅' },
+    lastUpdated: '2025-11-20'
+  }
+];
+
+// Funciones helper
+export const getDestinationById = (id) => {
+  return mustSeeDestinations.find(dest => dest.id === id);
+};
+
+export const getDestinationsByContinent = (continent) => {
+  return mustSeeDestinations.filter(dest => dest.continent === continent);
+};
+
+export const searchDestinations = (query) => {
+  const lowerQuery = query.toLowerCase();
+  return mustSeeDestinations.filter(dest => 
+    dest.name.toLowerCase().includes(lowerQuery) ||
+    dest.city.toLowerCase().includes(lowerQuery) ||
+    dest.country.toLowerCase().includes(lowerQuery)
+  );
+};
+
+export const continents = ['Europa', 'América', 'Asia', 'África', 'Oceanía'];

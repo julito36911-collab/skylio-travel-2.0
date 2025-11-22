@@ -13,6 +13,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 48.8584, lon: 2.2945 },
     category: 'Monumento',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Torre_Eiffel',
+      en: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%92%D7%93%D7%9C_%D7%90%D7%99%D7%99%D7%A4%D7%9C'
+    },
+    
     description: 'Icono mundial de París, la "Dama de Hierro" de 330m de altura construida en 1889 para la Exposición Universal.',
     
     mustKnow: [

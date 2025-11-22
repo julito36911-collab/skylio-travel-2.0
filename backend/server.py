@@ -90,8 +90,8 @@ async def travel_assistant(query: TravelQuery):
                 detail="HUGGINGFACE_API_KEY not configured. Please add it to your .env file."
             )
         
-        # Hugging Face Inference API endpoint
-        api_url = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3.1-8B-Instruct"
+        # Hugging Face Inference API endpoint (updated URL)
+        api_url = "https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct"
         
         headers = {
             "Authorization": f"Bearer {hf_api_key}",

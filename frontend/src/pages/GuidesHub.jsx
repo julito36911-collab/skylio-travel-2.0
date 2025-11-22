@@ -219,27 +219,29 @@ function GuidesHub() {
           </button>
         </div>
 
-        {/* Search Bar with AI Button */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <div className="flex gap-3">
-            <input
-              type="text"
-              placeholder={t('guides.search', 'Buscar destino, ciudad o país...')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleAISearch()}
-              className="flex-1 px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button
-              onClick={handleAISearch}
-              disabled={aiLoading}
-              className="px-6 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold flex items-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-            >
-              <span className="text-xl">✨</span>
-              <span>{aiLoading ? t('guides.aiSearching', 'Buscando...') : t('guides.aiSearch', 'Buscar con IA')}</span>
-            </button>
+        {/* Search Bar with AI Button - Hidden for AI Assistant tab */}
+        {activeTab !== 'aiassistant' && (
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="flex gap-3">
+              <input
+                type="text"
+                placeholder={t('guides.search', 'Buscar destino, ciudad o país...')}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleAISearch()}
+                className="flex-1 px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                onClick={handleAISearch}
+                disabled={aiLoading}
+                className="px-6 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold flex items-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              >
+                <span className="text-xl">✨</span>
+                <span>{aiLoading ? t('guides.aiSearching', 'Buscando...') : t('guides.aiSearch', 'Buscar con IA')}</span>
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Continent Filter (para destinos y países) */}
         {(activeTab === 'destinations' || activeTab === 'countries') && (

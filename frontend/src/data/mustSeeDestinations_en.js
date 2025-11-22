@@ -794,8 +794,93 @@ export const mustSeeDestinations = [
     
     lastUpdated: '2025-11-20'
   },
+
   
-  { id: 'times-square', name: 'Times Square', city: 'New York', country: 'United States', continent: 'America', flag: '🇺🇸', coordinates: { lat: 40.7580, lon: -73.9855 }, category: 'City', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Times_Square', en: 'https://en.wikipedia.org/wiki/Times_Square', he: 'https://he.wikipedia.org/wiki/%D7%98%D7%99%D7%99%D7%9E%D7%A1_%D7%A1%D7%A7%D7%95%D7%95%D7%90%D7%A8' }, description: 'Iconic Manhattan intersection. Illuminated 24/7. Broadway epicenter and New Year celebration.', mustKnow: ['300,000-400,000 pedestrians daily', 'New Year Ball Drop attracts 1 million', 'Pedestrian zone since 2009'], whatToDo: ['Broadway show', 'M&M\'s World', 'Photos with giant screens'], tips: ['Very crowded always', 'Watch for pickpockets'], prices: { budget: '$60-100/day', medium: '$200-350/day', high: '$600+/day' }, bestTime: { season: 'Year-round', weather: 'Any', icon: '🌆' }, avoid: 'New Year (extremely crowded)', accessibility: 'Fully accessible', duration: '1-2 hours', nearby: ['Central Park', 'Empire State', 'Rockefeller Center'], transportation: { metro: 'Multiple lines', bus: 'Many routes' }, lastUpdated: '2025-11-20' },
+  {
+    id: 'times-square',
+    name: 'Times Square',
+    city: 'New York',
+    country: 'United States',
+    continent: 'America',
+    flag: '🇺🇸',
+    coordinates: { lat: 40.7580, lon: -73.9855 },
+    category: 'Urban / Experience',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Times_Square',
+      en: 'https://en.wikipedia.org/wiki/Times_Square'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=VctCDnYPdeU',
+      en: 'https://www.youtube.com/watch?v=7pcZURDhJk0'
+    },
+    
+    description: 'Iconic Manhattan intersection, "Crossroads of the World". Giant LED screens, Broadway theaters, 24/7 energy.',
+    
+    mustKnow: [
+      'Originally known as "Longacre Square" before its transformation into the iconic Times Square',
+      'Renamed in 1904 when the New York Times built its headquarters tower at the intersection',
+      'Receives between 300,000 and 400,000 pedestrians daily, making it one of the most trafficked areas in the world',
+      'The famous New Year\'s Eve Ball Drop attracts over 1 million people every December 31st',
+      'Became a completely pedestrian zone in 2009, eliminating vehicular traffic from the central area',
+      'Remains illuminated 24 hours a day, 7 days a week with dazzling LED advertising screens'
+    ],
+    
+    whatToDo: [
+      'Take epic photographs surrounded by the giant LED screens that illuminate the entire square',
+      'Attend a spectacular Broadway show at one of the historic theaters surrounding the area',
+      'Visit M&M\'s World, a 4-story store entirely dedicated to the famous colorful chocolates',
+      'Explore iconic stores like Disney Store, Nike flagship and Hershey\'s Chocolate World',
+      'Enjoy a unique meal at Ellen\'s Stardust Diner where the waiters are professional singers',
+      'Observe and photograph the colorful living statues, but remember they expect tips for photos'
+    ],
+    
+    howToGetThere: {
+      subway: 'N, Q, R, W, S, 1, 2, 3, 7 → Times Sq-42 St',
+      walking: 'Midtown Manhattan, everything close',
+      bus: 'M7, M20, M42, M104',
+      taxi: 'Avoid (terrible traffic)'
+    },
+    
+    tickets: {
+      free: 'Free to walk and see',
+      broadway: '$50-300 (TodayTix app for discounts)',
+      attractions: 'M&M\'s, Madame Tussauds ~$30 each'
+    },
+    
+    bestTime: {
+      season: 'Year-round (urban experience)',
+      timeOfDay: 'Evening (screens look better)',
+      avoid: 'New Year if you don\'t want extreme crowds',
+      nye: 'New Year\'s Eve = 1 million people (arrive 6 AM for spot)'
+    },
+    
+    nearby: [
+      'Broadway Theaters',
+      'Rockefeller Center',
+      'Bryant Park',
+      'Grand Central Terminal',
+      'Empire State Building (15 min walk)',
+      'Central Park (15 min walk)'
+    ],
+    
+    tips: [
+      'It\'s a tourist trap but worth seeing',
+      'Restaurants expensive and mediocre (eat outside TS)',
+      'Watch out for costumed characters (ask for tips)',
+      'Pickpockets active (watch your pockets)',
+      'At night it\'s safe (lots of people and police)',
+      'Better to LOOK than buy (everything more expensive)',
+      'TKTS booth for discount Broadway tickets',
+      'Go, take photos, and leave (don\'t spend all day)'
+    ],
+    
+    accessibility: 'Completely accessible (pedestrian and flat)',
+    duration: '30 min - 1 hour (just to see), +3 hours (Broadway)',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'angkor-wat', name: 'Angkor Wat', city: 'Siem Reap', country: 'Cambodia', continent: 'Asia', flag: '🇰🇭', coordinates: { lat: 13.4125, lon: 103.8670 }, category: 'Temple', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Angkor_Wat', en: 'https://en.wikipedia.org/wiki/Angkor_Wat', he: 'https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%92%D7%A7%D7%95%D7%A8_%D7%95%D7%95%D7%90%D7%98' }, description: '12th century Khmer temple complex. World\'s largest religious monument.', mustKnow: ['Built in 12th century', 'Largest religious monument', '400+ temples in complex'], whatToDo: ['Sunrise at Angkor Wat', 'Bayon temple', 'Ta Prohm (Tomb Raider)'], tips: ['Book 2-3 months advance', 'Hire guide'], prices: { budget: '$20-40/day', medium: '$60-120/day', high: '$200+/day' }, bestTime: { season: 'Nov-Feb (dry)', weather: 'Cool', icon: '☀️' }, avoid: 'April-May (extreme heat)', accessibility: 'Difficult, many stairs', duration: '2-3 days', nearby: ['Tonle Sap Lake', 'Pub Street'], transportation: { tuktuk: 'Main transport', bicycle: 'Available for rent' }, lastUpdated: '2025-11-20' },
   

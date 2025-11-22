@@ -148,6 +148,35 @@ test_plan:
   test_all: false
   test_priority: "sequential"
 
+  - task: "Destination Modal Crash Fix (English #11-25)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/GuidesHub.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Usuario reportó error 'Cannot convert undefined or null to object' al hacer clic en destinos #11-25 en inglés"
+      - working: true
+        agent: "main"
+        comment: "ARREGLADO: Agregadas validaciones condicionales en DestinationModal para whatToDo, howToGetThere, tickets, bestTime. Ahora se verifica que existan antes de renderizar."
+
+  - task: "Remove Hebrew Language Support"
+    implemented: true
+    working: true
+    file: "frontend/src/i18n/config.js, LanguageSwitcher.jsx, GuidesHub.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Eliminado soporte de hebreo: archivo translation.json, archivo countriesGuide_he.js, actualizado i18n config y LanguageSwitcher. App ahora solo soporta ES/EN."
+
 agent_communication:
   - agent: "main"
     message: "Bug del CityModal resuelto. Modal ahora aparece correctamente con z-index 9999. París está completo en ES/EN/HE. Listo para agregar más ciudades."
+  - agent: "main"
+    message: "Arreglado crash en destinos #11-25 con validaciones condicionales. Eliminado soporte de hebreo. En proceso: completar traducción al inglés de 15 destinos restantes."

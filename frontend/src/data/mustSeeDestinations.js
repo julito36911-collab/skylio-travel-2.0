@@ -30,11 +30,11 @@ export const mustSeeDestinations = [
     ],
     
     whatToDo: [
-      'Subir a la cima (ascensor o escaleras)',
-      'Cena en restaurante Jules Verne (Michelin)',
-      'Picnic en Champ de Mars',
-      'Fotos desde Trocadéro (mejor vista)',
-      'Ver el espectáculo de luces (cada hora de noche)'
+      'Sube hasta la cima usando el ascensor panorámico o, si te sientes aventurero, las escaleras del primer y segundo piso',
+      'Disfruta de una cena romántica en el restaurante Jules Verne, galardonado con estrella Michelin, ubicado en el segundo piso',
+      'Relájate con un picnic típicamente parisino en los jardines del Champ de Mars con vista directa a la torre',
+      'Captura las mejores fotografías desde la explanada de Trocadéro, considerado el punto de vista más fotogénico',
+      'Presencia el mágico espectáculo de luces que ocurre cada hora al anochecer, un momento verdaderamente especial'
     ],
     
     howToGetThere: {

@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Agregar guías de ciudades con información detallada de transporte público para los 35 países más turísticos"
+user_problem_statement: "Agregar guías de ciudades con información detallada de transporte público para los 35 países más turísticos. Ahora: Arreglar crash en destinos #11-25 cuando el idioma está en inglés, completar traducción al inglés de todos los destinos, y eliminar soporte de hebreo."
 
 frontend:
   - task: "City Modal Display Bug"

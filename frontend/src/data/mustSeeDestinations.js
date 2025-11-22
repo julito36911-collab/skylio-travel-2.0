@@ -1991,25 +1991,31 @@ export const mustSeeDestinations = [
     coordinates: { lat: -37.8722, lon: 175.6833 },
     category: 'Cine / Experiencia',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Hobbiton',
+      en: 'https://en.wikipedia.org/wiki/Hobbiton_Movie_Set',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%95%D7%91%D7%99%D7%98%D7%95%D7%9F_(%D7%A4%D7%9C%D7%98%D7%95)'
+    },
+    
     description: 'Set de filmación permanente de El Señor de los Anillos y El Hobbit. 44 agujeros hobbit en Comarca preservada.',
     
     mustKnow: [
-      'Construido para El Señor de los Anillos (1999)',
-      'Reconstruido permanentemente para El Hobbit',
-      '44 agujeros hobbit',
-      '5 hectáreas de Comarca',
-      'Jardines reales mantenidos',
-      'Green Dragon Inn (cerveza incluida)'
+      'Fue construido originalmente en 1999 para la trilogía de El Señor de los Anillos dirigida por Peter Jackson',
+      'Fue reconstruido permanentemente en 2011 para la trilogía de El Hobbit, convirtiéndose en atracción turística permanente',
+      'Cuenta con 44 agujeros hobbit meticulosamente construidos de diferentes tamaños para crear efectos de perspectiva',
+      'El set ocupa 5 hectáreas de colinas verdes onduladas que recrean perfectamente la Comarca de Tolkien',
+      'Los jardines son reales y se mantienen cuidadosamente durante todo el año por un equipo de jardineros dedicados',
+      'Incluye el icónico Green Dragon Inn completamente funcional donde puedes disfrutar de cerveza artesanal incluida en el tour'
     ],
     
     whatToDo: [
-      'Tour guiado (2h, OBLIGATORIO)',
-      'Visitar agujeros hobbit',
-      'Bag End (casa Bilbo)',
-      'Green Dragon Inn (cerveza)',
-      'Jardines de la Comarca',
-      'Molino de agua',
-      'Evening Banquet Tour (cena, $200)'
+      'Únete al tour guiado de 2 horas que es OBLIGATORIO para visitar el set, conducido por guías expertos conocedores de la filmación',
+      'Explora los 44 agujeros hobbit fotografiándote en las icónicas puertas circulares de colores brillantes',
+      'Visita Bag End, la famosa casa de Bilbo y Frodo Baggins en lo alto de la colina con vistas espectaculares',
+      'Disfruta de una cerveza gratis en el acogedor Green Dragon Inn, reconstruido exactamente como aparece en las películas',
+      'Pasea por los exuberantes jardines de la Comarca admirando el Party Tree y las huertas de vegetales en miniatura',
+      'Fotografía el pintoresco molino de agua y el puente de piedra sobre el arroyo',
+      'Reserva el exclusivo Evening Banquet Tour para una cena festiva de hobbit con múltiples platos ($200)'
     ],
     
     howToGetThere: {

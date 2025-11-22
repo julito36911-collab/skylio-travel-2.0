@@ -174,6 +174,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 41.4036, lon: 2.1744 },
     category: 'Arquitectura / Religioso',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia',
+      en: 'https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia',
+      he: 'https://he.wikipedia.org/wiki/%D7%91%D7%96%D7%99%D7%9C%D7%99%D7%A7%D7%AA_%D7%94%D7%A1%D7%92%D7%A8%D7%93%D7%94_%D7%A4%D7%9E%D7%99%D7%9C%D7%99%D7%94'
+    },
+    
     description: 'Obra maestra de Antoni Gaudí iniciada en 1882 y aún en construcción. Basílica modernista única en el mundo con fachadas surrealistas.',
     
     mustKnow: [

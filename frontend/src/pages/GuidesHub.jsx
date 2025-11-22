@@ -16,8 +16,6 @@ function GuidesHub() {
     try {
       if (i18n.language === 'es') {
         return require('../data/countriesGuide_es').countriesGuide;
-      } else if (i18n.language === 'he') {
-        return require('../data/countriesGuide_he').countriesGuide;
       } else {
         return require('../data/countriesGuide_en').countriesGuide;
       }

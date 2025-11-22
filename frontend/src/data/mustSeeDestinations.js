@@ -503,6 +503,12 @@ export const mustSeeDestinations = [
     coordinates: { lat: 36.0544, lon: -112.1401 },
     category: 'Naturaleza / Parque Nacional',
     
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Gran_Ca%C3%B1%C3%B3n',
+      en: 'https://en.wikipedia.org/wiki/Grand_Canyon',
+      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%A8%D7%A0%D7%93_%D7%A7%D7%A0%D7%99%D7%95%D7%9F'
+    },
+    
     description: 'Cañón excavado por el Río Colorado durante 5-6 millones de años. 446 km de largo, hasta 29 km de ancho y 1,800m de profundidad.',
     
     mustKnow: [

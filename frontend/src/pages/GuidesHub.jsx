@@ -307,7 +307,10 @@ function AIAssistantTab() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ destination: aiQuery }),
+        body: JSON.stringify({ 
+          destination: aiQuery,
+          language: i18n.language 
+        }),
       });
 
       if (!response.ok) {

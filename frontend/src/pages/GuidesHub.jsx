@@ -1272,8 +1272,6 @@ function CityModal({ city, countryName, onClose }) {
         </div>
       </div>
 
-      </div>
-
       {/* AI Assistant Modal */}
       <AIAssistantModal
         isOpen={showAIModal}
@@ -1284,7 +1282,6 @@ function CityModal({ city, countryName, onClose }) {
         destination={searchQuery}
       />
     </div>
-    </>
   );
 }
 

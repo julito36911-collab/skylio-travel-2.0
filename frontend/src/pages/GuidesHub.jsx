@@ -284,7 +284,7 @@ function GuidesHub() {
 
 // Componente para el Asistente de IA
 function AIAssistantTab() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [aiQuery, setAiQuery] = useState('');
   const [aiResponse, setAiResponse] = useState('');
   const [aiLoading, setAiLoading] = useState(false);

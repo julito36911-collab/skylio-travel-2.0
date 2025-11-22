@@ -724,21 +724,21 @@ export const mustSeeDestinations = [
     description: 'Estatua Art Deco de 30m de Jesús en cima del Cerro Corcovado (710m). Símbolo de Brasil y una de las 7 Maravillas del Mundo Moderno.',
     
     mustKnow: [
-      'Inaugurado en 1931',
-      '30m altura (38m con pedestal)',
-      'Brazos: 28m envergadura',
-      'Peso: 635 toneladas',
-      'Una de las 7 Maravillas del Mundo Moderno',
-      'Vista 360° de Río'
+      'Fue inaugurado solemnemente el 12 de octubre de 1931 tras 9 años de construcción',
+      'La estatua mide 30 metros de altura, alcanzando 38 metros si se incluye el pedestal sobre el que se erige',
+      'Sus brazos extendidos abarcan una envergadura impresionante de 28 metros, simbolizando la acogida universal',
+      'Tiene un peso colosal de 635 toneladas, construida principalmente en concreto armado y piedra jabón',
+      'Fue elegida como una de las 7 Maravillas del Mundo Moderno en 2007 por votación popular mundial',
+      'Ofrece una vista panorámica de 360 grados absolutamente espectacular de toda la ciudad de Río de Janeiro'
     ],
     
     whatToDo: [
-      'Subir al Cristo (tren o van)',
-      'Vista panorámica de Río',
-      'Fotos icónicas',
-      'Parque Nacional Tijuca (hiking)',
-      'Misa dominical (a veces)',
-      'Sunset (mágico)'
+      'Sube hasta la cima del Corcovado utilizando el pintoresco tren cremallera o las vans oficiales',
+      'Maravíllate con la vista panorámica incomparable de Río, sus playas, la bahía y el Pan de Azúcar',
+      'Captura las fotografías icónicas posando junto al Cristo con los brazos abiertos',
+      'Explora el exuberante Parque Nacional Tijuca con sus senderos de hiking en la selva tropical urbana',
+      'Si tienes suerte, asiste a una de las misas dominicales que ocasionalmente se celebran a los pies de la estatua',
+      'No te pierdas el atardecer desde aquí, cuando el sol se pone sobre Río creando una atmósfera verdaderamente mágica'
     ],
     
     howToGetThere: {

@@ -801,21 +801,21 @@ export const mustSeeDestinations = [
     description: 'Mausoleo de mármol blanco construido 1632-1653 por emperador Shah Jahan para su esposa Mumtaz Mahal. Obra maestra del arte mogol.',
     
     mustKnow: [
-      'Construido 1632-1653 (22 años)',
-      '20,000 trabajadores',
-      'Mármol blanco con incrustaciones de piedras preciosas',
-      'Patrimonio UNESCO desde 1983',
-      'Una de las 7 Maravillas del Mundo Moderno',
-      'Cambia de color según luz del día'
+      'Su construcción tomó 22 años, desde 1632 hasta 1653, requiriendo un esfuerzo monumental',
+      'Participaron más de 20,000 trabajadores artesanos de toda Asia en su elaboración',
+      'Está construido en mármol blanco inmaculado con intrincadas incrustaciones de piedras preciosas y semipreciosas',
+      'Fue declarado Patrimonio de la Humanidad por la UNESCO en 1983, reconociendo su belleza incomparable',
+      'Forma parte de las 7 Maravillas del Mundo Moderno, siendo un símbolo eterno del amor',
+      'El mármol cambia mágicamente de color a lo largo del día: rosado al amanecer, blanco deslumbrante al mediodía, dorado al atardecer'
     ],
     
     whatToDo: [
-      'Ver al amanecer (luz dorada increíble)',
-      'Jardines mogoles (Charbagh)',
-      'Mezquita y Casa de Huéspedes laterales',
-      'Río Yamuna (vista trasera)',
-      'Fuerte de Agra (2 km)',
-      'Fotos desde Mehtab Bagh (jardín cruzando río)'
+      'Contempla el Taj Mahal al amanecer cuando la luz dorada crea una atmósfera verdaderamente mágica e inolvidable',
+      'Pasea por los simétricos jardines mogoles estilo Charbagh que simbolizan el paraíso terrenal',
+      'Visita la mezquita y la Casa de Huéspedes ubicadas a ambos lados del mausoleo principal',
+      'Acércate al río Yamuna para obtener una perspectiva diferente de la vista trasera del monumento',
+      'Explora el impresionante Fuerte de Agra ubicado a solo 2 kilómetros de distancia',
+      'Captura las mejores fotografías desde Mehtab Bagh, el jardín situado al otro lado del río que ofrece vistas perfectas'
     ],
     
     howToGetThere: {

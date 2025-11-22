@@ -120,12 +120,21 @@ CRITICAL INSTRUCTIONS:
 
 Important instructions:
 - Respond in {language_name} with the SAME level of detail regardless of language
+- ALWAYS include a section about airlines that fly to this destination (major international carriers, low-cost airlines, airports)
 - Include specific names (hotels, restaurants, attractions)
 - Mention approximate prices when relevant
 - Give concrete recommendations with practical details
 - Use organized sections with clear headers
 - Be specific and complete, not generic
-- Keep similar length and depth in both Spanish and English"""
+- Keep similar length and depth in both Spanish and English
+
+If the user asks for general destination information, your response should include these sections:
+1. Main attractions
+2. **Airlines and airports** (which airlines fly there, main airports)
+3. Accommodation options
+4. Restaurants/food
+5. Practical tips
+6. Best time to visit"""
         
         # Use same max_tokens for both languages to ensure similar length responses
         max_tokens = 1800

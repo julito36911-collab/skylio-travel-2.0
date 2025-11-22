@@ -621,8 +621,92 @@ export const mustSeeDestinations = [
     lastUpdated: '2025-11-20'
   },
 
-  // Remaining 15 destinations - Basic English translations
-  { id: 'venecia-canales', name: 'Venice Canals', city: 'Venice', country: 'Italy', continent: 'Europe', flag: '🇮🇹', coordinates: { lat: 45.4408, lon: 12.3155 }, category: 'City', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Venecia', en: 'https://en.wikipedia.org/wiki/Venice', he: 'https://he.wikipedia.org/wiki/%D7%95%D7%A0%D7%A6%D7%99%D7%94' }, description: 'Unique city built on 118 islands with 150 canals and 400 bridges.', mustKnow: ['Founded in 5th century', 'Built on 118 islands', 'Sinking 1-2mm per year'], whatToDo: ['Gondola ride', 'St. Mark\'s Square', 'Rialto Bridge'], tips: ['Book gondola in advance', 'Avoid summer crowds'], prices: { budget: '€40-80/day', medium: '€150-250/day', high: '€400+/day' }, bestTime: { season: 'April-June & Sept-Oct', weather: 'Mild', icon: '☀️' }, avoid: 'November (floods)', accessibility: 'Many stairs, bridges', duration: '2-3 days', nearby: ['Murano', 'Burano'], transportation: { vaporetto: 'Water bus', train: 'Santa Lucia station' }, lastUpdated: '2025-11-20' },
+  // ===== DESTINATION #11: VENICE CANALS =====
+  {
+    id: 'venecia-canales',
+    name: 'Venice Canals',
+    city: 'Venice',
+    country: 'Italy',
+    continent: 'Europe',
+    flag: '🇮🇹',
+    coordinates: { lat: 45.4408, lon: 12.3155 },
+    category: 'City / Experience',
+    
+    wikiLinks: {
+      es: 'https://es.wikipedia.org/wiki/Venecia',
+      en: 'https://en.wikipedia.org/wiki/Venice'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=1pDbqWj5m5Y',
+      en: 'https://www.youtube.com/watch?v=MdBjjqJKMJ8'
+    },
+    
+    description: 'Unique city built on 118 islands with 150 canals and 400 bridges. No cars, only gondolas and vaporettos.',
+    
+    mustKnow: [
+      'Founded in the 5th century as a refuge from barbarian invasions, becoming a medieval maritime power',
+      'This unique city is built on 118 small islands connected by more than 400 historic bridges',
+      'The Grand Canal is its main artery, winding 3.8 kilometers through the heart of the city',
+      'Venice is slowly sinking at a rate of 1-2 millimeters per year due to soil subsidence and rising sea levels',
+      'Its population has drastically decreased from 175,000 inhabitants in 1950 to barely 50,000 today',
+      'Declared a UNESCO World Heritage Site, but listed as endangered due to flooding and mass tourism'
+    ],
+    
+    whatToDo: [
+      'Enjoy a romantic traditional gondola ride through the most picturesque canals (€80-100 for 30 minutes)',
+      'Visit the majestic St. Mark\'s Square and the impressive Basilica with its golden Byzantine mosaics',
+      'Explore the historic Doge\'s Palace (Palazzo Ducale), the former center of power of the Venetian Republic',
+      'Cross the iconic Rialto Bridge, the oldest and most photographed bridge spanning the Grand Canal',
+      'Take excursions to nearby islands: Murano famous for its handblown glass, and Burano for its vibrant colored houses',
+      'Get deliberately lost in the narrow alleys without following a map, that\'s when you\'ll discover the most authentic Venice'
+    ],
+    
+    howToGetThere: {
+      train: 'Santa Lucia Station (arrival from all over Europe)',
+      bus: 'Piazzale Roma (bus terminal)',
+      airport: 'Marco Polo Airport + water taxi or bus',
+      car: 'Park at Tronchetto or Piazzale Roma (€30/day)',
+      vaporetto: 'Lines 1 and 2 (€9.50 per trip, €25 day pass)'
+    },
+    
+    tickets: {
+      vaporetto_single: '€9.50 (75 min)',
+      vaporetto_day: '€25',
+      gondola: '€80 (day) / €100 (night) - 30 min',
+      museums_pass: '€30 (11 civic museums)',
+      church_pass: '€12 (16 churches)'
+    },
+    
+    bestTime: {
+      season: 'April-May or Sept-Oct (fewer tourists)',
+      timeOfDay: 'Dawn or dusk for photos',
+      avoid: 'Summer and Carnival (impossibly crowded), Acqua Alta Nov-Feb'
+    },
+    
+    nearby: [
+      'Murano (blown glass)',
+      'Burano (lace and colorful houses)',
+      'Torcello (quiet island)',
+      'Lido (beach)',
+      'Verona (1.5h train)'
+    ],
+    
+    tips: [
+      'DO NOT go in July-August (cruise ship hordes)',
+      'Gondola is EXPENSIVE, only if it\'s worth it to you',
+      'Vaporetto Line 1 is the "cheap gondola"',
+      'Eat outside of San Marcos (€30 coffee there)',
+      'Hostels/Airbnb cheaper than hotels',
+      'Bring comfortable shoes (you\'ll walk a lot)',
+      'Acqua Alta floods squares (Nov-Feb)'
+    ],
+    
+    accessibility: 'Difficult with wheelchair (many bridges with stairs)',
+    duration: '2-3 days minimum',
+    
+    lastUpdated: '2025-11-20'
+  },
   
   { id: 'cataratas-iguazu', name: 'Iguazu Falls', city: 'Puerto Iguazú', country: 'Argentina/Brazil', continent: 'America', flag: '🇦🇷🇧🇷', coordinates: { lat: -25.6953, lon: -54.4367 }, category: 'Nature', wikiLinks: { es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA', en: 'https://en.wikipedia.org/wiki/Iguazu_Falls', he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%90%D7%99%D7%92%D7%95%D7%90%D7%A1%D7%95' }, description: 'System of 275 waterfalls. Up to 82m high. Greater flow than Niagara and Victoria combined.', mustKnow: ['275 individual waterfalls', '2.7 km wide', 'Devil\'s Throat is most impressive'], whatToDo: ['Devil\'s Throat walkway', 'Boat safari', 'Brazilian side panoramic view'], tips: ['Visit both sides (Argentina and Brazil)', 'Bring waterproof clothing'], prices: { budget: '$30-50/day', medium: '$80-150/day', high: '$ 200+/day' }, bestTime: { season: 'March-May & Sept-Nov', weather: 'Moderate flow', icon: '☀️' }, avoid: 'Jan-Feb (extreme heat)', accessibility: 'Walkways accessible', duration: '1-2 days', nearby: ['Bird Park', 'Itaipu Dam'], transportation: { bus: 'From Puerto Iguazú', taxi: 'Available' }, lastUpdated: '2025-11-20' },
   

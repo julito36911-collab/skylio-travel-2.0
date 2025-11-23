@@ -666,7 +666,7 @@ export const mustSeeDestinations = [
     photos: [
       'https://images.unsplash.com/photo-1532203414596-86933a7d7fbc',
       'https://images.unsplash.com/photo-1727001498963-4e26598dc486',
-      'https://images.unsplash.com/photo-1653766846517-1c35cca9cc0c'
+      'https://images.unsplash.com/photo-1660149857286-eeeb853c29c4'
     ],
     
     description: 'Unique city built on 118 islands with 150 canals and 400 bridges. No cars, only gondolas and vaporettos.',

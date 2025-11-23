@@ -104,6 +104,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%95%D7%9C%D7%95%D7%A1%D7%99%D7%90%D7%95%D7%9D'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=WlK7zNGPNRI',
+      en: 'https://www.youtube.com/watch?v=Qbxnwa7gMVA'
+    },
+    
     description: 'Anfiteatro más grande jamás construido (80 d.C.), símbolo del Imperio Romano donde gladiadores combatían ante 50,000 espectadores.',
     
     mustKnow: [

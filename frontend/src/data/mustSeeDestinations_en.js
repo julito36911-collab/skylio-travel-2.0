@@ -214,6 +214,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%A7%D7%A8%D7%95%D7%A4%D7%95%D7%9C%D7%99%D7%A1_%D7%A9%D7%9C_%D7%90%D7%AA%D7%95%D7%A0%D7%94'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=Yw5RgYHg4BU',
+      en: 'https://www.youtube.com/watch?v=vdybN_QYZzA'
+    },
+    
     category: 'Archaeology / Historical',
     
     description: 'Ancient citadel from the 5th century BC. Parthenon and temples dedicated to Athena dominate the Athens skyline.',

@@ -391,9 +391,9 @@ export const mustSeeDestinations = [
     },
     
     photos: [
-      'https://images.unsplash.com/photo-1678786393784-45cdc1663300',
-      'https://images.unsplash.com/photo-1656351408322-1200d2100e59',
-      'https://images.unsplash.com/photo-1679681414017-9a3ea5538eb3'
+      'https://images.unsplash.com/photo-1532203414596-86933a7d7fbc',
+      'https://images.unsplash.com/photo-1727001498963-4e26598dc486',
+      'https://images.unsplash.com/photo-1660149857286-eeeb853c29c4'
     ],
     
     description: 'Ciudad única construida sobre 118 islas con 150 canales y 400 puentes. Sin autos, solo góndolas y vaporettos.',

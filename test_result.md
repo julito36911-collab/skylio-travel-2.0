@@ -212,3 +212,5 @@ agent_communication:
     message: "Arreglado crash en destinos #11-25 con validaciones condicionales. Eliminado soporte de hebreo. En proceso: completar traducción al inglés de 15 destinos restantes."
   - agent: "main"
     message: "COMPLETADO: Todos los 25 destinos tienen traducción completa en inglés con mismo nivel de detalle narrativo que español. App funciona perfectamente en ES/EN sin crashes."
+  - agent: "main"
+    message: "COMPLETADO: Agregados links de YouTube a TODOS los 25 destinos Must-See en ambos idiomas (español e inglés). Total: 25/25 destinos con youtubeLinks en ES y 25/25 en EN. Los botones de YouTube aparecen correctamente en la interfaz junto a Wikipedia. Funcionalidad verificada visualmente con screenshots."

@@ -1300,8 +1300,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Pir%C3%A1mides_de_Guiza',
-      en: 'https://en.wikipedia.org/wiki/Giza_pyramid_complex',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%99%D7%A8%D7%9E%D7%99%D7%93%D7%95%D7%AA_%D7%91%D7%92%D7%99%D7%96%D7%94'
+      en: 'https://en.wikipedia.org/wiki/Giza_pyramid_complex'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=x_szAJt33M8',
+      en: 'https://www.youtube.com/watch?v=Ixv3tq-dpww'
     },
     
     description: 'Únicas sobrevivientes de las 7 Maravillas del Mundo Antiguo. Pirámides de Keops, Kefrén y Micerinos (~2560 a.C.) y la Gran Esfinge.',

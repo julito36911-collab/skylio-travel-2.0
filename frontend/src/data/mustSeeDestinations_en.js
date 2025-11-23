@@ -346,6 +346,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%92%27_%D7%9E%D7%90%D7%94%D7%9C'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=P9r1dO-3yDw',
+      en: 'https://www.youtube.com/watch?v=EKgLnUqmYzk'
+    },
+    
     description: 'White marble mausoleum built 1632-1653 by Emperor Shah Jahan for his wife Mumtaz Mahal. Masterpiece of Mughal art.',
     
     mustKnow: [

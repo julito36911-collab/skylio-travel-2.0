@@ -27,43 +27,6 @@ function GuidesHub() {
 
   const countriesData = getCountriesData();
 
-  // Función para buscar con IA
-  const handleAISearch = async () => {
-    if (!searchQuery.trim()) {
-      setAiError(t('guides.aiEmptyError', 'Por favor escribe un destino para buscar'));
-      return;
-    }
-
-    setShowAIModal(true);
-    setAiLoading(true);
-    setAiError('');
-    setAiResponse('');
-
-    try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-      const response = await fetch(`${backendUrl}/api/travel-assistant`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ destination: searchQuery }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.detail || 'Error al conectar con el asistente de IA');
-      }
-
-      const data = await response.json();
-      setAiResponse(data.response);
-    } catch (error) {
-      console.error('AI Error:', error);
-      setAiError(error.message || t('guides.aiError', 'Error al obtener información del asistente de IA. Por favor intenta nuevamente.'));
-    } finally {
-      setAiLoading(false);
-    }
-  };
-
   // Cargar datos de destinos según idioma activo
   const mustSeeDestinations = useMemo(() => {
     if (i18n.language === 'en') {

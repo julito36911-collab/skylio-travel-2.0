@@ -1762,6 +1762,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%AA_%D7%94%D7%90%D7%95%D7%A4%D7%A8%D7%94_%D7%A9%D7%9C_%D7%A1%D7%99%D7%93%D7%A0%D7%99'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=fKXWRr0H0yA',
+      en: 'https://www.youtube.com/watch?v=rDyb_alNXQA'
+    },
+    
     description: 'Obra maestra arquitectónica de 1973 con techo de velas icónico. Centro de artes escénicas más famoso del mundo.',
     
     mustKnow: [

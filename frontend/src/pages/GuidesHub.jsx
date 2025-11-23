@@ -546,6 +546,31 @@ function DestinationModal({ destination, onClose }) {
             <p className="text-gray-300 text-lg">{destination.description}</p>
           </div>
 
+          {/* Photo Gallery */}
+          {destination.photos && destination.photos.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                <span>📸</span>
+                <span>{i18n.language === 'es' ? 'Galería de Fotos' : 'Photo Gallery'}</span>
+              </h3>
+              <div className="grid grid-cols-3 gap-3">
+                {destination.photos.map((photo, index) => (
+                  <div 
+                    key={index}
+                    className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer"
+                  >
+                    <img 
+                      src={photo}
+                      alt={`${destination.name} - ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Datos esenciales */}
           <Section title={`📌 ${t('guides.mustKnow')}`} items={destination.mustKnow} />
 

@@ -480,6 +480,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%99%D7%A8%D7%9E%D7%99%D7%93%D7%95%D7%AA_%D7%91%D7%92%D7%99%D7%96%D7%94'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=0XwORwzCuOg',
+      en: 'https://www.youtube.com/watch?v=AWPExjjKJgw'
+    },
+    
     description: 'Only survivors of the 7 Wonders of the Ancient World. Pyramids of Khufu, Khafre and Menkaure (~2560 BC) and the Great Sphinx.',
     
     mustKnow: [

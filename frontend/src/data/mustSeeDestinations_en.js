@@ -262,8 +262,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Machu_Picchu',
-      en: 'https://en.wikipedia.org/wiki/Machu_Picchu',
-      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%A6%27%D7%95_%D7%A4%D7%99%D7%A7%D7%A6%27%D7%95'
+      en: 'https://en.wikipedia.org/wiki/Machu_Picchu'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=1zsuuxALFSI',
+      en: 'https://www.youtube.com/watch?v=VIXxhsN36T0'
     },
     
     description: '15th century Inca citadel in the Andes mountains. "Lost City of the Incas" at 2,430m altitude.',

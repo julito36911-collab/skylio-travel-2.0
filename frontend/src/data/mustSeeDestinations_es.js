@@ -855,6 +855,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%92%27_%D7%9E%D7%90%D7%94%D7%9C'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=R0JlQZJu2us',
+      en: 'https://www.youtube.com/watch?v=hZaKcUd1gKc'
+    },
+    
     description: 'Mausoleo de mármol blanco construido 1632-1653 por emperador Shah Jahan para su esposa Mumtaz Mahal. Obra maestra del arte mogol.',
     
     mustKnow: [

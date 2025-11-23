@@ -83,6 +83,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A7%D7%95%D7%9C%D7%95%D7%A1%D7%99%D7%90%D7%95%D7%9D'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=EkUeSZ8jyws',
+      en: 'https://www.youtube.com/watch?v=CVujfJHYygw'
+    },
+    
     description: 'Largest amphitheater ever built (80 AD), symbol of the Roman Empire where gladiators fought before 50,000 spectators.',
     
     mustKnow: [

@@ -1407,8 +1407,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Kilimanjaro',
-      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%A7%D7%99%D7%9C%D7%99%D7%9E%D7%A0%D7%92%27%D7%90%D7%A8%D7%95'
+      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=FMi9qJMBmWc',
+      en: 'https://www.youtube.com/watch?v=BZDs5rB-u34'
     },
     
     description: 'Montaña más alta de África (5,895m). Volcán inactivo con glaciares en la cima. Escalable sin experiencia técnica.',

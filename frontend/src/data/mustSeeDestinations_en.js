@@ -547,6 +547,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%99%D7%97_%D7%94%D7%9E%D7%A9%D7%97%D7%A8%D7%A8'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=Pc4vCIXqJbk',
+      en: 'https://www.youtube.com/watch?v=g8hWp7D5XeQ'
+    },
+    
     description: '30m Art Deco statue of Jesus atop Corcovado Hill (710m). Symbol of Brazil and one of the 7 Wonders of the Modern World.',
     
     mustKnow: [

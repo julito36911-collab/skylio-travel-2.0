@@ -219,23 +219,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'acropolis',
-    name: 'Acropolis of Athens',
-    city: 'Athens',
-    country: 'Greece',
-    continent: 'Europe',
-    flag: '🇬🇷',
-    coordinates: { lat: 37.9715, lon: 23.7267 },
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Acr%C3%B3polis_de_Atenas',
-      en: 'https://en.wikipedia.org/wiki/Acropolis_of_Athens',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%A7%D7%A8%D7%95%D7%A4%D7%95%D7%9C%D7%99%D7%A1_%D7%A9%D7%9C_%D7%90%D7%AA%D7%95%D7%A0%D7%94'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=Yw5RgYHg4BU',
       en: 'https://www.youtube.com/watch?v=vdybN_QYZzA'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1678786393784-45cdc1663300',
+      'https://images.unsplash.com/photo-1656351408322-1200d2100e59',
+      'https://images.unsplash.com/photo-1679681414017-9a3ea5538eb3'
+    ],
     
     category: 'Archaeology / Historical',
     
@@ -356,24 +349,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'taj-mahal',
-    name: 'Taj Mahal',
-    city: 'Agra',
-    country: 'India',
-    continent: 'Asia',
-    flag: '🇮🇳',
-    coordinates: { lat: 27.1751, lon: 78.0421 },
-    category: 'Historical Monument',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Taj_Mahal',
-      en: 'https://en.wikipedia.org/wiki/Taj_Mahal',
-      he: 'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%92%27_%D7%9E%D7%90%D7%94%D7%9C'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=P9r1dO-3yDw',
       en: 'https://www.youtube.com/watch?v=EKgLnUqmYzk'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1564507592333-c60657eea523',
+      'https://images.unsplash.com/photo-1548013146-72479768bada',
+      'https://images.unsplash.com/photo-1587135941948-670b381f08ce'
+    ],
     
     description: 'White marble mausoleum built 1632-1653 by Emperor Shah Jahan for his wife Mumtaz Mahal. Masterpiece of Mughal art.',
     
@@ -423,24 +408,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'gran-muralla-china',
-    name: 'Great Wall of China',
-    city: 'Beijing',
-    country: 'China',
-    continent: 'Asia',
-    flag: '🇨🇳',
-    coordinates: { lat: 40.4319, lon: 116.5704 },
-    category: 'Historical Monument',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Gran_Muralla_China',
-      en: 'https://en.wikipedia.org/wiki/Great_Wall_of_China',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%97%D7%95%D7%9E%D7%94_%D7%94%D7%A1%D7%99%D7%A0%D7%99%D7%AA'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=k2iNu7jX26k',
       en: 'https://www.youtube.com/watch?v=q6TcjXHbkI8'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1583405584623-58f4b7d1380f',
+      'https://images.unsplash.com/photo-1590050371954-f8c5beb14b1e',
+      'https://images.unsplash.com/photo-1571822325911-c01620a65e86'
+    ],
     
     description: 'Fortification system of 21,000 km built from 7th century BC to 17th century. The longest human structure in the world.',
     
@@ -490,24 +467,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'piramides-giza',
-    name: 'Pyramids of Giza',
-    city: 'Cairo',
-    country: 'Egypt',
-    continent: 'Africa',
-    flag: '🇪🇬',
-    coordinates: { lat: 29.9792, lon: 31.1342 },
-    category: 'Archaeology',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Pir%C3%A1mides_de_Guiza',
-      en: 'https://en.wikipedia.org/wiki/Giza_pyramid_complex',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%99%D7%A8%D7%9E%D7%99%D7%93%D7%95%D7%AA_%D7%91%D7%92%D7%99%D7%96%D7%94'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=0XwORwzCuOg',
       en: 'https://www.youtube.com/watch?v=AWPExjjKJgw'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1705874930271-88eeb8f533dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxQeXJhbWlkcyUyMEdpemF8ZW58MHx8fHwxNzYzODg3MjI0fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1623674587543-9c7564de99d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxQeXJhbWlkcyUyMEdpemF8ZW58MHx8fHwxNzYzODg3MjI0fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1702036394924-9c079b10c4e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxQeXJhbWlkcyUyMEdpemF8ZW58MHx8fHwxNzYzODg3MjI0fDA&ixlib=rb-4.1.0&q=85'
+    ],
     
     description: 'Only survivors of the 7 Wonders of the Ancient World. Pyramids of Khufu, Khafre and Menkaure (~2560 BC) and the Great Sphinx.',
     
@@ -557,24 +526,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'cristo-redentor',
-    name: 'Christ the Redeemer',
-    city: 'Rio de Janeiro',
-    country: 'Brazil',
-    continent: 'America',
-    flag: '🇧🇷',
-    coordinates: { lat: -22.9519, lon: -43.2105 },
-    category: 'Monument',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Cristo_Redentor',
-      en: 'https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%99%D7%97_%D7%94%D7%9E%D7%A9%D7%97%D7%A8%D7%A8'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=Pc4vCIXqJbk',
       en: 'https://www.youtube.com/watch?v=g8hWp7D5XeQ'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1683331404237-64c763c70f5b',
+      'https://images.unsplash.com/photo-1705937565504-212dd419fda3',
+      'https://images.unsplash.com/photo-1715528892617-fab2cd0ce0e7'
+    ],
     
     description: '30m Art Deco statue of Jesus atop Corcovado Hill (710m). Symbol of Brazil and one of the 7 Wonders of the Modern World.',
     
@@ -624,24 +585,16 @@ export const mustSeeDestinations = [
 
   {
     id: 'gran-canyon',
-    name: 'Grand Canyon',
-    city: 'Arizona',
-    country: 'United States',
-    continent: 'America',
-    flag: '🇺🇸',
-    coordinates: { lat: 36.0544, lon: -112.1401 },
-    category: 'Nature',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Gran_Ca%C3%B1%C3%B3n',
-      en: 'https://en.wikipedia.org/wiki/Grand_Canyon',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%A8%D7%A0%D7%93_%D7%A7%D7%A0%D7%99%D7%95%D7%9F'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=c8aFcHFu8QM',
       en: 'https://www.youtube.com/watch?v=oF_KYy6k1ys'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1615551043360-33de8b5f410c',
+      'https://images.unsplash.com/photo-1527333656061-ca7adf608ae1',
+      'https://images.unsplash.com/photo-1575527048208-6475b441e0a0'
+    ],
     
     description: 'Canyon carved by the Colorado River. 446 km long, 29 km wide, 1,800m deep. Visible rock from 2 billion years ago.',
     
@@ -785,23 +738,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'cataratas-iguazu',
-    name: 'Iguazu Falls',
-    city: 'Puerto Iguazú',
-    country: 'Argentina / Brazil',
-    continent: 'America',
-    flag: '🇦🇷🇧🇷',
-    coordinates: { lat: -25.6953, lon: -54.4367 },
-    category: 'Nature',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA',
-      en: 'https://en.wikipedia.org/wiki/Iguazu_Falls'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=ztvk0xDjz6Q',
       en: 'https://www.youtube.com/watch?v=FfMxwp5U4Hk'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1538703012804-b74999aa11b9',
+      'https://images.unsplash.com/photo-1587845858725-81d43f65121b',
+      'https://images.unsplash.com/photo-1720076753770-d3f26fd25142'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1538703012804-b74999aa11b9',
@@ -878,23 +824,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'times-square',
-    name: 'Times Square',
-    city: 'New York',
-    country: 'United States',
-    continent: 'America',
-    flag: '🇺🇸',
-    coordinates: { lat: 40.7580, lon: -73.9855 },
-    category: 'Urban / Experience',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Times_Square',
-      en: 'https://en.wikipedia.org/wiki/Times_Square'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=VctCDnYPdeU',
       en: 'https://www.youtube.com/watch?v=7pcZURDhJk0'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1595901688281-9cef114adb0b',
+      'https://images.unsplash.com/photo-1582760548598-0bccdf815aa2',
+      'https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1595901688281-9cef114adb0b',
@@ -970,23 +909,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'angkor-wat',
-    name: 'Angkor Wat',
-    city: 'Siem Reap',
-    country: 'Cambodia',
-    continent: 'Asia',
-    flag: '🇰🇭',
-    coordinates: { lat: 13.4125, lon: 103.8670 },
-    category: 'Temple / Archaeology',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Angkor_Wat',
-      en: 'https://en.wikipedia.org/wiki/Angkor_Wat'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=3HGWnBG0zR4',
       en: 'https://www.youtube.com/watch?v=YU_0FYbP47s'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1599283787923-51b965a58b05',
+      'https://images.unsplash.com/photo-1566706546199-a93ba33ce9f7',
+      'https://images.unsplash.com/photo-1606231140504-b6ec6cbbbf6b'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1599283787923-51b965a58b05',
@@ -1064,23 +996,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'monte-fuji',
-    name: 'Mount Fuji',
-    city: 'Shizuoka / Yamanashi',
-    country: 'Japan',
-    continent: 'Asia',
-    flag: '🇯🇵',
-    coordinates: { lat: 35.3606, lon: 138.7274 },
-    category: 'Nature / Mountain',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Monte_Fuji',
-      en: 'https://en.wikipedia.org/wiki/Mount_Fuji'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=QEG2SIZoLF8',
       en: 'https://www.youtube.com/watch?v=JxYmILDya0A'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1610375229632-c7158c35a537?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxNb3VudCUyMEZ1aml8ZW58MHx8fHwxNzYzODg3MjEyfDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1578271887552-5ac3a72752bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxNb3VudCUyMEZ1aml8ZW58MHx8fHwxNzYzODg3MjEyfDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxNb3VudCUyMEZ1aml8ZW58MHx8fHwxNzYzODg3MjEyfDA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1610375229632-c7158c35a537?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxNb3VudCUyMEZ1aml8ZW58MHx8fHwxNzYzODg3MjEyfDA&ixlib=rb-4.1.0&q=85',
@@ -1156,23 +1081,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'petra',
-    name: 'Petra',
-    city: 'Wadi Musa',
-    country: 'Jordan',
-    continent: 'Asia',
-    flag: '🇯🇴',
-    coordinates: { lat: 30.3285, lon: 35.4444 },
-    category: 'Archaeology',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Petra',
-      en: 'https://en.wikipedia.org/wiki/Petra'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=YU_0FYbP47s',
       en: 'https://www.youtube.com/watch?v=UMiPZx6WRA0'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1712323028707-6e59c3d2271a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxQZXRyYSUyMEpvcmRhbnxlbnwwfHx8fDE3NjM4ODcyMTd8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1615811648503-479d06197ff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxQZXRyYSUyMEpvcmRhbnxlbnwwfHx8fDE3NjM4ODcyMTd8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1579606032821-4e6161c81bd3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxQZXRyYSUyMEpvcmRhbnxlbnwwfHx8fDE3NjM4ODcyMTd8MA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1712323028707-6e59c3d2271a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxQZXRyYSUyMEpvcmRhbnxlbnwwfHx8fDE3NjM4ODcyMTd8MA&ixlib=rb-4.1.0&q=85',
@@ -1249,23 +1167,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'kilimanjaro',
-    name: 'Mount Kilimanjaro',
-    city: 'Moshi',
-    country: 'Tanzania',
-    continent: 'Africa',
-    flag: '🇹🇿',
-    coordinates: { lat: -3.0674, lon: 37.3556 },
-    category: 'Nature / Mountain',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Kilimanjaro',
-      en: 'https://en.wikipedia.org/wiki/Mount_Kilimanjaro'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=FMi9qJMBmWc',
       en: 'https://www.youtube.com/watch?v=BZDs5rB-u34'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1631646109206-4b5616964f84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxLaWxpbWFuamFyb3xlbnwwfHx8fDE3NjM4ODcyMjl8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1631646109248-a7264aae1790?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxLaWxpbWFuamFyb3xlbnwwfHx8fDE3NjM4ODcyMjl8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1613061445510-e296bfedb73e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxLaWxpbWFuamFyb3xlbnwwfHx8fDE3NjM4ODcyMjl8MA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1631646109206-4b5616964f84?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxLaWxpbWFuamFyb3xlbnwwfHx8fDE3NjM4ODcyMjl8MA&ixlib=rb-4.1.0&q=85',
@@ -1341,23 +1252,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'cataratas-victoria',
-    name: 'Victoria Falls',
-    city: 'Livingstone / Victoria Falls',
-    country: 'Zambia / Zimbabwe',
-    continent: 'Africa',
-    flag: '🇿🇲🇿🇼',
-    coordinates: { lat: -17.9244, lon: 25.8567 },
-    category: 'Nature',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria',
-      en: 'https://en.wikipedia.org/wiki/Victoria_Falls'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=1rZhVH7Jogc',
       en: 'https://www.youtube.com/watch?v=5ky6vgQfU24'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1618811308896-d279d72fdf4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxWaWN0b3JpYSUyMEZhbGxzfGVufDB8fHx8MTc2Mzg4NzIzNHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1603201236596-eb1a63eb0ede?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxWaWN0b3JpYSUyMEZhbGxzfGVufDB8fHx8MTc2Mzg4NzIzNHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1678714001094-ba90abd57fec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxWaWN0b3JpYSUyMEZhbGxzfGVufDB8fHx8MTc2Mzg4NzIzNHww&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1618811308896-d279d72fdf4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxWaWN0b3JpYSUyMEZhbGxzfGVufDB8fHx8MTc2Mzg4NzIzNHww&ixlib=rb-4.1.0&q=85',
@@ -1436,23 +1340,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'table-mountain',
-    name: 'Table Mountain',
-    city: 'Cape Town',
-    country: 'South Africa',
-    continent: 'Africa',
-    flag: '🇿🇦',
-    coordinates: { lat: -33.9628, lon: 18.4098 },
-    category: 'Nature / Mountain',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Monta%C3%B1a_de_la_Mesa',
-      en: 'https://en.wikipedia.org/wiki/Table_Mountain'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=X0RjW8TqJ-8',
       en: 'https://www.youtube.com/watch?v=SjBnQXJML3U'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1563656157432-67560011e209?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxUYWJsZSUyME1vdW50YWluJTIwQ2FwZSUyMFRvd258ZW58MHx8fHwxNzYzODg3MjQyfDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1626894169601-482d26b23f35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxUYWJsZSUyME1vdW50YWluJTIwQ2FwZSUyMFRvd258ZW58MHx8fHwxNzYzODg3MjQyfDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1636216056866-2051e801988c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxUYWJsZSUyME1vdW50YWluJTIwQ2FwZSUyMFRvd258ZW58MHx8fHwxNzYzODg3MjQyfDA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1563656157432-67560011e209?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxUYWJsZSUyME1vdW50YWluJTIwQ2FwZSUyMFRvd258ZW58MHx8fHwxNzYzODg3MjQyfDA&ixlib=rb-4.1.0&q=85',
@@ -1528,23 +1425,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'serengeti',
-    name: 'Serengeti National Park',
-    city: 'Arusha',
-    country: 'Tanzania',
-    continent: 'Africa',
-    flag: '🇹🇿',
-    coordinates: { lat: -2.3333, lon: 34.8333 },
-    category: 'Nature / Safari',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Parque_nacional_del_Serengueti',
-      en: 'https://en.wikipedia.org/wiki/Serengeti_National_Park'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=VnSLRzu5gPc',
       en: 'https://www.youtube.com/watch?v=dQ0FFh9fLBQ'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1707410436272-1bcc71ecafb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxTZXJlbmdldGl8ZW58MHx8fHwxNzYzODg3MjQ5fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1580145575237-75fec2a0320b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxTZXJlbmdldGl8ZW58MHx8fHwxNzYzODg3MjQ5fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxTZXJlbmdldGl8ZW58MHx8fHwxNzYzODg3MjQ5fDA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1707410436272-1bcc71ecafb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxTZXJlbmdldGl8ZW58MHx8fHwxNzYzODg3MjQ5fDA&ixlib=rb-4.1.0&q=85',
@@ -1622,23 +1512,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'opera-sydney',
-    name: 'Sydney Opera House',
-    city: 'Sydney',
-    country: 'Australia',
-    continent: 'Oceania',
-    flag: '🇦🇺',
-    coordinates: { lat: -33.8568, lon: 151.2153 },
-    category: 'Architecture',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney',
-      en: 'https://en.wikipedia.org/wiki/Sydney_Opera_House'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=qiXdz9NHVxk',
       en: 'https://www.youtube.com/watch?v=AhTM0Ak-iGs'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxTeWRuZXklMjBPcGVyYSUyMEhvdXNlfGVufDB8fHx8MTc2Mzc4MzM4MHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1540448051910-09cfadd5df61?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxTeWRuZXklMjBPcGVyYSUyMEhvdXNlfGVufDB8fHx8MTc2Mzc4MzM4MHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1616128618694-96e9e896ecb7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxTeWRuZXklMjBPcGVyYSUyMEhvdXNlfGVufDB8fHx8MTc2Mzc4MzM4MHww&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxTeWRuZXklMjBPcGVyYSUyMEhvdXNlfGVufDB8fHx8MTc2Mzc4MzM4MHww&ixlib=rb-4.1.0&q=85',
@@ -1715,23 +1598,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'gran-barrera-coral',
-    name: 'Great Barrier Reef',
-    city: 'Cairns / Port Douglas',
-    country: 'Australia',
-    continent: 'Oceania',
-    flag: '🇦🇺',
-    coordinates: { lat: -18.2871, lon: 147.6992 },
-    category: 'Marine / Nature',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral',
-      en: 'https://en.wikipedia.org/wiki/Great_Barrier_Reef'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=S1WWnZbTQko',
       en: 'https://www.youtube.com/watch?v=SzcD48ew7B0'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1587139223877-04cb899fa3e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyMEJhcnJpZXIlMjBSZWVmfGVufDB8fHx8MTc2Mzg4NzI2MHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1442386967425-6205da77c3ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxHcmVhdCUyMEJhcnJpZXIlMjBSZWVmfGVufDB8fHx8MTc2Mzg4NzI2MHww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1582623838120-455da222cdc7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxHcmVhdCUyMEJhcnJpZXIlMjBSZWVmfGVufDB8fHx8MTc2Mzg4NzI2MHww&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1587139223877-04cb899fa3e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxHcmVhdCUyMEJhcnJpZXIlMjBSZWVmfGVufDB8fHx8MTc2Mzg4NzI2MHww&ixlib=rb-4.1.0&q=85',
@@ -1809,23 +1685,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'milford-sound',
-    name: 'Milford Sound',
-    city: 'Fiordland National Park',
-    country: 'New Zealand',
-    continent: 'Oceania',
-    flag: '🇳🇿',
-    coordinates: { lat: -44.6719, lon: 168.6760 },
-    category: 'Nature / Fjord',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Milford_Sound',
-      en: 'https://en.wikipedia.org/wiki/Milford_Sound_/_Piopiotahi'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=nJqxKJHR_Ss',
       en: 'https://www.youtube.com/watch?v=P8fKrDhR9lE'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1591640040362-f55d95a6b2bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxNaWxmb3JkJTIwU291bmR8ZW58MHx8fHwxNzYzODg3MjY2fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1602366242300-7ba8b37a16ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxNaWxmb3JkJTIwU291bmR8ZW58MHx8fHwxNzYzODg3MjY2fDA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1584877161648-bb58a3cf4e13?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxNaWxmb3JkJTIwU291bmR8ZW58MHx8fHwxNzYzODg3MjY2fDA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1591640040362-f55d95a6b2bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxNaWxmb3JkJTIwU291bmR8ZW58MHx8fHwxNzYzODg3MjY2fDA&ixlib=rb-4.1.0&q=85',
@@ -1903,23 +1772,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'uluru',
-    name: 'Uluru (Ayers Rock)',
-    city: 'Northern Territory',
-    country: 'Australia',
-    continent: 'Oceania',
-    flag: '🇦🇺',
-    coordinates: { lat: -25.3444, lon: 131.0369 },
-    category: 'Sacred / Nature',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Uluru',
-      en: 'https://en.wikipedia.org/wiki/Uluru'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=fNRa8GXxpzE',
       en: 'https://www.youtube.com/watch?v=00aVNMYLYzI'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1758335309774-40213a3e0cc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxVbHVydSUyMEF5ZXJzJTIwUm9ja3xlbnwwfHx8fDE3NjM4ODcyNzJ8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1653076181592-bd73101d57d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxVbHVydSUyMEF5ZXJzJTIwUm9ja3xlbnwwfHx8fDE3NjM4ODcyNzJ8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1763020884208-bfc09fec1171?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxVbHVydSUyMEF5ZXJzJTIwUm9ja3xlbnwwfHx8fDE3NjM4ODcyNzJ8MA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1758335309774-40213a3e0cc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxVbHVydSUyMEF5ZXJzJTIwUm9ja3xlbnwwfHx8fDE3NjM4ODcyNzJ8MA&ixlib=rb-4.1.0&q=85',
@@ -1994,23 +1856,16 @@ export const mustSeeDestinations = [
   
   {
     id: 'hobbiton',
-    name: 'Hobbiton Movie Set',
-    city: 'Matamata',
-    country: 'New Zealand',
-    continent: 'Oceania',
-    flag: '🇳🇿',
-    coordinates: { lat: -37.8722, lon: 175.6833 },
-    category: 'Cinema / Experience',
-    
-    wikiLinks: {
-      es: 'https://es.wikipedia.org/wiki/Hobbiton',
-      en: 'https://en.wikipedia.org/wiki/Hobbiton_Movie_Set'
-    },
-    
     youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=eOlFRLjG29Q',
       en: 'https://www.youtube.com/watch?v=fHhpRmPhq3g'
     },
+    
+    photos: [
+      'https://images.unsplash.com/photo-1627686973009-0de79c0c3f6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxIb2JiaXRvbnxlbnwwfHx8fDE3NjM4ODcyNzl8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1590002893558-64f0d58dcca4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxIb2JiaXRvbnxlbnwwfHx8fDE3NjM4ODcyNzl8MA&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1578305035108-429188b9ede6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxIb2JiaXRvbnxlbnwwfHx8fDE3NjM4ODcyNzl8MA&ixlib=rb-4.1.0&q=85'
+    ],
     
     photos: [
       'https://images.unsplash.com/photo-1627686973009-0de79c0c3f6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxIb2JiaXRvbnxlbnwwfHx8fDE3NjM4ODcyNzl8MA&ixlib=rb-4.1.0&q=85',

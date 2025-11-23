@@ -1941,6 +1941,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%9C%D7%A4%D7%95%D7%A8%D7%93_%D7%A1%D7%90%D7%95%D7%A0%D7%93'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=r-BBSV5mPpE',
+      en: 'https://www.youtube.com/watch?v=wO73hA54dAY'
+    },
+    
     description: 'Fiordo glaciar con acantilados de 1,200m, cascadas y vida marina. Llamado "octava maravilla del mundo" por Rudyard Kipling.',
     
     mustKnow: [

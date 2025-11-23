@@ -772,6 +772,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%A9%D7%99%D7%97_%D7%94%D7%9E%D7%A9%D7%97%D7%A8%D7%A8'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=5lIbtt7WsrU',
+      en: 'https://www.youtube.com/watch?v=qIqZB1LMj48'
+    },
+    
     description: 'Estatua Art Deco de 30m de Jesús en cima del Cerro Corcovado (710m). Símbolo de Brasil y una de las 7 Maravillas del Mundo Moderno.',
     
     mustKnow: [

@@ -190,6 +190,21 @@ test_plan:
         agent: "main"
         comment: "COMPLETADO: Todos los 15 destinos (#11-25) ahora tienen traducciones completas y narrativas en inglés con mismo nivel de detalle que español. Incluye: mustKnow (6+ puntos), whatToDo detallado, howToGetThere, tickets, bestTime, tips extensos, nearby, youtubeLinks ES/EN."
 
+  - task: "Add YouTube Links to All 25 Must-See Destinations"
+    implemented: true
+    working: true
+    file: "frontend/src/data/mustSeeDestinations_es.js, mustSeeDestinations_en.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "user"
+        comment: "Usuario solicitó agregar links de YouTube populares, cortos e informativos para todos los 25 destinos en español e inglés"
+      - working: true
+        agent: "main"
+        comment: "COMPLETADO: Agregados youtubeLinks para TODOS los 25 destinos en ambos idiomas (ES y EN). Cada destino ahora tiene videos populares y cortos tanto en español como en inglés. Los botones de YouTube aparecen correctamente en la UI junto al botón de Wikipedia. Funcionalidad verificada con screenshots."
+
 agent_communication:
   - agent: "main"
     message: "Bug del CityModal resuelto. Modal ahora aparece correctamente con z-index 9999. París está completo en ES/EN/HE. Listo para agregar más ciudades."

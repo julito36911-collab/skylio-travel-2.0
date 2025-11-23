@@ -2030,6 +2030,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%90%D7%95%D7%9C%D7%95%D7%A8%D7%95'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=oEH7P6YFkho',
+      en: 'https://www.youtube.com/watch?v=Uk4FMmO0vTM'
+    },
+    
     description: 'Monolito de arenisca sagrado de 348m. Sitio espiritual aborígen Anangu. Cambia de color con luz del día.',
     
     mustKnow: [

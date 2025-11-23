@@ -271,9 +271,14 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Acr%C3%B3polis_de_Atenas',
-      en: 'https://en.wikipedia.org/wiki/Acropolis_of_Athens',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%A7%D7%A8%D7%95%D7%A4%D7%95%D7%9C%D7%99%D7%A1_%D7%A9%D7%9C_%D7%90%D7%AA%D7%95%D7%A0%D7%94'
+      en: 'https://en.wikipedia.org/wiki/Acropolis_of_Athens'
     },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=KeZK0bK_EBQ',
+      en: 'https://www.youtube.com/watch?v=TQ3zKQPxBKA'
+    },
+    
     category: 'Sitio Arqueológico',
     
     description: 'Ciudadela antigua en colina rocosa con el Partenón, templo dedicado a Atenea (447-432 a.C.). Símbolo de la civilización occidental.',

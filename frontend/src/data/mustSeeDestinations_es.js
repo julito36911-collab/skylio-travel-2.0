@@ -1585,6 +1585,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A8_%D7%94%D7%A9%D7%95%D7%9C%D7%97%D7%9F'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=PQ8WKc7pSbM',
+      en: 'https://www.youtube.com/watch?v=a7BkdtLqP_Q'
+    },
+    
     description: 'Montaña icónica de cima plana que domina Ciudad del Cabo. 1,085m de altura. Parte de las 7 Maravillas Naturales.',
     
     mustKnow: [

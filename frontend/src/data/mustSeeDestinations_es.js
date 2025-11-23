@@ -1056,8 +1056,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Angkor_Wat',
-      en: 'https://en.wikipedia.org/wiki/Angkor_Wat',
-      he: 'https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%92%D7%A7%D7%95%D7%A8_%D7%95%D7%95%D7%90%D7%98'
+      en: 'https://en.wikipedia.org/wiki/Angkor_Wat'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=3HGWnBG0zR4',
+      en: 'https://www.youtube.com/watch?v=YU_0FYbP47s'
     },
     
     description: 'Complejo de templos jemer del siglo XII. El monumento religioso más grande del mundo, símbolo de Camboya.',

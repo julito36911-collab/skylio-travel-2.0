@@ -1,78 +1,72 @@
 <analysis>
-The trajectory documents an extensive, iterative development and debugging process for the Skylio Hub React application. The work was driven by a Spanish-speaking user's requests, starting with a bug fix and evolving into major feature enhancements and architectural changes.
+The trajectory details a comprehensive development cycle on the Skylio Hub React application, guided by a Spanish-speaking user. The work began with fixing a critical crash in the  component by adding conditional rendering to handle incomplete English translation data in .
 
-A critical bug involving a non-appearing  was traced to a CSS  stacking context issue, which required significant debugging (including failed attempts with ) before being resolved by using a very high z-index value ().
+Following the bug fix, the user requested the removal of Hebrew language support, which involved deleting  data files and updating  and the  component. A major effort was then dedicated to achieving content parity between Spanish and English, involving the manual translation and enrichment of 15 destinations in .
 
-Subsequently, development focused on content enrichment. At the user's request, the AI engineer implemented Wikipedia and YouTube links for destinations. A major user request was to make the descriptive text more narrative and engaging, leading to a massive, manual content update across all data files.
+Subsequently, a new feature was introduced: an AI-powered travel assistant. The first attempt with Hugging Face failed due to a deprecated API. The second, successful attempt integrated the Groq API. This involved creating a FastAPI endpoint in , adding a  to the environment, and building a new UI. The UI/UX was iteratively refined, moving the AI feature to a dedicated AI Assistant tab within the  modal to resolve user confusion. The AI's prompt was heavily engineered to handle specific vs. general queries, provide multi-language responses, balance content length between languages, and include user-requested data like airline information.
 
-A significant architectural shift occurred when the user reported that content remained in Spanish even when the UI language was changed to English. The engineer correctly diagnosed that content was stored in a single-language file (). The solution was to create separate, language-specific data files (e.g., , ) and modify the main component () to dynamically import the correct file based on the selected language.
-
-The most recent task was to fix a crash (Cannot convert undefined or null to object) that occurred after this architectural change, which was caused by an incomplete English translation file. The user has confirmed the error persists.
+The most recent task involves adding popular, short, and informative YouTube video links (for both Spanish and English) to all 25 Must-See Destinations across both  and . This work is currently in progress.
 
 The user's primary language is **Spanish**. The next agent **must** respond in Spanish.
 </analysis>
+
 <product_requirements>
-The Skylio Hub project is a travel affiliate aggregator designed as a comprehensive portal for travelers. It aims to provide a unified interface for various travel services and detailed, multi-language travel guides.
+The Skylio Hub is a travel aggregator portal featuring comprehensive, multi-language travel guides.
 
-**Core Requirements:**
-*   **Multi-language Support:** The entire application, including UI and dynamic content, must be fully functional and correctly translated into Spanish, English, and Hebrew.
-*   **Content-Rich Guides:** The application features several guide sections, with an emphasis on providing engaging, narrative, and practical information.
-
-**Implemented Features:**
-*   **Guides Hub:** A modal containing:
-    *   **Must-See Destinations:** A guide to 25 iconic global landmarks. This section has been heavily modified to include enriched, narrative descriptions and direct links to Wikipedia and YouTube.
-    *   **Country & City Guides:** Detailed information on countries, with nested city guides. The Paris city guide is the prototype, featuring extensive public transport information.
-*   **Internationalization:** The architecture has been refactored to support fully translated content by loading language-specific data files (e.g., ).
-
-The current focus is on perfecting the content and ensuring the multi-language functionality is seamless and bug-free.
+**Core User Requirements:**
+1.  **Bilingual Support:** The application must be fully functional in Spanish and English, including all UI and guide content. Hebrew support was explicitly removed.
+2.  **Content-Rich Guides:** All guides, especially the Must-See Destinations, must feature engaging, narrative descriptions with consistent detail across both languages. They must also include links to Wikipedia and popular, short, informative YouTube videos.
+3.  **AI-Powered Travel Assistant:** The app must include a smart travel assistant.
+    *   **Integration:** The assistant is integrated into a dedicated AI Assistant tab within the Travel Guides modal.
+    *   **Functionality:** It should provide detailed, tailored travel plans (hotels, airlines, activities, etc.) for any destination worldwide. It must intelligently differentiate between general queries (e.g., Paris) and specific requests (e.g., romantic tours in Paris).
+    *   **Technology:** The integration must use a free API that does not require a credit card (Groq was selected and implemented).
+    *   **Bilingual Output:** The AI's response language must match the user's selected language in the app.
 </product_requirements>
+
 <key_technical_concepts>
-- **Framework:** React (Vite/Create React App)
-- **Styling:** Tailwind CSS, with a focus on Glassmorphism UI and z-index management for modals.
-- **Internationalization (i18n):**
-    -  for UI string translations ( files).
-    - **Language-specific static data files** (e.g., , ) for large, translated content blocks, loaded dynamically based on the active language.
-- **Component Architecture:** A large, monolithic component () that manages state and rendering for multiple modals and content sections.
-- **DOM Manipulation:**  was attempted for modal issues, highlighting awareness of DOM stacking context.
+- **Frameworks:** React (frontend), FastAPI (backend).
+- **Styling:** Tailwind CSS.
+- **Internationalization (i18n):**  for UI strings and a custom dynamic import system for loading language-specific content files (e.g., ).
+- **API Integration:** Backend communicates with the external Groq API for AI-powered text generation.
+- **Prompt Engineering:** Advanced, conditional prompt structures sent to the Groq API to control response specificity, language, and content structure.
 </key_technical_concepts>
+
 <code_architecture>
-The application is a frontend-focused React project. The core logic for the guides is centralized in a single large component, which dynamically loads content from language-specific data files.
+The application consists of a React frontend and a Python FastAPI backend. The frontend architecture is notable for a large, central component that manages significant state and UI logic.
 
 **Directory Structure:**
 
 
 - ****
-    - **Importance:** This is the central hub for the entire Content and Guides feature. It manages state for active tabs, search, and all modals (, , ). It contains the logic for rendering all guides.
-    - **Summary of Changes:** This file was heavily modified to support multi-language content. It was refactored from loading a single data source to dynamically importing the correct language file ( or ) based on the  state. It also contains the  component, which is the source of the current bug. The fix will require adding conditional rendering checks within this file.
+    - **Importance:** This file contains the entire backend logic. It serves the FastAPI application.
+    - **Summary of Changes:** A new endpoint, , was added. This endpoint receives a query and a language from the frontend, constructs a detailed, conditional prompt, and calls the Groq API to generate a travel plan. It was refactored multiple times to improve prompt intelligence and response quality. It reads the  from the  file.
 
 - ****
-    - **Importance:** This file contains the complete, enriched, and narrative content for all 25 Must-See Destinations in Spanish. It serves as the source of truth for Spanish content.
-    - **Summary of Changes:** Originally , it was renamed to  as part of the internationalization refactor. It has been extensively updated with narrative text and links to Wikipedia and YouTube.
+    - **Importance:** This is the most complex component, acting as a mini-app. It manages the state and rendering for the Travel Guides modal, including multiple tabs (Must-See Destinations, AI Assistant, etc.), search/filter functionality, and nested modals for destinations.
+    - **Summary of Changes:** This file has been heavily modified. Conditional rendering was added to fix crashes. It was refactored to remove a confusing, dual-purpose search bar and create a separate  component. The AI search logic, including API calls to the backend and state management for loading/results, was implemented here. The component's structure was refactored to correctly handle multiple  instances, fixing a major rendering bug.
 
-- ****
-    - **Importance:** This file contains the English translations for the Must-See Destinations. Its incompleteness is the cause of the current bug.
-    - **Summary of Changes:** Created to support English content. It currently contains all 25 destinations, but only the first 10 have a complete data structure with enriched text. The remaining 15 have a simplified structure, lacking fields like  and , which causes the application to crash when their modals are opened.
+- ** & **
+    - **Importance:** These files contain the static, pre-written content for the 25 Must-See Destinations in Spanish and English, respectively. They are dynamically imported by .
+    - **Summary of Changes:**  was fully populated with detailed narrative content to match the Spanish version, fixing an initial crash and achieving content parity. Both files are currently being updated to include  for all 25 destinations.
 
-- ****
-    - **Importance:** This file configures the  library, setting the fallback language and detection options (e.g., from ). It is central to the app's language functionality.
+- ** & **
+    - **Importance:** These files store environment variables.
+    - **Summary of Changes:**  was updated to include the .  contains the  used for all API calls.
 </code_architecture>
+
 <pending_tasks>
-- Complete the translation and content enrichment for the remaining 15 destinations in  to match the detail of the first 10.
-- Create  and translate all 25 destinations into Hebrew.
-- Find and add YouTube links (English & Spanish) for the remaining 24 Must-See Destinations.
-- Populate the detailed city/transport guides for all major cities within the 35 countries.
-- Translate the Country Guides content into English and Hebrew.
+- Complete adding short, informative YouTube links for the remaining destinations in .
+- Add all 25 corresponding YouTube links to the  file to ensure feature parity.
 </pending_tasks>
+
 <current_work>
-The immediate task is to fix a critical runtime error reported by the user. The error, Cannot convert undefined or null to object, occurs when the application language is set to English and the user clicks on a Must-See Destination from #11 to #25.
+The immediate task is to fulfill the user's request to add popular, short, and informative YouTube videos for all 25 Must-See Destinations, ensuring links are available for both Spanish and English.
 
-**Root Cause Analysis:**
-The bug was introduced after refactoring the content into language-specific files. The English data file, , was populated with all 25 destinations to prevent a previous  error. However, only the first 10 destinations have the full data structure with all fields (like , , , etc.). The remaining 15 have a simplified structure, missing these optional fields.
+The previous engineer had started this process. They confirmed that adding the  object to a destination's data correctly displays a YouTube button in the UI. They added links for the first few destinations (Eiffel Tower, Machu Picchu, Great Wall, Colosseum, etc.) primarily within the  file. The user confirmed they wanted all videos added before they would review them.
 
-The  component in  attempts to render these fields without checking if they exist, causing a crash when it tries to access properties of a non-existent object (e.g.,  when  is ).
-
-The user has confirmed the error is still occurring (sigue saliendo el error). The last action planned by the previous engineer was to add conditional rendering logic within the JSX of the  to safely handle these missing data fields.
+The last action taken was to begin adding the video for Table Mountain and the remaining 6 destinations to the Spanish data file (). The parallel task of adding all these links to the English file () is still pending. The process is manual and involves finding appropriate video URLs for each destination in both languages.
 </current_work>
+
 <optional_next_step>
-Fix the crash by adding conditional rendering checks inside the  component in  to ensure it only tries to render sections like How to Get There or Tickets if the corresponding data exists in the  object.
+Continúo agregando los links de YouTube para los 6 destinos restantes en , empezando por Table Mountain, Serengeti, y Sydney Opera House.
 </optional_next_step>

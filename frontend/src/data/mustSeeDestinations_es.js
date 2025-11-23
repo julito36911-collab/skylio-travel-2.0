@@ -520,8 +520,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Gran_Ca%C3%B1%C3%B3n',
-      en: 'https://en.wikipedia.org/wiki/Grand_Canyon',
-      he: 'https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%A8%D7%A0%D7%93_%D7%A7%D7%A0%D7%99%D7%95%D7%9F'
+      en: 'https://en.wikipedia.org/wiki/Grand_Canyon'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=_6mTb7KqL3c',
+      en: 'https://www.youtube.com/watch?v=Im1TO7PG9-A'
     },
     
     description: 'Cañón excavado por el Río Colorado durante 5-6 millones de años. 446 km de largo, hasta 29 km de ancho y 1,800m de profundidad.',

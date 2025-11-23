@@ -432,6 +432,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%90%D7%A6%27%D7%95_%D7%A4%D7%99%D7%A7%D7%A6%27%D7%95'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=1zsuuxALFSI',
+      en: 'https://www.youtube.com/watch?v=VIXxhsN36T0'
+    },
+    
     description: 'Ciudad inca del siglo XV en montañas de los Andes a 2,430m. Maravilla del Mundo y sitio más icónico de Sudamérica.',
     
     mustKnow: [

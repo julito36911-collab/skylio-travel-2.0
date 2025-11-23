@@ -1850,6 +1850,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%A9%D7%95%D7%A0%D7%99%D7%AA_%D7%94%D7%92%D7%93%D7%95%D7%9C%D7%94'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=hMQ2MFMV4xM',
+      en: 'https://www.youtube.com/watch?v=uJWaCLjolxA'
+    },
+    
     description: 'Sistema de arrecifes más grande del mundo. 2,300 km de largo, visible desde el espacio. Patrimonio en peligro.',
     
     mustKnow: [

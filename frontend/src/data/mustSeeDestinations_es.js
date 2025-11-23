@@ -1493,8 +1493,12 @@ export const mustSeeDestinations = [
     
     wikiLinks: {
       es: 'https://es.wikipedia.org/wiki/Cataratas_Victoria',
-      en: 'https://en.wikipedia.org/wiki/Victoria_Falls',
-      he: 'https://he.wikipedia.org/wiki/%D7%9E%D7%A4%D7%9C%D7%99_%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%94'
+      en: 'https://en.wikipedia.org/wiki/Victoria_Falls'
+    },
+    
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=1rZhVH7Jogc',
+      en: 'https://www.youtube.com/watch?v=5ky6vgQfU24'
     },
     
     description: 'Una de las cataratas más grandes del mundo. 1,708m de ancho, 108m de altura. "El Humo que Truena" (nombre local).',

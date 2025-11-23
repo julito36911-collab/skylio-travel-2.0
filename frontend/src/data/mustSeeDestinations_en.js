@@ -614,6 +614,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%A8%D7%A0%D7%93_%D7%A7%D7%A0%D7%99%D7%95%D7%9F'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=c8aFcHFu8QM',
+      en: 'https://www.youtube.com/watch?v=oF_KYy6k1ys'
+    },
+    
     description: 'Canyon carved by the Colorado River. 446 km long, 29 km wide, 1,800m deep. Visible rock from 2 billion years ago.',
     
     mustKnow: [

@@ -2118,6 +2118,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%94%D7%95%D7%91%D7%99%D7%98%D7%95%D7%9F_(%D7%A4%D7%9C%D7%98%D7%95)'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=9EvbqxBUG_c',
+      en: 'https://www.youtube.com/watch?v=nGpAyVLbV_w'
+    },
+    
     description: 'Set de filmación permanente de El Señor de los Anillos y El Hobbit. 44 agujeros hobbit en Comarca preservada.',
     
     mustKnow: [

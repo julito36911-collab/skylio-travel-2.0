@@ -24,6 +24,12 @@ export const mustSeeDestinations = [
       en: 'https://www.youtube.com/watch?v=CVujfJHYygw'
     },
     
+    photos: [
+      'https://images.unsplash.com/photo-1570097703229-b195d6dd291f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxFaWZmZWwlMjBUb3dlciUyMFBhcmlzfGVufDB8fHx8MTc2Mzg4NjI5Mnww&ixlib=rb-4.1.0&q=85',
+      'https://images.unsplash.com/photo-1645573324217-17cd62e55151?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxFaWZmZWwlMjBUb3dlciUyMFBhcmlzfGVufDB8fHx8MTc2Mzg4NjI5Mnww&ixlib=rb-4.1.0&q=85',
+      'https://images.pexels.com/photos/8430383/pexels-photo-8430383.jpeg'
+    ],
+    
     description: 'Icono mundial de París, la "Dama de Hierro" de 330m de altura construida en 1889 para la Exposición Universal.',
     
     mustKnow: [

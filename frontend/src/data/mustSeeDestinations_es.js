@@ -297,6 +297,12 @@ export const mustSeeDestinations = [
       en: 'https://www.youtube.com/watch?v=TQ3zKQPxBKA'
     },
     
+    photos: [
+      'https://images.unsplash.com/photo-1678786393784-45cdc1663300',
+      'https://images.unsplash.com/photo-1656351408322-1200d2100e59',
+      'https://images.unsplash.com/photo-1679681414017-9a3ea5538eb3'
+    ],
+    
     category: 'Sitio Arqueológico',
     
     description: 'Ciudadela antigua en colina rocosa con el Partenón, templo dedicado a Atenea (447-432 a.C.). Símbolo de la civilización occidental.',

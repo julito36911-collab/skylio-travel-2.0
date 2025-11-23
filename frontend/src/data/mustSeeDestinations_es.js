@@ -1672,6 +1672,11 @@ export const mustSeeDestinations = [
       he: 'https://he.wikipedia.org/wiki/%D7%A1%D7%A8%D7%A0%D7%92%D7%98%D7%99'
     },
     
+    youtubeLinks: {
+      es: 'https://www.youtube.com/watch?v=btuxO-C2IzE',
+      en: 'https://www.youtube.com/watch?v=lJRYAV5TRzk'
+    },
+    
     description: 'Ecosistema de 30,000 km² famoso por la Gran Migración (2 millones de animales). Safari africano por excelencia.',
     
     mustKnow: [

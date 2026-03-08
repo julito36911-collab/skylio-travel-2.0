@@ -102,7 +102,7 @@ const NewsSection = () => {
     fetchNews();
   }, [i18n.language]); // Re-fetch cuando cambia el idioma
 
-  if (!ENABLE_NEWS) return null;
+  // if (!ENABLE_NEWS) return null;
 
   return (
     <section className="mt-8 mb-8">

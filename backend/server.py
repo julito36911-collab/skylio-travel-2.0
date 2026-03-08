@@ -203,6 +203,80 @@ General instructions for BOTH options:
             detail=f"An unexpected error occurred: {str(e)}"
         )
 
+@api_router.get("/news")
+async def get_news(language: str = "es"):
+    """
+    Get travel news from NewsAPI
+    Supports Spanish (es) and English (en)
+    """
+    try:
+        # Get NewsAPI key from environment
+        news_api_key = os.environ.get('NEWS_API_KEY')
+        
+        if not news_api_key:
+            raise HTTPException(
+                status_code=500, 
+                detail="NEWS_API_KEY not configured. Please add it to your .env file."
+            )
+        
+        # NewsAPI endpoint
+        api_url = "https://newsapi.org/v2/everything"
+        
+        # Define search queries based on language
+        if language == "es":
+            query = "(viajes OR turismo OR vacaciones) AND (destinos OR aerolíneas OR hoteles OR vuelos OR aeropuerto OR pasajeros)"
+        else:  # English
+            query = "(travel OR tourism OR vacation) AND (destination OR airlines OR hotels OR flights OR airport)"
+        
+        # API parameters
+        params = {
+            "q": query,
+            "language": language,
+            "sortBy": "publishedAt",
+            "pageSize": 6,
+            "apiKey": news_api_key
+        }
+        
+        # Make request to NewsAPI
+        response = requests.get(api_url, params=params, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return {
+                "status": "success",
+                "articles": data.get("articles", []),
+                "totalResults": data.get("totalResults", 0)
+            }
+        elif response.status_code == 426:
+            # Upgrade required error from NewsAPI
+            raise HTTPException(
+                status_code=426,
+                detail="NewsAPI requires HTTPS. This usually happens when accessing from localhost."
+            )
+        else:
+            raise HTTPException(
+                status_code=response.status_code,
+                detail=f"NewsAPI error: {response.text}"
+            )
+        
+    except requests.exceptions.Timeout:
+        raise HTTPException(
+            status_code=504,
+            detail="Request to NewsAPI timed out. Please try again."
+        )
+    except requests.exceptions.RequestException as e:
+        logger.error(f"NewsAPI request error: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to connect to NewsAPI: {str(e)}"
+        )
+    except Exception as e:
+        logger.error(f"Unexpected error in news endpoint: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"An unexpected error occurred: {str(e)}"
+        )
+
 # Include the router in the main app
 app.include_router(api_router)
 

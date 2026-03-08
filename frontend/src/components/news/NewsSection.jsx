@@ -5,7 +5,7 @@ import { demoNews } from '../../data/demoNews';
 
 // CONFIGURACIÓN DE NEWSAPI
 const API_KEY = process.env.REACT_APP_NEWS_API_KEY || '';
-const ENABLE_NEWS = !!API_KEY; // Se activa automáticamente si hay API key
+const ENABLE_NEWS = true; // Se activa automáticamente si hay API key
 const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 horas
 const USE_DEMO_MODE = true; // Cambiar a false en producción con dominio real
 

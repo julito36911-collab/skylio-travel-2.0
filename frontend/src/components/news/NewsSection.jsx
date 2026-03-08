@@ -68,13 +68,14 @@ const NewsSection = () => {
       try {
         console.log(`📡 Obteniendo noticias frescas para idioma: ${currentLanguage}`);
         
-        const keywords = KEYWORDS[searchLanguage] || KEYWORDS.en;
-        const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(keywords)}&language=${searchLanguage}&sortBy=publishedAt&pageSize=8&apiKey=${API_KEY}`;
+        // Usar el backend como proxy para evitar CORS
+        const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+        const url = `${backendUrl}/api/news?language=${searchLanguage}`;
         
         const response = await fetch(url);
         const data = await response.json();
 
-        if (data.status === 'ok' && data.articles) {
+        if (data.status === 'success' && data.articles) {
           // Filtrar artículos válidos (con imagen, título y descripción)
           const validArticles = data.articles
             .filter(article => article.urlToImage && article.title && article.description)

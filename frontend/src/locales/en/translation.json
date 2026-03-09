@@ -259,7 +259,14 @@
     "demo_note": "Demo data updated. In production, real-time APIs will be connected.",
     "see_details": "See details →",
     "extreme_badge": "Extreme",
-    "high_badge": "High"
+    "high_badge": "High",
+    "schedule": "Schedule:",
+    "fine": "Fine:",
+    "weekdays": "Mon-Fri",
+    "publicTransport": "Public Transport:",
+    "parking": "Parking:",
+    "ticket": "Ticket:",
+    "variable": "Variable"
   },
   "parking": {
     "title": "Find Safe Parking",

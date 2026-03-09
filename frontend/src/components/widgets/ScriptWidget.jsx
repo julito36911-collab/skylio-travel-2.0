@@ -36,7 +36,8 @@ const ScriptWidget = ({ scriptSrc }) => {
   return (
     <div 
       ref={containerRef} 
-      className="widget-container min-h-[300px] md:min-h-[400px] bg-white rounded-xl overflow-hidden relative z-20 shadow-inner flex justify-center items-center"
+      className="widget-container min-h-[600px] w-full bg-white rounded-xl overflow-hidden relative z-20 shadow-inner flex justify-center items-center"
+      style={{ minHeight: '600px', width: '100%', height: '100%' }}
     >
       <span className="text-slate-400 text-sm animate-pulse">{t('messages.loading_search')}</span>
     </div>

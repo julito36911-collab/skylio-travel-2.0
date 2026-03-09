@@ -153,6 +153,7 @@
     "loading_search": "Cargando buscador..."
   },
   "guides": {
+    "seeDetails": "Ver detalles →",
     "hub_title": "Guías de Viaje Completas",
     "hub_subtitle": "30+ destinos • Restricciones de conducción • Tips esenciales",
     "title": "Guías de Viaje",
@@ -224,6 +225,7 @@
     "cities": "ciudades"
   },
   "cities": {
+    "airports": "aeropuerto(s)",
     "title": "Ciudades",
     "publicTransport": "Transporte Público",
     "transportTypes": "Tipos de Transporte",

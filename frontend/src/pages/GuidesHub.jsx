@@ -2,8 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { drivingRestrictions as drivingRestrictionsEs } from '../data/drivingRestrictions';
 import { drivingRestrictions as drivingRestrictionsEn } from '../data/drivingRestrictions_en';
-import { mustSeeDestinations as destinationsEs, continents } from '../data/mustSeeDestinations_es';
-import { mustSeeDestinations as destinationsEn } from '../data/mustSeeDestinations_en';
+import { mustSeeDestinations as destinationsEs, continents as continentsEs } from '../data/mustSeeDestinations_es';
+import { mustSeeDestinations as destinationsEn, continents as continentsEn } from '../data/mustSeeDestinations_en';
 
 function GuidesHub() {
   const { t, i18n } = useTranslation();
@@ -34,6 +34,15 @@ function GuidesHub() {
     } else {
       // Spanish (default)
       return destinationsEs;
+    }
+  }, [i18n.language]);
+
+  // Cargar continentes según idioma activo
+  const continents = useMemo(() => {
+    if (i18n.language === 'en') {
+      return continentsEn;
+    } else {
+      return continentsEs;
     }
   }, [i18n.language]);
 
@@ -436,6 +445,7 @@ function DestinationsGrid({ destinations }) {
 
 // Tarjeta individual de destino
 function DestinationCard({ destination }) {
+  const { t } = useTranslation();
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -461,7 +471,7 @@ function DestinationCard({ destination }) {
             {destination.category}
           </span>
           <span className="text-blue-400 group-hover:text-blue-300 font-medium">
-            Ver detalles →
+            {t('guides.seeDetails', 'See details →')}
           </span>
         </div>
       </div>
@@ -753,6 +763,7 @@ function DrivingGrid({ cities }) {
 
 // Tarjeta de restricciones de conducción
 function DrivingCard({ city }) {
+  const { t } = useTranslation();
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -788,7 +799,7 @@ function DrivingCard({ city }) {
         </div>
 
         <p className="text-blue-400 group-hover:text-blue-300 font-medium">
-          Ver detalles →
+          {t('guides.seeDetails', 'See details →')}
         </p>
       </div>
 
@@ -1166,10 +1177,10 @@ function CityCard({ city, countryName }) {
         <p className="text-sm text-gray-300 mb-2">👥 {city.population}</p>
         <div className="flex items-center justify-between text-xs">
           <span className="text-blue-300">
-            {city.airports?.length || 0} aeropuerto(s)
+            {city.airports?.length || 0} {t('cities.airports', 'airport(s)')}
           </span>
           <span className="text-blue-400 group-hover:text-blue-300 font-medium">
-            Ver detalles →
+            {t('guides.seeDetails', 'See details →')}
           </span>
         </div>
       </div>

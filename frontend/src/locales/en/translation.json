@@ -153,6 +153,7 @@
     "loading_search": "Loading search..."
   },
   "guides": {
+    "seeDetails": "See details →",
     "hub_title": "Complete Travel Guides",
     "hub_subtitle": "30+ destinations • Driving restrictions • Essential tips",
     "title": "Travel Guides",
@@ -224,6 +225,7 @@
     "aiExample3": "Romantic tours in Venice for couples"
   },
   "cities": {
+    "airports": "airport(s)",
     "title": "Cities",
     "publicTransport": "Public Transport",
     "transportTypes": "Transport Types",

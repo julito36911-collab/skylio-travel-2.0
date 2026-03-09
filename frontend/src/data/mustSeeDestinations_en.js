@@ -1,6 +1,6 @@
 // Must-See Destinations - Top 25 World Destinations
 
-export const continents = ['All', 'Europe', 'Asia', 'America', 'Africa', 'Oceania'];
+export const continents = ['Europe', 'Asia', 'America', 'Africa', 'Oceania'];
 
 export const mustSeeDestinations = [
   {
@@ -219,7 +219,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'acropolis',
-    youtubeLinks: {
+    name: 'Acropolis of Athens',
+    city: 'Athens',
+    country: 'Greece',
+    continent: 'Europe',
+    flag: '🇬🇷',
+    coordinates: { lat: 37.9715, lon: 23.7267 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=Yw5RgYHg4BU',
       en: 'https://www.youtube.com/watch?v=vdybN_QYZzA'
     },
@@ -349,7 +355,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'taj-mahal',
-    youtubeLinks: {
+    name: 'Taj Mahal',
+    city: 'Agra',
+    country: 'India',
+    continent: 'Asia',
+    flag: '🇮🇳',
+    coordinates: { lat: 27.1751, lon: 78.0421 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=P9r1dO-3yDw',
       en: 'https://www.youtube.com/watch?v=EKgLnUqmYzk'
     },
@@ -408,7 +420,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'gran-muralla-china',
-    youtubeLinks: {
+    name: 'Great Wall of China',
+    city: 'Beijing',
+    country: 'China',
+    continent: 'Asia',
+    flag: '🇨🇳',
+    coordinates: { lat: 40.4319, lon: 116.5704 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=k2iNu7jX26k',
       en: 'https://www.youtube.com/watch?v=q6TcjXHbkI8'
     },
@@ -467,7 +485,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'piramides-giza',
-    youtubeLinks: {
+    name: 'Pyramids of Giza',
+    city: 'Giza',
+    country: 'Egypt',
+    continent: 'Africa',
+    flag: '🇪🇬',
+    coordinates: { lat: 29.9792, lon: 31.1342 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=0XwORwzCuOg',
       en: 'https://www.youtube.com/watch?v=AWPExjjKJgw'
     },
@@ -526,7 +550,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'cristo-redentor',
-    youtubeLinks: {
+    name: 'Christ the Redeemer',
+    city: 'Rio de Janeiro',
+    country: 'Brazil',
+    continent: 'America',
+    flag: '🇧🇷',
+    coordinates: { lat: -22.9519, lon: -43.2105 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=Pc4vCIXqJbk',
       en: 'https://www.youtube.com/watch?v=g8hWp7D5XeQ'
     },
@@ -585,7 +615,13 @@ export const mustSeeDestinations = [
 
   {
     id: 'gran-canyon',
-    youtubeLinks: {
+    name: 'Grand Canyon',
+    city: 'Arizona',
+    country: 'United States',
+    continent: 'America',
+    flag: '🇺🇸',
+    coordinates: { lat: 36.1069, lon: -112.1129 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=c8aFcHFu8QM',
       en: 'https://www.youtube.com/watch?v=oF_KYy6k1ys'
     },
@@ -738,7 +774,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'cataratas-iguazu',
-    youtubeLinks: {
+    name: 'Iguazu Falls',
+    city: 'Puerto Iguazú / Foz do Iguaçu',
+    country: 'Argentina / Brazil',
+    continent: 'America',
+    flag: '🇦🇷🇧🇷',
+    coordinates: { lat: -25.6953, lon: -54.4367 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=ztvk0xDjz6Q',
       en: 'https://www.youtube.com/watch?v=FfMxwp5U4Hk'
     },
@@ -824,7 +866,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'times-square',
-    youtubeLinks: {
+    name: 'Times Square',
+    city: 'New York',
+    country: 'United States',
+    continent: 'America',
+    flag: '🇺🇸',
+    coordinates: { lat: 40.7580, lon: -73.9855 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=VctCDnYPdeU',
       en: 'https://www.youtube.com/watch?v=7pcZURDhJk0'
     },
@@ -909,7 +957,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'angkor-wat',
-    youtubeLinks: {
+    name: 'Angkor Wat',
+    city: 'Siem Reap',
+    country: 'Cambodia',
+    continent: 'Asia',
+    flag: '🇰🇭',
+    coordinates: { lat: 13.4125, lon: 103.8670 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=3HGWnBG0zR4',
       en: 'https://www.youtube.com/watch?v=YU_0FYbP47s'
     },
@@ -996,7 +1050,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'monte-fuji',
-    youtubeLinks: {
+    name: 'Mount Fuji',
+    city: 'Fujinomiya',
+    country: 'Japan',
+    continent: 'Asia',
+    flag: '🇯🇵',
+    coordinates: { lat: 35.3606, lon: 138.7274 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=QEG2SIZoLF8',
       en: 'https://www.youtube.com/watch?v=JxYmILDya0A'
     },
@@ -1081,7 +1141,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'petra',
-    youtubeLinks: {
+    name: 'Petra',
+    city: "Ma'an",
+    country: 'Jordan',
+    continent: 'Asia',
+    flag: '🇯🇴',
+    coordinates: { lat: 30.3285, lon: 35.4444 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=YU_0FYbP47s',
       en: 'https://www.youtube.com/watch?v=UMiPZx6WRA0'
     },
@@ -1167,7 +1233,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'kilimanjaro',
-    youtubeLinks: {
+    name: 'Mount Kilimanjaro',
+    city: 'Moshi',
+    country: 'Tanzania',
+    continent: 'Africa',
+    flag: '🇹🇿',
+    coordinates: { lat: -3.0674, lon: 37.3556 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=FMi9qJMBmWc',
       en: 'https://www.youtube.com/watch?v=BZDs5rB-u34'
     },
@@ -1252,7 +1324,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'cataratas-victoria',
-    youtubeLinks: {
+    name: 'Victoria Falls',
+    city: 'Livingstone / Victoria Falls',
+    country: 'Zambia / Zimbabwe',
+    continent: 'Africa',
+    flag: '🇿🇲🇿🇼',
+    coordinates: { lat: -17.9244, lon: 25.8572 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=1rZhVH7Jogc',
       en: 'https://www.youtube.com/watch?v=5ky6vgQfU24'
     },
@@ -1340,7 +1418,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'table-mountain',
-    youtubeLinks: {
+    name: 'Table Mountain',
+    city: 'Cape Town',
+    country: 'South Africa',
+    continent: 'Africa',
+    flag: '🇿🇦',
+    coordinates: { lat: -33.9628, lon: 18.4098 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=X0RjW8TqJ-8',
       en: 'https://www.youtube.com/watch?v=SjBnQXJML3U'
     },
@@ -1425,7 +1509,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'serengeti',
-    youtubeLinks: {
+    name: 'Serengeti National Park',
+    city: 'Arusha',
+    country: 'Tanzania',
+    continent: 'Africa',
+    flag: '🇹🇿',
+    coordinates: { lat: -2.3333, lon: 34.8333 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=VnSLRzu5gPc',
       en: 'https://www.youtube.com/watch?v=dQ0FFh9fLBQ'
     },
@@ -1512,7 +1602,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'opera-sydney',
-    youtubeLinks: {
+    name: 'Sydney Opera House',
+    city: 'Sydney',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -33.8568, lon: 151.2153 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=qiXdz9NHVxk',
       en: 'https://www.youtube.com/watch?v=AhTM0Ak-iGs'
     },
@@ -1598,7 +1694,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'gran-barrera-coral',
-    youtubeLinks: {
+    name: 'Great Barrier Reef',
+    city: 'Cairns',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -18.2871, lon: 147.6992 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=S1WWnZbTQko',
       en: 'https://www.youtube.com/watch?v=SzcD48ew7B0'
     },
@@ -1685,7 +1787,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'milford-sound',
-    youtubeLinks: {
+    name: 'Milford Sound',
+    city: 'Fiordland',
+    country: 'New Zealand',
+    continent: 'Oceania',
+    flag: '🇳🇿',
+    coordinates: { lat: -44.6719, lon: 167.9269 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=nJqxKJHR_Ss',
       en: 'https://www.youtube.com/watch?v=P8fKrDhR9lE'
     },
@@ -1772,7 +1880,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'uluru',
-    youtubeLinks: {
+    name: 'Uluru (Ayers Rock)',
+    city: 'Northern Territory',
+    country: 'Australia',
+    continent: 'Oceania',
+    flag: '🇦🇺',
+    coordinates: { lat: -25.3444, lon: 131.0369 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=fNRa8GXxpzE',
       en: 'https://www.youtube.com/watch?v=00aVNMYLYzI'
     },
@@ -1856,7 +1970,13 @@ export const mustSeeDestinations = [
   
   {
     id: 'hobbiton',
-    youtubeLinks: {
+    name: 'Hobbiton',
+    city: 'Matamata',
+    country: 'New Zealand',
+    continent: 'Oceania',
+    flag: '🇳🇿',
+    coordinates: { lat: -37.8722, lon: 175.6833 },
+        youtubeLinks: {
       es: 'https://www.youtube.com/watch?v=eOlFRLjG29Q',
       en: 'https://www.youtube.com/watch?v=fHhpRmPhq3g'
     },

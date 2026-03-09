@@ -132,7 +132,7 @@ const DrivingGuide = () => {
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-2xl">{city.flag}</span>
                   <span className="px-1.5 py-0.5 bg-orange-500/20 text-orange-400 text-[8px] font-bold uppercase rounded-full">
-                    Alto
+                    {t('driving.high_badge', 'Alto')}
                   </span>
                 </div>
                 <h3 className="text-sm font-bold text-white group-hover:text-blue-400 transition">

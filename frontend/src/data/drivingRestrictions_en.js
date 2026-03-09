@@ -1,5 +1,5 @@
-// Demo data of traffic restrictions in 15 critical cities
-// In production, this data will come from APIs and automated scraping
+// Datos demo de restricciones de tráfico en 15 ciudades críticas
+// En producción, estos datos vendrán de APIs y scraping automatizado
 
 export const drivingRestrictions = [
   {
@@ -21,20 +21,20 @@ export const drivingRestrictions = [
         schedule: {
           weekdays: '06:30 - 18:00',
           saturday: '14:00 - 18:00',
-          sunday: 'Free',
-          notes: 'Schedules may vary on special events'
+          sunday: 'Libre',
+          notes: 'Horarios pueden variar en eventos especiales'
         },
         fines: {
           amount: 83,
           currency: 'EUR',
           perCamera: true,
-          notes: 'Each camera generates an independent fine'
+          notes: 'Cada cámara genera una multa independiente'
         },
         cameras: 52,
         permits: {
           available: false,
           forTourists: false,
-          requirements: ['Residents only', 'Downtown hotels', 'Authorized taxis']
+          requirements: ['Solo residentes', 'Hoteles del centro', 'Taxis autorizados']
         }
       }
     ],
@@ -45,7 +45,7 @@ export const drivingRestrictions = [
         name: 'Terminal Gianicolo',
         price: '2€/hora',
         distance: '500m al metro',
-        recommendation: 'Best option for tourists'
+        recommendation: 'Mejor opción para turistas'
       },
       {
         type: 'PUBLIC_TRANSPORT',
@@ -56,7 +56,7 @@ export const drivingRestrictions = [
       {
         type: 'BIKE_SCOOTER',
         services: ['Lime', 'Bird', 'Dott'],
-        notes: 'Perfect for downtown'
+        notes: 'Perfectos para el centro'
       }
     ],
     
@@ -70,7 +70,7 @@ export const drivingRestrictions = [
       },
       fuelAvgPrice: { petrol: 1.85, diesel: 1.72, unit: 'EUR/L' },
       alcoholLimit: 0.5,
-      requiredDocs: ['Driver license', 'IDP recommended', 'Insurance required']
+      requiredDocs: ['Licencia de conducir', 'IDP recomendado', 'Seguro obligatorio']
     },
     
     tips: [
@@ -107,7 +107,7 @@ export const drivingRestrictions = [
         schedule: {
           weekdays: '07:30 - 19:30',
           saturday: '07:30 - 16:00',
-          sunday: 'Free',
+          sunday: 'Libre',
           notes: 'Zona F (más amplia) tiene horarios diferentes'
         },
         fines: {
@@ -136,7 +136,7 @@ export const drivingRestrictions = [
       },
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Tranvía T1, T2', 'Bus ATAF líneas principales'],
+        options: ['Tram T1, T2', 'Bus ATAF lines principales'],
         ticketPrice: '1.50€',
         dayPass: '5€'
       }
@@ -150,7 +150,7 @@ export const drivingRestrictions = [
     },
     
     tips: [
-      'ZTL más estricta que Roma',
+      'ZTL más estricta que Rome',
       'Hotel puede dar permiso temporal',
       'Centro es pequeño, caminar es mejor',
       'Parking Fortezza es tu mejor aliado'
@@ -179,8 +179,8 @@ export const drivingRestrictions = [
         description: 'Pago obligatorio + restricciones ambientales',
         schedule: {
           weekdays: '07:30 - 19:30',
-          saturday: 'Free',
-          sunday: 'Free'
+          saturday: 'Libre',
+          sunday: 'Libre'
         },
         fines: {
           amount: 5,
@@ -202,7 +202,7 @@ export const drivingRestrictions = [
         description: 'Restricción nocturna en centro',
         schedule: {
           weekdays: '00:00 - 06:00',
-          notes: 'Residents only y autorizados'
+          notes: 'Solo residentes y autorizados'
         }
       }
     ],
@@ -210,7 +210,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro M1, M2, M3, M5', 'Tranvías modernos'],
+        options: ['Metro M1, M2, M3, M5', 'Trams modernos'],
         ticketPrice: '2€',
         dayPass: '7€',
         notes: 'Excelente red de metro'
@@ -253,7 +253,7 @@ export const drivingRestrictions = [
         description: 'Sistema de etiquetas ambientales obligatorio',
         schedule: {
           weekdays: '24/7',
-          notes: 'Obligatorio siempre dentro de París'
+          notes: 'Obligatorio siempre dentro de Paris'
         },
         fines: {
           amount: 68,
@@ -281,7 +281,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro (14 líneas)', 'RER', 'Bus'],
+        options: ['Metro (14 lines)', 'RER', 'Bus'],
         ticketPrice: '2.10€',
         dayPass: '8€ (Mobilis)',
         notes: 'Uno de los mejores sistemas del mundo'
@@ -299,7 +299,7 @@ export const drivingRestrictions = [
       speedLimits: { urban: 30, peripherique: 70, rural: 80, highway: 130, unit: 'km/h' },
       fuelAvgPrice: { petrol: 1.92, diesel: 1.79, unit: 'EUR/L' },
       alcoholLimit: 0.5,
-      notes: 'París centro ahora 30 km/h máximo'
+      notes: 'Paris centro ahora 30 km/h máximo'
     },
     
     tips: [
@@ -330,7 +330,7 @@ export const drivingRestrictions = [
       {
         type: 'ZBE',
         name: 'Zona de Bajas Emisiones Madrid 360',
-        description: 'Toda la zona interior M-30 es ZBE',
+        description: 'All inner M-30 area is LEZ',
         schedule: {
           weekdays: '24/7',
           notes: 'Activa todo el año'
@@ -357,7 +357,7 @@ export const drivingRestrictions = [
       {
         type: 'PROTOCOL',
         name: 'Protocolo Anti-Contaminación',
-        description: 'Restricciones adicionales en días de alta contaminación',
+        description: 'Additional restrictions on high pollution days',
         notes: 'Nivel 3 = Solo ECO y CERO pueden circular'
       }
     ],
@@ -365,7 +365,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro (12 líneas)', 'Cercanías', 'EMT buses'],
+        options: ['Metro (12 lines)', 'Commuter rail', 'EMT buses'],
         ticketPrice: '1.50-2€',
         dayPass: '8.40€ (Zona A)',
         notes: 'Muy completo y eficiente'
@@ -374,7 +374,7 @@ export const drivingRestrictions = [
         type: 'PARKING',
         name: 'Intercambiadores (Park & Ride)',
         price: '€2-3/día',
-        recommendation: 'Aparcar fuera y usar metro'
+        recommendation: 'Park outside and use metro'
       }
     ],
     
@@ -386,10 +386,10 @@ export const drivingRestrictions = [
     },
     
     tips: [
-      'Verifica tu etiqueta DGT antes de viajar',
-      'Sin etiqueta = prohibido entrar a M-30',
-      'Protocolo se activa con 3+ días contaminación',
-      'Parking regulado (SER) muy extendido',
+      'Check your DGT sticker before traveling',
+      'No sticker = forbidden to enter M-30',
+      'Protocol activates with 3+ days of pollution',
+      'Regulated parking (SER) widely extended',
       'App MiNT para pagar parking desde móvil'
     ],
     
@@ -413,9 +413,9 @@ export const drivingRestrictions = [
       {
         type: 'ZBE',
         name: 'Zona de Bajas Emisiones Rondas',
-        description: 'Interior de las Rondas de Barcelona',
+        description: 'Inside Barcelona Ring Roads',
         schedule: {
-          weekdays: 'Lun-Vie 07:00 - 20:00',
+          weekdays: 'Mon-Fri 07:00 - 20:00',
           notes: 'Prohibido circular sin etiqueta ambiental'
         },
         fines: {
@@ -433,7 +433,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro (8 líneas)', 'FGC', 'TMB buses', 'Tranvía'],
+        options: ['Metro (8 lines)', 'FGC', 'TMB buses', 'Tram'],
         ticketPrice: '2.55€',
         t10: '11.35€ (10 viajes)',
         notes: 'Sistema integrado muy bueno'
@@ -452,11 +452,11 @@ export const drivingRestrictions = [
     },
     
     tips: [
-      'ZBE menos restrictiva que Madrid (solo días laborables)',
-      'Parking carísimo en centro (€4-5/hora)',
-      'Barrios periféricos mejor para aparcar',
-      'Metro llega a casi todo',
-      'Bicing solo para residentes'
+      'ZBE menos restrictiva que Madrid (solo weekdays)',
+      'Very expensive parking downtown (€4-5/hora)',
+      'Peripheral neighborhoods better for parking',
+      'Metro reaches almost everywhere',
+      'Bicing for residents only'
     ],
     
     usefulApps: ['TMB App', 'ApparkB', 'Moovit'],
@@ -481,9 +481,9 @@ export const drivingRestrictions = [
         name: 'Congestion Charge',
         description: 'Pago obligatorio para entrar al centro',
         schedule: {
-          weekdays: 'Lun-Vie 07:00 - 18:00',
+          weekdays: 'Mon-Fri 07:00 - 18:00',
           saturday: 'Sáb 12:00 - 18:00',
-          sunday: 'Free'
+          sunday: 'Libre'
         },
         fines: {
           amount: 15,
@@ -518,7 +518,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Tube (11 líneas)', 'Buses (600+ rutas)', 'Overground', 'DLR'],
+        options: ['Tube (11 lines)', 'Buses (600+ rutas)', 'Overground', 'DLR'],
         ticketPrice: '£2.80 con Oyster',
         dayPass: '£8.10 (Zonas 1-2)',
         notes: 'Sistema más extenso de Europa'
@@ -589,7 +589,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['U-Bahn', 'S-Bahn', 'Tranvía', 'Bus'],
+        options: ['U-Bahn', 'S-Bahn', 'Tram', 'Bus'],
         ticketPrice: '3€',
         dayPass: '9€ (AB zones)',
         notes: 'Muy eficiente y puntual'
@@ -644,7 +644,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['U-Bahn', 'S-Bahn', 'Tranvía'],
+        options: ['U-Bahn', 'S-Bahn', 'Tram'],
         ticketPrice: '3.70€',
         dayPass: '9€'
       }
@@ -700,7 +700,7 @@ export const drivingRestrictions = [
       },
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Tranvía', 'Metro', 'Bus'],
+        options: ['Tram', 'Metro', 'Bus'],
         ticketPrice: '3.40€',
         dayPass: '9€'
       }
@@ -755,7 +755,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro', 'Tranvía', 'Bus STIB'],
+        options: ['Metro', 'Tram', 'Bus STIB'],
         ticketPrice: '2.50€',
         dayPass: '8€'
       }
@@ -807,7 +807,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['U-Bahn', 'Tranvía', 'Bus'],
+        options: ['U-Bahn', 'Tram', 'Bus'],
         ticketPrice: '2.40€',
         dayPass: '8€',
         notes: 'Uno de los mejores de Europa'
@@ -855,7 +855,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro', 'Tranvía', 'Elevadores', 'Bus'],
+        options: ['Metro', 'Tram', 'Elevadores', 'Bus'],
         ticketPrice: '1.50€',
         dayPass: '6.40€'
       }
@@ -870,7 +870,7 @@ export const drivingRestrictions = [
     tips: [
       'Cuestas muy empinadas',
       'Aparcar en colinas = pesadilla',
-      'Tranvía 28 icónico',
+      'Tram 28 icónico',
       'Driving relativamente relajado'
     ],
     
@@ -917,7 +917,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro (12 líneas)', 'Metrobús', 'RTP'],
+        options: ['Metro (12 lines)', 'Metrobús', 'RTP'],
         ticketPrice: '5-7 MXN (€0.30)',
         notes: 'Muy barato pero congestionado'
       },
@@ -951,7 +951,7 @@ export const drivingRestrictions = [
   {
     id: 'singapore',
     city: 'Singapore',
-    country: 'Singapur',
+    country: 'Singapore',
     countryCode: 'SG',
     flag: '🇸🇬',
     coordinates: { lat: 1.3521, lon: 103.8198 },
@@ -1033,7 +1033,7 @@ export const drivingRestrictions = [
         name: 'Central Business District Toll',
         description: 'Peaje de congestión en Manhattan (2024)',
         schedule: {
-          weekdays: 'Lun-Vie 05:00 - 21:00',
+          weekdays: 'Mon-Fri 05:00 - 21:00',
           weekend: 'Fines de semana 09:00 - 21:00'
         },
         fines: {
@@ -1099,7 +1099,7 @@ export const drivingRestrictions = [
         name: 'Carriles para vehículos compartidos',
         description: 'Carriles HOV/Carpool en autopistas',
         schedule: {
-          weekdays: 'Lun-Vie 05:00 - 09:00 y 15:00 - 19:00',
+          weekdays: 'Mon-Fri 05:00 - 09:00 y 15:00 - 19:00',
           notes: 'Mínimo 2-3 ocupantes según carril'
         },
         fines: {
@@ -1384,7 +1384,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Subte (6 líneas)', 'Colectivos (150+ líneas)', 'Tren'],
+        options: ['Subte (6 lines)', 'Colectivos (150+ lines)', 'Tren'],
         ticketPrice: '125 ARS (~$0.15)',
         notes: 'Sistema extenso y muy barato'
       }
@@ -1428,7 +1428,7 @@ export const drivingRestrictions = [
         name: 'Pico y Placa',
         description: 'Restricción por último dígito de placa',
         schedule: {
-          weekdays: 'Lun-Vie 06:00 - 08:30 y 15:00 - 19:30',
+          weekdays: 'Mon-Fri 06:00 - 08:30 y 15:00 - 19:30',
           notes: 'Varía según último dígito'
         },
         fines: {
@@ -1550,7 +1550,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['Metro (3 líneas)', 'BRT', 'Bus convencional'],
+        options: ['Metro (3 lines)', 'BRT', 'Bus convencional'],
         ticketPrice: 'R$ 4.70 (~$1)',
         notes: 'Metro limitado pero eficiente'
       }
@@ -1603,7 +1603,7 @@ export const drivingRestrictions = [
     alternatives: [
       {
         type: 'PUBLIC_TRANSPORT',
-        options: ['JR Lines', 'Metro (13 líneas)', 'Trenes privados'],
+        options: ['JR Lines', 'Metro (13 lines)', 'Trenes privados'],
         ticketPrice: '¥170-320 (~$1-2)',
         dayPass: '¥600-900',
         notes: 'Mejor sistema de transporte del mundo'
@@ -1619,7 +1619,7 @@ export const drivingRestrictions = [
     },
     
     tips: [
-      'Auto NO recomendado en Tokio',
+      'Auto NO recomendado en Tokyo',
       'Transporte público perfecto',
       'Parking ¥300-500/hora (¥3000-5000/día)',
       'Autopistas de pago caras',

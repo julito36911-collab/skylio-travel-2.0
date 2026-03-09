@@ -259,12 +259,12 @@ function AIAssistantTab() {
         }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.detail || 'Error al conectar con el asistente de IA');
+        throw new Error(data.detail || 'Error al conectar con el asistente de IA');
       }
 
-      const data = await response.json();
       setAiResponse(data.response);
     } catch (error) {
       console.error('AI Error:', error);

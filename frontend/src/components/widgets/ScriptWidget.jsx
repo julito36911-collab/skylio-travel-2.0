@@ -25,6 +25,29 @@ const ScriptWidget = ({ scriptSrc }) => {
     script.charset = 'UTF-8';
     containerRef.current.appendChild(script);
 
+    // Asegurar que el contenido del widget tenga tamaño completo
+    script.onload = () => {
+      setTimeout(() => {
+        if (containerRef.current) {
+          const iframes = containerRef.current.querySelectorAll('iframe');
+          const divs = containerRef.current.querySelectorAll('div');
+          
+          iframes.forEach(iframe => {
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
+            iframe.style.minHeight = '600px';
+          });
+          
+          divs.forEach(div => {
+            if (div.id || div.className) {
+              div.style.width = '100%';
+              div.style.minHeight = '600px';
+            }
+          });
+        }
+      }, 500);
+    };
+
     return () => {
       if (containerRef.current) {
          console.log("Desmontando widget...");

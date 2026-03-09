@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { drivingRestrictions, searchCities, getCitiesBySeverity } from '../data/drivingRestrictions';
+import { drivingRestrictions as drivingRestrictionsEs, searchCities as searchCitiesEs, getCitiesBySeverity as getCitiesBySeverityEs } from '../data/drivingRestrictions';
+import { drivingRestrictions as drivingRestrictionsEn, searchCities as searchCitiesEn, getCitiesBySeverity as getCitiesBySeverityEn } from '../data/drivingRestrictions_en';
 import { Search, AlertTriangle, Car, DollarSign, FileText, MapPin, TrendingUp } from 'lucide-react';
 
 const DrivingGuide = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Seleccionar datos según el idioma
+  const { drivingRestrictions, searchCities, getCitiesBySeverity } = useMemo(() => {
+    return i18n.language === 'en' 
+      ? { drivingRestrictions: drivingRestrictionsEn, searchCities: searchCitiesEn, getCitiesBySeverity: getCitiesBySeverityEn }
+      : { drivingRestrictions: drivingRestrictionsEs, searchCities: searchCitiesEs, getCitiesBySeverity: getCitiesBySeverityEs };
+  }, [i18n.language]);
 
   const extremeCities = getCitiesBySeverity('EXTREME');
   const highCities = getCitiesBySeverity('HIGH');

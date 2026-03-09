@@ -239,6 +239,28 @@
     "neighborhoods": "Important Neighborhoods",
     "climate": "Climate"
   },
+  "driving": {
+    "title": "Driving in the World",
+    "subtitle": "Restrictions, fines and tips for 15 cities",
+    "search": "Search city or country...",
+    "quick_tools": "Quick Tools",
+    "currency": "Converter",
+    "currency_sub": "Currencies",
+    "visas": "Visas",
+    "visas_sub": "Coming soon",
+    "map": "Map",
+    "map_sub": "Coming soon",
+    "tips": "Tips",
+    "tips_sub": "Coming soon",
+    "extreme_cities": "Extreme Restrictions",
+    "high_cities": "High Restrictions",
+    "results": "Search results",
+    "no_results": "No results found",
+    "demo_note": "Demo data updated. In production, real-time APIs will be connected.",
+    "see_details": "See details →",
+    "extreme_badge": "Extreme",
+    "high_badge": "High"
+  },
   "parking": {
     "title": "Find Safe Parking",
     "subtitle": "Search for reliable parking near your destination",

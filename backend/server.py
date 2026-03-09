@@ -1,4 +1,6 @@
 from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -294,6 +296,18 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Download endpoint for ZIP file
+@api_router.get("/download-build")
+async def download_build():
+    file_path = ROOT_DIR / "static" / "skylio-frontend.zip"
+    if file_path.exists():
+        return FileResponse(
+            path=str(file_path),
+            filename="skylio-frontend.zip",
+            media_type="application/zip"
+        )
+    raise HTTPException(status_code=404, detail="File not found")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():

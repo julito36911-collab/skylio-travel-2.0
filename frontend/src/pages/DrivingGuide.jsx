@@ -100,7 +100,7 @@ const DrivingGuide = () => {
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-3xl">{city.flag}</span>
                   <span className="px-2 py-0.5 bg-red-500/20 text-red-400 text-[9px] font-bold uppercase rounded-full border border-red-400/30">
-                    Extremo
+                    {t('driving.extreme_badge', 'Extremo')}
                   </span>
                 </div>
                 <h3 className="font-bold text-white group-hover:text-blue-400 transition">
@@ -108,7 +108,7 @@ const DrivingGuide = () => {
                 </h3>
                 <p className="text-xs text-slate-400">{city.country}</p>
                 <p className="text-[10px] text-slate-500 mt-1">
-                  {city.restrictions[0]?.type || 'Ver detalles'}
+                  {city.restrictions[0]?.type || t('driving.see_details', 'Ver detalles')}
                 </p>
               </button>
             ))}

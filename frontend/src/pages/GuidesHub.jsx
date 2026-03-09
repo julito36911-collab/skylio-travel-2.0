@@ -82,10 +82,10 @@ function GuidesHub() {
       city.restrictions.forEach(r => {
         details.push(`${r.type}: ${r.description || r.name}`);
         if (r.schedule) {
-          details.push(`Horario: Lun-Vie ${r.schedule.weekdays || 'Variable'}`);
+          details.push(`${t('driving.schedule', 'Horario:')} ${t('driving.weekdays', 'Lun-Vie')} ${r.schedule.weekdays || t('driving.variable', 'Variable')}`);
         }
         if (r.fines) {
-          details.push(`Multa: ${r.fines.amount} ${r.fines.currency}`);
+          details.push(`${t('driving.fine', 'Multa:')} ${r.fines.amount} ${r.fines.currency}`);
         }
       });
     }
@@ -97,7 +97,7 @@ function GuidesHub() {
         if (alt.type === 'PARKING') {
           alternatives.push(`🅿️ ${alt.name}: ${alt.price} - ${alt.recommendation || alt.distance}`);
         } else if (alt.type === 'PUBLIC_TRANSPORT') {
-          alternatives.push(`🚇 Transporte Público: ${alt.options?.join(', ') || ''} - Ticket: ${alt.ticketPrice}`);
+          alternatives.push(`🚇 ${t('driving.publicTransport', 'Transporte Público:')} ${alt.options?.join(', ') || ''} - ${t('driving.ticket', 'Ticket:')} ${alt.ticketPrice}`);
         } else if (alt.type === 'BIKE_SCOOTER') {
           alternatives.push(`🛴 Scooters: ${alt.services?.join(', ') || ''}`);
         }
@@ -110,9 +110,9 @@ function GuidesHub() {
       const americanCountries = ['Estados Unidos', 'United States', 'USA', 'México', 'Mexico', 'Canadá', 'Canada', 'Brasil', 'Brazil', 'Argentina', 'Chile', 'Colombia', 'Perú', 'Peru'];
       const asianCountries = ['Japón', 'Japan', 'China', 'India', 'Tailandia', 'Thailand', 'Singapur', 'Singapore'];
       
-      if (europeanCountries.includes(country)) return 'Europa';
-      if (americanCountries.includes(country)) return 'América';
-      if (asianCountries.includes(country)) return 'Asia';
+      if (europeanCountries.includes(country)) return i18n.language === 'en' ? 'Europe' : 'Europa';
+      if (americanCountries.includes(country)) return i18n.language === 'en' ? 'Americas' : 'América';
+      if (asianCountries.includes(country)) return i18n.language === 'en' ? 'Asia' : 'Asia';
       return 'Europa'; // Default
     };
 

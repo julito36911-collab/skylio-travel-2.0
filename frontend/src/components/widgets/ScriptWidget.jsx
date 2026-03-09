@@ -36,12 +36,17 @@ const ScriptWidget = ({ scriptSrc }) => {
             iframe.style.width = '100%';
             iframe.style.height = '600px';
             iframe.style.minHeight = '600px';
+            iframe.style.margin = '0';
+            iframe.style.padding = '0';
+            iframe.style.display = 'block';
           });
           
           divs.forEach(div => {
             if (div.id || div.className) {
               div.style.width = '100%';
               div.style.minHeight = '600px';
+              div.style.margin = '0';
+              div.style.padding = '0';
             }
           });
         }
@@ -59,10 +64,10 @@ const ScriptWidget = ({ scriptSrc }) => {
   return (
     <div 
       ref={containerRef} 
-      className="widget-container min-h-[600px] w-full bg-white rounded-xl overflow-hidden relative z-20 shadow-inner flex justify-center items-center"
-      style={{ minHeight: '600px', width: '100%', height: '100%' }}
+      className="widget-container min-h-[600px] w-full bg-white rounded-xl overflow-hidden relative z-20 shadow-inner flex flex-col items-start justify-start"
+      style={{ minHeight: '600px', width: '100%', height: '100%', margin: '0', padding: '0' }}
     >
-      <span className="text-slate-400 text-sm animate-pulse">{t('messages.loading_search')}</span>
+      <span className="text-slate-400 text-sm animate-pulse p-4">{t('messages.loading_search')}</span>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { drivingRestrictions } from '../data/drivingRestrictions';
+import { drivingRestrictions as drivingRestrictionsEs } from '../data/drivingRestrictions';
+import { drivingRestrictions as drivingRestrictionsEn } from '../data/drivingRestrictions_en';
 import { mustSeeDestinations as destinationsEs, continents } from '../data/mustSeeDestinations_es';
 import { mustSeeDestinations as destinationsEn } from '../data/mustSeeDestinations_en';
 
@@ -33,6 +34,16 @@ function GuidesHub() {
     } else {
       // Spanish (default)
       return destinationsEs;
+    }
+  }, [i18n.language]);
+
+  // Cargar datos de restricciones de conducción según idioma activo
+  const drivingRestrictions = useMemo(() => {
+    if (i18n.language === 'en') {
+      return drivingRestrictionsEn;
+    } else {
+      // Spanish (default)
+      return drivingRestrictionsEs;
     }
   }, [i18n.language]);
 

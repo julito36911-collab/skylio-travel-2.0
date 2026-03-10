@@ -279,12 +279,21 @@ function AIAssistantTab() {
         }),
       });
 
-      const data = await response.json();
-
+      // Clonar response antes de leer el body para evitar "Response body is already used"
+      const responseClone = response.clone();
+      
       if (!response.ok) {
-        throw new Error(data.detail || 'Error al conectar con el asistente de IA');
+        let errorMessage = 'Error al conectar con el asistente de IA';
+        try {
+          const errorData = await responseClone.json();
+          errorMessage = errorData.detail || errorMessage;
+        } catch (e) {
+          // Si no se puede parsear el error, usar mensaje genérico
+        }
+        throw new Error(errorMessage);
       }
 
+      const data = await response.json();
       setAiResponse(data.response);
     } catch (error) {
       console.error('AI Error:', error);

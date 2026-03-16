@@ -10,7 +10,10 @@ import NewsSection from './components/news/NewsSection';
 import LanguageSwitcher from './components/ui/LanguageSwitcher';
 import CategoryAccordion from './components/ui/CategoryAccordion';
 import GuidesHub from './pages/GuidesHub';
+import GuidePage from './pages/GuidePage';
 import ParkingFinder from './components/ParkingFinder';
+import WhatsAppButton from './components/WhatsAppButton';
+import GuideMenuButton from './components/GuideMenuButton';
 import './App.css';
 
 // Componente GlassCard
@@ -59,6 +62,7 @@ function App() {
   const { t } = useTranslation();
   const [activeModal, setActiveModal] = useState(null);
   const [showGuidesHub, setShowGuidesHub] = useState(false);
+  const [showGuidePage, setShowGuidePage] = useState(false);
 
   const handleCardClick = (partner) => {
     if (partner.type === 'widget' || partner.type.startsWith('search_')) {
@@ -140,6 +144,7 @@ function App() {
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <GuideMenuButton onOpenGuide={() => setShowGuidePage(true)} />
           <LanguageSwitcher />
           <button className="p-2 glass-card rounded-full relative">
             <Bell size={18} className="text-slate-300" />
@@ -343,6 +348,14 @@ function App() {
           <span className="text-[9px] font-medium tracking-wide">{t('nav.profile')}</span>
         </button>
       </nav>
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
+
+      {/* Guide Page Modal */}
+      {showGuidePage && (
+        <GuidePage onClose={() => setShowGuidePage(false)} />
+      )}
     </div>
   )
 }

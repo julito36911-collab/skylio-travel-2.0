@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { HelpCircle, ChevronDown } from 'lucide-react';
 
 const GuideMenuButton = ({ onOpenGuide }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -24,6 +24,9 @@ const GuideMenuButton = ({ onOpenGuide }) => {
     setIsOpen(false);
   };
 
+  // Text based on current language
+  const buttonText = i18n.language === 'en' ? 'Guide' : 'Guía';
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
@@ -32,7 +35,7 @@ const GuideMenuButton = ({ onOpenGuide }) => {
         data-testid="guide-menu-button"
       >
         <HelpCircle size={18} className="text-slate-300" />
-        <span className="text-sm font-medium text-slate-300 hidden sm:inline">Guía</span>
+        <span className="text-sm font-medium text-slate-300 hidden sm:inline">{buttonText}</span>
         <ChevronDown size={14} className={`text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 

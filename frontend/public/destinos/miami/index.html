@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miami - Guía Completa | Skylio Destinos</title>
+<meta name="description" content="Guía completa de Miami: mejores hoteles, museos, barrios, playas, consejos de viaje y más. Por Skylio Viajes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .places-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .place-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:28px;transition:all .3s;position:relative;overflow:hidden}
+  .place-card:hover{border-color:rgba(212,168,83,.3);transform:translateY(-4px)}
+  .place-category{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent-teal);margin-bottom:10px}
+  .place-name{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:8px}
+  .place-desc{color:var(--text-secondary);font-size:14px;line-height:1.7;margin-bottom:12px}
+  .place-info{font-size:12px;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:12px}
+  .place-info span{display:flex;align-items:center;gap:4px}
+  .neighborhood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+  .hood-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:24px;transition:all .3s}
+  .hood-card:hover{border-color:rgba(45,212,191,.3);transform:translateY(-3px)}
+  .hood-emoji{font-size:2.5rem;margin-bottom:12px}
+  .hood-name{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:6px}
+  .hood-vibe{color:var(--accent-gold);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+  .hood-desc{color:var(--text-secondary);font-size:13px;line-height:1.6}
+  .info-banner{background:linear-gradient(135deg,rgba(212,168,83,.08),rgba(45,212,191,.05));border:1px solid rgba(212,168,83,.2);border-radius:var(--radius);padding:28px;margin-top:32px}
+  .info-banner h4{color:var(--accent-gold);font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:12px}
+  .info-banner p{color:var(--text-secondary);font-size:14px;line-height:1.7}
+  .beach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+  .beach-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);padding:20px;text-align:center;transition:all .3s}
+  .beach-card:hover{transform:translateY(-3px);border-color:rgba(45,212,191,.3)}
+  .beach-icon{font-size:2rem;margin-bottom:10px}
+  .beach-name{font-weight:600;font-size:14px;margin-bottom:4px}
+  .beach-type{color:var(--accent-teal);font-size:12px;margin-bottom:8px}
+  .beach-desc{color:var(--text-muted);font-size:12px;line-height:1.5}
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <div class="topbar-left">
+    <a href="https://skylioviajes.online" class="btn-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Skylio Viajes
+    </a>
+    <a href="../" class="topbar-brand"><span>Skylio</span> Destinos</a>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-img" style="background:url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=1600&q=80') center/cover"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🇺🇸 Florida, Estados Unidos</div>
+    <h1>Miami</h1>
+    <p class="hero-sub">South Beach, arte Art Deco, cultura latina vibrante, museos de clase mundial y la vida nocturna más caliente de Estados Unidos.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-value">26°C</div><div class="stat-label">Temperatura media</div></div>
+      <div class="stat"><div class="stat-value">Nov–Abr</div><div class="stat-label">Mejor época</div></div>
+      <div class="stat"><div class="stat-value">$155+</div><div class="stat-label">Hotel/noche</div></div>
+      <div class="stat"><div class="stat-value">USD</div><div class="stat-label">Moneda</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SOBRE MIAMI ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Descubre</div>
+  <h2>Sobre Miami</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Miami es mucho más que playas: es una metrópoli vibrante donde convergen culturas de toda América Latina y el Caribe. South Beach deslumbra con su icónica arquitectura Art Deco de los años 30, mientras que Wynwood se ha convertido en uno de los epicentros de arte urbano más importantes del mundo con más de 70 galerías y murales que cubren manzanas enteras.</p>
+      <p>La ciudad ofrece una escena gastronómica extraordinaria, desde la auténtica cocina cubana de la Calle Ocho en Little Havana — donde puedes tomar un cafecito en una ventanita mientras ves a los abuelos jugar dominó — hasta restaurantes de estrellas Michelin en Brickell y Design District. La vida nocturna es legendaria, con clubs como LIV en el Fontainebleau y E11EVEN que no cierran nunca.</p>
+      <p>Más allá del glamour, Miami es puerta de entrada a los Everglades (1.5 millones de acres de humedales subtropicales), al Parque Nacional de Biscayne (95% bajo el agua), y a cruceros por el Caribe. Con el Aeropuerto Internacional de Miami (MIA) y Fort Lauderdale (FLL) a 30 minutos, es perfecta como destino principal o punto de partida para explorar Florida y el Caribe.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card"><div class="highlight-icon">✈️</div><div class="highlight-title">Vuelo directo</div><div class="highlight-value">9–12h</div></div>
+      <div class="highlight-card"><div class="highlight-icon">🏖️</div><div class="highlight-title">South Beach</div><div class="highlight-value">#1 Florida</div></div>
+      <div class="highlight-card"><div class="highlight-icon">🎯</div><div class="highlight-title">Ideal para</div><div class="highlight-value">Todos</div></div>
+      <div class="highlight-card"><div class="highlight-icon">🌍</div><div class="highlight-title">Visa</div><div class="highlight-value">ESTA / B1-B2</div></div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ BARRIOS ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Explora</div>
+  <h2>Barrios que Debes Conocer</h2>
+  <p class="section-desc">Cada barrio de Miami tiene su propia personalidad. Estos son los imprescindibles para tu visita.</p>
+
+  <div class="neighborhood-grid">
+    <div class="hood-card">
+      <div class="hood-emoji">🌴</div>
+      <div class="hood-name">South Beach</div>
+      <div class="hood-vibe">Playa • Art Deco • Nightlife</div>
+      <div class="hood-desc">El barrio más icónico de Miami. Ocean Drive con su arquitectura Art Deco de los años 30, la playa de arena blanca, restaurantes frente al mar y la vida nocturna más famosa de Florida. Lincoln Road es su calle peatonal de compras y gastronomía.</div>
+    </div>
+    <div class="hood-card">
+      <div class="hood-emoji">🎨</div>
+      <div class="hood-name">Wynwood</div>
+      <div class="hood-vibe">Arte Urbano • Galerías • Trendy</div>
+      <div class="hood-desc">De almacenes abandonados a capital mundial del arte urbano. Wynwood Walls es un museo al aire libre con murales de artistas internacionales. Más de 70 galerías, breweries artesanales, restaurantes de moda y la mejor escena de brunch de la ciudad.</div>
+    </div>
+    <div class="hood-card">
+      <div class="hood-emoji">🇨🇺</div>
+      <div class="hood-name">Little Havana</div>
+      <div class="hood-vibe">Cultura Cubana • Calle Ocho • Dominó</div>
+      <div class="hood-desc">El corazón latino de Miami. Pasea por la Calle Ocho (SW 8th Street), prueba un cafecito cubano, visita el Máximo Gómez Park donde los abuelos juegan dominó, y disfruta de salsa en vivo en Ball & Chain. El Festival Calle Ocho en marzo es épico.</div>
+    </div>
+    <div class="hood-card">
+      <div class="hood-emoji">🏙️</div>
+      <div class="hood-name">Brickell</div>
+      <div class="hood-vibe">Finanzas • Rooftops • Lujo</div>
+      <div class="hood-desc">El "Manhattan del Sur". Rascacielos de cristal, restaurantes de clase mundial, rooftop bars con vista a la bahía y el Brickell City Centre para compras de lujo. Es donde vive la Miami profesional y cosmopolita.</div>
+    </div>
+    <div class="hood-card">
+      <div class="hood-emoji">💎</div>
+      <div class="hood-name">Design District</div>
+      <div class="hood-vibe">Lujo • Diseño • Arte</div>
+      <div class="hood-desc">El barrio más exclusivo de Miami. Tiendas de lujo (Louis Vuitton, Chanel, Dior), galerías de arte contemporáneo, restaurantes de diseñador y el ICA Miami (Institute of Contemporary Art), que es siempre gratuito.</div>
+    </div>
+    <div class="hood-card">
+      <div class="hood-emoji">🌳</div>
+      <div class="hood-name">Coconut Grove</div>
+      <div class="hood-vibe">Bohemio • Verde • Relajado</div>
+      <div class="hood-desc">El barrio más antiguo de Miami, con un ambiente bohemio y familiar. Aquí está Vizcaya Museum & Gardens (mansión de 1916 estilo renacimiento italiano), CocoWalk para compras y cafés, y el Biscayne Bay con kayak y paddleboard.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ MUSEOS Y ATRACCIONES ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Cultura</div>
+  <h2>Museos y Atracciones Imprescindibles</h2>
+  <p class="section-desc">Miami tiene una escena cultural que rivaliza con cualquier gran capital del mundo. Estos son los que no puedes perderte.</p>
+
+  <div class="places-grid">
+    <div class="place-card">
+      <div class="place-category">Museo de Arte</div>
+      <div class="place-name">Pérez Art Museum Miami (PAMM)</div>
+      <div class="place-desc">El museo de arte contemporáneo más importante de Miami. Obras de las Américas del siglo XX y XXI en un edificio espectacular sobre la bahía de Biscayne, diseñado por Herzog & de Meuron. Las terrazas con hamacas y vista al mar son icónicas.</div>
+      <div class="place-info">
+        <span>📍 Downtown Miami</span>
+        <span>💰 ~$16 adultos</span>
+        <span>🕐 Jue–Lun 11am–6pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Ciencia y Familia</div>
+      <div class="place-name">Frost Museum of Science</div>
+      <div class="place-desc">Un museo de ciencia de 250.000 pies cuadrados con un acuario de 500.000 galones, un planetario de última generación y exposiciones interactivas para toda la familia. Está justo al lado del PAMM — puedes visitar ambos en un día.</div>
+      <div class="place-info">
+        <span>📍 Museum Park, Downtown</span>
+        <span>💰 ~$30 adultos</span>
+        <span>🕐 Todos los días 10am–6pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Mansión Histórica</div>
+      <div class="place-name">Vizcaya Museum & Gardens</div>
+      <div class="place-desc">Una impresionante mansión de 1916 estilo renacimiento italiano con 34 habitaciones decoradas con antigüedades europeas y 10 acres de jardines formales frente a la bahía de Biscayne. Una de las atracciones más valoradas de todo Miami.</div>
+      <div class="place-info">
+        <span>📍 Coconut Grove</span>
+        <span>💰 ~$25 adultos</span>
+        <span>🕐 Mié–Lun 9:30am–4:30pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Arte Urbano</div>
+      <div class="place-name">Wynwood Walls</div>
+      <div class="place-desc">El museo de arte urbano al aire libre más famoso del mundo. Murales gigantes de artistas internacionales que transformaron un barrio de almacenes en el epicentro del street art global. Cambia constantemente con nuevas obras.</div>
+      <div class="place-info">
+        <span>📍 Wynwood</span>
+        <span>💰 ~$12 adultos</span>
+        <span>🕐 Lun–Jue 11am–7pm, Vie–Dom hasta 8pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Arte Inmersivo</div>
+      <div class="place-name">Superblue Miami</div>
+      <div class="place-desc">Un espacio de arte experiencial donde caminas dentro de las instalaciones de los artistas más innovadores del mundo. Proyecciones de piso a techo, laberintos de espejos y la famosa "Massless Clouds" de teamLab.</div>
+      <div class="place-info">
+        <span>📍 Allapattah</span>
+        <span>💰 ~$36 adultos</span>
+        <span>🕐 Mié–Lun 10am–7pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Arte Contemporáneo</div>
+      <div class="place-name">The Bass Museum</div>
+      <div class="place-desc">El museo de arte contemporáneo de Miami Beach, abierto desde 1964. Exposiciones rotativas de nivel internacional, esculturas al aire libre (incluyendo la icónica "Miami Mountain") y el letrero neón "Eternity Now". Entrada gratuita el tercer jueves de cada mes.</div>
+      <div class="place-info">
+        <span>📍 Collins Ave, South Beach</span>
+        <span>💰 ~$15 adultos</span>
+        <span>🕐 Mié–Dom 12–5pm</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Naturaleza</div>
+      <div class="place-name">Everglades National Park</div>
+      <div class="place-desc">1.5 millones de acres de humedales subtropicales a solo 45 minutos de Miami. Paseos en airboat para ver caimanes, cocodrilos, manatíes y cientos de especies de aves. Es uno de los ecosistemas más únicos del planeta.</div>
+      <div class="place-info">
+        <span>📍 45 min al oeste de Miami</span>
+        <span>💰 ~$30 entrada + tour</span>
+        <span>🕐 Todo el día (mejor por la mañana)</span>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-category">Noria y Vistas</div>
+      <div class="place-name">Skyviews Miami Observation Wheel</div>
+      <div class="place-desc">La noria de observación de Miami en Bayside Marketplace con vistas panorámicas de 200 pies de altura sobre la bahía de Biscayne, el skyline de Downtown y el puerto de cruceros. Las cabinas con aire acondicionado son perfectas para fotos al atardecer.</div>
+      <div class="place-info">
+        <span>📍 Bayside Marketplace, Downtown</span>
+        <span>💰 ~$18 adultos</span>
+        <span>🕐 Todos los días 12–10pm</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-banner">
+    <h4>🎟️ Tip: Días Gratuitos en Museos</h4>
+    <p>Muchos museos de Miami ofrecen entrada gratuita ciertos días. El ICA Miami (Design District) es siempre gratis. El PAMM ofrece entrada libre los primeros jueves. The Bass tiene tercer jueves gratis. El HistoryMiami ofrece segundos sábados gratuitos. Planifica tu visita para ahorrar bastante en entradas.</p>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ PLAYAS ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Sol y Arena</div>
+  <h2>Mejores Playas</h2>
+  <p class="section-desc">35 millas de costa con playas para todos los gustos, desde la fiesta de South Beach hasta la tranquilidad de Key Biscayne.</p>
+
+  <div class="beach-grid">
+    <div class="beach-card">
+      <div class="beach-icon">🎉</div>
+      <div class="beach-name">South Beach</div>
+      <div class="beach-type">La más famosa</div>
+      <div class="beach-desc">Arena blanca, aguas turquesa y las casetas de colores pastel más fotografiadas del mundo. Ambiente vibrante y gente de todo el planeta.</div>
+    </div>
+    <div class="beach-card">
+      <div class="beach-icon">🧘</div>
+      <div class="beach-name">Mid-Beach</div>
+      <div class="beach-type">Elegante y tranquila</div>
+      <div class="beach-desc">Menos turística que South Beach, con los mejores hoteles de lujo (Faena, Edition, Fontainebleau). Perfecta para quienes buscan playa sin caos.</div>
+    </div>
+    <div class="beach-card">
+      <div class="beach-icon">👨‍👩‍👧‍👦</div>
+      <div class="beach-name">North Beach</div>
+      <div class="beach-type">Familiar</div>
+      <div class="beach-desc">La playa más tranquila y familiar de Miami Beach. Parque North Shore con área de picnic, deportes y senderos. Menos turistas, más locales.</div>
+    </div>
+    <div class="beach-card">
+      <div class="beach-icon">🏝️</div>
+      <div class="beach-name">Crandon Park (Key Biscayne)</div>
+      <div class="beach-type">Paradisíaca</div>
+      <div class="beach-desc">Consistentemente votada entre las mejores playas de EE.UU. Aguas calmas, arena suave, palmeras y un ambiente de isla tropical a 20 minutos de Downtown.</div>
+    </div>
+    <div class="beach-card">
+      <div class="beach-icon">🌅</div>
+      <div class="beach-name">Bill Baggs (Key Biscayne)</div>
+      <div class="beach-type">Atardeceres épicos</div>
+      <div class="beach-desc">Playa tranquila con el histórico faro de Cape Florida (1825). Los atardeceres aquí son los mejores de Miami. Alquiler de kayaks y bicicletas.</div>
+    </div>
+    <div class="beach-card">
+      <div class="beach-icon">🐬</div>
+      <div class="beach-name">Haulover Beach</div>
+      <div class="beach-type">Naturaleza y snorkel</div>
+      <div class="beach-desc">Playa amplia con aguas claras para snorkel. Los domingos hay un food truck festival espectacular. Zona norte es la playa nudista oficial de Miami.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ HOTELES ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Alojamiento</div>
+  <h2>Mejores Hoteles</h2>
+  <p class="section-desc">Hoteles reales, valorados por viajeros, con lo mejor de cada categoría en Miami.</p>
+
+  <div class="hotels-grid">
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80')">
+        <div class="hotel-badge">Icónico</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Fontainebleau Miami Beach</div>
+        <div class="hotel-location">📍 4441 Collins Ave, Mid-Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">11 piscinas</span>
+          <span class="hotel-feature">12 restaurantes</span>
+          <span class="hotel-feature">Club LIV</span>
+          <span class="hotel-feature">Lapis Spa</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$284</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')">
+        <div class="hotel-badge">N°1 TripAdvisor</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Faena Hotel Miami Beach</div>
+        <div class="hotel-location">📍 3201 Collins Ave, Mid-Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Teatro Faena</span>
+          <span class="hotel-feature">Playa privada</span>
+          <span class="hotel-feature">Spa</span>
+          <span class="hotel-feature">Cocina argentina</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$564</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80')">
+        <div class="hotel-badge">Zen Luxury</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">The Setai Miami Beach</div>
+        <div class="hotel-location">📍 2001 Collins Ave, South Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">3 piscinas temperadas</span>
+          <span class="hotel-feature">Spa asiático</span>
+          <span class="hotel-feature">Art Deco + Zen</span>
+          <span class="hotel-feature">Playa privada</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$528</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80')">
+        <div class="hotel-badge">Eco-Lujo</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">1 Hotel South Beach</div>
+        <div class="hotel-location">📍 2341 Collins Ave, South Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Eco-friendly</span>
+          <span class="hotel-feature">Rooftop pool</span>
+          <span class="hotel-feature">Farm-to-table</span>
+          <span class="hotel-feature">Bamford Spa</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$350</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80')">
+        <div class="hotel-badge">Boutique</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">The Betsy South Beach</div>
+        <div class="hotel-location">📍 1440 Ocean Drive, South Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Sobre Ocean Drive</span>
+          <span class="hotel-feature">Rooftop pool</span>
+          <span class="hotel-feature">Librería</span>
+          <span class="hotel-feature">Restaurante LT Steak</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$250</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&q=80')">
+        <div class="hotel-badge">Mejor Valor</div>
+        <div class="hotel-stars">★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Circa 39 Hotel</div>
+        <div class="hotel-location">📍 3900 Collins Ave, Mid-Beach</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Piscina tropical</span>
+          <span class="hotel-feature">Wunderbar</span>
+          <span class="hotel-feature">Acceso playa</span>
+          <span class="hotel-feature">Precio justo</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$155</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="#" class="btn-hotel">Ver precios →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ CLIMA ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Planifica</div>
+  <h2>Clima y Mejor Época</h2>
+  <p class="section-desc">Miami tiene clima tropical todo el año. La temporada seca (noviembre–abril) es la más agradable. La temporada de huracanes va de junio a noviembre, con pico en agosto-septiembre.</p>
+  <div class="climate-grid">
+    <div class="month-card best"><div class="month-name">Ene</div><div class="month-temp">24°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+    <div class="month-card best"><div class="month-name">Feb</div><div class="month-temp">25°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+    <div class="month-card best"><div class="month-name">Mar</div><div class="month-temp">26°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+    <div class="month-card best"><div class="month-name">Abr</div><div class="month-temp">27°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+    <div class="month-card"><div class="month-name">May</div><div class="month-temp">29°</div><div class="month-rain">🌧 Lluvioso</div></div>
+    <div class="month-card"><div class="month-name">Jun</div><div class="month-temp">30°</div><div class="month-rain">🌧 Lluvioso</div></div>
+    <div class="month-card"><div class="month-name">Jul</div><div class="month-temp">31°</div><div class="month-rain">🌧 Lluvioso</div></div>
+    <div class="month-card"><div class="month-name">Ago</div><div class="month-temp">31°</div><div class="month-rain">⛈ Huracanes</div></div>
+    <div class="month-card"><div class="month-name">Sep</div><div class="month-temp">30°</div><div class="month-rain">⛈ Huracanes</div></div>
+    <div class="month-card"><div class="month-name">Oct</div><div class="month-temp">28°</div><div class="month-rain">🌦 Moderado</div></div>
+    <div class="month-card best"><div class="month-name">Nov</div><div class="month-temp">26°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+    <div class="month-card best"><div class="month-name">Dic</div><div class="month-temp">25°</div><div class="month-rain">🌤 Seco</div><div class="month-badge">⭐ Ideal</div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ CONSEJOS ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Tips</div>
+  <h2>Consejos de Viaje</h2>
+  <p class="section-desc">Todo lo que necesitas saber para que tu visita a Miami sea perfecta.</p>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">💵</div>
+      <div class="tip-title">Moneda y pagos</div>
+      <div class="tip-text">El dólar estadounidense (USD) es la moneda. Tarjetas de crédito se aceptan en absolutamente todos lados. Propinas del 18-20% son obligatorias en restaurantes y no están incluidas en la cuenta. Uber y Lyft funcionan perfectamente y son más baratos que taxis.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚗</div>
+      <div class="tip-title">Transporte</div>
+      <div class="tip-text">Alquila un coche si planeas explorar más allá de South Beach (Everglades, Keys, Fort Lauderdale). El Miami Trolley es gratuito en varias rutas. El Metrorail conecta el aeropuerto con Brickell y Downtown. En South Beach, camina o usa bicicletas Citi Bike ($2/viaje).</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🏥</div>
+      <div class="tip-title">Salud y seguridad</div>
+      <div class="tip-text">Contrata seguro de viaje obligatoriamente — una visita a urgencias puede costar miles de dólares. South Beach, Brickell, Wynwood y Coconut Grove son muy seguros. Evita Overtown y Liberty City de noche. Usa protector solar SPF 50+ (el sol subtropical es intenso).</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📱</div>
+      <div class="tip-title">Conectividad</div>
+      <div class="tip-text">Compra una SIM prepagada en T-Mobile o AT&T (~$40/mes con datos ilimitados) o usa eSIM si tu teléfono es compatible. WiFi gratuito en cafés, hoteles, malls y muchas playas. Google Maps y Uber son tus mejores aliados para moverte.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🍽️</div>
+      <div class="tip-title">Dónde comer</div>
+      <div class="tip-text">Versailles (Calle Ocho) para comida cubana icónica. Joe's Stone Crab en South Beach es un clásico. Wynwood tiene las mejores opciones de brunch. Brickell para restaurantes de nivel. No te pierdas los food trucks de Haulover Beach los domingos. Un cafecito cubano cuesta solo $1.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🌙</div>
+      <div class="tip-title">Vida nocturna</div>
+      <div class="tip-text">LIV (Fontainebleau) y E11EVEN son los clubs más famosos — código de vestimenta estricto y reserva obligatoria los fines de semana. Wynwood tiene bares más relajados y cervecerías artesanales. Ball & Chain en Little Havana tiene salsa en vivo. La noche en Miami no empieza antes de las 11pm.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🛍️</div>
+      <div class="tip-title">Compras</div>
+      <div class="tip-text">Lincoln Road Mall (South Beach) para paseo peatonal con tiendas y restaurantes. Design District para lujo (Louis Vuitton, Chanel). Brickell City Centre para malls de diseño. Dolphin Mall y Sawgrass Mills (Fort Lauderdale) para outlets con descuentos del 30-70%.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🎒</div>
+      <div class="tip-title">Qué llevar</div>
+      <div class="tip-text">Ropa ligera y de playa, un outfit elegante (código de vestimenta estricto en clubs y restaurantes de lujo), gafas de sol, protector solar SPF 50+, paraguas compacto (lluvias tropicales repentinas), y zapatos cómodos para caminar Wynwood y Lincoln Road.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ PRESUPUESTO ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Presupuesto</div>
+  <h2>¿Cuánto Cuesta Miami?</h2>
+  <p class="section-desc">Estimación de costos diarios por persona (en USD). Miami puede ser cara, pero hay opciones para todos los bolsillos.</p>
+  <table class="budget-table">
+    <thead><tr><th>Categoría</th><th>💚 Económico</th><th>💛 Medio</th><th>💎 Lujo</th></tr></thead>
+    <tbody>
+      <tr><td class="budget-cat">🏨 Hotel/noche</td><td class="budget-eco">$120–180</td><td class="budget-mid">$200–400</td><td class="budget-lux">$500–1500+</td></tr>
+      <tr><td class="budget-cat">🍽️ Comida/día</td><td class="budget-eco">$25–40</td><td class="budget-mid">$50–100</td><td class="budget-lux">$150+</td></tr>
+      <tr><td class="budget-cat">🚗 Transporte/día</td><td class="budget-eco">$10–20</td><td class="budget-mid">$30–60</td><td class="budget-lux">$80+ privado</td></tr>
+      <tr><td class="budget-cat">🎯 Actividades</td><td class="budget-eco">$15–30</td><td class="budget-mid">$50–100</td><td class="budget-lux">$200+</td></tr>
+      <tr><td class="budget-cat">📊 Total/día</td><td class="budget-eco"><strong>$170–270</strong></td><td class="budget-mid"><strong>$330–660</strong></td><td class="budget-lux"><strong>$930+</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ INFORMACIÓN PRÁCTICA ═══════ -->
+<section class="section reveal">
+  <div class="section-label">Esencial</div>
+  <h2>Información Práctica</h2>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">✈️</div>
+      <div class="tip-title">Cómo Llegar</div>
+      <div class="tip-text">Aeropuerto Internacional de Miami (MIA) está a 20 minutos de South Beach. Fort Lauderdale (FLL) a 45 minutos, a veces con vuelos más baratos. Desde MIA: Uber/Lyft (~$25 a South Beach), Miami Beach Airport Express bus 150 ($2.25), o Metrorail + bus.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📋</div>
+      <div class="tip-title">Visa y Documentos</div>
+      <div class="tip-text">Ciudadanos de España y Chile pueden solicitar ESTA ($21, online). México y otros países latinoamericanos necesitan visa B1/B2 (cita en embajada). Pasaporte vigente mínimo 6 meses. Seguro de viaje altamente recomendado (la sanidad es muy cara).</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">⏰</div>
+      <div class="tip-title">Zona Horaria</div>
+      <div class="tip-text">Eastern Time (ET) — UTC-5 en invierno, UTC-4 en verano. Los restaurantes sirven cena desde las 6pm (temprano para latinos). Los clubs abren a las 11pm y cierran a las 5am. La hora punta de tráfico es 7-9am y 4-7pm — evítala.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══════ NOTICIAS X ═══════ -->
+<section class="section reveal">
+  <div class="section-label">En Vivo</div>
+  <h2>Últimas Noticias</h2>
+  <p class="section-desc">Lo que se está hablando sobre Miami en X (Twitter) en este momento.</p>
+  <div class="feed-container">
+    <a class="twitter-timeline" data-theme="dark" data-chrome="noheader nofooter noborders transparent" data-height="500" data-width="100%" href="https://twitter.com/search?q=Miami%20Beach%20travel&f=live">Cargando tweets sobre Miami...</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta-section reveal">
+  <div class="section-label">Reserva</div>
+  <h2>¿Listo para Miami?</h2>
+  <p>Encuentra los mejores precios en vuelos y hoteles a través de nuestros socios de confianza.</p>
+  <div>
+    <a href="https://www.aviasales.com/?marker=670634#/?destination=MIA" target="_blank" rel="noopener" class="btn-cta">✈️ Buscar Vuelos</a>
+    <a href="#" target="_blank" rel="noopener" class="btn-cta-secondary">🏨 Buscar Hoteles</a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-brand"><span>Skylio</span> Destinos</div>
+  <p>Parte de <a href="https://skylioviajes.online">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
+  <p style="margin-top:8px;font-size:11px;">Los precios son aproximados y pueden variar. Enlaces de afiliados.</p>
+</footer>
+
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
+</script>
+</body>
+</html>

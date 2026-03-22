@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punta Cana - Guía Completa | Skylio Destinos</title>
+<meta name="description" content="Guía completa de Punta Cana: mejores hoteles, consejos de viaje, clima, presupuesto y más. Por Skylio Viajes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0a0e1a;
+    --bg-card: #111827;
+    --bg-card-hover: #1a2236;
+    --accent-gold: #d4a853;
+    --accent-gold-light: #e8c97a;
+    --accent-teal: #2dd4bf;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-subtle: rgba(255,255,255,0.06);
+    --glass: rgba(17,24,39,0.85);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+  a { color: var(--accent-gold); text-decoration: none; transition: color 0.3s; }
+  a:hover { color: var(--accent-gold-light); }
+
+  /* ─── TOP BAR ─── */
+  .topbar {
+    position: fixed; top:0; left:0; right:0; z-index:100;
+    background: rgba(10,14,26,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0 24px;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: transform 0.3s;
+  }
+
+  .topbar-left { display:flex; align-items:center; gap:16px; }
+
+  .btn-back {
+    display: inline-flex; align-items:center; gap:8px;
+    background: rgba(212,168,83,0.1);
+    border: 1px solid rgba(212,168,83,0.25);
+    color: var(--accent-gold);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .btn-back:hover {
+    background: rgba(212,168,83,0.2);
+    color: var(--accent-gold-light);
+    transform: translateX(-2px);
+  }
+  .btn-back svg { width:16px; height:16px; }
+
+  .topbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+  }
+  .topbar-brand span { color: var(--accent-gold); font-weight:700; }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    height: 85vh;
+    min-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-img {
+    position: absolute; inset:0;
+    background: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80') center/cover;
+    transform: scale(1.05);
+    animation: heroZoom 20s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.12); }
+  }
+
+  .hero-overlay {
+    position: absolute; inset:0;
+    background: linear-gradient(
+      to top,
+      rgba(10,14,26,1) 0%,
+      rgba(10,14,26,0.7) 35%,
+      rgba(10,14,26,0.2) 65%,
+      rgba(10,14,26,0.4) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative; z-index:2;
+    padding: 0 clamp(24px,5vw,80px) 60px;
+    max-width: 900px;
+    animation: fadeUp 1s ease-out 0.3s both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(30px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items:center; gap:6px;
+    background: rgba(212,168,83,0.15);
+    border: 1px solid rgba(212,168,83,0.3);
+    color: var(--accent-gold);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff 60%, var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex; flex-wrap:wrap; gap: 24px;
+  }
+
+  .stat {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    padding: 14px 22px;
+    border-radius: var(--radius-sm);
+    min-width: 130px;
+  }
+  .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    padding: 80px clamp(24px,5vw,80px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+  }
+
+  .section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin-bottom: 48px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-subtle) 20%, var(--border-subtle) 80%, transparent);
+    margin: 0 clamp(24px,5vw,80px);
+  }
+
+  /* ─── ABOUT ─── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+
+  .about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .highlight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .highlight-card:hover {
+    border-color: rgba(212,168,83,0.3);
+    transform: translateY(-4px);
+  }
+  .highlight-icon { font-size: 2rem; margin-bottom: 10px; }
+  .highlight-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .highlight-value { color: var(--accent-gold); font-family:'Playfair Display',serif; font-size:1.2rem; }
+
+  /* ─── HOTELS ─── */
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+  }
+
+  .hotel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .hotel-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212,168,83,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .hotel-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .hotel-badge {
+    position: absolute; top:14px; left:14px;
+    background: var(--accent-gold);
+    color: var(--bg-deep);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hotel-stars {
+    position: absolute; top:14px; right:14px;
+    color: var(--accent-gold);
+    font-size: 14px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .hotel-body { padding: 24px; }
+
+  .hotel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .hotel-location {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 14px;
+    display: flex; align-items:center; gap:6px;
+  }
+
+  .hotel-features {
+    display: flex; flex-wrap:wrap; gap:8px;
+    margin-bottom: 18px;
+  }
+
+  .hotel-feature {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .hotel-bottom {
+    display: flex; justify-content:space-between; align-items:center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .hotel-price {
+    font-family: 'Playfair Display', serif;
+  }
+  .hotel-price .from { font-size:12px; color: var(--text-muted); }
+  .hotel-price .amount { font-size:1.5rem; color: var(--accent-gold); font-weight:700; }
+  .hotel-price .night { font-size:12px; color: var(--text-muted); }
+
+  .btn-hotel {
+    display: inline-flex; align-items:center; gap:6px;
+    background: linear-gradient(135deg, var(--accent-gold), #b8892e);
+    color: var(--bg-deep);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none; cursor:pointer;
+  }
+  .btn-hotel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(212,168,83,0.4);
+    color: var(--bg-deep);
+  }
+
+  /* ─── TIPS ─── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .tip-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .tip-card:hover {
+    border-color: rgba(45,212,191,0.3);
+    transform: translateY(-4px);
+  }
+  .tip-card::before {
+    content: '';
+    position: absolute; top:0; left:0; right:0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tip-card:hover::before { opacity:1; }
+
+  .tip-icon { font-size: 2rem; margin-bottom: 14px; }
+  .tip-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+  .tip-text { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+
+  /* ─── CLIMATE ─── */
+  .climate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .month-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .month-card.best {
+    border-color: rgba(212,168,83,0.4);
+    background: rgba(212,168,83,0.05);
+  }
+  .month-card:hover { transform: translateY(-3px); }
+  .month-name { font-size:13px; color: var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+  .month-temp { font-family:'Playfair Display',serif; font-size:1.6rem; color: var(--text-primary); }
+  .month-rain { font-size:12px; color: var(--text-muted); margin-top:4px; }
+  .month-badge { font-size:10px; color: var(--accent-gold); font-weight:600; margin-top:6px; text-transform:uppercase; letter-spacing:1px; }
+
+  /* ─── BUDGET ─── */
+  .budget-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .budget-table th {
+    background: rgba(212,168,83,0.08);
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .budget-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 15px;
+  }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .budget-cat { color: var(--text-secondary); }
+  .budget-eco { color: var(--accent-teal); font-weight:500; }
+  .budget-mid { color: var(--text-primary); font-weight:500; }
+  .budget-lux { color: var(--accent-gold); font-weight:500; }
+
+  /* ─── X/TWITTER FEED ─── */
+  .feed-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+
+  .feed-container iframe {
+    border-radius: var(--radius-sm);
+  }
+
+  /* ─── FLIGHT CTA ─── */
+  .cta-section {
+    text-align: center;
+    padding: 100px clamp(24px,5vw,80px);
+    position: relative;
+  }
+
+  .cta-section::before {
+    content:'';
+    position: absolute; inset:0;
+    background: radial-gradient(ellipse at center, rgba(212,168,83,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-section h2 { margin-bottom: 16px; }
+  .cta-section p { color: var(--text-secondary); margin-bottom:36px; max-width:500px; margin-inline:auto; }
+
+  .btn-cta {
+    display: inline-flex; align-items:center; gap:10px;
+    background: linear-gradient(135deg, var(--accent-gold), #b8892e);
+    color: var(--bg-deep);
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none; cursor:pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(212,168,83,0.35);
+    color: var(--bg-deep);
+  }
+
+  .btn-cta-secondary {
+    display: inline-flex; align-items:center; gap:8px;
+    background: transparent;
+    border: 1px solid rgba(212,168,83,0.3);
+    color: var(--accent-gold);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-left: 16px;
+  }
+  .btn-cta-secondary:hover {
+    background: rgba(212,168,83,0.1);
+    color: var(--accent-gold-light);
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 40px clamp(24px,5vw,80px);
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .footer-brand span { color: var(--accent-gold); }
+  .footer p { color: var(--text-muted); font-size: 13px; }
+  .footer a { color: var(--accent-gold); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap:32px; }
+    .climate-grid { grid-template-columns: repeat(2, 1fr); }
+    .hotels-grid { grid-template-columns: 1fr; }
+    .hero { height: 75vh; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-stats { gap: 12px; }
+    .stat { min-width: 100px; padding: 10px 16px; }
+    .hotel-bottom { flex-direction:column; gap:12px; align-items:stretch; }
+    .btn-hotel { justify-content:center; }
+    .btn-cta-secondary { margin-left:0; margin-top:12px; }
+    .budget-table { font-size:13px; }
+    .budget-table th, .budget-table td { padding:12px 14px; }
+    .climate-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<nav class="topbar">
+  <div class="topbar-left">
+    <a href="https://skylioviajes.online" class="btn-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Skylio Viajes
+    </a>
+    <div class="topbar-brand"><span>Skylio</span> Destinos</div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🌴 República Dominicana</div>
+    <h1>Punta Cana</h1>
+    <p class="hero-sub">Playas de arena blanca, resorts de clase mundial y la calidez del Caribe. Tu paraíso tropical te espera.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value">28°C</div>
+        <div class="stat-label">Temperatura media</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">Dic–Abr</div>
+        <div class="stat-label">Mejor época</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">$120+</div>
+        <div class="stat-label">Hotel/noche</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">USD</div>
+        <div class="stat-label">Moneda aceptada</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE EL DESTINO ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">Descubre</div>
+  <h2>Sobre Punta Cana</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Punta Cana es el destino turístico más visitado del Caribe. Ubicada en el extremo oriental de la República Dominicana, ofrece más de 50 km de playas de arena blanca bañadas por aguas cristalinas de color turquesa.</p>
+      <p>Conocida por sus resorts todo incluido de primer nivel, también es un paraíso para los amantes del golf, deportes acuáticos y la vida nocturna. La zona cuenta con una infraestructura turística madura y un aeropuerto internacional propio (PUJ).</p>
+      <p>Desde excursiones a la Isla Saona y los cenotes hasta nadar con delfines y tirolesas sobre la selva tropical, Punta Cana tiene algo para cada tipo de viajero.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <div class="highlight-icon">✈️</div>
+        <div class="highlight-title">Vuelo directo</div>
+        <div class="highlight-value">4–10h</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏖️</div>
+        <div class="highlight-title">Playa Bávaro</div>
+        <div class="highlight-value">#1 Caribe</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🎯</div>
+        <div class="highlight-title">Ideal para</div>
+        <div class="highlight-value">Parejas</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🌍</div>
+        <div class="highlight-title">Visa</div>
+        <div class="highlight-value">Tarjeta turista</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ MEJORES HOTELES ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">Alojamiento</div>
+  <h2>Mejores Hoteles</h2>
+  <p class="section-desc">Selección curada de los hoteles mejor valorados en Punta Cana. Reserva a los mejores precios a través de nuestros socios.</p>
+
+  <div class="hotels-grid">
+
+    <!-- Hotel 1 -->
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80')">
+        <div class="hotel-badge">Todo Incluido</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Barceló Bávaro Palace</div>
+        <div class="hotel-location">📍 Playa Bávaro, Punta Cana</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Playa privada</span>
+          <span class="hotel-feature">12 restaurantes</span>
+          <span class="hotel-feature">Spa</span>
+          <span class="hotel-feature">Casino</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$185</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="https://search.hotellook.com/hotels?destination=Punta+Cana&marker=670634" target="_blank" rel="noopener" class="btn-hotel">
+            Ver precios →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')">
+        <div class="hotel-badge">Premium</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Hard Rock Hotel & Casino</div>
+        <div class="hotel-location">📍 Macao Beach, Punta Cana</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">13 piscinas</span>
+          <span class="hotel-feature">9 restaurantes</span>
+          <span class="hotel-feature">Casino</span>
+          <span class="hotel-feature">Golf</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$250</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DPunta%2BCana" target="_blank" rel="noopener" class="btn-hotel">
+            Ver precios →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel 3 -->
+    <div class="hotel-card">
+      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80')">
+        <div class="hotel-badge">Lujo</div>
+        <div class="hotel-stars">★★★★★</div>
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-name">Secrets Cap Cana Resort & Spa</div>
+        <div class="hotel-location">📍 Cap Cana, Punta Cana</div>
+        <div class="hotel-features">
+          <span class="hotel-feature">Solo adultos</span>
+          <span class="hotel-feature">Suite con jacuzzi</span>
+          <span class="hotel-feature">7 restaurantes</span>
+          <span class="hotel-feature">Spa</span>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-price">
+            <span class="from">Desde </span>
+            <span class="amount">$380</span>
+            <span class="night">/noche</span>
+          </div>
+          <a href="https://www.anrdoezrs.net/click-101526697-11552042?url=https%3A%2F%2Fwww.expedia.com%2FHotel-Search%3Fdestination%3DPunta%2BCana" target="_blank" rel="noopener" class="btn-hotel">
+            Ver precios →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ CLIMA ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">Planifica</div>
+  <h2>Clima y Mejor Época</h2>
+  <p class="section-desc">Punta Cana disfruta de clima tropical todo el año. La temporada seca (diciembre–abril) es la más popular. La temporada de huracanes va de junio a noviembre.</p>
+
+  <div class="climate-grid">
+    <div class="month-card best">
+      <div class="month-name">Dic</div>
+      <div class="month-temp">28°</div>
+      <div class="month-rain">🌤 Seco</div>
+      <div class="month-badge">⭐ Ideal</div>
+    </div>
+    <div class="month-card best">
+      <div class="month-name">Ene</div>
+      <div class="month-temp">27°</div>
+      <div class="month-rain">🌤 Seco</div>
+      <div class="month-badge">⭐ Ideal</div>
+    </div>
+    <div class="month-card best">
+      <div class="month-name">Feb</div>
+      <div class="month-temp">27°</div>
+      <div class="month-rain">🌤 Seco</div>
+      <div class="month-badge">⭐ Ideal</div>
+    </div>
+    <div class="month-card best">
+      <div class="month-name">Mar</div>
+      <div class="month-temp">28°</div>
+      <div class="month-rain">🌤 Seco</div>
+      <div class="month-badge">⭐ Ideal</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Abr</div>
+      <div class="month-temp">29°</div>
+      <div class="month-rain">🌦 Moderado</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">May</div>
+      <div class="month-temp">30°</div>
+      <div class="month-rain">🌧 Lluvioso</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Jun</div>
+      <div class="month-temp">30°</div>
+      <div class="month-rain">🌧 Lluvioso</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Jul</div>
+      <div class="month-temp">31°</div>
+      <div class="month-rain">🌧 Lluvioso</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Ago</div>
+      <div class="month-temp">31°</div>
+      <div class="month-rain">🌧 Lluvioso</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Sep</div>
+      <div class="month-temp">31°</div>
+      <div class="month-rain">⛈ Huracanes</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Oct</div>
+      <div class="month-temp">30°</div>
+      <div class="month-rain">⛈ Huracanes</div>
+    </div>
+    <div class="month-card">
+      <div class="month-name">Nov</div>
+      <div class="month-temp">29°</div>
+      <div class="month-rain">🌦 Moderado</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ CONSEJOS ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">Tips</div>
+  <h2>Consejos de Viaje</h2>
+  <p class="section-desc">Lo que necesitas saber antes de ir a Punta Cana para que tu viaje sea perfecto.</p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">💵</div>
+      <div class="tip-title">Moneda y pagos</div>
+      <div class="tip-text">La moneda local es el Peso Dominicano (DOP), pero el USD se acepta en casi todos los lugares turísticos. Lleva efectivo para mercados locales. Las tarjetas de crédito se aceptan en resorts y restaurantes.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🚕</div>
+      <div class="tip-title">Transporte</div>
+      <div class="tip-text">Reserva traslados privados desde el aeropuerto PUJ. Los taxis locales no tienen taxímetro — negocia el precio antes. Para explorar, alquila un coche o contrata excursiones organizadas.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🏥</div>
+      <div class="tip-title">Salud y seguridad</div>
+      <div class="tip-text">Contrata seguro de viaje. Bebe solo agua embotellada. Usa protector solar alto (el sol caribeño es intenso). Los resorts todo incluido son muy seguros. Evita zonas aisladas de noche.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📱</div>
+      <div class="tip-title">Conectividad</div>
+      <div class="tip-text">Compra una SIM local de Altice o Claro en el aeropuerto por ~$20 con datos. El WiFi en los resorts suele ser bueno pero lento en horas pico. WhatsApp funciona perfecto.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🍽️</div>
+      <div class="tip-title">Gastronomía</div>
+      <div class="tip-text">No te pierdas el mangú, la bandera dominicana y el pescado fresco. Sal del resort y prueba los comedores locales — comida auténtica a precios increíbles. El ron Brugal es imperdible.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🎒</div>
+      <div class="tip-title">Qué llevar</div>
+      <div class="tip-text">Ropa ligera y de playa, repelente de mosquitos, protector solar reef-safe, zapatos acuáticos para snorkel, y una camisa para las cenas en los resorts que exigen código de vestimenta.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ PRESUPUESTO ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">Presupuesto</div>
+  <h2>¿Cuánto Cuesta?</h2>
+  <p class="section-desc">Estimación de costos diarios por persona en Punta Cana (precios aproximados en USD).</p>
+
+  <table class="budget-table">
+    <thead>
+      <tr>
+        <th>Categoría</th>
+        <th>💚 Económico</th>
+        <th>💛 Medio</th>
+        <th>💎 Lujo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="budget-cat">🏨 Hotel/noche</td>
+        <td class="budget-eco">$80–120</td>
+        <td class="budget-mid">$150–250</td>
+        <td class="budget-lux">$350–800+</td>
+      </tr>
+      <tr>
+        <td class="budget-cat">🍽️ Comida/día</td>
+        <td class="budget-eco">$15–25</td>
+        <td class="budget-mid">Incluido</td>
+        <td class="budget-lux">Incluido + premium</td>
+      </tr>
+      <tr>
+        <td class="budget-cat">🚗 Transporte/día</td>
+        <td class="budget-eco">$10–20</td>
+        <td class="budget-mid">$20–40</td>
+        <td class="budget-lux">$50+ privado</td>
+      </tr>
+      <tr>
+        <td class="budget-cat">🎯 Excursiones</td>
+        <td class="budget-eco">$40–60</td>
+        <td class="budget-mid">$80–150</td>
+        <td class="budget-lux">$200+</td>
+      </tr>
+      <tr>
+        <td class="budget-cat">📊 Total/día</td>
+        <td class="budget-eco"><strong>$145–225</strong></td>
+        <td class="budget-mid"><strong>$250–440</strong></td>
+        <td class="budget-lux"><strong>$600+</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ NOTICIAS X/TWITTER ═══════════ -->
+<section class="section reveal">
+  <div class="section-label">En Vivo</div>
+  <h2>Últimas Noticias</h2>
+  <p class="section-desc">Lo que se está hablando sobre Punta Cana en X (Twitter) en este momento.</p>
+
+  <div class="feed-container">
+    <a class="twitter-timeline"
+       data-theme="dark"
+       data-chrome="noheader nofooter noborders transparent"
+       data-height="500"
+       data-width="100%"
+       href="https://twitter.com/search?q=Punta%20Cana%20travel&f=live">
+      Cargando tweets sobre Punta Cana...
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</section>
+
+<!-- ═══════════ CTA VUELOS ═══════════ -->
+<section class="cta-section reveal">
+  <div class="section-label">Reserva</div>
+  <h2>¿Listo para Punta Cana?</h2>
+  <p>Encuentra los mejores precios en vuelos y hoteles a través de nuestros socios de confianza.</p>
+  <div>
+    <a href="https://www.aviasales.com/?marker=670634#/?destination=PUJ" target="_blank" rel="noopener" class="btn-cta">
+      ✈️ Buscar Vuelos
+    </a>
+    <a href="https://search.hotellook.com/hotels?destination=Punta+Cana&marker=670634" target="_blank" rel="noopener" class="btn-cta-secondary">
+      🏨 Buscar Hoteles
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer-brand"><span>Skylio</span> Destinos</div>
+  <p>Parte de <a href="https://skylioviajes.online">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
+  <p style="margin-top:8px; font-size:11px;">Los precios son aproximados y pueden variar. Enlaces de afiliados.</p>
+</footer>
+
+<!-- ═══════════ SCROLL REVEAL ═══════════ -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

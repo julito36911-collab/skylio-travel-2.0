@@ -18,9 +18,19 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+mongo_url = os.environ.get('MONGO_URL')
+db_name = os.environ.get('DB_NAME')
+db = None
+
+if mongo_url and db_name:
+    try:
+        client = AsyncIOMotorClient(mongo_url)
+        db = client[db_name]
+        logging.info("MongoDB connected successfully")
+    except Exception as e:
+        logging.error(f"Error connecting to MongoDB: {e}")
+else:
+    logging.warning("MongoDB credentials missing. Caching will be disabled.")
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -62,11 +72,17 @@ async def create_status_check(input: StatusCheckCreate):
     doc = status_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
     
+    if db is None:
+        raise HTTPException(status_code=503, detail="Database not connected")
+    
     _ = await db.status_checks.insert_one(doc)
     return status_obj
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
+    if db is None:
+        raise HTTPException(status_code=503, detail="Database not connected")
+        
     # Exclude MongoDB's _id field from the query results
     status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
     
@@ -204,6 +220,112 @@ General instructions for BOTH options:
             status_code=500,
             detail=f"An unexpected error occurred: {str(e)}"
         )
+
+@api_router.get("/youtube")
+async def get_youtube_videos(q: str, lang: str = "es"):
+    """
+    Search YouTube videos with MongoDB caching (30 days)
+    Filters for > 50,000 views and returns top 2 (views + likes)
+    """
+    try:
+        youtube_api_key = os.environ.get('YOUTUBE_API_KEY')
+        if not youtube_api_key:
+            raise HTTPException(status_code=500, detail="YOUTUBE_API_KEY not configured")
+
+        # 1. Check Cache
+        # 1. CACHE Check
+        if db is not None:
+            cache_collection = db["youtube_cache"]
+            cached_result = await cache_collection.find_one({"q": q, "lang": lang})
+            
+            if cached_result:
+                cache_date = datetime.fromisoformat(cached_result['timestamp'])
+                # Ensure cache_date is timezone-aware for comparison
+                if cache_date.tzinfo is None:
+                    cache_date = cache_date.replace(tzinfo=timezone.utc)
+                days_diff = (datetime.now(timezone.utc) - cache_date).days
+                if days_diff < 30:
+                    logging.info(f"YouTube Cache Hit for: {q}")
+                    return {"status": "success", "videos": cached_result['videos'], "cached": True}
+        else:
+            logging.info(f"YouTube Cache Skipped (No DB) for: {q}")
+
+        # 2. Search YouTube
+        search_url = "https://www.googleapis.com/youtube/v3/search"
+        search_params = {
+            "part": "snippet",
+            "q": f"{q} travel tourism",
+            "type": "video",
+            "maxResults": 6,
+            "order": "viewCount",
+            "relevanceLanguage": lang,
+            "videoDuration": "medium",
+            "key": youtube_api_key
+        }
+        
+        search_response = requests.get(search_url, params=search_params, timeout=10)
+        if search_response.status_code != 200:
+            raise HTTPException(status_code=search_response.status_code, detail=f"YouTube Search Error: {search_response.text}")
+        
+        items = search_response.json().get("items", [])
+        if not items:
+            return {"status": "success", "videos": [], "message": "No videos found"}
+            
+        video_ids = [item["id"]["videoId"] for item in items]
+        
+        # 3. Get Statistics
+        stats_url = "https://www.googleapis.com/youtube/v3/videos"
+        stats_params = {
+            "part": "statistics,snippet",
+            "id": ",".join(video_ids),
+            "key": youtube_api_key
+        }
+        
+        stats_response = requests.get(stats_url, params=stats_params, timeout=10)
+        if stats_response.status_code != 200:
+            raise HTTPException(status_code=stats_response.status_code, detail=f"YouTube Stats Error: {stats_response.text}")
+            
+        video_details = stats_response.json().get("items", [])
+        
+        # 4. Filter and Sort
+        processed_videos = []
+        for v in video_details:
+            stats = v.get("statistics", {})
+            views = int(stats.get("viewCount", 0))
+            likes = int(stats.get("likeCount", 0))
+            
+            # Filter > 50,000 views
+            if views >= 50000:
+                processed_videos.append({
+                    "id": v["id"],
+                    "title": v["snippet"]["title"],
+                    "thumbnail": v["snippet"]["thumbnails"]["high"]["url"],
+                    "views": views,
+                    "likes": likes,
+                    "score": views + likes
+                })
+        
+        # Sort by score (views + likes) and take top 2
+        top_videos = sorted(processed_videos, key=lambda x: x["score"], reverse=True)[:2]
+        
+        # 5. Save to Cache
+        if db is not None:
+            cache_doc = {
+                "q": q,
+                "lang": lang,
+                "videos": top_videos,
+                "timestamp": datetime.now(timezone.utc).isoformat()
+            }
+            try:
+                await db["youtube_cache"].update_one({"q": q, "lang": lang}, {"$set": cache_doc}, upsert=True)
+            except Exception as e:
+                logging.error(f"Error saving to YouTube cache: {e}")
+        
+        return {"status": "success", "videos": top_videos, "cached": False}
+        
+    except Exception as e:
+        logger.error(f"YouTube search error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @api_router.get("/news")
 async def get_news(language: str = "es", q: str = None):

@@ -8,33 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
-<style>
-  .places-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-  .place-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:28px;transition:all .3s;position:relative;overflow:hidden}
-  .place-card:hover{border-color:rgba(212,168,83,.3);transform:translateY(-4px)}
-  .place-category{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent-teal);margin-bottom:10px}
-  .place-name{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:8px}
-  .place-desc{color:var(--text-secondary);font-size:14px;line-height:1.7;margin-bottom:12px}
-  .place-info{font-size:12px;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:12px}
-  .place-info span{display:flex;align-items:center;gap:4px}
-  .neighborhood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-  .hood-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:24px;transition:all .3s}
-  .hood-card:hover{border-color:rgba(45,212,191,.3);transform:translateY(-3px)}
-  .hood-emoji{font-size:2.5rem;margin-bottom:12px}
-  .hood-name{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:6px}
-  .hood-vibe{color:var(--accent-gold);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-  .hood-desc{color:var(--text-secondary);font-size:13px;line-height:1.6}
-  .info-banner{background:linear-gradient(135deg,rgba(212,168,83,.08),rgba(45,212,191,.05));border:1px solid rgba(212,168,83,.2);border-radius:var(--radius);padding:28px;margin-top:32px}
-  .info-banner h4{color:var(--accent-gold);font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:12px}
-  .info-banner p{color:var(--text-secondary);font-size:14px;line-height:1.7}
-  .beach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-  .beach-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);padding:20px;text-align:center;transition:all .3s}
-  .beach-card:hover{transform:translateY(-3px);border-color:rgba(45,212,191,.3)}
-  .beach-icon{font-size:2rem;margin-bottom:10px}
-  .beach-name{font-weight:600;font-size:14px;margin-bottom:4px}
-  .beach-type{color:var(--accent-teal);font-size:12px;margin-bottom:8px}
-  .beach-desc{color:var(--text-muted);font-size:12px;line-height:1.5}
-</style>
 </head>
 <body>
 <nav class="topbar">
@@ -555,6 +528,14 @@
 </section>
 
 <!-- ═══════ CTA ═══════ -->
+<section class="section reveal" id="videos-section" style="display:none;">
+  <div class="section-label">Videos</div>
+  <h2>Videos de Viajes</h2>
+  <div class="videos-grid" id="youtube-videos">
+    <!-- Videos cargados dinámicamente -->
+  </div>
+</section>
+
 <section class="cta-section reveal">
   <div class="section-label">Reserva</div>
   <h2>¿Listo para Miami?</h2>
@@ -573,6 +554,44 @@
 </footer>
 
 <script>
+async function loadYouTubeVideos() {
+  const h1 = document.querySelector('h1')?.innerText;
+  if (!h1) return;
+  
+  try {
+    const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
+    const response = await fetch(`${backendUrl}/api/youtube?q=${encodeURIComponent(h1 + ' travel')}&lang=es`);
+    const data = await response.json();
+    
+    if (data.status === 'success' && data.videos && data.videos.length > 0) {
+      const container = document.getElementById('youtube-videos');
+      const section = document.getElementById('videos-section');
+      section.style.display = 'block';
+      
+      data.videos.slice(0, 2).forEach(v => {
+        const card = document.createElement('div');
+        card.className = 'video-card-static';
+        card.innerHTML = `
+          <div class="video-embed-container">
+            <iframe src="https://www.youtube.com/embed/${v.id}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">${v.title}</div>
+            <div class="video-stats-static">
+              <span>👁️ ${v.views.toLocaleString()} vistas</span>
+              <span>👍 ${v.likes.toLocaleString()} likes</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+  } catch (err) {
+    console.error('Error loading videos:', err);
+  }
+}
+document.addEventListener('DOMContentLoaded', loadYouTubeVideos);
+
 const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
 </script>

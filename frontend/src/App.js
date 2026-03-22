@@ -7,6 +7,7 @@ import ScriptWidget from './components/widgets/ScriptWidget';
 import HotelsForm from './components/search/HotelsForm';
 import ExpediaForm from './components/search/ExpediaForm';
 import NewsSection from './components/news/NewsSection';
+import VideoSection from './components/video/VideoSection';
 import LanguageSwitcher from './components/ui/LanguageSwitcher';
 import CategoryAccordion from './components/ui/CategoryAccordion';
 import GuidesHub from './pages/GuidesHub';
@@ -280,6 +281,7 @@ function App() {
         </section>
 
         <NewsSection />
+        <VideoSection />
       </main>
 
       {/* MODALES */}

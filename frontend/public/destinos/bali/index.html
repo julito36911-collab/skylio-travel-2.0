@@ -288,6 +288,14 @@
   </div>
 </section>
 
+<section class="section reveal" id="videos-section" style="display:none;">
+  <div class="section-label">Videos</div>
+  <h2>Videos de Viajes</h2>
+  <div class="videos-grid" id="youtube-videos">
+    <!-- Videos cargados dinámicamente -->
+  </div>
+</section>
+
 <section class="cta-section reveal">
   <div class="section-label">Reserva</div>
   <h2>¿Listo para Bali?</h2>
@@ -305,6 +313,44 @@
 </footer>
 
 <script>
+async function loadYouTubeVideos() {
+  const h1 = document.querySelector('h1')?.innerText;
+  if (!h1) return;
+  
+  try {
+    const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
+    const response = await fetch(`${backendUrl}/api/youtube?q=${encodeURIComponent(h1 + ' travel')}&lang=es`);
+    const data = await response.json();
+    
+    if (data.status === 'success' && data.videos && data.videos.length > 0) {
+      const container = document.getElementById('youtube-videos');
+      const section = document.getElementById('videos-section');
+      section.style.display = 'block';
+      
+      data.videos.slice(0, 2).forEach(v => {
+        const card = document.createElement('div');
+        card.className = 'video-card-static';
+        card.innerHTML = `
+          <div class="video-embed-container">
+            <iframe src="https://www.youtube.com/embed/${v.id}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">${v.title}</div>
+            <div class="video-stats-static">
+              <span>👁️ ${v.views.toLocaleString()} vistas</span>
+              <span>👍 ${v.likes.toLocaleString()} likes</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+  } catch (err) {
+    console.error('Error loading videos:', err);
+  }
+}
+document.addEventListener('DOMContentLoaded', loadYouTubeVideos);
+
 const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
 </script>

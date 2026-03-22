@@ -254,6 +254,13 @@
     "example": "Ejemplo: 'Sagrada Familia, Barcelona' o 'Times Square, New York'"
   },
   "common": {
-    "back": "Volver"
+    "back": "Volver",
+    "close": "Cerrar"
+  },
+  "videos": {
+    "title": "Videos de Viajes",
+    "placeholder": "Busca videos... ej: playas Bali, hoteles Dubai",
+    "views": "Vistas",
+    "likes": "Likes"
   }
 }

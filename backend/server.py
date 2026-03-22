@@ -206,10 +206,11 @@ General instructions for BOTH options:
         )
 
 @api_router.get("/news")
-async def get_news(language: str = "es"):
+async def get_news(language: str = "es", q: str = None):
     """
     Get travel news from NewsAPI
     Supports Spanish (es) and English (en)
+    Optional 'q' parameter for specific searches
     """
     try:
         # Get NewsAPI key from environment
@@ -224,18 +225,23 @@ async def get_news(language: str = "es"):
         # NewsAPI endpoint
         api_url = "https://newsapi.org/v2/everything"
         
-        # Define search queries based on language
-        if language == "es":
-            query = "(viajes OR turismo OR vacaciones) AND (destinos OR aerolíneas OR hoteles OR vuelos OR aeropuerto OR pasajeros)"
-        else:  # English
-            query = "(travel OR tourism OR vacation) AND (destination OR airlines OR hotels OR flights OR airport)"
+        # Define search queries
+        if q:
+            # Custom search: combine user query with travel/tourism
+            query = f"{q} travel tourism"
+        else:
+            # Default search based on language
+            if language == "es":
+                query = "(viajes OR turismo OR vacaciones) AND (destinos OR aerolíneas OR hoteles OR vuelos OR aeropuerto OR pasajeros)"
+            else:  # English
+                query = "(travel OR tourism OR vacation) AND (destination OR airlines OR hotels OR flights OR airport)"
         
         # API parameters
         params = {
             "q": query,
             "language": language,
             "sortBy": "publishedAt",
-            "pageSize": 6,
+            "pageSize": 8,
             "apiKey": news_api_key
         }
         

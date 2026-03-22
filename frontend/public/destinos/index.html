@@ -4,276 +4,279 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guías de Destinos | Skylio Destinos</title>
-<meta name="description" content="Guías completas de viaje: hoteles, consejos, clima y más. Por Skylio Viajes.">
+<meta name="description" content="Explora nuestros destinos en un mapa interactivo. Guías completas de viaje por Skylio Viajes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="hub.css">
 </head>
 <body>
+
 <nav class="topbar">
-  <div class="topbar-left">
-    <a href="https://skylioviajes.online" class="btn-back">
+  <div class="topbar-inner">
+    <a href="/" class="btn-back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
       Skylio Viajes
     </a>
-    <div class="topbar-brand"><span>Skylio</span> Destinos</div>
+    <div class="topbar-brand">✈️ <span>Skylio</span> Destinos</div>
   </div>
 </nav>
 
-<section class="hero-hub">
-  <div class="hero-label">🌍 Guías de Viaje</div>
-  <h1>Explora el Mundo</h1>
-  <p>Guías completas con los mejores hoteles, consejos, noticias en vivo y todo lo que necesitas para tu próximo destino.</p>
-  <div class="dest-count">17 destinos disponibles</div>
-</section>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">🎨 Mapa Artístico</span>
+    <h1>Explora el Mundo con Skylio</h1>
+    <p>Usa el buscador o navega por el mapa interactivo para encontrar tu próximo destino.</p>
+  </div>
+</header>
 
-<section class="destinations">
-  <div class="dest-grid">
-    <a href="punta-cana/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🌴 Caribe</div>
-        <h3>Punta Cana</h3>
-        <div class="dest-card-desc">Arena blanca, resorts todo incluido y la mejor playa del Caribe.</div>
-        <div class="dest-card-meta">
-          <span>🌡 28°C</span>
-          <span>✈️ 4-10h</span>
-          <span>💰 Desde $120+</span>
-        </div>
-      </div>
-    </a>
-    <a href="miami/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇺🇸 Estados Unidos</div>
-        <h3>Miami</h3>
-        <div class="dest-card-desc">Playas de South Beach, arte Art Deco, vida nocturna legendaria y la vibrante cultura latina de Florida.</div>
-        <div class="dest-card-meta">
-          <span>🌡 26°C</span>
-          <span>✈️ 9–12h</span>
-          <span>💰 Desde $155+</span>
-        </div>
-      </div>
-    </a>
-    <a href="cancun/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇲🇽 México</div>
-        <h3>Cancún</h3>
-        <div class="dest-card-desc">Zona Hotelera de clase mundial, ruinas mayas, cenotes cristalinos y la fiesta más vibrante del Caribe mexicano.</div>
-        <div class="dest-card-meta">
-          <span>🌡 28°C</span>
-          <span>✈️ 4–12h</span>
-          <span>💰 Desde $150+</span>
-        </div>
-      </div>
-    </a>
-    <a href="riviera-maya/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1504730030853-eff311f57d3c?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇲🇽 México</div>
-        <h3>Riviera Maya</h3>
-        <div class="dest-card-desc">Cenotes sagrados, ruinas frente al mar, resorts boutique de lujo y la selva tropical del Yucatán.</div>
-        <div class="dest-card-meta">
-          <span>🌡 28°C</span>
-          <span>✈️ 4–12h</span>
-          <span>💰 Desde $120+</span>
-        </div>
-      </div>
-    </a>
-    <a href="cartagena/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1583531172005-814194fa1279?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇨🇴 Colombia</div>
-        <h3>Cartagena</h3>
-        <div class="dest-card-desc">Ciudad amurallada colonial, calles empedradas llenas de color, música salsa y el encanto del Caribe colombiano.</div>
-        <div class="dest-card-meta">
-          <span>🌡 28°C</span>
-          <span>✈️ 5–12h</span>
-          <span>💰 Desde $90+</span>
-        </div>
-      </div>
-    </a>
-    <a href="madrid/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇪🇸 España</div>
-        <h3>Madrid</h3>
-        <div class="dest-card-desc">El Prado, tapas de primera, vida nocturna hasta el amanecer y la Gran Vía, el Broadway madrileño.</div>
-        <div class="dest-card-meta">
-          <span>🌡 15°C</span>
-          <span>✈️ 8–12h</span>
-          <span>💰 Desde $90+</span>
-        </div>
-      </div>
-    </a>
-    <a href="barcelona/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇪🇸 España</div>
-        <h3>Barcelona</h3>
-        <div class="dest-card-desc">La obra maestra de Gaudí, playas mediterráneas, Las Ramblas y una escena gastronómica de clase mundial.</div>
-        <div class="dest-card-meta">
-          <span>🌡 17°C</span>
-          <span>✈️ 8–12h</span>
-          <span>💰 Desde $100+</span>
-        </div>
-      </div>
-    </a>
-    <a href="venecia/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇮🇹 Italia</div>
-        <h3>Venecia</h3>
-        <div class="dest-card-desc">Góndolas, San Marco, puentes románticos y la magia de una ciudad flotante única en el mundo.</div>
-        <div class="dest-card-meta">
-          <span>🌡 13°C</span>
-          <span>✈️ 10–14h</span>
-          <span>💰 Desde $120+</span>
-        </div>
-      </div>
-    </a>
-    <a href="roma/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇮🇹 Italia</div>
-        <h3>Roma</h3>
-        <div class="dest-card-desc">El Coliseo, el Vaticano, la Fontana di Trevi y 3.000 años de historia en cada esquina.</div>
-        <div class="dest-card-meta">
-          <span>🌡 16°C</span>
-          <span>✈️ 10–14h</span>
-          <span>💰 Desde $80+</span>
-        </div>
-      </div>
-    </a>
-    <a href="paris/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇫🇷 Francia</div>
-        <h3>París</h3>
-        <div class="dest-card-desc">La Torre Eiffel, el Louvre, croissants perfectos y el romanticismo eterno de la Ciudad de la Luz.</div>
-        <div class="dest-card-meta">
-          <span>🌡 12°C</span>
-          <span>✈️ 10–14h</span>
-          <span>💰 Desde $100+</span>
-        </div>
-      </div>
-    </a>
-    <a href="londres/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇬🇧 Reino Unido</div>
-        <h3>Londres</h3>
-        <div class="dest-card-desc">Big Ben, el Támesis, pubs centenarios, museos gratuitos y la energía multicultural más vibrante de Europa.</div>
-        <div class="dest-card-meta">
-          <span>🌡 11°C</span>
-          <span>✈️ 10–14h</span>
-          <span>💰 Desde $120+</span>
-        </div>
-      </div>
-    </a>
-    <a href="santorini/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇬🇷 Grecia</div>
-        <h3>Santorini</h3>
-        <div class="dest-card-desc">Cúpulas azules sobre acantilados blancos, los atardeceres más famosos del mundo y vinos volcánicos únicos.</div>
-        <div class="dest-card-meta">
-          <span>🌡 19°C</span>
-          <span>✈️ 12–16h</span>
-          <span>💰 Desde $150+</span>
-        </div>
-      </div>
-    </a>
-    <a href="maldivas/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🏝 Maldivas</div>
-        <h3>Maldivas</h3>
-        <div class="dest-card-desc">Bungalows sobre el agua, arrecifes de coral, mantas raya y los atardeceres más espectaculares del planeta.</div>
-        <div class="dest-card-meta">
-          <span>🌡 29°C</span>
-          <span>✈️ 14–20h</span>
-          <span>💰 Desde $300+</span>
-        </div>
-      </div>
-    </a>
-    <a href="dubai/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇦🇪 EAU</div>
-        <h3>Dubai</h3>
-        <div class="dest-card-desc">El Burj Khalifa, islas artificiales, centros comerciales gigantescos y el lujo más extravagante del planeta.</div>
-        <div class="dest-card-meta">
-          <span>🌡 28°C</span>
-          <span>✈️ 12–16h</span>
-          <span>💰 Desde $100+</span>
-        </div>
-      </div>
-    </a>
-    <a href="bali/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇮🇩 Indonesia</div>
-        <h3>Bali</h3>
-        <div class="dest-card-desc">Templos ancestrales, terrazas de arroz, playas de surf, yoga al amanecer y la espiritualidad de la Isla de los Dioses.</div>
-        <div class="dest-card-meta">
-          <span>🌡 27°C</span>
-          <span>✈️ 18–24h</span>
-          <span>💰 Desde $40+</span>
-        </div>
-      </div>
-    </a>
-    <a href="bangkok/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇹🇭 Tailandia</div>
-        <h3>Bangkok</h3>
-        <div class="dest-card-desc">Templos dorados, street food legendaria, mercados flotantes y la energía caótica más adictiva de Asia.</div>
-        <div class="dest-card-meta">
-          <span>🌡 29°C</span>
-          <span>✈️ 16–22h</span>
-          <span>💰 Desde $30+</span>
-        </div>
-      </div>
-    </a>
-    <a href="tokio/" class="dest-card">
-      <div class="dest-card-img" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=80')"></div>
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-content">
-        <div class="dest-card-region">🇯🇵 Japón</div>
-        <h3>Tokio</h3>
-        <div class="dest-card-desc">Tradición y futuro en perfecta armonía: templos zen, neones de Shibuya, sushi de clase mundial y tecnología de otro plan</div>
-        <div class="dest-card-meta">
-          <span>🌡 16°C</span>
-          <span>✈️ 18–24h</span>
-          <span>💰 Desde $60+</span>
-        </div>
-      </div>
-    </a>
+<section class="search-section">
+  <div class="search-box" id="searchBox">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="Busca tu destino..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
   </div>
 </section>
 
+<!-- MAP: Leaflet.js -->
+<section class="map-container-section">
+  <div id="map"></div>
+</section>
+
+<!-- ALL DESTINATIONS -->
+<section class="all-dest-section">
+  <h2 class="section-title">🌎 Todos los Destinos</h2>
+  <p class="section-subtitle">Explora por país — haz clic para ver las ciudades disponibles</p>
+  <div class="country-chips" id="countryChips"></div>
+</section>
+
 <footer class="footer">
-  <div class="footer-brand"><span>Skylio</span> Destinos</div>
-  <p>Parte de <a href="https://skylioviajes.online">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
+  <div class="footer-brand">✈️ <span>Skylio</span> Destinos</div>
+  <p>Parte de <a href="/">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
 </footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+/* ════════════ DATA ════════════ */
+const destinations = {
+  es: { 
+    name: 'España', flag: '🇪🇸', coords: [40.4, -3.7], color: '#e07b39',
+    cities: [
+      { name: 'Barcelona', slug: 'barcelona', img: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80', desc: 'Gaudí, playas mediterráneas y Las Ramblas' },
+      { name: 'Madrid', slug: 'madrid', img: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=600&q=80', desc: 'El Prado, tapas de primera y la Gran Vía' }
+    ]
+  },
+  fr: { 
+    name: 'Francia', flag: '🇫🇷', coords: [46.6, 2.3], color: '#0ea5a0',
+    cities: [
+      { name: 'París', slug: 'paris', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80', desc: 'Torre Eiffel, el Louvre y romance eterno' }
+    ]
+  },
+  it: { 
+    name: 'Italia', flag: '🇮🇹', coords: [41.9, 12.5], color: '#2ecc71',
+    cities: [
+      { name: 'Roma', slug: 'roma', img: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80', desc: 'Coliseo, Vaticano y 3.000 años de historia' },
+      { name: 'Venecia', slug: 'venecia', img: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80', desc: 'Góndolas, San Marco y puentes románticos' }
+    ]
+  },
+  gr: { 
+    name: 'Grecia', flag: '🇬🇷', coords: [37.4, 25.4], color: '#3498db',
+    cities: [
+      { name: 'Santorini', slug: 'santorini', img: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80', desc: 'Cúpulas azules y atardeceres legendarios' }
+    ]
+  },
+  gb: { 
+    name: 'Reino Unido', flag: '🇬🇧', coords: [51.5, -0.1], color: '#9b59b6',
+    cities: [
+      { name: 'Londres', slug: 'londres', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80', desc: 'Big Ben, el Támesis y museos gratuitos' }
+    ]
+  },
+  ae: { 
+    name: 'Emiratos Árabes', flag: '🇦🇪', coords: [25.2, 55.3], color: '#f1c40f',
+    cities: [
+      { name: 'Dubai', slug: 'dubai', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80', desc: 'Burj Khalifa, islas artificiales y lujo extremo' }
+    ]
+  },
+  th: { 
+    name: 'Tailandia', flag: '🇹🇭', coords: [13.7, 100.5], color: '#e67e22',
+    cities: [
+      { name: 'Bangkok', slug: 'bangkok', img: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80', desc: 'Templos dorados y street food legendaria' }
+    ]
+  },
+  id: { 
+    name: 'Indonesia', flag: '🇮🇩', coords: [-8.4, 115.2], color: '#1abc9c',
+    cities: [
+      { name: 'Bali', slug: 'bali', img: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80', desc: 'Templos, terrazas de arroz y playas de surf' }
+    ]
+  },
+  mv: { 
+    name: 'Maldivas', flag: '🇲🇻', coords: [3.2, 73.2], color: '#00d2d3',
+    cities: [
+      { name: 'Maldivas', slug: 'maldivas', img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80', desc: 'Bungalows sobre el agua y arrecifes de coral' }
+    ]
+  },
+  jp: { 
+    name: 'Japón', flag: '🇯🇵', coords: [35.7, 139.7], color: '#ff4d4d',
+    cities: [
+      { name: 'Tokio', slug: 'tokio', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80', desc: 'Tradición y futuro: templos zen y neones' }
+    ]
+  },
+  mx: { 
+    name: 'México', flag: '🇲🇽', coords: [21.2, -86.8], color: '#d35400',
+    cities: [
+      { name: 'Cancún', slug: 'cancun', img: 'https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80', desc: 'Zona hotelera, ruinas mayas y cenotes' },
+      { name: 'Riviera Maya', slug: 'riviera-maya', img: 'https://images.unsplash.com/photo-1504730030853-eff311f57d3c?w=600&q=80', desc: 'Cenotes sagrados y resorts boutique de lujo' }
+    ]
+  },
+  co: { 
+    name: 'Colombia', flag: '🇨🇴', coords: [10.4, -75.5], color: '#f39c12',
+    cities: [
+      { name: 'Cartagena', slug: 'cartagena', img: 'https://images.unsplash.com/photo-1583531172005-814194fa1279?w=600&q=80', desc: 'Ciudad amurallada y el Caribe colombiano' }
+    ]
+  },
+  do: { 
+    name: 'República Dominicana', flag: '🇩🇴', coords: [18.5, -69.9], color: '#34495e',
+    cities: [
+      { name: 'Punta Cana', slug: 'punta-cana', img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80', desc: 'Arena blanca y resorts todo incluido' }
+    ]
+  },
+  us: { 
+    name: 'Estados Unidos', flag: '🇺🇸', coords: [25.8, -80.2], color: '#2c3e50',
+    cities: [
+      { name: 'Miami', slug: 'miami', img: 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&q=80', desc: 'South Beach, Art Deco y cultura latina vibrante' }
+    ]
+  }
+};
+
+/* ════════════ MAP INITIALIZATION ════════════ */
+const map = L.map('map', {
+  minZoom: 2,
+  maxZoom: 12,
+  scrollWheelZoom: true,
+  zoomControl: false /* We'll add it manually to position it better */
+}).setView([15, 0], 2);
+
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+/* Watercolor Tile Layer */
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+}).addTo(map);
+
+/* Border Lines Layer (Toner Lines) */
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lines/{z}/{x}/{y}.png', {
+  opacity: 0.3,
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.'
+}).addTo(map);
+
+/* Toner Labels Layer */
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}.png', {
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+}).addTo(map);
+
+const markers = {};
+
+/* Create markers */
+Object.entries(destinations).forEach(([code, country]) => {
+  const customIcon = L.divIcon({
+    className: 'custom-marker',
+    html: `<div class="marker-circle" style="background-color: ${country.color}">${country.flag}</div>`,
+    iconSize: [40, 40],
+    iconAnchor: [20, 20]
+  });
+
+  const marker = L.marker(country.coords, { icon: customIcon }).addTo(map);
+  
+  const popupContent = `
+    <div class="custom-popup">
+      <h3>${country.flag} ${country.name}</h3>
+      <p>Ciudades disponibles:</p>
+      <div class="popup-links">
+        ${country.cities.map(city => `<a href="/destinos/${city.slug}/" class="popup-btn">${city.name}</a>`).join('')}
+      </div>
+    </div>
+  `;
+
+  marker.bindPopup(popupContent, { maxWidth: 250 });
+  markers[code] = marker;
+});
+
+/* ════════════ SEARCH ════════════ */
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchBox = document.getElementById('searchBox');
+
+function normalize(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+
+const searchIndex = [];
+Object.entries(destinations).forEach(([code, c]) => {
+  searchIndex.push({ type: 'country', code, label: c.name, flag: c.flag });
+  c.cities.forEach(city => {
+    searchIndex.push({ type: 'city', code, label: city.name, flag: c.flag, slug: city.slug });
+  });
+});
+
+searchInput.addEventListener('input', function() {
+  const q = normalize(this.value.trim());
+  if (q.length < 1) { searchResults.classList.remove('open'); return; }
+  const matches = searchIndex.filter(i => normalize(i.label).includes(q)).slice(0, 8);
+  if (!matches.length) {
+    searchResults.innerHTML = '<div class="sr-empty">Sin resultados para "<b>' + this.value.trim() + '</b>"</div>';
+  } else {
+    searchResults.innerHTML = matches.map(m =>
+      `<div class="sr-item" data-code="${m.code}" ${m.slug ? `data-slug="${m.slug}"` : ''}>
+         <span class="sr-flag">${m.flag}</span>
+         <span class="sr-label">${m.label}</span>
+         <span class="sr-badge">${m.type === 'country' ? 'País' : 'Ciudad'}</span>
+       </div>`
+    ).join('');
+  }
+  searchResults.classList.add('open');
+  
+  searchResults.querySelectorAll('.sr-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const code = el.dataset.code;
+      const country = destinations[code];
+      const marker = markers[code];
+      
+      if (marker) {
+        map.flyTo(country.coords, 6, { duration: 1.5 });
+        setTimeout(() => marker.openPopup(), 1500);
+      }
+      
+      searchResults.classList.remove('open');
+      searchInput.value = '';
+    });
+  });
+});
+
+document.addEventListener('click', e => { if (!searchBox.contains(e.target)) searchResults.classList.remove('open'); });
+
+/* ════════════ COUNTRY CHIPS ════════════ */
+const countryChips = document.getElementById('countryChips');
+countryChips.innerHTML = Object.entries(destinations).map(([code, c]) =>
+  `<button class="chip" data-code="${code}">
+    <span class="chip-flag">${c.flag}</span>
+    <span class="chip-name">${c.name}</span>
+    <span class="chip-count">${c.cities.length}</span>
+   </button>`
+).join('');
+
+countryChips.querySelectorAll('.chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const code = btn.dataset.code;
+    const country = destinations[code];
+    const marker = markers[code];
+    if (marker) {
+      map.flyTo(country.coords, 6, { duration: 1.5 });
+      setTimeout(() => marker.openPopup(), 1500);
+    }
+  });
+});
+</script>
+
 </body>
 </html>

@@ -12,6 +12,8 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 import requests
+import unicodedata
+import re
 
 
 ROOT_DIR = Path(__file__).parent
@@ -37,6 +39,22 @@ app = FastAPI()
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
+
+
+def normalize_query(text: str) -> str:
+    """
+    Lowercase and remove accents/diacritics from text
+    """
+    if not text:
+        return ""
+    # Normalize to NFD and filter out non-spacing marks
+    text = text.lower().strip()
+    normalized = "".join(
+        c for c in unicodedata.normalize('NFD', text)
+        if unicodedata.category(c) != 'Mn'
+    )
+    # Remove extra spaces
+    return re.sub(r'\s+', ' ', normalized)
 
 
 # Define Models
@@ -98,8 +116,40 @@ async def travel_assistant(query: TravelQuery):
     """
     AI-powered travel assistant using Groq's Llama 3.3 70B model
     Provides comprehensive travel information about any destination
+    With MongoDB caching for simple queries (1-3 words)
     """
     try:
+        # 0. Cache Check Logic
+        words = query.destination.strip().split()
+        is_cacheable = 1 <= len(words) <= 3
+        q_norm = normalize_query(query.destination)
+        
+        if is_cacheable and db is not None:
+            cache_coll = db["ai_cache"]
+            cached_doc = await cache_coll.find_one({
+                "query_normalizado": q_norm, 
+                "idioma": query.language
+            })
+            
+            if cached_doc:
+                try:
+                    fecha_cache = datetime.fromisoformat(cached_doc["fecha"])
+                    # Ensure timezone awareness
+                    if fecha_cache.tzinfo is None:
+                        fecha_cache = fecha_cache.replace(tzinfo=timezone.utc)
+                    
+                    days_old = (datetime.now(timezone.utc) - fecha_cache).days
+                    if days_old < 30:
+                        logging.info(f"AI Cache Hit: {q_norm} ({query.language})")
+                        await cache_coll.update_one(
+                            {"_id": cached_doc["_id"]}, 
+                            {"$inc": {"consultas": 1}}
+                        )
+                        return TravelAssistantResponse(response=cached_doc["respuesta"])
+                except Exception as e:
+                    logging.error(f"Error processing AI cache entry: {e}")
+
+        # 1. Call Groq normally if not in cache or complex
         # Get Groq API key from environment
         groq_api_key = os.environ.get('GROQ_API_KEY')
         
@@ -194,14 +244,34 @@ General instructions for BOTH options:
         
         # Extract generated text from Groq response
         if "choices" in result and len(result["choices"]) > 0:
-            generated_text = result["choices"][0]["message"]["content"]
+            generated_text = result["choices"][0]["message"]["content"].strip()
         else:
             raise HTTPException(
                 status_code=500,
                 detail="AI did not generate a response. Please try again."
             )
         
-        return TravelAssistantResponse(response=generated_text.strip())
+        # 2. Save to Cache if applicable
+        if is_cacheable and db is not None:
+            try:
+                cache_doc = {
+                    "query_normalizado": q_norm,
+                    "idioma": query.language,
+                    "respuesta": generated_text,
+                    "fecha": datetime.now(timezone.utc).isoformat(),
+                    "consultas": 1
+                }
+                # Use upsert to update if query/lang exists (e.g. if cache was expired)
+                await db["ai_cache"].update_one(
+                    {"query_normalizado": q_norm, "idioma": query.language},
+                    {"$set": cache_doc},
+                    upsert=True
+                )
+                logging.info(f"AI Cache Updated: {q_norm} ({query.language})")
+            except Exception as e:
+                logging.error(f"Error saving to AI cache: {e}")
+
+        return TravelAssistantResponse(response=generated_text)
         
     except requests.exceptions.Timeout:
         raise HTTPException(

@@ -125,29 +125,35 @@ async def travel_assistant(query: TravelQuery):
         q_norm = normalize_query(query.destination)
         
         if is_cacheable and db is not None:
-            cache_coll = db["ai_cache"]
-            cached_doc = await cache_coll.find_one({
-                "query_normalizado": q_norm, 
-                "idioma": query.language
-            })
-            
-            if cached_doc:
-                try:
-                    fecha_cache = datetime.fromisoformat(cached_doc["fecha"])
-                    # Ensure timezone awareness
-                    if fecha_cache.tzinfo is None:
-                        fecha_cache = fecha_cache.replace(tzinfo=timezone.utc)
-                    
-                    days_old = (datetime.now(timezone.utc) - fecha_cache).days
-                    if days_old < 30:
-                        logging.info(f"AI Cache Hit: {q_norm} ({query.language})")
-                        await cache_coll.update_one(
-                            {"_id": cached_doc["_id"]}, 
-                            {"$inc": {"consultas": 1}}
-                        )
-                        return TravelAssistantResponse(response=cached_doc["respuesta"])
-                except Exception as e:
-                    logging.error(f"Error processing AI cache entry: {e}")
+            try:
+                cache_coll = db["ai_cache"]
+                cached_doc = await cache_coll.find_one({
+                    "query_normalizado": q_norm, 
+                    "idioma": query.language
+                })
+                
+                if cached_doc:
+                    try:
+                        fecha_cache = datetime.fromisoformat(cached_doc["fecha"])
+                        # Ensure timezone awareness
+                        if fecha_cache.tzinfo is None:
+                            fecha_cache = fecha_cache.replace(tzinfo=timezone.utc)
+                        
+                        days_old = (datetime.now(timezone.utc) - fecha_cache).days
+                        if days_old < 30:
+                            logging.info(f"AI Cache Hit: {q_norm} ({query.language})")
+                            try:
+                                await cache_coll.update_one(
+                                    {"_id": cached_doc["_id"]}, 
+                                    {"$inc": {"consultas": 1}}
+                                )
+                            except Exception as db_err:
+                                logging.warning(f"Failed to update AI cache stats: {db_err}")
+                            return TravelAssistantResponse(response=cached_doc["respuesta"])
+                    except (ValueError, TypeError) as parse_err:
+                        logging.error(f"Error parsing AI cache date: {parse_err}")
+            except Exception as db_err:
+                logging.error(f"AI Cache lookup failed (proceeding without cache): {db_err}")
 
         # 1. Call Groq normally if not in cache or complex
         # Get Groq API key from environment
@@ -303,20 +309,22 @@ async def get_youtube_videos(q: str, lang: str = "es"):
             raise HTTPException(status_code=500, detail="YOUTUBE_API_KEY not configured")
 
         # 1. Check Cache
-        # 1. CACHE Check
         if db is not None:
-            cache_collection = db["youtube_cache"]
-            cached_result = await cache_collection.find_one({"q": q, "lang": lang})
-            
-            if cached_result:
-                cache_date = datetime.fromisoformat(cached_result['timestamp'])
-                # Ensure cache_date is timezone-aware for comparison
-                if cache_date.tzinfo is None:
-                    cache_date = cache_date.replace(tzinfo=timezone.utc)
-                days_diff = (datetime.now(timezone.utc) - cache_date).days
-                if days_diff < 30:
-                    logging.info(f"YouTube Cache Hit for: {q}")
-                    return {"status": "success", "videos": cached_result['videos'], "cached": True}
+            try:
+                cache_collection = db["youtube_cache"]
+                cached_result = await cache_collection.find_one({"q": q, "lang": lang})
+                
+                if cached_result:
+                    cache_date = datetime.fromisoformat(cached_result['timestamp'])
+                    # Ensure cache_date is timezone-aware for comparison
+                    if cache_date.tzinfo is None:
+                        cache_date = cache_date.replace(tzinfo=timezone.utc)
+                    days_diff = (datetime.now(timezone.utc) - cache_date).days
+                    if days_diff < 30:
+                        logging.info(f"YouTube Cache Hit for: {q}")
+                        return {"status": "success", "videos": cached_result['videos'], "cached": True}
+            except Exception as db_err:
+                logging.error(f"YouTube Cache check failed (proceeding without cache): {db_err}")
         else:
             logging.info(f"YouTube Cache Skipped (No DB) for: {q}")
 

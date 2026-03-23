@@ -393,7 +393,7 @@ async def get_youtube_videos(q: str, lang: str = "es"):
             "part": "snippet",
             "q": formatted_q,
             "type": "video",
-            "maxResults": 6,
+            "maxResults": 12,
             "order": "relevance",
             "relevanceLanguage": lang,
             "regionCode": "ES" if lang == "es" else "US",
@@ -432,8 +432,8 @@ async def get_youtube_videos(q: str, lang: str = "es"):
             views = int(stats.get("viewCount", 0))
             likes = int(stats.get("likeCount", 0))
             
-            # Filter > 50,000 views
-            if views >= 50000:
+            # Filter > 10,000 views
+            if views >= 10000:
                 processed_videos.append({
                     "id": v["id"],
                     "title": v["snippet"]["title"],
@@ -443,8 +443,8 @@ async def get_youtube_videos(q: str, lang: str = "es"):
                     "score": views + likes
                 })
         
-        # Sort by score (views + likes) and take top 2
-        top_videos = sorted(processed_videos, key=lambda x: x["score"], reverse=True)[:2]
+        # Sort by score (views + likes) and take top 6
+        top_videos = sorted(processed_videos, key=lambda x: x["score"], reverse=True)[:6]
         
         # 5. Save to Cache
         db_failed = False

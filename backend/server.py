@@ -6,6 +6,7 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import certifi
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List
@@ -26,7 +27,7 @@ db = None
 
 if mongo_url and db_name:
     try:
-        client = AsyncIOMotorClient(mongo_url)
+        client = AsyncIOMotorClient(mongo_url, tlsCAFile=certifi.where())
         db = client[db_name]
         logging.info("MongoDB connected successfully")
     except Exception as e:

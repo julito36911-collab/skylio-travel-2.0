@@ -330,13 +330,17 @@ async def get_youtube_videos(q: str, lang: str = "es"):
 
         # 2. Search YouTube
         search_url = "https://www.googleapis.com/youtube/v3/search"
+        # Clean up in case frontend already appended it
+        clean_q = q.replace(' travel guide', '').replace('"', '').strip()
+        
         search_params = {
             "part": "snippet",
-            "q": f"{q} travel tourism",
+            "q": f'"{clean_q}" travel guide',
             "type": "video",
             "maxResults": 6,
-            "order": "viewCount",
+            "order": "relevance",
             "relevanceLanguage": lang,
+            "regionCode": "ES" if lang == "es" else "US",
             "videoDuration": "medium",
             "key": youtube_api_key
         }

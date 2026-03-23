@@ -35,6 +35,9 @@ if mongo_url and db_name:
 else:
     logging.warning("MongoDB credentials missing. Caching will be disabled.")
 
+# In-memory fallback cache
+memory_cache = {}
+
 # Create the main app without a prefix
 app = FastAPI()
 
@@ -125,36 +128,50 @@ async def travel_assistant(query: TravelQuery):
         is_cacheable = 1 <= len(words) <= 3
         q_norm = normalize_query(query.destination)
         
-        if is_cacheable and db is not None:
-            try:
-                cache_coll = db["ai_cache"]
-                cached_doc = await cache_coll.find_one({
-                    "query_normalizado": q_norm, 
-                    "idioma": query.language
-                })
+        memory_key = f"ai:{q_norm}:{query.language}"
+        use_memory_cache = False
+        
+        if is_cacheable:
+            if db is not None:
+                try:
+                    cache_coll = db["ai_cache"]
+                    cached_doc = await cache_coll.find_one({
+                        "query_normalizado": q_norm, 
+                        "idioma": query.language
+                    })
+                    
+                    if cached_doc:
+                        try:
+                            fecha_cache = datetime.fromisoformat(cached_doc["fecha"])
+                            # Ensure timezone awareness
+                            if fecha_cache.tzinfo is None:
+                                fecha_cache = fecha_cache.replace(tzinfo=timezone.utc)
+                            
+                            days_old = (datetime.now(timezone.utc) - fecha_cache).days
+                            if days_old < 30:
+                                logging.info(f"AI Cache Hit: {q_norm} ({query.language})")
+                                try:
+                                    await cache_coll.update_one(
+                                        {"_id": cached_doc["_id"]}, 
+                                        {"$inc": {"consultas": 1}}
+                                    )
+                                except Exception as db_err:
+                                    logging.warning(f"Failed to update AI cache stats: {db_err}")
+                                return TravelAssistantResponse(response=cached_doc["respuesta"])
+                        except (ValueError, TypeError) as parse_err:
+                            logging.error(f"Error parsing AI cache date: {parse_err}")
+                except Exception as db_err:
+                    logging.error(f"AI Cache lookup failed (proceeding without cache): {db_err}")
+                    use_memory_cache = True
+            else:
+                use_memory_cache = True
                 
-                if cached_doc:
-                    try:
-                        fecha_cache = datetime.fromisoformat(cached_doc["fecha"])
-                        # Ensure timezone awareness
-                        if fecha_cache.tzinfo is None:
-                            fecha_cache = fecha_cache.replace(tzinfo=timezone.utc)
-                        
-                        days_old = (datetime.now(timezone.utc) - fecha_cache).days
-                        if days_old < 30:
-                            logging.info(f"AI Cache Hit: {q_norm} ({query.language})")
-                            try:
-                                await cache_coll.update_one(
-                                    {"_id": cached_doc["_id"]}, 
-                                    {"$inc": {"consultas": 1}}
-                                )
-                            except Exception as db_err:
-                                logging.warning(f"Failed to update AI cache stats: {db_err}")
-                            return TravelAssistantResponse(response=cached_doc["respuesta"])
-                    except (ValueError, TypeError) as parse_err:
-                        logging.error(f"Error parsing AI cache date: {parse_err}")
-            except Exception as db_err:
-                logging.error(f"AI Cache lookup failed (proceeding without cache): {db_err}")
+            if use_memory_cache and memory_key in memory_cache:
+                cached_data = memory_cache[memory_key]
+                time_diff = (datetime.now() - cached_data["timestamp"]).total_seconds()
+                if time_diff < 86400:  # 24 hours
+                    logging.info(f"Using memory cache (MongoDB unavailable) for: {q_norm}")
+                    return TravelAssistantResponse(response=cached_data["respuesta"])
 
         # 1. Call Groq normally if not in cache or complex
         # Get Groq API key from environment
@@ -259,24 +276,35 @@ General instructions for BOTH options:
             )
         
         # 2. Save to Cache if applicable
-        if is_cacheable and db is not None:
-            try:
-                cache_doc = {
-                    "query_normalizado": q_norm,
-                    "idioma": query.language,
+        if is_cacheable:
+            db_failed = False
+            if db is not None:
+                try:
+                    cache_doc = {
+                        "query_normalizado": q_norm,
+                        "idioma": query.language,
+                        "respuesta": generated_text,
+                        "fecha": datetime.now(timezone.utc).isoformat(),
+                        "consultas": 1
+                    }
+                    # Use upsert to update if query/lang exists (e.g. if cache was expired)
+                    await db["ai_cache"].update_one(
+                        {"query_normalizado": q_norm, "idioma": query.language},
+                        {"$set": cache_doc},
+                        upsert=True
+                    )
+                    logging.info(f"AI Cache Updated: {q_norm} ({query.language})")
+                except Exception as e:
+                    logging.error(f"Error saving to AI cache: {e}")
+                    db_failed = True
+            else:
+                db_failed = True
+                
+            if db_failed:
+                memory_cache[memory_key] = {
                     "respuesta": generated_text,
-                    "fecha": datetime.now(timezone.utc).isoformat(),
-                    "consultas": 1
+                    "timestamp": datetime.now()
                 }
-                # Use upsert to update if query/lang exists (e.g. if cache was expired)
-                await db["ai_cache"].update_one(
-                    {"query_normalizado": q_norm, "idioma": query.language},
-                    {"$set": cache_doc},
-                    upsert=True
-                )
-                logging.info(f"AI Cache Updated: {q_norm} ({query.language})")
-            except Exception as e:
-                logging.error(f"Error saving to AI cache: {e}")
 
         return TravelAssistantResponse(response=generated_text)
         
@@ -310,6 +338,9 @@ async def get_youtube_videos(q: str, lang: str = "es"):
             raise HTTPException(status_code=500, detail="YOUTUBE_API_KEY not configured")
 
         # 1. Check Cache
+        memory_key = f"youtube:{q}:{lang}"
+        use_memory_cache = False
+        
         if db is not None:
             try:
                 cache_collection = db["youtube_cache"]
@@ -326,8 +357,17 @@ async def get_youtube_videos(q: str, lang: str = "es"):
                         return {"status": "success", "videos": cached_result['videos'], "cached": True}
             except Exception as db_err:
                 logging.error(f"YouTube Cache check failed (proceeding without cache): {db_err}")
+                use_memory_cache = True
         else:
             logging.info(f"YouTube Cache Skipped (No DB) for: {q}")
+            use_memory_cache = True
+            
+        if use_memory_cache and memory_key in memory_cache:
+            cached_data = memory_cache[memory_key]
+            time_diff = (datetime.now() - cached_data["timestamp"]).total_seconds()
+            if time_diff < 86400:  # 24 hours
+                logging.info(f"Using memory cache (MongoDB unavailable) for: {q}")
+                return {"status": "success", "videos": cached_data["videos"], "cached": True}
 
         # 2. Search YouTube
         search_url = "https://www.googleapis.com/youtube/v3/search"
@@ -392,6 +432,7 @@ async def get_youtube_videos(q: str, lang: str = "es"):
         top_videos = sorted(processed_videos, key=lambda x: x["score"], reverse=True)[:2]
         
         # 5. Save to Cache
+        db_failed = False
         if db is not None:
             cache_doc = {
                 "q": q,
@@ -403,6 +444,15 @@ async def get_youtube_videos(q: str, lang: str = "es"):
                 await db["youtube_cache"].update_one({"q": q, "lang": lang}, {"$set": cache_doc}, upsert=True)
             except Exception as e:
                 logging.error(f"Error saving to YouTube cache: {e}")
+                db_failed = True
+        else:
+            db_failed = True
+            
+        if db_failed:
+            memory_cache[memory_key] = {
+                "videos": top_videos,
+                "timestamp": datetime.now()
+            }
         
         return {"status": "success", "videos": top_videos, "cached": False}
         

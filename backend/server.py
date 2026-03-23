@@ -11,7 +11,7 @@ from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import requests
 import unicodedata
 import re
@@ -27,7 +27,7 @@ db = None
 
 if mongo_url and db_name:
     try:
-        client = AsyncIOMotorClient(mongo_url, tlsCAFile=certifi.where())
+        client = AsyncIOMotorClient(mongo_url, serverSelectionTimeoutMS=3000, connectTimeoutMS=3000, tlsCAFile=certifi.where())
         db = client[db_name]
         logging.info("MongoDB connected successfully")
     except Exception as e:
@@ -37,6 +37,8 @@ else:
 
 # In-memory fallback cache
 memory_cache = {}
+mongo_disabled = False
+mongo_disabled_until = None
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -117,6 +119,7 @@ async def get_status_checks():
 
 @api_router.post("/travel-assistant", response_model=TravelAssistantResponse)
 async def travel_assistant(query: TravelQuery):
+    global mongo_disabled, mongo_disabled_until
     """
     AI-powered travel assistant using Groq's Llama 3.3 70B model
     Provides comprehensive travel information about any destination
@@ -132,7 +135,7 @@ async def travel_assistant(query: TravelQuery):
         use_memory_cache = False
         
         if is_cacheable:
-            if db is not None:
+            if db is not None and not (mongo_disabled and mongo_disabled_until and datetime.now() < mongo_disabled_until):
                 try:
                     cache_coll = db["ai_cache"]
                     cached_doc = await cache_coll.find_one({
@@ -162,6 +165,8 @@ async def travel_assistant(query: TravelQuery):
                             logging.error(f"Error parsing AI cache date: {parse_err}")
                 except Exception as db_err:
                     logging.error(f"AI Cache lookup failed (proceeding without cache): {db_err}")
+                    mongo_disabled = True
+                    mongo_disabled_until = datetime.now() + timedelta(minutes=10)
                     use_memory_cache = True
             else:
                 use_memory_cache = True
@@ -296,6 +301,8 @@ General instructions for BOTH options:
                     logging.info(f"AI Cache Updated: {q_norm} ({query.language})")
                 except Exception as e:
                     logging.error(f"Error saving to AI cache: {e}")
+                    mongo_disabled = True
+                    mongo_disabled_until = datetime.now() + timedelta(minutes=10)
                     db_failed = True
             else:
                 db_failed = True
@@ -328,6 +335,7 @@ General instructions for BOTH options:
 
 @api_router.get("/youtube")
 async def get_youtube_videos(q: str, lang: str = "es"):
+    global mongo_disabled, mongo_disabled_until
     """
     Search YouTube videos with MongoDB caching (30 days)
     Filters for > 50,000 views and returns top 2 (views + likes)
@@ -341,7 +349,7 @@ async def get_youtube_videos(q: str, lang: str = "es"):
         memory_key = f"youtube:{q}:{lang}"
         use_memory_cache = False
         
-        if db is not None:
+        if db is not None and not (mongo_disabled and mongo_disabled_until and datetime.now() < mongo_disabled_until):
             try:
                 cache_collection = db["youtube_cache"]
                 cached_result = await cache_collection.find_one({"q": q, "lang": lang})
@@ -357,6 +365,8 @@ async def get_youtube_videos(q: str, lang: str = "es"):
                         return {"status": "success", "videos": cached_result['videos'], "cached": True}
             except Exception as db_err:
                 logging.error(f"YouTube Cache check failed (proceeding without cache): {db_err}")
+                mongo_disabled = True
+                mongo_disabled_until = datetime.now() + timedelta(minutes=10)
                 use_memory_cache = True
         else:
             logging.info(f"YouTube Cache Skipped (No DB) for: {q}")
@@ -372,11 +382,16 @@ async def get_youtube_videos(q: str, lang: str = "es"):
         # 2. Search YouTube
         search_url = "https://www.googleapis.com/youtube/v3/search"
         # Clean up in case frontend already appended it
-        clean_q = q.replace(' travel guide', '').replace('"', '').strip()
+        clean_q = q.replace(' travel guide', '').replace(' guía de viaje turismo', '').replace(' travel guide tourism', '').replace('"', '').strip()
         
+        if lang == "es":
+            formatted_q = f'"{clean_q}" guía de viaje turismo'
+        else:
+            formatted_q = f'"{clean_q}" travel guide tourism'
+            
         search_params = {
             "part": "snippet",
-            "q": f'"{clean_q}" travel guide',
+            "q": formatted_q,
             "type": "video",
             "maxResults": 6,
             "order": "relevance",
@@ -444,6 +459,8 @@ async def get_youtube_videos(q: str, lang: str = "es"):
                 await db["youtube_cache"].update_one({"q": q, "lang": lang}, {"$set": cache_doc}, upsert=True)
             except Exception as e:
                 logging.error(f"Error saving to YouTube cache: {e}")
+                mongo_disabled = True
+                mongo_disabled_until = datetime.now() + timedelta(minutes=10)
                 db_failed = True
         else:
             db_failed = True

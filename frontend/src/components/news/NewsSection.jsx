@@ -133,7 +133,7 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="mt-8 mb-8">
+    <section className="min-h-[50vh] mt-16 mb-24">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-2">
           <h3 className="text-lg font-bold flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
@@ -185,7 +185,7 @@ const NewsSection = () => {
               href={article.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="glass-card flex flex-col overflow-hidden group no-underline hover:scale-[1.02] transition-transform"
+              className="bg-slate-800 border border-white/10 rounded-2xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group no-underline relative"
             >
               <div className="h-44 w-full overflow-hidden relative">
                  <img src={article.urlToImage} alt={article.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onError={(e) => e.target.style.display = 'none'} />

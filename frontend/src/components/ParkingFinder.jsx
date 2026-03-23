@@ -45,7 +45,7 @@ function ParkingFinder() {
 
   return (
     <section className="mb-8">
-      <div className="glass-card p-8 bg-gradient-to-br from-green-600/20 via-blue-600/10 to-transparent border-2 border-green-500/20 hover:border-green-400/40 transition-all">
+      <div className="p-8 bg-slate-800 bg-gradient-to-br from-green-600/20 via-blue-600/10 to-transparent border border-white/10 rounded-xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">

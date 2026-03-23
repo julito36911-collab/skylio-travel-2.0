@@ -7,7 +7,7 @@ const CategoryAccordion = ({ title, icon: Icon, partners, onPartnerClick }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="glass-card overflow-hidden">
+    <div className="bg-slate-800 border border-white/10 rounded-xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 overflow-hidden mb-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-4 py-3 flex items-center justify-between hover:bg-white/5 transition"
@@ -35,7 +35,7 @@ const CategoryAccordion = ({ title, icon: Icon, partners, onPartnerClick }) => {
               <button
                 key={partner.id}
                 onClick={() => onPartnerClick(partner)}
-                className="glass-card p-3 text-left hover:scale-[1.02] transition group"
+                className="p-3 text-left group bg-slate-800 border border-white/10 rounded-xl shadow-md hover:-translate-y-1 hover:border-gray-500 hover:shadow-lg transition-all duration-300"
                 data-testid={`partner-card-${partner.id}`}
               >
                 <div className="flex items-start gap-2 mb-2">

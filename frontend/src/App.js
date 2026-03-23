@@ -36,7 +36,7 @@ const GlassCard = ({ partner, className = '', children, tall = false, onClick })
   return (
     <div
       onClick={resolveClick}
-      className={`glass-card p-4 cursor-pointer relative overflow-hidden group flex flex-col ${tall ? 'justify-between' : 'justify-start gap-3'} ${className}`}
+      className={`p-4 cursor-pointer relative overflow-hidden group flex flex-col bg-slate-800 border border-white/10 rounded-xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 ${tall ? 'justify-between' : 'justify-start gap-3'} ${className}`}
       data-testid={`partner-card-${partner.id}`}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -190,7 +190,7 @@ function App() {
         <section className="mb-8">
           <div 
             onClick={() => setShowGuidesHub(true)}
-            className="glass-card p-6 cursor-pointer group hover:scale-[1.02] transition-all duration-300 bg-gradient-to-br from-purple-600/20 via-blue-600/10 to-transparent border-2 border-purple-500/20 hover:border-purple-400/40"
+            className="p-6 cursor-pointer group bg-slate-800 bg-gradient-to-br from-purple-600/20 via-blue-600/10 to-transparent border border-white/10 rounded-xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">

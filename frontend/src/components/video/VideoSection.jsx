@@ -10,6 +10,7 @@ const VideoSection = () => {
   const [loading, setLoading] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [error, setError] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
 
   const searchLanguage = i18n.language || 'es';
 
@@ -35,14 +36,12 @@ const VideoSection = () => {
     }
   };
 
-  useEffect(() => {
-    fetchVideos();
-  }, [searchLanguage]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      fetchVideos(query);
+      setHasSearched(true);
+      fetchVideos(query.trim());
     }
   };
 
@@ -53,7 +52,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="mb-12">
+    <section className="mt-12 mb-24">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <h3 className="text-2xl font-bold flex items-center gap-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
           <Youtube size={28} className="text-red-500" /> {t('videos.title', 'Videos de Viajes')}
@@ -91,7 +90,7 @@ const VideoSection = () => {
             <div 
               key={video.id}
               onClick={() => setSelectedVideo(video)}
-              className="glass-card group cursor-pointer overflow-hidden flex flex-col hover:border-red-500/30 transition-all duration-300"
+              className="bg-slate-800 border border-white/10 rounded-2xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 group cursor-pointer overflow-hidden flex flex-col relative"
             >
               <div className="relative aspect-video overflow-hidden">
                 <img 
@@ -124,17 +123,11 @@ const VideoSection = () => {
             </div>
           ))}
         </div>
-      ) : (
+      ) : hasSearched ? (
         <div className="text-center py-12 glass-card">
           <p className="text-slate-400">{t('news.no_results', 'No se encontraron videos sobre este tema')}</p>
-          <button 
-            onClick={() => {setQuery(''); fetchVideos('');}}
-            className="mt-4 text-sm text-red-400 hover:text-red-300 font-semibold"
-          >
-            {t('news.see_all', 'Ver videos recomendados')}
-          </button>
         </div>
-      )}
+      ) : null}
 
       {/* Modal para reproducción de video */}
       <Modal 

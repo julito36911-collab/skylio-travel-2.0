@@ -40,8 +40,80 @@
       
       <!-- COLUMNA IZQUIERDA (Contenido Principal) -->
       <div class="lg:col-span-8 space-y-12" id="columna-izquierda">
-        <h2 class="text-2xl text-white font-bold border-b border-white/10 pb-4">CONTENIDO PRINCIPAL</h2>
-        <!-- Futuras capas de contenido irán aquí -->
+        
+        <!-- SECCIÓN: MAPA DE ZONAS -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Westminster -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-amber-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Westminster</h3>
+              <p class="text-gray-400 text-sm">El corazón político y real. Ideal para ver el Big Ben y la Abadía en tu primer viaje.</p>
+            </div>
+            <!-- Soho & Covent Garden -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Soho & Covent Garden</h3>
+              <p class="text-gray-400 text-sm">Teatros, musicales, restaurantes y vida nocturna infinita.</p>
+            </div>
+            <!-- South Kensington -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <h3 class="text-xl font-bold text-white mb-2">South Kensington</h3>
+              <p class="text-gray-400 text-sm">La zona más elegante y familiar. Hogar de los grandes museos gratuitos.</p>
+            </div>
+            <!-- Camden Town -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h.01M9 19h12M15 11l-3 3"></path></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Camden Town</h3>
+              <p class="text-gray-400 text-sm">Mercados callejeros, música en vivo y ambiente alternativo junto al canal.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN: GUÍA DE SUPERVIVENCIA -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-6 border-b border-white/10 pb-4">Transporte y Logística</h2>
+          
+          <!-- ALERTA ULEZ -->
+          <div class="bg-red-900/20 border border-red-500/50 rounded-xl p-4 mb-6 flex gap-4 items-start shadow-lg shadow-red-900/10">
+            <svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            <p class="text-sm text-red-200">
+              <strong class="text-red-400 font-bold">¡Cuidado con el coche!</strong> Londres tiene zonas de Ultra Bajas Emisiones (ULEZ) y Tarifa de Congestión. Las multas son severas. NO recomendamos alquilar coche para el centro de la ciudad.
+            </p>
+          </div>
+
+          <!-- AEROPUERTOS -->
+          <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden mb-8">
+            <table class="w-full text-sm text-left">
+              <tbody class="divide-y divide-white/10">
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-bold text-white w-1/4">Heathrow (LHR)</td>
+                  <td class="p-4 text-gray-300">Elizabeth Line (Rápido y moderno) o Metro Piccadilly Line (Más barato).</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-bold text-white w-1/4">Gatwick (LGW)</td>
+                  <td class="p-4 text-gray-300">Gatwick Express hasta Victoria Station.</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-bold text-white w-1/4">Stansted (STN)</td>
+                  <td class="p-4 text-gray-300">Stansted Express hasta Liverpool Street.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- METRO Y BUSES PRO TIP -->
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start shadow-lg shadow-blue-900/10 mb-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Metro y Autobuses</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">NO se acepta efectivo en los autobuses. La mejor forma de pagar tu transporte en toda la ciudad es usando tu móvil con Apple/Google Pay o una tarjeta bancaria "Contactless" directamente en los torniquetes amarillos (sistema <em>Pay as you go</em>). El sistema calcula la tarifa más barata diaria automáticamente.</p>
+            </div>
+          </div>
+        </section>
+
       </div>
       
       <!-- COLUMNA DERECHA (Sidebar Sticky) -->

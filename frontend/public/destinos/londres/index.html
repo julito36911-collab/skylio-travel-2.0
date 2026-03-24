@@ -47,6 +47,95 @@
       <!-- COLUMNA DERECHA (Sidebar Sticky) -->
       <aside class="lg:col-span-4 sticky top-8 self-start space-y-8" id="columna-derecha">
         <h2 class="text-xl text-white font-bold border-b border-white/10 pb-4">SIDEBAR UTILIDADES</h2>
+        
+        <!-- WIDGET CLIMA (Mapa de Calor) -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Ene</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">9°C</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">4°C</td>
+                <td class="py-2 text-gray-400">11 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Feb</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">9°C</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">4°C</td>
+                <td class="py-2 text-gray-400">9 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Mar</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">12°C</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">6°C</td>
+                <td class="py-2 text-gray-400">9 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Abr</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">15°C</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">7°C</td>
+                <td class="py-2 text-gray-400">9 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">May</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">18°C</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">10°C</td>
+                <td class="py-2 text-gray-400">8 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Jun</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">21°C</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">13°C</td>
+                <td class="py-2 text-gray-400">8 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Jul</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">23°C</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">15°C</td>
+                <td class="py-2 text-gray-400">7 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Ago</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">23°C</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">15°C</td>
+                <td class="py-2 text-gray-400">8 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Sep</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">20°C</td>
+                <td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">13°C</td>
+                <td class="py-2 text-gray-400">8 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Oct</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">16°C</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">10°C</td>
+                <td class="py-2 text-gray-400">10 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Nov</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">12°C</td>
+                <td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">6°C</td>
+                <td class="py-2 text-gray-400">11 días</td>
+              </tr>
+              <tr>
+                <td class="py-2 text-left text-gray-300 font-semibold">Dic</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">9°C</td>
+                <td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">4°C</td>
+                <td class="py-2 text-gray-400">10 días</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- Futuras utilidades irán aquí -->
       </aside>
       

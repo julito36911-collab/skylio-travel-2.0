@@ -19,19 +19,23 @@
 
   <!-- CAPA 1: HERO SECTION -->
   <header
-    class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden">
-    <!-- Background Image / Gradient -->
-    <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-[#0a0f16]/80 to-[#0a0f16] -z-10"></div>
+    class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
+    
+    <!-- Imagen de Mapa con opacidad baja (15%) -->
     <div
-      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80')] bg-cover bg-center object-cover opacity-30 mix-blend-overlay -z-20">
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1600')] bg-cover bg-center opacity-15 mix-blend-luminosity pointer-events-none">
     </div>
 
+    <!-- Tintado Azul y Gradiente de Fundido Inferior -->
+    <div class="absolute inset-0 bg-blue-900/20 mix-blend-color pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
+
     <!-- Hero Content -->
-    <div class="max-w-4xl mx-auto space-y-6">
-      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide">
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">
         Londres
       </h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto">
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">
         La guía definitiva: Transporte, Visas, Hoteles y secretos locales.
       </p>
     </div>

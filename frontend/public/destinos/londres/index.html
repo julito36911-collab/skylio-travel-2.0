@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,18 @@
     }
   </style>
 </head>
+
 <body class="bg-[#0a0f16] text-gray-300">
 
   <!-- CAPA 1: HERO SECTION -->
-  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+  <header
+    class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden">
     <!-- Background Image / Gradient -->
     <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-[#0a0f16]/80 to-[#0a0f16] -z-10"></div>
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80')] bg-cover bg-center object-cover opacity-30 mix-blend-overlay -z-20"></div>
-    
+    <div
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80')] bg-cover bg-center object-cover opacity-30 mix-blend-overlay -z-20">
+    </div>
+
     <!-- Hero Content -->
     <div class="max-w-4xl mx-auto space-y-6">
       <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide">
@@ -34,40 +39,63 @@
 
   <!-- CAPA 1: CONTENEDOR MAESTRO -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    
+
     <!-- CAPA 1: EL GRID DE 2 COLUMNAS (Esqueleto) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-      
+
       <!-- COLUMNA IZQUIERDA (Contenido Principal) -->
       <div class="lg:col-span-8 space-y-12" id="columna-izquierda">
-        
+
         <!-- SECCIÓN: MAPA DE ZONAS -->
         <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Westminster -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <svg class="w-8 h-8 text-amber-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              <svg class="w-8 h-8 text-amber-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Westminster</h3>
-              <p class="text-gray-400 text-sm">El corazón político y real. Ideal para ver el Big Ben y la Abadía en tu primer viaje.</p>
+              <p class="text-gray-400 text-sm">El corazón político y real. Ideal para ver el Big Ben y la Abadía en tu
+                primer viaje.</p>
             </div>
             <!-- Soho & Covent Garden -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z">
+                </path>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Soho & Covent Garden</h3>
               <p class="text-gray-400 text-sm">Teatros, musicales, restaurantes y vida nocturna infinita.</p>
             </div>
             <!-- South Kensington -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">South Kensington</h3>
-              <p class="text-gray-400 text-sm">La zona más elegante y familiar. Hogar de los grandes museos gratuitos.</p>
+              <p class="text-gray-400 text-sm">La zona más elegante y familiar. Hogar de los grandes museos gratuitos.
+              </p>
             </div>
             <!-- Camden Town -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h.01M9 19h12M15 11l-3 3"></path></svg>
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h.01M9 19h12M15 11l-3 3"></path>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Camden Town</h3>
-              <p class="text-gray-400 text-sm">Mercados callejeros, música en vivo y ambiente alternativo junto al canal.</p>
+              <p class="text-gray-400 text-sm">Mercados callejeros, música en vivo y ambiente alternativo junto al
+                canal.</p>
             </div>
           </div>
         </section>
@@ -76,63 +104,103 @@
         <section>
           <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             <!-- 1. The British Museum -->
-            <a href="#" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/British_Museum_from_north_east_2.jpg" alt="British Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <a href="#"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://picsum.photos/seed/museo/800/500" alt="British Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">The British Museum</h3>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">The British Museum
+                </h3>
                 <p class="text-sm text-amber-500 font-semibold mt-1">GRATIS</p>
-                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Uno de los museos más antiguos y completos del mundo. Historia de la humanidad.</p>
-                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Uno de los museos más antiguos y completos del mundo.
+                  Historia de la humanidad.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg></div>
               </div>
             </a>
 
             <!-- 2. London Eye -->
-            <a href="#" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80" alt="London Eye" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <a href="#"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80" alt="London Eye"
+                class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">London Eye</h3>
                 <p class="text-sm text-amber-500 font-semibold mt-1">Aprox £35</p>
-                <p class="text-gray-400 text-sm mt-3 line-clamp-2">La famosa noria gigante con las mejores vistas panorámicas de Londres y el Támesis.</p>
-                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">La famosa noria gigante con las mejores vistas
+                  panorámicas de Londres y el Támesis.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg></div>
               </div>
             </a>
 
             <!-- 3. Tower of London -->
-            <a href="#" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Tower_of_London_from_The_Shard.jpg" alt="Tower of London" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <a href="#"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://picsum.photos/seed/torre/800/500" alt="Tower of London" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tower of London</h3>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tower of London
+                </h3>
                 <p class="text-sm text-amber-500 font-semibold mt-1">Aprox £32</p>
-                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Fortaleza histórica medieval, antigua prisión y hogar de las Joyas de la Corona.</p>
-                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Fortaleza histórica medieval, antigua prisión y hogar
+                  de las Joyas de la Corona.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg></div>
               </div>
             </a>
 
             <!-- 4. Natural History Museum -->
-            <a href="#" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Natural_History_Museum%2C_London_12_March_2008.jpg" alt="Natural History Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+            <a href="#"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://picsum.photos/seed/historia/800/500" alt="Natural History Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Natural History Museum</h3>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Natural History
+                  Museum</h3>
                 <p class="text-sm text-amber-500 font-semibold mt-1">GRATIS</p>
-                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Impresionante museo ideal para familias con colecciones de dinosaurios y ciencias naturales.</p>
-                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Impresionante museo ideal para familias con
+                  colecciones de dinosaurios y ciencias naturales.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg></div>
               </div>
             </a>
-            
+
           </div>
         </section>
 
         <!-- SECCIÓN: GUÍA DE SUPERVIVENCIA -->
         <section>
           <h2 class="text-3xl font-bold text-white mt-12 mb-6 border-b border-white/10 pb-4">Transporte y Logística</h2>
-          
+
           <!-- ALERTA ULEZ -->
-          <div class="bg-red-900/20 border border-red-500/50 rounded-xl p-4 mb-6 flex gap-4 items-start shadow-lg shadow-red-900/10">
-            <svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+          <div
+            class="bg-red-900/20 border border-red-500/50 rounded-xl p-4 mb-6 flex gap-4 items-start shadow-lg shadow-red-900/10">
+            <svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+              </path>
+            </svg>
             <p class="text-sm text-red-200">
-              <strong class="text-red-400 font-bold">¡Cuidado con el coche!</strong> Londres tiene zonas de Ultra Bajas Emisiones (ULEZ) y Tarifa de Congestión. Las multas son severas. NO recomendamos alquilar coche para el centro de la ciudad.
+              <strong class="text-red-400 font-bold">¡Cuidado con el coche!</strong> Londres tiene zonas de Ultra Bajas
+              Emisiones (ULEZ) y Tarifa de Congestión. Las multas son severas. NO recomendamos alquilar coche para el
+              centro de la ciudad.
             </p>
           </div>
 
@@ -142,7 +210,8 @@
               <tbody class="divide-y divide-white/10">
                 <tr class="hover:bg-white/5 transition-colors">
                   <td class="p-4 font-bold text-white w-1/4">Heathrow (LHR)</td>
-                  <td class="p-4 text-gray-300">Elizabeth Line (Rápido y moderno) o Metro Piccadilly Line (Más barato).</td>
+                  <td class="p-4 text-gray-300">Elizabeth Line (Rápido y moderno) o Metro Piccadilly Line (Más barato).
+                  </td>
                 </tr>
                 <tr class="hover:bg-white/5 transition-colors">
                   <td class="p-4 font-bold text-white w-1/4">Gatwick (LGW)</td>
@@ -157,44 +226,71 @@
           </div>
 
           <!-- METRO Y BUSES PRO TIP -->
-          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start shadow-lg shadow-blue-900/10 mb-8">
-            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div
+            class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start shadow-lg shadow-blue-900/10 mb-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
             <div>
               <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Metro y Autobuses</h4>
-              <p class="text-sm text-gray-300 leading-relaxed">NO se acepta efectivo en los autobuses. La mejor forma de pagar tu transporte en toda la ciudad es usando tu móvil con Apple/Google Pay o una tarjeta bancaria "Contactless" directamente en los torniquetes amarillos (sistema <em>Pay as you go</em>). El sistema calcula la tarifa más barata diaria automáticamente.</p>
+              <p class="text-sm text-gray-300 leading-relaxed">NO se acepta efectivo en los autobuses. La mejor forma de
+                pagar tu transporte en toda la ciudad es usando tu móvil con Apple/Google Pay o una tarjeta bancaria
+                "Contactless" directamente en los torniquetes amarillos (sistema <em>Pay as you go</em>). El sistema
+                calcula la tarifa más barata diaria automáticamente.</p>
             </div>
           </div>
         </section>
 
       </div>
-      
+
       <!-- COLUMNA DERECHA (Sidebar Sticky) -->
       <aside class="lg:col-span-4 sticky top-8 self-start space-y-8" id="columna-derecha">
         <!-- WIDGET DE VISITAS Y ETA -->
         <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
           <h3 class="text-xl font-bold text-white flex items-center gap-2">
-            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2">
+              </path>
+            </svg>
             Requisitos de Entrada
           </h3>
-          <p class="text-sm text-gray-400">Atención: A partir de 2025, es OBLIGATORIO un ETA (Electronic Travel Authorisation) para europeos y latinoamericanos exentos de visa. Costo: £10.</p>
-          <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" target="_blank" class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Solicitar ETA Oficial</a>
+          <p class="text-sm text-gray-400">Atención: A partir de 2025, es OBLIGATORIO un ETA (Electronic Travel
+            Authorisation) para europeos y latinoamericanos exentos de visa. Costo: £10.</p>
+          <a href="https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta" target="_blank"
+            class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Solicitar
+            ETA Oficial</a>
         </div>
 
         <!-- WIDGET DE PRESUPUESTO DIARIO -->
         <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
           <h3 class="text-xl font-bold text-white flex items-center gap-2">
-            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
             Presupuesto Diario
           </h3>
           <ul class="space-y-3 text-sm text-gray-300">
-            <li class="flex justify-between border-b border-white/5 pb-2"><span>Alojamiento (Medio)</span><span class="font-semibold text-white">£150</span></li>
-            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (3 comidas)</span><span class="font-semibold text-white">£60</span></li>
-            <li class="flex justify-between border-b border-white/5 pb-2"><span>Transporte (Oyster)</span><span class="font-semibold text-white">£10</span></li>
-            <li class="flex justify-between border-b border-white/5 pb-2"><span>Atracciones</span><span class="font-semibold text-white">£40</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Alojamiento (Medio)</span><span
+                class="font-semibold text-white">£150</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (3 comidas)</span><span
+                class="font-semibold text-white">£60</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Transporte (Oyster)</span><span
+                class="font-semibold text-white">£10</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Atracciones</span><span
+                class="font-semibold text-white">£40</span></li>
           </ul>
-          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center"><span class="text-gray-400">Total aprox:</span><span class="font-bold text-amber-500 text-2xl">£260<span class="text-sm font-normal text-amber-500/70"> / día</span></span></div>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center"><span
+              class="text-gray-400">Total aprox:</span><span class="font-bold text-amber-500 text-2xl">£260<span
+                class="text-sm font-normal text-amber-500/70"> / día</span></span></div>
         </div>
-        
+
         <!-- WIDGET CLIMA (Mapa de Calor) -->
         <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
           <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
@@ -285,10 +381,11 @@
         </div>
         <!-- Futuras utilidades irán aquí -->
       </aside>
-      
+
     </div>
 
   </main>
 
 </body>
+
 </html>

@@ -37,11 +37,19 @@
   </div>
 </section>
 
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 px-6 py-10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 px-8 sm:px-10 lg:px-12 py-12">
     
     <!-- COLUMNA IZQUIERDA (CONTENIDO PRINCIPAL) -->
     <div class="lg:col-span-8 space-y-16">
       
+      <!-- Lista Rápida (Solo Móvil) -->
+      <div class="grid grid-cols-2 gap-4 lg:hidden">
+        <div class="bg-slate-800/80 border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-lg shadow-black/20"><div class="text-2xl">✈️</div><div><div class="text-xs text-gray-400 font-semibold">Vuelo</div><div class="text-sm text-white font-bold leading-tight">10–14h</div></div></div>
+        <div class="bg-slate-800/80 border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-lg shadow-black/20"><div class="text-2xl">🏖️</div><div><div class="text-xs text-gray-400 font-semibold">Museos</div><div class="text-sm text-white font-bold leading-tight">Gratis</div></div></div>
+        <div class="bg-slate-800/80 border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-lg shadow-black/20"><div class="text-2xl">🌍</div><div><div class="text-xs text-gray-400 font-semibold">Visa</div><div class="text-sm text-white font-bold leading-tight">ETA/Visa</div></div></div>
+        <div class="bg-slate-800/80 border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-lg shadow-black/20"><div class="text-2xl">💷</div><div><div class="text-xs text-gray-400 font-semibold">Moneda</div><div class="text-sm text-white font-bold leading-tight">Libra (GBP)</div></div></div>
+      </div>
+
       <!-- Sobre Londres -->
       <section class="section reveal">
         <div class="section-label mb-2 text-sm font-semibold tracking-widest text-gray-400 uppercase">Descubre</div>
@@ -62,33 +70,33 @@
         <p class="section-desc">Descubre las atracciones icónicas que hacen de Londres un destino mundial inigualable.</p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1572111504021-38ee210357f0?w=600&q=80" alt="Tower of London" class="h-48 w-full object-cover rounded-t-xl">
+          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden w-full">
+            <img src="https://images.unsplash.com/photo-1572111504021-38ee210357f0?w=600&q=80" alt="Tower of London" class="h-64 sm:h-56 w-full object-cover rounded-t-xl">
             <div class="p-5 flex-1 flex flex-col">
-              <h3 class="text-white font-bold text-lg mb-2">Tower of London</h3>
-              <p class="text-gray-400 text-sm line-clamp-2 mb-4">La histórica fortaleza y prisión que alberga las Joyas de la Corona y los cuervos legendarios de la monarquía.</p>
+              <h3 class="text-white font-bold text-xl sm:text-lg mb-2">Tower of London</h3>
+              <p class="text-gray-400 text-sm sm:text-base line-clamp-3 sm:line-clamp-2 mb-4">La histórica fortaleza y prisión que alberga las Joyas de la Corona y los cuervos legendarios de la monarquía.</p>
               <div class="mt-auto">
-                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
+                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-3 sm:py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
               </div>
             </div>
           </div>
-          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="London Eye" class="h-48 w-full object-cover rounded-t-xl">
+          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden w-full">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" alt="London Eye" class="h-64 sm:h-56 w-full object-cover rounded-t-xl">
             <div class="p-5 flex-1 flex flex-col">
-              <h3 class="text-white font-bold text-lg mb-2">London Eye</h3>
-              <p class="text-gray-400 text-sm line-clamp-2 mb-4">La emblemática noria gigante en la ribera del Támesis que ofrece las mejores vistas panorámicas de la ciudad.</p>
+              <h3 class="text-white font-bold text-xl sm:text-lg mb-2">London Eye</h3>
+              <p class="text-gray-400 text-sm sm:text-base line-clamp-3 sm:line-clamp-2 mb-4">La emblemática noria gigante en la ribera del Támesis que ofrece las mejores vistas panorámicas de la ciudad.</p>
               <div class="mt-auto">
-                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
+                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-3 sm:py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
               </div>
             </div>
           </div>
-          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1543886566-1cda142517e4?w=600&q=80" alt="British Museum" class="h-48 w-full object-cover rounded-t-xl">
+          <div class="bg-slate-800/80 border border-white/10 rounded-xl hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden w-full md:col-span-2">
+            <img src="https://images.unsplash.com/photo-1543886566-1cda142517e4?w=800&q=80" alt="British Museum" class="h-64 sm:h-64 w-full object-cover rounded-t-xl">
             <div class="p-5 flex-1 flex flex-col">
-              <h3 class="text-white font-bold text-lg mb-2">British Museum</h3>
-              <p class="text-gray-400 text-sm line-clamp-2 mb-4">Un viaje por dos millones de años de historia humana, hogar de la Piedra Rosetta y las momias egipcias.</p>
+              <h3 class="text-white font-bold text-xl sm:text-lg mb-2">British Museum</h3>
+              <p class="text-gray-400 text-sm sm:text-base line-clamp-3 sm:line-clamp-2 mb-4">Un viaje por dos millones de años de historia humana, hogar de la Piedra Rosetta y las momias egipcias.</p>
               <div class="mt-auto">
-                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
+                <a href="#" target="_blank" rel="noopener" class="inline-block w-full text-center py-3 sm:py-2 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-white font-semibold text-sm transition-colors">Ver entradas y tours</a>
               </div>
             </div>
           </div>

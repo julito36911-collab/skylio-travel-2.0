@@ -172,7 +172,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             <!-- 1. The British Museum -->
-            <a href="#"
+            <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
               <img src="/images/destinos/londres/museum.jpg" alt="British Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
@@ -191,7 +191,7 @@
             </a>
 
             <!-- 2. London Eye -->
-            <a href="#"
+            <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
               <img src="/images/destinos/londres/londoneye.jpg" alt="London Eye"
                 class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
@@ -210,7 +210,7 @@
             </a>
 
             <!-- 3. Tower of London -->
-            <a href="#"
+            <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
               <img src="/images/destinos/londres/tower.jpg" alt="Tower of London" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
@@ -229,7 +229,7 @@
             </a>
 
             <!-- 4. Elizabeth Tower (Big Ben) -->
-            <a href="#"
+            <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
               <img src="/images/destinos/londres/Elizabeth%20Tower.jpg" alt="Elizabeth Tower (Big Ben)" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
@@ -681,14 +681,14 @@
     async function loadLondonVideos() {
       const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: '45ETZ1xvHS0', title: 'London Travel Guide - 20 Best Things to Do' },
-        { id: 'W-un8v0IscY', title: 'Top 10 Places to Visit in London' },
-        { id: '1u8uHz9mre8', title: 'Hidden Gems of London (Secrets)' }
+        { id: 'P-Z6zF_uP7c', title: 'LONDRES: Guía completa de viaje - Alan por el mundo' },
+        { id: 'zJt5E-M9z6A', title: 'LONDRES: Guía para viajar BARATO 2024 - Misias pero Viajeras' },
+        { id: '_kF8l53t9Z0', title: '20 cosas que hacer en LONDRES - Guía de viaje' }
       ];
 
       try {
         // Intentamos cargar desde la API del backend si existe
-        const response = await fetch('/api/youtube-search?query=london+travel+guide+tips');
+        const response = await fetch('/api/youtube-search?query=londres+guia+viaje+español');
         if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));

@@ -17,11 +17,6 @@
 
 <body class="bg-[#0a0f16] text-gray-300 relative">
 
-  <!-- Fondo sutil de Londres (fijo, muy oscuro) -->
-  <div class="fixed inset-0 pointer-events-none z-0"
-    style="background-image: url('https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.06;">
-  </div>
-
 
 
   <!-- NAVBAR FLOTANTE -->
@@ -66,10 +61,15 @@
   </header>
 
   <!-- CAPA 1: CONTENEDOR MAESTRO -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+
+    <!-- Fondo sutil de Londres (solo en el contenido, no en el hero) -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0 rounded-none"
+      style="background-image: url('https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-attachment: fixed; background-position: center; opacity: 0.07;">
+    </div>
 
     <!-- CAPA 1: EL GRID DE 2 COLUMNAS (Esqueleto) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
 
       <!-- COLUMNA IZQUIERDA (Contenido Principal) -->
       <div class="lg:col-span-8 space-y-12" id="columna-izquierda">

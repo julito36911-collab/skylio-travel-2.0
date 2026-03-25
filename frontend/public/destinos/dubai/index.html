@@ -1,358 +1,283 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dubai - Guía Completa | Skylio Destinos</title>
-<meta name="description" content="Guía completa de Dubai: mejores hoteles, consejos de viaje, clima, presupuesto y más. Por Skylio Viajes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubai Master Guide | Skylio Travel 2.0</title>
+  <meta name="description" content="Guía definitiva de Dubái: Burj Khalifa, Palm Jumeirah, desierto infinitos y los hoteles más lujosos del mundo.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+    .animate-pulse-soft {
+      animation: pulse-soft 2s infinite;
+    }
+    .glass-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-shine::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+      transform: rotate(45deg);
+      transition: 0.5s;
+    }
+    .glass-shine:hover::after {
+      left: 100%;
+      top: 100%;
+    }
+  </style>
 </head>
-<body>
-<nav class="topbar">
-  <div class="topbar-left">
-    <a href="/" class="btn-back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-      Skylio Viajes
-    </a>
-    <a href="../" class="topbar-brand"><span>Skylio</span> Destinos</a>
-  </div>
-</nav>
 
-<section class="hero">
-  <div class="hero-img" style="background:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80') center/cover"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🏙️ EAU</div>
-    <h1>Dubai</h1>
-    <p class="hero-sub">El Burj Khalifa, islas artificiales, centros comerciales gigantescos y el lujo más extravagante del planeta.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-value">28°C</div><div class="stat-label">Temperatura media</div></div>
-      <div class="stat"><div class="stat-value">Nov–Mar</div><div class="stat-label">Mejor época</div></div>
-      <div class="stat"><div class="stat-value">$100+</div><div class="stat-label">Hotel/noche</div></div>
-      <div class="stat"><div class="stat-value">AED</div><div class="stat-label">Moneda</div></div>
-    </div>
-  </div>
-</section>
+<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
 
-<section class="section reveal">
-  <div class="section-label">Descubre</div>
-  <h2>Sobre Dubai</h2>
-  <div class="about-grid">
-    <div class="about-text"><p>Dubai ha pasado de ser un pueblo pesquero a la ciudad más futurista del mundo en apenas 50 años. El Burj Khalifa (828m), las islas Palm Jumeirah, el Dubai Mall (1.200 tiendas) y el Burj Al Arab son símbolos de ambición sin límites.</p><p>Pero Dubai es más que rascacielos: el barrio histórico de Al Fahidi con sus casas de viento, el Gold Souk, los cruceros en dhow por Dubai Creek y las excursiones al desierto con dunas, camellos y cenas beduinas ofrecen un contraste fascinante.</p><p>Las experiencias son extremas: esquí indoor en pleno desierto, aquaventure parks, cenas en el cielo, saltos en paracaídas sobre Palm y brunches de viernes que son toda una institución social. Dubai es donde lo imposible se hace realidad.</p></div>
-    <div class="about-highlights">
-      <div class="highlight-card"><div class="highlight-icon">✈️</div><div class="highlight-title">Vuelo</div><div class="highlight-value">12–16h</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🏖️</div><div class="highlight-title">Burj Khalifa</div><div class="highlight-value">Edificio más alto</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🎯</div><div class="highlight-title">Ideal para</div><div class="highlight-value">Lujo y Shopping</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🌍</div><div class="highlight-title">Visa</div><div class="highlight-value">Visa a la llegada (30 días, muchos países)</div></div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Alojamiento</div>
-  <h2>Mejores Hoteles</h2>
-  <p class="section-desc">Selección curada de los hoteles mejor valorados en Dubai. Reserva a los mejores precios a través de nuestros socios.</p>
-  <div class="hotels-grid">
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80')">
-        <div class="hotel-badge">7 Estrellas</div>
-        <div class="hotel-stars">★★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Burj Al Arab Jumeirah</div>
-        <div class="hotel-location">📍 Jumeirah Beach</div>
-        <div class="hotel-features"><span class="hotel-feature">Icónico vela</span><span class="hotel-feature">Suite dúplex</span><span class="hotel-feature">9 restaurantes</span><span class="hotel-feature">Playa privada</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$1500</span>
-            <span class="night">/noche</span>
+  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
+    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+      <div class="flex items-center gap-8">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
+            <span class="text-black font-black text-xl">S</span>
           </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DBurj+Al+Arab+Dubai" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
+          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
+          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">Dubái</a>
+          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
+          <a href="#rascacielos" class="hover:text-amber-500 transition-colors">Rascacielos</a>
         </div>
       </div>
+      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')">
-        <div class="hotel-badge">Nuevo Lujo</div>
-        <div class="hotel-stars">★★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Atlantis The Royal</div>
-        <div class="hotel-location">📍 Palm Jumeirah</div>
-        <div class="hotel-features"><span class="hotel-feature">Infinity pools</span><span class="hotel-feature">Nobu</span><span class="hotel-feature">Cloud 22 rooftop</span><span class="hotel-feature">Aquaventure</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$600</span>
-            <span class="night">/noche</span>
-          </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DAtlantis+The+Royal+Dubai" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
-        </div>
-      </div>
-    </div>
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80')">
-        <div class="hotel-badge">Vista Burj</div>
-        <div class="hotel-stars">★★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Address Downtown</div>
-        <div class="hotel-location">📍 Downtown, frente al Burj</div>
-        <div class="hotel-features"><span class="hotel-feature">Vista al Burj Khalifa</span><span class="hotel-feature">Piscina infinity</span><span class="hotel-feature">Dubai Mall al lado</span><span class="hotel-feature">Spa</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$250</span>
-            <span class="night">/noche</span>
-          </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DAddress+Downtown+Dubai" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
+  </nav>
 
-<section class="section reveal">
-  <div class="section-label">Planifica</div>
-  <h2>Clima y Mejor Época</h2>
-  <div class="climate-grid">
-    <div class="month-card best">
-      <div class="month-name">Ene</div>
-      <div class="month-temp">20°</div>
-      <div class="month-rain">🌤 Ideal</div>
-      <div class="month-badge">⭐ Ideal</div>
+  <!-- CAPA 1: HERO (DUBAI) -->
+  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Dubai Burj Khalifa">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
     </div>
-    <div class="month-card best">
-      <div class="month-name">Feb</div>
-      <div class="month-temp">21°</div>
-      <div class="month-rain">🌤 Ideal</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Mar</div>
-      <div class="month-temp">24°</div>
-      <div class="month-rain">🌤 Agradable</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card">
-      <div class="month-name">Abr</div>
-      <div class="month-temp">28°</div>
-      <div class="month-rain">☀️ Cálido</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">May</div>
-      <div class="month-temp">33°</div>
-      <div class="month-rain">🔥 Calor</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Jun</div>
-      <div class="month-temp">36°</div>
-      <div class="month-rain">🔥 Extremo</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Jul</div>
-      <div class="month-temp">38°</div>
-      <div class="month-rain">🔥 Extremo</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Ago</div>
-      <div class="month-temp">39°</div>
-      <div class="month-rain">🔥 Extremo</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Sep</div>
-      <div class="month-temp">36°</div>
-      <div class="month-rain">🔥 Calor</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Oct</div>
-      <div class="month-temp">31°</div>
-      <div class="month-rain">☀️ Cálido</div>
-      
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Nov</div>
-      <div class="month-temp">26°</div>
-      <div class="month-rain">🌤 Agradable</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Dic</div>
-      <div class="month-temp">22°</div>
-      <div class="month-rain">🌤 Ideal</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Tips</div>
-  <h2>Consejos de Viaje</h2>
-  <p class="section-desc">Lo que necesitas saber antes de ir a Dubai para que tu viaje sea perfecto.</p>
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-icon">💵</div>
-      <div class="tip-title">Moneda y pagos</div>
-      <div class="tip-text">Dirham (AED), 1 USD ≈ 3.67 AED. Tarjetas aceptadas en todos lados. Cero impuestos en la mayoría de compras. Negocia en souks pero no en malls.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🚇</div>
-      <div class="tip-title">Transporte</div>
-      <div class="tip-text">El Metro de Dubai es moderno y económico (~4 AED). Uber/Careem funcionan perfecto. Taxis son baratos. Para Palm Jumeirah, toma el monorail. Alquila coche para excursiones al desierto.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🏥</div>
-      <div class="tip-title">Salud y seguridad</div>
-      <div class="tip-text">Dubai es una de las ciudades más seguras del mundo. Seguro de viaje recomendado (la sanidad es privada y cara). Respeta las leyes locales: no alcohol en público, vestimenta modesta fuera de resorts.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">📱</div>
-      <div class="tip-title">Conectividad</div>
-      <div class="tip-text">SIM de du o Etisalat en el aeropuerto (~50 AED con datos). WiFi excelente en hoteles, malls y restaurantes. Nota: VoIP (WhatsApp calls, FaceTime) puede estar bloqueado.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🍽️</div>
-      <div class="tip-title">Gastronomía</div>
-      <div class="tip-text">Los brunches de viernes son una institución (desde 200 AED con bebidas ilimitadas). Prueba el shawarma callejero, el hummus en Al Fahidi, y reserva en restaurantes de celebrity chefs como Nobu y Zuma.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🎒</div>
-      <div class="tip-title">Qué llevar</div>
-      <div class="tip-text">Ropa ligera pero modesta (cubre hombros y rodillas fuera de hoteles y playas), protector solar, gafas de sol, ropa elegante para restaurantes, y adaptador eléctrico tipo G (UK).</div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Presupuesto</div>
-  <h2>¿Cuánto Cuesta?</h2>
-  <p class="section-desc">Estimación de costos diarios por persona en Dubai (precios aproximados en USD).</p>
-  <table class="budget-table">
-    <thead><tr><th>Categoría</th><th>💚 Económico</th><th>💛 Medio</th><th>💎 Lujo</th></tr></thead>
-    <tbody>
-      <tr>
-        <td class="budget-cat">🏨 Hotel/noche</td>
-        <td class="budget-eco">$80–150</td>
-        <td class="budget-mid">$200–500</td>
-        <td class="budget-lux">$600–2000+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🍽️ Comida/día</td>
-        <td class="budget-eco">$20–40</td>
-        <td class="budget-mid">$50–100</td>
-        <td class="budget-lux">$150+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🚗 Transporte/día</td>
-        <td class="budget-eco">$10–20</td>
-        <td class="budget-mid">$25–50</td>
-        <td class="budget-lux">$80+ privado</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🎯 Excursiones</td>
-        <td class="budget-eco">$30–60</td>
-        <td class="budget-mid">$80–200</td>
-        <td class="budget-lux">$300+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">📊 Total/día</td>
-        <td class="budget-eco"><strong>$140–270</strong></td>
-        <td class="budget-mid"><strong>$355–850</strong></td>
-        <td class="budget-lux"><strong>$1130+</strong></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">En Vivo</div>
-  <h2>Últimas Noticias</h2>
-  <p class="section-desc">Lo que se está hablando sobre Dubai en X (Twitter) en este momento.</p>
-  <div class="feed-container">
-    <a class="twitter-timeline" data-theme="dark" data-chrome="noheader nofooter noborders transparent" data-height="500" data-width="100%" href="https://twitter.com/search?q=Dubai%20travel%20luxury&f=live">Cargando tweets sobre Dubai...</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</section>
-
-<section class="section reveal" id="videos-section" style="display:none;">
-  <div class="section-label">Videos</div>
-  <h2>Videos de Viajes</h2>
-  <div class="videos-grid" id="youtube-videos">
-    <!-- Videos cargados dinámicamente -->
-  </div>
-</section>
-
-<section class="cta-section reveal">
-  <div class="section-label">Reserva</div>
-  <h2>¿Listo para Dubai?</h2>
-  <p>Encuentra los mejores precios en vuelos y hoteles a través de nuestros socios de confianza.</p>
-  <div>
-    <a href="https://www.aviasales.com/?marker=670634" target="_blank" rel="noopener" class="btn-cta">✈️ Buscar Vuelos</a>
-    <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DDubai" target="_blank" rel="noopener" class="btn-cta-secondary">🏨 Buscar Hoteles</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-brand"><span>Skylio</span> Destinos</div>
-  <p>Parte de <a href="/">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
-  <p style="margin-top:8px;font-size:11px;">Los precios son aproximados y pueden variar. Enlaces de afiliados.</p>
-</footer>
-
-<script>
-async function loadYouTubeVideos() {
-  const h1 = document.querySelector('h1')?.innerText;
-  if (!h1) return;
-  
-  try {
-    const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-    const response = await fetch(`${backendUrl}/api/youtube?q=${encodeURIComponent(h1 + ' travel')}&lang=es`);
-    const data = await response.json();
     
-    if (data.status === 'success' && data.videos && data.videos.length > 0) {
-      const container = document.getElementById('youtube-videos');
-      const section = document.getElementById('videos-section');
-      section.style.display = 'block';
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
+        🏙️ La Metrópoli del Futuro y del Lujo
+      </span>
+      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
+        Dubái<span class="text-amber-500">.</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
+        Donde el desierto se encuentra con el cielo. Una ciudad de récords mundiales, arquitectura audaz y experiencias sin límites.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">28°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Anual</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">AED</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$100+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT+4</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
+    
+    <!-- FONDO SUTIL (PALM) -->
+    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none rotate-3 hidden lg:block">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Dubai Palm aerial">
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
       
-      data.videos.slice(0, 2).forEach(v => {
-        const card = document.createElement('div');
-        card.className = 'video-card-static';
-        card.innerHTML = `
-          <div class="video-embed-container">
-            <iframe src="https://www.youtube.com/embed/${v.id}" frameborder="0" allowfullscreen></iframe>
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="lg:col-span-8 space-y-24">
+        
+        <!-- BIENVENIDA -->
+        <section class="mt-12">
+          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
+          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
+            Dubái es un <span class="italic text-amber-500">milagro en la arena</span>. El lugar donde lo imposible se convierte en cotidiano cada día.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
+            <p>De un humilde pueblo de pescadores de perlas a la capital mundial del lujo y la innovación, Dubái es una experiencia sensorial única. Aquí, el edificio más alto del mundo vigila un desierto infinito.</p>
+            <p>Ya sea que busques el glamour de los centros comerciales o el sabor tradicional de los zocos del Deira, Dubái ofrece una dualidad fascinante que te dejará sin aliento.</p>
           </div>
-          <div class="video-info">
-            <div class="video-title">${v.title}</div>
-            <div class="video-stats-static">
-              <span>👁️ ${v.views.toLocaleString()} vistas</span>
-              <span>👍 ${v.likes.toLocaleString()} likes</span>
+        </section>
+
+        <!-- ZONAS CLAVE -->
+        <section>
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Distritos de Oro</h2>
+            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Dubai Neighborhoods</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-2">Downtown Dubai</h3>
+              <p class="text-sm text-gray-400">El centro de todo. Burj Khalifa, las fuentes danzantes y el inmenso Dubai Mall. El epicentro del lujo y el shopping.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-2">Marina & Palm</h3>
+              <p class="text-sm text-gray-400">El estilo de vida frente al mar. Rascacielos curvos, clubs de playa, y la icónica isla artificial en forma de palmera.</p>
             </div>
           </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-  } catch (err) {
-    console.error('Error loading videos:', err);
-  }
-}
-document.addEventListener('DOMContentLoaded', loadYouTubeVideos);
+        </section>
 
-const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
-</script>
+        <!-- RASCACIELOS Y DESIERTO -->
+        <section id="rascacielos">
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Experiencias Imperdibles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://www.klook.com/search/result/?query=dubai&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Burj Khalifa" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">At Top Burj Khalifa</h3>
+                <p class="text-sm text-gray-400 mt-2">Sube al piso 148 de la estructura más alta del mundo para la vista más épica de la Tierra.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tickets y Horarios ↗</span>
+              </div>
+            </a>
+            <a href="https://www.klook.com/search/result/?query=dubai&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
+              <img src="https://images.unsplash.com/photo-1544413647-ad34825906d4?w=800&q=80" alt="Dubai Desierto" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Safari por el Desierto</h3>
+                <p class="text-sm text-gray-400 mt-2">Dunas en 4x4, paseo en camello y cena tradicional beduina bajo las estrellas.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Safari y Enlaces ↗</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ITINERARIO -->
+        <section id="itinerario">
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ Escapada en Dubái: 2 Días</h2>
+          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Downtown e Historia</h4>
+              <p class="text-gray-400 text-sm mt-1">Mañana en el barrio histórico de Deira y Gold Souk. Tarde en Burj Khalifa y espectáculo de fuentes.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Marina y Desierto</h4>
+              <p class="text-gray-400 text-sm mt-1">Giro por la Marina y Palm Jumeirah en la mañana. Tarde de Safari al atardecer en las dunas.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOTELES (REGION ID 10749) -->
+        <section id="hoteles">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Palacios Modernos</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Burj Al Arab</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">El icónico hotel de 7 estrellas con forma de vela. El máximo exponente del lujo.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Dubai&regionId=10749&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Atlantis The Royal</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">La nueva joya de la corona en Palm Jumeirah. Arquitectura futurista y piscinas infinity.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Dubai&regionId=10749&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Address Downtown</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">Vistas privilegiadas al Burj Khalifa y acceso directo al shopping y fuentes.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Dubai&regionId=10749&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- YOUTUBE COMPONENT -->
+        <section class="mt-16">
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Dubái en Video
+            </h2>
+          </div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </section>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-4 space-y-12">
+        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips de Dubái</h3>
+          <ul class="space-y-4 text-sm">
+            <li><strong class="text-white">Vestimenta:</strong> Sé respetuoso en malls y lugares públicos (hombros y rodillas cubiertos).</li>
+            <li><strong class="text-white">Transporte:</strong> El metro es excelente pero tiene vagones "Gold Class" y solo para mujeres.</li>
+          </ul>
+        </div>
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+            <p class="text-xs font-bold text-yellow-400 uppercase tracking-tighter">Status Metro Dubái</p>
+          </div>
+          <p class="text-[10px] text-gray-500">Operación normal en líneas Roja y Verde. Frecuencia cada 4 min.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
+    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Vive el Futuro.
+  </footer>
+
+  <script>
+    async function loadDubaiVideos() {
+      const container = document.getElementById('youtube-gallery');
+      const fallbackVideos = [
+        { id: 'DFjm4RSlW9s', title: 'DUBÁI: Top 10 Cosas para Hacer y Visitar' },
+        { id: '7u2EOvb-4Ak', title: '30 cosas que saber antes de ir a Dubai' },
+        { id: 'vXmDEx3B6C0', title: 'GUÍA COMPLETA: Dubai por menos de $50?' }
+      ];
+
+      try {
+        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
+        const response = await fetch(`${backendUrl}/api/youtube-search?query=dubai+guia+viaje+español`);
+        if (!response.ok) throw new Error();
+        const videos = await response.json();
+        renderVideos(videos.slice(0, 3));
+      } catch (e) {
+        renderVideos(fallbackVideos);
+      }
+    }
+
+    function renderVideos(videos) {
+      const container = document.getElementById('youtube-gallery');
+      container.innerHTML = videos.map(v => `
+        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
+          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
+          <div class="p-4">
+            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+          </div>
+        </div>
+      `).join('');
+    }
+    document.addEventListener('DOMContentLoaded', loadDubaiVideos);
+  </script>
+
 </body>
+
 </html>

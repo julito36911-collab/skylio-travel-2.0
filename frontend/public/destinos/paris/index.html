@@ -1,358 +1,283 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>París - Guía Completa | Skylio Destinos</title>
-<meta name="description" content="Guía completa de París: mejores hoteles, consejos de viaje, clima, presupuesto y más. Por Skylio Viajes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Master Guide | Skylio Travel 2.0</title>
+  <meta name="description" content="Guía definitiva de París: Torre Eiffel, Museos, Barrios con encanto y tips locales.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+    .animate-pulse-soft {
+      animation: pulse-soft 2s infinite;
+    }
+    .glass-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-shine::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+      transform: rotate(45deg);
+      transition: 0.5s;
+    }
+    .glass-shine:hover::after {
+      left: 100%;
+      top: 100%;
+    }
+  </style>
 </head>
-<body>
-<nav class="topbar">
-  <div class="topbar-left">
-    <a href="/" class="btn-back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-      Skylio Viajes
-    </a>
-    <a href="../" class="topbar-brand"><span>Skylio</span> Destinos</a>
-  </div>
-</nav>
 
-<section class="hero">
-  <div class="hero-img" style="background:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80') center/cover"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🗼 Francia</div>
-    <h1>París</h1>
-    <p class="hero-sub">La Torre Eiffel, el Louvre, croissants perfectos y el romanticismo eterno de la Ciudad de la Luz.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-value">12°C</div><div class="stat-label">Temperatura media</div></div>
-      <div class="stat"><div class="stat-value">Abr–Jun / Sep–Oct</div><div class="stat-label">Mejor época</div></div>
-      <div class="stat"><div class="stat-value">$100+</div><div class="stat-label">Hotel/noche</div></div>
-      <div class="stat"><div class="stat-value">EUR</div><div class="stat-label">Moneda</div></div>
-    </div>
-  </div>
-</section>
+<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
 
-<section class="section reveal">
-  <div class="section-label">Descubre</div>
-  <h2>Sobre París</h2>
-  <div class="about-grid">
-    <div class="about-text"><p>París es, sencillamente, la ciudad más visitada del mundo. La Torre Eiffel, el Louvre, Notre-Dame, el Arco del Triunfo y los Campos Elíseos forman un escenario que supera cualquier expectativa, sin importar cuántas fotos hayas visto antes.</p><p>Cada arrondissement tiene su personalidad: Le Marais es trendy y LGBTQ-friendly, Saint-Germain es literario y bohemio, Montmartre es artístico y romántico, y el Barrio Latino es joven y multicultural.</p><p>La gastronomía francesa es Patrimonio de la Humanidad: baguettes crujientes, croissants de mantequilla, quesos increíbles, vinos legendarios y restaurantes que van desde bistrós con menú del día a templos gastronómicos con 3 estrellas Michelin.</p></div>
-    <div class="about-highlights">
-      <div class="highlight-card"><div class="highlight-icon">✈️</div><div class="highlight-title">Vuelo</div><div class="highlight-value">10–14h</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🏖️</div><div class="highlight-title">Torre Eiffel</div><div class="highlight-value">#1 del Mundo</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🎯</div><div class="highlight-title">Ideal para</div><div class="highlight-value">Románticos y Cultura</div></div>
-      <div class="highlight-card"><div class="highlight-icon">🌍</div><div class="highlight-title">Visa</div><div class="highlight-value">Schengen (90 días)</div></div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Alojamiento</div>
-  <h2>Mejores Hoteles</h2>
-  <p class="section-desc">Selección curada de los hoteles mejor valorados en París. Reserva a los mejores precios a través de nuestros socios.</p>
-  <div class="hotels-grid">
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80')">
-        <div class="hotel-badge">Palace</div>
-        <div class="hotel-stars">★★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Le Meurice</div>
-        <div class="hotel-location">📍 Rue de Rivoli, 1er</div>
-        <div class="hotel-features"><span class="hotel-feature">Vista a las Tullerías</span><span class="hotel-feature">2 Michelin</span><span class="hotel-feature">Spa Valmont</span><span class="hotel-feature">Decoración Dalí</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$900</span>
-            <span class="night">/noche</span>
+  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
+    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+      <div class="flex items-center gap-8">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
+            <span class="text-black font-black text-xl">S</span>
           </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DLe+Meurice+Paris" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
+          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
+          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">París</a>
+          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
+          <a href="#itinerario" class="hover:text-amber-500 transition-colors">Itinerario</a>
         </div>
       </div>
+      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')">
-        <div class="hotel-badge">Icónico</div>
-        <div class="hotel-stars">★★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Hôtel Plaza Athénée</div>
-        <div class="hotel-location">📍 Avenue Montaigne, 8e</div>
-        <div class="hotel-features"><span class="hotel-feature">Fachada roja</span><span class="hotel-feature">3 restaurantes</span><span class="hotel-feature">Spa Dior</span><span class="hotel-feature">Vista a Torre Eiffel</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$700</span>
-            <span class="night">/noche</span>
-          </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DPlaza+Athenee+Paris" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
-        </div>
-      </div>
-    </div>
-    <div class="hotel-card">
-      <div class="hotel-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80')">
-        <div class="hotel-badge">Boutique</div>
-        <div class="hotel-stars">★★★★</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-name">Hôtel des Grands Boulevards</div>
-        <div class="hotel-location">📍 2e arrondissement</div>
-        <div class="hotel-features"><span class="hotel-feature">Rooftop bar</span><span class="hotel-feature">Restaurante italiano</span><span class="hotel-feature">Diseño ecléctico</span><span class="hotel-feature">Céntrico</span></div>
-        <div class="hotel-bottom">
-          <div class="hotel-price">
-            <span class="from">Desde </span>
-            <span class="amount">$200</span>
-            <span class="night">/noche</span>
-          </div>
-          <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DHotel+Grands+Boulevards+Paris" target="_blank" rel="noopener" class="btn-hotel">Ver precios →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
+  </nav>
 
-<section class="section reveal">
-  <div class="section-label">Planifica</div>
-  <h2>Clima y Mejor Época</h2>
-  <div class="climate-grid">
-    <div class="month-card">
-      <div class="month-name">Ene</div>
-      <div class="month-temp">4°</div>
-      <div class="month-rain">❄️ Frío</div>
-      
+  <!-- CAPA 1: HERO (PARÍS) -->
+  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Eiffel Tower">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
     </div>
-    <div class="month-card">
-      <div class="month-name">Feb</div>
-      <div class="month-temp">5°</div>
-      <div class="month-rain">❄️ Frío</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Mar</div>
-      <div class="month-temp">9°</div>
-      <div class="month-rain">🌤 Fresco</div>
-      
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Abr</div>
-      <div class="month-temp">12°</div>
-      <div class="month-rain">🌸 Primavera</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card best">
-      <div class="month-name">May</div>
-      <div class="month-temp">16°</div>
-      <div class="month-rain">🌸 Agradable</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Jun</div>
-      <div class="month-temp">19°</div>
-      <div class="month-rain">☀️ Cálido</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card">
-      <div class="month-name">Jul</div>
-      <div class="month-temp">22°</div>
-      <div class="month-rain">☀️ Verano</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Ago</div>
-      <div class="month-temp">22°</div>
-      <div class="month-rain">☀️ Verano</div>
-      
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Sep</div>
-      <div class="month-temp">18°</div>
-      <div class="month-rain">☀️ Agradable</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card best">
-      <div class="month-name">Oct</div>
-      <div class="month-temp">13°</div>
-      <div class="month-rain">🍂 Otoño</div>
-      <div class="month-badge">⭐ Ideal</div>
-    </div>
-    <div class="month-card">
-      <div class="month-name">Nov</div>
-      <div class="month-temp">8°</div>
-      <div class="month-rain">🌧 Lluvioso</div>
-      
-    </div>
-    <div class="month-card">
-      <div class="month-name">Dic</div>
-      <div class="month-temp">5°</div>
-      <div class="month-rain">❄️ Navidad</div>
-      
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Tips</div>
-  <h2>Consejos de Viaje</h2>
-  <p class="section-desc">Lo que necesitas saber antes de ir a París para que tu viaje sea perfecto.</p>
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-icon">💵</div>
-      <div class="tip-title">Moneda y pagos</div>
-      <div class="tip-text">Euro (EUR). Tarjetas aceptadas en casi todos lados. Propina incluida en la cuenta (service compris), pero se deja €1-2 extra si el servicio es bueno.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🚇</div>
-      <div class="tip-title">Transporte</div>
-      <div class="tip-text">Metro de París es extenso y eficiente. Carnet de 10 tickets (~€16.90) o Navigo Easy. Para el aeropuerto CDG, el RER B cuesta ~€11.50. Caminar es la mejor forma de explorar.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🏥</div>
-      <div class="tip-title">Salud y seguridad</div>
-      <div class="tip-text">TSE para europeos, seguro para el resto. Cuidado con carteristas en Metro, Torre Eiffel y Montmartre. Evita los 'juegos de bolitas' en puentes. París es segura en general.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">📱</div>
-      <div class="tip-title">Conectividad</div>
-      <div class="tip-text">SIM Free Mobile o Orange (~€10). WiFi en cafés y restaurantes. Tip: las bibliotecas públicas tienen WiFi excelente y gratuito.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🍽️</div>
-      <div class="tip-title">Gastronomía</div>
-      <div class="tip-text">Croissant en cualquier boulangerie (no Starbucks), croque-monsieur para almorzar, cena en un bistró del Marais. No te pierdas el mercado de Bastille los jueves y domingos.</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-icon">🎒</div>
-      <div class="tip-title">Qué llevar</div>
-      <div class="tip-text">Capas de ropa (el clima cambia rápido), zapatos cómodos para caminar, paraguas compacto, ropa semi-elegante (los parisinos se visten bien) y riñonera anti-carteristas.</div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Presupuesto</div>
-  <h2>¿Cuánto Cuesta?</h2>
-  <p class="section-desc">Estimación de costos diarios por persona en París (precios aproximados en USD).</p>
-  <table class="budget-table">
-    <thead><tr><th>Categoría</th><th>💚 Económico</th><th>💛 Medio</th><th>💎 Lujo</th></tr></thead>
-    <tbody>
-      <tr>
-        <td class="budget-cat">🏨 Hotel/noche</td>
-        <td class="budget-eco">$90–150</td>
-        <td class="budget-mid">$180–350</td>
-        <td class="budget-lux">$500–1200+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🍽️ Comida/día</td>
-        <td class="budget-eco">$20–35</td>
-        <td class="budget-mid">$45–80</td>
-        <td class="budget-lux">$120+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🚗 Transporte/día</td>
-        <td class="budget-eco">$8–15</td>
-        <td class="budget-mid">$20–35</td>
-        <td class="budget-lux">$50+ taxi</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">🎯 Excursiones</td>
-        <td class="budget-eco">$15–30</td>
-        <td class="budget-mid">$50–100</td>
-        <td class="budget-lux">$150+</td>
-      </tr>
-      <tr>
-        <td class="budget-cat">📊 Total/día</td>
-        <td class="budget-eco"><strong>$133–230</strong></td>
-        <td class="budget-mid"><strong>$295–565</strong></td>
-        <td class="budget-lux"><strong>$820+</strong></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">En Vivo</div>
-  <h2>Últimas Noticias</h2>
-  <p class="section-desc">Lo que se está hablando sobre París en X (Twitter) en este momento.</p>
-  <div class="feed-container">
-    <a class="twitter-timeline" data-theme="dark" data-chrome="noheader nofooter noborders transparent" data-height="500" data-width="100%" href="https://twitter.com/search?q=Paris%20travel%20France&f=live">Cargando tweets sobre París...</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</section>
-
-<section class="section reveal" id="videos-section" style="display:none;">
-  <div class="section-label">Videos</div>
-  <h2>Videos de Viajes</h2>
-  <div class="videos-grid" id="youtube-videos">
-    <!-- Videos cargados dinámicamente -->
-  </div>
-</section>
-
-<section class="cta-section reveal">
-  <div class="section-label">Reserva</div>
-  <h2>¿Listo para París?</h2>
-  <p>Encuentra los mejores precios en vuelos y hoteles a través de nuestros socios de confianza.</p>
-  <div>
-    <a href="https://www.aviasales.com/?marker=670634" target="_blank" rel="noopener" class="btn-cta">✈️ Buscar Vuelos</a>
-    <a href="https://www.jdoqocy.com/click-101526697-10553294?url=https%3A%2F%2Fwww.hotels.com%2FHotel-Search%3Fdestination%3DParís" target="_blank" rel="noopener" class="btn-cta-secondary">🏨 Buscar Hoteles</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-brand"><span>Skylio</span> Destinos</div>
-  <p>Parte de <a href="/">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
-  <p style="margin-top:8px;font-size:11px;">Los precios son aproximados y pueden variar. Enlaces de afiliados.</p>
-</footer>
-
-<script>
-async function loadYouTubeVideos() {
-  const h1 = document.querySelector('h1')?.innerText;
-  if (!h1) return;
-  
-  try {
-    const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-    const response = await fetch(`${backendUrl}/api/youtube?q=${encodeURIComponent(h1 + ' travel')}&lang=es`);
-    const data = await response.json();
     
-    if (data.status === 'success' && data.videos && data.videos.length > 0) {
-      const container = document.getElementById('youtube-videos');
-      const section = document.getElementById('videos-section');
-      section.style.display = 'block';
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
+        🗼 La Ciudad de la Luz y del Amor
+      </span>
+      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
+        París<span class="text-amber-500">.</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
+        Donde la historia se encuentra con la elegancia. Un viaje sensorial entre bulevares, museos y pastelerías icónicas.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">15°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Primavera</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">EUR</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$130+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
+        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT+1</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
+    
+    <!-- FONDO SUTIL (LOUVRE) -->
+    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none rotate-12 hidden lg:block">
+      <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Louvre Pyramid">
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
       
-      data.videos.slice(0, 2).forEach(v => {
-        const card = document.createElement('div');
-        card.className = 'video-card-static';
-        card.innerHTML = `
-          <div class="video-embed-container">
-            <iframe src="https://www.youtube.com/embed/${v.id}" frameborder="0" allowfullscreen></iframe>
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="lg:col-span-8 space-y-24">
+        
+        <!-- BIENVENIDA -->
+        <section class="mt-12">
+          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
+          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
+            París no se visita, <span class="italic text-amber-500">se siente</span>. Cada rincón es una postal y cada café una historia por descubrir.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
+            <p>La capital francesa es un festín para los sentidos. Desde la imponente silueta de la Torre Eiffel hasta los pasillos cargados de historia del Louvre, París te envuelve en una atmósfera de sofisticación única.</p>
+            <p>No te limites a los monumentos: piérdete por el Marais, sube las escaleras de Montmartre al atardecer o disfruta de un picnic a orillas del Sena como un verdadero parisino.</p>
           </div>
-          <div class="video-info">
-            <div class="video-title">${v.title}</div>
-            <div class="video-stats-static">
-              <span>👁️ ${v.views.toLocaleString()} vistas</span>
-              <span>👍 ${v.likes.toLocaleString()} likes</span>
+        </section>
+
+        <!-- BARRIOS -->
+        <section>
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Dónde hospedarse</h2>
+            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Arrondissements</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-2">Le Marais (3e/4e)</h3>
+              <p class="text-sm text-gray-400">El barrio más chic y antiguo. Lleno de boutiques, galerías de arte y la mejor vida nocturna. Perfecto para vivir el París histórico.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-2">Saint-Germain (6e)</h3>
+              <p class="text-sm text-gray-400">Elegante, literario y sofisticado. Hogar de los cafés existencialistas y de boutiques de lujo de bajo perfil.</p>
             </div>
           </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-  } catch (err) {
-    console.error('Error loading videos:', err);
-  }
-}
-document.addEventListener('DOMContentLoaded', loadYouTubeVideos);
+        </section>
 
-const o=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
-</script>
+        <!-- LUGARES IMPERDIBLES -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://www.klook.com/search/result/?query=paris&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
+              <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=800&q=80" alt="Torre Eiffel" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tour Eiffel</h3>
+                <p class="text-sm text-gray-400 mt-2">La dama de hierro. Sube para las mejores vistas o disfrútala desde el Trocadero.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Entradas ↗</span>
+              </div>
+            </a>
+            <a href="https://www.klook.com/search/result/?query=paris&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
+              <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=800&q=80" alt="Louvre" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Musée du Louvre</h3>
+                <p class="text-sm text-gray-400 mt-2">El museo de arte más visitado del mundo. Hogar de la Mona Lisa y miles de tesoros.</p>
+                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Entradas ↗</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ITINERARIO -->
+        <section id="itinerario">
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ Fin de Semana en París</h2>
+          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Clásicos e Iluminación</h4>
+              <p class="text-gray-400 text-sm mt-1">Torre Eiffel, Arco del Triunfo y crucer de noche por el Sena.</p>
+            </div>
+            <div class="relative group">
+              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Bohemio y Arte</h4>
+              <p class="text-gray-400 text-sm mt-1">Montmartre (Sacré-Cœur), barrio de los artistas y visita al Louvre o Musée d'Orsay.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOTELES (REGION ID 2734) -->
+        <section id="hoteles">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Selección Premiere de Hoteles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Generator Paris</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">Cerca del Canal Saint-Martin, moderno y con terraza top.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Paris&regionId=2734&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Hôtel des Grands Boulevards</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">Diseño ecléctico, barra de cócteles increíble y muy céntrico.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Paris&regionId=2734&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
+              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
+              <div class="p-4 flex-grow flex flex-col">
+                <h3 class="text-white font-bold mb-2">Le Meurice</h3>
+                <p class="text-xs text-gray-500 line-clamp-2">Lujo absoluto frente a las Tullerías. El corazón real de París.</p>
+                <a href="https://www.hotels.com/Hotel-Search?destination=Paris&regionId=2734&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- YOUTUBE COMPONENT -->
+        <section class="mt-16">
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              París en Video
+            </h2>
+          </div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+        </section>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-4 space-y-12">
+        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips de la Ciudad</h3>
+          <ul class="space-y-4 text-sm">
+            <li><strong class="text-white">Agua Gratis:</strong> Busca las fuentes Wallace, el agua en París es deliciosa y gratuita.</li>
+            <li><strong class="text-white">Picnic en el Sena:</strong> Haz como los locales, compra quesos y vino y siéntate en el Pont des Arts al atardecer.</li>
+          </ul>
+        </div>
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <p class="text-xs font-bold text-green-400 uppercase tracking-tighter">Estado Métro RATP</p>
+          </div>
+          <p class="text-[10px] text-gray-500">Tráfico fluido en las líneas principales (1, 4, 14).</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
+    © 2024 Skylio Travel 2.0. Enlaces de afiliados — El mundo es tuyo.
+  </footer>
+
+  <script>
+    async function loadParisVideos() {
+      const container = document.getElementById('youtube-gallery');
+      const fallbackVideos = [
+        { id: '6jpr0XQZ_FI', title: 'Guía de París 2024 - Alan por el mundo' },
+        { id: '1T4gHV7o_2Q', title: '¿Qué ver en París en 3 días? Itinerario' },
+        { id: 'T474BWEMXvA', title: 'Guía COMPLETA de París 2026' }
+      ];
+
+      try {
+        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
+        const response = await fetch(`${backendUrl}/api/youtube-search?query=paris+guia+viaje+español`);
+        if (!response.ok) throw new Error();
+        const videos = await response.json();
+        renderVideos(videos.slice(0, 3));
+      } catch (e) {
+        renderVideos(fallbackVideos);
+      }
+    }
+
+    function renderVideos(videos) {
+      const container = document.getElementById('youtube-gallery');
+      container.innerHTML = videos.map(v => `
+        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
+          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
+          <div class="p-4">
+            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+          </div>
+        </div>
+      `).join('');
+    }
+    document.addEventListener('DOMContentLoaded', loadParisVideos);
+  </script>
+
 </body>
+
 </html>

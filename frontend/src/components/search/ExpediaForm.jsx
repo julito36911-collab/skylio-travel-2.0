@@ -115,6 +115,9 @@ const ExpediaForm = ({ partnerData, onClose }) => {
             wrapperClassName="w-full"
             dateFormat="dd/MM/yyyy"
             required
+            popperPlacement="bottom-start"
+            portalId="root"
+            autoComplete="off"
         />
       </div>
 

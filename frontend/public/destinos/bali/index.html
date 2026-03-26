@@ -4,258 +4,551 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bali Master Guide | Skylio Travel 2.0</title>
-  <meta name="description" content="Guía definitiva de Bali: Ubud, Canggu, templos ancestrales, terrazas de arroz y los mejores resorts espirituales.">
+  <title>Bali - Skylio Destinos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
-    @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.7; }
-    }
-    .animate-pulse-soft {
-      animation: pulse-soft 2s infinite;
-    }
-    .glass-shine {
-      position: relative;
-      overflow: hidden;
-    }
-    .glass-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
-      transform: rotate(45deg);
-      transition: 0.5s;
-    }
-    .glass-shine:hover::after {
-      left: 100%;
-      top: 100%;
-    }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
+    .animate-pulse-soft { animation: pulse-soft 2s infinite; }
+    .glass-shine { position: relative; overflow: hidden; }
+    .glass-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent); transform: rotate(45deg); transition: 0.5s; }
+    .glass-shine:hover::after { left: 100%; top: 100%; }
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative">
 
-  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
-      <div class="flex items-center gap-8">
-        <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <span class="text-black font-black text-xl">S</span>
-          </div>
-          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
+  <!-- NAVBAR FLOTANTE -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
+          Skylio Viajes
         </a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
-          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">Bali</a>
-          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
-          <a href="#espiritualidad" class="hover:text-amber-500 transition-colors">Espiritualidad</a>
-        </div>
+        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors">
+          <span class="text-white">Skylio</span> Destinos
+        </a>
       </div>
-      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
-  <!-- CAPA 1: HERO (BALI) -->
-  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Bali Rice Terraces">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
-        🌺 Isla de los Dioses e Infinito Verde
-      </span>
-      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
-        Bali<span class="text-amber-500">.</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-        Donde el alma descansa entre templos de piedra y selva esmeralda. Un refugio de paz, yoga y la energía más pura de Asia.
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">27°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Anual</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">IDR</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$40+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT+8</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
-      </div>
+  <!-- HERO -->
+  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-green-900/20 mix-blend-color pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Bali</h1>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">La guía definitiva: Zonas, Templos, Hoteles y secretos de la Isla de los Dioses.</p>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
-    
-    <!-- FONDO SUTIL (TEMPLO) -->
-    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none rotate-6 hidden lg:block">
-      <img src="https://images.unsplash.com/photo-1544413647-ad34825906d4?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Uluwatu Temple">
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+
+    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0 rounded-none"
+      style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b40e9bd1?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.06;">
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      
-      <!-- CONTENIDO PRINCIPAL -->
-      <div class="lg:col-span-8 space-y-24">
-        
-        <!-- BIENVENIDA -->
-        <section class="mt-12">
-          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
-          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
-            Bali es un <span class="italic text-amber-500">despertar espiritual</span>. Una isla donde cada amanecer es una ceremonia de gratitud.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
-            <p>Conocida mundialmente por sus icónicas terrazas de arroz y sus templos hindúes únicos en Indonesia, Bali ofrece una hospitalidad que te hará sentir en casa desde el primer momento.</p>
-            <p>Ya sea que busques el silencio de Ubud, las olas legendarias de Uluwatu o el ambiente vibrante de Canggu, la Isla de los Dioses tiene un rincón perfecto esperando por ti.</p>
-          </div>
-        </section>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
 
-        <!-- ZONAS CLAVE -->
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="lg:col-span-8 space-y-12">
+
+        <!-- ZONAS -->
         <section>
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Corazón Balinés</h2>
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Bali Regions</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <!-- Ubud -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Ubud</h3>
-              <p class="text-sm text-gray-400">El centro cultural y espiritual. Terrazas de arroz, estudios de yoga, mercados de artesanías y el famoso Monkey Forest.</p>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌿 ESPIRITUALIDAD</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🧘 YOGA & RETIRO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">El alma cultural e intelectual de Bali. Terrazas de arroz de Tegalalang, el Bosque de los Monos, galerías de arte y una energía espiritual única. Es la zona perfecta si buscas desconectar, meditar o simplemente empaparse de la cultura balinesa auténtica. Hay gran variedad de villas y hostales a muy buen precio.</p>
             </div>
+
+            <!-- Seminyak & Canggu -->
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Canggu & Uluwatu</h3>
-              <p class="text-sm text-gray-400">La mezcla perfecta entre estilo de vida moderno, cafés de autor, surf de clase mundial y atardeceres épicos en acantilados.</p>
+              <svg class="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Seminyak & Canggu</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🍹 BEACH CLUBS</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏄 SURF</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La cara cosmopolita de Bali. Boutiques de moda, los mejores beach clubs del mundo (Potato Head, Ku De Ta), cafeterías de especialidad y puestas de sol que te dejan sin palabras. Canggu es más surfera y relajada; Seminyak es más elegante y cara. Ideal para quienes buscan comodidad y vida social.</p>
             </div>
+
+            <!-- Uluwatu & Bukit -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Uluwatu & Bukit</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏖️ PLAYAS ESCONDIDAS</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌅 ACANTILADOS</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La península sur de Bali guarda secretos espectaculares: playas de arena blanca accesibles por escaleras esculpidas en la roca (Padang Padang, Bingin), el impresionante Templo de Uluwatu sobre un acantilado de 70 metros y las mejores olas para surfistas expertos. Menos masificado que el norte.</p>
+            </div>
+
+            <!-- Sanur & Nusa Dua -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Sanur & Nusa Dua</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">👨‍👩‍👧 IDEAL FAMILIAS</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏨 RESORTS LUJO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Las dos zonas más tranquilas y seguras de Bali. Sanur es un pueblo de pescadores con playas calmadas protegidas por arrecifes, perfecto para familias con niños. Nusa Dua es el enclave de los grandes resorts internacionales (Hilton, Westin) con playas impolutas y turismo sin estrés.</p>
+            </div>
+
           </div>
         </section>
 
-        <!-- ESPIRITUALIDAD Y NATURALEZA -->
-        <section id="espiritualidad">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Experiencias Imperdibles</h2>
+        <!-- LUGARES IMPERDIBLES -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=bali&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1544413647-ad34825906d4?w=800&q=80" alt="Templos Bali" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Ruta de los Templos</h3>
-                <p class="text-sm text-gray-400 mt-2">Visita Besakih (Templo Madre) o el icónico Tanah Lot sobre el mar durante el atardecer.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Entradas ↗</span>
+
+            <!-- Terrazas de Tegalalang -->
+            <a href="https://www.klook.com/search/result/?query=bali+tegalalang+rice+terrace&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="img/tegalalang_rice_terraces.png" alt="Terrazas de Tegalalang" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Terrazas de Arroz de Tegalalang</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Entrada aprox €2 + Swing desde €20</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Las terrazas más fotogénicas del mundo. Caminos entre los campos, columpios sobre el vacío verde y vistas que quitan el aliento.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Actividades
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=bali&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Terrazas Arroz" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tegallalang & Columpios</h3>
-                <p class="text-sm text-gray-400 mt-2">Camina entre las terrazas de arroz esmeralda y vuela sobre la jungla en los famosos columpios de Ubud.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Excursiones ↗</span>
+
+            <!-- Templo Uluwatu -->
+            <a href="https://www.klook.com/search/result/?query=uluwatu+temple+kecak+dance+bali&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Uluwatu_Temple_at_Sunset.jpg" alt="Templo Uluwatu" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Templo Uluwatu & Danza Kecak</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Templo aprox €3 / Kecak €10-€15</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Templo sobre un acantilado de 70m con vistas al océano. Al atardecer, la Danza Kecak con fuego es el espectáculo más impresionante de Bali.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar Entradas
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
+
+            <!-- Monte Batur -->
+            <a href="https://www.klook.com/search/result/?query=mount+batur+trekking+bali+sunrise&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Sunrise_on_Mount_Batur.jpg" alt="Monte Batur" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Trekking al Monte Batur (Amanecer)</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour desde €35-€50</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El volcán activo más accesible de Bali. Se sube de madrugada para ver el amanecer desde la cima. Una experiencia transformadora que nadie olvida.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Trek
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Bosque de Monos Ubud -->
+            <a href="https://www.klook.com/search/result/?query=ubud+monkey+forest+bali&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Monkey_Forest%2C_Ubud%2C_Bali%2C_Indonesia_03.JPG" alt="Bosque de Monos" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Sacred Monkey Forest, Ubud</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Entrada aprox €5</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Un bosque sagrado con más de 700 monos en libertad, templos centenarios cubiertos de musgo y una atmósfera casi mística. Guarda bien tus gafas y el móvil.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar Entradas
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
           </div>
         </section>
 
-        <!-- ITINERARIO -->
-        <section id="itinerario">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ Escapada de 2 Días</h2>
-          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Ubud Sagrado</h4>
-              <p class="text-gray-400 text-sm mt-1">Amanecer en Tegallalang, visita al Templo de Tirta Empul y clase de yoga al atardecer en Yoga Barn.</p>
+        <!-- ITINERARIOS -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Bali sin estrés</h2>
+
+          <!-- 1 SEMANA -->
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Bali Express (5 Días)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1 — Llegada y Sur de Bali</h4>
+                <p class="text-gray-400 text-sm mt-1">Aterriza en el aeropuerto de Denpasar (DPS). Instálate en Seminyak o Canggu. Por la tarde, asiste a la puesta de sol en el Templo de Tanah Lot (llega 1 hora antes). Cena en un beach club y descansa del jet lag.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2 — Uluwatu y Acantilados</h4>
+                <p class="text-gray-400 text-sm mt-1">Por la mañana baja a la playa de Padang Padang o Bingin. Por la tarde sube al Templo de Uluwatu. Al caer el sol (18:00h) asiste a la Danza Kecak con fuego sobre el acantilado. Es el espectáculo más memorable de Bali.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 3 — Ubud (Cultura y Selva)</h4>
+                <p class="text-gray-400 text-sm mt-1">Traslado a Ubud (1h). Visita el Sacred Monkey Forest por la mañana, come en un warung local, luego las Terrazas de Tegalalang. Por la tarde asiste a una clase de cocina balinesa o un espectáculo de danza. Quédate a dormir en Ubud.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 4 — Monte Batur (Amanecer Volcánico)</h4>
+                <p class="text-gray-400 text-sm mt-1">Madrugar es obligatorio: salida a las 2:00 AM para llegar al inicio del trek. A las 6:00 AM estarás en la cima del volcán viendo salir el sol sobre las nubes y el lago Batur. De vuelta a Ubud, date un merecido masaje balinés (€10-€15/hora).</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 5 — Día Libre y Vuelo</h4>
+                <p class="text-gray-400 text-sm mt-1">Mañana para compras en el Mercado de Ubud o Seminyak. Terapia de spa o surf en Kuta. Traslado al aeropuerto. La mayoría de vuelos internacionales salen de madrugada, así que tienes el día entero.</p>
+              </div>
+
             </div>
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Acantilados y Fuego</h4>
-              <p class="text-gray-400 text-sm mt-1">Mañana de playa suave en Padang Padang y tarde en Uluwatu para ver la danza Kecak al atardecer.</p>
+          </div>
+
+          <!-- 2 SEMANAS -->
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 Bali Profundo (10-14 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Con más tiempo puedes explorar las islas cercanas y el interior. Haz los primeros 5 días de arriba y añade:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 6-8</div>
+                <h4 class="text-white font-bold">Nusa Penida e Islas</h4>
+                <p class="text-gray-400 text-sm mt-1">Toma un ferry rápido desde Sanur (30 min, €5). Nusa Penida tiene los paisajes más salvajes de Indonesia: la Roca T-Rex (Kelingking), Angel's Billabong y Crystal Bay para snorkel con mantas rayas. Quédate 2 noches en la isla.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 9-11</div>
+                <h4 class="text-white font-bold">Norte de Bali (Singaraja y Munduk)</h4>
+                <p class="text-gray-400 text-sm mt-1">El norte es casi desconocido por el turismo masivo. Cascadas en la selva (Gitgit, Sekumpul), el Templo de Tirta Empul para purificarse en las aguas sagradas, plantaciones de café luwak y el lago Bratan con su templo flotante.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 12-14</div>
+                <h4 class="text-white font-bold">Regreso al Sur: Relax Total</h4>
+                <p class="text-gray-400 text-sm mt-1">Últimos días para descansar en una villa privada con piscina en Canggu. Clases de surf, masajes diarios, mercados artesanales. El vuelo de regreso habitualmente es nocturno; guarda un día para llegar con calma al aeropuerto.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- HOTELES -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 UBUD</span>
+              <h4 class="text-base font-bold text-white">Four Seasons Ubud</h4>
+              <p class="text-xs text-gray-400 mb-4">Villas en terrazas de arroz</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🏖️ SEMINYAK</span>
+              <h4 class="text-base font-bold text-white">The Legian Bali</h4>
+              <p class="text-xs text-gray-400 mb-4">Playa privada en Seminyak</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-purple-900/50 text-purple-200 mb-3 self-start">🌊 ULUWATU</span>
+              <h4 class="text-base font-bold text-white">Alila Villas Uluwatu</h4>
+              <p class="text-xs text-gray-400 mb-4">Infinito sobre el acantilado</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 UBUD</span>
+              <h4 class="text-base font-bold text-white">Komaneka at Bisma</h4>
+              <p class="text-xs text-gray-400 mb-4">Vistas a la selva y río</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🏄 CANGGU</span>
+              <h4 class="text-base font-bold text-white">Desa Potato Head</h4>
+              <p class="text-xs text-gray-400 mb-4">Diseño único, playa a 5 min</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏖️ SANUR</span>
+              <h4 class="text-base font-bold text-white">Puri Santrian</h4>
+              <p class="text-xs text-gray-400 mb-4">Frente al mar, ideal familias</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 UBUD</span>
+              <h4 class="text-base font-bold text-white">Bisma Eight</h4>
+              <p class="text-xs text-gray-400 mb-4">Piscina con vistas al valle</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🏄 CANGGU</span>
+              <h4 class="text-base font-bold text-white">The Layar</h4>
+              <p class="text-xs text-gray-400 mb-4">Villas con jardín tropical</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-purple-900/50 text-purple-200 mb-3 self-start">🏖️ KUTA</span>
+              <h4 class="text-base font-bold text-white">Kuta Puri Bungalows</h4>
+              <p class="text-xs text-gray-400 mb-4">Precio imbatible, centro Kuta</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
           </div>
         </section>
 
-        <!-- HOTELES (REGION ID 602651) -->
-        <section id="hoteles">
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Santuarios de Lujo</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Four Seasons Sayan</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Inmersión total en la selva de Ubud. Una obra maestra de arquitectura y paz.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Bali&regionId=602651&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Ayana Resort Bali</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Vistas espectaculares desde los acantilados de Jimbaran y el icónico Rock Bar.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Bali&regionId=602651&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">The Kayon Jungle</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Piscina de tres niveles suspendida sobre la selva tropical. Romanticismo puro.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Bali&regionId=602651&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- YOUTUBE COMPONENT -->
+        <!-- YOUTUBE -->
         <section class="mt-16">
           <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
             <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Bali en Video
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Explora Bali en Video
             </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <!-- AEROPUERTO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto Ngurah Rai (DPS) → Kuta / Seminyak</h3>
+              <p class="text-sm text-gray-400">La opción más fácil es el <strong class="text-white">taxi oficial Bluebird</strong> (mostrador dentro del aeropuerto). Precio fijo a Kuta: aprox <strong class="text-white">€5-€8</strong>. Tarda 15-30 minutos según tráfico. Nunca aceptes a los taxistas que abordan fuera.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Ubud</h3>
+              <p class="text-sm text-gray-400">Ubud está a <strong class="text-white">1 hora y media</strong> del aeropuerto. Lo más cómodo es reservar un <strong class="text-white">transfer privado</strong> con tu hotel (aprox €15-€20) o usar la app <strong class="text-white">Grab</strong> (el Uber de Asia). Evita los taxis sin contador en la salida.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Canggu</h3>
+              <p class="text-sm text-gray-400">Canggu está al norte de Seminyak. En taxi oficial o Grab son unos <strong class="text-white">40-50 minutos</strong> y cuesta aprox <strong class="text-white">€8-€12</strong>. El tráfico puede ser terrible por la tarde; intenta llegar por la mañana.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Uluwatu / Nusa Dua</h3>
+              <p class="text-sm text-gray-400">Nusa Dua está muy cerca del aeropuerto, solo <strong class="text-white">15-20 minutos en taxi</strong> (aprox €6). Uluwatu está en la punta de la península: unos <strong class="text-white">45-60 minutos</strong> y €12-€18 en taxi o Grab.</p>
+            </div>
+
+          </div>
+
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start shadow-lg shadow-blue-900/10 mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Moverse por Bali</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">La mejor forma de moverse en Bali es alquilar un <strong class="text-white">scooter</strong> (aprox €7/día con seguro incluido, solo si tienes licencia de moto). Si no, usa la app <strong class="text-white">Grab</strong> que funciona en toda la isla con precios fijos y sin regateo. No hay transporte público útil para turistas.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIRECTORIO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo (Más lugares por descubrir)</h2>
+          <ul class="divide-y divide-white/10">
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Templo Tanah Lot</h3>
+              <p class="text-sm text-gray-400 mt-1">El templo sobre una roca en el mar, rodeado de olas. La puesta de sol aquí es una de las más fotografiadas del mundo. Llega 1 hora antes del atardecer.</p>
+              <a href="https://es.wikipedia.org/wiki/Tanah_Lot" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Tirta Empul (Baño Sagrado)</h3>
+              <p class="text-sm text-gray-400 mt-1">Templo con fuentes de agua sagrada donde los balineses y viajeros se purifican ritualmente. Una experiencia espiritual y cultural única. Lleva ropa que puedas mojar.</p>
+              <a href="https://es.wikipedia.org/wiki/Tirta_Empul" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Nusa Penida (Isla)</h3>
+              <p class="text-sm text-gray-400 mt-1">La isla más salvaje y espectacular del archipiélago de Bali. La Roca de Kelingking (T-Rex), Angel's Billabong y snorkel con mantas rayas gigantes. Ferry desde Sanur, 30 minutos.</p>
+              <a href="https://es.wikipedia.org/wiki/Nusa_Penida" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Palacio de Agua Tirtagangga</h3>
+              <p class="text-sm text-gray-400 mt-1">Antiguo palacio real balinés con jardines de agua, estanques con carpas gigantes y estatuas mitológicas. En el este de Bali, perfecto para combinar con el volcán Agung.</p>
+              <a href="https://es.wikipedia.org/wiki/Tirtagangga" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Mercado de Ubud (Pasar Seni)</h3>
+              <p class="text-sm text-gray-400 mt-1">El mejor mercado artesanal de Bali. Telas, esculturas, joyas, ropa y objetos únicos. El regateo es esperado y bienvenido: empieza ofreciendo el 40% del precio inicial.</p>
+              <a href="https://es.wikipedia.org/wiki/Ubud" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Playa Padang Padang</h3>
+              <p class="text-sm text-gray-400 mt-1">La playa que se hizo famosa en la película "Come, Reza, Ama". Se accede bajando escaleras esculpidas en la roca. Pequeña, íntima y de arena blanca perfecta. Llega temprano antes de que se llene.</p>
+              <a href="https://es.wikipedia.org/wiki/Playa_Padang_Padang" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+          </ul>
         </section>
 
       </div>
 
-      <!-- SIDEBAR -->
-      <aside class="lg:col-span-4 space-y-12">
+      <!-- SIDEBAR DERECHO -->
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+
+        <!-- REQUISITOS DE ENTRADA -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+            </svg>
+            Requisitos de Entrada
+          </h3>
+          <p class="text-sm text-gray-400">La mayoría de países pueden entrar a Indonesia <strong class="text-white">sin visa por 30 días</strong> (Visa Free). Para estancias más largas existe el <strong class="text-white">Visa on Arrival</strong> (30 días renovables) por aprox <strong class="text-white">$35 USD</strong>. Se paga en el aeropuerto de Bali en efectivo o tarjeta.</p>
+          <a href="https://evisa.imigrasi.go.id/" target="_blank"
+            class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Solicitar e-VOA Oficial</a>
+        </div>
+
+        <!-- PRESUPUESTO DIARIO -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Alojamiento (Villa Media)</span><span class="font-semibold text-white">€40-€80</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (Warung local)</span><span class="font-semibold text-white">€10-€20</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Scooter alquiler</span><span class="font-semibold text-white">€7</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Actividades / Templos</span><span class="font-semibold text-white">€15-€30</span></li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+            <span class="text-gray-400">Total aprox:</span>
+            <span class="font-bold text-amber-500 text-2xl">€75<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
+          </div>
+        </div>
+
+        <!-- CLIMA MES A MES -->
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">18 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">17 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">9 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">22°C</td><td class="py-2 text-gray-400">4 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">22°C</td><td class="py-2 text-gray-400">4 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">17 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TIPS EXCLUSIVOS -->
         <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
-          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips del Experto</h3>
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
           <ul class="space-y-4 text-sm">
-            <li><strong class="text-white">Templos:</strong> Cubre siempre tus hombros y piernas (sarong) al entrar en lugares sagrados.</li>
-            <li><strong class="text-white">Agua:</strong> Evita el "Bali Belly" bebiendo solo agua embotellada y evitando el hielo en warungs.</li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Temporada Seca = Jul y Ago</span>
+              Los mejores meses para visitar Bali son julio y agosto (temporada seca). Diciembre a marzo es temporada de lluvias pero también hay menos turistas y precios más bajos.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Las Ofrendas (Canang Sari)</span>
+              Cada mañana los balineses colocan pequeñas cestas de flores y comida en la calle. Son ofrendas sagradas. Nunca las pises ni las muevas, aunque estén en el suelo.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">App Indispensable</span>
+              Descarga <strong class="text-white">Grab</strong> antes de llegar. Es el Uber de toda Asia y funciona perfectamente en Bali con precios fijos y sin regateo con taxistas.
+            </li>
           </ul>
         </div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <p class="text-xs font-bold text-red-400 uppercase tracking-tighter">Temporada Seca</p>
+
+        <!-- ESTADO AEROPUERTO -->
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado Aeropuerto</p>
+              <p class="text-xs text-green-400 font-bold">DPS Ngurah Rai: Operativo</p>
+            </div>
           </div>
-          <p class="text-[10px] text-gray-500">Condiciones óptimas para trekking al Volcán Batur y buceo en Gili.</p>
+          <a href="https://www.baliairport.co.id/" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">Oficial</a>
         </div>
+
       </aside>
 
     </div>
   </main>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Vive la Isla de los Dioses.
-  </footer>
-
   <script>
     async function loadBaliVideos() {
       const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: 'h8ZvBKBFxvY', title: 'Lo MEJOR y lo PEOR de ir a Bali | ¿Es Barato?' },
-        { id: '74dlDd8Fu0o', title: 'BALI: La REALIDAD de visitar la isla más famosa' },
-        { id: 'zc9HFDrM2os', title: 'BALI: Top 15 sitios que ver imprescindibles' }
+        { id: 'h8ZvBKBFxvY', title: 'BALI: Guía de viaje completa para tu primera vez' },
+        { id: 'zc9HFDrM2os', title: 'CONSEJOS para ir a BALI: Todo lo que debes saber' },
+        { id: 'P2OB6HSHsBY', title: 'PRESUPUESTO para BALI: ¿Es tan barato como dicen?' }
       ];
-
       try {
-        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-        const response = await fetch(`${backendUrl}/api/youtube-search?query=bali+guia+viaje+español`);
-        if (!response.ok) throw new Error();
+        const response = await fetch('/api/youtube-search?query=bali+guia+viaje+español');
+        if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
       } catch (e) {
@@ -266,18 +559,25 @@
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
-          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
+        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
+          <div class="relative aspect-video">
+            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
           <div class="p-4">
-            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
           </div>
         </div>
       `).join('');
     }
+
     document.addEventListener('DOMContentLoaded', loadBaliVideos);
   </script>
 
 </body>
-
 </html>

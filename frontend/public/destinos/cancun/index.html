@@ -1,283 +1,405 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cancun Master Guide | Skylio Travel 2.0</title>
-  <meta name="description" content="Guía definitiva de Cancún: Zona Hotelera, Cenotes, Chichén Itzá y los mejores resorts todo incluido.">
+  <title>Cancún - Skylio Destinos</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
-    @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.7; }
-    }
-    .animate-pulse-soft {
-      animation: pulse-soft 2s infinite;
-    }
-    .glass-shine {
-      position: relative;
-      overflow: hidden;
-    }
-    .glass-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
-      transform: rotate(45deg);
-      transition: 0.5s;
-    }
-    .glass-shine:hover::after {
-      left: 100%;
-      top: 100%;
-    }
+    .font-serif{font-family:'Playfair Display',serif}
+    @keyframes pulse-soft{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.7}}
+    .animate-pulse-soft{animation:pulse-soft 2s infinite}
+    .glass-shine{position:relative;overflow:hidden}
+    .glass-shine::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(45deg,transparent,rgba(255,255,255,.03),transparent);transform:rotate(45deg);transition:.5s}
+    .glass-shine:hover::after{left:100%;top:100%}
   </style>
 </head>
-
-<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
-
-  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
-      <div class="flex items-center gap-8">
-        <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <span class="text-black font-black text-xl">S</span>
-          </div>
-          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
-        </a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
-          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">Cancún</a>
-          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
-          <a href="#experiencias" class="hover:text-amber-500 transition-colors">Experiencias</a>
-        </div>
-      </div>
-      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
+<body class="bg-[#0a0f16] text-gray-300">
+  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center gap-6">
+      <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Skylio Viajes
+      </a>
+      <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
     </div>
   </nav>
-
-  <!-- CAPA 1: HERO (CANCÚN) -->
-  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Cancun Turquoise Water">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
-        🇲🇽 Caribe Mexicano y Tesoros Mayas
-      </span>
-      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
-        Cancún<span class="text-amber-500">.</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-        El paraíso donde el azul no tiene fin. Una mezcla perfecta de resorts de lujo, ruinas ancestrales y vida nocturna legendaria.
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">28°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Anual</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">MXN</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$130+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT-6</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
-      </div>
+  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-cyan-900/20 mix-blend-color pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Cancún</h1>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">La guía definitiva: Zona Hotelera, Cenotes, Ruinas Mayas y el Caribe más azul de México.</p>
     </div>
   </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+      <div class="lg:col-span-8 space-y-12">
 
-  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
-    
-    <!-- FONDO SUTIL (CHICHEN ITZA) -->
-    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none rotate-6 hidden lg:block">
-      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Chichen Itza Pyramid">
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      
-      <!-- CONTENIDO PRINCIPAL -->
-      <div class="lg:col-span-8 space-y-24">
-        
-        <!-- BIENVENIDA -->
-        <section class="mt-12">
-          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
-          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
-            Cancún es el <span class="italic text-amber-500">corazón del Caribe</span>. Un destino que combina la relajación total con la aventura más pura.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
-            <p>Famoso mundialmente por sus playas de arena banca y aguas turquesa, Cancún ofrece mucho más que sol. Es el punto de partida ideal para explorar el legado Maya y los impactantes cenotes de la zona.</p>
-            <p>Ya sea que busques el lujo de un 'All-Inclusive', la vibrante fiesta de Coco Bongo, o la paz de Isla Mujeres, Cancún tiene una experiencia diseñada exactamente para ti.</p>
-          </div>
-        </section>
-
-        <!-- BARRIOS -->
         <section>
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Zonas Principales</h2>
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Quintana Roo Zones</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-cyan-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
               <h3 class="text-xl font-bold text-white mb-2">Zona Hotelera</h3>
-              <p class="text-sm text-gray-400">Una franja de 22km con forma de '7'. Aquí se concentran los mejores resorts, centros comerciales y los clubs más famosos.</p>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏖️ TODO INCLUIDO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌊 MAR TURQUESA</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La franja de 22 km de hoteles y playas de arena blanca que hizo famoso a Cancún. Mejores resorts all-inclusive, clubs de playa y la famosa zona de antros (Coco Bongo, Mandala). El agua tiene el azul caribeño más increíble. Ideal para quien busca comodidad total y playa perfecta.</p>
             </div>
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Cancún Centro (Pueblo)</h3>
-              <p class="text-sm text-gray-400">La cara auténtica de la ciudad. Mercados locales, tacos callejeros reales y una atmósfera mucho más económica y genuina.</p>
+              <svg class="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Centro (Downtown)</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💰 ECONÓMICO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌮 COMIDA LOCAL</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La Cancún real donde viven los locales. Precios hasta 3 veces más baratos que la Zona Hotelera, tacos y cochinita pibil auténticos, mercados y el ambiente mexicano de verdad. Perfecto para viajeros con presupuesto ajustado o quien quiere conocer México auténtico.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Isla Mujeres</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🐠 SNORKEL</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🚗 GOLF CART</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La joya a 20 minutos en ferry desde Cancún. Calles de colores, carritos de golf como transporte, Playa Norte (una de las más bonitas del Caribe) y snorkel en el arrecife de Manchones. Mucho más tranquila y auténtica que Cancún. Recomendada para al menos 1 noche.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              <h3 class="text-xl font-bold text-white mb-2">Playa del Carmen & Tulum</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🧘 BOHEMIO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏛️ RUINAS</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">A 1h y 2h de Cancún respectivamente. Playa del Carmen tiene la animada Quinta Avenida peatonal. Tulum combina ruinas mayas frente al mar con cenotes salvajes y el ambiente más bohemio del Caribe. Perfectas como escapadas en autobús ADO (€5-€10).</p>
             </div>
           </div>
         </section>
 
-        <!-- LUGARES IMPERDIBLES -->
-        <section id="experiencias">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Experiencias Imperdibles</h2>
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=cancun&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80" alt="Cenote" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tour de Cenotes</h3>
-                <p class="text-sm text-gray-400 mt-2">Nada en las aguas sagradas de los Mayas. Pozas naturales cristalinas rodeadas de selva.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Entradas ↗</span>
-              </div>
-            </a>
-            <a href="https://www.klook.com/search/result/?query=cancun&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80" alt="Chichen Itza" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
+            <a href="https://www.klook.com/search/result/?query=chichen+itza+tour+cancun&needQueryIdentification=true" target="_blank" rel="noopener" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="img/chichen_itza.png" alt="Chichén Itzá pirámide Kukulcán México" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Chichén Itzá</h3>
-                <p class="text-sm text-gray-400 mt-2">Una de las maravillas del mundo. Descubre los secretos del imperio Maya en una excursión de día completo.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Excursiones ↗</span>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour desde €60 — Patrimonio UNESCO</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Una de las 7 Maravillas del Mundo Moderno. La pirámide de Kukulcán es el símbolo de México. A 3 horas de Cancún, vale cada minuto. Reserva tour con guía para entender toda la historia maya.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></div>
+              </div>
+            </a>
+            <a href="https://www.klook.com/search/result/?query=cenote+cancun+tour&needQueryIdentification=true" target="_blank" rel="noopener" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="img/cenote_ik_kil.png" alt="Cenote Ik Kil Yucatán México agua cristalina" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Cenotes de Yucatán</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €15-€30 por cenote</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Pozos naturales de agua cristalina bajo tierra formados hace millones de años. Los mayas los consideraban puertas al inframundo. Ik Kil, Dos Ojos y Cenote Azul son los más espectaculares.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Excursión <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></div>
+              </div>
+            </a>
+            <a href="https://www.klook.com/search/result/?query=isla+mujeres+cancun+day+trip&needQueryIdentification=true" target="_blank" rel="noopener" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="img/isla_mujeres.png" alt="Isla Mujeres playa Norte agua turquesa Caribe" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Isla Mujeres</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Ferry €15 ida y vuelta</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">La isla más bonita del Caribe mexicano a 20 minutos de Cancún. Playa Norte tiene el agua más turquesa que verás en tu vida. Recórrela en golf cart y come mariscos frescos frente al mar.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Ferry <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></div>
+              </div>
+            </a>
+            <a href="https://www.klook.com/search/result/?query=tulum+ruins+tour+cancun&needQueryIdentification=true" target="_blank" rel="noopener" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="img/tulum.png" alt="Ruinas mayas de Tulum frente al mar Caribe México" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Ruinas de Tulum</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Entrada €5 — Tour desde €40</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Las únicas ruinas mayas frente al mar Caribe. El Templo del Castillo sobre el acantilado con el agua turquesa detrás es una de las imágenes más icónicas de México. A 2 horas de Cancún.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></div>
               </div>
             </a>
           </div>
         </section>
 
-        <!-- ITINERARIO -->
-        <section id="itinerario">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ Fin de Semana Escapada</h2>
-          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Relax y Show</h4>
-              <p class="text-gray-400 text-sm mt-1">Mañana de playa, tarde en Isla Mujeres y noche espectacular en Coco Bongo.</p>
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Cancún sin estrés</h2>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Cancún Express (4 Días)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1 — Llegada y Zona Hotelera</h4>
+                <p class="text-gray-400 text-sm mt-1">Aterriza en CUN. Instálate en tu hotel. Por la tarde estrena la playa y el agua turquesa del Caribe. Cena en la Zona Hotelera y si tienes energía, asómate al Coco Bongo o Mandala — la vida nocturna de Cancún es legendaria.</p>
+              </div>
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2 — Isla Mujeres</h4>
+                <p class="text-gray-400 text-sm mt-1">Toma el ferry desde Puerto Juárez (20 min, €8). Alquila un golf cart (€35/día) y recorre toda la isla en 2 horas. Playa Norte por la mañana — el agua más cristalina que verás. Come mariscos en un chiringuito. Regresa antes de anochecer.</p>
+              </div>
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 3 — Chichén Itzá y Cenote Ik Kil</h4>
+                <p class="text-gray-400 text-sm mt-1">Salida a las 7 AM en tour organizado. Chichén Itzá a primera hora antes del calor y las multitudes. Después, parada en el Cenote Ik Kil para nadar en el agua subterránea más espectacular del mundo. Regreso a las 6-7 PM agotado pero feliz.</p>
+              </div>
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 4 — Playa y Vuelo</h4>
+                <p class="text-gray-400 text-sm mt-1">Último día de playa y sol. Si tu vuelo es nocturno, visita el Mercado 28 en el Centro para comprar artesanías a precio local. Transferencia al aeropuerto con tiempo — el tráfico en Cancún puede ser impredecible.</p>
+              </div>
             </div>
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Aventura Maya</h4>
-              <p class="text-gray-400 text-sm mt-1">Excursión a Chichén Itzá, chapuzón en cenote Ik Kil y cena yucateca en el centro.</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 Riviera Maya Completa (7-10 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Con más tiempo, usa Cancún como base y explora toda la costa:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 5-6</div>
+                <h4 class="text-white font-bold">Playa del Carmen</h4>
+                <p class="text-gray-400 text-sm mt-1">Autobús ADO desde Cancún (1h, €5). La Quinta Avenida peatonal llena de tiendas, restaurantes y bares. Xcaret o Xel-Há para snorkel en parques naturales. Cenotes de Dos Ojos muy cerca.</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 7-9</div>
+                <h4 class="text-white font-bold">Tulum</h4>
+                <p class="text-gray-400 text-sm mt-1">El destino más de moda del Caribe. Ruinas mayas frente al mar, cenotes en la selva (Gran Cenote, Cenote Calavera), playas salvajes y el ambiente más bohemio y wellness del Caribe. Quédate al menos 2 noches para vivirlo sin prisa.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- HOTELES (REGION ID 601712) -->
-        <section id="hoteles">
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Selección de Resorts Premiere</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Le Blanc Spa Resort</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Solo adultos, lujo extremo y uno de los mejores spas del Caribe.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Cancun&regionId=601712&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Hyatt Ziva Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Todo incluido, punta de la zona</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Hyatt Ziva Cancun</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Perfecto para familias. Vistas increíbles en Punta Cancún.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Cancun&regionId=601712&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🌊 ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Le Blanc Spa Resort</h4>
+              <p class="text-xs text-gray-400 mb-4">Solo adultos, ultra premium</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Live Aqua Resort</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Experiencia sensorial solo para adultos frente al mar.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Cancun&regionId=601712&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-purple-900/50 text-purple-200 mb-3 self-start">🏖️ ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Nizuc Resort & Spa</h4>
+              <p class="text-xs text-gray-400 mb-4">Boutique de lujo frente al mar</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Krystal Grand Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Todo incluido, buena relación</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌮 CENTRO</span>
+              <h4 class="text-base font-bold text-white">Holiday Inn Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Centro, económico y cómodo</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏖️ ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Oasis Cancún Lite</h4>
+              <p class="text-xs text-gray-400 mb-4">Todo incluido accesible</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌮 CENTRO</span>
+              <h4 class="text-base font-bold text-white">Hostel Mundo Joven</h4>
+              <p class="text-xs text-gray-400 mb-4">Social, desde €15</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🌮 CENTRO</span>
+              <h4 class="text-base font-bold text-white">Hotel El Rey del Caribe</h4>
+              <p class="text-xs text-gray-400 mb-4">Eco-hotel boutique en centro</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ ZONA HOTELERA</span>
+              <h4 class="text-base font-bold text-white">Ambiance Villas</h4>
+              <p class="text-xs text-gray-400 mb-4">Zona hotelera, precio accesible</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
           </div>
         </section>
 
-        <!-- YOUTUBE COMPONENT -->
         <section class="mt-16">
           <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
             <h2 class="text-3xl font-bold text-white flex items-center gap-3">
               <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Cancún en Video
+              Explora Cancún en Video
             </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto CUN → Zona Hotelera</h3>
+              <p class="text-sm text-gray-400">La opción más cómoda es el <strong class="text-white">transfer privado</strong> reservado desde casa (€15-€25/persona). También hay <strong class="text-white">autobuses ADO</strong> desde la terminal 2 por <strong class="text-white">€4</strong>. El taxi oficial cuesta aprox <strong class="text-white">€25-€35</strong> fijo.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto CUN → Centro</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">autobús ADO</strong> es la opción más barata al centro (<strong class="text-white">€3</strong>, 20 minutos). Sale directamente de la terminal. Los taxis al centro cuestan <strong class="text-white">€15-€20</strong> fijo — negocia antes de subir.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Zona Hotelera ↔ Centro en bus</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">bus R-1 y R-2</strong> recorre toda la Zona Hotelera hasta el Centro por solo <strong class="text-white">€0.70</strong>. Sale cada 10-15 minutos. La forma más barata de moverse dentro de Cancún.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Cancún → Playa del Carmen / Tulum</h3>
+              <p class="text-sm text-gray-400">Autobuses <strong class="text-white">ADO</strong> cada 30 minutos desde la terminal del Centro. A Playa del Carmen <strong class="text-white">1h por €5</strong>. A Tulum <strong class="text-white">2h por €8</strong>. Cómodos, puntuales y con aire acondicionado.</p>
+            </div>
+          </div>
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Evita los "Transportistas" del Aeropuerto</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">Al salir del aeropuerto te abordarán decenas de personas ofreciendo taxis y transfers. <strong class="text-white">Ignóralos todos</strong> — cobran el triple. Ve directamente al mostrador oficial de ADO dentro de la terminal o reserva tu transfer online antes de salir de casa.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo (Más lugares por descubrir)</h2>
+          <ul class="divide-y divide-white/10">
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Xcaret Park</h3><p class="text-sm text-gray-400 mt-1">El parque eco-arqueológico más famoso de México. Nadas por ríos subterráneos, ves tortugas marinas y el espectáculo nocturno de folklore mexicano es impresionante. A 1h de Cancún.</p><a href="https://es.wikipedia.org/wiki/Xcaret" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Cobá (Ruinas Mayas)</h3><p class="text-sm text-gray-400 mt-1">Las ruinas mayas en medio de la selva donde aún puedes subir a la pirámide Nohoch Mul (42 metros). Chichén Itzá ya no lo permite. A 2.5h de Cancún.</p><a href="https://es.wikipedia.org/wiki/Cob%C3%A1" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Xel-Há (Snorkel Natural)</h3><p class="text-sm text-gray-400 mt-1">El acuario natural más grande del mundo donde un río de agua dulce se mezcla con el mar. Snorkel con cientos de peces de colores, toboganes y todo incluido.</p><a href="https://es.wikipedia.org/wiki/Xel-H%C3%A1" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Mercado 28 (Centro)</h3><p class="text-sm text-gray-400 mt-1">El mercado artesanal más grande de Cancún. Artesanías, ropa, recuerdos y comida local a precio justo. Compra tus souvenirs sin pagar el sobreprecio de la Zona Hotelera. El regateo es bienvenido.</p><a href="https://es.wikipedia.org/wiki/Canc%C3%BAn" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Laguna Nichupté</h3><p class="text-sm text-gray-400 mt-1">La laguna que separa la Zona Hotelera del continente. Perfecta para kayak, paddleboard, jetski y avistamiento de cocodrilos al amanecer.</p><a href="https://es.wikipedia.org/wiki/Laguna_Nichupt%C3%A9" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+            <li class="py-4 group"><h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Museo Maya de Cancún</h3><p class="text-sm text-gray-400 mt-1">El museo arqueológico más moderno de la Riviera Maya con más de 350 piezas mayas originales. Entrada €4, muy infravalorado por los turistas. Acceso directo a las ruinas de San Miguelito.</p><a href="https://es.wikipedia.org/wiki/Museo_Maya_de_Canc%C3%BAn" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a></li>
+          </ul>
         </section>
 
       </div>
 
-      <!-- SIDEBAR -->
-      <aside class="lg:col-span-4 space-y-12">
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+            Requisitos de Entrada
+          </h3>
+          <p class="text-sm text-gray-400">Cancún está en <strong class="text-white">México</strong>. Ciudadanos españoles y latinoamericanos entran <strong class="text-white">sin visa</strong> con pasaporte válido. Al aterrizar completa la <strong class="text-white">Forma Migratoria Múltiple (FMM)</strong> — digital y gratuita. Estancia máxima <strong class="text-white">180 días</strong>.</p>
+          <a href="https://www.inm.gob.mx/" target="_blank" class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all">Instituto Nacional de Migración</a>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Hotel todo incluido (medio)</span><span class="font-semibold text-white">€80-€150</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (fuera del hotel)</span><span class="font-semibold text-white">€15-€30</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Transporte (buses + taxi)</span><span class="font-semibold text-white">€5-€15</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Excursiones y actividades</span><span class="font-semibold text-white">€30-€80</span></li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+            <span class="text-gray-400">Total aprox:</span>
+            <span class="font-bold text-amber-500 text-2xl">€130<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
+          </div>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead><tr class="text-gray-400 text-xs uppercase tracking-wider"><th class="font-normal text-left pb-2">Mes</th><th class="font-normal pb-2">Máx</th><th class="font-normal pb-2">Mín</th><th class="font-normal pb-2">Lluvia</th></tr></thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">28°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">20°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">20°C</td><td class="py-2 text-gray-400">4 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">22°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">12 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">32°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">15 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">22°C</td><td class="py-2 text-gray-400">7 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
-          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips del Experto</h3>
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
           <ul class="space-y-4 text-sm">
-            <li><strong class="text-white">Agua:</strong> No bebas agua del grifo en México, usa siempre agua embotellada.</li>
-            <li><strong class="text-white">Bloqueador:</strong> Usa protector solar biodegradable para proteger los arrecifes y cenotes.</li>
+            <li class="text-gray-300"><span class="text-amber-500 font-bold block mb-1">Mejor época: Dic-Abril</span>Temporada seca sin huracanes. Junio-Noviembre es temporada de huracanes — precios bajan mucho pero el riesgo existe. Septiembre es el mes más lluvioso y peligroso.</li>
+            <li class="text-gray-300"><span class="text-amber-500 font-bold block mb-1">Sargazo en las playas</span>Desde 2015 las algas sargazo llegan entre mayo y octubre. La Zona Hotelera lo retira a diario pero puede arruinar la experiencia. Playa Norte en Isla Mujeres suele estar más limpia.</li>
+            <li class="text-gray-300"><span class="text-amber-500 font-bold block mb-1">Paga en pesos, no en dólares</span>Aunque aceptan dólares, el tipo de cambio es muy malo. Saca pesos en cajero (OXXO o Banorte) y paga siempre en moneda local para ahorrar un 15-20%.</li>
           </ul>
         </div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <p class="text-xs font-bold text-red-400 uppercase tracking-tighter">Temporada Caribe</p>
+
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative"><div class="w-3 h-3 bg-green-500 rounded-full"></div><div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div></div>
+            <div><p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado Aeropuerto</p><p class="text-xs text-green-400 font-bold">CUN Cancún: Operativo</p></div>
           </div>
-          <p class="text-[10px] text-gray-500">Clima excelente. Baja probabilidad de sargazo este mes.</p>
+          <a href="https://www.asur.com.mx/cancun" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">ASUR Oficial</a>
         </div>
       </aside>
-
     </div>
   </main>
-
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Vive México.
-  </footer>
 
   <script>
     async function loadCancunVideos() {
       const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: 'YeBMJ6xvMXk', title: 'CANCÚN ¿Cómo llegar y qué hacer? Guía 2026' },
-        { id: 'jezQNoZM5Os', title: 'TOP 10 Que Ver en Cancún: Guía Turística' },
-        { id: '3hqdKlXeOe0', title: 'LA SÚPER GUÍA DE CANCÚN BARATO' }
+        { id: 'YeBMJ6xvMXk', title: 'CANCÚN: Guía de viaje completa en español' },
+        { id: 'jezQNoZM5Os', title: 'Qué ver y hacer en Cancún — Consejos esenciales' },
+        { id: 'pvexnUJvE_E', title: 'Cancún: Todo lo que necesitas saber antes de ir' }
       ];
-
       try {
-        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-        const response = await fetch(`${backendUrl}/api/youtube-search?query=cancun+guia+viaje+español`);
-        if (!response.ok) throw new Error();
+        const response = await fetch('/api/youtube-search?query=cancun+guia+viaje+español');
+        if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
-      } catch (e) {
-        renderVideos(fallbackVideos);
-      }
+      } catch (e) { renderVideos(fallbackVideos); }
     }
-
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
-          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
+        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
+          <div class="relative aspect-video">
+            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
           <div class="p-4">
-            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
           </div>
         </div>
       `).join('');
     }
     document.addEventListener('DOMContentLoaded', loadCancunVideos);
   </script>
-
 </body>
-
 </html>

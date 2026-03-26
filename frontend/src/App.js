@@ -126,22 +126,16 @@ function App() {
             <Menu size={24} className="text-slate-300" />
           </button>
           <div className="flex items-center gap-2.5">
-            {/* Logo mejorado con icono de avión */}
-            <div className="relative flex items-center justify-center w-9 h-9">
-              {/* Círculo de fondo con degradado */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 via-cyan-400 to-purple-500 rounded-full animate-slow-pulse shadow-lg shadow-blue-500/30"></div>
-              {/* Icono de avión en blanco */}
-              <svg 
-                className="relative z-10 w-5 h-5 text-white transform rotate-45" 
-                fill="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-              </svg>
+            {/* Logo de Skylio - Extra Grande, Premium y Fondo Negro */}
+            <div className="flex items-center bg-black p-4 rounded-3xl shadow-2xl shadow-black border border-amber-500/40 hover:scale-105 hover:border-amber-500/60 transition-all duration-500">
+              <div className="bg-white/95 rounded-2xl p-2 shadow-inner">
+                <img 
+                  src="/images/logo-new.jpg" 
+                  alt="Skylio Viajes" 
+                  className="h-28 md:h-40 w-auto object-contain rounded-xl flex-shrink-0" 
+                />
+              </div>
             </div>
-            <h1 className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-cyan-300 to-purple-400">
-              {t('app.title')}
-            </h1>
           </div>
         </div>
         <div className="flex items-center gap-2">

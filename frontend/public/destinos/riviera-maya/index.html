@@ -4,280 +4,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riviera Maya Master Guide | Skylio Travel 2.0</title>
-  <meta name="description" content="Guía definitiva de Riviera Maya: Cenotes, Tulum, Playa del Carmen y los mejores resorts eco-lujo.">
+  <title>Riviera Maya - Skylio Destinos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
-    @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.7; }
-    }
-    .animate-pulse-soft {
-      animation: pulse-soft 2s infinite;
-    }
-    .glass-shine {
-      position: relative;
-      overflow: hidden;
-    }
-    .glass-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
-      transform: rotate(45deg);
-      transition: 0.5s;
-    }
-    .glass-shine:hover::after {
-      left: 100%;
-      top: 100%;
-    }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
+    .animate-pulse-soft { animation: pulse-soft 2s infinite; }
+    .glass-shine { position: relative; overflow: hidden; }
+    .glass-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent); transform: rotate(45deg); transition: 0.5s; }
+    .glass-shine:hover::after { left: 100%; top: 100%; }
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
 
-  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
-      <div class="flex items-center gap-8">
-        <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <span class="text-black font-black text-xl">S</span>
-          </div>
-          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
+  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          Skylio Viajes
         </a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
-          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">Riviera Maya</a>
-          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
-          <a href="#cenotes" class="hover:text-amber-500 transition-colors">Cenotes</a>
-        </div>
+        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
       </div>
-      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
+      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
-  <!-- CAPA 1: HERO (RIVIERA MAYA) -->
-  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1504730030853-eff311f57d3c?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Riviera Maya Cenote">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
-        🌿 Selva Sagrada y Lujo Consciente
-      </span>
-      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
-        Riviera Maya<span class="text-amber-500">.</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-        Donde el tiempo se detiene bajo el dosel verde. Un santuario de aguas místicas, ruinas costeras y experiencias de reconexión.
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">28°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Anual</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">MXN</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$145+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT-6</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
-      </div>
+  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518107616385-ad3089109f59?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇲🇽 Selva, Mar y Espíritu Maya</span>
+      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Riviera Maya</h1>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Cenotes sagrados, ruinas frente al azul turquesa y el lujo más eco-chic del mundo.</p>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
-    
-    <!-- FONDO SUTIL (TULUM) -->
-    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none -rotate-6 hidden lg:block">
-      <img src="https://images.unsplash.com/photo-1533722254395-51a44e69ade7?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Tulum Beach Ruins">
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      
-      <!-- CONTENIDO PRINCIPAL -->
-      <div class="lg:col-span-8 space-y-24">
-        
-        <!-- BIENVENIDA -->
-        <section class="mt-12">
-          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
-          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
-            La Riviera Maya es un <span class="italic text-amber-500">abrazo de la selva</span>. Un corredor infinito de maravillas naturales y espirituales.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
-            <p>Extendiéndose desde Puerto Morelos hasta la biosfera de Sian Ka'an, la Riviera Maya es hogar de los resorts más exclusivos de México y de miles de cenotes sagrados que los Mayas consideraban portales al inframundo.</p>
-            <p>Aquí, el lujo no es solo un servicio, sino una armonía con el entorno. Explora las ruinas de Tulum al amanecer, nada con tortugas en Akumal o déjate llevar por la sofisticada energía de Playa del Carmen.</p>
-          </div>
-        </section>
-
-        <!-- BARRIOS / ZONAS -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+      <div class="lg:col-span-8 space-y-12">
         <section>
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Corazón de la Riviera</h2>
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Top Spots Maya</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Corredor Turístico (Zonas)</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
               <h3 class="text-xl font-bold text-white mb-2">Playa del Carmen</h3>
-              <p class="text-sm text-gray-400">El núcleo vibrante. La Quinta Avenida ofrece shopping, gastronomía y una mezcla cosmopolita única en el Caribe.</p>
+              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
+                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🛍️ Quinta Avenida</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🍹 Vida Nocturna</span>
+              </div>
+              <p class="text-sm text-gray-400">El epicentro de la Riviera. Hoteles boutique, compras y la famosa movida de la calle 12.</p>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Tulum Town & Beach</h3>
-              <p class="text-sm text-gray-400">Ambiente eco-chic y boho. Ruinas sobre el acantilado, clubes de playa exclusivos y retiros espirituales en la selva.</p>
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Tulum</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
+                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🧘 Eco-Chic</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🏛️ Ruinas Mayas</span>
+              </div>
+              <p class="text-sm text-gray-400">Donde la selva toca el mar. Retiros de yoga, beach clubs exclusivos y arqueología única.</p>
             </div>
           </div>
         </section>
 
-        <!-- EXPERIENCIAS IMPERDIBLES -->
-        <section id="cenotes">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Experiencias Imperdibles</h2>
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=riviera+maya&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80" alt="Cenote Dos Ojos" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Exploración de Cenotes</h3>
-                <p class="text-sm text-gray-400 mt-2">Sumérgete en Dos Ojos o el Cenote Azul. Aguas cristalinas y cuevas milenarias te esperan.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Guías ↗</span>
+            <a href="https://www.klook.com/search/result/?query=xcaret+riviera+maya&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1518107616385-ad3089109f59?w=800&q=80" class="h-48 w-full object-cover">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Parque Xcaret / Xel-Há</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €100-€150</p>
+                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Entradas ↗</div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=riviera+maya&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=800&q=80" alt="Parque Xcaret" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Parques Xcaret & Xel-Há</h3>
-                <p class="text-sm text-gray-400 mt-2">La mejor combinación de naturaleza, cultura mexicana y aventura acuática del mundo.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Entradas All-Inclusive ↗</span>
+            <a href="https://www.klook.com/search/result/?query=cenotes+riviera+maya&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1504730655501-24c39ac53f0e?w=800&q=80" class="h-48 w-full object-cover">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Ruta de los Cenotes</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €20-€50</p>
+                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Explorar ahora ↗</div>
               </div>
             </a>
           </div>
         </section>
 
-        <!-- ITINERARIO -->
-        <section id="itinerario">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ 2 Días de Magia</h2>
-          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Ruinas y Aguas Sagradas</h4>
-              <p class="text-gray-400 text-sm mt-1">Amanecer en las ruinas de Tulum, nado en Cenote Dos Ojos y cena en la Quinta Avenida.</p>
-            </div>
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Vida Marina y Playa</h4>
-              <p class="text-gray-400 text-sm mt-1">Snorkel con tortugas en Akumal, tarde de relax en Mamita's Beach Club y cócteles tropicales.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- HOTELES (REGION ID 6140595) -->
-        <section id="hoteles">
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Eco-Lujo y Resorts</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Rosewood Mayakoba</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Exclusividad absoluta. Villas sobre canales de agua cristalina.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Riviera%20Maya&regionId=6140595&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Grand Velas Riviera</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">El mejor Todo Incluido de lujo de México. Experiencia Michelin.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Riviera%20Maya&regionId=6140595&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Hotel Xcaret Arte</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Todo-incluido de flujo: parques ilimitados y arte mexicano real.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Riviera%20Maya&regionId=6140595&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- YOUTUBE COMPONENT -->
         <section class="mt-16">
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Riviera Maya en Video
-            </h2>
-          </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+            <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Riviera Maya en Video
+          </h2>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"></div>
         </section>
-
       </div>
 
-      <!-- SIDEBAR -->
-      <aside class="lg:col-span-4 space-y-12">
-        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
-          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips de la Selva</h3>
-          <ul class="space-y-4 text-sm">
-            <li><strong class="text-white">Cenotes:</strong> Dúchate antes de entrar para quitar químicos; usa solo bloqueador biodegradable.</li>
-            <li><strong class="text-white">Colectivos:</strong> Úsalos para moverte entre Playa y Tulum por una fracción del precio del taxi.</li>
-          </ul>
-        </div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <p class="text-xs font-bold text-green-400 uppercase tracking-tighter">Estado Arrecife</p>
-          </div>
-          <p class="text-[10px] text-gray-500">Visibilidad alta para snorkel y buceo en Akumal y Cozumel.</p>
-        </div>
+      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8 text-sm">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3><ul class="space-y-3">
+          <li class="flex justify-between"><span>🏨 Hotel Luxury Tulum</span><span class="text-white font-bold">€300+</span></li>
+          <li class="flex justify-between"><span>🥘 Buffet Resort</span><span class="text-white font-bold">€40</span></li>
+          <li class="flex justify-between"><span>🚐 Colectivos (Bus)</span><span class="text-white font-bold">€3</span></li>
+        </ul></div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-sm font-bold text-gray-500 mb-4 uppercase tracking-widest">Sargazo Watch</h3><p class="text-[10px] text-green-400 font-bold uppercase tracking-widest">ESTADO ACTUAL: BAJO</p><p class="text-[10px] text-gray-400 mt-2">Revisa las webcams en vivo antes de ir a Playa del Carmen o Tulum.</p></div>
+        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine"><h3 class="text-xl font-bold text-amber-500 mb-4">¿Sabías que...?</h3><p class="text-xs text-gray-300">Los <strong class="text-white">Cenotes</strong> eran considerados entradas al inframundo (Xibalbá) por los antiguos Mayas.</p></div>
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><p class="text-[10px] text-green-400 font-bold tracking-widest uppercase">Tren Maya: En Operación</p></div>
       </aside>
-
     </div>
   </main>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Explora lo Sagrado.
-  </footer>
+  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">© 2024 Skylio Travel 2.0. Enlaces de afiliados — Riviera Maya es vida.</footer>
 
   <script>
-    async function loadRivieraVideos() {
-      const container = document.getElementById('youtube-gallery');
+    async function loadRivVideo() {
       const fallbackVideos = [
-        { id: '3hqdKlXeOe0', title: 'LA SÚPER GUÍA DE RIVIERA MAYA BARATO' },
-        { id: 'eAxsl9rNyM8', title: 'PLAYA del CARMEN ¿Qué hacer? Guía Completa' },
-        { id: '01_rCm1VumE', title: 'ERRORES que podrían ARRUINAR tu viaje a Riviera Maya' }
+        { id: 'xywWUb4XaL8', title: 'RIVIERA MAYA: Guía de viaje completa' },
+        { id: '-54PGS09v5s', title: 'TULUM: Lo que nadie te cuenta' },
+        { id: 'EmAErjY5XbA', title: 'PLAYA DEL CARMEN: Guía 2024' }
       ];
-
       try {
-        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-        const response = await fetch(`${backendUrl}/api/youtube-search?query=riviera+maya+guia+viaje+español`);
+        const response = await fetch('/api/youtube-search?query=riviera+maya+guia+viaje+español');
         if (!response.ok) throw new Error();
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
-      } catch (e) {
-        renderVideos(fallbackVideos);
-      }
+      } catch (e) { renderVideos(fallbackVideos); }
     }
-
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
-          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
-          <div class="p-4">
-            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
+          <div class="relative aspect-video">
+            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
           </div>
+          <div class="p-4"><h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3><a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a></div>
         </div>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadRivieraVideos);
+    document.addEventListener('DOMContentLoaded', loadRivVideo);
   </script>
-
 </body>
-
 </html>

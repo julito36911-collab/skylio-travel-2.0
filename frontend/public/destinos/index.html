@@ -16,7 +16,7 @@
 <nav class="topbar">
   <div class="topbar-inner">
     <a href="/" class="btn-back">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      <svg class="w-4 h-4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
       Skylio Viajes
     </a>
     <div class="topbar-brand">✈️ <span>Skylio</span> Destinos</div>
@@ -25,16 +25,16 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-badge">🎨 Mapa Artístico</span>
+    <span class="hero-badge">✨ Mapa Interactivo 2.0</span>
     <h1>Explora el Mundo con Skylio</h1>
-    <p>Usa el buscador o navega por el mapa interactivo para encontrar tu próximo destino.</p>
+    <p>Navega el mapa sín límites o busca tu próxima aventura en nuestras guías premium.</p>
   </div>
 </header>
 
 <section class="search-section">
   <div class="search-box" id="searchBox">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" id="searchInput" placeholder="Busca tu destino..." autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Busca tu destino (ej. Londres, Tokio...)" autocomplete="off">
     <div class="search-results" id="searchResults"></div>
   </div>
 </section>
@@ -47,13 +47,13 @@
 <!-- ALL DESTINATIONS -->
 <section class="all-dest-section">
   <h2 class="section-title">🌎 Todos los Destinos</h2>
-  <p class="section-subtitle">Explora por país — haz clic para ver las ciudades disponibles</p>
+  <p class="section-subtitle">Países con guías disponibles — Haz clic para explorar</p>
   <div class="country-chips" id="countryChips"></div>
 </section>
 
 <footer class="footer">
   <div class="footer-brand">✈️ <span>Skylio</span> Destinos</div>
-  <p>Parte de <a href="/">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
+  <p>© 2024 <a href="/" style="color: var(--accent);">Skylio Viajes</a> — Tu portal de viajes inteligente</p>
 </footer>
 
 <!-- Leaflet JS -->
@@ -63,91 +63,69 @@
 /* ════════════ DATA ════════════ */
 const destinations = {
   es: { 
-    name: 'España', flag: '🇪🇸', coords: [40.4, -3.7], color: '#e07b39',
+    name: 'España', flag: '🇪🇸', coords: [40.4, -3.7], color: '#f59e0b',
     cities: [
-      { name: 'Barcelona', slug: 'barcelona', img: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&q=80', desc: 'Gaudí, playas mediterráneas y Las Ramblas' },
-      { name: 'Madrid', slug: 'madrid', img: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=600&q=80', desc: 'El Prado, tapas de primera y la Gran Vía' }
+      { name: 'Barcelona', slug: 'barcelona' },
+      { name: 'Madrid', slug: 'madrid' }
     ]
   },
   fr: { 
-    name: 'Francia', flag: '🇫🇷', coords: [46.6, 2.3], color: '#0ea5a0',
-    cities: [
-      { name: 'París', slug: 'paris', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80', desc: 'Torre Eiffel, el Louvre y romance eterno' }
-    ]
+    name: 'Francia', flag: '🇫🇷', coords: [48.8, 2.3], color: '#3b82f6',
+    cities: [{ name: 'París', slug: 'paris' }]
   },
   it: { 
-    name: 'Italia', flag: '🇮🇹', coords: [41.9, 12.5], color: '#2ecc71',
+    name: 'Italia', flag: '🇮🇹', coords: [41.9, 12.5], color: '#10b981',
     cities: [
-      { name: 'Roma', slug: 'roma', img: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80', desc: 'Coliseo, Vaticano y 3.000 años de historia' },
-      { name: 'Venecia', slug: 'venecia', img: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80', desc: 'Góndolas, San Marco y puentes románticos' }
+      { name: 'Roma', slug: 'roma' },
+      { name: 'Venecia', slug: 'venecia' }
     ]
   },
   gr: { 
-    name: 'Grecia', flag: '🇬🇷', coords: [37.4, 25.4], color: '#3498db',
-    cities: [
-      { name: 'Santorini', slug: 'santorini', img: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80', desc: 'Cúpulas azules y atardeceres legendarios' }
-    ]
+    name: 'Grecia', flag: '🇬🇷', coords: [36.4, 25.4], color: '#60a5fa',
+    cities: [{ name: 'Santorini', slug: 'santorini' }]
   },
   gb: { 
-    name: 'Reino Unido', flag: '🇬🇧', coords: [51.5, -0.1], color: '#9b59b6',
-    cities: [
-      { name: 'Londres', slug: 'londres', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80', desc: 'Big Ben, el Támesis y museos gratuitos' }
-    ]
+    name: 'Reino Unido', flag: '🇬🇧', coords: [51.5, -0.1], color: '#8b5cf6',
+    cities: [{ name: 'Londres', slug: 'londres' }]
   },
   ae: { 
-    name: 'Emiratos Árabes', flag: '🇦🇪', coords: [25.2, 55.3], color: '#f1c40f',
-    cities: [
-      { name: 'Dubai', slug: 'dubai', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80', desc: 'Burj Khalifa, islas artificiales y lujo extremo' }
-    ]
+    name: 'Emiratos Árabes', flag: '🇦🇪', coords: [25.2, 55.3], color: '#facc15',
+    cities: [{ name: 'Dubai', slug: 'dubai' }]
   },
   th: { 
-    name: 'Tailandia', flag: '🇹🇭', coords: [13.7, 100.5], color: '#e67e22',
-    cities: [
-      { name: 'Bangkok', slug: 'bangkok', img: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80', desc: 'Templos dorados y street food legendaria' }
-    ]
+    name: 'Tailandia', flag: '🇹🇭', coords: [13.7, 100.5], color: '#f97316',
+    cities: [{ name: 'Bangkok', slug: 'bangkok' }]
   },
   id: { 
-    name: 'Indonesia', flag: '🇮🇩', coords: [-8.4, 115.2], color: '#1abc9c',
-    cities: [
-      { name: 'Bali', slug: 'bali', img: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80', desc: 'Templos, terrazas de arroz y playas de surf' }
-    ]
+    name: 'Indonesia', flag: '🇮🇩', coords: [-8.4, 115.2], color: '#2dd4bf',
+    cities: [{ name: 'Bali', slug: 'bali' }]
   },
   mv: { 
-    name: 'Maldivas', flag: '🇲🇻', coords: [3.2, 73.2], color: '#00d2d3',
-    cities: [
-      { name: 'Maldivas', slug: 'maldivas', img: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80', desc: 'Bungalows sobre el agua y arrecifes de coral' }
-    ]
+    name: 'Maldivas', flag: '🇲🇻', coords: [3.2, 73.2], color: '#22d3ee',
+    cities: [{ name: 'Maldivas', slug: 'maldivas' }]
   },
   jp: { 
-    name: 'Japón', flag: '🇯🇵', coords: [35.7, 139.7], color: '#ff4d4d',
-    cities: [
-      { name: 'Tokio', slug: 'tokio', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80', desc: 'Tradición y futuro: templos zen y neones' }
-    ]
+    name: 'Japón', flag: '🇯🇵', coords: [35.7, 139.7], color: '#ef4444',
+    cities: [{ name: 'Tokio', slug: 'tokio' }]
   },
   mx: { 
-    name: 'México', flag: '🇲🇽', coords: [21.2, -86.8], color: '#d35400',
+    name: 'México', flag: '🇲🇽', coords: [21.2, -86.8], color: '#ea580c',
     cities: [
-      { name: 'Cancún', slug: 'cancun', img: 'https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80', desc: 'Zona hotelera, ruinas mayas y cenotes' },
-      { name: 'Riviera Maya', slug: 'riviera-maya', img: 'https://images.unsplash.com/photo-1504730030853-eff311f57d3c?w=600&q=80', desc: 'Cenotes sagrados y resorts boutique de lujo' }
+      { name: 'Cancún', slug: 'cancun' },
+      { name: 'Riviera Maya', slug: 'riviera-maya' }
     ]
   },
   co: { 
-    name: 'Colombia', flag: '🇨🇴', coords: [10.4, -75.5], color: '#f39c12',
-    cities: [
-      { name: 'Cartagena', slug: 'cartagena', img: 'https://images.unsplash.com/photo-1583531172005-814194fa1279?w=600&q=80', desc: 'Ciudad amurallada y el Caribe colombiano' }
-    ]
+    name: 'Colombia', flag: '🇨🇴', coords: [10.4, -75.5], color: '#fbbf24',
+    cities: [{ name: 'Cartagena', slug: 'cartagena' }]
   },
   do: { 
-    name: 'República Dominicana', flag: '🇩🇴', coords: [18.5, -69.9], color: '#34495e',
-    cities: [
-      { name: 'Punta Cana', slug: 'punta-cana', img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80', desc: 'Arena blanca y resorts todo incluido' }
-    ]
+    name: 'República Dominicana', flag: '🇩🇴', coords: [18.5, -69.9], color: '#ef4444',
+    cities: [{ name: 'Punta Cana', slug: 'punta-cana' }]
   },
   us: { 
-    name: 'Estados Unidos', flag: '🇺🇸', coords: [25.8, -80.2], color: '#2c3e50',
-    cities: [
-      { name: 'Miami', slug: 'miami', img: 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&q=80', desc: 'South Beach, Art Deco y cultura latina vibrante' }
-    ]
+    name: 'Estados Unidos', flag: '🇺🇸', coords: [25.8, -80.2], color: '#3b82f6',
+    cities: [{ name: 'Miami', slug: 'miami' }]
   }
 };
 
@@ -156,25 +134,16 @@ const map = L.map('map', {
   minZoom: 2,
   maxZoom: 12,
   scrollWheelZoom: true,
-  zoomControl: false /* We'll add it manually to position it better */
+  zoomControl: false
 }).setView([15, 0], 2);
 
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-/* Watercolor Tile Layer */
-L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-}).addTo(map);
-
-/* Border Lines Layer (Toner Lines) */
-L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lines/{z}/{x}/{y}.png', {
-  opacity: 0.3,
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.'
-}).addTo(map);
-
-/* Toner Labels Layer */
-L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+/* Premium Dark Mode Tile Layer */
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; CARTO',
+  subdomains: 'abcd',
+  maxZoom: 19
 }).addTo(map);
 
 const markers = {};
@@ -183,9 +152,9 @@ const markers = {};
 Object.entries(destinations).forEach(([code, country]) => {
   const customIcon = L.divIcon({
     className: 'custom-marker',
-    html: `<div class="marker-circle" style="background-color: ${country.color}">${country.flag}</div>`,
-    iconSize: [40, 40],
-    iconAnchor: [20, 20]
+    html: `<div class="marker-circle" style="border-color: ${country.color}">${country.flag}</div>`,
+    iconSize: [44, 44],
+    iconAnchor: [22, 22]
   });
 
   const marker = L.marker(country.coords, { icon: customIcon }).addTo(map);
@@ -193,89 +162,66 @@ Object.entries(destinations).forEach(([code, country]) => {
   const popupContent = `
     <div class="custom-popup">
       <h3>${country.flag} ${country.name}</h3>
-      <p>Ciudades disponibles:</p>
+      <p>Explorar ciudad:</p>
       <div class="popup-links">
-        ${country.cities.map(city => `<a href="/destinos/${city.slug}/" class="popup-btn">${city.name}</a>`).join('')}
+        ${country.cities.map(city => `<a href="./${city.slug}/" class="popup-btn">${city.name}</a>`).join('')}
       </div>
     </div>
   `;
 
-  marker.bindPopup(popupContent, { maxWidth: 250 });
+  marker.bindPopup(popupContent, { maxWidth: 280, className: 'dark-popup' });
   markers[code] = marker;
 });
 
 /* ════════════ SEARCH ════════════ */
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
-const searchBox = document.getElementById('searchBox');
-
-function normalize(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
-
 const searchIndex = [];
-Object.entries(destinations).forEach(([code, c]) => {
-  searchIndex.push({ type: 'country', code, label: c.name, flag: c.flag });
-  c.cities.forEach(city => {
-    searchIndex.push({ type: 'city', code, label: city.name, flag: c.flag, slug: city.slug });
+Object.entries(destinations).forEach(([code, country]) => {
+  country.cities.forEach(city => {
+    searchIndex.push({ label: city.name, code, slug: city.slug, flag: country.flag });
   });
 });
 
 searchInput.addEventListener('input', function() {
-  const q = normalize(this.value.trim());
-  if (q.length < 1) { searchResults.classList.remove('open'); return; }
-  const matches = searchIndex.filter(i => normalize(i.label).includes(q)).slice(0, 8);
-  if (!matches.length) {
-    searchResults.innerHTML = '<div class="sr-empty">Sin resultados para "<b>' + this.value.trim() + '</b>"</div>';
-  } else {
-    searchResults.innerHTML = matches.map(m =>
-      `<div class="sr-item" data-code="${m.code}" ${m.slug ? `data-slug="${m.slug}"` : ''}>
-         <span class="sr-flag">${m.flag}</span>
-         <span class="sr-label">${m.label}</span>
-         <span class="sr-badge">${m.type === 'country' ? 'País' : 'Ciudad'}</span>
-       </div>`
-    ).join('');
-  }
-  searchResults.classList.add('open');
+  const q = this.value.toLowerCase().trim();
+  if (!q) { searchResults.classList.remove('open'); return; }
+  const matches = searchIndex.filter(i => i.label.toLowerCase().includes(q));
   
-  searchResults.querySelectorAll('.sr-item').forEach(el => {
-    el.addEventListener('click', () => {
-      const code = el.dataset.code;
-      const country = destinations[code];
-      const marker = markers[code];
-      
-      if (marker) {
-        map.flyTo(country.coords, 6, { duration: 1.5 });
-        setTimeout(() => marker.openPopup(), 1500);
-      }
-      
-      searchResults.classList.remove('open');
-      searchInput.value = '';
-    });
-  });
+  if (matches.length) {
+    searchResults.innerHTML = matches.map(m => `
+      <div class="sr-item" onclick="flyToCity('${m.code}')">
+        <span class="sr-flag">${m.flag}</span>
+        <span class="sr-label">${m.label}</span>
+        <span class="sr-badge">Guía</span>
+      </div>
+    `).join('');
+    searchResults.classList.add('open');
+  } else {
+    searchResults.innerHTML = '<div class="sr-item sr-label">Sin resultados</div>';
+    searchResults.classList.add('open');
+  }
 });
 
-document.addEventListener('click', e => { if (!searchBox.contains(e.target)) searchResults.classList.remove('open'); });
+function flyToCity(code) {
+  const c = destinations[code];
+  map.flyTo(c.coords, 6, { duration: 1.5 });
+  setTimeout(() => markers[code].openPopup(), 1500);
+  searchResults.classList.remove('open');
+  searchInput.value = '';
+}
 
 /* ════════════ COUNTRY CHIPS ════════════ */
 const countryChips = document.getElementById('countryChips');
 countryChips.innerHTML = Object.entries(destinations).map(([code, c]) =>
-  `<button class="chip" data-code="${code}">
+  `<button class="chip" onclick="flyToCity('${code}')">
     <span class="chip-flag">${c.flag}</span>
     <span class="chip-name">${c.name}</span>
     <span class="chip-count">${c.cities.length}</span>
    </button>`
 ).join('');
 
-countryChips.querySelectorAll('.chip').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const code = btn.dataset.code;
-    const country = destinations[code];
-    const marker = markers[code];
-    if (marker) {
-      map.flyTo(country.coords, 6, { duration: 1.5 });
-      setTimeout(() => marker.openPopup(), 1500);
-    }
-  });
-});
+document.addEventListener('click', e => { if (!searchBox.contains(e.target)) searchResults.classList.remove('open'); });
 </script>
 
 </body>

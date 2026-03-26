@@ -4,280 +4,547 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maldivas Master Guide | Skylio Travel 2.0</title>
-  <meta name="description" content="Guía definitiva de las Islas Maldivas: Villas sobre el agua, buceo en resorts privados y lo mejor del paraíso.">
+  <title>Maldivas - Skylio Destinos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
-    @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.7; }
-    }
-    .animate-pulse-soft {
-      animation: pulse-soft 2s infinite;
-    }
-    .glass-shine {
-      position: relative;
-      overflow: hidden;
-    }
-    .glass-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
-      transform: rotate(45deg);
-      transition: 0.5s;
-    }
-    .glass-shine:hover::after {
-      left: 100%;
-      top: 100%;
-    }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
+    .animate-pulse-soft { animation: pulse-soft 2s infinite; }
+    .glass-shine { position: relative; overflow: hidden; }
+    .glass-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent); transform: rotate(45deg); transition: 0.5s; }
+    .glass-shine:hover::after { left: 100%; top: 100%; }
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 font-sans selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative">
 
-  <!-- CAPITAL NAVIGATION (GLOBAL NAVBAR) -->
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-    <div class="bg-black/20 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
-      <div class="flex items-center gap-8">
-        <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <span class="text-black font-black text-xl">S</span>
-          </div>
-          <span class="text-white font-bold tracking-tighter text-xl">SKYLIO</span>
+  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
+          Skylio Viajes
         </a>
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="../" class="hover:text-amber-500 transition-colors">Destinos</a>
-          <a href="#" class="hover:text-amber-500 transition-colors underline decoration-amber-500 underline-offset-4">Maldivas</a>
-          <a href="#hoteles" class="hover:text-amber-500 transition-colors">Hoteles</a>
-          <a href="#vida-marina" class="hover:text-amber-500 transition-colors">Vida Marina</a>
-        </div>
+        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors">
+          <span class="text-white">Skylio</span> Destinos
+        </a>
       </div>
-      <a href="/" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
-  <!-- CAPA 1: HERO (MALDIVAS) -->
-  <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1600&q=80" class="w-full h-full object-cover opacity-50 mix-blend-luminosity scale-110" alt="Maldives Overwater Villas">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f16]/0 via-[#0a0f16]/40 to-[#0a0f16]"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
-        🐚 El Último Refugio del Índico
-      </span>
-      <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter mb-6 font-serif">
-        Maldivas<span class="text-amber-500">.</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-        Donde el horizonte se funde con el turquesa. Un archipiélago de sueños, villas flotantes y arrecifes infinitos.
-      </p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-white/5 pt-8">
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">29°C</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Media Anual</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">MVR</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Moneda</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">$300+</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Presupuesto/Día</p></div>
-        <div><p class="text-white font-bold text-2xl uppercase tracking-tighter">GMT+5</p><p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Zona Horaria</p></div>
-      </div>
+  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-cyan-900/20 mix-blend-color pointer-events-none"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Maldivas</h1>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">La guía definitiva: Villas sobre el agua, arrecifes de coral, lujo absoluto y el paraíso en la Tierra.</p>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 pb-24 relative">
-    
-    <!-- FONDO SUTIL (SANDBAR) -->
-    <div class="absolute top-[20%] right-[-10%] opacity-[0.05] pointer-events-none rotate-6 hidden lg:block">
-      <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" class="w-[600px] grayscale brightness-125" alt="Maldives Sandbar">
-    </div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-      
-      <!-- CONTENIDO PRINCIPAL -->
-      <div class="lg:col-span-8 space-y-24">
-        
-        <!-- BIENVENIDA -->
-        <section class="mt-12">
-          <h2 class="text-sm font-bold text-amber-500 uppercase tracking-[0.2em] mb-4">01. Bienvenido</h2>
-          <p class="text-3xl md:text-4xl text-white font-serif leading-tight">
-            Maldivas es un <span class="italic text-amber-500">universo de coral</span>. El destino donde el lujo y la naturaleza bailan en perfecta armonía.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 text-gray-400 leading-relaxed">
-            <p>Conformado por más de mil islas coralinas, Maldivas es el estándar de oro del viaje romántico. Aquí, cada resort es su propia isla privada, ofreciendo una desconexión total del ruido del mundo moderno.</p>
-            <p>Desde ver tiburones ballena en el atolón Ari hasta dormir bajo las estrellas en un bungalow sobre el agua, las Maldivas son una experiencia sensorial que redefine el concepto de paraíso.</p>
-          </div>
-        </section>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
 
-        <!-- ZONAS / ATOLONES -->
+      <div class="lg:col-span-8 space-y-12">
+
+        <!-- ZONAS -->
         <section>
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white tracking-tight">🗺️ Atolones de Ensueño</h2>
-            <span class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Island Groupings</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Atolón de Malé</h3>
-              <p class="text-sm text-gray-400">El acceso principal. Resorts icónicos a corta distancia en lancha rápida. Ideal para quienes buscan comodidad y lujo rápido.</p>
+              <svg class="w-8 h-8 text-cyan-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">North Malé Atoll</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">✈️ MÁS ACCESIBLE</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏨 TODO TIPO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">El atolón más cercano al aeropuerto internacional de Malé. La mayoría de resorts se alcanzan en 20-45 minutos en lancha rápida. Perfecta relación calidad-precio: hay desde resorts de lujo extremo hasta hoteles tipo guesthouse en islas locales como Maafushi o Thulusdhoo, donde puedes alojarte por €40-€80/noche.</p>
             </div>
+
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Atolones Remotos</h3>
-              <p class="text-sm text-gray-400">Baa y Ari: Santuarios de la UNESCO con la vida marina más rica del planeta. Accesibles mediante un impresionante vuelo en hidroavión.</p>
+              <svg class="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">South Malé Atoll</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🤿 BUCEO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🦈 MANTAS</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Famoso por sus puntos de buceo excepcionales y los avistamientos de mantas rayas gigantes. Los resorts de este atolón son algo más exclusivos y alejados — se llega en 30-60 min en lancha. Aquí está el arrecife de Guraidhoo, uno de los mejores del mundo para bucear con tiburones de arrecife.</p>
             </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Baa & Raa Atoll</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌊 UNESCO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">👑 ULTRA LUJO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Reserva de la Biosfera UNESCO y el lugar más espectacular de Maldivas para snorkel con mantas rayas y tiburones ballena. Se llega en hidroavión (45 min desde Malé, €200-€300 ida y vuelta) o vuelo doméstico. Aquí están algunos de los mejores resorts del mundo: Six Senses, Four Seasons Landaa Giraavaru.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Malé (Ciudad Capital)</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌆 CIUDAD</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💰 ECONÓMICO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">La capital más pequeña y densa del mundo. Muy pocos turistas se alojan aquí pero es interesante visitarla para entender la cultura maldiva real — mezquitas de coral, mercado de pescado, colores brillantes. Si tu vuelo llega de noche, alojarse en Malé una noche es la opción más económica antes de ir al resort.</p>
+            </div>
+
           </div>
         </section>
 
-        <!-- VIDA MARINA -->
-        <section id="vida-marina">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Experiencias Imperdibles</h2>
+        <!-- LUGARES IMPERDIBLES -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=maldives&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1544282401-047-d79a71a590e8?w=800&q=80" alt="Snorkel Maldivas" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Snorkel y Buceo de Clase Mundial</h3>
-                <p class="text-sm text-gray-400 mt-2">Nada con mantas raya y tortugas en arrecifes vírgenes a solo pasos de tu habitación.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Tours y Actividades ↗</span>
+
+            <a href="https://www.klook.com/search/result/?query=maldives+overwater+villa+resort&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1200&auto=format" alt="Villa sobre el agua Maldivas" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Villas sobre el Agua</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €300/noche — La experiencia definitiva</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Despertar con el océano debajo de tu cama y bajar al agua desde tu terraza privada. Las overwater villas son el símbolo de Maldivas — una experiencia que vale para toda la vida aunque sea solo una noche.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Ver Resorts
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=maldives&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" alt="Sandbar Maldivas" class="h-48 w-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Pícnic en un Banco de Arena</h3>
-                <p class="text-sm text-gray-400 mt-2">Siente la soledad más absoluta y bella en un banco de arena privada en medio del océano.</p>
-                <span class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-500 uppercase">Ver Excursiones Privadas ↗</span>
+
+            <a href="https://www.klook.com/search/result/?query=maldives+snorkeling+reef+tour&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1593665840592-8c662655fb65?q=80&w=1200&auto=format" alt="Snorkel arrecife coral Maldivas" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Snorkel & Buceo en Arrecifes</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Snorkel desde €25 — Buceo desde €60</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Los arrecifes de coral de Maldivas están entre los más ricos del planeta. Tortugas verdes, tiburones de arrecife, mantas rayas gigantes y miles de peces de colores a solo metros de la orilla. El snorkel desde la playa del resort es gratis.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Excursión
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
+
+            <a href="https://www.klook.com/search/result/?query=maldives+dolphin+cruise+sunset&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1667537795421-7dc0be17f503?q=80&w=1200&auto=format" alt="Playa paraíso Maldivas atardecer" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Crucero al Atardecer con Delfines</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour desde €35-€50</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Los delfines spinner son abundantes en las aguas de Maldivas. Los cruceros al atardecer en dhoni (barco tradicional maldivo) casi garantizan avistamientos con el horizonte naranja de fondo. Una de las experiencias más mágicas del archipiélago.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.klook.com/search/result/?query=maldives+whale+shark+diving&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1544551763-808e05e86c26?q=80&w=1200&auto=format" alt="Tiburón ballena Maldivas buceo" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tiburón Ballena & Manta Rayas</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour desde €80-€120</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Nadar con el pez más grande del mundo — el tiburón ballena — es una experiencia transformadora disponible en Maldivas. Las mantas rayas gigantes se concentran en el Baa Atoll entre mayo y noviembre. Completamente inofensivos y espectaculares.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Buceo
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
           </div>
         </section>
 
-        <!-- ITINERARIO -->
-        <section id="itinerario">
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">🗓️ Escapada de Ensueño</h2>
-          <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1: Llegada y Desconexión</h4>
-              <p class="text-gray-400 text-sm mt-1">Vuelo en hidroavión al resort, primer nado en el arrecife de la casa y cena privada bajo las estrellas.</p>
+        <!-- ITINERARIOS -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Maldivas sin estrés</h2>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Maldivas Express (5 Días)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1 — Llegada y Transfer</h4>
+                <p class="text-gray-400 text-sm mt-1">Aterriza en el Aeropuerto Internacional de Velana (MLE) en Malé. Recoge tu equipaje y dirígete al muelle de speedboats — tu resort habrá organizado el transfer. Si llegas de noche, duerme en Malé o en el aeropuerto y toma el transfer al amanecer. Al llegar al resort, primera tarde en la playa privada.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2 — Snorkel y Arrecife</h4>
+                <p class="text-gray-400 text-sm mt-1">Primer día completo explorando el arrecife de coral frente a tu resort con snorkel (incluido gratis). Por la mañana las aguas están más calmadas y la visibilidad es mejor. Por la tarde crucero al atardecer para ver delfines spinner saltando alrededor del barco al ponerse el sol.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 3 — Excursión de Buceo</h4>
+                <p class="text-gray-400 text-sm mt-1">Si buceas, haz la excursión al punto de buceo más cercano con tiburones de arrecife. Si no buceas, snorkel en el canal entre islas donde las corrientes traen mantas rayas. Por la tarde sesión de kayak o paddleboard en el lagoon turquesa. Cena romántica en la playa.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 4 — Isla Local y Cultura</h4>
+                <p class="text-gray-400 text-sm mt-1">Excursión de medio día a una isla habitada cercana para conocer la cultura maldiva real — la pesca artesanal, la arquitectura coralina y el modo de vida austero. Por la tarde spa en el resort (los spas sobre el agua son increíbles) o pesca de calamares al anochecer.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 5 — Último amanecer y Regreso</h4>
+                <p class="text-gray-400 text-sm mt-1">Levántate antes del amanecer para ver el sol salir sobre el océano desde tu villa — es una de las imágenes más hermosas del planeta. Último baño en el lagoon. Transfer al aeropuerto de Malé para el vuelo de regreso (la mayoría de vuelos nocturnos a Europa).</p>
+              </div>
+
             </div>
-            <div class="relative group">
-              <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-              <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2: Gigantes del Océano</h4>
-              <p class="text-gray-400 text-sm mt-1">Salida matutina para buscar tiburones ballena (atolón Ari), tarde de spa sobre el agua y crucero de atardecer con delfines.</p>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 Maldivas con Presupuesto (7 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Maldivas no tiene que arruinarte — esta ruta combina lo mejor por mucho menos:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 1-3</div>
+                <h4 class="text-white font-bold">Isla Local: Maafushi o Thulusdhoo</h4>
+                <p class="text-gray-400 text-sm mt-1">Guesthouses en islas habitadas por €40-€80/noche con desayuno. Las playas bikini son públicas y el snorkel con tiburones de arrecife está literalmente a 50m del muelle. Maafushi tiene la mejor infraestructura turística de las islas locales.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 4-7</div>
+                <h4 class="text-white font-bold">1 Noche en Resort de Lujo</h4>
+                <p class="text-gray-400 text-sm mt-1">Muévete a un resort con overwater villa para al menos 1-2 noches — es la experiencia que no puedes perderte. Los resorts de 4 estrellas como Sun Siyam o Cinnamon Hakuraa son mucho más asequibles que el Six Senses y igual de hermosos.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- HOTELES -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Ultra Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🌊 BAA ATOLL</span>
+              <h4 class="text-base font-bold text-white">Six Senses Laamu</h4>
+              <p class="text-xs text-gray-400 mb-4">Sostenible, overwater villas</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-purple-900/50 text-purple-200 mb-3 self-start">🌴 NORTH MALÉ</span>
+              <h4 class="text-base font-bold text-white">Gili Lankanfushi</h4>
+              <p class="text-xs text-gray-400 mb-4">Sin zapatos, sin noticias, sin estrés</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🌊 SOUTH MALÉ</span>
+              <h4 class="text-base font-bold text-white">Anantara Veli</h4>
+              <p class="text-xs text-gray-400 mb-4">Solo adultos, increíble lagoon</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🌊 NORTH MALÉ</span>
+              <h4 class="text-base font-bold text-white">Sun Siyam Iru Fushi</h4>
+              <p class="text-xs text-gray-400 mb-4">Todo incluido, lagoon precioso</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌴 SOUTH MALÉ</span>
+              <h4 class="text-base font-bold text-white">Cinnamon Hakuraa Huraa</h4>
+              <p class="text-xs text-gray-400 mb-4">Overwater bungalows asequibles</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">🌊 NORTH MALÉ</span>
+              <h4 class="text-base font-bold text-white">Oblu Select Lobigili</h4>
+              <p class="text-xs text-gray-400 mb-4">Solo adultos, snorkel increíble</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico (Islas Locales)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏘️ MAAFUSHI</span>
+              <h4 class="text-base font-bold text-white">Kaani Grand Seaview</h4>
+              <p class="text-xs text-gray-400 mb-4">Isla local, €60-€90/noche</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏘️ MAAFUSHI</span>
+              <h4 class="text-base font-bold text-white">Arena Beach Hotel</h4>
+              <p class="text-xs text-gray-400 mb-4">Frente al mar, buen precio</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🏘️ THULUSDHOO</span>
+              <h4 class="text-base font-bold text-white">Coral Beach Hotel</h4>
+              <p class="text-xs text-gray-400 mb-4">Surf & snorkel, muy económico</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
           </div>
         </section>
 
-        <!-- HOTELES (REGION ID 6023363) -->
-        <section id="hoteles">
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">🏨 Los Mejores Resorts del Mundo</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Soneva Fushi</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Lujo descalzo y sostenible en el Atolón Baa. Villas inmensas en la jungla.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&regionId=6023363&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-amber-500/20 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Conrad Rangali Island</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Famoso por su restaurante submarino 'Ithaa' y sus dos islas conectadas por un puente.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&regionId=6023363&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col group">
-              <div class="h-32 bg-gray-600 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80')"></div>
-              <div class="p-4 flex-grow flex flex-col">
-                <h3 class="text-white font-bold mb-2">Anantara Veli</h3>
-                <p class="text-xs text-gray-500 line-clamp-2">Solo para adultos. Villas sobre el agua perfectas para una luna de miel clásica.</p>
-                <a href="https://www.hotels.com/Hotel-Search?destination=Maldives&regionId=6023363&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" class="mt-auto pt-4 text-[10px] font-bold text-amber-500 uppercase tracking-widest hover:underline">Ver Precios</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- YOUTUBE COMPONENT -->
+        <!-- YOUTUBE -->
         <section class="mt-16">
           <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
             <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Maldivas en Video
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Explora Maldivas en Video
             </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <!-- AEROPUERTO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto Velana (MLE) → Resort en Speedboat</h3>
+              <p class="text-sm text-gray-400">La mayoría de resorts del North Malé Atoll organizan transfer en <strong class="text-white">lancha rápida (speedboat)</strong> directamente desde el muelle del aeropuerto. Duración: <strong class="text-white">20-60 minutos</strong>. Costo: incluido en la mayoría de resorts o €30-€80 por persona.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Hidroavión (Seaplane)</h3>
+              <p class="text-sm text-gray-400">Para resorts en atolones lejanos (Baa, Ari, Lhaviyani) el transfer es en <strong class="text-white">hidroavión</strong> — la experiencia más icónica de Maldivas. Vistas aéreas increíbles de los atolones. Precio: <strong class="text-white">€200-€400</strong> ida y vuelta. Solo opera de día.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Ferry Público a Maafushi</h3>
+              <p class="text-sm text-gray-400">Para viajeros con presupuesto, el <strong class="text-white">ferry público</strong> a Maafushi cuesta solo <strong class="text-white">€2-€5</strong> y sale varias veces al día desde el muelle de pasajeros de Malé (10 min en taxi acuático del aeropuerto). Duración: 1.5-2 horas.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Malé Ciudad</h3>
+              <p class="text-sm text-gray-400">El aeropuerto está en una isla artificial conectada a Malé por un <strong class="text-white">puente gratuito</strong> (Sinamalé Bridge). También hay ferries (€1) cada pocos minutos. Si necesitas dormir en Malé, hay taxis acuáticos disponibles las 24h.</p>
+            </div>
+
+          </div>
+
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Confirma tu transfer ANTES de llegar</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">Contacta tu resort al menos <strong class="text-white">48 horas antes</strong> para confirmar el horario del speedboat o hidroavión. Los hidroaviones solo operan de día (6 AM - 6 PM) — si tu vuelo llega de noche necesitarás dormir en Malé. Lleva <strong class="text-white">protector solar en el equipaje de mano</strong> — el de Maldivas es carísimo.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIRECTORIO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo (Más experiencias)</h2>
+          <ul class="divide-y divide-white/10">
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Bioluminiscencia Nocturna</h3>
+              <p class="text-sm text-gray-400 mt-1">Algunas playas de Maldivas brillan de azul por la noche gracias al fitoplancton bioluminiscente. El fenómeno es visible en Vaadhoo Island (Raa Atoll) y en algunas épocas del año en otros atolones. Nadar de noche rodeado de luz azul es una experiencia casi de otro mundo.</p>
+              <a href="https://es.wikipedia.org/wiki/Maldivas" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Pesca Tradicional en Dhoni</h3>
+              <p class="text-sm text-gray-400 mt-1">Los dhoni son los barcos tradicionales de vela maldivos. La pesca con caña al atardecer o al amanecer es una actividad que ofrecen casi todos los resorts — sin anzuelo para no dañar el arrecife. Los peces capturados se cocinan en el resort esa misma noche.</p>
+              <a href="https://es.wikipedia.org/wiki/Dhoni_(barco)" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Malé — La Capital</h3>
+              <p class="text-sm text-gray-400 mt-1">Una de las ciudades más densamente pobladas del mundo en solo 5.8 km². La Mezquita Islámica dorada, el Mercado de Pescado al amanecer, el Cementerio de Coral y el bullicio urbano contrastan completamente con la paz de las islas. Merece un medio día de visita.</p>
+              <a href="https://es.wikipedia.org/wiki/Malé" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Surf en Thulusdhoo</h3>
+              <p class="text-sm text-gray-400 mt-1">La isla de Thulusdhoo tiene algunas de las mejores olas de todo el Índico, especialmente "Cokes" — una ola de arrecife de derecha de clase mundial. La isla es pequeña y auténtica, con guesthouses económicas y ambiente de surf muy agradable.</p>
+              <a href="https://es.wikipedia.org/wiki/Maldivas" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Cena Bajo el Agua (Ithaa)</h3>
+              <p class="text-sm text-gray-400 mt-1">El restaurante Ithaa del Conrad Maldives es el primer restaurante submarino del mundo — completamente rodeado de cristal a 5 metros bajo el océano. Cenas con tiburones y rayas nadando a tu alrededor. Requiere reserva con meses de antelación.</p>
+              <a href="https://es.wikipedia.org/wiki/Maldivas" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Yoga sobre el Océano</h3>
+              <p class="text-sm text-gray-400 mt-1">Muchos resorts tienen plataformas de yoga flotantes sobre el lagoon con vistas de 360° al océano. La sesión al amanecer con el sol saliendo sobre el agua turquesa es una experiencia de bienestar única en el mundo. La mayoría de resorts la incluyen gratis para huéspedes.</p>
+              <a href="https://es.wikipedia.org/wiki/Maldivas" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+          </ul>
         </section>
 
       </div>
 
       <!-- SIDEBAR -->
-      <aside class="lg:col-span-4 space-y-12">
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+            </svg>
+            Requisitos de Entrada
+          </h3>
+          <p class="text-sm text-gray-400">Maldivas permite entrada <strong class="text-white">sin visa a todos los países del mundo</strong> por hasta <strong class="text-white">30 días</strong> (ampliable a 90). Solo necesitas pasaporte válido, billete de regreso y reserva de alojamiento confirmada. Al llegar te dan el sello de turista automáticamente.</p>
+          <a href="https://www.immigration.gov.mv/" target="_blank"
+            class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Inmigración Maldivas Oficial</a>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Resort (todo incluido)</span><span class="font-semibold text-white">€200-€600</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Isla local (guesthouse)</span><span class="font-semibold text-white">€60-€120</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Excursiones / snorkel</span><span class="font-semibold text-white">€25-€80</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida fuera del resort</span><span class="font-semibold text-white">€15-€40</span></li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+            <span class="text-gray-400">Total resort:</span>
+            <span class="font-bold text-amber-500 text-2xl">€350<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
+          </div>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">4 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">27°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">27°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">27°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">16 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">15 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">10 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">26°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
-          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">💡 Tips del Paraíso</h3>
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
           <ul class="space-y-4 text-sm">
-            <li><strong class="text-white">Respeto Local:</strong> Maldivas es un país musulmán. Si visitas islas locales, cubre hombros y rodillas.</li>
-            <li><strong class="text-white">Traslados:</strong> Verifica si tu hotel tiene hidroavión; es una de las mejores vistas de tu vida.</li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Temporada perfecta: Nov-Abril</span>
+              La temporada seca del noreste. Cielos despejados, visibilidad submarina perfecta y olas calmadas. De mayo a octubre es monzón — hay descuentos del 30-50% en los resorts pero con más lluvias y viento.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">El alcohol solo en resorts</span>
+              Maldivas es un país islámico. El alcohol está completamente prohibido en las islas habitadas pero se sirve libremente en los resorts turísticos (islas privadas). En islas locales no encontrarás cerveza en ningún sitio.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Maldivas se está hundiendo</span>
+              El 80% del territorio está a menos de 1 metro sobre el nivel del mar. Es el país más amenazado del mundo por el cambio climático. El gobierno ya estudia opciones como comprar tierra en Sri Lanka o India para un posible futuro traslado.
+            </li>
           </ul>
         </div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-            <p class="text-xs font-bold text-blue-400 uppercase tracking-tighter">Status Agua Índico</p>
-          </div>
-          <p class="text-[10px] text-gray-500">Visibilidad de 30m+ reportada en los atolones del norte.</p>
-        </div>
-      </aside>
 
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado Aeropuerto</p>
+              <p class="text-xs text-green-400 font-bold">MLE Velana Int'l: Operativo</p>
+            </div>
+          </div>
+          <a href="https://www.macl.aero/" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">Oficial</a>
+        </div>
+
+      </aside>
     </div>
   </main>
-
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Disfruta lo Inolvidable.
-  </footer>
 
   <script>
     async function loadMaldivesVideos() {
       const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: 'n8mj-MG9hMw', title: 'Madrileños por el mundo: Islas Maldivas' },
-        { id: 'FMEXKouHaQ0', title: 'MALDIVAS, EL PARAISO EXISTE | Guía' },
-        { id: 'YNEQ2kI5syk', title: 'LAS MALDIVAS: Documental de Viaje Completo' }
+        { id: '47z4WXcyYYk', title: 'MALDIVAS: Guía de viaje completa en español' },
+        { id: 'YNEQ2kI5syk', title: 'Maldivas con presupuesto — Todo lo que necesitas saber' },
+        { id: 'KHA-lMOmY_U', title: 'Maldivas: Vale la pena? Consejos y costos reales' }
       ];
-
       try {
-        const backendUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000' : '';
-        const response = await fetch(`${backendUrl}/api/youtube-search?query=maldivas+guia+viaje+español`);
-        if (!response.ok) throw new Error();
+        const response = await fetch('/api/youtube-search?query=maldivas+guia+viaje+español');
+        if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
-      } catch (e) {
-        renderVideos(fallbackVideos);
-      }
+      } catch (e) { renderVideos(fallbackVideos); }
     }
 
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
-        <div class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 transition-all">
-          <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full aspect-video object-cover">
+        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
+          <div class="relative aspect-video">
+            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
           <div class="p-4">
-            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="text-[10px] text-red-500 font-bold uppercase mt-2 inline-block">Ver Video</a>
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
           </div>
         </div>
       `).join('');
     }
+
     document.addEventListener('DOMContentLoaded', loadMaldivesVideos);
   </script>
 
 </body>
-
 </html>

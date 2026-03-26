@@ -127,18 +127,25 @@ function App() {
           </button>
           <div className="flex items-center gap-2.5">
             {/* Logo de Skylio - Proporcional, Premium y Fondo Negro */}
-            <div className="flex items-center bg-black p-2 rounded-2xl shadow-xl shadow-black border border-amber-500/30 hover:scale-105 hover:border-amber-500/50 transition-all duration-500">
-              <div className="bg-white/95 rounded-xl p-1 shadow-inner">
+            <div className="flex items-center bg-black p-2.5 rounded-2xl shadow-xl shadow-black border border-amber-500/30 hover:scale-105 hover:border-amber-500/50 transition-all duration-500">
+              <div className="bg-white/95 rounded-xl p-1.5 shadow-inner">
                 <img 
                   src="/images/logo-new.jpg" 
                   alt="Skylio Viajes" 
-                  className="h-12 md:h-16 w-auto object-contain rounded-lg flex-shrink-0" 
+                  className="h-14 md:h-20 w-auto object-contain rounded-lg flex-shrink-0" 
                 />
               </div>
             </div>
           </div>
         </div>
         <div className="flex items-center gap-3">
+          <a 
+            href="/destinos/" 
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 hover:bg-amber-500/20 hover:border-amber-500/50 transition-all duration-300 font-semibold text-sm mr-2 shadow-sm"
+          >
+            <MapIcon size={18} />
+            <span>Destinos</span>
+          </a>
           <GuideMenuButton onOpenGuide={() => setShowGuidePage(true)} />
           <div className="h-8 w-[1px] bg-white/10 mx-1 hidden md:block"></div>
           <LanguageSwitcher />

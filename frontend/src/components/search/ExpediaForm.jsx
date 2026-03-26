@@ -67,22 +67,28 @@ const ExpediaForm = ({ partnerData, onClose }) => {
     onClose();
   };
 
-  const baseInputClasses = "w-full border border-white/10 rounded-xl p-3 pl-10 placeholder:text-slate-400 focus:outline-none focus:border-yellow-400/50 transition appearance-none";
-  const textInputClasses = `${baseInputClasses} bg-white/5 text-white`;
-  const datePickerInputClasses = `${baseInputClasses} bg-white/5 text-white cursor-pointer relative z-10`;
-  const selectClasses = `${baseInputClasses} bg-slate-800 text-white cursor-pointer`;
-  const labelClasses = "block text-sm font-medium text-slate-300 mb-1.5 ml-1";
-  const iconClasses = "absolute left-3 top-[38px] text-slate-400 z-20";
-  const childAgeSelectClasses = "w-full bg-slate-800 border border-white/10 rounded-lg p-2 text-sm text-white focus:outline-none focus:border-yellow-400/50 transition appearance-none text-center cursor-pointer";
+  const baseInputClasses = "w-full border border-gray-200 rounded-xl p-4 pl-12 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all appearance-none bg-white shadow-sm hover:border-gray-300";
+  const textInputClasses = `${baseInputClasses} text-gray-800 font-medium`;
+  const datePickerInputClasses = `${baseInputClasses} text-gray-800 font-medium cursor-pointer relative z-10`;
+  const selectClasses = `${baseInputClasses} text-gray-800 font-medium cursor-pointer bg-white`;
+  const labelClasses = "block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5 ml-1";
+  const iconClasses = "absolute left-4 top-[42px] text-gray-400 z-20 pointer-events-none";
+  const childAgeSelectClasses = "w-full bg-white border border-gray-200 rounded-lg p-3 text-sm text-gray-800 focus:outline-none focus:border-blue-500 transition appearance-none text-center cursor-pointer shadow-sm font-medium";
 
   const ageOptions = [];
-  ageOptions.push(<option key={0} value={0} className="bg-slate-800">{t('forms.expedia.baby')}</option>);
+  ageOptions.push(<option key={0} value={0} className="bg-white text-gray-800">{t('forms.expedia.baby')}</option>);
   for (let i = 1; i <= 17; i++) {
-      ageOptions.push(<option key={i} value={i} className="bg-slate-800">{i} {i > 1 ? t('forms.expedia.years') : t('forms.expedia.year')}</option>);
+      ageOptions.push(<option key={i} value={i} className="bg-white text-gray-800">{i} {i > 1 ? t('forms.expedia.years') : t('forms.expedia.year')}</option>);
   }
 
   return (
     <form onSubmit={handleSearch} className="space-y-4 text-left">
+      <div className="flex justify-center mb-6">
+        <div className="bg-white p-3 rounded-2xl shadow-sm border border-gray-100">
+          <img src="https://www.google.com/s2/favicons?domain=expedia.com&sz=128" alt="Expedia" className="w-12 h-12 object-contain" />
+        </div>
+      </div>
+      
       <div className="relative">
         <label className={labelClasses}>{t('forms.expedia.origin')}</label>
         <PlaneTakeoff size={18} className={iconClasses} />
@@ -117,21 +123,21 @@ const ExpediaForm = ({ partnerData, onClose }) => {
              <label className={labelClasses}>{t('forms.expedia.adults')}</label>
              <Users size={18} className={iconClasses} />
              <select name="adults" className={selectClasses} value={formData.adults} onChange={handleChange}>
-                {[1,2,3,4,5,6].map(num => (<option key={num} value={num} className="bg-slate-800">{num}</option>))}
+                {[1,2,3,4,5,6].map(num => (<option key={num} value={num} className="bg-white text-gray-800">{num}</option>))}
              </select>
           </div>
           <div className="relative">
               <label className={labelClasses}>{t('forms.expedia.children')}</label>
               <Baby size={18} className={iconClasses} />
               <select name="childrenCount" className={selectClasses} value={formData.childrenCount} onChange={handleChildrenCountChange}>
-                  <option value={0} className="bg-slate-800">{t('forms.expedia.children_none')}</option>
-                  {[1,2,3,4,5,6].map(num => (<option key={num} value={num} className="bg-slate-800">{num}</option>))}
+                  <option value={0} className="bg-white text-gray-800">{t('forms.expedia.children_none')}</option>
+                  {[1,2,3,4,5,6].map(num => (<option key={num} value={num} className="bg-white text-gray-800">{num}</option>))}
               </select>
           </div>
       </div>
       {formData.childrenCount > 0 && (
-        <div className="bg-white/5 p-3 rounded-xl border border-white/10 animate-in slide-in-from-top-2 duration-200">
-            <label className="block text-xs font-medium text-slate-400 mb-2 ml-1">{t('forms.expedia.children_ages')}</label>
+        <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 animate-in fade-in slide-in-from-top-2 duration-300">
+            <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 ml-1">{t('forms.expedia.children_ages')}</label>
             <div className="grid grid-cols-3 gap-2">
                 {formData.childrenAges.map((age, index) => (
                     <div key={index} className="flex flex-col">
@@ -141,7 +147,10 @@ const ExpediaForm = ({ partnerData, onClose }) => {
             </div>
         </div>
       )}
-      <button type="submit" className="w-full mt-6 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-yellow-500/20 transition-all active:scale-[0.98]">
+      <button 
+        type="submit" 
+        className="w-full mt-6 bg-[#003580] hover:bg-[#002244] text-white font-bold py-4 rounded-full shadow-lg shadow-blue-900/40 transition-all hover:scale-[1.01] active:scale-[0.98] text-lg uppercase tracking-tight"
+      >
         {t('forms.expedia.submit')}
       </button>
     </form>

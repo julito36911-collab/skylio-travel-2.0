@@ -126,24 +126,25 @@ function App() {
             <Menu size={24} className="text-slate-300" />
           </button>
           <div className="flex items-center gap-2.5">
-            {/* Logo de Skylio - Extra Grande, Premium y Fondo Negro */}
-            <div className="flex items-center bg-black p-4 rounded-3xl shadow-2xl shadow-black border border-amber-500/40 hover:scale-105 hover:border-amber-500/60 transition-all duration-500">
-              <div className="bg-white/95 rounded-2xl p-2 shadow-inner">
+            {/* Logo de Skylio - Proporcional, Premium y Fondo Negro */}
+            <div className="flex items-center bg-black p-2 rounded-2xl shadow-xl shadow-black border border-amber-500/30 hover:scale-105 hover:border-amber-500/50 transition-all duration-500">
+              <div className="bg-white/95 rounded-xl p-1 shadow-inner">
                 <img 
                   src="/images/logo-new.jpg" 
                   alt="Skylio Viajes" 
-                  className="h-28 md:h-40 w-auto object-contain rounded-xl flex-shrink-0" 
+                  className="h-12 md:h-16 w-auto object-contain rounded-lg flex-shrink-0" 
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <GuideMenuButton onOpenGuide={() => setShowGuidePage(true)} />
+          <div className="h-8 w-[1px] bg-white/10 mx-1 hidden md:block"></div>
           <LanguageSwitcher />
-          <button className="p-2 glass-card rounded-full relative">
-            <Bell size={18} className="text-slate-300" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-red-400 rounded-full"></span>
+          <button className="p-2.5 glass-card rounded-full relative hover:bg-white/5 transition-colors">
+            <Bell size={20} className="text-slate-300" />
+            <span className="absolute top-2 right-2 w-2 h-2 bg-red-400 rounded-full ring-2 ring-black/50"></span>
           </button>
         </div>
       </header>

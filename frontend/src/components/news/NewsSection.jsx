@@ -9,11 +9,6 @@ const ENABLE_NEWS = true; // Se activa automáticamente si hay API key
 const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 horas
 const USE_DEMO_MODE = false; // Cambiar a false en producción con dominio real
 
-// DEBUG: Verificar que se carga correctamente
-console.log('🔍 NewsSection - API_KEY:', API_KEY ? 'Configurada ✅' : 'NO configurada ❌');
-console.log('🔍 NewsSection - ENABLE_NEWS:', ENABLE_NEWS);
-console.log('🔍 NewsSection - USE_DEMO_MODE:', USE_DEMO_MODE);
-
 // FILTROS INTELIGENTES POR IDIOMA
 const KEYWORDS = {
   es: '(viajes OR turismo OR vacaciones) AND (destinos OR aerolíneas OR hoteles OR vuelos OR aeropuerto OR pasajeros)',

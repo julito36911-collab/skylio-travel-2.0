@@ -1,0 +1,129 @@
+{
+  "destination": "Punta Cana",
+  "id": "punta-cana",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Secrets Cap Cana",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 18.4580, "lng": -68.3690 },
+      "labels": ["CAP CANA", "SOLO ADULTOS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hyatt Ziva / Zilara",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 18.6870, "lng": -68.4050 },
+      "labels": ["BÁVARO", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Excellence El Carmen",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 18.7350, "lng": -68.3820 },
+      "labels": ["UVERO ALTO", "SOLO ADULTOS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hard Rock Hotel & Casino",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 18.6900, "lng": -68.4100 },
+      "labels": ["BÁVARO", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic",
+      "price_level": "$$"
+    },
+    {
+      "name": "Lopesan Costa Bávaro",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 18.6850, "lng": -68.4000 },
+      "labels": ["BÁVARO", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic",
+      "price_level": "$$"
+    },
+    {
+      "name": "Nickelodeon Resort",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 18.7300, "lng": -68.3850 },
+      "labels": ["UVERO ALTO", "FAMILIAR"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Punta%20Cana%2C%20Dominican%20Republic",
+      "price_level": "$$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "isla_saona",
+      "triggers": ["saona", "isla saona", "isla", "cotubanamá", "cotubinama", "parque nacional", "piscina natural", "estrellas de mar", "catamarán", "catamaran"],
+      "scrollTo": "sec-lugares",
+      "response": "🏝️ **Isla Saona — La Excursión #1:**\n\nIsla virgen dentro del **Parque Nacional de Cotubanamá**. Aguas cristalinas, cocoteros infinitos y la **Piscina Natural** más grande del Caribe donde el agua llega a la cintura y puedes ver estrellas de mar.\n\n🚤 **Cómo ir:** Excursión en catamarán con música y bar abierto. Almuerzo dominicano en la arena.\n💶 Precio: **$80-$120 USD** (tour completo).\n\n💡 **Tips:**\n• Lleva protector solar biodegradable.\n• Reserva con antelación en temporada alta.\n• El regreso en lancha rápida es muy divertido.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "hoyo_azul",
+      "triggers": ["hoyo azul", "cenote", "scape park", "acantilado", "piscina natural cenote", "sendero ecológico"],
+      "scrollTo": "sec-lugares",
+      "response": "💧 **Hoyo Azul — Cenote en Cap Cana:**\n\nUn impresionante cenote de aguas **azul turquesa** ubicado al pie de un acantilado de **65 metros**. Se llega tras una caminata por senderos ecológicos dentro de **Scape Park**.\n\n⭐ También disponible: tirolesas, buggies y más actividades de aventura en el parque.\n💶 Entrada Scape Park: desde **$100 USD** (incluye varias actividades).\n\n💡 Un refrescante contraste al agua salada del mar.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "resort_allinclusive",
+      "triggers": ["resort", "all inclusive", "todo incluido", "hotel", "hoteles", "dormir", "alojamiento", "hospedaje", "secrets", "hyatt", "hard rock", "lopesan", "nickelodeon", "excellence"],
+      "scrollTo": "sec-hoteles",
+      "response": "🏨 **Resorts Todo Incluido en Punta Cana:**\n\n💎 **Ultra Lujo & Solo Adultos:**\n• **Secrets Cap Cana** — Elegancia pura en Cap Cana.\n• **Hyatt Ziva/Zilara** — El mejor servicio del Caribe.\n• **Excellence El Carmen** — Contemporáneo en Uvero Alto.\n\n👨‍👩‍👧 **Familiar & Diversión:**\n• **Hard Rock Hotel & Casino** — Grandes eventos.\n• **Lopesan Costa Bávaro** — Piscinas espectaculares.\n• **Nickelodeon Resort** — Paraíso para niños.\n\n💶 Precio medio Todo Incluido: **$150-$400 USD/noche**.\n\n⬇️ He hecho scroll a la sección de hoteles."
+    },
+    {
+      "id": "vida_nocturna",
+      "triggers": ["vida nocturna", "noche", "fiesta", "coco bongo", "discoteca", "club", "antros", "show", "espectáculo", "espectaculo", "downtown"],
+      "scrollTo": "sec-lugares",
+      "response": "🎉 **Vida Nocturna en Punta Cana:**\n\n⭐ **Coco Bongo** — Más que una discoteca, es un espectáculo al estilo **Las Vegas** con acróbatas, imitadores y pantallas gigantes. Ubicado en **Downtown Punta Cana**.\n\n🎸 **Hard Rock Casino** — Para los amantes del juego y los eventos en vivo.\n\n🍹 La mayoría de resorts tienen bares y fiestas temáticas nocturnas incluidas.\n\n💡 Reserva entradas de Coco Bongo con antelación, se agotan rápido.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "transport_airport",
+      "triggers": ["aeropuerto", "puj", "llegar", "aterrizar", "vuelo", "transfer", "traslado", "transporte", "taxi", "moverme", "mover", "alquiler", "coche", "sichoprala", "kiwitaxi"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Transporte desde el Aeropuerto PUJ:**\n\n🚐 **Traslado del resort:** La mayoría de los Todo Incluido lo incluyen o gestionan. Reserva enviando tus datos de vuelo al hotel.\n🚕 **Traslado privado (KiwiTaxi/GetTransfer):** **$30-$50 USD** a Bávaro.\n🚖 **Taxis oficiales SICHOPRALA:** Tarifas fijas: Bávaro **$35 USD**, Cap Cana **$30 USD**. Aceptan USD y DOP.\n🚗 **Alquiler de coche:** Solo recomendado si sales mucho del resort.\n\n⚠️ **E-Ticket obligatorio:** Completa el formulario online antes del vuelo (genera código QR para migración).\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "requisitos", "entrada", "pasaporte", "e-ticket", "eticket", "migración", "migracion", "documentos", "papeles", "permiso"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de Entrada a República Dominicana:**\n\nLa mayoría de países (España, EEUU, México...) **no necesitan visa** por turismo de 30 días.\n\n📋 **Documentos necesarios:**\n• Pasaporte válido.\n• **E-Ticket online** (gratuito y obligatorio) — genera un código QR para check-in y migración.\n\n🔗 Formulario oficial: **eticket.migracion.gob.do**\n\n💡 Completa el E-Ticket antes de tu vuelo para agilizar la entrada.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "5 dias", "5 días", "semana", "visitar", "actividades"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🗓️ **Itinerario: El Paraíso en 5 Días:**\n\n• **Día 1** — Llegada a PUJ, traslado al resort, tarde en Playa Bávaro.\n• **Día 2** — Excursión a **Isla Saona** en catamarán (día completo).\n• **Día 3** — **Hoyo Azul** y Scape Park + compras en BlueMall.\n• **Día 4** — Snorkel/parasailing + noche en **Coco Bongo**.\n• **Día 5** — **Playa Juanillo** (Cap Cana) y despedida.\n\n💡 Si tienes más días, añade Altos de Chavón, Higüey o Bávaro Adventure Park.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "bavaro", "bávaro", "cap cana", "uvero alto", "cabeza de toro", "donde dormir", "dónde dormir", "quedarse", "juanillo"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Zonas de Punta Cana:**\n\n🏖️ **Bávaro** — El corazón. Playa UNESCO, resorts Todo Incluido, Coco Bongo y Palma Real Shopping.\n💎 **Cap Cana** — Lujo y exclusividad. Marina, golf (Punta Espada), Playa Juanillo. Ideal para lunas de miel.\n🌿 **Uvero Alto** — Tranquilidad total. Resorts boutique, playas menos concurridas, más oleaje.\n🐬 **Cabeza de Toro** — Estratégica entre aeropuerto y Bávaro. Parques marinos, catamarán y pesca deportiva.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "humedad", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "huracán", "huracan", "ciclón", "ciclon", "temporada"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Punta Cana:**\n\n☀️ **Ene-Abr:** Mejor época. 29°C, poca lluvia, sol constante.\n⛅ **May-Jul:** 31°C, más humedad, inicio de lluvias.\n⛈️ **Ago-Oct:** 32°C, temporada de ciclones (Jun-Nov).\n☀️ **Nov-Dic:** 29°C, lluvia media, regresa el buen tiempo.\n\n🌡️ Todo el año cálido y tropical.\n\n⚠️ **Temporada oficial de huracanes: Junio-Noviembre.** Precios bajan pero existe riesgo. Septiembre es el mes más activo.\n\n⬇️ He hecho scroll a la tabla de clima."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "dolar", "dólar", "peso", "pesos", "cambio", "moneda", "propina"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💵 **Presupuesto diario en Punta Cana:**\n\n🏨 Resort Todo Incluido: **$150-$400 USD/noche**\n🏝️ Excursión Isla Saona: **$80-$120 USD**\n💰 Propinas sugeridas: **$5-$15 USD/día**\n\n📊 **Promedio Todo Incluido: ~$180 USD/noche**\n\n💡 **Tips de dinero:**\n• Se aceptan **Dólares (USD)** en casi todas partes, pero el cambio lo dan en **Pesos Dominicanos (DOP)**.\n• **Pagar con tarjeta o pesos** suele salir más a cuenta que pagar en efectivo con dólares.\n• No olvides presupuestar propinas para el personal del resort.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "mangú", "mangu", "sancocho", "la bandera", "bandera", "gastronomía", "gastronomia", "dominicana", "mariscos", "mamajuana", "cenar", "desayunar", "plato típico", "plato tipico"],
+      "scrollTo": "sec-zonas",
+      "response": "🍽️ **Gastronomía Dominicana en Punta Cana:**\n\n🍚 **La Bandera** — El plato nacional: arroz blanco, habichuelas (frijoles) y carne guisada. Lo encontrarás en todos lados.\n🍳 **Mangú** — Puré de plátano verde con cebolla frita, queso y salami. El desayuno típico dominicano.\n🍲 **Sancocho** — Guiso espeso de carnes y tubérculos. Reconfortante y abundante.\n🥃 **Mamajuana** — Mezcla de raíces, ron, vino tinto y miel. Bebida nacional con supuestos poderes curativos.\n\n💡 **Tips:**\n• Los resorts Todo Incluido tienen buffets temáticos, pero sal a probar la comida local.\n• En Bávaro hay restaurantes fuera de los resorts a mejor precio.\n• Usa protector solar biodegradable para cuidar los arrecifes."
+    }
+  ]
+}

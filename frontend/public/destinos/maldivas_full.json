@@ -1,0 +1,346 @@
+{
+  "destination": "Maldivas",
+  "id": "maldivas",
+  "country": "Maldivas",
+  "hero_image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "El paraíso en la Tierra",
+  "visa": {
+    "type": "Visa Free",
+    "required": false,
+    "note": "Maldivas permite entrada sin visa a todos los países del mundo por hasta 30 días (ampliable a 90). Solo necesitas pasaporte válido, billete de regreso y reserva de alojamiento confirmada. Al llegar te dan el sello de turista automáticamente.",
+    "official_url": "https://www.immigration.gov.mv/"
+  },
+  "budget_daily": {
+    "lujo": "200-600 EUR",
+    "medio": "100-200 EUR",
+    "economico": "60-120 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 30, "temp_min": 26, "rain_days": 4},
+    {"month": "Feb", "temp_max": 30, "temp_min": 26, "rain_days": 3},
+    {"month": "Mar", "temp_max": 31, "temp_min": 27, "rain_days": 5},
+    {"month": "Abr", "temp_max": 31, "temp_min": 27, "rain_days": 8},
+    {"month": "May", "temp_max": 30, "temp_min": 27, "rain_days": 14},
+    {"month": "Jun", "temp_max": 30, "temp_min": 26, "rain_days": 16},
+    {"month": "Jul", "temp_max": 29, "temp_min": 26, "rain_days": 15},
+    {"month": "Ago", "temp_max": 29, "temp_min": 26, "rain_days": 14},
+    {"month": "Sep", "temp_max": 30, "temp_min": 26, "rain_days": 13},
+    {"month": "Oct", "temp_max": 30, "temp_min": 26, "rain_days": 14},
+    {"month": "Nov", "temp_max": 30, "temp_min": 26, "rain_days": 10},
+    {"month": "Dic", "temp_max": 30, "temp_min": 26, "rain_days": 6}
+  ],
+  "best_months": ["Nov", "Dic", "Ene", "Feb", "Mar", "Abr"],
+  "zones": [
+    {
+      "name": "North Malé Atoll",
+      "description": "El atolón más cercano al aeropuerto internacional de Malé. La mayoría de resorts se alcanzan en 20-45 minutos en lancha rápida. Perfecta relación calidad-precio: hay desde resorts de lujo extremo hasta guesthouses en islas locales como Maafushi o Thulusdhoo por 40-80 EUR/noche.",
+      "vibe": "Más Accesible · Todo Tipo de Alojamiento"
+    },
+    {
+      "name": "South Malé Atoll",
+      "description": "Famoso por sus puntos de buceo excepcionales y los avistamientos de mantas rayas gigantes. Los resorts son algo más exclusivos y alejados — se llega en 30-60 min en lancha. Aquí está el arrecife de Guraidhoo, uno de los mejores del mundo para bucear con tiburones de arrecife.",
+      "vibe": "Buceo · Mantas Rayas"
+    },
+    {
+      "name": "Baa & Raa Atoll",
+      "description": "Reserva de la Biosfera UNESCO y el lugar más espectacular de Maldivas para snorkel con mantas rayas y tiburones ballena. Se llega en hidroavión (45 min desde Malé, 200-300 EUR ida y vuelta). Aquí están algunos de los mejores resorts del mundo: Six Senses, Four Seasons Landaa Giraavaru.",
+      "vibe": "UNESCO · Ultra Lujo"
+    },
+    {
+      "name": "Malé (Ciudad Capital)",
+      "description": "La capital más pequeña y densa del mundo. Muy pocos turistas se alojan aquí pero es interesante visitarla para entender la cultura maldiva real — mezquitas de coral, mercado de pescado, colores brillantes. Si tu vuelo llega de noche, alojarse en Malé una noche es la opción más económica.",
+      "vibe": "Ciudad · Económico"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Villas sobre el Agua",
+      "image": "https://images.unsplash.com/photo-1601999705946-fbf42c3c6c66?q=80&w=1200&auto=format",
+      "description": "Despertar con el océano debajo de tu cama y bajar al agua desde tu terraza privada. Las overwater villas son el símbolo de Maldivas — una experiencia que vale para toda la vida. Desde 300 EUR/noche.",
+      "klook_url": "https://www.klook.com/search/result/?query=maldives+overwater+villa+resort"
+    },
+    {
+      "name": "Snorkel & Buceo en Arrecifes",
+      "image": "https://images.unsplash.com/photo-1593665840592-8c662655fb65?q=80&w=1200&auto=format",
+      "description": "Los arrecifes de coral de Maldivas están entre los más ricos del planeta. Tortugas verdes, tiburones de arrecife, mantas rayas gigantes y miles de peces de colores a solo metros de la orilla. Snorkel desde 25 EUR, buceo desde 60 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=maldives+snorkeling+reef+tour"
+    },
+    {
+      "name": "Crucero al Atardecer con Delfines",
+      "image": "https://images.unsplash.com/photo-1667537795421-7dc0be17f503?q=80&w=1200&auto=format",
+      "description": "Los delfines spinner son abundantes en Maldivas. Los cruceros al atardecer en dhoni (barco tradicional maldivo) casi garantizan avistamientos con el horizonte naranja de fondo. Tour desde 35-50 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=maldives+dolphin+cruise+sunset"
+    },
+    {
+      "name": "Tiburón Ballena & Manta Rayas",
+      "image": "https://images.unsplash.com/photo-1544551763-808e05e86c26?q=80&w=1200&auto=format",
+      "description": "Nadar con el pez más grande del mundo — el tiburón ballena — es una experiencia transformadora. Las mantas rayas gigantes se concentran en el Baa Atoll entre mayo y noviembre. Completamente inofensivos y espectaculares. Tour desde 80-120 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=maldives+whale+shark+diving"
+    }
+  ],
+  "itineraries": {
+    "express": {
+      "title": "Maldivas Express (5 Días)",
+      "description": "Los imprescindibles en una escapada corta.",
+      "steps": [
+        {"time": "Día 1", "activity": "Llegada al Aeropuerto Velana (MLE) en Malé. Transfer en speedboat al resort. Primera tarde en la playa privada."},
+        {"time": "Día 2", "activity": "Snorkel en el arrecife frente al resort (incluido gratis). Por la tarde crucero al atardecer para ver delfines spinner."},
+        {"time": "Día 3", "activity": "Excursión de buceo con tiburones de arrecife o snorkel en el canal entre islas con mantas rayas. Kayak o paddleboard en el lagoon. Cena romántica en la playa."},
+        {"time": "Día 4", "activity": "Excursión a isla habitada para conocer la cultura maldiva real — pesca artesanal, arquitectura coralina. Por la tarde spa sobre el agua o pesca de calamares al anochecer."},
+        {"time": "Día 5", "activity": "Amanecer desde tu villa sobre el océano. Último baño en el lagoon. Transfer al aeropuerto de Malé."}
+      ]
+    },
+    "budget": {
+      "title": "Maldivas con Presupuesto (7 Días)",
+      "description": "Maldivas no tiene que arruinarte — esta ruta combina lo mejor por mucho menos.",
+      "steps": [
+        {"time": "Días 1-3", "activity": "Isla Local: Maafushi o Thulusdhoo. Guesthouses por 40-80 EUR/noche con desayuno. Playas bikini públicas y snorkel con tiburones de arrecife a 50m del muelle."},
+        {"time": "Días 4-7", "activity": "1-2 noches en resort con overwater villa — la experiencia imprescindible. Resorts de 4 estrellas como Sun Siyam o Cinnamon Hakuraa son más asequibles y igual de hermosos."}
+      ]
+    }
+  },
+  "hotels": [
+    {
+      "name": "Six Senses Laamu",
+      "category": "Ultra Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Sostenible, overwater villas en el Baa Atoll.",
+      "price_level": "€€€€€",
+      "labels": ["BAA ATOLL", "SOSTENIBLE", "OVERWATER"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Gili Lankanfushi",
+      "category": "Ultra Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Sin zapatos, sin noticias, sin estrés. North Malé Atoll.",
+      "price_level": "€€€€€",
+      "labels": ["NORTH MALÉ", "DESCALZO", "ULTRA LUJO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Anantara Veli",
+      "category": "Ultra Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Solo adultos, increíble lagoon en el South Malé Atoll.",
+      "price_level": "€€€€€",
+      "labels": ["SOUTH MALÉ", "SOLO ADULTOS", "LAGOON"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Sun Siyam Iru Fushi",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Todo incluido, lagoon precioso en North Malé.",
+      "price_level": "€€€",
+      "labels": ["NORTH MALÉ", "TODO INCLUIDO", "LAGOON"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Cinnamon Hakuraa Huraa",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Overwater bungalows asequibles en South Malé.",
+      "price_level": "€€€",
+      "labels": ["SOUTH MALÉ", "OVERWATER", "ASEQUIBLE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Oblu Select Lobigili",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Solo adultos, snorkel increíble en North Malé.",
+      "price_level": "€€€",
+      "labels": ["NORTH MALÉ", "SOLO ADULTOS", "SNORKEL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Kaani Grand Seaview",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Isla local Maafushi, 60-90 EUR/noche.",
+      "price_level": "€€",
+      "labels": ["MAAFUSHI", "ISLA LOCAL", "ECONÓMICO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Arena Beach Hotel",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Frente al mar en Maafushi, buen precio.",
+      "price_level": "€€",
+      "labels": ["MAAFUSHI", "FRENTE AL MAR"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    },
+    {
+      "name": "Coral Beach Hotel",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Surf & snorkel en Thulusdhoo, muy económico.",
+      "price_level": "€",
+      "labels": ["THULUSDHOO", "SURF", "SNORKEL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Maldives&sort=RECOMMENDED"
+    }
+  ],
+  "airports": [
+    {
+      "name": "Aeropuerto Velana (MLE) → Speedboat",
+      "distance_km": 0,
+      "transport": "Lancha rápida (speedboat)",
+      "time_min": 30,
+      "price_range": "30-80 EUR",
+      "notes": "La mayoría de resorts del North Malé Atoll organizan transfer en lancha rápida directamente desde el muelle del aeropuerto. Duración: 20-60 minutos. Incluido en la mayoría de resorts o 30-80 EUR por persona."
+    },
+    {
+      "name": "Aeropuerto → Hidroavión (Seaplane)",
+      "distance_km": 0,
+      "transport": "Hidroavión",
+      "time_min": 45,
+      "price_range": "200-400 EUR",
+      "notes": "Para resorts en atolones lejanos (Baa, Ari, Lhaviyani) el transfer es en hidroavión — la experiencia más icónica de Maldivas. Vistas aéreas increíbles. Solo opera de día (6 AM - 6 PM)."
+    },
+    {
+      "name": "Aeropuerto → Ferry Público a Maafushi",
+      "distance_km": 0,
+      "transport": "Ferry público",
+      "time_min": 105,
+      "price_range": "2-5 EUR",
+      "notes": "Para viajeros con presupuesto, el ferry público a Maafushi cuesta solo 2-5 EUR y sale varias veces al día desde el muelle de pasajeros de Malé. Duración: 1.5-2 horas."
+    },
+    {
+      "name": "Aeropuerto → Malé Ciudad",
+      "distance_km": 2,
+      "transport": "Puente / Ferry",
+      "time_min": 10,
+      "price_range": "0-1 EUR",
+      "notes": "El aeropuerto está en una isla artificial conectada a Malé por el puente gratuito Sinamalé Bridge. También hay ferries (1 EUR) cada pocos minutos. Taxis acuáticos disponibles las 24h."
+    }
+  ],
+  "directory": [
+    {
+      "name": "Bioluminiscencia Nocturna",
+      "type": "Experiencia Natural",
+      "address": "Vaadhoo Island, Raa Atoll",
+      "wiki_url": "https://es.wikipedia.org/wiki/Maldivas"
+    },
+    {
+      "name": "Pesca Tradicional en Dhoni",
+      "type": "Experiencia Cultural",
+      "address": "Todos los atolones",
+      "wiki_url": "https://es.wikipedia.org/wiki/Dhoni_(barco)"
+    },
+    {
+      "name": "Malé — La Capital",
+      "type": "Ciudad",
+      "address": "Malé, Maldivas",
+      "wiki_url": "https://es.wikipedia.org/wiki/Malé"
+    },
+    {
+      "name": "Surf en Thulusdhoo",
+      "type": "Deporte",
+      "address": "Thulusdhoo, North Malé Atoll",
+      "wiki_url": "https://es.wikipedia.org/wiki/Maldivas"
+    },
+    {
+      "name": "Cena Bajo el Agua (Ithaa)",
+      "type": "Restaurante",
+      "address": "Conrad Maldives, Rangali Island",
+      "wiki_url": "https://es.wikipedia.org/wiki/Maldivas"
+    },
+    {
+      "name": "Yoga sobre el Océano",
+      "type": "Bienestar",
+      "address": "Resorts con plataformas flotantes",
+      "wiki_url": "https://es.wikipedia.org/wiki/Maldivas"
+    }
+  ],
+  "intents": [
+    {
+      "id": "overwater_villa",
+      "triggers": ["overwater", "villa", "villas", "sobre el agua", "water villa", "overwater villa", "bungalow"],
+      "scrollTo": "sec-lugares",
+      "response": "**🏠 Villas sobre el Agua — la experiencia definitiva:**\n\nDespertar con el océano debajo de tu cama y bajar al agua desde tu terraza privada.\n\n💰 **Precios:**\n- Resort ultra lujo: desde **600 EUR/noche**\n- Resort 4 estrellas: desde **300 EUR/noche**\n- Resorts asequibles: Sun Siyam, Cinnamon Hakuraa\n\n🏨 **Mejores opciones:**\n- Six Senses Laamu (sostenible, Baa Atoll)\n- Gili Lankanfushi (sin zapatos, North Malé)\n- Anantara Veli (solo adultos, South Malé)\n\n💡 *Aunque sea solo 1-2 noches, la overwater villa es la experiencia imprescindible de Maldivas. Merece cada céntimo.*"
+    },
+    {
+      "id": "snorkel_buceo_arrecife",
+      "triggers": ["snorkel", "buceo", "arrecife", "coral", "diving", "reef", "snorkeling", "submarino", "bajo el agua"],
+      "scrollTo": "sec-lugares",
+      "response": "**🤿 Snorkel & Buceo en Arrecifes:**\n\nLos arrecifes de coral de Maldivas están entre los más ricos del planeta.\n\n💰 **Precios:**\n- Snorkel desde la playa del resort: **gratis**\n- Excursión snorkel: desde **25 EUR**\n- Buceo con equipo: desde **60 EUR**\n\n🐠 **Qué verás:**\n- Tortugas verdes, tiburones de arrecife\n- Mantas rayas gigantes, peces de colores\n- Arrecife de Guraidhoo (South Malé) — tiburones\n\n📍 **Mejores zonas:** South Malé Atoll (buceo) y Baa Atoll (snorkel con mantas)\n\n💡 *Por la mañana las aguas están más calmadas y la visibilidad es mejor. El snorkel desde el resort es gratis en casi todos.*"
+    },
+    {
+      "id": "playa_atardecer",
+      "triggers": ["playa", "atardecer", "sunset", "delfines", "crucero", "dhoni", "puesta de sol"],
+      "scrollTo": "sec-lugares",
+      "response": "**🌅 Playas y Crucero al Atardecer:**\n\nLas playas de Maldivas son de arena blanca y agua turquesa cristalina. Los cruceros al atardecer son mágicos.\n\n🐬 **Crucero con Delfines:**\n- En dhoni (barco tradicional maldivo)\n- Delfines spinner casi garantizados\n- Tour desde **35-50 EUR**\n\n🏖️ **Playas:**\n- Cada resort tiene su propia playa privada\n- Islas locales tienen \"bikini beaches\" públicas\n- Maafushi: mejor playa de isla local\n\n💡 *El crucero al atardecer en dhoni con delfines es una de las experiencias más mágicas del archipiélago. No te lo pierdas.*"
+    },
+    {
+      "id": "tiburon_ballena",
+      "triggers": ["tiburon ballena", "tiburón ballena", "whale shark", "manta", "mantas", "manta raya", "mantas rayas"],
+      "scrollTo": "sec-lugares",
+      "response": "**🦈 Tiburón Ballena & Mantas Rayas:**\n\nNadar con el pez más grande del mundo es una experiencia transformadora.\n\n💰 **Tour:** desde **80-120 EUR**\n\n📍 **Dónde:**\n- **Tiburón ballena:** South Ari Atoll (todo el año)\n- **Mantas rayas:** Baa Atoll (mayo a noviembre) — Reserva UNESCO\n\n🦈 Son completamente **inofensivos** y espectaculares.\n\n📅 **Mejor época:** mayo a noviembre para mantas rayas en Hanifaru Bay (Baa Atoll) — se concentran hasta 200 mantas alimentándose.\n\n💡 *El Baa Atoll es el lugar más espectacular del mundo para snorkel con mantas. Si puedes, planifica tu viaje entre mayo y noviembre.*"
+    },
+    {
+      "id": "male_capital",
+      "triggers": ["male", "malé", "capital", "ciudad", "mercado", "mezquita"],
+      "scrollTo": "sec-zonas",
+      "response": "**🌆 Malé — La Capital:**\n\nUna de las ciudades más densamente pobladas del mundo en solo 5.8 km².\n\n📍 **Qué ver:**\n- Mezquita Islámica dorada\n- Mercado de Pescado al amanecer\n- Cementerio de Coral\n- Colores y bullicio urbano\n\n💡 **Tip práctico:**\n- Si tu vuelo llega de noche, duerme en Malé (la opción más económica)\n- Los hidroaviones solo operan de día (6 AM - 6 PM)\n- Merece un medio día de visita para entender la cultura maldiva real\n\n💰 Alojamiento en Malé: **30-60 EUR/noche**\n\n💡 *Muy pocos turistas se alojan aquí, pero el contraste con las islas resort es fascinante.*"
+    },
+    {
+      "id": "transporte_lancha_hidroavion",
+      "triggers": ["transporte", "lancha", "speedboat", "hidroavion", "hidroavión", "seaplane", "ferry", "barco", "transfer", "como llegar", "cómo llegar", "moverse"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**🚤 Cómo moverse en Maldivas:**\n\n🚤 **Lancha rápida (Speedboat):**\n- North Malé Atoll: 20-60 min, **30-80 EUR**\n- Incluido en muchos resorts\n\n🛩️ **Hidroavión (Seaplane):**\n- Para atolones lejanos (Baa, Ari, Lhaviyani)\n- 45 min desde Malé, **200-400 EUR** ida y vuelta\n- Solo opera de día (6 AM - 6 PM)\n- Vistas aéreas increíbles de los atolones\n\n⛴️ **Ferry público:**\n- A Maafushi: **2-5 EUR**, 1.5-2 horas\n- Varias salidas al día desde Malé\n\n🌉 **Aeropuerto → Malé:** Puente Sinamalé gratuito o ferry (1 EUR)\n\n💡 *Confirma tu transfer con el resort al menos 48h antes. Si llegas de noche, necesitarás dormir en Malé.*"
+    },
+    {
+      "id": "aeropuerto_velana",
+      "triggers": ["aeropuerto", "velana", "mle", "vuelo", "llegada", "llegar"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Aeropuerto Internacional de Velana (MLE):**\n\nEl único aeropuerto internacional de Maldivas, en una isla artificial junto a Malé.\n\n🚤 **Transfers al resort:**\n- Speedboat (North Malé): 20-60 min, **30-80 EUR**\n- Hidroavión (atolones lejanos): 45 min, **200-400 EUR**\n- Ferry público a Maafushi: 1.5-2h, **2-5 EUR**\n- A Malé ciudad: puente gratuito o ferry **1 EUR**\n\n⚠️ **Importante:**\n- Hidroaviones solo operan de **6 AM a 6 PM**\n- Si llegas de noche → duerme en Malé\n- Confirma transfer con tu resort **48h antes**\n- Lleva **protector solar en equipaje de mano** — en Maldivas es carísimo\n\n💡 *La mayoría de vuelos desde Europa llegan de noche. Planifica una noche en Malé si tu resort requiere hidroavión.*"
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "visado", "pasaporte", "documentos", "entrada", "requisitos", "inmigración", "inmigracion"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Requisitos de Entrada a Maldivas:**\n\n✅ **Sin visa para TODOS los países del mundo** — hasta 30 días (ampliable a 90).\n\n📋 **Solo necesitas:**\n- Pasaporte válido\n- Billete de regreso\n- Reserva de alojamiento confirmada\n\n🔖 Al llegar te dan el **sello de turista automáticamente** — sin trámites ni pagos.\n\n🔗 Web oficial: [immigration.gov.mv](https://www.immigration.gov.mv/)\n\n💡 *Maldivas es uno de los países más fáciles del mundo para entrar. Literalmente no necesitas hacer nada previo — solo llegar con tu pasaporte.*"
+    },
+    {
+      "id": "itinerario_que_hacer",
+      "triggers": ["itinerario", "que hacer", "qué hacer", "dias", "días", "plan", "ruta", "recorrido", "semana", "programa"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Itinerarios recomendados para Maldivas:**\n\n**Express (5 días):**\n- Día 1: Llegada Velana → Transfer al resort → Playa\n- Día 2: Snorkel en arrecife + crucero atardecer con delfines\n- Día 3: Buceo/snorkel con tiburones + kayak + cena en la playa\n- Día 4: Isla local + spa sobre el agua\n- Día 5: Amanecer desde la villa → Regreso\n\n**Con presupuesto (7 días):**\n- Días 1-3: Isla local (Maafushi) — guesthouse 40-80 EUR/noche\n- Días 4-7: 1-2 noches en resort con overwater villa\n\n💡 *5 días es suficiente para un resort. Con 7+ días puedes combinar isla local + resort de lujo para la mejor relación calidad-precio.*"
+    },
+    {
+      "id": "atolones_islas",
+      "triggers": ["atolon", "atolón", "atolones", "isla", "islas", "north male", "south male", "baa", "raa", "ari", "maafushi", "thulusdhoo", "zona", "zonas"],
+      "scrollTo": "sec-zonas",
+      "response": "**🏝️ Principales atolones de Maldivas:**\n\n🌊 **North Malé Atoll:**\n- Más accesible (20-45 min en lancha desde aeropuerto)\n- Todo tipo de alojamiento: lujo hasta 40-80 EUR/noche\n\n🦈 **South Malé Atoll:**\n- Mejor buceo, mantas rayas, tiburones de arrecife\n- Arrecife de Guraidhoo — clase mundial\n\n🌊 **Baa & Raa Atoll:**\n- Reserva UNESCO, tiburones ballena y mantas\n- Ultra lujo: Six Senses, Four Seasons\n- Acceso en hidroavión (200-300 EUR ida y vuelta)\n\n🏘️ **Islas locales populares:**\n- **Maafushi:** mejor infraestructura turística\n- **Thulusdhoo:** surf de clase mundial (ola Cokes)\n\n💡 *North Malé es perfecto para primera visita. Baa Atoll para la experiencia más exclusiva.*"
+    },
+    {
+      "id": "clima_temporada",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "temporada", "seca", "monzon", "monzón"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en Maldivas — cuándo ir:**\n\n☀️ **Temporada seca (Nov-Abril):**\n- Cielos despejados, visibilidad submarina perfecta\n- Olas calmadas, ideal para snorkel\n- Temporada alta — precios más altos\n- Solo 3-6 días de lluvia/mes\n\n🌧️ **Temporada de monzón (May-Oct):**\n- Más lluvias y viento\n- Descuentos del **30-50%** en resorts\n- Mejor para ver **mantas rayas y tiburones ballena** en Baa Atoll\n\n🌡️ **Temperatura:** 29-31°C todo el año (tropical ecuatorial)\n🌊 **Agua:** 27-29°C siempre\n\n💡 *Nov-Abril es temporada perfecta. May-Oct tiene peor clima pero descuentos enormes y mejor vida marina.*"
+    },
+    {
+      "id": "presupuesto_precio",
+      "triggers": ["presupuesto", "cuanto cuesta", "cuánto cuesta", "barato", "precio", "dinero", "budget", "caro", "dolar", "dólar", "moneda", "economico", "económico"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto diario en Maldivas:**\n\n💎 **Resort todo incluido:** 200-600 EUR/día\n🏨 **Isla local (guesthouse):** 60-120 EUR/día\n\n**Precios de referencia:**\n- 🏠 Resort 4★: 200-400 EUR/noche\n- 🏠 Guesthouse Maafushi: 40-80 EUR/noche\n- 🤿 Excursión snorkel: 25-80 EUR\n- 🍽️ Comida fuera del resort: 15-40 EUR\n- 🚤 Transfer speedboat: 30-80 EUR\n- 🛩️ Hidroavión: 200-400 EUR ida y vuelta\n\n💡 **Tip ahorro:** Combina 3-4 noches en isla local (Maafushi, 40-80 EUR) con 1-2 noches en resort de lujo. Así disfrutas lo mejor sin arruinarte.\n\n💡 *Maldivas SÍ se puede hacer con presupuesto. Las islas locales han revolucionado el turismo asequible.*"
+    },
+    {
+      "id": "comida_gastronomia",
+      "triggers": ["comida", "comer", "restaurante", "gastronomia", "gastronomía", "cocina", "pescado", "garudhiya", "atun", "atún", "comida local"],
+      "scrollTo": "sec-zonas",
+      "response": "**🍽️ Gastronomía maldiva — qué comer:**\n\n**Platos imprescindibles:**\n- 🐟 **Garudhiya** — caldo de atún con lima y arroz (el plato nacional)\n- 🐟 **Mas Huni** — atún desmenuzado con coco rallado y cebolla (desayuno típico)\n- 🍞 **Roshi** — pan plano que acompaña todo\n- 🐟 **Fish Curry** — curry de pescado con coco\n- 🍚 **Fried Rice con pescado** — en todos los restaurantes locales\n\n💰 **Precios:**\n- En isla local: **5-15 EUR** por comida\n- En resort: **15-40 EUR** (o incluido en todo incluido)\n\n🍷 **Alcohol:** solo disponible en resorts (islas privadas). Prohibido en islas habitadas.\n\n💡 *La cocina maldiva gira en torno al atún fresco y el coco. En islas locales la comida es auténtica y económica.*"
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "destination": "Santorini",
+  "id": "santorini",
+  "country": "Grecia",
+  "hero_image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "La joya volcánica del Egeo",
+  "visa": {
+    "type": "Schengen",
+    "required": false,
+    "note": "Pasaporte vigente. ETIAS obligatorio desde 2025 (~7€).",
+    "etias_url": "https://travel-europe.europa.eu/etias_es",
+    "etias_fee": "7 EUR"
+  },
+  "budget_daily": {
+    "lujo": "400-700 EUR",
+    "medio": "150-250 EUR",
+    "economico": "70-110 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 13, "temp_min": 8, "rain_days": 10},
+    {"month": "Feb", "temp_max": 13, "temp_min": 8, "rain_days": 8},
+    {"month": "Mar", "temp_max": 15, "temp_min": 10, "rain_days": 6},
+    {"month": "Abr", "temp_max": 19, "temp_min": 13, "rain_days": 3},
+    {"month": "May", "temp_max": 23, "temp_min": 17, "rain_days": 2},
+    {"month": "Jun", "temp_max": 28, "temp_min": 21, "rain_days": 0},
+    {"month": "Jul", "temp_max": 30, "temp_min": 23, "rain_days": 0},
+    {"month": "Ago", "temp_max": 30, "temp_min": 23, "rain_days": 0},
+    {"month": "Sep", "temp_max": 27, "temp_min": 21, "rain_days": 1},
+    {"month": "Oct", "temp_max": 22, "temp_min": 17, "rain_days": 4},
+    {"month": "Nov", "temp_max": 18, "temp_min": 13, "rain_days": 7},
+    {"month": "Dic", "temp_max": 14, "temp_min": 9, "rain_days": 10}
+  ],
+  "best_months": ["May", "Jun", "Sep", "Oct"],
+  "zones": [
+    {
+      "name": "Oia",
+      "description": "El pueblo más fotogénico de Santorini. Sus casas encaladas y cúpulas azules sobre el borde del volcán producen el atardecer más famoso del mundo. Muy turístico y caro, pero imprescindible.",
+      "vibe": "Romántico · Fotogénico · Exclusivo"
+    },
+    {
+      "name": "Fira (Capital)",
+      "description": "La capital de la isla, con la vista panorámica de la caldera, restaurantes, vida nocturna y teleférico al puerto. El centro de todo con mejor relación precio-calidad que Oia.",
+      "vibe": "Activo · Panorámico · Gastronómico"
+    },
+    {
+      "name": "Imerovigli",
+      "description": "El punto más alto de la isla, apodado 'el balcón de la caldera'. Vistas 360° absolutas, ambiente más tranquilo que Oia y hoteles-cueva de lujo a mejor precio.",
+      "vibe": "Íntimo · Vistas · Lujo Tranquilo"
+    },
+    {
+      "name": "Perissa / Perivolos",
+      "description": "La zona de playas de arena negra volcánica al sur de la isla. Ambiente joven, bares en la playa, precios mucho más accesibles que la zona de la caldera.",
+      "vibe": "Playa · Joven · Accesible"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Atardecer en Oia",
+      "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+      "description": "El atardecer de Oia es considerado uno de los más espectaculares del mundo. El sol se hunde en el Mar Egeo pintando el volcán y las casas blancas de naranja y rosa. Llega 2 horas antes.",
+      "klook_url": "https://www.klook.com/es/search/?query=tour+atardecer+oia+santorini"
+    },
+    {
+      "name": "Crucero por la Caldera",
+      "image": "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Navega por el cráter volcánico sumergido, visita el volcán activo de Nea Kameni, báñate en las aguas termales y disfruta del atardecer desde el mar. La experiencia más completa de Santorini.",
+      "klook_url": "https://www.klook.com/es/search/?query=crucero+caldera+santorini+volcan"
+    },
+    {
+      "name": "Playas de Arena Negra",
+      "image": "https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&w=1200&q=80",
+      "description": "La arena negra volcánica de Kamari y Perissa es única en el mundo. Playas organizadas con tumbonas, restaurantes y aguas cristalinas del Egeo. Muy diferente a cualquier playa mediterránea.",
+      "klook_url": "https://www.klook.com/es/search/?query=playa+negra+kamari+santorini"
+    },
+    {
+      "name": "Akrotiri — Pompeya Griega",
+      "image": "https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1200&q=80",
+      "description": "La ciudad minoica enterrada por la erupción volcánica del 1600 a.C. Considerada la Pompeya griega. Sus frescos y arquitectura conservados sorprenden por su modernidad para la época.",
+      "klook_url": "https://www.klook.com/es/search/?query=akrotiri+santorini+yacimiento+arqueologico"
+    }
+  ],
+  "itineraries": {
+    "express": {
+      "title": "Santorini Express (1 día)",
+      "description": "Los imprescindibles de la isla en una jornada intensa.",
+      "steps": [
+        {"time": "08:00", "activity": "Fira: paseo matutino por el borde de la caldera con café y vistas"},
+        {"time": "09:30", "activity": "Akrotiri: el yacimiento arqueológico minoico (2 horas)"},
+        {"time": "12:00", "activity": "Playa de arena negra de Perissa: baño y almuerzo en chiringuito"},
+        {"time": "15:00", "activity": "Ruta en quad o ATV por el interior de la isla hasta Oia"},
+        {"time": "17:00", "activity": "Llegada a Oia: busca tu spot para el atardecer (llega muy temprano)"},
+        {"time": "19:30", "activity": "El atardecer de Oia — la experiencia más épica de Santorini"},
+        {"time": "21:00", "activity": "Cena en Oia o regresa a Fira en bus o taxi"}
+      ]
+    },
+    "full": {
+      "title": "Santorini Completo (3 días)",
+      "description": "Tres días para descubrir la isla a fondo: caldera, volcán, playas y pueblos.",
+      "steps": [
+        {"time": "Día 1 AM", "activity": "Llegada y check-in en hotel-cueva en Imerovigli o Oia"},
+        {"time": "Día 1 PM", "activity": "Crucero por la caldera: volcán Nea Kameni, aguas termales, atardecer desde el mar"},
+        {"time": "Día 1 Noche", "activity": "Cena en restaurante con vista a la caldera en Fira"},
+        {"time": "Día 2 AM", "activity": "Akrotiri (yacimiento arqueológico) + playa de Perivolos (arena negra)"},
+        {"time": "Día 2 PM", "activity": "Degustación de vinos en bodega volcánica (Santo Wines o Vassaltis)"},
+        {"time": "Día 2 Tarde", "activity": "Paseo por Pyrgos: el pueblo medieval más auténtico de la isla"},
+        {"time": "Día 3", "activity": "Mañana libre en Oia → El atardecer más famoso del mundo (llega 2h antes)"}
+      ]
+    }
+  },
+  "hotels": [
+    {
+      "name": "Katikies Hotel",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Hotel-cueva de lujo en Oia con las piscinas de infinity más fotografiadas del mundo, directamente sobre la caldera. La definición de Santorini.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 36.4618, "lng": 25.3763},
+      "labels": ["OIA", "INFINITY POOL", "CALDERA"],
+      "link": "https://www.hotels.com/ho109234/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=katikies&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Grace Hotel Santorini",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "En Imerovigli, en el punto más alto de la caldera. Piscina infinita privada, spa de clase mundial y gastronomía con estrella Michelin.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 36.4347, "lng": 25.4213},
+      "labels": ["IMEROVIGLI", "INFINITY POOL", "SPA"],
+      "link": "https://www.hotels.com/ho298765/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=grace&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Mystique Hotel",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Tallado en el acantilado de Oia, con cuevas y suites privadas de infinita elegancia. Una de las mejores experiencias de hospedaje del Mediterráneo.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 36.4620, "lng": 25.3758},
+      "labels": ["OIA", "CALDERA", "CUEVA"],
+      "link": "https://www.hotels.com/ho412567/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=mystique&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Aressana Spa Hotel",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "En Fira, con piscina propia y spa. Habitaciones modernas a 5 minutos del borde de la caldera. Mejor relación precio-calidad de la zona central.",
+      "price_level": "€€€",
+      "coords": {"lat": 36.4162, "lng": 25.4318},
+      "labels": ["FIRA", "SPA", "PISCINA"],
+      "link": "https://www.hotels.com/ho187654/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=aressana&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Atlantis Hotel Santorini",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Clásico hotel en el borde de Fira con vistas directas a la caldera. Piscina con panorámica 180°. Punto perfecto entre precio y ubicación.",
+      "price_level": "€€€",
+      "coords": {"lat": 36.4158, "lng": 25.4321},
+      "labels": ["FIRA", "CALDERA", "PISCINA"],
+      "link": "https://www.hotels.com/ho234567/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=atlantis&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Pelican Bay",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 3,
+      "description": "Hotel boutique en Oia con piscina y vistas. Más asequible que los alojamientos exclusivos sin sacrificar la ubicación privilegiada en el pueblo más fotogénico.",
+      "price_level": "€€",
+      "coords": {"lat": 36.4615, "lng": 25.3770},
+      "labels": ["OIA", "PISCINA"],
+      "link": "https://www.hotels.com/ho345678/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=pelican&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Perivolos Paradise Hotel",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "En Perivolos, frente a la playa de arena negra. Sin las vistas de caldera pero con acceso directo al mar y precios mucho más razonables.",
+      "price_level": "€€",
+      "coords": {"lat": 36.3462, "lng": 25.4521},
+      "labels": ["PERIVOLOS", "PLAYA NEGRA"],
+      "link": "https://www.hotels.com/ho456789/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=perivolos&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Santorini Backpackers",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 2,
+      "description": "El hostal más popular de la isla, en Fira. Piscina, bar, ambiente social internacional y las mejores fiestas de viajeros. Desde 30€/noche en dorm.",
+      "price_level": "€",
+      "coords": {"lat": 36.4159, "lng": 25.4315},
+      "labels": ["FIRA", "PISCINA", "SOCIAL"],
+      "link": "https://www.hotels.com/ho567890/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=backpackers&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Afroditi Venus",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Piscina y patio en Kamari, junto a la playa de arena negra. Limpio, bien mantenido y a precio razonable para Santorini. Buenas reviews familiares.",
+      "price_level": "€€",
+      "coords": {"lat": 36.3717, "lng": 25.4871},
+      "labels": ["KAMARI", "PLAYA NEGRA", "PISCINA"],
+      "link": "https://www.hotels.com/ho678901/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=afroditi&affcid=SKYLIO2025"
+    }
+  ],
+  "airports": [
+    {
+      "name": "Aeropuerto de Santorini (JTR)",
+      "distance_km": 6,
+      "transport": "Taxi / Autobús KTEL",
+      "time_min": 15,
+      "price_range": "15-25 EUR",
+      "notes": "El aeropuerto está en el este de la isla. Taxi a Fira: 15-20€. Autobús KTEL: 2.50€. No hay metro ni tren. Reserva el taxi con antelación en temporada alta."
+    },
+    {
+      "name": "Puerto de Atenas + Ferry",
+      "distance_km": 250,
+      "transport": "Ferry (Piraeus → Santorini)",
+      "time_min": 300,
+      "price_range": "40-120 EUR",
+      "notes": "El ferry desde el puerto del Pireo (Atenas) tarda 5-8 horas según el tipo. Ferry rápido (High Speed): 5h, ~90€. Ferry convencional nocturno: 8h, desde 40€."
+    },
+    {
+      "name": "Vuelo desde Atenas",
+      "distance_km": 250,
+      "transport": "Vuelo doméstico (Sky Express / Olympic)",
+      "time_min": 50,
+      "price_range": "60-200 EUR",
+      "notes": "La opción más rápida. Vuelos frecuentes desde el aeropuerto de Atenas (ATH). 50 minutos de vuelo. Reserva con meses de antelación en verano."
+    },
+    {
+      "name": "Bus KTEL interno",
+      "distance_km": 0,
+      "transport": "Autobús público",
+      "time_min": 0,
+      "price_range": "1.80-2.50 EUR",
+      "notes": "Red de autobuses KTEL conecta Fira con Oia (30 min), Perissa, Kamari y el aeropuerto. Económico pero con horarios limitados. La terminal está en Fira."
+    }
+  ],
+  "directory": [
+    {
+      "name": "Oia",
+      "type": "Pueblo / Mirador",
+      "address": "Oia, Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Oia_(Grecia)"
+    },
+    {
+      "name": "Akrotiri",
+      "type": "Yacimiento Arqueológico",
+      "address": "Akrotiri, Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Acrotiri_(Santorini)"
+    },
+    {
+      "name": "Fira",
+      "type": "Capital de la Isla",
+      "address": "Fira, Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Fira"
+    },
+    {
+      "name": "Nea Kameni (Volcán)",
+      "type": "Volcán Activo",
+      "address": "Caldera de Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Nea_Kameni"
+    },
+    {
+      "name": "Playa de Perissa",
+      "type": "Playa de Arena Negra",
+      "address": "Perissa, Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Perissa"
+    },
+    {
+      "name": "Museo Prehistórico de Thera",
+      "type": "Museo",
+      "address": "Fira, Santorini",
+      "wiki_url": "https://es.wikipedia.org/wiki/Santorini"
+    }
+  ],
+  "tips": [
+    "El atardecer de Oia: llega al menos 2 horas antes. En verano hay literalmente miles de personas compitiendo por el mismo spot.",
+    "La caldera solo tiene vistas desde el lado oeste. El lado este (Kamari, Perissa) tiene playas pero sin las vistas icónicas.",
+    "Alquila un quad o ATV para explorar la isla a tu ritmo. Un día cuesta 30-50€ y es la mejor forma de moverse.",
+    "El vino local Assyrtiko es uno de los mejores de Grecia. La bodega Santo Wines tiene las mejores vistas de la caldera para la degustación.",
+    "Santorini es cara. Come en los supermercados locales para desayunos y snacks. Reserva todo con meses de antelación en julio-agosto."
+  ],
+  "intents": [
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "llegada", "llegar", "vuelo", "jtr", "ferry", "barco", "atenas", "pireo", "transporte"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Cómo llegar a Santorini:**\n\n**Aeropuerto JTR** (en la isla):\n- 🚕 Taxi a Fira: 15-20€, 15 min\n- 🚌 Bus KTEL: 2.50€ (menos frecuente)\n- Vuelos directos desde Madrid, Barcelona y grandes europeas en verano\n\n**Desde Atenas:**\n- ✈️ Vuelo doméstico: 50 min, 60-200€ (Sky Express/Olympic)\n- 🚢 Ferry rápido desde El Pireo: 5h, ~90€\n- 🚢 Ferry nocturno: 8h, desde 40€ (opción económica)\n\n💡 *En julio-agosto reserva TODO con meses de antelación. La isla se colapsa.*"
+    },
+    {
+      "id": "ktel_bus",
+      "triggers": ["bus", "autobus", "ktel", "transporte interno", "moverme", "moverse", "quad", "atv", "alquilar"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**🚌 Transporte interno en Santorini:**\n\n**Bus KTEL (público):**\n- Terminal en Fira (centro)\n- Fira → Oia: 30 min, 2.50€\n- Fira → Perissa/Kamari: 30 min, 2€\n- Frecuencia limitada — consulta horarios en la terminal\n\n**Opciones alternativas:**\n- 🛵 Quad/ATV: 30-50€/día — la mejor forma de explorar\n- 🚗 Coche de alquiler: 50-80€/día\n- 🚕 Taxi: caro pero cómodo (10-25€ por trayecto)\n\n💡 *El quad es la experiencia de la isla. Perfecto para llegar a los pueblos más escondidos.*"
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "visado", "etias", "schengen", "pasaporte", "documentos", "entrada"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Entrada a Santorini (Grecia / Schengen):**\n\n✅ **Latinoamérica** (México, Colombia, Argentina, Chile...): Solo pasaporte vigente. Sin visa.\n\n⚠️ **ETIAS obligatorio desde 2025:**\n- Coste: **7€** (pago único válido 3 años)\n- Se tramita online en minutos: [travel-europe.europa.eu](https://travel-europe.europa.eu/etias_es)\n- Válido para todos los países Schengen\n\n📋 Ten listo: seguro de viaje, reserva de hotel y fondos para la estancia."
+    },
+    {
+      "id": "itinerary_1day",
+      "triggers": ["un dia", "1 dia", "24 horas", "rapido", "express", "poco tiempo", "qué ver"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**⚡ Santorini en 1 día — los esenciales:**\n\n☀️ **08:00** — Fira: café con vistas a la caldera\n🏛️ **09:30** — Akrotiri (yacimiento arqueológico)\n🏖️ **12:00** — Playa Perissa (arena negra) + almuerzo\n🛵 **15:00** — Quad hasta Oia\n🌅 **17:00** — Llega a Oia (¡2 horas antes del atardecer!)\n🌇 **19:30** — El atardecer más famoso del mundo\n🍷 **21:00** — Cena en Oia\n\n💡 *El atardecer es la joya. No te la pierdas por llegar tarde.*"
+    },
+    {
+      "id": "itinerary_3days",
+      "triggers": ["tres dias", "3 dias", "fin de semana", "finde", "semana", "completo", "caldera", "crucero volcan"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Santorini en 3 días:**\n\n**Día 1:** Llegada + crucero por la caldera (volcán Nea Kameni + aguas termales + atardecer desde el mar)\n\n**Día 2:**\n- 🏛️ Akrotiri (mañana)\n- 🏖️ Playas de arena negra (tarde)\n- 🍷 Degustación de vinos en Santo Wines\n- 🏘️ Paseo por Pyrgos (pueblo medieval)\n\n**Día 3:** Mañana libre → Oia a primera hora → El atardecer épico\n\n💡 *El crucero por la caldera cuesta unos 40-80€ y es la actividad más memorable de la isla.*"
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["barrios", "zonas", "donde dormir", "donde alojarse", "oia", "fira", "imerovigli", "perissa", "kamari"],
+      "scrollTo": "sec-zonas",
+      "response": "**🗺️ Las 4 zonas de Santorini:**\n\n🌅 **Oia** — el más fotogénico y caro. El atardecer más famoso del mundo. Muy turístico.\n\n🏙️ **Fira (Capital)** — mejor relación precio-calidad con vistas a la caldera. Más vida nocturna.\n\n⛰️ **Imerovigli** — el punto más alto, tranquilo y romántico. Hotel-cuevas increíbles.\n\n🏖️ **Perissa/Kamari** — playas de arena negra, precios más bajos, ambiente joven.\n\n💡 *Para la experiencia clásica de Santorini: duerme en Imerovigli o Fira (más barato que Oia) y visita Oia al atardecer.*"
+    },
+    {
+      "id": "sunset_oia",
+      "triggers": ["atardecer", "sunset", "puesta de sol", "oia atardecer", "fotografia", "fotos"],
+      "scrollTo": "sec-lugares",
+      "response": "**🌅 El atardecer de Oia — guía completa:**\n\n⏰ **Llega 2 horas antes del atardecer** (consulta horario exacto del día)\n\n📍 **Mejores spots:**\n- Castillo de Oia (el más famoso, más lleno)\n- Borde del camino hacia el castillo (menos masificado)\n- Terraza de tu hotel (si tienes vistas)\n\n⚠️ **Realidad:** En verano hay miles de personas. Es impresionante igual.\n\n💡 **Alternativa secreta:** El atardecer desde Imerovigli es casi igual de bonito y con la mitad de gente. Desde un crucero es espectacular.\n\n🍷 *Lleva vino de la bodega local para el momento. No hay nada mejor.*"
+    },
+    {
+      "id": "attractions",
+      "triggers": ["que ver", "lugares", "atracciones", "monumentos", "akrotiri", "volcan", "caldera", "nea kameni"],
+      "scrollTo": "sec-lugares",
+      "response": "**🏛️ Los imprescindibles de Santorini:**\n\n1. **Atardecer en Oia** — el más fotogénico del mundo. Llega 2h antes.\n2. **Crucero por la Caldera** — volcán activo, aguas termales, vistas 360°. 40-80€.\n3. **Akrotiri** — la 'Pompeya griega'. Yacimiento minoico del 1600 a.C. 12€.\n4. **Playas de arena negra** — Perissa y Kamari. Únicas en el Mediterráneo.\n5. **Santo Wines** — bodega con la mejor vista de la caldera. Degustación 20-40€.\n6. **Pyrgos** — el pueblo medieval más auténtico de la isla, sin turistas.\n\n🎫 *Reserva el crucero por la caldera con antelación en temporada alta.*"
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "calor", "viento"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en Santorini — cuándo ir:**\n\n✅ **Mejor época:** Mayo-Junio y Septiembre-Octubre\n- Calor agradable (23-27°C), menos masificación, precios más bajos\n\n☀️ **Julio-Agosto:** Calor extremo (30°C), masificación total y precios disparados. También viento Meltemi fuerte.\n\n🌸 **Abril-Mayo:** Isla en flor, precios bajos, algunos servicios aún no abren.\n\n❄️ **Noviembre-Marzo:** Muchos establecimientos cerrados. Para los que buscan tranquilidad absoluta.\n\n💡 *Septiembre es el mes perfecto: aguas calientes (25°C), menos gente, todos los servicios abiertos.*"
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "cuanto cuesta", "barato", "precio", "dinero", "budget", "caro"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto en Santorini (una de las islas más caras de Europa):**\n\n💎 **Lujo:** 400-700 EUR/día\n- Hotel-cueva en Oia + restaurante con vista a caldera\n\n🏨 **Precio Medio:** 150-250 EUR/día\n- Hotel en Fira + cenas en osteria\n\n🎒 **Económico:** 70-110 EUR/día\n- Hostal + supermercado + 1 actividad\n\n**Precios de referencia:**\n- Crucero caldera: 40-80€\n- Akrotiri: 12€\n- Bus KTEL: 1.80-2.50€\n- Cena con vista caldera: 40-80€\n- Quad/ATV: 30-50€/día\n\n⚠️ *Santorini es cara. El presupuesto puede dispararse fácilmente. Controla los taxis.*"
+    },
+    {
+      "id": "hotels_infinity",
+      "triggers": ["hotel infinito", "infinity pool", "piscina infinita", "hotel cueva", "hotel caldera", "oia hotel"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterOia",
+      "response": "**🌊 Hoteles-cueva con infinity pool en Santorini:**\n\nLos hoteles más exclusivos del mundo están aquí:\n\n- 🥇 **Katikies Hotel** ⭐⭐⭐⭐⭐ — las piscinas de infinity más fotografiadas del mundo en Oia\n- 🥈 **Grace Hotel** ⭐⭐⭐⭐⭐ — Imerovigli, el punto más alto, spa con estrella Michelin\n- 🥉 **Mystique Hotel** ⭐⭐⭐⭐⭐ — tallado en el acantilado de Oia, suites de cueva\n\n💡 *Reserva con 6 meses de antelación para verano. Los precios oscilan entre 500-2000€/noche.*"
+    },
+    {
+      "id": "hotels_economico",
+      "triggers": ["hotel barato", "hostal", "económico", "presupuesto bajo", "backpacker", "playa negra"],
+      "scrollTo": "sec-hoteles",
+      "response": "**💰 Opciones económicas en Santorini:**\n\n- 🏠 **Santorini Backpackers** — el hostal con más ambiente de la isla. Piscina, bar. Dorm desde 30€\n- 🏖️ **Perivolos Paradise Hotel** — frente a la playa de arena negra. Buen precio vs calidad\n- 🏡 **Hotel Afroditi Venus** — Kamari, piscina, tranquilo y familiar. Buenas reviews\n\n💡 *Las zonas de Perissa y Kamari son significativamente más baratas que Oia o Fira, sin sacrificar calidad de playas.*"
+    },
+    {
+      "id": "wine_food",
+      "triggers": ["comida", "comer", "restaurante", "vino", "wine", "gastronomia", "assyrtiko", "bodega", "santo wines"],
+      "scrollTo": "sec-zonas",
+      "response": "**🍷 Gastronomía y vinos de Santorini:**\n\n**Vino Assyrtiko:**\n- El vino blanco volcánico más famoso de Grecia\n- Las vides crecen en suelo de lava, sin irrigación, en forma de cesta\n- **Santo Wines:** la bodega con mejores vistas de la caldera. Degustación 20-40€\n- **Vassaltis Vineyards:** más íntima y exclusiva\n\n**Gastronomía local:**\n- 🍆 Fava Santorini (puré de frijoles amarillos)\n- 🍅 Tomate cherry de Santorini (única variedad local)\n- 🧀 Queso Chlorotyri\n- 🐙 Pulpo a la brasa en las tabernas del puerto\n\n💡 *Come en las tabernas del puerto de Ammoudi (bajo Oia). Las más baratas con las mejores vistas al volcán.*"
+    }
+  ]
+}

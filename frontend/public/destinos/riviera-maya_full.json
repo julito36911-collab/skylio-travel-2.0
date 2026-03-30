@@ -1,0 +1,346 @@
+{
+  "destination": "Riviera Maya",
+  "id": "riviera-maya",
+  "country": "México",
+  "hero_image": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "La guía definitiva: Cancún, Playa del Carmen, Tulum, cenotes, parques temáticos, Bacalar y los secretos del Caribe Mexicano.",
+  "visa": {
+    "type": "FMM",
+    "required": false,
+    "note": "México permite entrada sin visa a ciudadanos de España y la mayoría de países latinoamericanos por hasta 180 días. Solo necesitas pasaporte válido y llenar la Forma Migratoria Múltiple (FMM) — actualmente digital y gratuita.",
+    "fmm_url": "https://www.inm.gob.mx/",
+    "fmm_fee": "Gratis"
+  },
+  "budget_daily": {
+    "lujo": "140-290 EUR",
+    "medio": "100-200 EUR",
+    "economico": "50-100 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 28, "temp_min": 20, "rain_days": 4},
+    {"month": "Feb", "temp_max": 28, "temp_min": 20, "rain_days": 3},
+    {"month": "Mar", "temp_max": 29, "temp_min": 21, "rain_days": 3},
+    {"month": "Abr", "temp_max": 31, "temp_min": 23, "rain_days": 3},
+    {"month": "May", "temp_max": 32, "temp_min": 24, "rain_days": 6},
+    {"month": "Jun", "temp_max": 33, "temp_min": 25, "rain_days": 12},
+    {"month": "Jul", "temp_max": 33, "temp_min": 25, "rain_days": 13},
+    {"month": "Ago", "temp_max": 33, "temp_min": 25, "rain_days": 14},
+    {"month": "Sep", "temp_max": 32, "temp_min": 24, "rain_days": 16},
+    {"month": "Oct", "temp_max": 31, "temp_min": 23, "rain_days": 13},
+    {"month": "Nov", "temp_max": 30, "temp_min": 22, "rain_days": 7},
+    {"month": "Dic", "temp_max": 29, "temp_min": 21, "rain_days": 5}
+  ],
+  "best_months": ["Dic", "Ene", "Feb", "Mar", "Abr"],
+  "zones": [
+    {
+      "name": "Cancún — El Hub Principal",
+      "description": "La entrada principal a toda la Riviera Maya. La Zona Hotelera de Cancún tiene 25 km de playas perfectas con los grandes resorts todo incluido. El agua aquí es turquesa y absolutamente calmada. Para partes, vida nocturna y beach clubs de lujo, Cancún es imbatible. El precio de los resorts es más económico que en Tulum.",
+      "vibe": "Aeropuerto · Resorts · Vida Nocturna"
+    },
+    {
+      "name": "Playa del Carmen — El Equilibrio Perfecto",
+      "description": "A 68 km de Cancún, Playa del Carmen es el punto más equilibrado de toda la Riviera Maya. La Quinta Avenida (5TA AVE) es la calle peatonal más animada del Caribe con 20 manzanas de restaurantes, tiendas y bares. La playa es preciosa y está a pasos del centro. Ferry a Cozumel en 45 minutos. La mejor base para explorar toda la zona.",
+      "vibe": "5TA Avenida · Ambiente · Equilibrio"
+    },
+    {
+      "name": "Tulum — Bohemio y Selva",
+      "description": "El destino más de moda del mundo en los últimos años. Tulum combina ruinas mayas sobre un acantilado con el mejor cenote y las playas más salvajes del Caribe. La zona hotelera de Tulum tiene hoteles boutique de bambú y palapa entre la selva a pie de playa. Más caro que Cancún o Playa, pero la experiencia es única e inigualable.",
+      "vibe": "Ruinas Mayas · Eco-Lujo · Bohemio"
+    },
+    {
+      "name": "Bacalar — El Lago de los 7 Colores",
+      "description": "A 3.5 horas al sur de Tulum, Bacalar es el secreto mejor guardado de México. Un lago de agua dulce de 42 km con 7 tonalidades de azul y turquesa imposibles de creer. Sin olas, sin sal, sin sargazo — el agua más cristalina del país. Los locales lo llaman 'el Caribe sin turistas'. Visita obligatoria si tienes tiempo extra.",
+      "vibe": "Secreto · Laguna · Tranquilidad"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Los Cenotes — Tesoros Subterráneos",
+      "image": "https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=1200&q=80",
+      "description": "Más de 10.000 cenotes conectan bajo tierra toda la Riviera Maya. Gran Cenote, Dos Ojos, Ik Kil, Cenote Azul, Tankah y El Eden son los más espectaculares. Nadar en agua cristalina entre estalactitas y raíces de árbol es la experiencia más memorable de México.",
+      "klook_url": "https://www.klook.com/search/result/?query=cenote+riviera+maya+tulum+tour"
+    },
+    {
+      "name": "Ruinas Mayas de Tulum",
+      "image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1200&q=80",
+      "description": "El único sitio arqueológico maya construido sobre un acantilado frente al mar Caribe. Llega a las 8 AM — a las 10 ya hay miles de personas. Debajo del acantilado hay una playa paradisíaca de acceso exclusivo para los visitantes del sitio.",
+      "klook_url": "https://www.klook.com/search/result/?query=tulum+ruins+tour+riviera+maya"
+    },
+    {
+      "name": "Xcaret, Xel-Há y Parques Temáticos",
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "description": "El Grupo Xcaret opera los parques más famosos de México. Xcaret tiene ríos subterráneos, arrecife de snorkel, tortugas, flamingos y el espectáculo nocturno de cultura mexicana más impresionante del mundo. Xel-Há es un parque acuático natural en una laguna. Día completo garantizado.",
+      "klook_url": "https://www.klook.com/search/result/?query=xcaret+park+riviera+maya"
+    },
+    {
+      "name": "Bacalar — Laguna de los 7 Colores",
+      "image": "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Una laguna de agua dulce de 42 km con 7 tonalidades de azul imposibles de fotografiar sin editar. Sin olas, sin sal, sin sargazo. Los tours en velero al atardecer son los más románticos del Caribe Mexicano. Alójate 2 noches para vivir la experiencia completa.",
+      "klook_url": "https://www.klook.com/search/result/?query=bacalar+lake+tour+mexico"
+    }
+  ],
+  "itineraries": {
+    "express": {
+      "title": "Riviera Maya Express (7 Días)",
+      "description": "Los imprescindibles de la Riviera Maya en una semana intensa.",
+      "steps": [
+        {"time": "Día 1", "activity": "Cancún: Llegada al aeropuerto (CUN). Instálate en el resort o hotel. Primera tarde en la playa. Cena frente al mar en la Zona Hotelera."},
+        {"time": "Día 2", "activity": "Chichén Itzá + Cenote Ik Kil + Valladolid. Salida a las 7 AM. Una de las 7 Maravillas del Mundo, el cenote más espectacular y el pueblo colonial más hermoso de Yucatán."},
+        {"time": "Día 3", "activity": "Playa del Carmen y Cozumel. Bus ADO (1h, €8). Quinta Avenida por la mañana. Ferry a Cozumel (45 min) — snorkel o buceo en el segundo arrecife más grande del mundo."},
+        {"time": "Día 4", "activity": "Xcaret día completo. Ríos subterráneos, snorkel, tortugas, zoo de mariposas. Quédate para el espectáculo nocturno 'Xcaret México Espectacular' a las 7 PM."},
+        {"time": "Día 5", "activity": "Tulum: Ruinas a las 8 AM (llega temprano). Baja a la playa exclusiva bajo el acantilado. Después Gran Cenote a 5 min en taxi. Tarde en la zona hotelera boutique."},
+        {"time": "Día 6", "activity": "Cenote Dos Ojos (el sistema de cuevas más espectacular) + Ruinas de Cobá donde puedes subir la pirámide Nohoch Mul de 42 metros con vistas de la selva."},
+        {"time": "Día 7", "activity": "Playa libre, compras en el Mercado 28 de Cancún o la 5TA de Playa. Cena de despedida con tacos de marlin y ceviche. Vuelo desde Cancún."}
+      ]
+    },
+    "full": {
+      "title": "Riviera Maya Completa (14 Días)",
+      "description": "Dos semanas para descubrir los secretos que los turistas normales nunca ven.",
+      "steps": [
+        {"time": "Días 1-7", "activity": "Itinerario Express completo: Cancún, Chichén Itzá, Playa del Carmen, Cozumel, Xcaret, Tulum y cenotes."},
+        {"time": "Días 8-9", "activity": "Bacalar — Bus desde Tulum (2.5h, €12). Dos noches frente al lago. Tour en velero, Canal de los Piratas, estromatolitos y atardecer desde el muelle con el lago de 7 colores."},
+        {"time": "Días 10-11", "activity": "Mérida — La Ciudad Blanca. Paseo Montejo, Mercado Lucas de Gálvez, haciendas coloniales y la mejor cochinita pibil del mundo. Excursión a las ruinas de Uxmal."},
+        {"time": "Días 12-14", "activity": "Isla Holbox — Sin coches, aguas turquesas, flamencos rosados. Tiburón ballena en temporada (junio-septiembre). Calles de arena, hamacas y paz absoluta. Regreso desde Cancún."}
+      ]
+    }
+  },
+  "hotels": [
+    {
+      "name": "Azulik Resort Tulum",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Villas de madera sobre la selva en Tulum. Eco-lujo con experiencia inmersiva en la naturaleza.",
+      "price_level": "€€€€€",
+      "labels": ["TULUM", "ECO-LUJO", "SELVA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Hyatt Ziva Cancún",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Todo incluido en la punta de la Zona Hotelera de Cancún. Playas de ambos lados.",
+      "price_level": "€€€€€",
+      "labels": ["CANCÚN", "TODO INCLUIDO", "PLAYA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Rosewood Mayakoba",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Lagunas, lujo y canales privados en Playa del Carmen. Una de las propiedades más exclusivas del Caribe.",
+      "price_level": "€€€€€",
+      "labels": ["PLAYA DEL CARMEN", "LAGUNAS", "EXCLUSIVO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Hotel Indigo Playa del Carmen",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "En la 5ta Avenida con diseño moderno y piscina. Ubicación perfecta para explorar.",
+      "price_level": "€€€",
+      "labels": ["PLAYA DEL CARMEN", "5TA AVENIDA", "PISCINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Be Tulum Hotel",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Selva y playa con palapa auténtica. La experiencia bohemia de Tulum a precio razonable.",
+      "price_level": "€€€",
+      "labels": ["TULUM", "SELVA", "PLAYA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Krystal Cancún",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "En la Zona Hotelera frente al mar. Buena relación calidad-precio para Cancún.",
+      "price_level": "€€€",
+      "labels": ["CANCÚN", "ZONA HOTELERA", "FRENTE AL MAR"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Selina Playa del Carmen",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Coworking, piscina y ambiente social. Ideal para nómadas digitales y viajeros jóvenes.",
+      "price_level": "€€",
+      "labels": ["PLAYA DEL CARMEN", "COWORKING", "SOCIAL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Mama's Home Tulum",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 2,
+      "description": "Hostel boutique con ambiente mágico en Tulum. La opción más económica sin perder el vibe.",
+      "price_level": "€",
+      "labels": ["TULUM", "HOSTEL", "AMBIENTE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    },
+    {
+      "name": "Hostel Natura Cancún",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 2,
+      "description": "En el centro de Cancún, limpio y a precio bajo. Buena base económica.",
+      "price_level": "€",
+      "labels": ["CANCÚN", "CENTRO", "ECONÓMICO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED"
+    }
+  ],
+  "airports": [
+    {
+      "name": "Aeropuerto Cancún (CUN) → Playa del Carmen",
+      "distance_km": 68,
+      "transport": "ADO Bus / Colectivo",
+      "time_min": 60,
+      "price_range": "5-12 EUR",
+      "notes": "ADO sale del aeropuerto directo a Playa del Carmen en 1 hora por €12. Buses cada 30 minutos de 6 AM a 12 AM. Colectivos (furgonetas) por €5-€8 salen llenos desde la salida del aeropuerto."
+    },
+    {
+      "name": "Aeropuerto Cancún (CUN) → Tulum",
+      "distance_km": 130,
+      "transport": "ADO Bus / Taxi",
+      "time_min": 120,
+      "price_range": "18-80 EUR",
+      "notes": "ADO directo desde el aeropuerto a Tulum en 2 horas por €18. O toma el ADO a Playa del Carmen y transbordo. Taxis del aeropuerto a Tulum cuestan aprox €60-€80."
+    },
+    {
+      "name": "Moverse entre ciudades: ADO Bus",
+      "distance_km": 0,
+      "transport": "ADO Bus",
+      "time_min": 0,
+      "price_range": "5-18 EUR",
+      "notes": "Cancún-Playa: €8 (1h). Playa-Tulum: €7 (1h). Tulum-Bacalar: €12 (2.5h). Tulum-Mérida: €18 (4h). Buses cómodos, puntuales y con AC. Compra en ado.com.mx."
+    },
+    {
+      "name": "Alquiler de Coche",
+      "distance_km": 0,
+      "transport": "Coche de alquiler",
+      "time_min": 0,
+      "price_range": "25+ EUR/día",
+      "notes": "Total libertad para cenotes y ruinas alejadas. Alquila en el aeropuerto de Cancún desde €25/día. La carretera federal 307 conecta toda la costa — perfectamente señalizada y segura."
+    }
+  ],
+  "directory": [
+    {
+      "name": "Cobá",
+      "type": "Ruinas Mayas",
+      "address": "45 km de Tulum, Quintana Roo",
+      "wiki_url": "https://es.wikipedia.org/wiki/Cobá"
+    },
+    {
+      "name": "Isla Holbox",
+      "type": "Isla / Playa",
+      "address": "Norte de Yucatán",
+      "wiki_url": "https://es.wikipedia.org/wiki/Isla_Holbox"
+    },
+    {
+      "name": "Valladolid",
+      "type": "Pueblo Colonial",
+      "address": "160 km de Cancún, Yucatán",
+      "wiki_url": "https://es.wikipedia.org/wiki/Valladolid_(Yucatán)"
+    },
+    {
+      "name": "Cozumel",
+      "type": "Isla / Buceo",
+      "address": "45 min en ferry de Playa del Carmen",
+      "wiki_url": "https://es.wikipedia.org/wiki/Cozumel"
+    },
+    {
+      "name": "Sian Ka'an",
+      "type": "Reserva de la Biosfera UNESCO",
+      "address": "Sur de Tulum, Quintana Roo",
+      "wiki_url": "https://es.wikipedia.org/wiki/Reserva_de_la_biosfera_de_Sian_Ka'an"
+    },
+    {
+      "name": "Chichén Itzá",
+      "type": "Maravilla del Mundo",
+      "address": "2.5h de Cancún, Yucatán",
+      "wiki_url": "https://es.wikipedia.org/wiki/Chichén_Itzá"
+    }
+  ],
+  "tips": [
+    "Temporada perfecta: Dic-Abril. La temporada seca con menos lluvia, agua más cristalina y sin riesgo de huracanes. De mayo a noviembre llueve más y es temporada de huracanes, pero los precios caen hasta un 40%.",
+    "El sargazo (algas marinas) puede afectar algunas playas de abril a octubre. Tulum sufre más que Cancún o Playa. Consulta el estado en sargazo.mx antes de reservar.",
+    "Protector solar: solo mineral. Los cenotes y arrecifes de coral son ecosistemas frágiles. Está prohibido el protector solar químico en cenotes y parques nacionales.",
+    "La mejor base para explorar toda la Riviera Maya es Playa del Carmen: a 1h de Cancún, a 1h de Tulum, cerca de los mejores cenotes, con ferry a Cozumel.",
+    "Moneda: Peso Mexicano (MXN). 1 EUR ≈ 18-19 MXN. En la zona turística aceptan dólares y euros, pero el cambio es peor. Usa pesos para mejor precio."
+  ],
+  "intents": [
+    {
+      "id": "cenotes",
+      "triggers": ["cenote", "cenotes", "gran cenote", "dos ojos", "ik kil", "cenote azul", "suytun", "sac actun", "subterraneo", "estalactitas", "nadar cueva"],
+      "scrollTo": "sec-lugares",
+      "response": "**Los mejores cenotes de la Riviera Maya:**\n\nHay más de 10.000 cenotes en la Península de Yucatán. Los imprescindibles:\n\n💧 **Gran Cenote (Tulum)** — El más famoso y fotogénico. Tortugas y peces. Llega antes de las 9 AM.\n💧 **Dos Ojos (Tulum)** — Dos cenotes conectados por un túnel. Sistema de cuevas espectacular.\n💧 **Ik Kil (Chichén Itzá)** — Pozo de 60m con cascadas y raíces colgantes. Combínalo con Chichén Itzá.\n💧 **Cenote Azul (Playa del Carmen)** — A 20 min de Playa. Abierto y soleado.\n💧 **Suytun (Valladolid)** — El de la foto con el rayo de luz. Solo 1.5h de Cancún.\n💧 **Sac Actun** — El río subterráneo más largo del mundo (263 km).\n\n💰 Precio: €15-€30 por cenote.\n⚠️ *Protector solar mineral obligatorio.*"
+    },
+    {
+      "id": "tulum_ruinas",
+      "triggers": ["tulum", "ruinas", "piramide", "maya", "acantilado", "arqueologico", "chichen", "coba", "nohoch"],
+      "scrollTo": "sec-lugares",
+      "response": "**🏛️ Ruinas Mayas en la Riviera Maya:**\n\n**Tulum** — El único sitio arqueológico maya sobre un acantilado frente al Caribe. Entrada €5. Llega a las 8 AM. Debajo hay una playa paradisíaca exclusiva para visitantes.\n\n**Chichén Itzá** — Una de las 7 Maravillas del Mundo. A 2.5h de Cancún. El equinoccio de primavera (21 marzo) la sombra forma una serpiente bajando por la pirámide.\n\n**Cobá** — A 45 km de Tulum. La pirámide Nohoch Mul de 42 metros es la única donde todavía puedes subir a la cima. Menos masificada que Chichén Itzá.\n\n💡 *Tulum temprano por la mañana + Gran Cenote después es la combinación perfecta.*"
+    },
+    {
+      "id": "parques_tematicos",
+      "triggers": ["xcaret", "xel-ha", "xelha", "xplor", "xenses", "xavage", "parque", "parques", "tematico", "rio subterraneo", "tirolina"],
+      "scrollTo": "sec-lugares",
+      "response": "**🎡 Parques Temáticos del Grupo Xcaret:**\n\n⭐ **Xcaret** (desde €90) — El más completo. Ríos subterráneos, snorkel, tortugas, flamingos, jaguares. El espectáculo nocturno 'Xcaret México Espectacular' con 300 artistas. 📍 75 km de Cancún.\n\n🐠 **Xel-Há** (desde €70) — Mejor snorkel. Parque acuático natural en laguna. Todo incluido (comida y bebida). 📍 122 km de Cancún.\n\n🚀 **Xplor** (desde €85) — Más adrenalina. 14 tirolinas, rafting subterráneo, buggy por la jungla. Versión nocturna 'Xplor Fuego'. 📍 70 km de Cancún.\n\n🤯 **Xenses & Xavage** (desde €60) — El más original. Ilusiones ópticas, jet boats, kayak de aguas bravas.\n\n💡 *Xcaret es el imprescindible. Compra el paquete Plus y llega a las 8:30 AM.*"
+    },
+    {
+      "id": "bacalar",
+      "triggers": ["bacalar", "lago", "laguna", "7 colores", "siete colores", "velero", "estromatolitos", "piratas"],
+      "scrollTo": "sec-lugares",
+      "response": "**💎 Bacalar — El Lago de los 7 Colores:**\n\nA 3.5h al sur de Tulum (bus ADO €12, 2.5h). El secreto mejor guardado de México.\n\n🌊 **Qué lo hace especial:**\n- Lago de agua dulce de 42 km con 7 tonalidades de azul y turquesa\n- Sin olas, sin sal, sin sargazo\n- Los locales lo llaman 'el Caribe sin turistas'\n\n⛵ **Qué hacer:**\n- Tour en velero al atardecer (desde €30) — lo más romántico del Caribe Mexicano\n- Canal de los Piratas\n- Estromatolitos (los seres vivos más antiguos del planeta)\n\n💡 *Alójate 2 noches para vivir la experiencia completa. Casa de huéspedes frente al lago desde €30/noche.*"
+    },
+    {
+      "id": "transporte_aeropuerto",
+      "triggers": ["transporte", "aeropuerto", "cancun", "cun", "ado", "bus", "autobus", "colectivo", "taxi", "coche", "alquiler", "moverse", "llegar", "vuelo"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Cómo moverse por la Riviera Maya:**\n\n**Aeropuerto Cancún (CUN):**\n- 🚌 ADO → Playa del Carmen: 1h, €12 (cada 30 min)\n- 🚌 ADO → Tulum: 2h, €18\n- 🚐 Colectivo → Playa: €5-€8\n- 🚕 Taxi → Tulum: €60-€80\n\n**Entre ciudades (ADO Bus):**\n- Cancún-Playa: €8 (1h)\n- Playa-Tulum: €7 (1h)\n- Tulum-Bacalar: €12 (2.5h)\n- Tulum-Mérida: €18 (4h)\n- Compra en **ado.com.mx**\n\n🚗 **Alquiler de coche:** desde €25/día en el aeropuerto. Carretera 307 segura y señalizada.\n\n💡 *Base recomendada: Playa del Carmen. A 1h de Cancún, 1h de Tulum, ferry a Cozumel.*"
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "visado", "pasaporte", "documentos", "entrada", "requisitos", "fmm", "migracion", "inmigración"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Requisitos de entrada a México:**\n\n✅ **Sin visa** para España y la mayoría de países latinoamericanos — hasta **180 días**.\n\n📋 **Necesitas:**\n- Pasaporte vigente\n- Forma Migratoria Múltiple (FMM) — digital y gratuita\n- Guarda el comprobante durante todo el viaje\n\n🔗 Trámite en: **inm.gob.mx**\n\n💡 *México es uno de los destinos más accesibles del mundo en requisitos de entrada. Solo pasaporte y FMM.*"
+    },
+    {
+      "id": "itinerario_que_hacer",
+      "triggers": ["itinerario", "que hacer", "qué hacer", "plan", "dias", "días", "semana", "ruta", "recorrido", "7 dias", "14 dias", "express"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Itinerarios Riviera Maya:**\n\n**⏱️ Express (7 días):**\nDía 1: Cancún (llegada + playa)\nDía 2: Chichén Itzá + Cenote Ik Kil + Valladolid\nDía 3: Playa del Carmen + Cozumel (snorkel)\nDía 4: Xcaret (día completo + espectáculo nocturno)\nDía 5: Tulum (ruinas 8 AM) + Gran Cenote\nDía 6: Cenote Dos Ojos + Cobá\nDía 7: Playa libre + compras + vuelo\n\n**🎒 Completa (14 días):** Los 7 días anteriores + Bacalar (2 noches), Mérida (2 noches) e Isla Holbox (3 noches).\n\n💡 *Si solo tienes 7 días, este itinerario cubre lo mejor de la Riviera Maya sin prisas.*"
+    },
+    {
+      "id": "zonas_donde_ir",
+      "triggers": ["zona", "zonas", "barrio", "playa del carmen", "akumal", "donde dormir", "donde alojarse", "quinta avenida", "5ta", "holbox", "cozumel"],
+      "scrollTo": "sec-zonas",
+      "response": "**🗺️ Las 4 zonas de la Riviera Maya:**\n\n🏖️ **Cancún** — El hub principal. Resorts todo incluido, vida nocturna, beach clubs. Más económico que Tulum.\n\n🛍️ **Playa del Carmen** — El equilibrio perfecto. 5TA Avenida (20 manzanas), ferry a Cozumel, la mejor base para explorar.\n\n🌿 **Tulum** — Bohemio y eco-lujo. Ruinas mayas, cenotes, hoteles boutique en la selva. Más caro.\n\n💎 **Bacalar** — El secreto. Lago de 7 colores, sin turistas, 3.5h sur de Tulum.\n\n**También:** Cozumel (buceo), Holbox (sin coches), Valladolid (colonial), Sian Ka'an (naturaleza UNESCO).\n\n💡 *Playa del Carmen es la mejor base: centro de todo, más auténtica que Cancún, más barata que Tulum.*"
+    },
+    {
+      "id": "clima_temperatura",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "calor", "huracan", "sargazo", "temporada"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en la Riviera Maya:**\n\n✅ **Mejor época: Diciembre-Abril**\n- Temporada seca (28-31°C), agua cristalina, sin huracanes\n- Precios más altos (temporada alta)\n\n⚠️ **Mayo-Noviembre:**\n- Más lluvia (hasta 16 días en septiembre), temporada de huracanes\n- Precios caen hasta un 40%\n- Sargazo puede afectar playas (abril-octubre), especialmente Tulum\n\n🌡️ **Temperaturas:** Máximas 28-33°C todo el año. Mínimas 20-25°C.\n\n💡 *Consulta sargazo.mx antes de reservar. Febrero-Marzo es el sweet spot: buen clima, menos gente que diciembre.*"
+    },
+    {
+      "id": "comida_gastronomia",
+      "triggers": ["comida", "comer", "taco", "tacos", "cochinita", "pibil", "ceviche", "restaurante", "gastronomia", "marlin", "yucateco"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**🌮 Gastronomía de la Riviera Maya:**\n\n**Platos imprescindibles:**\n- 🌮 Tacos al pastor, de cochinita pibil, de marlin\n- 🐟 Ceviche fresco del Caribe\n- 🍖 Cochinita pibil — el plato yucateco por excelencia (la mejor en Mérida)\n- 🌽 Panuchos y salbutes\n- 🥑 Guacamole recién hecho\n\n**Dónde comer:**\n- Mercado 28 de Cancún (económico y auténtico)\n- Taquerías de la 5TA Avenida en Playa del Carmen\n- Restaurantes entre palmeras en la zona hotelera de Tulum\n\n💰 Comida local: €8-€20/día\n\n💡 *Los tacos en la calle cuestan €1-€2 y son mejores que los de restaurante. No te pierdas la cochinita pibil.*"
+    },
+    {
+      "id": "presupuesto_precio",
+      "triggers": ["presupuesto", "cuanto cuesta", "precio", "barato", "caro", "dinero", "peso", "moneda", "cambio", "budget", "economico"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto diario en la Riviera Maya:**\n\n💎 **Lujo:** €140-€290/día\n- Resort todo incluido: €80-€200\n- Hotel boutique Tulum: €60-€150\n\n🏨 **Precio Medio:** €100-€200/día\n- Hotel + restaurantes + 1 actividad\n\n🎒 **Económico:** €50-€100/día\n- Hostel + tacos + bus ADO\n\n**Referencia de precios:**\n- Comida local (tacos): €8-€20\n- Excursiones / parques: €40-€90\n- Transporte ADO: €5-€15\n- Cenote: €15-€30\n\n💱 1 EUR ≈ 18-19 MXN. Usa pesos para mejor precio.\n\n💡 *Total aproximado: €130/día para una experiencia equilibrada con actividades.*"
+    }
+  ]
+}

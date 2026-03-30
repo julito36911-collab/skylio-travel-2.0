@@ -154,8 +154,11 @@
   },
   "guides": {
     "seeDetails": "Ver detalles →",
-    "hub_title": "Guías de Viaje Completas",
-    "hub_subtitle": "30+ destinos • Restricciones de conducción • Tips esenciales",
+    "hub_title": "HUB DE DESTINOS",
+    "hub_subtitle": "Mapa Interactivo • Guías Premium • Asistente IA",
+    "premium_hub": "HUB DE DESTINOS 2.0",
+    "new_title": "Explora el Mundo con Skylio",
+    "new_subtitle": "Navega nuestro mapa interactivo o descubre guías premium detalladas por expertos.",
     "title": "Guías de Viaje",
     "subtitle": "Información esencial para tus próximos destinos",
     "destinations": "Destinos Imperdibles",

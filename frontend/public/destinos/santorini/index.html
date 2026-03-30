@@ -4,166 +4,746 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santorini - Skylio Destinos</title>
+  <title>Santorini 2025 — Guía de Viaje | Skylio Travel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body { background-color: #0a0f16; }
     .font-serif { font-family: 'Playfair Display', serif; }
     @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
     .animate-pulse-soft { animation: pulse-soft 2s infinite; }
     .glass-shine { position: relative; overflow: hidden; }
     .glass-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent); transform: rotate(45deg); transition: 0.5s; }
     .glass-shine:hover::after { left: 100%; top: 100%; }
+    .hotel-card { transition: all 0.3s; }
+    .hotel-card.hidden-filter { display: none; }
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
+<body class="text-gray-100 min-h-screen">
 
-  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-6">
-        <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-          Skylio Viajes
-        </a>
-        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-serif text-xl text-amber-400">✈ Skylio</a>
+      <div class="hidden md:flex gap-6 text-sm text-gray-300">
+        <a href="#sec-zonas" class="hover:text-amber-400 transition">Zonas</a>
+        <a href="#sec-lugares" class="hover:text-amber-400 transition">Lugares</a>
+        <a href="#sec-itinerarios" class="hover:text-amber-400 transition">Rutas</a>
+        <a href="#sec-hoteles" class="hover:text-amber-400 transition">Hoteles</a>
+        <a href="#sec-aeropuertos" class="hover:text-amber-400 transition">Transporte</a>
       </div>
-      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
+      <a href="/" class="text-sm text-amber-400 hover:text-amber-300 transition">← Destinos</a>
     </div>
   </nav>
 
-  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
-    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
-    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇬🇷 El Balcón del Egeo</span>
-      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Santorini</h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Cúpulas azules, atardeceres de fuego y el abismo del volcán. El paraíso de las Cícladas.</p>
+  <!-- HERO -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=80"
+           alt="Santorini Oia" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#0a0f16]"></div>
     </div>
-  </header>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse-soft"></span>
+        <span class="text-amber-400 text-sm uppercase tracking-widest">Grecia · Islas Cícladas</span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-4">Santorini</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8">La joya volcánica del Egeo</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🌅 Atardecer Oia</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🌋 Volcán Activo</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🏖️ Arena Negra</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🍷 Vino Assyrtiko</span>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.12;"></div>
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <div class="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-10">
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
-      <div class="lg:col-span-8 space-y-12">
-        
-        <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Villas Colgadas (Zonas)</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Oia</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🌅 Sunset Luxury</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">💍 Luna de Miel</span>
+    <!-- LEFT CONTENT -->
+    <div class="flex-1 min-w-0">
+
+      <!-- ZONAS -->
+      <section id="sec-zonas" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Zonas de Santorini</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🌅</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Oia</h3>
+                <span class="text-xs text-amber-400">Romántico · Fotogénico · Exclusivo</span>
               </div>
-              <p class="text-sm text-gray-400">La joya de la corona. Calles de mármol y las vistas más famosas del mundo. Muy exclusivo.</p>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Imerovigli</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🕊️ Paz & Caldera</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">⛰️ El punto más alto</span>
+            <p class="text-gray-400 text-sm leading-relaxed">El pueblo más fotogénico de Santorini. Sus casas encaladas y cúpulas azules sobre el borde del volcán producen el atardecer más famoso del mundo. Muy turístico y caro, pero imprescindible.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🏙️</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Fira (Capital)</h3>
+                <span class="text-xs text-amber-400">Activo · Panorámico · Gastronómico</span>
               </div>
-              <p class="text-sm text-gray-400">Menos ruidoso que Oia pero con las mismas vistas espectaculares. El balcón zen de Santorini.</p>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">La capital de la isla, con la vista panorámica de la caldera, restaurantes, vida nocturna y teleférico al puerto. El centro de todo con mejor relación precio-calidad que Oia.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">⛰️</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Imerovigli</h3>
+                <span class="text-xs text-amber-400">Íntimo · Vistas · Lujo Tranquilo</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">El punto más alto de la isla, apodado 'el balcón de la caldera'. Vistas 360° absolutas, ambiente más tranquilo que Oia y hoteles-cueva de lujo a mejor precio.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🏖️</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Perissa / Perivolos</h3>
+                <span class="text-xs text-amber-400">Playa · Joven · Accesible</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">La zona de playas de arena negra volcánica al sur de la isla. Ambiente joven, bares en la playa, precios mucho más accesibles que la zona de la caldera.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MUST-SEE PLACES -->
+      <section id="sec-lugares" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Lugares Imprescindibles</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80"
+                   alt="Atardecer Oia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Atardecer en Oia</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">El atardecer de Oia es considerado uno de los más espectaculares del mundo. El sol se hunde en el Mar Egeo pintando el volcán y las casas blancas. Llega 2 horas antes.</p>
+              <a href="https://www.klook.com/es/search/?query=tour+atardecer+oia+santorini" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Tours atardecer · Klook
+              </a>
             </div>
           </div>
-        </section>
 
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=santorini+catamaran&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1548432573-03f39d226a45?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tour en Catamarán</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €100-€150 (con BBQ)</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Cruceros ↗</div>
-              </div>
-            </a>
-            <a href="https://www.klook.com/search/result/?query=santorini+wine+tour&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1572979020958-3d2319f074ef?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Cata de Vinos Griegos</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €40-€70</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Bodegas ↗</div>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Alojamiento de Ensueño</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col hover:border-amber-500/50 transition-colors">
-              <h4 class="text-sm font-bold text-white">Chromata Santorini</h4>
-              <p class="text-[10px] text-gray-500 mb-4">📍 Imerovigli (Piscina infinita)</p>
-              <a href="https://www.hotels.com/Hotel-Search?destination=Santorini&regionId=6023247" target="_blank" class="mt-auto text-center text-[10px] font-bold bg-amber-600 text-white py-2 rounded-lg transition-colors uppercase">RESERVAR</a>
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&w=1200&q=80"
+                   alt="Crucero Caldera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Crucero por la Caldera</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Navega por el cráter volcánico sumergido, visita el volcán activo de Nea Kameni, báñate en aguas termales y disfruta del atardecer desde el mar.</p>
+              <a href="https://www.klook.com/es/search/?query=crucero+caldera+santorini+volcan" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Reservar crucero · Klook
+              </a>
             </div>
           </div>
-        </section>
 
-        <section class="mt-16">
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Santorini en Video
-            </h2>
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1602088113235-229c19758e9f?auto=format&fit=crop&w=1200&q=80"
+                   alt="Playa arena negra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Playas de Arena Negra</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">La arena negra volcánica de Kamari y Perissa es única en el mundo. Playas organizadas con tumbonas, restaurantes y aguas cristalinas del Egeo.</p>
+              <a href="https://www.klook.com/es/search/?query=playa+negra+kamari+santorini" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Tours playa · Klook
+              </a>
+            </div>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-        </section>
+
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1200&q=80"
+                   alt="Akrotiri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Akrotiri — Pompeya Griega</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">La ciudad minoica enterrada por la erupción volcánica del 1600 a.C. Sus frescos y arquitectura conservados sorprenden por su modernidad para la época.</p>
+              <a href="https://www.klook.com/es/search/?query=akrotiri+santorini+yacimiento+arqueologico" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Tour Akrotiri · Klook
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ITINERARIOS -->
+      <section id="sec-itinerarios" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Itinerarios</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-semibold border border-amber-500/30">⚡ EXPRESS</span>
+              <h3 class="font-semibold text-white">Santorini en 1 día</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-5">Los imprescindibles en una jornada intensa.</p>
+            <div class="space-y-4">
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">08:00</span><p class="text-gray-300 text-sm">Fira: paseo matutino por el borde de la caldera con café y vistas</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">09:30</span><p class="text-gray-300 text-sm">Akrotiri: el yacimiento arqueológico minoico (2 horas)</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">12:00</span><p class="text-gray-300 text-sm">Playa de arena negra de Perissa: baño y almuerzo en chiringuito</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">15:00</span><p class="text-gray-300 text-sm">Ruta en quad o ATV por el interior de la isla hasta Oia</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">17:00</span><p class="text-gray-300 text-sm">Llegada a Oia: busca tu spot para el atardecer (llega MUY temprano)</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">19:30</span><p class="text-gray-300 text-sm">El atardecer de Oia — la experiencia más épica de Santorini</p></div>
+              <div class="flex gap-3"><span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">21:00</span><p class="text-gray-300 text-sm">Cena en Oia o regresa a Fira en bus o taxi</p></div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/30">🗓️ COMPLETO</span>
+              <h3 class="font-semibold text-white">3 Días en Santorini</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-5">Tres días para descubrir la isla a fondo: caldera, volcán, playas y pueblos.</p>
+            <div class="space-y-4">
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 1 AM</span><p class="text-gray-300 text-sm">Llegada y check-in en hotel-cueva en Imerovigli o Oia</p></div>
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 1 PM</span><p class="text-gray-300 text-sm">Crucero por la caldera: volcán Nea Kameni, aguas termales, atardecer desde el mar</p></div>
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 AM</span><p class="text-gray-300 text-sm">Akrotiri (yacimiento) + playa de Perivolos (arena negra)</p></div>
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 PM</span><p class="text-gray-300 text-sm">Degustación de vinos en bodega volcánica (Santo Wines o Vassaltis)</p></div>
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 🌙</span><p class="text-gray-300 text-sm">Paseo por Pyrgos: el pueblo medieval más auténtico de la isla</p></div>
+              <div class="flex gap-3"><span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 3</span><p class="text-gray-300 text-sm">Mañana libre en Oia → El atardecer más famoso del mundo (llega 2h antes)</p></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- HOTELES -->
+      <section id="sec-hoteles" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Hoteles en Santorini</h2>
+        </div>
+        <p class="text-gray-400 text-sm mb-6">Desde hoteles-cueva con infinity pool hasta opciones junto a la playa negra</p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button onclick="filterHotels('ALL')" class="filter-btn px-4 py-2 rounded-full text-sm bg-amber-500 text-black font-semibold" data-filter="ALL">Todos</button>
+          <button onclick="filterHotels('OIA')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="OIA">Oia</button>
+          <button onclick="filterHotels('INFINITY POOL')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="INFINITY POOL">Infinity Pool</button>
+          <button onclick="filterHotels('PLAYA NEGRA')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="PLAYA NEGRA">Playa Negra</button>
+        </div>
+
+        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center gap-2"><span>💎</span> Lujo</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="OIA INFINITY POOL CALDERA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Katikies Hotel</h4><span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Hotel-cueva de lujo en Oia con las piscinas de infinity más fotografiadas del mundo, directamente sobre la caldera volcánica.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Oia</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Infinity Pool</span>
+            </div>
+            <a href="https://www.hotels.com/ho109234/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=katikies&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">Ver precio · Hotels.com €€€€€</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="IMEROVIGLI INFINITY POOL SPA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Grace Hotel Santorini</h4><span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">En Imerovigli, en el punto más alto de la caldera. Piscina infinita privada, spa de clase mundial y gastronomía con estrella Michelin.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Imerovigli</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Infinity Pool</span>
+            </div>
+            <a href="https://www.hotels.com/ho298765/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=grace&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">Ver precio · Hotels.com €€€€€</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="OIA CALDERA CUEVA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Mystique Hotel</h4><span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Tallado en el acantilado de Oia, con cuevas y suites privadas de infinita elegancia. Una de las mejores experiencias del Mediterráneo.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Oia</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Cueva</span>
+            </div>
+            <a href="https://www.hotels.com/ho412567/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=mystique&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">Ver precio · Hotels.com €€€€€</a>
+          </div>
+        </div>
+
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2"><span>🏨</span> Precio Medio</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="FIRA SPA PISCINA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Aressana Spa Hotel</h4><span class="text-yellow-400 text-xs">⭐⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">En Fira, con piscina propia y spa. Habitaciones modernas a 5 minutos del borde de la caldera. Mejor relación precio-calidad de la zona central.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Fira</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">SPA</span>
+            </div>
+            <a href="https://www.hotels.com/ho187654/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=aressana&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">Ver precio · Hotels.com €€€</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="FIRA CALDERA PISCINA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Atlantis Hotel</h4><span class="text-yellow-400 text-xs">⭐⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Clásico hotel en el borde de Fira con vistas directas a la caldera. Piscina con panorámica 180°. Punto perfecto entre precio y ubicación.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Fira</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Caldera</span>
+            </div>
+            <a href="https://www.hotels.com/ho234567/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=atlantis&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">Ver precio · Hotels.com €€€</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="OIA PISCINA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Hotel Pelican Bay</h4><span class="text-yellow-400 text-xs">⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Hotel boutique en Oia con piscina y vistas. Más asequible que los exclusivos sin sacrificar la ubicación privilegiada en el pueblo más fotogénico.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Oia</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Piscina</span>
+            </div>
+            <a href="https://www.hotels.com/ho345678/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=pelican&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">Ver precio · Hotels.com €€</a>
+          </div>
+        </div>
+
+        <h3 class="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2"><span>🎒</span> Económico</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="PERIVOLOS PLAYA NEGRA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Perivolos Paradise</h4><span class="text-yellow-400 text-xs">⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">En Perivolos, frente a la playa de arena negra. Sin las vistas de caldera pero con acceso directo al mar y precios razonables para Santorini.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Perivolos</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Playa Negra</span>
+            </div>
+            <a href="https://www.hotels.com/ho456789/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=perivolos&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">Ver precio · Hotels.com €€</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="FIRA PISCINA SOCIAL">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Santorini Backpackers</h4><span class="text-yellow-400 text-xs">⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">El hostal más popular de la isla, en Fira. Piscina, bar, ambiente social internacional y las mejores fiestas de viajeros. Dorm desde 30€/noche.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Fira</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Social</span>
+            </div>
+            <a href="https://www.hotels.com/ho567890/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=backpackers&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">Ver precio · Hotels.com €</a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="KAMARI PLAYA NEGRA PISCINA">
+            <div class="flex justify-between items-start mb-3"><h4 class="font-semibold text-white text-sm">Hotel Afroditi Venus</h4><span class="text-yellow-400 text-xs">⭐⭐⭐</span></div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Piscina y patio en Kamari, junto a la playa de arena negra. Limpio, bien mantenido y a precio razonable para Santorini. Buenas reviews familiares.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Kamari</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Playa Negra</span>
+            </div>
+            <a href="https://www.hotels.com/ho678901/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=santorini&sub_ad=afroditi&affcid=SKYLIO2025" target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">Ver precio · Hotels.com €€</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- YOUTUBE -->
+      <section id="sec-videos" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Santorini en Video</h2>
+        </div>
+        <div id="video-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+      </section>
+
+      <!-- AEROPUERTOS -->
+      <section id="sec-aeropuertos" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Cómo Llegar</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">✈️</span>
+              <div><h3 class="font-semibold text-white">Aeropuerto de Santorini (JTR)</h3><span class="text-xs text-amber-400">6 km de Fira · 15 min</span></div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">El aeropuerto está en el este de la isla. Taxi a Fira: 15-20€. Bus KTEL: 2.50€. Vuelos directos desde Madrid y Barcelona en verano.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚕 Taxi: 15-20€</span>
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚌 Bus: 2.50€</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🚢</span>
+              <div><h3 class="font-semibold text-white">Ferry desde Atenas (Pireo)</h3><span class="text-xs text-amber-400">250 km · 5-8 horas</span></div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">El ferry desde el puerto del Pireo tarda 5-8 horas según el tipo. Ferry rápido: 5h, ~90€. Ferry convencional nocturno: 8h, desde 40€.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">⚡ Rápido: 5h, ~90€</span>
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🌙 Nocturno: 8h, 40€</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">✈️</span>
+              <div><h3 class="font-semibold text-white">Vuelo desde Atenas</h3><span class="text-xs text-green-400">La opción más rápida</span></div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">Vuelos domésticos frecuentes desde ATH. Solo 50 minutos. Sky Express, Olympic Air. Reserva con meses de antelación en verano.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">⏱️ 50 min de vuelo</span>
+              <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">💶 60-200€</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🚌</span>
+              <div><h3 class="font-semibold text-white">Bus KTEL (Transporte interno)</h3><span class="text-xs text-blue-400">El más económico</span></div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">Red de autobuses conecta Fira con Oia (30 min), Perissa, Kamari y aeropuerto. Económico pero con horarios limitados. Terminal en Fira.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">🎫 1.80-2.50€</span>
+              <span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">🛵 Quad: 30-50€/día</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DIRECTORIO -->
+      <section id="sec-directorio" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Directorio de Lugares</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="https://es.wikipedia.org/wiki/Oia_(Grecia)" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🌅</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Oia</p><p class="text-gray-500 text-xs">Pueblo / Mirador · Norte de la isla</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+          <a href="https://es.wikipedia.org/wiki/Acrotiri_(Santorini)" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🏛️</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Akrotiri</p><p class="text-gray-500 text-xs">Yacimiento Arqueológico Minoico</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+          <a href="https://es.wikipedia.org/wiki/Fira" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🏙️</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Fira (Capital)</p><p class="text-gray-500 text-xs">Capital de la isla · Caldera</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+          <a href="https://es.wikipedia.org/wiki/Nea_Kameni" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🌋</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Nea Kameni (Volcán)</p><p class="text-gray-500 text-xs">Volcán Activo · Caldera</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+          <a href="https://es.wikipedia.org/wiki/Perissa" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🏖️</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Playa de Perissa</p><p class="text-gray-500 text-xs">Playa de Arena Negra Volcánica</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+          <a href="https://es.wikipedia.org/wiki/Santorini" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🏺</div>
+            <div><p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Museo Prehistórico de Thera</p><p class="text-gray-500 text-xs">Museo · Fira, Santorini</p></div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+        </div>
+      </section>
+
+    </div><!-- end left -->
+
+    <!-- SIDEBAR -->
+    <aside class="w-full lg:w-80 shrink-0 space-y-6">
+
+      <div id="sec-visa" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>🛂</span> Visa y Entrada</h3>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-xs shrink-0 mt-0.5">✓</span>
+            <div><p class="text-gray-300 text-sm font-medium">Sin visa para Latinoamérica</p><p class="text-gray-500 text-xs">Solo pasaporte vigente. Grecia / Schengen.</p></div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs shrink-0 mt-0.5">!</span>
+            <div>
+              <p class="text-gray-300 text-sm font-medium">ETIAS obligatorio desde 2025</p>
+              <p class="text-gray-500 text-xs">Autorización online ~7€. Válida 3 años.</p>
+              <a href="https://travel-europe.europa.eu/etias_es" target="_blank" class="text-amber-400 text-xs hover:underline">Tramitar ETIAS →</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8 text-sm">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3><ul class="space-y-3">
-          <li class="flex justify-between"><span>🏨 Hotel Medio</span><span class="text-white font-bold">€200</span></li>
-          <li class="flex justify-between"><span>🥘 Cena Caldera</span><span class="text-white font-bold">€70</span></li>
-          <li class="flex justify-between"><span>🚗 Alquiler Quad</span><span class="text-white font-bold">€45</span></li>
-        </ul></div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-sm font-bold text-gray-500 mb-4 uppercase tracking-widest">Clima Promedio</h3><table class="w-full text-[10px] text-center">
-          <tr><th class="border-b border-white/5 pb-1">Mes</th><th>Max</th><th>Min</th><th>Vibe</th></tr>
-          <tr><td class="py-1">May</td><td class="text-yellow-200">23°C</td><td class="text-yellow-400">16°C</td><td>🌤️</td></tr>
-          <tr><td class="py-1">Ago</td><td class="text-orange-200">30°C</td><td class="text-orange-400">24°C</td><td>☀️ HOT</td></tr>
-          <tr><td class="py-1">Oct</td><td class="text-yellow-200">21°C</td><td class="text-yellow-400">17°C</td><td>🌬️ Wind</td></tr>
-        </table></div>
-        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine"><h3 class="text-xl font-bold text-amber-500 mb-4">Ferry Status</h3><p class="text-[10px] text-gray-400">Rutas diarias desde El Pireo (Atenas) con Seajets y Blue Star. <strong class="text-green-400">OK</strong></p></div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><p class="text-[10px] text-green-400 font-bold tracking-widest uppercase">Thira Airport: Operativo</p></div>
-      </aside>
-    </div>
-  </main>
+      <div id="sec-presupuesto" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>💰</span> Presupuesto Diario</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-400"></span><span class="text-gray-300 text-sm">Lujo</span></div><span class="text-amber-400 text-sm font-semibold">400–700 EUR</span></div>
+          <div class="flex justify-between items-center"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-400"></span><span class="text-gray-300 text-sm">Precio Medio</span></div><span class="text-blue-400 text-sm font-semibold">150–250 EUR</span></div>
+          <div class="flex justify-between items-center"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400"></span><span class="text-gray-300 text-sm">Económico</span></div><span class="text-green-400 text-sm font-semibold">70–110 EUR</span></div>
+          <hr class="border-white/10 my-2">
+          <p class="text-gray-500 text-xs">Crucero caldera: 40-80€. Akrotiri: 12€. Bus KTEL: 2.50€. Quad: 30-50€/día. Cena con vista caldera: 40-80€.</p>
+        </div>
+      </div>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">© 2024 Skylio Travel 2.0. Enlaces de afiliados — Santorini te enamora.</footer>
+      <div id="sec-clima" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-1 flex items-center gap-2"><span>☀️</span> Clima</h3>
+        <p class="text-xs text-gray-500 mb-4">Mejor época: May–Jun y Sep–Oct</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-gray-400">
+            <thead><tr class="border-b border-white/10"><th class="text-left py-1 font-medium text-gray-500">Mes</th><th class="text-center py-1 font-medium text-gray-500">Max</th><th class="text-center py-1 font-medium text-gray-500">Min</th><th class="text-center py-1 font-medium text-gray-500">☔</th></tr></thead>
+            <tbody>
+              <tr class="border-b border-white/5"><td class="py-1">Ene</td><td class="text-center">13°</td><td class="text-center">8°</td><td class="text-center">10d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Feb</td><td class="text-center">13°</td><td class="text-center">8°</td><td class="text-center">8d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Mar</td><td class="text-center">15°</td><td class="text-center">10°</td><td class="text-center">6d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Abr</td><td class="text-center">19°</td><td class="text-center">13°</td><td class="text-center">3d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">May ✓</td><td class="text-center font-semibold">23°</td><td class="text-center">17°</td><td class="text-center">2d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Jun ✓</td><td class="text-center font-semibold">28°</td><td class="text-center">21°</td><td class="text-center">0d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Jul</td><td class="text-center">30°</td><td class="text-center">23°</td><td class="text-center">0d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Ago</td><td class="text-center">30°</td><td class="text-center">23°</td><td class="text-center">0d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Sep ✓</td><td class="text-center font-semibold">27°</td><td class="text-center">21°</td><td class="text-center">1d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Oct ✓</td><td class="text-center font-semibold">22°</td><td class="text-center">17°</td><td class="text-center">4d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Nov</td><td class="text-center">18°</td><td class="text-center">13°</td><td class="text-center">7d</td></tr>
+              <tr><td class="py-1">Dic</td><td class="text-center">14°</td><td class="text-center">9°</td><td class="text-center">10d</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20">
+        <h3 class="font-semibold text-amber-400 mb-4 flex items-center gap-2"><span>💡</span> Tips Exclusivos</h3>
+        <div class="space-y-3">
+          <div class="flex gap-2"><span class="text-amber-400 shrink-0">🌅</span><p class="text-gray-300 text-xs leading-relaxed">El atardecer de Oia: llega 2 horas antes. En verano hay miles de personas compitiendo por el mismo spot.</p></div>
+          <div class="flex gap-2"><span class="text-amber-400 shrink-0">🛵</span><p class="text-gray-300 text-xs leading-relaxed">Alquila un quad o ATV para explorar la isla. Un día cuesta 30-50€ y es la mejor forma de moverse.</p></div>
+          <div class="flex gap-2"><span class="text-amber-400 shrink-0">🍷</span><p class="text-gray-300 text-xs leading-relaxed">El vino Assyrtiko local es excepcional. Santo Wines tiene las mejores vistas de la caldera para la degustación (20-40€).</p></div>
+          <div class="flex gap-2"><span class="text-amber-400 shrink-0">🌊</span><p class="text-gray-300 text-xs leading-relaxed">El atardecer desde Imerovigli es casi igual de bonito que Oia y con la mitad de gente. Secreto bien guardado.</p></div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>🌋</span> Estado de la Isla</h3>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span><span class="text-gray-300 text-sm">Aeropuerto JTR — Operativo</span></div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span><span class="text-gray-300 text-sm">Ferry Pireo-Santorini — Operativo</span></div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span><span class="text-gray-300 text-sm">Bus KTEL interno — Operativo</span></div>
+          <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-400"></span><span class="text-gray-300 text-sm">Volcán Nea Kameni — Activo (estable)</span></div>
+        </div>
+        <p class="text-gray-600 text-xs mt-3">Estado actualizado — verifica en ktel-santorinis.gr</p>
+      </div>
+
+    </aside>
+  </div>
+
+
+  <footer class="border-t border-white/10 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-600 text-sm">
+      <p>© 2025 Skylio Travel · Guía de Santorini</p>
+      <p class="mt-1 text-xs">Los precios y disponibilidad pueden variar. Verifica siempre antes de reservar.</p>
+    </div>
+  </footer>
 
   <script>
-    async function loadSantVideo() {
-      const fallbackVideos = [
-        { id: 'xywWUb4XaL8', title: 'SANTORINI: Guía de viaje 2024' },
-        { id: '-54PGS09v5s', title: 'OIA: El pueblo más bonito de Grecia' },
-        { id: 'EmAErjY5XbA', title: '10 cosas que hacer en SANTORINI' }
-      ];
-      try {
-        const response = await fetch('/api/youtube-search?query=santorini+guia+viaje+español');
-        if (!response.ok) throw new Error();
-        const videos = await response.json();
-        renderVideos(videos.slice(0, 3));
-      } catch (e) { renderVideos(fallbackVideos); }
-    }
     function renderVideos(videos) {
-      const container = document.getElementById('youtube-gallery');
-      container.innerHTML = videos.map(v => `
-        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
-          <div class="relative aspect-video">
-            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      const grid = document.getElementById('video-grid');
+      grid.innerHTML = videos.map(v => `
+        <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer"
+           class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group block">
+          <div class="relative h-44 overflow-hidden">
+            <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-red-600/90 flex items-center justify-center"><span class="text-white text-xl ml-1">▶</span></div>
             </div>
           </div>
-          <div class="p-4"><h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3><a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a></div>
-        </div>
+          <div class="p-4"><p class="text-gray-300 text-sm leading-snug group-hover:text-amber-400 transition">${v.title}</p><p class="text-gray-600 text-xs mt-1">YouTube · En español</p></div>
+        </a>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadSantVideo);
+
+    renderVideos([
+      { id: 'T8eILRWJz9k', title: 'SANTORINI 2024 — Guía Completa: qué ver, dónde comer y alojarse' },
+      { id: 'gwuWGC3iLdQ', title: 'Qué VER y HACER en SANTORINI — TOP 10 lugares imprescindibles' },
+      { id: 'reHyoXM4864', title: 'SANTORINI en 3 días — Itinerario completo paso a paso en español' }
+    ]);
+
+    function filterHotels(filter) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('bg-amber-500', btn.dataset.filter === filter);
+        btn.classList.toggle('text-black', btn.dataset.filter === filter);
+        btn.classList.toggle('font-semibold', btn.dataset.filter === filter);
+        btn.classList.toggle('bg-white/10', btn.dataset.filter !== filter);
+        btn.classList.toggle('text-gray-300', btn.dataset.filter !== filter);
+      });
+      document.querySelectorAll('.hotel-card').forEach(card => {
+        const show = filter === 'ALL' || (card.dataset.label || '').includes(filter);
+        card.classList.toggle('hidden-filter', !show);
+      });
+    }
+
   </script>
+
+  <!-- =============================================
+       BOTON FLOTANTE: ASISTENTE IA
+  ============================================== -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()"
+    style="
+      position: fixed; bottom: 24px; right: 32px; z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(10,15,22,0.9);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #fbbf24; font-weight: 700; font-size: 14px;
+      padding: 12px 20px; border-radius: 999px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5);
+      cursor: pointer; transition: all 0.2s;
+    "
+    onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'"
+    onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">
+    ✨ Asistente IA
+  </button>
+
+  <!-- =============================================
+       WIDGET FLOTANTE: CHAT IA (NO BLOQUEANTE)
+  ============================================== -->
+  <div id="skylio-chat-panel" style="
+    display: none;
+    position: fixed; bottom: 84px; right: 32px; z-index: 9998;
+    width: 360px; height: 500px;
+    background: rgba(10,15,22,0.97);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 24px;
+    display: none; flex-direction: column;
+    box-shadow: 0 0 60px rgba(245,158,11,0.12), 0 20px 60px rgba(0,0,0,0.7);
+    overflow: hidden;
+  ">
+    <!-- Header -->
+    <div style="
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.05);
+      flex-shrink: 0;
+    ">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Santorini</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre zonas, hoteles, transporte…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()"
+        style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;"
+        onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="skylio-chat-messages" style="
+      flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,158,11,0.2) transparent;
+    ">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">¡Yasou! Soy tu guía IA para Santorini. Prueba con:<br><br>
+            <strong style="color:#fbbf24;">oia</strong> · <strong style="color:#fbbf24;">caldera</strong> · <strong style="color:#fbbf24;">transporte</strong><br>
+            o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…"
+        style="
+          flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+          border-radius:12px; padding:9px 13px; color:#e5e7eb; font-size:13px; outline:none;
+        "
+        onkeydown="if(event.key==='Enter')window.SkylioChat.send()"
+        onfocus="this.style.borderColor='rgba(245,158,11,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.1)'"
+      />
+      <button onclick="window.SkylioChat.send()" style="
+        background:rgba(245,158,11,0.9); border:none; color:#000; font-weight:700;
+        padding:9px 15px; border-radius:12px; cursor:pointer; font-size:14px; transition:background 0.15s;
+      "
+      onmouseover="this.style.background='#f59e0b'"
+      onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: COMPONENTES SKYLIO -->
+  <script>window.SKYLIO_CITY_DATA_URL = '../santorini_full.json';</script>
+  <script src="../../../js/logic/city-bridge.js"></script>
+
+  <script>
+    // SkylioChat — widget flotante no-bloqueante conectado a CityBridge
+    window.SkylioChat = {
+      _open: false,
+
+      toggle() {
+        const panel = document.getElementById('skylio-chat-panel');
+        this._open = !this._open;
+        panel.style.display = this._open ? 'flex' : 'none';
+        if (this._open) {
+          setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+        }
+      },
+
+      send() {
+        const input = document.getElementById('skylio-chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+
+        const messages = document.getElementById('skylio-chat-messages');
+
+        // Burbuja del usuario
+        const userBubble = document.createElement('div');
+        userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+        const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        userBubble.innerHTML = `
+          <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;">
+            <p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">${safeText}</p>
+          </div>`;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Respuesta desde CityBridge o fallback
+        let response = window.CityBridge ? window.CityBridge.handleChatQuery(text) : null;
+        if (!response) response = this._fallback(text);
+
+        // Renderizar respuesta con markdown minimo (**bold** y \n)
+        const safeResponse = response
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>')
+          .replace(/\n/g,'<br>');
+
+        const aiBubble = document.createElement('div');
+        aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+        aiBubble.innerHTML = `
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+            <p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">${safeResponse}</p>
+          </div>`;
+
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+      },
+
+      _fallback(text) {
+        return 'No tengo información sobre eso. Prueba con **Oia**, **caldera**, **playas**, **transporte** o **clima**.';
+      }
+    };
+  </script>
+
 </body>
 </html>

@@ -139,13 +139,13 @@ function App() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <a 
-            href="/destinos/" 
-            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 hover:bg-amber-500/20 hover:border-amber-500/50 transition-all duration-300 font-semibold text-sm mr-2 shadow-sm"
+          <button 
+            onClick={() => setShowGuidesHub(true)}
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 hover:bg-amber-500/20 hover:border-amber-500/50 transition-all duration-300 font-semibold text-sm mr-2 shadow-sm shadow-amber-500/5"
           >
             <MapIcon size={18} />
             <span>Destinos</span>
-          </a>
+          </button>
           <GuideMenuButton onOpenGuide={() => setShowGuidePage(true)} />
           <div className="h-8 w-[1px] bg-white/10 mx-1 hidden md:block"></div>
           <LanguageSwitcher />
@@ -192,41 +192,39 @@ function App() {
         <section className="mb-8">
           <div 
             onClick={() => setShowGuidesHub(true)}
-            className="p-6 cursor-pointer group bg-slate-800 bg-gradient-to-br from-purple-600/20 via-blue-600/10 to-transparent border border-white/10 rounded-xl shadow-lg shadow-black/50 hover:-translate-y-1 hover:border-gray-500 hover:shadow-xl transition-all duration-300"
+            className="p-8 cursor-pointer group bg-white/5 border border-white/10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1 hover:border-amber-500/30 hover:bg-white/10 transition-all duration-500 relative overflow-hidden"
           >
-            <div className="flex items-center justify-between">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-[80px] -mr-32 -mt-32 rounded-full group-hover:bg-amber-500/20 transition-all duration-700"></div>
+            <div className="flex items-center justify-between relative z-10">
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm">
-                    <BookOpen size={28} className="text-purple-300" />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 backdrop-blur-xl">
+                    <BookOpen size={32} className="text-amber-400" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                      {t('guides.hub_title', 'Guías de Viaje Completas')}
+                    <h3 className="text-3xl font-black text-white group-hover:text-amber-400 transition-colors tracking-tight">
+                      {t('guides.hub_title', 'HUB DE DESTINOS')}
                     </h3>
-                    <p className="text-sm text-gray-400">
-                      {t('guides.hub_subtitle', '30+ destinos • Restricciones de conducción • Tips esenciales')}
+                    <p className="text-slate-400 font-medium">
+                      {t('guides.hub_subtitle', 'Mapa Interactivo • Guías Premium • Asistente IA')}
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-2 flex-wrap mt-4">
-                  <span className="px-3 py-1 bg-purple-500/20 text-purple-200 rounded-full text-xs font-semibold flex items-center gap-1">
-                    <MapPin size={12} /> 25+ Destinos Imperdibles
+                <div className="flex gap-2 flex-wrap mt-6">
+                  <span className="px-4 py-1.5 bg-white/5 border border-white/10 text-slate-300 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    <MapPin size={12} className="text-amber-500" /> 25+ Destinos
                   </span>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-xs font-semibold flex items-center gap-1">
-                    🚗 35+ Ciudades con Restricciones
+                  <span className="px-4 py-1.5 bg-white/5 border border-white/10 text-slate-300 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    🚗 Restricciones
                   </span>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-xs font-semibold">
-                    ✨ Datos Demo
+                  <span className="px-4 py-1.5 bg-purple-500/10 border border-purple-500/20 text-purple-300 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    ✨ IA Travel Assistant
                   </span>
                 </div>
               </div>
-              <div className="text-4xl group-hover:scale-110 transition-transform">
+              <div className="text-7xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 opacity-80">
                 🌍
               </div>
-            </div>
-            <div className="mt-4 flex items-center justify-end text-purple-400 group-hover:text-purple-300 font-semibold text-sm">
-              Explorar guías →
             </div>
           </div>
         </section>
@@ -307,21 +305,24 @@ function App() {
         <ExpediaForm partnerData={featuredExpedia} onClose={() => setActiveModal(null)} />
       </Modal>
 
-      {/* MODAL DE GUÍAS */}
       {showGuidesHub && (
-        <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm" onClick={() => setShowGuidesHub(false)}>
-          <div className="h-full overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="min-h-full">
-              <div className="sticky top-0 z-10 bg-gray-900/95 backdrop-blur-md px-6 py-4 border-b border-white/10">
+        <div className="fixed inset-0 z-[100] bg-[#0a0f16]/95 backdrop-blur-2xl animate-in fade-in duration-300" onClick={() => setShowGuidesHub(false)}>
+          <div className="h-full overflow-y-auto custom-scrollbar" onClick={(e) => e.stopPropagation()}>
+            <div className="min-h-full pb-20">
+              <div className="sticky top-0 z-[110] bg-[#0a0f16]/80 backdrop-blur-xl px-6 py-4 border-b border-white/5 flex justify-between items-center shadow-2xl">
                 <button
                   onClick={() => setShowGuidesHub(false)}
-                  className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors"
+                  className="flex items-center gap-2 text-slate-400 hover:text-white transition-all bg-white/5 px-4 py-2 rounded-full border border-white/10 hover:border-white/20"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>
-                  <span className="font-semibold">{t('common.back', 'Volver')}</span>
+                  <span className="font-bold text-sm uppercase tracking-wider">{t('common.back', 'Cerrar Hub')}</span>
                 </button>
+                <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+                   <span className="text-[10px] font-black text-white/50 uppercase tracking-[0.2em]">Skylio Destinations Hub</span>
+                </div>
               </div>
               <GuidesHub />
             </div>

@@ -1,0 +1,168 @@
+{
+  "destination": "Miami",
+  "id": "miami",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Faena Hotel Miami Beach",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.8003, "lng": -80.1224 },
+      "labels": ["SOUTH BEACH", "ARTE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "The Setai Miami Beach",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.7906, "lng": -80.1300 },
+      "labels": ["SOUTH BEACH", "ULTRA LUJO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Four Seasons Miami",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.7617, "lng": -80.1918 },
+      "labels": ["BRICKELL", "SKYLINE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Catalina Hotel & Beach Club",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.7905, "lng": -80.1302 },
+      "labels": ["SOUTH BEACH", "ART DECO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "COMO Metropolitan Miami Beach",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.8010, "lng": -80.1280 },
+      "labels": ["WYNWOOD", "MODERNO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hyatt Centric Brickell Miami",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.7630, "lng": -80.1920 },
+      "labels": ["BRICKELL", "METRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Freehand Miami",
+      "category": "Económico",
+      "rating": 4,
+      "coords": { "lat": 25.7940, "lng": -80.1350 },
+      "labels": ["SOUTH BEACH", "HOSTEL BOUTIQUE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Generator Miami",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 25.8100, "lng": -80.1950 },
+      "labels": ["WYNWOOD", "ROOFTOP"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hampton Inn Miami Downtown",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 25.7750, "lng": -80.1930 },
+      "labels": ["DOWNTOWN", "METRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Miami%2C%20Florida%2C%20USA&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "south_beach",
+      "triggers": ["south beach", "sobe", "ocean drive", "art deco", "playa miami", "arena blanca", "beach club", "cabinas socorrista", "lincoln road", "south pointe"],
+      "scrollTo": "sec-lugares",
+      "response": "🏖️ **South Beach & Ocean Drive:**\n\nLa imagen más famosa de Miami. Ocean Drive con edificios **Art Deco de colores pastel**, playa de arena blanca y las icónicas cabinas de socorristas de colores.\n\n⭐ **Imperdible:**\n• Paseo por **Ocean Drive** y el distrito Art Deco.\n• Playa gratuita con beach clubs exclusivos.\n• **Lincoln Road Mall** — calle peatonal con restaurantes y galerías.\n• **South Pointe Park** — vistas al skyline al atardecer.\n\n💶 Playa gratuita — Art Deco District.\n💡 Es cara para alojarse pero imprescindible para la experiencia completa.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "wynwood",
+      "triggers": ["wynwood", "wynwood walls", "murales", "mural", "street art", "arte urbano", "graffiti", "galería", "galeria", "arte callejero"],
+      "scrollTo": "sec-lugares",
+      "response": "🎨 **Wynwood & Wynwood Walls:**\n\nEl barrio artístico más instagrameable del mundo. Antiguos almacenes convertidos en galerías de arte y murales gigantes de artistas internacionales.\n\n⭐ **Lo mejor:**\n• **Wynwood Walls** — El museo de arte urbano más visitado de EE.UU. (entrada €5).\n• Restaurantes de cocina fusión latina.\n• Galerías, cafés de moda y la noche más creativa de Miami.\n• Cada año se renuevan obras nuevas.\n\n💡 Perfecto para pasear de día. El barrio entero es una galería al aire libre.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "everglades",
+      "triggers": ["everglades", "airboat", "caiman", "caimán", "cocodrilo", "manatí", "manati", "pantano", "parque nacional", "serpiente", "piton", "pitón", "flamenco"],
+      "scrollTo": "sec-lugares",
+      "response": "🐊 **Everglades — Parque Nacional:**\n\nEl parque nacional más grande del este de EE.UU. a solo **1 hora** de Miami.\n\n⭐ **La experiencia:**\n• **Airboat** entre caimanes americanos, manatíes y flamencos rosados.\n• Anhinga Trail — paseo entre naturaleza salvaje.\n• Demostración de manejo de serpientes.\n\n💶 Tour desde **€40-€60** (incluye recogida en hotel).\n⏰ Tour de día completo: salida 9 AM, regreso 5 PM.\n\n💡 Una naturaleza salvaje e incomparable a 45 minutos del skyline.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "key_west",
+      "triggers": ["key west", "keys", "florida keys", "overseas highway", "hemingway", "mallory square", "duval street", "islas", "puente oceano"],
+      "scrollTo": "sec-lugares",
+      "response": "🏝️ **Key West & Florida Keys:**\n\nLa cadena de islas más al sur de EE.UU. unidas por un puente de **170 km sobre el océano**.\n\n⭐ **Imperdible:**\n• **Overseas Highway** — El camino sobre el mar más famoso del mundo.\n• Casa de **Ernest Hemingway** y sus gatos.\n• Punto más al sur de EE.UU.\n• **Mallory Square** — Puesta de sol espectacular.\n• **Duval Street** — La calle más excéntrica de América.\n\n📍 A **3.5 horas** desde Miami en coche.\n💡 Sal a las 7 AM. Quédate a dormir si puedes.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "brickell_downtown",
+      "triggers": ["brickell", "downtown", "skyline", "biscayne", "rooftop", "brickell city centre", "rascacielos", "financiero", "metromover"],
+      "scrollTo": "sec-zonas",
+      "response": "🏙️ **Brickell & Downtown Miami:**\n\nEl Manhattan de Miami con su skyline espectacular frente a **Biscayne Bay**.\n\n⭐ **Lo mejor:**\n• **Brickell City Centre** — Shopping y restaurantes de alta cocina.\n• Bares en los **pisos 40+** con vistas al skyline nocturno.\n• El **Metromover** en Downtown es **gratuito**.\n• Distrito financiero más latinoamericano de EE.UU.\n\n💡 Ideal para alojarse: precios más razonables que South Beach con fácil acceso al metro.\n\n⬇️ He hecho scroll a la sección de zonas."
+    },
+    {
+      "id": "transport_airport",
+      "triggers": ["transporte", "metro", "uber", "lyft", "taxi", "moverse", "mover", "bus", "autobús", "autobus", "metrorail", "metromover", "citi bike", "bicicleta", "coche", "alquiler coche"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚗 **Moverse en Miami:**\n\nMiami NO tiene buen transporte público — el **coche es el rey**.\n\n🚙 **Uber/Lyft:** Muy económico, **€5-€12** entre zonas. La mejor opción.\n🚲 **Citi Bike:** €10/día para moverse por South Beach.\n🚇 **Metromover Downtown:** **Gratuito**.\n🚆 **Metrorail:** Aeropuerto → Government Center por €2.25.\n🚌 **Bus 150:** Government Center → South Beach.\n\n✈️ **Desde el aeropuerto MIA:**\n• Uber al centro: **€20-€30** (20 min).\n• Uber a South Beach: **€30-€45** (25-40 min).\n• Tren + bus: aprox **€3-€4** (60 min).\n\n💡 Si piensas ir a Everglades, Keys u Orlando, alquila coche desde **€30/día**.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "airport_mia",
+      "triggers": ["aeropuerto", "mia", "vuelo", "llegar", "aterrizar", "fort lauderdale", "fll", "mia mover", "transfer"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Aeropuertos de Miami:**\n\n🛬 **MIA (Miami International):**\n• **MIA Mover gratuito** hasta la estación de tren.\n• Metrorail a Government Center: **€2.25**.\n• Uber al centro: **€20-€30** (20 min).\n• Uber a South Beach: **€30-€45** (25-40 min).\n\n🛬 **FLL (Fort Lauderdale)** — a 45 km:\n• Muchos vuelos baratos aterrizan aquí.\n• Broward County Transit Bus 1 → Tri-Rail → Miami por **€2**.\n• Uber directo: **€35-€50**.\n\n💡 Los taxis oficiales son un 30% más caros que Uber.\n⚠️ Aparcar en South Beach es caro — usa parkings municipales.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "requisitos", "esta", "entrada", "pasaporte", "documentos", "papeles", "migración", "migracion", "b-1", "b-2", "exención", "exencion"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a EE.UU. (Miami):**\n\n🇪🇸 **Españoles y países del Programa de Exención de Visa:**\n• Necesitas el **ESTA** (Electronic System for Travel Authorization).\n• Cuesta **$21 USD** y es válido **2 años**.\n• Se solicita online en esta.cbp.dhs.gov.\n\n🌎 **Ciudadanos latinoamericanos:**\n• Necesitan **visa B-1/B-2** tramitada en el consulado.\n\n📋 Pasaporte con validez mínima de 6 meses.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "4 dias", "4 días", "7 dias", "7 días", "express", "semana", "visitar"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🗓️ **Itinerarios para Miami:**\n\n⏱️ **Express (4 días):**\n• Día 1 — South Beach + Ocean Drive + Art Deco + South Pointe Park.\n• Día 2 — Wynwood Walls + Little Havana (Calle Ocho, café cubano).\n• Día 3 — Everglades (airboat, caimanes) + rooftop bar en Brickell.\n• Día 4 — Coconut Grove + Coral Gables + Venetian Pool.\n\n🎒 **Miami + Florida (7 días):**\nSuma los 4 días y añade:\n• Día 5 — Key West (Overseas Highway, Hemingway, Mallory Square).\n• Días 6-7 — Orlando (Disney, Universal, Harry Potter).\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "alojamiento", "little havana", "coconut grove", "coral gables", "design district"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Zonas de Miami:**\n\n🏖️ **South Beach** — Playa icónica, Art Deco, beach clubs. Caro pero imprescindible.\n🎨 **Wynwood** — Arte urbano, murales, galerías, gastronomía fusión.\n🏙️ **Brickell/Downtown** — Skyline, rooftops, metro. Precios más razonables.\n🇨🇺 **Little Havana** — Calle Ocho, café cubano, dominó, ron. Muy económico para comer.\n🌴 **Coconut Grove** — El barrio más verde y bohemio, veleros, cafés.\n🏛️ **Coral Gables** — Venetian Pool, Miracle Mile, arquitectura mediterránea.\n💎 **Design District** — Lujo, moda, ICA gratuito.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "humedad", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "huracán", "huracan", "temporada"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Miami:**\n\n☀️ **Mejor época: Noviembre-Abril** — Temporada seca, 22-28°C perfectos.\n🌧️ **Jun-Oct:** Temporada de huracanes. Mucha humedad y lluvias intensas, pero los precios bajan considerablemente.\n🌡️ **Verano (Jul-Ago):** 33°C máxima, 15 días de lluvia al mes.\n❄️ **Invierno (Ene-Feb):** 24-25°C máxima — ideal.\n\n⚠️ **Huracanes:** La temporada oficial es Jun-Nov. Septiembre es el mes más activo. Contrata seguro de viaje.\n\n⬇️ He hecho scroll a la tabla de clima."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "dolar", "dólar", "moneda", "propina", "tip"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Miami:**\n\n🏨 Hotel (gama media): **€120-€220**\n🍽️ Comida (restaurante medio): **€30-€60**\n🚙 Uber / transporte: **€10-€25**\n🎭 Actividades / entradas: **€20-€50**\n\n📊 **Total aprox: €200/día** (viajero medio)\n\n💡 **Tips de ahorro:**\n• La **propina es obligatoria** en EE.UU.: **15-20%** en restaurantes, €1-2 por bebida en bares.\n• Little Havana y el Centro son mucho más baratos para comer.\n• El Metromover Downtown es **gratuito**.\n• Citi Bike **€10/día** en South Beach.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "cubana", "cubano", "ceviche", "stone crab", "mariscos", "cenar", "gastronomía", "gastronomia", "café cubano", "cafe cubano", "mojito", "ropa vieja", "cocina latina", "brunch"],
+      "scrollTo": "sec-zonas",
+      "response": "🍽️ **Comer en Miami:**\n\n🇨🇺 **Comida cubana (Little Havana):**\n• Café cubano en ventanilla de la **Calle Ocho**.\n• **Ropa vieja**, mojitos y cócteles de ron.\n• Precios muy económicos — la Cuba que no pudo ser.\n\n🦀 **Stone Crab:**\n• La especialidad de Miami (temporada Oct-May).\n• Joe's Stone Crab en South Beach es el más famoso.\n\n🎨 **Wynwood:**\n• Restaurantes de cocina **fusión latina** de moda.\n• Brunch y cafés creativos.\n\n🏖️ **South Beach:**\n• Lincoln Road Mall — restaurantes con terraza.\n• Beach clubs exclusivos.\n\n💡 Los restaurantes de South Beach son caros. Little Havana es auténtico y barato."
+    }
+  ]
+}

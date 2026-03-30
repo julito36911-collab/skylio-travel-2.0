@@ -29,12 +29,6 @@ function ParkingFinder() {
     const finalUrl = url3;
     
     window.open(finalUrl, '_blank', 'noopener,noreferrer');
-    
-    console.log('Búsqueda de parking:', destination);
-    console.log('URLs generadas:');
-    console.log('1:', url1);
-    console.log('2:', url2);
-    console.log('3 (usado):', url3);
   };
 
   const handleKeyPress = (e) => {

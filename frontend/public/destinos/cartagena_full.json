@@ -1,0 +1,212 @@
+{
+  "destination": "Cartagena",
+  "id": "cartagena",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Sofitel Legend Santa Clara",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 10.4236, "lng": -75.5500 },
+      "labels": ["CIUDAD AMURALLADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Casa San Agustín",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 10.4240, "lng": -75.5510 },
+      "labels": ["CIUDAD AMURALLADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hyatt Regency Cartagena",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 10.4020, "lng": -75.5570 },
+      "labels": ["BOCAGRANDE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Boutique La Merced",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 10.4232, "lng": -75.5495 },
+      "labels": ["CIUDAD AMURALLADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Selina Cartagena",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 10.4210, "lng": -75.5480 },
+      "labels": ["GETSEMANÍ"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hotel Caribe by Faranda",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 10.4035, "lng": -75.5555 },
+      "labels": ["BOCAGRANDE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hostel Casa Viena",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 10.4215, "lng": -75.5475 },
+      "labels": ["GETSEMANÍ"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Media Luna Hostel",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 10.4208, "lng": -75.5470 },
+      "labels": ["GETSEMANÍ"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hotel Monterrey Cartagena",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 10.4230, "lng": -75.5505 },
+      "labels": ["CIUDAD AMURALLADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cartagena%2C%20Colombia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Ciudad Amurallada",
+      "description": "La muralla colonial más impresionante de América del Sur. 11 km de murallas, casas de colores y callejuelas empedradas.",
+      "price": "Entrada gratuita — Patrimonio UNESCO",
+      "klook_url": "https://www.klook.com/search/result/?query=cartagena+ciudad+amurallada+tour&needQueryIdentification=true"
+    },
+    {
+      "name": "Islas del Rosario",
+      "description": "27 islas coralinas con aguas turquesa a 45 min de Cartagena. El mejor snorkel del Caribe colombiano.",
+      "price": "Tour desde €25-€40",
+      "klook_url": "https://www.klook.com/search/result/?query=islas+del+rosario+cartagena+tour&needQueryIdentification=true"
+    },
+    {
+      "name": "Castillo San Felipe de Barajas",
+      "description": "La fortaleza española más grande construida en América. Túneles, cañones y vistas panorámicas.",
+      "price": "Entrada €4",
+      "klook_url": "https://www.klook.com/search/result/?query=castillo+san+felipe+cartagena&needQueryIdentification=true"
+    },
+    {
+      "name": "Volcán del Totumo",
+      "description": "Un volcán de lodo a 50 km de Cartagena donde puedes bañarte flotando en barro volcánico tibio.",
+      "price": "Tour desde €20",
+      "klook_url": "https://www.klook.com/search/result/?query=volcan+totumo+cartagena&needQueryIdentification=true"
+    }
+  ],
+  "itineraries": {
+    "day_1": [
+      { "time": "14:00", "activity": "Llega y deja el equipaje. Camina la muralla entera al atardecer (2 horas, vistas al Caribe)." },
+      { "time": "17:00", "activity": "Baja al Portal de los Dulces para probar cocadas y dulces coloniales." },
+      { "time": "20:00", "activity": "Cena en la Plaza Santo Domingo. Paseo nocturno por las calles iluminadas." }
+    ],
+    "day_2": [
+      { "time": "08:00", "activity": "Salida desde el Muelle de los Pegasos a Islas del Rosario (45 min en lancha)." },
+      { "time": "10:00", "activity": "Snorkel en arrecifes de coral, baño en playas de arena blanca." },
+      { "time": "13:00", "activity": "Almuerzo de pescado fresco o langosta en la isla." },
+      { "time": "16:00", "activity": "Regreso a Cartagena. Noche en Getsemaní explorando bares locales." }
+    ],
+    "day_3": [
+      { "time": "08:00", "activity": "Castillo San Felipe — llega antes del calor. Explora túneles y bastiones." },
+      { "time": "12:00", "activity": "Almuerzo en la ciudad." },
+      { "time": "14:00", "activity": "Tour al Volcán del Totumo (1.5h ida): flotar en barro volcánico." },
+      { "time": "19:00", "activity": "Regresa a Cartagena para la noche." }
+    ],
+    "day_4": [
+      { "time": "09:00", "activity": "Paseo por Getsemaní buscando los mejores murales de street art." },
+      { "time": "13:00", "activity": "Playa de Bocagrande para el último baño en el Caribe." },
+      { "time": "19:00", "activity": "Cena de despedida con ceviche de camarón y patacones frente al mar." }
+    ]
+  },
+  "intents": [
+    {
+      "id": "ciudad_amurallada",
+      "triggers": ["ciudad amurallada", "muralla", "murallas", "casco historico", "casco histórico", "centro historico", "centro histórico", "colonial", "patrimonio", "unesco"],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Ciudad Amurallada:**\n\nEl corazón histórico de Cartagena, declarado **Patrimonio de la Humanidad por la UNESCO**. Casas coloniales de colores brillantes, callejuelas empedradas, balcones llenos de flores y la muralla más imponente de América.\n\n📏 **11 km de murallas** para recorrer al atardecer (unas 2 horas).\n🎟️ **Entrada gratuita** — es una ciudad viva, no un museo.\n📸 Portal de los Dulces, Plaza Santo Domingo, la estatua de Botero.\n\n💡 Es la zona más cara para dormir pero la más mágica, especialmente de noche.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "islas_rosario",
+      "triggers": ["islas del rosario", "islas", "rosario", "isla grande", "snorkel", "arrecife", "coral", "playa isla", "lancha"],
+      "scrollTo": "sec-lugares",
+      "response": "🏝️ **Islas del Rosario:**\n\nArchipiélago de **27 islas coralinas** a 45 minutos en lancha desde el Muelle de los Pegasos.\n\n🐠 **Snorkel** en arrecifes de coral — el mejor del Caribe colombiano.\n🏖️ Playas de arena blanca y aguas cristalinas turquesa.\n🦞 Almuerzo de langosta o pescado fresco incluido en la mayoría de tours.\n💰 **Tour desde €25-€40** (día completo).\n\n💡 Isla Grande es la más grande con hoteles rústicos para quedarse a dormir. Excursión de día obligatoria.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "castillo_san_felipe",
+      "triggers": ["castillo", "san felipe", "barajas", "fortaleza", "fuerte", "túneles", "tuneles", "cañones"],
+      "scrollTo": "sec-lugares",
+      "response": "🏰 **Castillo San Felipe de Barajas:**\n\nLa **fortaleza española más grande** construida en América. Un laberinto de túneles, cañones y bastiones con vistas panorámicas de toda la ciudad.\n\n🎟️ **Entrada: ~€4**\n🕘 Llega a las **8 AM** antes del calor.\n⏱️ Tiempo recomendado: 1.5-2 horas.\n\n💡 **Pro tip:** Los túneles fueron diseñados para amplificar el sonido — susurra en un extremo y se escucha en el otro. Visita obligatoria para entender la historia de Cartagena.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "volcan_totumo",
+      "triggers": ["volcán", "volcan", "totumo", "barro", "lodo", "volcánico", "volcanico"],
+      "scrollTo": "sec-lugares",
+      "response": "🌋 **Volcán del Totumo:**\n\nUn volcán de lodo a **50 km de Cartagena** donde puedes bañarte flotando en barro volcánico tibio. Una experiencia única e irrepetible en el mundo.\n\n💰 **Tour desde €20** (incluye transporte ida y vuelta).\n⏱️ 1.5 horas de viaje desde Cartagena.\n✨ El barro tiene propiedades minerales — terminas con la piel increíble.\n\n💡 Lleva ropa que no te importe ensuciar y toalla. El lavado en la ciénaga cercana es parte de la experiencia.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "getsemani",
+      "triggers": ["getsemaní", "getsemani", "street art", "murales", "mural", "bohemio", "plaza trinidad", "arte urbano", "grafiti", "graffiti"],
+      "scrollTo": "sec-zonas",
+      "response": "��� **Getsemaní:**\n\nEl barrio más **auténtico y artístico** de Cartagena. Murales gigantes en cada esquina, hosteles con encanto, los mejores bares locales y la **Plaza de la Trinidad** donde los vecinos se sientan a conversar cada noche.\n\n💰 Más **económico** que la Ciudad Amurallada y con mucho más carácter local.\n🍻 Mejor zona para vida nocturna y ambiente viajero.\n🏨 Hosteles recomendados: Casa Viena, Media Luna Hostel.\n\n💡 Pasea por la mañana para ver los murales con buena luz y vuelve de noche para los bares.\n\n⬇️ He hecho scroll a la sección de zonas."
+    },
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "rafael núñez", "rafael nunez", "CTG", "llegar", "aterrizar", "vuelo", "avión", "avion", "taxi", "indriver", "cabify", "transporte", "moverme", "mover", "bus"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Cómo llegar desde el Aeropuerto Rafael Núñez (CTG):**\n\n🚕 **A Ciudad Amurallada/Getsemaní:** Taxi oficial ~**€5-€8** (15 min).\n🚕 **A Bocagrande:** Taxi oficial ~**€4-€6** (10 min).\n📱 **InDriver** es la app más usada — propones precio, suele ser **30-40% más barato** que taxis.\n📱 **Cabify** también funciona bien. Uber tiene operación limitada.\n\n🚶 **En la ciudad:** Ciudad Amurallada y Getsemaní se recorren **100% a pie**. Para Bocagrande o el Castillo usa InDriver.\n🚤 Para Islas del Rosario: taxis acuáticos desde el **Muelle de los Pegasos** cada mañana.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "colombia visa"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a Colombia:**\n\nColombia permite entrada **sin visa** a ciudadanos de España y todos los países latinoamericanos por hasta **90 días** (ampliable a 180).\n\n📋 Solo necesitas:\n• **Pasaporte válido**\n• Declarar un **domicilio en Colombia** (nombre del hotel es suficiente)\n\n💡 Al llegar te sellan el pasaporte con la fecha de entrada. Guarda el sello como referencia.\n\n🔗 Consulta la página oficial de la Cancillería de Colombia para tu nacionalidad específica.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "express", "semana", "recorrido", "visitar", "4 dias", "4 días", "7 dias", "7 días"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🎒 **Itinerarios para Cartagena:**\n\n⏱️ **Express (4 Días):**\n• Día 1: Ciudad Amurallada al atardecer + Portal de los Dulces + cena Plaza Santo Domingo.\n• Día 2: Islas del Rosario (snorkel + playa + almuerzo) + noche en Getsemaní.\n• Día 3: Castillo San Felipe por la mañana + Volcán del Totumo por la tarde.\n• Día 4: Murales de Getsemaní + playa Bocagrande + ceviche de despedida.\n\n🌴 **Cartagena + Costa (7 Días):** Haz los 4 días y añade:\n• Días 5-6: Bus a Santa Marta (4h, €10) + Parque Nacional Tayrona.\n• Día 7: Regreso y vuelo.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "alojamiento", "bocagrande", "laguito"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en Cartagena:**\n\n🏛️ **Ciudad Amurallada** — Patrimonio UNESCO, casas coloniales de colores. La más cara pero la más mágica.\n🎨 **Getsemaní** — Bohemio, street art, bares locales. Más económico con mucho carácter.\n🏖️ **Bocagrande** — Rascacielos frente al mar, playa urbana, hoteles de precio medio.\n🌊 **Laguito** — Más exclusivo y tranquilo, mejores hoteles de playa.\n🏝️ **Islas del Rosario** — Para quedarse a dormir en la isla (eco-hoteles rústicos).\n\n⬇️ He hecho scroll al mapa de zonas completo."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "temporada", "seca", "lluviosa"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Cartagena:**\n\nCartagena es **tropical y cálida todo el año** — mínimo 24°C siempre, máximas de 32-33°C.\n\n☀️ **Temporada seca (Dic-Abr):** La mejor época. Cielos despejados, 2-4 días de lluvia al mes. Es temporada alta.\n🌧️ **Temporada lluviosa (May-Nov):** Más lluvias (8-15 días/mes), pero también menos turistas y precios más bajos.\n\n💡 **Mejor relación calidad-precio:** Junio o julio — menos turistas que diciembre pero clima aún aceptable.\n\n⚠️ Septiembre y octubre son los meses más lluviosos (13-15 días de lluvia).\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "peso", "pesos", "cambio", "moneda", "COP"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💰 **Presupuesto diario en Cartagena:**\n\n🏨 Hotel boutique colonial: **€40-€120**\n🍽️ Comida (restaurante local): **€8-€20**\n🚕 Transporte (taxi/InDriver): **€3-€8**\n🎭 Excursiones/actividades: **€20-€40**\n\n📊 **Total aprox: ~€80/día** (viajero medio)\n\n💱 **Moneda:** Peso colombiano (COP). 1 EUR = ~4.300 COP.\n🏧 Usa cajeros **Bancolombia o Davivienda** para mejores tasas.\n💳 Tarjetas funcionan bien en hoteles y restaurantes turísticos.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "ceviche", "arepa", "patacón", "patacon", "cocada", "gastronomía", "gastronomia", "pescado", "langosta", "mariscos", "champeta", "dulces"],
+      "scrollTo": null,
+      "response": "🍽️ **Comer en Cartagena:**\n\n🐟 **Ceviche de camarón** — El plato estrella. Pruébalo frente al mar en Bocagrande.\n🫓 **Arepas de huevo** — Desayuno obligatorio. Arepas fritas rellenas de huevo.\n🍌 **Patacones** — Plátano verde frito que acompaña todo.\n🦞 **Langosta fresca** — En las Islas del Rosario, incluida en la mayoría de tours.\n🍬 **Portal de los Dulces** — Cocadas, enyucados, alegrías y caballitos de papaya.\n\n🏪 **Mercado de Bazurto** — El mercado más auténtico (ve con guía local).\n⚠️ Evita restaurantes con personas llamándote en la puerta — trampa turística."
+    }
+  ]
+}

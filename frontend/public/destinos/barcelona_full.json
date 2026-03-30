@@ -1,0 +1,162 @@
+{
+  "destination": "Barcelona",
+  "id": "barcelona",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Hotel Arts Barcelona",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.3879, "lng": 2.1942 },
+      "labels": ["EIXAMPLE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Mandarin Oriental BCN",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.3916, "lng": 2.1650 },
+      "labels": ["PASEO DE GRACIA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "W Barcelona",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.3686, "lng": 2.1897 },
+      "labels": ["BARCELONETA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Praktik Rambla",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.3910, "lng": 2.1640 },
+      "labels": ["EIXAMPLE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Sercotel Amister Art",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.3995, "lng": 2.1545 },
+      "labels": ["GRACIA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hotel Chic & Basic Born",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.3849, "lng": 2.1830 },
+      "labels": ["EL BORN"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "TOC Hostel Barcelona",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.3832, "lng": 2.1760 },
+      "labels": ["GOTICO", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Generator Barcelona",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.3905, "lng": 2.1648 },
+      "labels": ["EIXAMPLE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Kabul Party Hostel",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.3814, "lng": 2.1745 },
+      "labels": ["RAMBLAS", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Barcelona%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "sagrada_familia",
+      "triggers": ["sagrada familia", "sagrada", "basilica", "basílica", "gaudi iglesia", "gaudí iglesia", "torres barcelona"],
+      "scrollTo": "sec-lugares",
+      "response": "⛪ **Sagrada Família:**\n\nLa obra maestra inacabada de Gaudí. La basílica más visitada de España con torres que ya superan los **172 metros**.\n\n🎟️ **Desde €26** — Reserva online OBLIGATORIA.\n⚠️ Las entradas se agotan con **2-3 meses de antelación** en temporada alta.\n\n💡 **Pro tip:** Reserva siempre en la web oficial. Si llegas sin reserva, es muy probable que no puedas entrar.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "park_guell",
+      "triggers": ["park guell", "park güell", "parque guell", "parque güell", "guell", "güell"],
+      "scrollTo": "sec-lugares",
+      "response": "🏞️ **Park Güell:**\n\nEl parque de cuento de hadas de Gaudí con la terraza de mosaicos más icónica del mundo. Las vistas sobre Barcelona desde aquí son únicas.\n\n🎟️ **Zona monumental €10** — Reserva obligatoria con días de antelación.\n\n💡 **Pro tip:** Alójate en el barrio de **Gràcia** para evitar la cuesta arriba. Es el barrio más cercano al parque.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "ramblas_boqueria",
+      "triggers": ["ramblas", "rambla", "boqueria", "boquería", "mercado", "las ramblas"],
+      "scrollTo": "sec-lugares",
+      "response": "🛍️ **Las Ramblas y La Boqueria:**\n\n**Las Ramblas** es el paseo más famoso de Barcelona. Conecta Plaza Catalunya con el puerto.\n\n⚠️ **Cuidado:** Es la zona con más carteristas de España. Lleva la mochila delante y evita los menús del día en terrazas de Las Ramblas (caros y malos).\n\n🍊 **Mercado de La Boqueria** (entrada gratuita): El mercado más famoso de España. Frutas, jamones, mariscos frescos. Visítalo **por la mañana temprano** antes de las 13h.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "barrio_gotico",
+      "triggers": ["gotico", "gótico", "barrio gotico", "barrio gótico", "catedral", "plaza real", "puente del obispo"],
+      "scrollTo": "sec-zonas",
+      "response": "🏛️ **Barrio Gótico:**\n\nEl corazón medieval de Barcelona. Callejuelas empedradas de **2.000 años** de historia romana, la Catedral gótica, el Puente del Obispo y la Plaza Real.\n\nEs la zona más turística pero también la más mágica para perderse sin mapa. Alojarse aquí es caro pero incomparable en experiencia.\n\n⬇️ He hecho scroll a la sección de zonas."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["transporte", "metro", "bus", "autobús", "moverme", "mover", "tmb", "t-casual", "billetes", "tarjeta", "ticket", "moverse"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por Barcelona:**\n\nCompra una **T-Casual (10 viajes, €12.55)** al llegar — vale para metro, bus, FGC y Rodalies dentro de la ciudad.\n\n🚶 Barcelona es una ciudad perfecta para ir a pie entre atracciones.\n\n🚌 Los buses turísticos no merecen la pena: usa el **metro** (rapidísimo) o camina.\n\n📱 **Estado TMB Barcelona:** Servicio Normal. Web oficial: tmb.cat\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "airport_elprat",
+      "triggers": ["aeropuerto", "el prat", "llegar", "aterrizar", "vuelo", "aerobus", "aerobús", "bcn"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde el Aeropuerto El Prat (BCN):**\n\n🚇 **Metro L9 Sud:** 35-40 min, **€5.50** (más barata).\n🚌 **Aerobús A1/A2:** 35 min a Plaza Catalunya, **€6.75** cada 5-10 min, 24h (más cómoda con maletas).\n🚆 **Tren R2 Nord:** 20-25 min a Sants/Paseo de Gracia, **€4.60** cada 30 min.\n🚕 **Taxi oficial:** Tarifa fija **€39** al centro (puerta a puerta).\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "etias", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "schengen"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a España:**\n\nBarcelona está en la **Unión Europea y zona Schengen**.\n\n🇪🇺 **UE:** Entrada con DNI, sin visa.\n🌎 **Latinoamérica** (México, Colombia, Argentina, Perú...): Sin visa por **90 días** con pasaporte válido.\n\n⚠️ **ETIAS (desde 2025):** Nueva autorización electrónica obligatoria para no-europeos. Coste: **€7**. Trámite online en minutos.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "visitar", "recorrido", "express", "3 dias", "3 días", "5 dias", "5 días", "una semana"],
+      "scrollTo": "sec-itinerarios",
+      "response": "📋 **Itinerarios para Barcelona:**\n\n⏱️ **3 Días Express:**\n• Día 1 — Gaudí Total: Sagrada Família + Paseo de Gracia + Park Güell.\n• Día 2 — Barrio Gótico + La Boqueria + Barceloneta + El Born.\n• Día 3 — Montjuïc + MNAC + compras + paella de despedida.\n\n🎒 **5-7 Días Completa:**\nAñade Gràcia, El Poblenou y escapadas: Sitges (40 min tren), Montserrat (1h), Costa Brava o Tarragona.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "eixample", "gracia", "gràcia", "barceloneta", "born", "alojarse"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en Barcelona:**\n\n🏛️ **Barrio Gótico** — Medieval, turístico, mágico. Caro para dormir.\n🏗️ **Eixample** — Gaudí, Paseo de Gracia, la zona más recomendada para alojarse.\n🏖️ **Barceloneta** — Playa urbana, chiringuitos, ambiente desenfadado.\n🎨 **Gràcia** — Bohemio, auténtico, local. Cerca del Park Güell.\n🍷 **El Born** — De moda, tapas, cócteles, tiendas independientes.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "frio", "frío", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "primavera", "otoño"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Barcelona:**\n\n☀️ **Mejor época:** Abril-Junio y Septiembre-Octubre (18-26°C, menos turistas).\n🔥 **Verano (Jul-Ago):** Hasta 29°C. Muy caluroso y lleno de turistas.\n❄️ **Invierno (Dic-Feb):** 6-14°C. Poco frío, menos turistas, precios más bajos.\n\n🌊 Barcelona tiene clima mediterráneo — veranos cálidos e inviernos suaves. La lluvia es moderada todo el año.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "eur"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Barcelona:**\n\n🏨 Alojamiento (medio): **€90-€150**\n🍽️ Comida (menú del día + cenas): **€35-€60**\n🚇 Metro / T-Casual: **€5-€8**\n🎭 Entradas y actividades: **€30-€50**\n\n📊 **Total aprox: €160/día** (viajero medio)\n\n💡 **Ahorro clave:** El menú del día (lunes a viernes, mediodía) cuesta **€12-€15** con primero, segundo, postre, pan y bebida. La mejor relación calidad-precio de Europa.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "tapas", "tapa", "paella", "fideuà", "gastronomía", "gastronomia", "desayunar", "cenar", "cocina", "catalán", "catalana", "vermut"],
+      "scrollTo": null,
+      "response": "🍽️ **Comer en Barcelona:**\n\n🥘 **Paella:** Pruébala en Barceloneta frente al mar. Evita las de Las Ramblas.\n🍢 **Tapas:** El Born y Gràcia tienen los mejores bares de tapas auténticos.\n🍷 **Vermut:** Tradición catalana de los domingos al mediodía. Pide vermut con aceitunas y anchoas.\n🫓 **Pa amb tomàquet:** Pan con tomate, aceite y sal — el plato catalán más simple y adictivo.\n\n💡 **Pro tip:** El menú del día (€12-€15, lunes a viernes) es tu mejor amigo. Primero, segundo, postre, pan y bebida.\n\n⚠️ Evita restaurantes con menús en 10 idiomas y fotos — trampa turística."
+    }
+  ]
+}

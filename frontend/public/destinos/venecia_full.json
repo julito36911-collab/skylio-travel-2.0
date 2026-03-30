@@ -1,0 +1,377 @@
+{
+  "destination": "Venecia",
+  "id": "venecia",
+  "country": "Italia",
+  "hero_image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "La ciudad flotante más romántica del mundo",
+  "visa": {
+    "type": "Schengen",
+    "required": false,
+    "note": "Pasaporte vigente. ETIAS obligatorio desde 2025 (~7€).",
+    "etias_url": "https://travel-europe.europa.eu/etias_es",
+    "etias_fee": "7 EUR"
+  },
+  "budget_daily": {
+    "lujo": "300-500 EUR",
+    "medio": "120-200 EUR",
+    "economico": "60-90 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 6, "temp_min": 1, "rain_days": 6},
+    {"month": "Feb", "temp_max": 8, "temp_min": 2, "rain_days": 6},
+    {"month": "Mar", "temp_max": 13, "temp_min": 6, "rain_days": 7},
+    {"month": "Abr", "temp_max": 17, "temp_min": 9, "rain_days": 8},
+    {"month": "May", "temp_max": 22, "temp_min": 14, "rain_days": 8},
+    {"month": "Jun", "temp_max": 26, "temp_min": 18, "rain_days": 6},
+    {"month": "Jul", "temp_max": 28, "temp_min": 20, "rain_days": 4},
+    {"month": "Ago", "temp_max": 28, "temp_min": 20, "rain_days": 5},
+    {"month": "Sep", "temp_max": 23, "temp_min": 16, "rain_days": 6},
+    {"month": "Oct", "temp_max": 17, "temp_min": 11, "rain_days": 8},
+    {"month": "Nov", "temp_max": 11, "temp_min": 6, "rain_days": 9},
+    {"month": "Dic", "temp_max": 7, "temp_min": 2, "rain_days": 7}
+  ],
+  "best_months": ["Abr", "May", "Sep", "Oct"],
+  "zones": [
+    {
+      "name": "San Marco",
+      "description": "El corazón histórico de Venecia. Aquí se encuentran la Plaza San Marco, la Basílica y el Palacio Ducal. Muy turístico pero imprescindible.",
+      "vibe": "Monumental · Turístico · Histórico"
+    },
+    {
+      "name": "Dorsoduro",
+      "description": "Barrio bohemio con galerías de arte, la Gallerie dell'Accademia y el Museo Peggy Guggenheim. Ambiente local y romántico junto al Gran Canal.",
+      "vibe": "Arte · Bohemio · Romántico"
+    },
+    {
+      "name": "Cannaregio",
+      "description": "El barrio más auténtico, hogar del antiguo Ghetto judío, canales tranquilos y bares donde comer cicchetti (tapas venecianas) como un local.",
+      "vibe": "Auténtico · Local · Gastronómico"
+    },
+    {
+      "name": "Castello",
+      "description": "El barrio más grande y menos turístico. Con el Arsenal veneciano, los Jardines de la Bienal y un ritmo de vida pausado lejos de las multitudes.",
+      "vibe": "Tranquilo · Local · Histórico"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Plaza San Marco",
+      "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=80",
+      "description": "La sala de visitas de Europa. La Basílica dorada, el Campanile y los cafés históricos convergen en la plaza más famosa de Italia.",
+      "klook_url": "https://www.klook.com/es/search/?query=plaza+san+marco+venecia"
+    },
+    {
+      "name": "Palacio Ducal",
+      "image": "https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sede del poder veneciano durante siglos. Sus salas cubiertas de frescos de Tintoretto y el Puente de los Suspiros son visita obligada.",
+      "klook_url": "https://www.klook.com/es/search/?query=palacio+ducal+venecia"
+    },
+    {
+      "name": "Gran Canal en Góndola",
+      "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "description": "El paseo en góndola por el Gran Canal es la experiencia quintaesencial de Venecia. Al atardecer, entre palacios barrocos y góticos, es pura magia.",
+      "klook_url": "https://www.klook.com/es/search/?query=gondola+venecia+gran+canal"
+    },
+    {
+      "name": "Islas de Murano y Burano",
+      "image": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
+      "description": "Murano: el cristal artesanal más famoso del mundo. Burano: una isla de casas de colores pastel y encaje hecho a mano. Excursión imprescindible en vaporetto.",
+      "klook_url": "https://www.klook.com/es/search/?query=tour+murano+burano+venecia"
+    }
+  ],
+  "itineraries": {
+    "express": {
+      "title": "Venecia Express (1 día)",
+      "description": "Lo esencial en 24 horas antes de que lleguen las hordas turísticas.",
+      "steps": [
+        {"time": "07:30", "activity": "Plaza San Marco vacía — la mejor hora para fotografiarla sin turistas"},
+        {"time": "09:00", "activity": "Basílica de San Marco — entra temprano para evitar colas (reserva online)"},
+        {"time": "10:30", "activity": "Palacio Ducal y Puente de los Suspiros — 2 horas para las salas principales"},
+        {"time": "13:00", "activity": "Almuerzo en Cannaregio con cicchetti y spritz en un bacaro local"},
+        {"time": "15:00", "activity": "Paseo por el Puente de Rialto y mercado de pescado"},
+        {"time": "16:30", "activity": "Góndola al atardecer — 40 minutos por los canales internos"},
+        {"time": "19:00", "activity": "Aperitivo en Dorsoduro con vistas al Gran Canal"}
+      ]
+    },
+    "full": {
+      "title": "Venecia Completa (2 días + islas)",
+      "description": "Dos días y medio para descubrir la Serenissima a fondo.",
+      "steps": [
+        {"time": "Día 1 AM", "activity": "San Marco temprano: Basílica, Campanile (vistas panorámicas) y Palacio Ducal"},
+        {"time": "Día 1 PM", "activity": "Puente de Rialto, mercado y paseo por Cannaregio al Ghetto judío"},
+        {"time": "Día 1 Noche", "activity": "Cena en osteria local en Castello — lejos de las zonas turísticas"},
+        {"time": "Día 2 AM", "activity": "Excursión a Murano: visita a taller de soplado de cristal artesanal"},
+        {"time": "Día 2 PM", "activity": "Burano: almuerzo con vistas, fotos de las casas de colores, encaje local"},
+        {"time": "Día 2 Tarde", "activity": "Dorsoduro: Gallerie dell'Accademia o Museo Peggy Guggenheim"},
+        {"time": "Día 2 Noche", "activity": "Góndola nocturna — la experiencia más romántica de Venecia"}
+      ]
+    }
+  },
+  "hotels": [
+    {
+      "name": "The Gritti Palace",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Palacio del siglo XV en el Gran Canal. La suite presidencial tiene vistas directas a Santa Maria della Salute.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 45.4306, "lng": 12.3338},
+      "labels": ["GRAN CANAL", "HISTORICO"],
+      "link": "https://www.hotels.com/ho108931/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=gritti&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Danieli",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Leyenda veneciana junto al Palacio Ducal. Huéspedes ilustres como Balzac y Wagner. Terraza con vistas a la laguna.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 45.4339, "lng": 12.3417},
+      "labels": ["SAN MARCO", "HISTORICO"],
+      "link": "https://www.hotels.com/ho230867/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=danieli&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Belmond Hotel Cipriani",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "En la isla de Giudecca, acceso en lancha privada. Piscina olímpica (única en Venecia), jardines y silencio absoluto.",
+      "price_level": "€€€€€",
+      "coords": {"lat": 45.4267, "lng": 12.3371},
+      "labels": ["GIUDECCA", "PISCINA"],
+      "link": "https://www.hotels.com/ho109005/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=cipriani&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Ai Reali",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Palacio veneciano del siglo XVII en Castello. Techos con frescos originales, desayuno buffet incluido y a 5 min a pie de San Marco.",
+      "price_level": "€€€",
+      "coords": {"lat": 45.4348, "lng": 12.3419},
+      "labels": ["CASTELLO", "SAN MARCO"],
+      "link": "https://www.hotels.com/ho214876/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=aireali&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Palazzo Veneziano",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Diseño contemporáneo en edificio histórico en Dorsoduro. A 2 minutos del vaporetto para Murano y Burano. Relación calidad-precio excelente.",
+      "price_level": "€€€",
+      "coords": {"lat": 45.4282, "lng": 12.3245},
+      "labels": ["DORSODURO", "VAPORETTO"],
+      "link": "https://www.hotels.com/ho504321/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=palvenezia&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Antiche Figure",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Frente a la estación de Santa Lucia. Perfecto para llegar en tren. Habitaciones con vistas al Gran Canal desde 150€/noche.",
+      "price_level": "€€€",
+      "coords": {"lat": 45.4421, "lng": 12.3205},
+      "labels": ["SANTA LUCIA", "TREN"],
+      "link": "https://www.hotels.com/ho301456/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=antiche&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Generator Venice",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Hostal boutique en Giudecca. Terraza con vistas al skyline de Venecia, habitaciones privadas y dormitorios compartidos desde 35€/noche.",
+      "price_level": "€",
+      "coords": {"lat": 45.4268, "lng": 12.3290},
+      "labels": ["GIUDECCA", "TERRAZA"],
+      "link": "https://www.hotels.com/ho604789/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=generator&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Hotel Dalla Mora",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Hotel familiar en Santa Croce, cerca de la estación. Sin lujos pero limpio, céntrico y con el mejor desayuno casero de la zona.",
+      "price_level": "€€",
+      "coords": {"lat": 45.4397, "lng": 12.3226},
+      "labels": ["SANTA CROCE", "FAMILIAR"],
+      "link": "https://www.hotels.com/ho412356/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=dallamora&affcid=SKYLIO2025"
+    },
+    {
+      "name": "Ostello di Venezia",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 2,
+      "description": "Albergue juvenil oficial en Giudecca con vistas increíbles a la laguna. La opción más barata con ubicación privilegiada. Desde 28€/noche.",
+      "price_level": "€",
+      "coords": {"lat": 45.4263, "lng": 12.3278},
+      "labels": ["GIUDECCA", "LAGUNA"],
+      "link": "https://www.hotels.com/ho198765/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=ostello&affcid=SKYLIO2025"
+    }
+  ],
+  "airports": [
+    {
+      "name": "Aeropuerto Marco Polo (VCE)",
+      "distance_km": 13,
+      "transport": "Lancha acuática / Autobús ATVO / Taxi acuático",
+      "time_min": 30,
+      "price_range": "7-40 EUR",
+      "notes": "El aeropuerto principal. La lancha Alilaguna llega directo al centro en 70 min (15€). El autobús ATVO + vaporetto es la opción más económica (7€)."
+    },
+    {
+      "name": "Aeropuerto Treviso (TSF)",
+      "distance_km": 30,
+      "transport": "Autobús Barzi Service",
+      "time_min": 60,
+      "price_range": "12-22 EUR",
+      "notes": "Usado por Ryanair y low cost. Autobús directo a Venecia (Piazzale Roma). Opción económica para vuelos baratos."
+    },
+    {
+      "name": "Estación Santa Lucia (Tren)",
+      "distance_km": 0,
+      "transport": "Tren de alta velocidad",
+      "time_min": 0,
+      "price_range": "20-90 EUR",
+      "notes": "La estación está EN Venecia, sobre el Gran Canal. Treni frecuentes desde Roma (3.5h), Milán (2.5h) y Florencia (2h). La opción más cómoda."
+    },
+    {
+      "name": "Vaporetto desde tierra firme",
+      "distance_km": 4,
+      "transport": "Vaporetto ACTV",
+      "time_min": 20,
+      "price_range": "7.50 EUR",
+      "notes": "El vaporetto (autobús acuático) es el transporte interno de Venecia. Línea 1 y 2 recorren el Gran Canal. Bono 24h = 25€. Bono 72h = 45€."
+    }
+  ],
+  "directory": [
+    {
+      "name": "Basílica de San Marco",
+      "type": "Monumento",
+      "address": "Piazza San Marco, Venezia",
+      "wiki_url": "https://es.wikipedia.org/wiki/Bas%C3%ADlica_de_San_Marcos"
+    },
+    {
+      "name": "Palacio Ducal",
+      "type": "Museo / Palacio",
+      "address": "Piazza San Marco 1, Venezia",
+      "wiki_url": "https://es.wikipedia.org/wiki/Palacio_Ducal_de_Venecia"
+    },
+    {
+      "name": "Gallerie dell'Accademia",
+      "type": "Museo de Arte",
+      "address": "Campo della Carità 1050, Dorsoduro",
+      "wiki_url": "https://es.wikipedia.org/wiki/Galer%C3%ADas_de_la_Academia_(Venecia)"
+    },
+    {
+      "name": "Puente de Rialto",
+      "type": "Monumento",
+      "address": "Rialto, Venezia",
+      "wiki_url": "https://es.wikipedia.org/wiki/Puente_de_Rialto"
+    },
+    {
+      "name": "Museo Peggy Guggenheim",
+      "type": "Museo de Arte Moderno",
+      "address": "Dorsoduro 701-704, Venezia",
+      "wiki_url": "https://es.wikipedia.org/wiki/Colecci%C3%B3n_Peggy_Guggenheim"
+    },
+    {
+      "name": "Isla de Murano",
+      "type": "Isla / Artesanía",
+      "address": "Murano, Venezia",
+      "wiki_url": "https://es.wikipedia.org/wiki/Murano"
+    }
+  ],
+  "tips": [
+    "El Acqua Alta (inundación) ocurre Oct-Feb. Lleva botas de agua o compra las que venden en tiendas locales por 3€.",
+    "Los cicchetti (tapas venecianas) en un bacaro cuestan 1-2€ cada uno. La mejor opción para comer barato y auténtico.",
+    "Evita los restaurantes con menú turístico en San Marco. Camina 10 minutos hacia Cannaregio o Castello para precios reales.",
+    "El Museo de la Basílica de San Marco tiene acceso gratuito la primera hora. Llega antes de las 9:00.",
+    "La góndola oficial cuesta 80€ por 40 min (precio fijo). Negocia en temporada baja pero nunca pagues menos: es precio regulado."
+  ],
+  "intents": [
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "llegada", "llegar", "vuelo", "vce", "marco polo", "treviso", "tsf", "transporte"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Cómo llegar a Venecia:**\n\n**Aeropuerto Marco Polo (VCE)** — el principal, a 13 km:\n- 🚤 Alilaguna (lancha): 15€, 70 min hasta San Marco\n- 🚌 ATVO + Vaporetto: 7€, la opción más económica\n- 🚕 Taxi acuático: 100-120€ (compartido o privado)\n\n**Aeropuerto Treviso (TSF)** — low cost:\n- 🚌 Barzi Service bus directo: 12-22€, 60 min\n\n**🚂 En tren** (más cómodo):\n- La estación Santa Lucia está EN Venecia, sobre el Gran Canal\n- Roma → 3h30min | Milán → 2h30min | Florencia → 2h\n\n💡 *Pro tip: Si llegas a Marco Polo, el ATVO + Vaporetto es lo más económico y pintoresco.*"
+    },
+    {
+      "id": "vaporetto_transport",
+      "triggers": ["vaporetto", "acuatico", "barco", "canal", "actv", "bono transporte", "bono 24h", "bono 72h"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**🚤 Vaporetto — el metro acuático de Venecia:**\n\n- Billete sencillo: **9.50€** (válido 75 min)\n- Bono 24h: **25€** — ideal para 1 día de visitas\n- Bono 48h: **35€**\n- Bono 72h: **45€** — perfecto para 3 días\n\n**Líneas principales:**\n- Línea 1: para todo el Gran Canal (lenta pero panorámica)\n- Línea 2: más rápida, menos paradas\n\n💡 *Cómpralos en las máquinas de las paradas (actv.avmspa.it) para evitar colas.*"
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "visado", "etias", "schengen", "pasaporte", "documentos", "entrada"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Entrada a Venecia (Italia / Schengen):**\n\n✅ **Latinoamérica** (México, Colombia, Argentina, Chile...): Solo pasaporte vigente. Sin visa.\n\n⚠️ **ETIAS obligatorio desde 2025:**\n- Coste: **7€** (pago único por 3 años)\n- Se tramita online en minutos: [travel-europe.europa.eu](https://travel-europe.europa.eu/etias_es)\n- Válido para todos los países Schengen\n\n📋 Ten listo: seguro de viaje, reserva de hotel y fondos suficientes para la estadía."
+    },
+    {
+      "id": "itinerary_1day",
+      "triggers": ["un dia", "1 dia", "24 horas", "rapido", "express", "poco tiempo", "qué ver"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**⚡ Venecia en 1 día — lo esencial:**\n\n🌅 **07:30** — Plaza San Marco vacía (la mejor hora para fotos)\n⛪ **09:00** — Basílica San Marco (reserva online)\n🏛️ **10:30** — Palacio Ducal y Puente de los Suspiros\n🍷 **13:00** — Cicchetti y spritz en Cannaregio\n🌉 **15:00** — Puente de Rialto y mercado\n🚣 **16:30** — Góndola al atardecer (40 min, 80€)\n🌆 **19:00** — Aperitivo en Dorsoduro\n\n💡 *Llega muy temprano a San Marco. Después de las 10 AM las colas son brutales.*"
+    },
+    {
+      "id": "itinerary_2days",
+      "triggers": ["dos dias", "2 dias", "fin de semana", "finde", "48 horas", "murano", "burano", "islas"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Venecia en 2 días + islas:**\n\n**Día 1:** San Marco temprano → Palacio Ducal → Rialto → Cannaregio (Ghetto judío) → Cena en Castello\n\n**Día 2:** \n- 🏝️ Murano: taller de cristal artesanal (10:00-12:00)\n- 🌈 Burano: casas de colores, encaje, almuerzo (13:00-16:00)\n- 🎨 Dorsoduro: Accademia o Guggenheim (17:00-19:00)\n- 🌙 Góndola nocturna (20:00)\n\n💡 *El vaporetto Línea 12 va directo a Murano y Burano. Bono 72h = 45€.*"
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["barrios", "zonas", "donde dormir", "donde alojarse", "cannaregio", "dorsoduro", "castello", "san marco"],
+      "scrollTo": "sec-zonas",
+      "response": "**🗺️ Los 4 barrios de Venecia:**\n\n🏛️ **San Marco** — turístico, monumental, caro. Lo más famoso pero lleno de gente.\n\n🎨 **Dorsoduro** — bohemio, con los mejores museos y ambiente local romántico junto al Gran Canal.\n\n🍻 **Cannaregio** — el más auténtico. Cicchetti baratos, Ghetto judío, canales tranquilos.\n\n🌿 **Castello** — el más grande y el menos turístico. Para vivir Venecia como veneciano.\n\n💡 *Para alojarte: Cannaregio y Dorsoduro ofrecen el mejor equilibrio precio-autenticidad.*"
+    },
+    {
+      "id": "attractions",
+      "triggers": ["que ver", "lugares", "atracciones", "monumentos", "museos", "basilica", "campanile", "rialto", "gondola"],
+      "scrollTo": "sec-lugares",
+      "response": "**🏛️ Los imprescindibles de Venecia:**\n\n1. **Plaza San Marco** — la sala de visitas de Europa. Llega antes de las 9 AM.\n2. **Basílica de San Marco** — mosaicos dorados del siglo XI. Reserva online.\n3. **Palacio Ducal** — frescos de Tintoretto y el Puente de los Suspiros.\n4. **Góndola por el Gran Canal** — 80€ por 40 min. Precio regulado.\n5. **Murano + Burano** — cristal artesanal y casas de colores. Día completo.\n6. **Gallerie dell'Accademia** — la mejor colección de arte veneciano del mundo.\n\n🎫 *Reserva las entradas con antelación en alta temporada (jul-ago). Las colas son épicas.*"
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "acqua alta", "inundacion"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en Venecia — cuándo ir:**\n\n✅ **Mejor época:** Abril-Mayo y Septiembre-Octubre\n- Temperaturas ideales (17-22°C), menos turistas, luz perfecta\n\n☀️ **Verano (Jun-Ago):** Calor húmedo (28°C), masificación extrema y precios altos\n\n❄️ **Invierno (Nov-Feb):** Frío (1-8°C) y posible **Acqua Alta** (inundación)\n- El agua sube hasta 1 metro en puntos bajos. Lleva botas de agua.\n- Pero hay mucho menos turistas y precios mucho más bajos.\n\n🎭 **Carnaval de Venecia:** Febrero — espectacular pero carísimo y lleno."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "cuanto cuesta", "barato", "precio", "dinero", "budget", "caro"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto diario en Venecia:**\n\n💎 **Lujo:** 300-500 EUR/día\n- Hotel 5* en Gran Canal + restaurantes con estrella Michelin\n\n🏨 **Precio Medio:** 120-200 EUR/día\n- Hotel 4* en Dorsoduro/Cannaregio + osteria local\n\n🎒 **Económico:** 60-90 EUR/día\n- Hostal + cicchetti + vaporetto + 1 museo\n\n**Costes principales:**\n- Vaporetto sencillo: 9.50€ | Bono 72h: 45€\n- Góndola: 80€ (fijo, 40 min)\n- Basílica San Marco: Gratis | Palacio Ducal: 30€\n- Cicchetti + spritz: 4-8€\n\n💡 *Venecia es cara. El truco: aléjate 500m de San Marco para la mitad del precio.*"
+    },
+    {
+      "id": "food",
+      "triggers": ["comida", "comer", "restaurante", "cicchetti", "bacaro", "spritz", "sarde", "polenta", "risotto"],
+      "scrollTo": "sec-zonas",
+      "response": "**🍽️ Gastronomía veneciana:**\n\n**Platos típicos:**\n- 🦑 **Sarde in saor** — sardinas marinadas con cebolla y pasas\n- 🦐 **Risotto al nero di seppia** — risotto negro con tinta de calamar\n- 🌽 **Polenta con baccalà** — polenta con bacalao a la vicentina\n- 🍤 **Frittura mista** — fritos de mar variados\n\n**Dónde comer como local:**\n- **Bacaro** — bar veneciano de tapas (cicchetti). Mejor opción, 2-3€ por pieza\n- Evita restaurantes con fotos en el menú en San Marco\n- Ve a Cannaregio (calle de la Misericordia) para precios reales\n\n🍹 *El Spritz Veneziano (Aperol + Prosecco) es el aperitivo oficial. 4-5€ en Cannaregio.*"
+    },
+    {
+      "id": "hotels_canal",
+      "triggers": ["hotel gran canal", "hotel canal", "dormir canal", "vista canal"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterGranCanal",
+      "response": "**🌊 Hoteles con vistas al Gran Canal:**\n\nLos más icónicos para despertar con vistas al canal:\n\n- 🥇 **The Gritti Palace** ⭐⭐⭐⭐⭐ — palacio del siglo XV frente al canal\n- 🥈 **Hotel Danieli** ⭐⭐⭐⭐⭐ — junto al Palacio Ducal con terraza a la laguna\n- 🥉 **Hotel Antiche Figure** ⭐⭐⭐⭐ — frente a la estación, vistas al canal desde 150€\n\n💡 *Solicita habitación con vista al canal al hacer la reserva. Suelen cobrar un suplemento.*"
+    },
+    {
+      "id": "hotels_economico",
+      "triggers": ["hotel barato", "hostal", "económico", "presupuesto bajo", "generator", "albergue"],
+      "scrollTo": "sec-hoteles",
+      "response": "**💰 Opciones económicas en Venecia:**\n\n- 🏠 **Generator Venice** — hostal boutique en Giudecca con terraza con vistas. Desde 35€/noche\n- 🏡 **Hotel Dalla Mora** — familiar en Santa Croce, cerca de la estación. Limpio y céntrico\n- 🛏️ **Ostello di Venezia** — albergue oficial en Giudecca con vistas a la laguna. Desde 28€/noche\n\n💡 *La zona de Giudecca (isla al sur) tiene precios más bajos y acceso en vaporetto. Perfecto para presupuesto ajustado.*"
+    },
+    {
+      "id": "gondola_tips",
+      "triggers": ["gondola", "góndola", "paseo en barca", "barco", "romantico", "precio gondola"],
+      "scrollTo": "sec-lugares",
+      "response": "**🚣 Todo sobre la góndola en Venecia:**\n\n💰 **Precio oficial (fijo por ley):**\n- Día (hasta 19h): **80€** por 40 minutos, máximo 6 personas\n- Noche (después de 19h): **120€** por 40 minutos\n\n✅ **Consejos:**\n- Precio fijo: no hay negociación posible (precio regulado)\n- Embarca en puntos alejados de San Marco para menos espera\n- Especifica que quieres los canales internos, no el Gran Canal (más bonito)\n- Con serenata adicional: +120€ (negociable con el gondolero)\n\n💡 *Si el presupuesto es ajustado, el Traghetto (servicio local de góndola para cruzar el Gran Canal) cuesta solo 2€.*"
+    },
+    {
+      "id": "acqua_alta",
+      "triggers": ["acqua alta", "inundacion", "inundación", "agua", "botas", "lluvia noviembre", "temporada inundaciones"],
+      "scrollTo": "sec-clima",
+      "response": "**🌊 Acqua Alta — las inundaciones de Venecia:**\n\n**¿Qué es?** El agua de la laguna sube e inunda las zonas bajas de la ciudad.\n\n**Cuándo ocurre:** Principalmente Octubre-Febrero, especialmente con vientos de Scirocco.\n\n**Cómo prepararse:**\n- 👢 Lleva botas de agua (o cómpralas allí por 3-5€ en farmacias)\n- 📱 App \"Venezia Unica\" avisa con predicciones de Acqua Alta\n- 🗺️ Hay pasarelas elevadas en las zonas más afectadas (San Marco)\n- 🏛️ El MOSE (sistema de barreras) reduce la frecuencia desde 2020\n\n💡 *Ver el Acqua Alta es en sí mismo una experiencia única. No arruina el viaje, ¡lo hace más memorable!*"
+    }
+  ]
+}

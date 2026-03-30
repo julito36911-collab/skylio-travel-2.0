@@ -1,0 +1,103 @@
+{
+  "destination": "Londres",
+  "version": "2.0",
+  "intents": [
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "heathrow", "gatwick", "stansted", "luton", "llegar", "aterrizar", "vuelo"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde Heathrow (LHR):** toma la **Elizabeth Line** (45 min, ~£12) o la Piccadilly Line (1h, más barata).\n\n**Desde Gatwick (LGW):** el **Gatwick Express** te deja en Victoria en 30 min.\n\n**Desde Stansted (STN):** el **Stansted Express** hasta Liverpool Street en ~50 min.\n\n**Desde Luton (LTN):** tren Thameslink hasta St Pancras en ~45 min.\n\n⬇️ He hecho scroll a la sección de aeropuertos."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["metro", "tube", "bus", "autobús", "autobus", "transporte", "moverme", "mover", "oyster", "contactless", "pagar", "efectivo", "tarjeta"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Lo más importante:** Londres NO acepta efectivo en autobuses ni en muchas estaciones.\n\n✅ Usa tu **tarjeta bancaria Contactless** o **Apple/Google Pay** directamente en los torniquetes amarillos. El sistema calcula la tarifa diaria más barata automáticamente.\n\n💳 La tarjeta **Oyster** es útil si prefieres cargar saldo por adelantado.\n\n📱 Descarga **Citymapper** — es infinitamente mejor que Google Maps para el metro londinense."
+    },
+    {
+      "id": "visa_eta",
+      "triggers": ["visa", "eta", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "autorización", "autorizacion", "documentos", "papeles"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **¡Atención! Cambio para 2025:**\n\nEuropeos y latinoamericanos exentos de visa ahora necesitan el **ETA (Electronic Travel Authorisation)** obligatorio.\n\n💷 Costo: **£10** · Se tramita en minutos en la app oficial del gobierno UK.\n\n✅ Autorización válida por múltiples viajes durante 2 años o hasta que expire tu pasaporte.\n\n⬇️ He hecho scroll al widget de Requisitos de Entrada con el enlace oficial."
+    },
+    {
+      "id": "itinerary_1day",
+      "triggers": ["un dia", "un día", "1 dia", "1 día", "express", "poco tiempo", "pocas horas", "mañana", "tarde"],
+      "scrollTo": "sec-itinerarios",
+      "response": "⏱️ **Londres Express (1 día perfecto):**\n\n🌅 **Mañana:** Westminster Bridge → Big Ben → Abadía de Westminster → Buckingham Palace.\n\n🌆 **Tarde:** Borough Market (comida local) → Tate Modern → Millennium Bridge → St Paul's.\n\n🌙 **Noche:** Sky Garden (gratuito, reserva el lunes anterior a las 10:00 AM hora Londres) o pub en Soho.\n\n⬇️ He hecho scroll al itinerario completo."
+    },
+    {
+      "id": "itinerary_2days",
+      "triggers": ["dos dias", "dos días", "2 dias", "2 días", "fin de semana", "finde", "weekend", "itinerario", "ruta", "que hacer", "qué hacer", "plan"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🎒 **Fin de Semana Perfecto (2 días):**\n\n**Día 1 — La Londres Clásica:**\nWestminster → Trafalgar Square (National Gallery, gratis) → Covent Garden → London Eye.\n\n**Día 2 — La Londres Alternativa:**\nBorrough Market (desayuno) → Tower of London → Tower Bridge → Shoreditch (street art) → Camden Market (tarde).\n\n💡 Compra el **London Pass** si visitas muchas atracciones de pago.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "westminster", "soho", "camden", "kensington", "shoreditch", "east end"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas:**\n\n🏛️ **Westminster** — turismo clásico, muy caro para dormir.\n🍻 **Soho & Covent Garden** — vida nocturna, teatros, compras. Ruidoso por la noche.\n🛌 **South Kensington** — elegante, seguro, ideal para familias. Cerca de Hyde Park.\n🎸 **Camden Town** — alternativo, mercadillos únicos. Mejor de visita que para dormir.\n\n⬇️ He hecho scroll al mapa de zonas completo."
+    },
+    {
+      "id": "atracciones",
+      "triggers": [
+        "lugares de interes", "lugares de interés", "lugares", "interes", "interés",
+        "atracciones", "atraccion", "atracción",
+        "museos", "museo",
+        "que ver", "qué ver",
+        "visitar", "visita",
+        "monumentos", "monumento",
+        "big ben", "london eye", "tower of london", "tower bridge",
+        "british museum", "sky garden", "buckingham", "hyde park",
+        "tate", "national gallery", "covent garden",
+        "ver en londres", "hacer en londres"
+      ],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ Londres tiene joyas invaluables. Te recomiendo empezar por el **British Museum** (entrada gratuita), subir al **London Eye** o visitar la histórica **Tower of London**.\n\n🆓 **Gratis:** British Museum, National Gallery, Tate Modern, Hyde Park, Sky Garden.\n💷 **De pago:** London Eye (~£30), Tower of London (~£33).\n\n💡 **Pro tip:** Las entradas del **Sky Garden** son gratuitas pero salen cada lunes a las 10:00 AM (hora Londres). ¡Se agotan en minutos!\n\n⬇️ He hecho scroll a la sección de Lugares Imperdibles."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "paraguas", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "primavera", "otoño"],
+      "scrollTo": "sec-clima",
+      "response": "🌧️ **Clima de Londres:**\n\n☀️ **Mejor época:** mayo–septiembre (15–23°C, menos lluvia, días largos).\n❄️ **Invierno (dic–feb):** 4–9°C, oscurece a las 4 PM. Lleva abrigo.\n🍂 **Otoño/Primavera:** agradables pero impredecibles.\n\n☂️ **Regla de oro:** lleva SIEMPRE un paraguas compacto, independientemente del pronóstico.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "libras", "gbp"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💷 **Presupuesto diario estimado en Londres:**\n\n🏨 Alojamiento (medio): **£150**\n🍽️ Comida (3 comidas): **£60**\n🚇 Transporte (Oyster): **£10**\n🎭 Atracciones: **£40**\n\n📊 **Total aprox: £260/día** (viajero medio)\n\n💡 Ahorras mucho usando museos gratuitos (British Museum, Tate, National Gallery) y comprando comida en Pret a Manger o Sainsbury's.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "pub", "mercado", "borough market", "fish and chips", "desayuno", "cenar", "gastronomía", "gastronomia"],
+      "scrollTo": null,
+      "response": "🍽️ **Comer en Londres:**\n\n🥗 **Borough Market** (London Bridge) — el mejor mercado gastronómico. Ideal para el desayuno o almuerzo del sábado.\n🍺 **Pub tradicional** — busca uno en Soho o Covent Garden. El Sunday Roast es sagrado.\n🐟 **Fish & Chips** — pruébalo en Poppies (Shoreditch) o Rock & Sole Plaice (Covent Garden).\n🥐 **Desayuno barato** — Pret a Manger o Greggs son lo que usa la gente local a diario.\n\n💡 Evita los restaurantes justo en Trafalgar Square o junto al London Eye — son caros y mediocres."
+    },
+    {
+      "id": "hotels_parking",
+      "triggers": ["parking", "coche", "aparcar", "estacionamiento", "aparcamiento", "auto", "automovil", "automóvil"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterParking",
+      "response": "🚗 He filtrado la sección de hoteles para mostrar solo los que tienen **parking disponible**:\n\n• **The Petersham** (Lujo · $$$) — Richmond\n• **Novotel Wembley** (Medio · $$) — Wembley\n• **Holiday Inn Express** (Económico · $) — Ealing\n\n⚠️ El parking en el centro de Londres es muy caro (£30–60/día). Considera aparcar en las afueras y usar el metro.\n\n⬇️ He hecho scroll y filtrado los hoteles con parking."
+    },
+    {
+      "id": "hotels_center",
+      "triggers": ["centro", "central", "céntrico", "centrico"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterCentro",
+      "response": "📍 He filtrado los hoteles del **centro**:\n\n⭐ **The Savoy** (Lujo · $$$) — Covent Garden\n⭐ **Shangri-La** (Lujo · $$$) — The Shard\n🏨 **CitizenM** (Medio · $$) — Tower Hill\n🏨 **Premier Inn** (Medio · $$) — Leicester Square\n🛌 **SoHostel** (Económico · $) — Soho\n🛌 **Point A** (Económico · $) — Kings Cross\n\n⬇️ He hecho scroll y filtrado los hoteles céntricos."
+    },
+    {
+      "id": "hotels_luxury",
+      "triggers": ["lujo", "luxury", "cinco estrellas", "5 estrellas", "premium", "exclusivo"],
+      "scrollTo": "sec-hoteles",
+      "response": "⭐ **Hoteles de lujo en Londres:**\n\n🏰 **The Savoy** (Covent Garden) — Ícono absoluto desde 1889.\n🏙️ **The Dorchester** (Hyde Park) — Elegancia británica clásica.\n🌆 **Shangri-La The Shard** — Las mejores vistas de Londres desde piso 34+.\n\n💡 Reserva con meses de antelación, especialmente en verano. Los precios suelen ser £300–800+/noche."
+    },
+    {
+      "id": "sky_garden",
+      "triggers": ["sky garden", "skygarden", "vistas", "terraza", "gratuito", "gratis"],
+      "scrollTo": "sec-lugares",
+      "response": "🌿 **Sky Garden — El secreto mejor guardado:**\n\nUbicado en el edificio 20 Fenchurch Street (el 'Walkie Talkie'). Jardín en las alturas con vistas panorámicas de 360° de Londres.\n\n🆓 **Completamente GRATIS** — pero debes reservar con antelación.\n\n⏰ **Truco:** las entradas salen cada **lunes a las 10:00 AM** (hora Londres) para toda la semana siguiente. Se agotan en literalmente minutos.\n\n🌐 Reserva en skygarden.london"
+    }
+  ]
+}

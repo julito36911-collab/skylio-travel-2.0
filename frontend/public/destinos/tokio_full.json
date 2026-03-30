@@ -1,0 +1,147 @@
+{
+  "destination": "Tokio",
+  "id": "tokio",
+  "country": "Japón",
+  "hero_image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "La guía definitiva: Shibuya, templos milenarios, gastronomía única y el futuro hecho ciudad.",
+  "visa": {
+    "type": "Sin visa",
+    "required": false,
+    "note": "España y mayoría de LATAM: sin visa por 90 días. Solo pasaporte válido. JESTA (similar al ESTA) previsto desde 2027.",
+    "official_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html"
+  },
+  "budget_daily": {
+    "lujo": "300-500 EUR",
+    "medio": "130-250 EUR",
+    "economico": "60-100 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 10, "temp_min": 2, "rain_days": 5},
+    {"month": "Feb", "temp_max": 11, "temp_min": 3, "rain_days": 6},
+    {"month": "Mar", "temp_max": 15, "temp_min": 6, "rain_days": 10},
+    {"month": "Abr", "temp_max": 19, "temp_min": 11, "rain_days": 11},
+    {"month": "May", "temp_max": 24, "temp_min": 16, "rain_days": 11},
+    {"month": "Jun", "temp_max": 27, "temp_min": 20, "rain_days": 16},
+    {"month": "Jul", "temp_max": 31, "temp_min": 24, "rain_days": 12},
+    {"month": "Ago", "temp_max": 33, "temp_min": 25, "rain_days": 9},
+    {"month": "Sep", "temp_max": 27, "temp_min": 21, "rain_days": 16},
+    {"month": "Oct", "temp_max": 21, "temp_min": 15, "rain_days": 12},
+    {"month": "Nov", "temp_max": 16, "temp_min": 9, "rain_days": 8},
+    {"month": "Dic", "temp_max": 12, "temp_min": 4, "rain_days": 5}
+  ],
+  "best_months": ["Mar", "Abr", "May", "Oct", "Nov"],
+  "zones": [
+    {
+      "name": "Shinjuku",
+      "description": "El barrio más caótico y fascinante de Tokio. La estación más transitada del mundo (3.5M pasajeros/día). Kabukicho es el distrito de ocio nocturno más grande de Asia. Golden Gai tiene 200 bares diminutos en 6 callejuelas.",
+      "vibe": "Vida Nocturna · Estación Central"
+    },
+    {
+      "name": "Shibuya & Harajuku",
+      "description": "Shibuya tiene el cruce peatonal más fotografiado del mundo (3.000 personas cruzan simultáneamente). Harajuku es el barrio de la moda alternativa y cultura kawaii, con la calle Takeshita. Zona perfecta para alojarse.",
+      "vibe": "Cruce Icónico · Moda · Kawaii"
+    },
+    {
+      "name": "Asakusa",
+      "description": "El Tokio antiguo. El Templo Sensoji con su gran tori rojo es el templo más visitado del mundo (30M visitantes/año). La calle Nakamise es la más antigua de Japón. Rickshaws y kimonos de alquiler.",
+      "vibe": "Tradición · Old Tokyo · Fotogénico"
+    },
+    {
+      "name": "Akihabara & Ginza",
+      "description": "Akihabara: paraíso de electrónica, anime y cultura otaku con tiendas de 8 pisos. Ginza: el Champs-Élysées tokiota con tiendas de lujo, galerías de arte y los mejores restaurantes. Opuestos a 15 min en metro.",
+      "vibe": "Tecnología · Lujo · Anime"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Cruce de Shibuya",
+      "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Hasta 3.000 personas cruzan simultáneamente desde todas las direcciones. De noche, pantallas gigantes y neones crean el escenario más futurista del planeta.",
+      "price": "Gratuito",
+      "link": "https://www.klook.com/search/result/?query=shibuya+crossing+tokyo+tour"
+    },
+    {
+      "name": "Templo Senso-ji, Asakusa",
+      "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+      "description": "Fundado en 645 d.C., el templo más antiguo y visitado de Tokio. La Kaminarimon (Puerta del Trueno) con su linterna roja gigante es la imagen más icónica del Japón tradicional.",
+      "price": "Entrada gratuita",
+      "link": "https://www.klook.com/search/result/?query=senso-ji+temple+asakusa+tokyo"
+    },
+    {
+      "name": "Monte Fuji (Excursión)",
+      "image": "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1200&q=80",
+      "description": "El volcán más sagrado de Japón a 2h de Tokio. En verano se puede subir a la cima (5-6h). El lago Kawaguchiko ofrece las vistas más espectaculares del Fuji reflejado en el agua.",
+      "price": "Tour desde 60 EUR",
+      "link": "https://www.klook.com/search/result/?query=mount+fuji+day+trip+tokyo"
+    },
+    {
+      "name": "Tokyo Skytree",
+      "image": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=1200&q=80",
+      "description": "634 metros de altura con miradores en pisos 350 y 450. En días claros se ve el Monte Fuji. Centro comercial, acuario y restaurantes en la base.",
+      "price": "Desde 15 EUR",
+      "link": "https://www.klook.com/search/result/?query=tokyo+tower+skytree+observation"
+    }
+  ],
+  "intents": [
+    {
+      "id": "transport_metro",
+      "triggers": ["transporte", "metro", "tren", "moverse", "suica", "pasmo", "jr", "monorail", "como moverme"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**🚇 Transporte en Tokio:**\n\nEl metro de Tokio es el mejor del mundo: **13 líneas, 285 estaciones**, trenes cada 2-3 minutos.\n\n**Tarjeta Suica/Pasmo** (imprescindible):\n- Depósito: **5€**, recargable\n- Funciona en metro, autobuses, trenes y hasta máquinas de vending\n- Cómprala nada más llegar al aeropuerto\n\n**Coste diario:** 5-10€ en metro\n\n**JR Pass** (si viajas fuera de Tokio):\n- 7 días: **250€** — cubre todos los Shinkansen y trenes nacionales\n- Vale la pena si visitas Kioto, Osaka o Hiroshima\n\n💡 *Una sola tarjeta Suica te sirve para todo Japón.*"
+    },
+    {
+      "id": "visa_japon",
+      "triggers": ["visa", "visado", "requisitos", "pasaporte", "documentos", "entrada", "jesta"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Requisitos de entrada a Japón:**\n\n✅ **España y mayoría de LATAM:** entrada **sin visa por 90 días**. Solo necesitas pasaporte válido.\n\n⚠️ **JESTA** (similar al ESTA americano): previsto desde 2027. Por ahora no se necesita ningún trámite previo.\n\n📋 **Documentos recomendados:**\n- Pasaporte con 6 meses de vigencia\n- Billete de vuelta\n- Reserva de hotel\n\n💡 *Japón es uno de los países más fáciles de visitar. Sin visa, sin trámites, sin complicaciones.*"
+    },
+    {
+      "id": "itinerario_tokio",
+      "triggers": ["itinerario", "que hacer", "plan", "dias", "ruta", "recorrido", "agenda"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Tokio Express en 4 días:**\n\n**Día 1 — Asakusa y Tokio Tradicional:**\nTemplo Senso-ji al amanecer + Skytree + barrio Ueno + ramen auténtico\n\n**Día 2 — Shibuya, Harajuku y Shinjuku:**\nSantuario Meiji + calle Takeshita + Cruce Shibuya + Golden Gai de noche\n\n**Día 3 — Monte Fuji (Excursión):**\nTren a Kawaguchiko (2h, 15€) + vistas del Fuji + onsen termal\n\n**Día 4 — Akihabara y Ginza:**\nTiendas otaku + Palacio Imperial + sushi fresco en Tsukiji\n\n📌 **Si tienes 7-10 días:** añade Kioto (Shinkansen 2h15, 100€), Osaka y Nara con el JR Pass."
+    },
+    {
+      "id": "zonas_barrios",
+      "triggers": ["zonas", "barrios", "donde dormir", "donde alojarse", "shibuya", "shinjuku", "asakusa", "akihabara", "ginza", "harajuku"],
+      "scrollTo": "sec-zonas",
+      "response": "**🗺️ Las 4 zonas principales de Tokio:**\n\n🌃 **Shinjuku** — la estación más transitada del mundo. Kabukicho (vida nocturna), Golden Gai (200 bares diminutos), Parque Gyoen (cerezos).\n\n🚶 **Shibuya & Harajuku** — cruce icónico + moda kawaii + calle Takeshita. Zona perfecta para alojarse.\n\n⛩️ **Asakusa** — el Tokio antiguo. Templo Sensoji (30M visitantes/año), calle Nakamise, rickshaws y kimonos.\n\n🎮 **Akihabara & Ginza** — electrónica y anime vs lujo y alta gastronomía. Opuestos perfectos a 15 min en metro.\n\n💡 *Shibuya es la mejor zona para hospedarse: céntrica, con metro a todo y ambiente joven.*"
+    },
+    {
+      "id": "atracciones_lugares",
+      "triggers": ["atracciones", "lugares", "templo", "senso-ji", "sensoji", "skytree", "fuji", "monumentos", "que ver", "imperdibles"],
+      "scrollTo": "sec-lugares",
+      "response": "**🏯 Los 4 imprescindibles de Tokio:**\n\n1. **Cruce de Shibuya** — gratuito. 3.000 personas cruzan a la vez. Vista perfecta desde el Starbucks del piso 2.\n\n2. **Templo Senso-ji** (Asakusa) — gratuito. El templo más antiguo de Tokio (645 d.C.). La Puerta del Trueno con su linterna roja gigante.\n\n3. **Monte Fuji** (excursión) — desde 60€. El volcán sagrado de Japón a 2h en tren. Lago Kawaguchiko para las mejores fotos.\n\n4. **Tokyo Skytree** — desde 15€. 634m de altura. En días claros se ve el Fuji desde arriba.\n\n🎌 *También imprescindibles: Santuario Meiji, Teamlab Planets, mercado de Tsukiji y Palacio Imperial.*"
+    },
+    {
+      "id": "clima_temperatura",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "calor", "frio", "sakura", "cerezos"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en Tokio — cuándo ir:**\n\n🌸 **Mejor época: Marzo-Mayo y Octubre-Noviembre**\n- Primavera con cerezos en flor (sakura): finales de marzo y abril\n- Otoño con arces rojos (koyo): octubre-noviembre\n\n☀️ **Verano (Jul-Ago):** Muy caluroso y húmedo (31-33°C). Evita si puedes.\n\n❄️ **Invierno (Dic-Feb):** Fresco pero seco (10-12°C). Pocas lluvias, pocos turistas.\n\n🌧️ **Temporada de lluvias:** Junio (16 días de lluvia).\n\n💡 *La sakura (finales de marzo) es la experiencia más mágica de Japón. Planifica con meses de antelación.*"
+    },
+    {
+      "id": "presupuesto_precio",
+      "triggers": ["presupuesto", "cuanto cuesta", "precio", "dinero", "barato", "caro", "yen", "efectivo", "cajero", "budget"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto diario en Tokio:**\n\n💎 **Lujo:** 300-500€/día — hotel 5*, sushi omakase, taxi\n🏨 **Medio:** 130-250€/día — hotel gama media + ramen + metro\n🎒 **Económico:** 60-100€/día — hostal/cápsula + combini + metro\n\n**Precios de referencia:**\n- Hotel gama media: **80-150€/noche**\n- Comida (ramen + sushi): **25-50€/día**\n- Metro diario: **5-10€**\n- Entradas y actividades: **15-40€**\n\n⚠️ **Japón es 90% efectivo** — muchos restaurantes y tiendas solo aceptan yenes. Cajeros **7-Eleven** y **Japan Post** aceptan tarjetas extranjeras sin comisión.\n\n💡 *Total aproximado: **130€/día** para un viaje cómodo.*"
+    },
+    {
+      "id": "comida_gastronomia",
+      "triggers": ["comida", "comer", "ramen", "sushi", "gastronomia", "restaurante", "tsukiji", "takoyaki", "matcha", "izakaya"],
+      "scrollTo": "sec-zonas",
+      "response": "**🍜 Gastronomía en Tokio — la mejor del mundo:**\n\n**Imprescindibles:**\n- 🍜 **Ramen** — desde 7€. Cada barrio tiene su estilo. Shinjuku y Shibuya tienen los mejores.\n- 🍣 **Sushi** — fresco en el mercado de Tsukiji desde 10€. Omakase de lujo desde 100€.\n- 🍢 **Yakitori** — brochetas a la parrilla en los callejones de Golden Gai\n- 🥟 **Gyoza** — las empanadillas japonesas que encuentras en cada esquina\n\n**Dónde comer:**\n- 🏮 **Tsukiji** — sushi recién salido del mar a las 8 AM\n- 🍻 **Golden Gai** (Shinjuku) — 200 bares diminutos de 6 taburetes\n- 🏪 **Combini** (7-Eleven) — comida increíble a precios de risa\n\n💡 *Tokio tiene más estrellas Michelin que cualquier ciudad del mundo.*"
+    },
+    {
+      "id": "aeropuerto_llegada",
+      "triggers": ["aeropuerto", "narita", "haneda", "llegar", "vuelo", "avion", "nex", "limousine"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Cómo llegar desde el aeropuerto:**\n\n**Narita (NRT) — más lejano:**\n- 🚄 **Narita Express (N'EX):** 60-90 min, **25€** (ida y vuelta 40€). Cada 30 min.\n- 🚌 **Limousine Bus:** directo a hoteles principales, **25-30€**, 60-90 min\n\n**Haneda (HND) — más cercano:**\n- 🚝 **Tokyo Monorail:** 13 min a Hamamatsucho, solo **4€**\n- 🚄 **Keikyu Line:** 11 min a Shinagawa\n\n🚕 **Taxi:** Narita→Centro 180-220€ (caro). Haneda→Centro 35-50€ (razonable en grupo).\n\n💡 *Compra la tarjeta Suica/Pasmo nada más llegar — funciona en todo el transporte de Japón.*"
+    },
+    {
+      "id": "hoteles_alojamiento",
+      "triggers": ["hotel", "hoteles", "dormir", "alojamiento", "capsule", "capsula", "hostal", "ryokan"],
+      "scrollTo": "sec-hoteles",
+      "response": "**🏨 Dónde dormir en Tokio:**\n\n💎 **Lujo:**\n- Park Hyatt Tokyo (Shinjuku) — el de Lost in Translation, piso 41+\n- The Gate Hotel Asakusa — vistas al Skytree y templo\n- Cerulean Tower (Shibuya) — vistas al cruce\n\n🏨 **Precio Medio:**\n- Hotel Gracery Shinjuku — Godzilla en la fachada\n- Shibuya Excel Hotel Tokyu — sobre el cruce\n- Dormy Inn Asakusa — con onsen en el hotel\n\n🎒 **Económico:**\n- Capsule Hotel Anshin Oyado — cápsula japonesa auténtica\n- Millennials Shibuya — hostel moderno\n- Khaosan Tokyo Kabuki — hostel en casa japonesa\n\n💡 *Las cápsulas japonesas son una experiencia única por 25-40€/noche.*"
+    }
+  ]
+}

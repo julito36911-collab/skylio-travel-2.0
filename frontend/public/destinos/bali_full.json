@@ -1,0 +1,350 @@
+{
+  "destination": "Bali",
+  "id": "bali",
+  "country": "Indonesia",
+  "hero_image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80",
+  "tagline": "La Isla de los Dioses",
+  "visa": {
+    "type": "Visa Free / VOA",
+    "required": false,
+    "note": "La mayoría de países pueden entrar sin visa por 30 días (Visa Free). Para estancias más largas existe el Visa on Arrival (30 días renovables) por aprox $35 USD. Se paga en el aeropuerto.",
+    "evoa_url": "https://evisa.imigrasi.go.id/",
+    "evoa_fee": "35 USD"
+  },
+  "budget_daily": {
+    "lujo": "200-400 EUR",
+    "medio": "75-120 EUR",
+    "economico": "30-50 EUR"
+  },
+  "climate": [
+    {"month": "Ene", "temp_max": 29, "temp_min": 24, "rain_days": 18},
+    {"month": "Feb", "temp_max": 29, "temp_min": 24, "rain_days": 17},
+    {"month": "Mar", "temp_max": 30, "temp_min": 24, "rain_days": 14},
+    {"month": "Abr", "temp_max": 31, "temp_min": 24, "rain_days": 9},
+    {"month": "May", "temp_max": 31, "temp_min": 23, "rain_days": 6},
+    {"month": "Jun", "temp_max": 30, "temp_min": 22, "rain_days": 4},
+    {"month": "Jul", "temp_max": 29, "temp_min": 21, "rain_days": 3},
+    {"month": "Ago", "temp_max": 29, "temp_min": 21, "rain_days": 3},
+    {"month": "Sep", "temp_max": 30, "temp_min": 22, "rain_days": 4},
+    {"month": "Oct", "temp_max": 31, "temp_min": 23, "rain_days": 8},
+    {"month": "Nov", "temp_max": 30, "temp_min": 24, "rain_days": 13},
+    {"month": "Dic", "temp_max": 29, "temp_min": 24, "rain_days": 17}
+  ],
+  "best_months": ["May", "Jun", "Jul", "Ago", "Sep"],
+  "zones": [
+    {
+      "name": "Ubud",
+      "description": "El alma cultural e intelectual de Bali. Terrazas de arroz de Tegalalang, el Bosque de los Monos, galerías de arte y una energía espiritual única. Zona perfecta para desconectar, meditar o empaparse de la cultura balinesa auténtica. Gran variedad de villas y hostales a muy buen precio.",
+      "vibe": "Espiritualidad · Yoga & Retiro · Cultura"
+    },
+    {
+      "name": "Seminyak & Canggu",
+      "description": "La cara cosmopolita de Bali. Boutiques de moda, los mejores beach clubs del mundo (Potato Head, Ku De Ta), cafeterías de especialidad y puestas de sol espectaculares. Canggu es más surfera y relajada; Seminyak es más elegante y cara. Ideal para comodidad y vida social.",
+      "vibe": "Beach Clubs · Surf · Vida Nocturna"
+    },
+    {
+      "name": "Uluwatu & Bukit",
+      "description": "La península sur guarda secretos espectaculares: playas de arena blanca accesibles por escaleras esculpidas en la roca (Padang Padang, Bingin), el impresionante Templo de Uluwatu sobre un acantilado de 70 metros y las mejores olas para surfistas expertos. Menos masificado que el norte.",
+      "vibe": "Playas Escondidas · Acantilados · Surf"
+    },
+    {
+      "name": "Sanur & Nusa Dua",
+      "description": "Las dos zonas más tranquilas y seguras de Bali. Sanur es un pueblo de pescadores con playas calmadas protegidas por arrecifes, perfecto para familias con niños. Nusa Dua es el enclave de los grandes resorts internacionales con playas impolutas y turismo sin estrés.",
+      "vibe": "Ideal Familias · Resorts Lujo · Tranquilo"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Terrazas de Arroz de Tegalalang",
+      "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format",
+      "description": "Las terrazas más fotogénicas del mundo. Caminos entre los campos, columpios sobre el vacío verde y vistas que quitan el aliento. Entrada aprox 2 EUR, swing desde 20 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=bali+tegalalang+rice+terrace"
+    },
+    {
+      "name": "Templo Uluwatu & Danza Kecak",
+      "image": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=1200&auto=format",
+      "description": "Templo sobre un acantilado de 70m con vistas al océano. Al atardecer, la Danza Kecak con fuego es el espectáculo más impresionante de Bali. Templo aprox 3 EUR, Kecak 10-15 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=uluwatu+temple+kecak+dance+bali"
+    },
+    {
+      "name": "Trekking al Monte Batur (Amanecer)",
+      "image": "https://images.unsplash.com/photo-1604922824961-87cefb2e4b07?q=80&w=1200&auto=format",
+      "description": "El volcán activo más accesible de Bali. Se sube de madrugada para ver el amanecer desde la cima a las 6:00 AM sobre las nubes y el lago Batur. Tour desde 35-50 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=mount+batur+trekking+bali+sunrise"
+    },
+    {
+      "name": "Sacred Monkey Forest, Ubud",
+      "image": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1200&auto=format",
+      "description": "Un bosque sagrado con más de 700 monos en libertad, templos centenarios cubiertos de musgo y una atmósfera casi mística. Guarda bien tus gafas y el móvil. Entrada aprox 5 EUR.",
+      "klook_url": "https://www.klook.com/search/result/?query=ubud+monkey+forest+bali"
+    }
+  ],
+  "itineraries": {
+    "express": {
+      "title": "Bali Express (5 Días)",
+      "description": "Los imprescindibles de Bali en una semana corta e intensa.",
+      "steps": [
+        {"time": "Día 1", "activity": "Llegada al aeropuerto de Denpasar (DPS). Instálate en Seminyak o Canggu. Puesta de sol en el Templo de Tanah Lot. Cena en un beach club."},
+        {"time": "Día 2", "activity": "Playa de Padang Padang o Bingin por la mañana. Templo de Uluwatu por la tarde. Danza Kecak con fuego al atardecer (18:00h)."},
+        {"time": "Día 3", "activity": "Traslado a Ubud (1h). Sacred Monkey Forest, warung local, Terrazas de Tegalalang. Clase de cocina balinesa o danza."},
+        {"time": "Día 4", "activity": "Salida a las 2:00 AM para trekking al Monte Batur. Amanecer volcánico a las 6:00 AM. Tarde de masaje balinés (10-15 EUR/hora)."},
+        {"time": "Día 5", "activity": "Compras en el Mercado de Ubud o Seminyak. Spa o surf en Kuta. Traslado al aeropuerto."}
+      ]
+    },
+    "full": {
+      "title": "Bali Profundo (10-14 Días)",
+      "description": "Con más tiempo puedes explorar las islas cercanas y el interior de Bali.",
+      "steps": [
+        {"time": "Días 1-5", "activity": "Itinerario Express completo: Seminyak/Canggu, Uluwatu, Ubud, Monte Batur."},
+        {"time": "Días 6-8", "activity": "Nusa Penida: ferry desde Sanur (30 min, 5 EUR). La Roca T-Rex (Kelingking), Angel's Billabong y Crystal Bay para snorkel con mantas rayas. 2 noches en la isla."},
+        {"time": "Días 9-11", "activity": "Norte de Bali: Cascadas Gitgit y Sekumpul, Templo de Tirta Empul, plantaciones de café luwak y el lago Bratan con su templo flotante."},
+        {"time": "Días 12-14", "activity": "Regreso al sur: villa privada con piscina en Canggu. Clases de surf, masajes diarios, mercados artesanales."}
+      ]
+    }
+  },
+  "hotels": [
+    {
+      "name": "Four Seasons Ubud",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Villas en terrazas de arroz con piscina privada y vistas a la selva. La experiencia de lujo más icónica de Ubud.",
+      "price_level": "€€€€€",
+      "coords": {"lat": -8.5069, "lng": 115.2624},
+      "labels": ["UBUD", "TERRAZAS", "PISCINA PRIVADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "The Legian Bali",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Playa privada en Seminyak con suites de lujo frente al océano Índico.",
+      "price_level": "€€€€€",
+      "coords": {"lat": -8.6942, "lng": 115.1563},
+      "labels": ["SEMINYAK", "PLAYA PRIVADA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Alila Villas Uluwatu",
+      "category": "Lujo",
+      "rating": 5,
+      "stars": 5,
+      "description": "Piscina infinita sobre el acantilado con vistas al océano. Arquitectura espectacular en la península de Bukit.",
+      "price_level": "€€€€€",
+      "coords": {"lat": -8.8152, "lng": 115.1178},
+      "labels": ["ULUWATU", "INFINITY POOL", "ACANTILADO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Komaneka at Bisma",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Vistas a la selva y río en Ubud. Piscina infinita rodeada de vegetación tropical.",
+      "price_level": "€€€",
+      "coords": {"lat": -8.5075, "lng": 115.2578},
+      "labels": ["UBUD", "SELVA", "PISCINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Desa Potato Head",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Diseño único en Canggu, playa a 5 minutos. Beach club integrado y ambiente cosmopolita.",
+      "price_level": "€€€",
+      "coords": {"lat": -8.6571, "lng": 115.1322},
+      "labels": ["CANGGU", "DISEÑO", "BEACH CLUB"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Puri Santrian",
+      "category": "Precio Medio",
+      "rating": 4,
+      "stars": 4,
+      "description": "Frente al mar en Sanur, ideal familias. Playas tranquilas protegidas por arrecifes.",
+      "price_level": "€€€",
+      "coords": {"lat": -8.6893, "lng": 115.2622},
+      "labels": ["SANUR", "FAMILIAS", "PLAYA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Bisma Eight",
+      "category": "Económico",
+      "rating": 4,
+      "stars": 3,
+      "description": "Piscina con vistas al valle en Ubud. Boutique hotel con excelente relación calidad-precio.",
+      "price_level": "€€",
+      "coords": {"lat": -8.5082, "lng": 115.2581},
+      "labels": ["UBUD", "PISCINA", "VALLE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "The Layar",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 3,
+      "description": "Villas con jardín tropical en Canggu. Tranquilidad a pocos minutos de la playa y los beach clubs.",
+      "price_level": "€€",
+      "coords": {"lat": -8.6545, "lng": 115.1340},
+      "labels": ["CANGGU", "JARDÍN", "VILLAS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    },
+    {
+      "name": "Kuta Puri Bungalows",
+      "category": "Económico",
+      "rating": 3,
+      "stars": 2,
+      "description": "Precio imbatible en el centro de Kuta. Bungalows con jardín y piscina a minutos de la playa.",
+      "price_level": "€",
+      "coords": {"lat": -8.7187, "lng": 115.1694},
+      "labels": ["KUTA", "ECONÓMICO", "PISCINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bali%2C%20Indonesia&sort=RECOMMENDED"
+    }
+  ],
+  "airports": [
+    {
+      "name": "Aeropuerto Ngurah Rai (DPS)",
+      "distance_km": 0,
+      "transport": "Taxi oficial Bluebird / Grab",
+      "time_min": 0,
+      "price_range": "5-20 EUR",
+      "notes": "Aeropuerto internacional principal de Bali. Taxi oficial Bluebird en el mostrador del aeropuerto. Precio fijo a Kuta: 5-8 EUR (15-30 min). A Ubud: 15-20 EUR (1.5h). A Canggu: 8-12 EUR (40-50 min). A Uluwatu: 12-18 EUR (45-60 min). Nunca aceptes a los taxistas que abordan fuera."
+    },
+    {
+      "name": "Transfer privado hotel",
+      "distance_km": 0,
+      "transport": "Transfer privado",
+      "time_min": 0,
+      "price_range": "15-25 EUR",
+      "notes": "La opción más cómoda para llegar a Ubud o zonas lejanas. Reserva con tu hotel con antelación. Conductor esperando con cartel en la salida."
+    },
+    {
+      "name": "App Grab (Uber de Asia)",
+      "distance_km": 0,
+      "transport": "Ride-hailing",
+      "time_min": 0,
+      "price_range": "5-15 EUR",
+      "notes": "Funciona en toda la isla con precios fijos y sin regateo. Descárgala antes de llegar. No funciona dentro del aeropuerto (camina fuera del recinto)."
+    }
+  ],
+  "directory": [
+    {
+      "name": "Templo Tanah Lot",
+      "type": "Templo",
+      "address": "Beraban, Kediri, Tabanan",
+      "wiki_url": "https://es.wikipedia.org/wiki/Tanah_Lot"
+    },
+    {
+      "name": "Tirta Empul (Baño Sagrado)",
+      "type": "Templo / Experiencia",
+      "address": "Tampaksiring, Gianyar",
+      "wiki_url": "https://es.wikipedia.org/wiki/Tirta_Empul"
+    },
+    {
+      "name": "Nusa Penida (Isla)",
+      "type": "Isla",
+      "address": "Nusa Penida, Klungkung",
+      "wiki_url": "https://es.wikipedia.org/wiki/Nusa_Penida"
+    },
+    {
+      "name": "Palacio de Agua Tirtagangga",
+      "type": "Palacio / Jardines",
+      "address": "Ababi, Abang, Karangasem",
+      "wiki_url": "https://es.wikipedia.org/wiki/Tirtagangga"
+    },
+    {
+      "name": "Mercado de Ubud (Pasar Seni)",
+      "type": "Mercado Artesanal",
+      "address": "Ubud, Gianyar",
+      "wiki_url": "https://es.wikipedia.org/wiki/Ubud"
+    },
+    {
+      "name": "Playa Padang Padang",
+      "type": "Playa",
+      "address": "Pecatu, Kuta Selatan, Badung",
+      "wiki_url": "https://es.wikipedia.org/wiki/Playa_Padang_Padang"
+    }
+  ],
+  "intents": [
+    {
+      "id": "tegalalang_arrozales",
+      "triggers": ["tegalalang", "arrozales", "arroz", "terrazas", "rice terrace", "swing", "columpio"],
+      "scrollTo": "sec-lugares",
+      "response": "**🌾 Terrazas de Arroz de Tegalalang:**\n\nLas terrazas más fotogénicas del mundo, a 20 min al norte de Ubud.\n\n📍 **Info práctica:**\n- Entrada: aprox **2 EUR**\n- Swing (columpio): desde **20 EUR**\n- Mejor hora: **por la mañana** (menos gente y mejor luz)\n\n📸 Caminos entre los campos de arroz, columpios sobre el vacío verde y vistas que quitan el aliento.\n\n💡 *Ve temprano (antes de las 9:00) para evitar multitudes. Los columpios son la foto más viral de Bali.*"
+    },
+    {
+      "id": "uluwatu_templo",
+      "triggers": ["uluwatu", "templo", "kecak", "danza", "acantilado", "bukit"],
+      "scrollTo": "sec-lugares",
+      "response": "**🛕 Templo de Uluwatu & Danza Kecak:**\n\nTemplo espectacular sobre un acantilado de 70 metros con vistas al océano Índico.\n\n🎭 **Danza Kecak:**\n- Al atardecer (18:00h) sobre el acantilado\n- Espectáculo con fuego, el más impresionante de Bali\n- Precio: **10-15 EUR**\n\n⛩️ **Templo:** entrada aprox **3 EUR**\n- Cuidado con los monos: esconden y roban gafas, gorras y móviles\n\n💡 *Llega 1 hora antes del Kecak para buen sitio. Es el espectáculo más memorable de toda la isla.*"
+    },
+    {
+      "id": "monte_batur",
+      "triggers": ["batur", "volcan", "volcán", "trekking", "amanecer", "sunrise", "trek"],
+      "scrollTo": "sec-lugares",
+      "response": "**🌋 Trekking al Monte Batur (Amanecer):**\n\nEl volcán activo más accesible de Bali. Una experiencia transformadora.\n\n⏰ **Horario:**\n- Salida: **2:00 AM** desde tu hotel\n- Inicio del trek: ~3:30 AM\n- Cima y amanecer: **6:00 AM**\n\n💰 **Precio:** Tour guiado desde **35-50 EUR** (incluye transporte y desayuno en la cima)\n\n⚠️ **Imprescindible:** zapatillas de trekking, linterna frontal, abrigo (hace frío arriba)\n\n💡 *De vuelta a Ubud, date un merecido masaje balinés (10-15 EUR/hora). Te lo habrás ganado.*"
+    },
+    {
+      "id": "bosque_monos",
+      "triggers": ["monos", "bosque", "monkey", "forest", "sacred", "ubud monos"],
+      "scrollTo": "sec-lugares",
+      "response": "**🐒 Sacred Monkey Forest (Ubud):**\n\nBosque sagrado con más de **700 monos** en libertad, templos centenarios cubiertos de musgo y atmósfera mística.\n\n📍 **Info práctica:**\n- Entrada: aprox **5 EUR**\n- Horario: 9:00-17:00\n- Duración visita: 1-2 horas\n\n⚠️ **Cuidado:**\n- Guarda bien gafas, gorra y móvil (los monos roban)\n- No les enseñes comida ni les mires fijamente a los ojos\n- No lleves bolsas de plástico visibles\n\n💡 *La mañana temprano es el mejor momento. Los monos están más tranquilos y hay menos turistas.*"
+    },
+    {
+      "id": "seminyak_canggu",
+      "triggers": ["seminyak", "canggu", "beach club", "potato head", "ku de ta", "surf", "playa", "nightlife"],
+      "scrollTo": "sec-zonas",
+      "response": "**🏖️ Seminyak & Canggu — la cara cosmopolita de Bali:**\n\n🍹 **Seminyak:** elegante y sofisticado\n- Beach clubs de fama mundial (Ku De Ta, Mrs Sippy)\n- Boutiques de moda y restaurantes gourmet\n- Las mejores puestas de sol\n\n🏄 **Canggu:** surfera y relajada\n- Potato Head Beach Club\n- Cafeterías de especialidad para nómadas digitales\n- Olas para surf de todos los niveles\n\n💰 Seminyak es más caro; Canggu ofrece mejor relación calidad-precio.\n\n💡 *Canggu es el hub de los nómadas digitales. Seminyak es para quienes buscan lujo y vida nocturna.*"
+    },
+    {
+      "id": "transporte_scooter",
+      "triggers": ["transporte", "scooter", "moto", "grab", "taxi", "moverse", "moverme", "alquilar", "como ir"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**🛵 Cómo moverse por Bali:**\n\n🛵 **Scooter** (la opción más popular):\n- Alquiler: aprox **7 EUR/día** con seguro\n- Solo si tienes licencia de moto internacional\n- Cuidado con el tráfico caótico\n\n📱 **Grab** (el Uber de Asia):\n- Precios fijos, sin regateo\n- Funciona en toda la isla\n- Descárgala antes de llegar\n\n🚕 **Taxi Bluebird:**\n- El taxi oficial y fiable de Bali\n- Con taxímetro — nunca aceptes taxis sin contador\n\n⚠️ No hay transporte público útil para turistas.\n\n💡 *Si no tienes experiencia en moto, usa Grab. El tráfico de Bali es intenso y caótico.*"
+    },
+    {
+      "id": "aeropuerto_ngurah_rai",
+      "triggers": ["aeropuerto", "ngurah rai", "dps", "vuelo", "llegar", "llegada", "transfer"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "**✈️ Aeropuerto Ngurah Rai (DPS):**\n\nEl aeropuerto internacional de Bali. Traslados a las zonas principales:\n\n🚕 **A Kuta/Seminyak:** 15-30 min, **5-8 EUR** (taxi Bluebird)\n🚕 **A Canggu:** 40-50 min, **8-12 EUR**\n🚕 **A Ubud:** 1.5 horas, **15-20 EUR** (mejor transfer privado)\n🚕 **A Nusa Dua:** 15-20 min, **6 EUR**\n🚕 **A Uluwatu:** 45-60 min, **12-18 EUR**\n\n📱 **Grab** funciona fuera del recinto del aeropuerto (camina 5 min fuera).\n\n💡 *Reserva transfer privado con tu hotel para Ubud. Evita los taxistas que abordan en la salida.*"
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "visado", "voa", "pasaporte", "documentos", "entrada", "requisitos", "e-voa"],
+      "scrollTo": "sec-visa",
+      "response": "**🛂 Requisitos de Entrada a Bali (Indonesia):**\n\n✅ **Visa Free (30 días):** La mayoría de países pueden entrar sin visa.\n\n🔄 **Visa on Arrival (VOA):**\n- 30 días, renovables otros 30\n- Coste: **$35 USD**\n- Se paga en el aeropuerto (efectivo o tarjeta)\n- Trámite online: [evisa.imigrasi.go.id](https://evisa.imigrasi.go.id/)\n\n📋 **Necesitas:**\n- Pasaporte con 6 meses de vigencia mínima\n- Billete de vuelta o salida del país\n\n💡 *Tramita la e-VOA online antes de viajar para evitar colas en el aeropuerto.*"
+    },
+    {
+      "id": "itinerario_que_hacer",
+      "triggers": ["itinerario", "que hacer", "qué hacer", "dias", "días", "plan", "ruta", "recorrido", "semana"],
+      "scrollTo": "sec-itinerarios",
+      "response": "**🗓️ Itinerario recomendado para Bali:**\n\n**Bali Express (5 días):**\n- Día 1: Llegada → Seminyak/Canggu → Tanah Lot al atardecer\n- Día 2: Playas de Uluwatu → Templo → Danza Kecak\n- Día 3: Ubud: Monkey Forest + Tegalalang + cocina balinesa\n- Día 4: Trek Monte Batur (amanecer) + masaje\n- Día 5: Compras + spa + aeropuerto\n\n**Con más tiempo (10-14 días):**\n- Días 6-8: Nusa Penida (Kelingking, snorkel con mantas)\n- Días 9-11: Norte: cascadas, Tirta Empul, lago Bratan\n- Días 12-14: Relax en Canggu, surf, villa con piscina\n\n💡 *5 días es el mínimo para ver lo esencial. 10-14 días permiten disfrutar sin prisas.*"
+    },
+    {
+      "id": "zonas_barrios",
+      "triggers": ["zonas", "barrios", "donde dormir", "donde alojarse", "alojamiento", "mejor zona", "ubud", "sanur", "nusa dua"],
+      "scrollTo": "sec-zonas",
+      "response": "**🗺️ Las 4 zonas principales de Bali:**\n\n🌿 **Ubud** — cultura, yoga, terrazas de arroz. Precios bajos. Ideal para desconectar.\n\n🍹 **Seminyak & Canggu** — beach clubs, surf, vida nocturna. Canggu más relajada, Seminyak más elegante.\n\n🏖️ **Uluwatu & Bukit** — acantilados, playas escondidas, surf experto. Menos masificado.\n\n👨‍👩‍👧 **Sanur & Nusa Dua** — familias, resorts de lujo, playas tranquilas.\n\n💡 *Para primera vez: Ubud + Seminyak/Canggu es la combinación perfecta. Divide tu estancia entre ambas zonas.*"
+    },
+    {
+      "id": "clima_temporada",
+      "triggers": ["clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "lluvia", "temporada", "seca", "monzon"],
+      "scrollTo": "sec-clima",
+      "response": "**🌤️ Clima en Bali — cuándo ir:**\n\n☀️ **Temporada Seca (Abr-Oct):**\n- Los mejores meses: **julio y agosto**\n- Temperaturas: 29-31°C, solo 3-6 días de lluvia/mes\n- Más turistas y precios más altos\n\n🌧️ **Temporada de Lluvias (Nov-Mar):**\n- Lluvias fuertes pero cortas (suelen ser por la tarde)\n- Menos turistas y precios más bajos\n- Vegetación exuberante, cascadas al máximo\n\n🌡️ **Temperatura:** 21-31°C todo el año (tropical)\n\n💡 *Mayo-junio y septiembre son los meses perfectos: buen clima, menos gente y precios razonables.*"
+    },
+    {
+      "id": "presupuesto_precio",
+      "triggers": ["presupuesto", "cuanto cuesta", "barato", "precio", "dinero", "budget", "caro", "rupia", "cambio", "moneda"],
+      "scrollTo": "sec-presupuesto",
+      "response": "**💰 Presupuesto diario en Bali:**\n\n💎 **Lujo:** 200-400 EUR/día\n- Villa privada con piscina + restaurantes premium\n\n🏨 **Precio Medio:** 75-120 EUR/día\n- Villa/hotel medio + warung + actividades\n\n🎒 **Económico:** 30-50 EUR/día\n- Hostal + comida local + scooter\n\n**Precios de referencia:**\n- 🏠 Villa media: 40-80 EUR/noche\n- 🍛 Comida en warung: 2-4 EUR\n- 🛵 Scooter: 7 EUR/día\n- 💆 Masaje 1h: 10-15 EUR\n- ⛩️ Entrada templo: 2-5 EUR\n\n💡 *Bali es muy asequible. Con 75 EUR/día vives muy bien. La moneda local es la Rupia Indonesia (IDR).*"
+    },
+    {
+      "id": "comida_gastronomia",
+      "triggers": ["comida", "comer", "restaurante", "nasi goreng", "warung", "gastronomia", "cocina", "comida local", "mie goreng"],
+      "scrollTo": "sec-zonas",
+      "response": "**🍛 Gastronomía balinesa — qué comer:**\n\n**Platos imprescindibles:**\n- 🍚 **Nasi Goreng** — arroz frito con huevo, el plato nacional (2-4 EUR)\n- 🍜 **Mie Goreng** — fideos fritos, igual de popular\n- 🐷 **Babi Guling** — cerdo asado balinés (solo en Bali)\n- 🥗 **Gado Gado** — ensalada con salsa de cacahuete\n- 🍢 **Satay** — brochetas de pollo con salsa de maní\n\n🏠 **Warung** = restaurante local familiar. Comida auténtica por 2-4 EUR.\n\n☕ **Café Luwak** — el café más caro del mundo, producido en Bali. Pruébalo en las plantaciones de Ubud.\n\n💡 *Los warungs son donde comen los locales. Mejor comida y precio imbatible. Prueba el Nasi Campur (arroz con acompañamientos variados).*"
+    }
+  ]
+}

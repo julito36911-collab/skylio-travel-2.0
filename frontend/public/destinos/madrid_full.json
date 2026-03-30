@@ -1,0 +1,168 @@
+{
+  "destination": "Madrid",
+  "id": "madrid",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Hotel Westin Palace",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 40.4155, "lng": -3.6948 },
+      "labels": ["SOL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Urso",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 40.4260, "lng": -3.6985 },
+      "labels": ["GRAN VÍA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Mandarin Oriental Ritz",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 40.4148, "lng": -3.6929 },
+      "labels": ["SALAMANCA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Only YOU Boutique Hotel",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 40.4235, "lng": -3.6975 },
+      "labels": ["MALASAÑA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hotel Vincci Centrum",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 40.4200, "lng": -3.7010 },
+      "labels": ["SOL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Room Mate Óscar",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 40.4215, "lng": -3.6985 },
+      "labels": ["LA LATINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Cats Hostel Madrid Sol",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 40.4178, "lng": -3.7060 },
+      "labels": ["MALASAÑA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Mad4You Hostel",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 40.4183, "lng": -3.7015 },
+      "labels": ["SOL", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hotel Mora",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 40.4130, "lng": -3.6935 },
+      "labels": ["RETIRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Madrid%2C%20Spain&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "museo_prado",
+      "triggers": ["museo del prado", "prado", "velazquez", "velázquez", "goya", "las meninas", "meninas", "museo prado"],
+      "scrollTo": "sec-lugares",
+      "response": "🎨 **Museo del Prado:**\n\nUno de los museos más importantes del mundo. Velázquez, Goya, El Greco, Rubens y Tiziano.\n\n🎟️ **€15** — Entrada general.\n🆓 **Gratis Lu-Sa 18-20h y Do 17-19h** — El mejor truco de Madrid.\n\n🖼️ Imprescindibles: **Las Meninas**, El 3 de mayo y Saturno devorando a su hijo.\n\n💡 **Pro tip:** Entra gratis en horario tardío para ver Las Meninas sin aglomeraciones.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "palacio_real",
+      "triggers": ["palacio real", "palacio", "almudena", "catedral", "sabatini", "jardines sabatini"],
+      "scrollTo": "sec-lugares",
+      "response": "🏰 **Palacio Real de Madrid:**\n\nEl palacio real más grande de Europa occidental con **3.418 habitaciones**.\n\n🎟️ **€14** — Entrada general.\n\n🏛️ Colecciones de tapices, armaduras y el impresionante Salón del Trono. Los jardines de Sabatini tienen vistas únicas a la sierra. La **Catedral de la Almudena** está justo al lado.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "retiro",
+      "triggers": ["retiro", "parque del retiro", "parque retiro", "lago retiro", "palacio de cristal", "barcas", "rosaleda"],
+      "scrollTo": "sec-lugares",
+      "response": "🌳 **Parque del Retiro:**\n\n125 hectáreas de jardines reales en pleno centro. **Patrimonio UNESCO.**\n\n🎟️ **Entrada gratuita.**\n🚣 Barcas de remos en el lago: **€6/30 min.**\n\n💎 No te pierdas: el **Palacio de Cristal**, la Rosaleda y los músicos callejeros. Plan imprescindible cualquier día.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "plaza_mayor",
+      "triggers": ["plaza mayor", "puerta del sol", "sol", "kilómetro 0", "kilometro 0", "mercado san miguel", "san miguel"],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Plaza Mayor y Puerta del Sol:**\n\n**Plaza Mayor** — La plaza porticada más famosa de España (1619), con 237 balcones y edificios de ladrillo rojo.\n\n**Puerta del Sol** — El kilómetro 0 de España, centro geográfico del país.\n\n🍽️ **Mercado de San Miguel** — El mercado gourmet más famoso de Madrid, junto a la Plaza Mayor. Pinchos, vinos, mariscos.\n\n💡 Desayuna churros con chocolate en la Plaza Mayor.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "gran_via",
+      "triggers": ["gran via", "gran vía", "broadway", "teatros", "reina sofia", "reina sofía", "guernica", "thyssen", "museos"],
+      "scrollTo": "sec-lugares",
+      "response": "🌆 **Gran Vía y Paseo del Arte:**\n\n**Gran Vía** — El boulevard más icónico de Madrid. Edificios años 20, teatros del West End madrileño, tiendas y el ambiente más cosmopolita. De noche es el escenario más cinematográfico de España.\n\n🎨 **Museo Reina Sofía** — El Guernica de Picasso. Gratis de 19 a 21h.\n🖼️ **Museo Thyssen** — Colección privada más importante del mundo.\n\n💡 Con planificación puedes ver Prado, Reina Sofía y Thyssen **completamente gratis**.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["transporte", "metro", "bus", "autobús", "moverme", "mover", "cercanias", "cercanías", "abono", "abono turístico", "abono turistico", "billete", "tarjeta", "ticket", "moverse"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por Madrid:**\n\nEl **metro de Madrid** es enorme (la 2ª red más grande de Europa) y muy eficiente. Funciona de 6 AM a 1:30 AM.\n\n🎫 **Abono Turístico:** €8.40/día o €28.40/7 días — viajes ilimitados en metro, bus y cercanías zona A. Se compra en cualquier estación de metro.\n\n🚶 Madrid es muy caminable — del Prado al Palacio Real se va a pie en 20 min.\n\n📱 **Estado Metro Madrid:** Servicio Normal. Web: metromadrid.es\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "airport_barajas",
+      "triggers": ["aeropuerto", "barajas", "llegar", "aterrizar", "vuelo", "mad", "t4", "terminal"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde el Aeropuerto Barajas (MAD):**\n\n🚇 **Metro L8 (rosa):** 12-15 min a Nuevos Ministerios, **€4.50-€5**.\n🚌 **Bus Exprés 203:** Directo a Atocha/Cibeles, **€5**, 24 horas — única opción nocturna.\n🚆 **Cercanías C-1 (desde T4):** 25 min a Atocha, **€2.60** — la más barata.\n🚕 **Taxi oficial:** Tarifa fija **€33** al centro (dentro de la M-30).\n\n💡 Para 3-4 personas con equipaje, el taxi puede salir más barato que el metro.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "etias", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "schengen"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a España:**\n\nMadrid está en la **Unión Europea y zona Schengen**.\n\n🇪🇺 **UE:** Entrada con DNI, sin visa.\n🌎 **Latinoamérica** (México, Colombia, Argentina, Perú, Chile...): Sin visa por **90 días** con pasaporte válido.\n\n⚠️ **ETIAS (desde 2025):** Autorización electrónica obligatoria para no-europeos. Coste: **€7**. Trámite online en minutos.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "visitar", "recorrido", "express", "3 dias", "3 días", "5 dias", "5 días", "una semana", "toledo", "segovia"],
+      "scrollTo": "sec-itinerarios",
+      "response": "📋 **Itinerarios para Madrid:**\n\n⏱️ **3 Días Express:**\n• Día 1 — Sol, Plaza Mayor, churros, Mercado San Miguel, Prado gratis (18-20h), tapas en La Latina.\n• Día 2 — Palacio Real, Almudena, Retiro (barcas €6), noche en Malasaña/Chueca.\n• Día 3 — Reina Sofía (Guernica), Thyssen, Gran Vía, cocido madrileño de despedida.\n\n🎒 **5-7 Días:** Añade Toledo (30 min AVE, €12), El Rastro (domingos), fútbol en el Bernabéu, flamenco y Segovia (1h AVE).\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "sol", "malasaña", "malasana", "chueca", "lavapies", "lavapiés", "la latina", "salamanca", "alojarse", "centro"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en Madrid:**\n\n🏛️ **Sol & Centro** — Kilómetro 0, Plaza Mayor, Mercado San Miguel. Mejor ubicación, más turístico y caro.\n🍻 **La Latina & Lavapiés** — Tapas (Cava Baja), El Rastro, bohemio y multicultural.\n🎸 **Malasaña & Chueca** — Hipster, vintage, LGBTQ+, mejor vida nocturna. Buen precio.\n💎 **Salamanca & Retiro** — Lujo, Serrano, Michelin, Parque del Retiro. Ideal familias.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "frio", "frío", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "primavera", "otoño"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Madrid:**\n\n☀️ **Mejor época:** Abril-Junio y Septiembre-Octubre (18-27°C, menos turistas).\n🔥 **Verano (Jul-Ago):** Hasta 33°C. Muy caluroso — Madrid es una de las capitales más calientes de Europa.\n❄️ **Invierno (Dic-Feb):** 2-12°C. Frío seco pero soleado. Menos turistas y precios más bajos.\n\n🌞 Madrid tiene más de **2.800 horas de sol al año** — clima continental con veranos tórridos e inviernos frescos.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "euro", "eur"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Madrid:**\n\n🏨 Hotel (gama media): **€70-€130**\n🍽️ Comida (menú del día + cena): **€25-€45**\n🚇 Metro / transporte: **€5-€8**\n🎭 Museos y actividades: **€15-€30**\n\n📊 **Total aprox: €120/día** (viajero medio)\n\n💡 **Ahorro clave:** El menú del día (lunes a viernes, mediodía) cuesta **€12-€15** con primero, segundo, postre, pan y bebida. Y los museos gratis al final del día.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "tapas", "tapa", "bocadillo", "churros", "chocolate", "gastronomía", "gastronomia", "desayunar", "cenar", "cocina", "cocido", "callos", "tortilla", "vermut", "menu del dia", "menú del día"],
+      "scrollTo": null,
+      "response": "🍽️ **Comer en Madrid:**\n\n🥘 **Cocido madrileño:** El plato estrella — guiso de garbanzos, carne y verduras servido en tres vuelcos.\n🍢 **Tapas:** La Cava Baja (La Latina) es la meca de las tapas. Prueba patatas bravas, jamón ibérico y croquetas.\n🥐 **Churros con chocolate:** Desayuno obligatorio en San Ginés o la Plaza Mayor.\n🫓 **Bocadillo de calamares:** Solo en Madrid — lo encontrarás en los bares de la Plaza Mayor.\n\n💡 **Pro tip:** El menú del día (€12-€15, lunes a viernes) es tu mejor amigo. Primero, segundo, postre, pan y bebida.\n\n⚠️ Madrid come tardísimo: almuerzo 14-16h, cena 21-23h."
+    }
+  ]
+}

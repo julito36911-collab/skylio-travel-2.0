@@ -4,163 +4,957 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venecia - Skylio Destinos</title>
+  <title>Venecia 2025 — Guía de Viaje | Skylio Travel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body { background-color: #0a0f16; }
     .font-serif { font-family: 'Playfair Display', serif; }
     @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
     .animate-pulse-soft { animation: pulse-soft 2s infinite; }
     .glass-shine { position: relative; overflow: hidden; }
     .glass-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent); transform: rotate(45deg); transition: 0.5s; }
     .glass-shine:hover::after { left: 100%; top: 100%; }
+    .hotel-card { transition: all 0.3s; }
+    .hotel-card.hidden-filter { display: none; }
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
+<body class="text-gray-100 min-h-screen">
 
-  <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-6">
-        <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
-          Skylio Viajes
-        </a>
-        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-serif text-xl text-amber-400">✈ Skylio</a>
+      <div class="hidden md:flex gap-6 text-sm text-gray-300">
+        <a href="#sec-zonas" class="hover:text-amber-400 transition">Zonas</a>
+        <a href="#sec-lugares" class="hover:text-amber-400 transition">Lugares</a>
+        <a href="#sec-itinerarios" class="hover:text-amber-400 transition">Rutas</a>
+        <a href="#sec-hoteles" class="hover:text-amber-400 transition">Hoteles</a>
+        <a href="#sec-aeropuertos" class="hover:text-amber-400 transition">Transporte</a>
       </div>
-      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
+      <a href="/" class="text-sm text-amber-400 hover:text-amber-300 transition">← Destinos</a>
     </div>
   </nav>
 
-  <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
-    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
-    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇮🇹 La Serenísima sobre el Agua</span>
-      <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Venecia</h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Canales, suspiros y góndolas. Un laberinto de piedra que flota sobre la historia.</p>
+  <!-- HERO -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1600&q=80"
+           alt="Venecia Gran Canal" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#0a0f16]"></div>
     </div>
-  </header>
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse-soft"></span>
+        <span class="text-amber-400 text-sm uppercase tracking-widest">Italia · Europa</span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-4">Venecia</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8">La ciudad flotante más romántica del mundo</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🚤 Góndola</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🌊 Gran Canal</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🎭 Carnaval</span>
+        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-gray-300">🏛️ San Marco</span>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0" style="background-image: url('https://images.unsplash.com/photo-1514890547357-a9ee2887ad8e?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.12;"></div>
+  <!-- MAIN CONTENT + SIDEBAR -->
+  <div class="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-10">
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
-      <div class="lg:col-span-8 space-y-12">
-        
-        <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Distritos (Sestieri)</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Cannaregio</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🚲 Auténtico</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🍷 Bacari Tour</span>
+    <!-- LEFT CONTENT -->
+    <div class="flex-1 min-w-0">
+
+      <!-- ZONAS -->
+      <section id="sec-zonas" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Barrios de Venecia</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🏛️</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">San Marco</h3>
+                <span class="text-xs text-amber-400">Monumental · Turístico · Histórico</span>
               </div>
-              <p class="text-sm text-gray-400">Donde vive la gente local. Lleno de tabernas típicas (bacari) con los mejores precios de la isla.</p>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">San Marco</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🏰 Monumental</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">💸 Precios VIP</span>
+            <p class="text-gray-400 text-sm leading-relaxed">El corazón histórico de Venecia. Aquí se encuentran la Plaza San Marco, la Basílica y el Palacio Ducal. Muy turístico pero imprescindible.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🎨</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Dorsoduro</h3>
+                <span class="text-xs text-amber-400">Arte · Bohemio · Romántico</span>
               </div>
-              <p class="text-sm text-gray-400">El corazón de Venecia. Plaza San Marcos, el Palacio Ducal y el lujo más clásico.</p>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">Barrio bohemio con galerías de arte, la Gallerie dell'Accademia y el Museo Peggy Guggenheim. Ambiente local y romántico junto al Gran Canal.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🍻</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Cannaregio</h3>
+                <span class="text-xs text-amber-400">Auténtico · Local · Gastronómico</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">El barrio más auténtico, hogar del antiguo Ghetto judío, canales tranquilos y bares donde comer cicchetti (tapas venecianas) como un local.</p>
+          </div>
+
+          <div class="glass-shine rounded-2xl p-6 bg-white/5 border border-white/10 hover:border-amber-500/30 transition">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🌿</span>
+              <div>
+                <h3 class="font-semibold text-white text-lg">Castello</h3>
+                <span class="text-xs text-amber-400">Tranquilo · Local · Histórico</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">El barrio más grande y menos turístico. Con el Arsenal veneciano, los Jardines de la Bienal y un ritmo de vida pausado lejos de las multitudes.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MUST-SEE PLACES -->
+      <section id="sec-lugares" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Lugares Imprescindibles</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="/destinos/venecia/img/san_marcos.png"
+                   alt="Plaza San Marco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Plaza San Marco</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">La sala de visitas de Europa. La Basílica dorada, el Campanile y los cafés históricos convergen en la plaza más famosa de Italia.</p>
+              <a href="https://www.klook.com/es/search/?query=plaza+san+marco+venecia" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Reservar entradas · Klook
+              </a>
             </div>
           </div>
-        </section>
 
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=venice+gondola&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Paseo en Góndola</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Tarifa fija: €90 (30 min)</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Reservar ahora ↗</div>
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="/destinos/venecia/img/palacio_ducal.png"
+                   alt="Palacio Ducal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Palacio Ducal</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Sede del poder veneciano durante siglos. Sus salas cubiertas de frescos de Tintoretto y el Puente de los Suspiros son visita obligada.</p>
+              <a href="https://www.klook.com/es/search/?query=palacio+ducal+venecia" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Reservar entradas · Klook
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="/destinos/venecia/img/gran_canal.png"
+                   alt="Góndola Gran Canal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Gran Canal en Góndola</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">El paseo en góndola por el Gran Canal es la experiencia quintaesencial de Venecia. Al atardecer, entre palacios barrocos y góticos, es pura magia.</p>
+              <a href="https://www.klook.com/es/search/?query=gondola+venecia+gran+canal" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Reservar góndola · Klook
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="relative h-52 overflow-hidden">
+              <img src="/destinos/venecia/img/rialto.png"
+                   alt="Islas de Murano y Burano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-semibold text-white text-lg mb-2">Islas de Murano y Burano</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">Murano: el cristal artesanal más famoso del mundo. Burano: una isla de casas de colores pastel y encaje hecho a mano. Excursión imprescindible en vaporetto.</p>
+              <a href="https://www.klook.com/es/search/?query=tour+murano+burano+venecia" target="_blank"
+                 class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-full text-sm hover:bg-amber-500/30 transition border border-amber-500/30">
+                🎫 Tour Murano+Burano · Klook
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ITINERARIOS -->
+      <section id="sec-itinerarios" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Itinerarios</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Express -->
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-semibold border border-amber-500/30">⚡ EXPRESS</span>
+              <h3 class="font-semibold text-white">Venecia en 1 día</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-5">Lo esencial en 24 horas antes de que lleguen las hordas turísticas.</p>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">07:30</span>
+                <p class="text-gray-300 text-sm">Plaza San Marco vacía — la mejor hora para fotografiarla sin turistas</p>
               </div>
-            </a>
-            <a href="https://www.klook.com/search/result/?query=murano+burano+tour&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Murano & Burano</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €20-€30</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Tour Islas ↗</div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">09:00</span>
+                <p class="text-gray-300 text-sm">Basílica de San Marco — entra temprano para evitar colas (reserva online)</p>
               </div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">10:30</span>
+                <p class="text-gray-300 text-sm">Palacio Ducal y Puente de los Suspiros — 2 horas para las salas principales</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">13:00</span>
+                <p class="text-gray-300 text-sm">Almuerzo en Cannaregio con cicchetti y spritz en un bacaro local</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">15:00</span>
+                <p class="text-gray-300 text-sm">Paseo por el Puente de Rialto y mercado de pescado</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">16:30</span>
+                <p class="text-gray-300 text-sm">Góndola al atardecer — 40 minutos por los canales internos (80€)</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-amber-400 text-xs font-mono w-12 shrink-0 mt-0.5">19:00</span>
+                <p class="text-gray-300 text-sm">Aperitivo en Dorsoduro con vistas al Gran Canal</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full -->
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/30">🗓️ COMPLETO</span>
+              <h3 class="font-semibold text-white">2 días + Islas</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-5">Dos días para descubrir la Serenissima a fondo, con excursión a las islas.</p>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 1 AM</span>
+                <p class="text-gray-300 text-sm">San Marco temprano: Basílica, Campanile (vistas panorámicas) y Palacio Ducal</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 1 PM</span>
+                <p class="text-gray-300 text-sm">Puente de Rialto, mercado y paseo por Cannaregio al Ghetto judío</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 1 🌙</span>
+                <p class="text-gray-300 text-sm">Cena en osteria local en Castello — lejos de las zonas turísticas</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 AM</span>
+                <p class="text-gray-300 text-sm">Excursión a Murano: visita a taller de soplado de cristal artesanal</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 PM</span>
+                <p class="text-gray-300 text-sm">Burano: almuerzo con vistas, fotos de las casas de colores, encaje local</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 🎨</span>
+                <p class="text-gray-300 text-sm">Dorsoduro: Gallerie dell'Accademia o Museo Peggy Guggenheim</p>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-blue-400 text-xs font-mono w-16 shrink-0 mt-0.5">Día 2 🌙</span>
+                <p class="text-gray-300 text-sm">Góndola nocturna — la experiencia más romántica de Venecia (120€)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- HOTELES -->
+      <section id="sec-hoteles" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Hoteles en Venecia</h2>
+        </div>
+        <p class="text-gray-400 text-sm mb-6">Selección en los mejores barrios, con enlace directo a Hotels.com</p>
+        <!-- Filter buttons -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button onclick="filterHotels('ALL')" class="filter-btn px-4 py-2 rounded-full text-sm bg-amber-500 text-black font-semibold" data-filter="ALL">Todos</button>
+          <button onclick="filterHotels('GRAN CANAL')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="GRAN CANAL">Gran Canal</button>
+          <button onclick="filterHotels('DORSODURO')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="DORSODURO">Dorsoduro</button>
+          <button onclick="filterHotels('GIUDECCA')" class="filter-btn px-4 py-2 rounded-full text-sm bg-white/10 text-gray-300 hover:bg-white/20 transition" data-filter="GIUDECCA">Giudecca</button>
+        </div>
+
+        <!-- Luxury -->
+        <h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center gap-2"><span>💎</span> Lujo</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="GRAN CANAL HISTORICO">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">The Gritti Palace</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Palacio del siglo XV en el Gran Canal. La suite presidencial tiene vistas directas a Santa Maria della Salute.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Gran Canal</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Histórico</span>
+            </div>
+            <a href="https://www.hotels.com/ho108931/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=gritti&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">
+              Ver precio · Hotels.com €€€€€
             </a>
           </div>
-        </section>
-
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Logística: Aeropuerto Marco Polo (VCE)</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-5"><h3 class="text-lg font-bold text-amber-500 mb-2">Alilaguna Boat</h3><p class="text-gray-400">Lancha rápida que te deja en San Marco o Rialto por agua. Una experiencia mágica. €15.</p></div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-5"><h3 class="text-lg font-bold text-amber-500 mb-2">Bus ATVO</h3><p class="text-gray-400">Conecta rápido con Piazzale Roma en 20 min. De ahí caminas o tomas Vaporetto. €10.</p></div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="SAN MARCO HISTORICO">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Hotel Danieli</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Leyenda veneciana junto al Palacio Ducal. Huéspedes ilustres como Balzac y Wagner. Terraza con vistas a la laguna.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">San Marco</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Histórico</span>
+            </div>
+            <a href="https://www.hotels.com/ho230867/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=danieli&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">
+              Ver precio · Hotels.com €€€€€
+            </a>
           </div>
-        </section>
-
-        <section class="mt-16">
-          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Venecia en Video
-            </h2>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-amber-500/30 transition" data-label="GIUDECCA PISCINA">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Belmond Hotel Cipriani</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">En la isla de Giudecca, acceso en lancha privada. Piscina olímpica (única en Venecia), jardines y silencio absoluto.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Giudecca</span>
+              <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">Piscina</span>
+            </div>
+            <a href="https://www.hotels.com/ho109005/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=cipriani&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-amber-500/20 text-amber-400 rounded-xl text-xs font-semibold hover:bg-amber-500/30 transition border border-amber-500/30">
+              Ver precio · Hotels.com €€€€€
+            </a>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-        </section>
+        </div>
+
+        <!-- Mid-range -->
+        <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center gap-2"><span>🏨</span> Precio Medio</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="CASTELLO SAN MARCO">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Hotel Ai Reali</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Palacio veneciano del siglo XVII en Castello. Techos con frescos originales, desayuno buffet incluido y a 5 min a pie de San Marco.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Castello</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">San Marco</span>
+            </div>
+            <a href="https://www.hotels.com/ho214876/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=aireali&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">
+              Ver precio · Hotels.com €€€
+            </a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="DORSODURO VAPORETTO">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Palazzo Veneziano</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Diseño contemporáneo en edificio histórico en Dorsoduro. A 2 minutos del vaporetto para Murano y Burano. Relación calidad-precio excelente.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Dorsoduro</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Vaporetto</span>
+            </div>
+            <a href="https://www.hotels.com/ho504321/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=palvenezia&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">
+              Ver precio · Hotels.com €€€
+            </a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-blue-500/30 transition" data-label="SANTA LUCIA TREN">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Hotel Antiche Figure</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Frente a la estación de Santa Lucia. Perfecto para llegar en tren. Habitaciones con vistas al Gran Canal desde 150€/noche.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Santa Lucia</span>
+              <span class="px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">Tren</span>
+            </div>
+            <a href="https://www.hotels.com/ho301456/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=antiche&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-blue-500/20 text-blue-400 rounded-xl text-xs font-semibold hover:bg-blue-500/30 transition border border-blue-500/30">
+              Ver precio · Hotels.com €€€
+            </a>
+          </div>
+        </div>
+
+        <!-- Budget -->
+        <h3 class="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2"><span>🎒</span> Económico</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="GIUDECCA TERRAZA">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Generator Venice</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Hostal boutique en Giudecca. Terraza con vistas al skyline de Venecia, habitaciones privadas y dormitorios compartidos desde 35€/noche.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Giudecca</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Terraza</span>
+            </div>
+            <a href="https://www.hotels.com/ho604789/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=generator&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">
+              Ver precio · Hotels.com €
+            </a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="SANTA CROCE FAMILIAR">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Hotel Dalla Mora</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Hotel familiar en Santa Croce, cerca de la estación. Sin lujos pero limpio, céntrico y con el mejor desayuno casero de la zona.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Santa Croce</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Familiar</span>
+            </div>
+            <a href="https://www.hotels.com/ho412356/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=dallamora&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">
+              Ver precio · Hotels.com €€
+            </a>
+          </div>
+          <div class="hotel-card glass-shine rounded-2xl p-5 bg-white/5 border border-white/10 hover:border-green-500/30 transition" data-label="GIUDECCA LAGUNA">
+            <div class="flex justify-between items-start mb-3">
+              <h4 class="font-semibold text-white text-sm">Ostello di Venezia</h4>
+              <span class="text-yellow-400 text-xs">⭐⭐</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3 leading-relaxed">Albergue juvenil oficial en Giudecca con vistas increíbles a la laguna. La opción más barata con ubicación privilegiada. Desde 28€/noche.</p>
+            <div class="flex gap-1 flex-wrap mb-3">
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Giudecca</span>
+              <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">Laguna</span>
+            </div>
+            <a href="https://www.hotels.com/ho198765/?q-check-in=2025-06-01&q-check-out=2025-06-07&q-rooms=1&q-room-0-adults=2&tmid=10004&PSRC=PA&sub_publisher=skylio&sub_site=venecia&sub_ad=ostello&affcid=SKYLIO2025"
+               target="_blank" class="block w-full text-center py-2 bg-green-500/20 text-green-400 rounded-xl text-xs font-semibold hover:bg-green-500/30 transition border border-green-500/30">
+              Ver precio · Hotels.com €
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- YOUTUBE -->
+      <section id="sec-videos" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Venecia en Video</h2>
+        </div>
+        <div id="video-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+      </section>
+
+      <!-- AEROPUERTOS / TRANSPORTE -->
+      <section id="sec-aeropuertos" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Cómo Llegar</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">✈️</span>
+              <div>
+                <h3 class="font-semibold text-white">Aeropuerto Marco Polo (VCE)</h3>
+                <span class="text-xs text-amber-400">13 km del centro · 30-70 min</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">El aeropuerto principal. La lancha Alilaguna llega directo al centro en 70 min (15€). El autobús ATVO + vaporetto es la opción más económica (7€).</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚤 Alilaguna: 15€</span>
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚌 ATVO+Vaporetto: 7€</span>
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚕 Taxi acuático: 100-120€</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">✈️</span>
+              <div>
+                <h3 class="font-semibold text-white">Aeropuerto Treviso (TSF)</h3>
+                <span class="text-xs text-amber-400">30 km · 60 min</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">Usado por Ryanair y low cost. Autobús directo a Venecia (Piazzale Roma). Opción económica para vuelos baratos.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">🚌 Barzi Service: 12-22€</span>
+              <span class="px-2 py-1 bg-amber-500/10 text-amber-400 rounded text-xs border border-amber-500/20">⏱️ 60 min</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🚂</span>
+              <div>
+                <h3 class="font-semibold text-white">Estación Santa Lucia (Tren)</h3>
+                <span class="text-xs text-green-400">Directamente en Venecia</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">La estación está EN Venecia, sobre el Gran Canal. Trenes frecuentes desde Roma (3.5h), Milán (2.5h) y Florencia (2h). La opción más cómoda.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">🚄 Roma: 3h30min</span>
+              <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">🚄 Milán: 2h30min</span>
+              <span class="px-2 py-1 bg-green-500/10 text-green-400 rounded text-xs border border-green-500/20">🚄 Florencia: 2h</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">🚤</span>
+              <div>
+                <h3 class="font-semibold text-white">Vaporetto ACTV (Transporte interno)</h3>
+                <span class="text-xs text-blue-400">El metro acuático</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm mb-3">El vaporetto recorre el Gran Canal (Línea 1 y 2) y conecta las islas. Bono 24h = 25€ | Bono 72h = 45€. Cómpralos online para evitar colas.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">🎫 Sencillo: 9.50€</span>
+              <span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">🎫 Bono 24h: 25€</span>
+              <span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs border border-blue-500/20">🎫 Bono 72h: 45€</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DIRECTORIO -->
+      <section id="sec-directorio" class="mb-16 scroll-mt-20">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-amber-500 rounded-full"></div>
+          <h2 class="font-serif text-3xl text-white">Directorio de Lugares</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <a href="https://es.wikipedia.org/wiki/Bas%C3%ADlica_de_San_Marcos" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">⛪</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Basílica de San Marco</p>
+              <p class="text-gray-500 text-xs">Monumento · Piazza San Marco, Venezia</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+          <a href="https://es.wikipedia.org/wiki/Palacio_Ducal_de_Venecia" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🏛️</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Palacio Ducal</p>
+              <p class="text-gray-500 text-xs">Museo / Palacio · Piazza San Marco 1</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+          <a href="https://es.wikipedia.org/wiki/Galer%C3%ADas_de_la_Academia_(Venecia)" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🎨</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Gallerie dell'Accademia</p>
+              <p class="text-gray-500 text-xs">Museo de Arte · Dorsoduro</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+          <a href="https://es.wikipedia.org/wiki/Puente_de_Rialto" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🌉</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Puente de Rialto</p>
+              <p class="text-gray-500 text-xs">Monumento · Rialto, Venezia</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+          <a href="https://es.wikipedia.org/wiki/Colecci%C3%B3n_Peggy_Guggenheim" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">🖼️</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Museo Peggy Guggenheim</p>
+              <p class="text-gray-500 text-xs">Arte Moderno · Dorsoduro 701-704</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+          <a href="https://es.wikipedia.org/wiki/Murano" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/30 transition group">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl shrink-0">💎</div>
+            <div>
+              <p class="text-white text-sm font-semibold group-hover:text-amber-400 transition">Isla de Murano</p>
+              <p class="text-gray-500 text-xs">Isla · Artesanía de cristal · Laguna</p>
+            </div>
+            <span class="ml-auto text-gray-600 text-xs">Wiki →</span>
+          </a>
+
+        </div>
+      </section>
+
+    </div><!-- end left -->
+
+    <!-- SIDEBAR -->
+    <aside class="w-full lg:w-80 shrink-0 space-y-6">
+
+      <!-- VISA / ETIAS -->
+      <div id="sec-visa" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>🛂</span> Visa y Entrada</h3>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-xs shrink-0 mt-0.5">✓</span>
+            <div>
+              <p class="text-gray-300 text-sm font-medium">Sin visa para Latinoamérica</p>
+              <p class="text-gray-500 text-xs">Solo pasaporte vigente. Italia / Schengen.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs shrink-0 mt-0.5">!</span>
+            <div>
+              <p class="text-gray-300 text-sm font-medium">ETIAS obligatorio desde 2025</p>
+              <p class="text-gray-500 text-xs">Autorización online ~7€. Válida 3 años.</p>
+              <a href="https://travel-europe.europa.eu/etias_es" target="_blank" class="text-amber-400 text-xs hover:underline">Tramitar ETIAS →</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8 text-sm">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3><ul class="space-y-3">
-          <li class="flex justify-between"><span>🏨 Hotel Medio</span><span class="text-white font-bold">€150</span></li>
-          <li class="flex justify-between"><span>🍕 Cicchetti + Spritz</span><span class="text-white font-bold">€40</span></li>
-          <li class="flex justify-between"><span>🚤 Vaporetto (1 día)</span><span class="text-white font-bold">€25</span></li>
-        </ul></div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-sm font-bold text-gray-500 mb-4 uppercase tracking-widest">Clima Promedio</h3><table class="w-full text-[10px] text-center">
-          <tr><th class="border-b border-white/5 pb-1">Mes</th><th>Max</th><th>Min</th><th>Aqua</th></tr>
-          <tr><td class="py-1">Abr</td><td class="text-yellow-200">18°C</td><td class="text-yellow-400">10°C</td><td>⚠️</td></tr>
-          <tr><td class="py-1">Jul</td><td class="text-orange-200">28°C</td><td class="text-orange-400">18°C</td><td>☀️</td></tr>
-          <tr><td class="py-1">Nov</td><td class="text-blue-200">12°C</td><td class="text-blue-400">5°C</td><td>🌊 ACQUA</td></tr>
-        </table></div>
-        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine"><h3 class="text-xl font-bold text-amber-500 mb-4">¿Sabías que...?</h3><p class="text-xs text-gray-300">Las maletas con ruedas están <strong class="text-white font-bold">restringidas</strong> por el ruido. Usa maletas de goma silenciosas o prepárate para cargarla por los puentes si no quieres quejas locales.</p></div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><p class="text-[10px] text-green-400 font-bold tracking-widest uppercase">Vaporetto AVM: OK</p></div>
-      </aside>
-    </div>
-  </main>
+      <!-- PRESUPUESTO -->
+      <div id="sec-presupuesto" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>💰</span> Presupuesto Diario</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+              <span class="text-gray-300 text-sm">Lujo</span>
+            </div>
+            <span class="text-amber-400 text-sm font-semibold">300–500 EUR</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+              <span class="text-gray-300 text-sm">Precio Medio</span>
+            </div>
+            <span class="text-blue-400 text-sm font-semibold">120–200 EUR</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green-400"></span>
+              <span class="text-gray-300 text-sm">Económico</span>
+            </div>
+            <span class="text-green-400 text-sm font-semibold">60–90 EUR</span>
+          </div>
+          <hr class="border-white/10 my-2">
+          <p class="text-gray-500 text-xs">Góndola: 80€ (40min). Vaporetto sencillo: 9.50€. Cicchetti: 1-2€/pieza. Basílica San Marco: Gratis.</p>
+        </div>
+      </div>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">© 2024 Skylio Travel 2.0. Enlaces de afiliados — Venecia es eterna.</footer>
+      <!-- CLIMA -->
+      <div id="sec-clima" class="scroll-mt-20 rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-1 flex items-center gap-2"><span>🌤️</span> Clima</h3>
+        <p class="text-xs text-gray-500 mb-4">Mejor época: Abr–May y Sep–Oct</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-gray-400">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-1 font-medium text-gray-500">Mes</th>
+                <th class="text-center py-1 font-medium text-gray-500">Max</th>
+                <th class="text-center py-1 font-medium text-gray-500">Min</th>
+                <th class="text-center py-1 font-medium text-gray-500">☔</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5"><td class="py-1">Ene</td><td class="text-center">6°</td><td class="text-center">1°</td><td class="text-center">6d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Feb</td><td class="text-center">8°</td><td class="text-center">2°</td><td class="text-center">6d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Mar</td><td class="text-center">13°</td><td class="text-center">6°</td><td class="text-center">7d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Abr ✓</td><td class="text-center font-semibold">17°</td><td class="text-center">9°</td><td class="text-center">8d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">May ✓</td><td class="text-center font-semibold">22°</td><td class="text-center">14°</td><td class="text-center">8d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Jun</td><td class="text-center">26°</td><td class="text-center">18°</td><td class="text-center">6d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Jul</td><td class="text-center">28°</td><td class="text-center">20°</td><td class="text-center">4d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Ago</td><td class="text-center">28°</td><td class="text-center">20°</td><td class="text-center">5d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Sep ✓</td><td class="text-center font-semibold">23°</td><td class="text-center">16°</td><td class="text-center">6d</td></tr>
+              <tr class="border-b border-white/5 text-amber-400"><td class="py-1 font-semibold">Oct ✓</td><td class="text-center font-semibold">17°</td><td class="text-center">11°</td><td class="text-center">8d</td></tr>
+              <tr class="border-b border-white/5"><td class="py-1">Nov</td><td class="text-center">11°</td><td class="text-center">6°</td><td class="text-center">9d</td></tr>
+              <tr><td class="py-1">Dic</td><td class="text-center">7°</td><td class="text-center">2°</td><td class="text-center">7d</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TIPS EXCLUSIVOS -->
+      <div class="rounded-2xl p-5 bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20">
+        <h3 class="font-semibold text-amber-400 mb-4 flex items-center gap-2"><span>💡</span> Tips Exclusivos</h3>
+        <div class="space-y-3">
+          <div class="flex gap-2">
+            <span class="text-amber-400 shrink-0">🌊</span>
+            <p class="text-gray-300 text-xs leading-relaxed">El Acqua Alta (inundación) ocurre Oct-Feb. Lleva botas de agua o cómpralas allí por 3-5€.</p>
+          </div>
+          <div class="flex gap-2">
+            <span class="text-amber-400 shrink-0">🍷</span>
+            <p class="text-gray-300 text-xs leading-relaxed">Cicchetti (tapas venecianas) en un bacaro: 1-2€ cada uno. La mejor opción para comer barato y auténtico.</p>
+          </div>
+          <div class="flex gap-2">
+            <span class="text-amber-400 shrink-0">🚣</span>
+            <p class="text-gray-300 text-xs leading-relaxed">El Traghetto (góndola local para cruzar el canal) cuesta solo 2€. Los turistas lo ignoran, los venecianos lo usan.</p>
+          </div>
+          <div class="flex gap-2">
+            <span class="text-amber-400 shrink-0">🌅</span>
+            <p class="text-gray-300 text-xs leading-relaxed">La Basílica de San Marco tiene acceso gratuito temprano (antes de las 9:00). Llega al abrir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSPORTE STATUS -->
+      <div class="rounded-2xl p-5 bg-white/5 border border-white/10">
+        <h3 class="font-semibold text-white mb-4 flex items-center gap-2"><span>🚤</span> Estado del Transporte</h3>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span>
+            <span class="text-gray-300 text-sm">Vaporetto ACTV — Operativo</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span>
+            <span class="text-gray-300 text-sm">Alilaguna (aeropuerto) — Operativo</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse-soft"></span>
+            <span class="text-gray-300 text-sm">Trenitalia / Frecciarossa — Operativo</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <span class="text-gray-300 text-sm">MOSE (barreras) — Activo Oct-Feb</span>
+          </div>
+        </div>
+        <p class="text-gray-600 text-xs mt-3">Estado actualizado — verifica en actv.avmspa.it</p>
+      </div>
+
+    </aside>
+  </div><!-- end main layout -->
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-600 text-sm">
+      <p>© 2025 Skylio Travel · Guía de Venecia</p>
+      <p class="mt-1 text-xs">Los precios y disponibilidad pueden variar. Verifica siempre antes de reservar.</p>
+    </div>
+  </footer>
 
   <script>
-    async function loadVeniceVideos() {
-      const fallbackVideos = [
-        { id: 'xywWUb4XaL8', title: 'VENECIA: Guía de viaje completa' },
-        { id: '1T4gHV7o_2Q', title: 'Qué ver en Venecia en 2 días' },
-        { id: 'T474BWEMXvA', title: 'GÓNDOLAS Y CANALES: El corazón de Venecia' }
-      ];
-      try {
-        const response = await fetch('/api/youtube-search?query=venecia+guia+viaje+español');
-        if (!response.ok) throw new Error();
-        const videos = await response.json();
-        renderVideos(videos.slice(0, 3));
-      } catch (e) { renderVideos(fallbackVideos); }
-    }
+    // ─── VIDEOS ───────────────────────────────────────────────
     function renderVideos(videos) {
-      const container = document.getElementById('youtube-gallery');
-      container.innerHTML = videos.map(v => `
-        <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
-          <div class="relative aspect-video">
-            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      const grid = document.getElementById('video-grid');
+      grid.innerHTML = videos.map(v => `
+        <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer"
+           class="rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-amber-500/30 transition group block">
+          <div class="relative h-44 overflow-hidden">
+            <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg"
+                 alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-12 h-12 rounded-full bg-red-600/90 flex items-center justify-center">
+                <span class="text-white text-xl ml-1">▶</span>
+              </div>
             </div>
           </div>
-          <div class="p-4"><h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3><a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a></div>
-        </div>
+          <div class="p-4">
+            <p class="text-gray-300 text-sm leading-snug group-hover:text-amber-400 transition">${v.title}</p>
+            <p class="text-gray-600 text-xs mt-1">YouTube · En español</p>
+          </div>
+        </a>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadVeniceVideos);
+
+    renderVideos([
+      { id: 'KMgFY454Oow', title: 'Qué hacer en VENECIA | GUÍA completa de Venecia en español' },
+      { id: 'aEMaGZuxWnI', title: 'TOP 10 Que Ver en Venecia — Pasaporte Viajero' },
+      { id: '8VFaSGi0YRs', title: 'VENECIA en 2 días — Guía Completa Europa acompañada' }
+    ]);
+
+    // ─── HOTEL FILTER ─────────────────────────────────────────
+    function filterHotels(filter) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('bg-amber-500', btn.dataset.filter === filter);
+        btn.classList.toggle('text-black', btn.dataset.filter === filter);
+        btn.classList.toggle('font-semibold', btn.dataset.filter === filter);
+        btn.classList.toggle('bg-white/10', btn.dataset.filter !== filter);
+        btn.classList.toggle('text-gray-300', btn.dataset.filter !== filter);
+      });
+      document.querySelectorAll('.hotel-card').forEach(card => {
+        const show = filter === 'ALL' || (card.dataset.label || '').includes(filter);
+        card.classList.toggle('hidden-filter', !show);
+      });
+    }
+
   </script>
+
+  <!-- ==============================================
+       BOTON FLOTANTE: ASISTENTE IA
+  ============================================== -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()"
+    style="
+      position: fixed; bottom: 24px; right: 32px; z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(10,15,22,0.9);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #fbbf24; font-weight: 700; font-size: 14px;
+      padding: 12px 20px; border-radius: 999px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5);
+      cursor: pointer; transition: all 0.2s;
+    "
+    onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'"
+    onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">
+    ✨ Asistente IA
+  </button>
+
+  <!-- ==============================================
+       WIDGET FLOTANTE: CHAT IA (NO BLOQUEANTE)
+  ============================================== -->
+  <div id="skylio-chat-panel" style="
+    display: none;
+    position: fixed; bottom: 84px; right: 32px; z-index: 9998;
+    width: 360px; height: 500px;
+    background: rgba(10,15,22,0.97);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 24px;
+    display: none; flex-direction: column;
+    box-shadow: 0 0 60px rgba(245,158,11,0.12), 0 20px 60px rgba(0,0,0,0.7);
+    overflow: hidden;
+  ">
+    <!-- Header -->
+    <div style="
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.05);
+      flex-shrink: 0;
+    ">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Venecia</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre transporte, hoteles, visas…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()"
+        style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;"
+        onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="skylio-chat-messages" style="
+      flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,158,11,0.2) transparent;
+    ">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">¡Ciao! Soy tu guía IA para Venecia. Prueba con:<br><br>
+            <strong style="color:#fbbf24;">gondola</strong> · <strong style="color:#fbbf24;">san marco</strong> · <strong style="color:#fbbf24;">transporte</strong><br>
+            o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…"
+        style="
+          flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+          border-radius:12px; padding:9px 13px; color:#e5e7eb; font-size:13px; outline:none;
+        "
+        onkeydown="if(event.key==='Enter')window.SkylioChat.send()"
+        onfocus="this.style.borderColor='rgba(245,158,11,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.1)'"
+      />
+      <button onclick="window.SkylioChat.send()" style="
+        background:rgba(245,158,11,0.9); border:none; color:#000; font-weight:700;
+        padding:9px 15px; border-radius:12px; cursor:pointer; font-size:14px; transition:background 0.15s;
+      "
+      onmouseover="this.style.background='#f59e0b'"
+      onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: CityBridge -->
+  <script>window.SKYLIO_CITY_DATA_URL = '../venecia_full.json';</script>
+  <script src="../../../js/logic/city-bridge.js"></script>
+
+  <script>
+    // SkylioChat — widget flotante conectado a CityBridge
+    window.SkylioChat = {
+      _open: false,
+
+      toggle() {
+        const panel = document.getElementById('skylio-chat-panel');
+        this._open = !this._open;
+        panel.style.display = this._open ? 'flex' : 'none';
+        if (this._open) {
+          setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+        }
+      },
+
+      send() {
+        const input = document.getElementById('skylio-chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+
+        const messages = document.getElementById('skylio-chat-messages');
+
+        // Burbuja del usuario
+        const userBubble = document.createElement('div');
+        userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+        const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        userBubble.innerHTML = `
+          <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;">
+            <p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">${safeText}</p>
+          </div>`;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Respuesta desde CityBridge o fallback
+        let response = window.CityBridge ? window.CityBridge.handleChatQuery(text) : null;
+        if (!response) response = 'No tengo información sobre eso. Prueba con **góndola**, **san marco**, **transporte**, **visa** o **clima**.';
+
+        // Renderizar respuesta con markdown mínimo (**bold** y \n)
+        const safeResponse = response
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>')
+          .replace(/\n/g,'<br>');
+
+        const aiBubble = document.createElement('div');
+        aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+        aiBubble.innerHTML = `
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+            <p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">${safeResponse}</p>
+          </div>`;
+
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+      }
+    };
+  </script>
+
 </body>
 </html>

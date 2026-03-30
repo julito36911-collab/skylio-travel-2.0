@@ -100,7 +100,7 @@
       <div class="lg:col-span-8 space-y-12" id="columna-izquierda">
 
         <!-- SECCIÓN: MAPA DE ZONAS -->
-        <section>
+        <section id="sec-zonas">
           <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -167,14 +167,14 @@
         </section>
 
         <!-- SECCIÓN: LUGARES IMPERDIBLES (CAPA 4) -->
-        <section>
+        <section id="sec-lugares">
           <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             <!-- 1. The British Museum -->
             <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="/images/destinos/londres/museum.jpg" alt="British Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <img src="/images/londres/british_museum.jpg" alt="British Museum" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">The British Museum
                 </h3>
@@ -193,7 +193,7 @@
             <!-- 2. London Eye -->
             <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="/images/destinos/londres/londoneye.jpg" alt="London Eye"
+              <img src="/images/londres/londoneye.jpg" alt="London Eye"
                 class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">London Eye</h3>
@@ -212,7 +212,7 @@
             <!-- 3. Tower of London -->
             <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="/images/destinos/londres/tower.jpg" alt="Tower of London" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <img src="/images/londres/tower.jpg" alt="Tower of London" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tower of London
                 </h3>
@@ -231,7 +231,7 @@
             <!-- 4. Elizabeth Tower (Big Ben) -->
             <a href="https://www.klook.com/search/result/?query=london&needQueryIdentification=true&spm=Home.SearchSuggest_LIST&clickId=3d19011636" target="_blank" rel="noopener"
               class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
-              <img src="/images/destinos/londres/Elizabeth%20Tower.jpg" alt="Elizabeth Tower (Big Ben)" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <img src="/images/londres/Elizabeth%20Tower.jpg" alt="Elizabeth Tower (Big Ben)" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Elizabeth Tower (Big Ben)</h3>
                 <p class="text-sm text-amber-500 font-semibold mt-1">Gratis exterior / Tour £30</p>
@@ -249,7 +249,7 @@
         </section>
 
         <!-- SECCIÓN: ITINERARIOS PASO A PASO -->
-        <section>
+        <section id="sec-itinerarios">
           <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Londres sin estrés</h2>
 
           <!-- ITINERARIO 1: LONDRES EN 1 DÍA -->
@@ -315,25 +315,25 @@
         </section>
 
         <!-- SECCIÓN: HOTELES (CAPA 6) -->
-        <section>
+        <section id="sec-hoteles">
           <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
           
           <!-- LUJO -->
           <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">The Savoy</h4>
               <p class="text-xs text-gray-400 mb-4">Covent Garden</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">Shangri-La</h4>
               <p class="text-xs text-gray-400 mb-4">The Shard</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="PARKING" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🚗 PARKING</span>
               <h4 class="text-base font-bold text-white">The Petersham</h4>
               <p class="text-xs text-gray-400 mb-4">Richmond</p>
@@ -344,19 +344,19 @@
           <!-- MEDIO -->
           <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">CitizenM</h4>
               <p class="text-xs text-gray-400 mb-4">Tower Hill</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">Premier Inn</h4>
               <p class="text-xs text-gray-400 mb-4">Leicester Sq</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="PARKING" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🚗 PARKING</span>
               <h4 class="text-base font-bold text-white">Novotel</h4>
               <p class="text-xs text-gray-400 mb-4">Wembley</p>
@@ -367,19 +367,19 @@
           <!-- ECONÓMICO -->
           <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">SoHostel</h4>
               <p class="text-xs text-gray-400 mb-4">Soho</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="CENTRO" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
               <h4 class="text-base font-bold text-white">Point A</h4>
               <p class="text-xs text-gray-400 mb-4">Kings Cross</p>
               <a href="https://www.hotels.com/Hotel-Search?destination=London%2C%20England%2C%20United%20Kingdom&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697&regionId=2114" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+            <div data-hotel-label="PARKING" class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
               <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🚗 PARKING</span>
               <h4 class="text-base font-bold text-white">Holiday Inn Express</h4>
               <p class="text-xs text-gray-400 mb-4">Ealing</p>
@@ -410,7 +410,7 @@
         </section>
 
         <!-- SECCIÓN: AEROPUERTOS (LOGÍSTICA) -->
-        <section>
+        <section id="sec-aeropuertos">
           <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             
@@ -503,7 +503,7 @@
       <!-- COLUMNA DERECHA (Sidebar Sticky) -->
       <aside class="lg:col-span-4 sticky top-8 self-start space-y-8" id="columna-derecha">
         <!-- WIDGET DE VISITAS Y ETA -->
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+        <div id="sec-visa" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
           <h3 class="text-xl font-bold text-white flex items-center gap-2">
             <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
@@ -521,7 +521,7 @@
         </div>
 
         <!-- WIDGET DE PRESUPUESTO DIARIO -->
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+        <div id="sec-presupuesto" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
           <h3 class="text-xl font-bold text-white flex items-center gap-2">
             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
@@ -547,7 +547,7 @@
         </div>
 
         <!-- WIDGET CLIMA (Mapa de Calor) -->
-        <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+        <div id="sec-clima" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
           <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
           <table class="w-full text-sm text-center border-separate border-spacing-y-1">
             <thead>
@@ -719,6 +719,167 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadLondonVideos);
+  </script>
+
+  <!-- =============================================
+       BOTÓN FLOTANTE: ASISTENTE IA
+  ============================================== -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()"
+    style="
+      position: fixed; bottom: 24px; right: 32px; z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(10,15,22,0.9);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #fbbf24; font-weight: 700; font-size: 14px;
+      padding: 12px 20px; border-radius: 999px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5);
+      cursor: pointer; transition: all 0.2s;
+    "
+    onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'"
+    onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">
+    ✨ Asistente IA
+  </button>
+
+  <!-- =============================================
+       WIDGET FLOTANTE: CHAT IA (NO BLOQUEANTE)
+  ============================================== -->
+  <div id="skylio-chat-panel" style="
+    display: none;
+    position: fixed; bottom: 84px; right: 32px; z-index: 9998;
+    width: 360px; height: 500px;
+    background: rgba(10,15,22,0.97);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 24px;
+    display: none; flex-direction: column;
+    box-shadow: 0 0 60px rgba(245,158,11,0.12), 0 20px 60px rgba(0,0,0,0.7);
+    overflow: hidden;
+  ">
+    <!-- Header -->
+    <div style="
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.05);
+      flex-shrink: 0;
+    ">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Londres</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre transporte, hoteles, visas…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()"
+        style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;"
+        onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="skylio-chat-messages" style="
+      flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,158,11,0.2) transparent;
+    ">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">¡Hola! Soy tu guía IA para Londres. Prueba con:<br><br>
+            <strong style="color:#fbbf24;">parking</strong> · <strong style="color:#fbbf24;">centro</strong> · <strong style="color:#fbbf24;">lujo</strong><br>
+            o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…"
+        style="
+          flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+          border-radius:12px; padding:9px 13px; color:#e5e7eb; font-size:13px; outline:none;
+        "
+        onkeydown="if(event.key==='Enter')window.SkylioChat.send()"
+        onfocus="this.style.borderColor='rgba(245,158,11,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.1)'"
+      />
+      <button onclick="window.SkylioChat.send()" style="
+        background:rgba(245,158,11,0.9); border:none; color:#000; font-weight:700;
+        padding:9px 15px; border-radius:12px; cursor:pointer; font-size:14px; transition:background 0.15s;
+      "
+      onmouseover="this.style.background='#f59e0b'"
+      onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: COMPONENTES SKYLIO -->
+  <script src="../../../js/components/DestinationGrid.js"></script>
+  <script src="../../../js/logic/london-bridge.js"></script>
+  <script src="../../../js/logic/multimedia-engine.js"></script>
+
+  <script>
+    // SkylioChat — widget flotante no-bloqueante conectado a LondonBridge
+    window.SkylioChat = {
+      _open: false,
+
+      toggle() {
+        const panel = document.getElementById('skylio-chat-panel');
+        this._open = !this._open;
+        panel.style.display = this._open ? 'flex' : 'none';
+        if (this._open) {
+          setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+        }
+      },
+
+      send() {
+        const input = document.getElementById('skylio-chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+
+        const messages = document.getElementById('skylio-chat-messages');
+
+        // Burbuja del usuario
+        const userBubble = document.createElement('div');
+        userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+        const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        userBubble.innerHTML = `
+          <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;">
+            <p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">${safeText}</p>
+          </div>`;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Respuesta desde LondonBridge o fallback
+        let response = window.LondonBridge ? window.LondonBridge.handleChatQuery(text) : null;
+        if (!response) response = this._fallback(text);
+
+        // Renderizar respuesta con markdown mínimo (**bold** y \n)
+        const safeResponse = response
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>')
+          .replace(/\n/g,'<br>');
+
+        const aiBubble = document.createElement('div');
+        aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+        aiBubble.innerHTML = `
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+            <p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">${safeResponse}</p>
+          </div>`;
+
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+      },
+
+      _fallback(text) {
+        const t = text.toLowerCase();
+        if (t.includes('visa') || t.includes('pasaporte')) return 'Los ciudadanos de muchos países de América Latina pueden entrar al Reino Unido sin visa por hasta 6 meses. Verifica siempre en el sitio oficial del gobierno UK según tu nacionalidad.';
+        if (t.includes('metro') || t.includes('tube') || t.includes('transporte')) return '🚇 El metro de Londres (The Tube) tiene 11 líneas. Lo más recomendable es obtener una tarjeta **Oyster** o usar contactless. Evita la hora punta (8–9h y 17–19h).';
+        if (t.includes('hotel') || t.includes('dormir') || t.includes('alojamiento')) return '🏨 Desplázate hacia abajo para ver nuestra selección. Escribe **parking**, **centro** o **lujo** para filtrar por categoría.';
+        if (t.includes('clima') || t.includes('tiempo') || t.includes('temperatura')) return '🌧️ Londres es templado y lluvioso todo el año. La mejor época es de mayo a septiembre (15–22°C). ¡Lleva siempre un paraguas!';
+        if (t.includes('comida') || t.includes('comer') || t.includes('restaurante')) return '🍽️ Soho y Covent Garden son los mejores barrios para comer. No te pierdas Borough Market para street food. El full English breakfast es un must.';
+        return '¿Sobre qué quieres saber más? Prueba con **parking**, **centro**, **lujo**, **transporte**, **visa** o **clima**.';
+      }
+    };
   </script>
 
 </body>

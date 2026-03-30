@@ -1,0 +1,214 @@
+{
+  "destination": "Dubai",
+  "id": "dubai",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Armani Hotel Dubai",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.1972, "lng": 55.2744 },
+      "labels": ["DOWNTOWN", "BURJ KHALIFA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Atlantis The Palm",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.1304, "lng": 55.1171 },
+      "labels": ["PALM JUMEIRAH"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Jumeirah Beach Hotel",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 25.1412, "lng": 55.1853 },
+      "labels": ["JUMEIRAH BEACH"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Rove Downtown Dubai",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.1885, "lng": 55.2712 },
+      "labels": ["DOWNTOWN"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Wyndham Dubai Marina",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.0780, "lng": 55.1340 },
+      "labels": ["MARINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hyatt Place Dubai Baniyas",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 25.2697, "lng": 55.3095 },
+      "labels": ["DEIRA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Ibis Dubai Deira City",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 25.2650, "lng": 55.3120 },
+      "labels": ["DEIRA", "METRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Premier Inn Dubai Al Jaddaf",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 25.2150, "lng": 55.3210 },
+      "labels": ["DOWNTOWN", "METRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Rove at the Park",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 25.0430, "lng": 55.1580 },
+      "labels": ["MARINA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Dubai%2C%20UAE&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Burj Khalifa (At the Top)",
+      "description": "828 metros de altura, el edificio más alto del mundo. Mirador en pisos 124 y 148.",
+      "price": "Desde €30",
+      "klook_url": "https://www.klook.com/search/result/?query=burj+khalifa+dubai+tickets&needQueryIdentification=true"
+    },
+    {
+      "name": "Safari en el Desierto",
+      "description": "Dune bashing en 4x4, paseo en camello, sandboarding y cena beduina bajo las estrellas.",
+      "price": "Desde €45-€80",
+      "klook_url": "https://www.klook.com/search/result/?query=desert+safari+dubai&needQueryIdentification=true"
+    },
+    {
+      "name": "Palm Jumeirah & Atlantis",
+      "description": "La isla artificial más famosa del mundo. Monorraíl, Aquaventure y vistas al skyline.",
+      "price": "Monorraíl €5 / Aquaventure desde €65",
+      "klook_url": "https://www.klook.com/search/result/?query=palm+jumeirah+dubai+monorail&needQueryIdentification=true"
+    },
+    {
+      "name": "Souk del Oro y Souks de Deira",
+      "description": "El mercado de oro más grande del mundo con más de 380 joyerías. Souk de las Especias al lado.",
+      "price": "Entrada gratuita",
+      "klook_url": "https://www.klook.com/search/result/?query=dubai+souk+gold+spice+tour&needQueryIdentification=true"
+    }
+  ],
+  "itineraries": {
+    "day_1": [
+      { "time": "10:00", "activity": "Dubai Mall (el más grande del mundo con acuario incluido)." },
+      { "time": "17:00", "activity": "Burj Khalifa al atardecer — piso 124 o 148 para ver la ciudad iluminarse." },
+      { "time": "18:00", "activity": "Espectáculo de la Fuente de Dubái (cada 30 min). Cena en Downtown." }
+    ],
+    "day_2": [
+      { "time": "15:00", "activity": "Safari en el Desierto: recogida en hotel. Dune bashing, sandboarding." },
+      { "time": "18:00", "activity": "Campamento beduino: camello, henna, shisha y cena árabe bajo las estrellas." }
+    ],
+    "day_3": [
+      { "time": "09:00", "activity": "Deira: Souk del Oro, Souk de las Especias, cruce en abra por el Creek." },
+      { "time": "12:00", "activity": "Barrio Al Fahidi (el más antiguo de Dubái) y Museo de Dubái." },
+      { "time": "15:00", "activity": "Palm Jumeirah: monorraíl hasta la punta, vistas al skyline. Cena en The Pointe." }
+    ],
+    "day_4": [
+      { "time": "09:00", "activity": "Dubai Marina: paseo por The Walk, playa de JBR, kayak o paddle surf." },
+      { "time": "14:00", "activity": "Compras en Dubai Mall o Mall of the Emirates (pista de esquí interior)." }
+    ]
+  },
+  "intents": [
+    {
+      "id": "burj_khalifa",
+      "triggers": ["burj khalifa", "burj", "khalifa", "edificio mas alto", "edificio más alto", "at the top", "mirador", "rascacielos", "828"],
+      "scrollTo": "sec-lugares",
+      "response": "🏙️ **Burj Khalifa — El edificio más alto del mundo:**\n\n📏 **828 metros** de altura con vistas que alcanzan hasta 95 km.\n🎟️ **At The Top (piso 124):** Desde **€30**.\n🌟 **SKY (piso 148):** La experiencia premium.\n\n💡 **Pro tips:**\n• Reserva online con antelación — las entradas al **atardecer se agotan días antes**.\n• Al bajar, quédate para el espectáculo de la **Fuente de Dubái** a las 18:00h (gratis).\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "desert_safari",
+      "triggers": ["desierto", "safari", "desert", "dune", "dunas", "camello", "beduino", "sandboarding", "hatta"],
+      "scrollTo": "sec-lugares",
+      "response": "🏜️ **Safari en el Desierto — La experiencia más icónica de Dubái:**\n\n🚙 **Dune bashing** en 4x4 por las dunas rojas del desierto de Hatta.\n🏄 **Sandboarding** y fotos espectaculares.\n🐪 **Campamento beduino:** paseo en camello, tatuaje de henna, shisha.\n🍽️ **Cena árabe** con espectáculo de danza del vientre bajo las estrellas.\n\n💰 **Precio:** Tour desde **€45-€80**. Recogida en hotel a las 15:00h.\n⏱️ A solo **45 minutos** del centro.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "palm_jumeirah",
+      "triggers": ["palm", "palmera", "jumeirah", "atlantis", "aquaventure", "isla artificial", "monorraíl", "monorrail"],
+      "scrollTo": "sec-lugares",
+      "response": "🌴 **Palm Jumeirah — La isla artificial con forma de palmera:**\n\nUna de las maravillas de ingeniería del siglo XXI.\n\n🏨 **Atlantis The Palm** con su parque acuático **Aquaventure** (desde €65).\n🚝 **Monorraíl** (€5) da la vuelta a la palmera con vistas únicas al skyline.\n👑 Hoteles ultra-lujosos: Atlantis, One&Only, y más.\n\n💡 Aunque no te alojes aquí, **visitar la Palm es obligatorio**. Las vistas al skyline desde la punta son espectaculares.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "gold_souk",
+      "triggers": ["souk", "zoco", "oro", "gold", "especias", "spice", "mercado", "creek", "abra", "deira"],
+      "scrollTo": "sec-lugares",
+      "response": "🏺 **Souk del Oro y Souks de Deira:**\n\n💍 El **mercado de oro más grande del mundo** con más de 380 joyerías.\n🌶️ Al lado, el **Souk de las Especias** con azafrán, canela y cardamomo.\n⛵ Cruza el **Creek** en **abra** (barca tradicional) por solo **1 dírham**.\n\n🕌 El Dubái antiguo y auténtico. Imprescindible para entender la ciudad más allá del lujo.\n\n💡 Contrasta fuertemente con el Dubái moderno — es como viajar a otro mundo.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "dubai_mall",
+      "triggers": ["dubai mall", "mall", "centro comercial", "compras", "shopping", "acuario", "fuente", "fountain", "ski dubai", "esqui", "esquí"],
+      "scrollTo": "sec-lugares",
+      "response": "🛍️ **Dubai Mall — El mayor centro comercial del mundo:**\n\n🐠 **Acuario** incluido dentro del mall.\n⛲ **Fuente de Dubái** frente al Burj Khalifa — espectáculos cada 30 min desde las 18:00h (gratis).\n\n🎿 **Ski Dubai** (Mall of the Emirates): pista de esquí real de 22.500 m² a -1°C en medio del desierto. Puedes esquiar, hacer snowboard o jugar con pingüinos reales.\n\n💡 Reserva un día entero para el Dubai Mall — tiene más de 1.200 tiendas.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["transporte", "metro", "taxi", "careem", "uber", "moverme", "mover", "nol", "bus", "autobús", "tranvía", "moverse"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por Dubái:**\n\n🚝 **Metro Línea Roja:** Conecta aeropuerto, Downtown, Marina y toda la ciudad. Precio: **€1.50-€2.50**. Funciona de 5:30 AM a 1 AM.\n\n💳 **Nol Card** (€2.50): tarjeta recargable válida para metro, bus, tranvía y abra. Cómprala en cualquier estación.\n\n🚕 **Careem** (el Uber local) suele ser **20-30% más barato** que los taxis. Uber también opera.\n\n💡 El Metro de Dubái es el más moderno del mundo — completamente automatizado y con aire acondicionado a 20°C.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "transport_airport",
+      "triggers": ["aeropuerto", "dxb", "dwc", "al maktoum", "llegar", "aterrizar", "vuelo", "avion", "avión"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde el Aeropuerto DXB (principal):**\n\n🚝 **Metro Línea Roja:** La opción más barata y rápida. Terminal 1 y 3 directo a Downtown y Marina. **€1.50-€2.50**.\n🚕 **Taxi oficial:** Al Downtown **€8-€12** (20-30 min). A Marina **€15-€20** (40 min).\n📱 **Careem/Uber:** 20-30% más barato que taxi. Descarga la app antes de llegar.\n\n⚠️ **Aeropuerto DWC (Al Maktoum):** Está a 45-60 min del centro, solo taxi (**€25-€35**). Verifica en cuál aterriza tu vuelo.\n\n⬇️ He hecho scroll a la sección de aeropuerto."
+    },
+    {
+      "id": "visa_requirements",
+      "triggers": ["visa", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "emiratos"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a Dubái (EAU):**\n\n🇪🇸 España y la mayoría de países latinoamericanos: **sin visa por 30 días**.\n📄 Solo necesitas pasaporte válido con **mínimo 6 meses de vigencia**.\n✅ El sello de entrada se otorga **directamente al llegar**.\n⏱️ Ampliable a **60 días** en el aeropuerto.\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "que hacer", "qué hacer", "plan", "ruta", "dias", "días", "visitar", "recorrido", "express", "semana"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🎒 **Itinerario Dubái Express (4 días):**\n\n**Día 1:** Dubai Mall + Burj Khalifa al atardecer + Fuente de Dubái.\n**Día 2:** Safari en el Desierto (recogida 15:00h). Dune bashing + cena beduina.\n**Día 3:** Souks de Deira + Al Fahidi + Palm Jumeirah en monorraíl.\n**Día 4:** Dubai Marina + playa JBR + compras.\n\n🕌 **Con 7 días:** Añade Abu Dhabi (Mezquita Sheikh Zayed), helicóptero sobre Palm, cena en Burj Al Arab y Aquaventure.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "marina", "downtown", "deira", "old dubai"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en Dubái:**\n\n🏙️ **Downtown Dubai** — Burj Khalifa, Dubai Mall, Fuente. La zona más icónica.\n🏖️ **Dubai Marina & JBR** — Cosmopolita, playa, rooftops, vida nocturna. Preferida por expatriados.\n🏺 **Deira & Old Dubai** — Souks tradicionales, Creek, cultura árabe auténtica.\n🌴 **Palm Jumeirah** — Isla artificial, ultra-lujo, Atlantis.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "calor", "frio", "frío", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "humedad"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Dubái:**\n\n☀️ **Temporada perfecta: Nov-Mar** — Temperaturas de 20-28°C, perfectas para estar al aire libre.\n🔥 **Verano (Jun-Sep):** Hasta **42°C** con humedad extrema. Casi imposible estar fuera del aire acondicionado.\n🌧️ Lluvia casi inexistente todo el año.\n\n⚠️ De junio a septiembre el calor es tan extremo que la vida se traslada a interiores con AC.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "dirham", "dírham", "euros", "eur", "aed"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Dubái:**\n\n🏨 Hotel (gama media): **€80-€180**\n🍽️ Comida (restaurante medio): **€20-€50**\n🚇 Metro / Careem: **€5-€15**\n🎭 Actividades / entradas: **€30-€80**\n\n📊 **Total aprox: €180/día** (viajero medio)\n\n💡 Ahorros clave:\n• Come en los **food courts** de los malls — opciones buenas desde €5.\n• Usa el **metro** en lugar de taxi para ahorrar bastante.\n• Las **playas públicas** (JBR, Kite Beach) son gratuitas.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "shawarma", "gastronomía", "gastronomia", "cenar", "desayunar", "brunch", "halal", "arabe", "árabe"],
+      "scrollTo": null,
+      "response": "🍽️ **Comer en Dubái:**\n\n🥙 **Shawarma:** El plato callejero rey. Hay shawarmerías en cada esquina desde **€2-€3**.\n🍖 **Al Machboos:** Arroz con carne especiada, el plato nacional emiratí.\n🧆 **Hummus, falafel, manakish:** Comida árabe auténtica y económica en Deira y Karama.\n🥂 **Brunch de viernes:** Tradición en Dubái — muchos hoteles ofrecen brunch con bebidas incluidas a precio fijo.\n\n💡 Los **food courts** de los malls tienen opciones internacionales excelentes desde €5.\n\n⚠️ Durante el **Ramadán** no se come ni bebe en público durante el día."
+    }
+  ]
+}

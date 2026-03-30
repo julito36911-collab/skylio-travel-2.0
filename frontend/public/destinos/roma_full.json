@@ -1,0 +1,222 @@
+{
+  "destination": "Roma",
+  "id": "roma",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Hotel de Russie",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.9066, "lng": 12.4736 },
+      "labels": ["CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Hassler Roma",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.9059, "lng": 12.4829 },
+      "labels": ["CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Castello della Castelluccia",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 41.9244, "lng": 12.4337 },
+      "labels": ["VATICANO", "PARKING"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hotel Santa Maria",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.8895, "lng": 12.4663 },
+      "labels": ["TRASTEVERE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Nerva Boutique Hotel",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.8942, "lng": 12.4906 },
+      "labels": ["MONTI", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "iQ Hotel Roma",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 41.9001, "lng": 12.4977 },
+      "labels": ["METRO", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "The Yellow Hostel",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.9002, "lng": 12.4991 },
+      "labels": ["CENTRO", "TERMINI"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hotel San Francesco",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.8894, "lng": 12.4650 },
+      "labels": ["TRASTEVERE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hotel Artorius",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 41.9003, "lng": 12.4989 },
+      "labels": ["TERMINI", "PARKING"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Coliseo Romano",
+      "description": "El anfiteatro más grande del mundo con 2.000 años de historia.",
+      "price": "Desde €18",
+      "klook_url": "https://www.klook.com/search/result/?query=Roma+Coliseo+entradas&needQueryIdentification=true"
+    },
+    {
+      "name": "Museos Vaticanos y Capilla Sixtina",
+      "description": "La mayor colección de arte del mundo, con el techo pintado por Miguel Ángel.",
+      "price": "Desde €20",
+      "klook_url": "https://www.klook.com/search/result/?query=Roma+Vaticano+Museos+Capilla+Sixtina&needQueryIdentification=true"
+    },
+    {
+      "name": "Fontana di Trevi",
+      "description": "La fuente barroca más famosa del mundo. Lanza una moneda para volver.",
+      "price": "Gratis (€1 reserva nocturna)",
+      "klook_url": "https://www.klook.com/search/result/?query=Roma+Fontana+di+Trevi+tour&needQueryIdentification=true"
+    },
+    {
+      "name": "Foro Romano y Monte Palatino",
+      "description": "El corazón político del Imperio Romano. Incluido con la entrada al Coliseo.",
+      "price": "Incluido con Coliseo",
+      "klook_url": "https://www.klook.com/search/result/?query=Roma+Foro+Romano+Palatino&needQueryIdentification=true"
+    }
+  ],
+  "itineraries": {
+    "day_1": [
+      { "time": "08:00", "activity": "Coliseo Romano (reserva online). Evita las colas llegando a la apertura." },
+      { "time": "10:30", "activity": "Foro Romano y Monte Palatino (incluido en la entrada del Coliseo)." },
+      { "time": "13:00", "activity": "Almuerzo en el barrio Monti. Auténtico y sin trampa turística." },
+      { "time": "15:00", "activity": "Panteón, Piazza Navona y Fontana di Trevi." },
+      { "time": "20:00", "activity": "Cena y paseo nocturno en Trastevere." }
+    ],
+    "day_2": [
+      { "time": "08:30", "activity": "Museos Vaticanos y Capilla Sixtina (reserva obligatoria con antelación)." },
+      { "time": "12:30", "activity": "Basílica de San Pedro y subida a la cúpula (vistas de Roma)." },
+      { "time": "14:30", "activity": "Almuerzo en el barrio Prati." },
+      { "time": "16:00", "activity": "Castel Sant'Angelo y paseo por el Tíber." },
+      { "time": "19:30", "activity": "Atardecer desde el Pincio (Piazza del Popolo) — gratis y espectacular." }
+    ]
+  },
+  "intents": [
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "fiumicino", "ciampino", "llegar", "aterrizar", "vuelo", "tren aeropuerto", "leonardo express"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde Fiumicino (FCO):**\nToma el **Leonardo Express** — tren directo a Termini en **32 minutos** (~€14).\nAlternativa más barata: tren regional (€8, ~45 min, para en otras estaciones).\n\n**Desde Ciampino (CIA)** (low-cost):\nBus lanzadera Terravision o SIT hasta Termini (~45 min, €5-6).\nTaxi oficial tarifa fija: **€30** al centro.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["metro", "bus", "autobús", "transporte", "moverme", "mover", "atac", "billetes", "tarjeta", "ticket"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por Roma:**\n\nRoma tiene **2 líneas de metro** (A y B). Un billete cuesta **€1,50** (válido 100 minutos).\n\n🚶 El **centro histórico** es muy compacto — caminar es la mejor opción entre monumentos.\n\n🚌 Los autobuses cubren todo el centro. La app **Moovit** es indispensable.\n\n⚠️ Cuidado con carteristas en la línea A del metro (Termini-Vaticano).\n\n📱 Descarga **Google Maps** o **Moovit** para navegar el transporte público."
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "etias", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "schengen"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a Italia:**\n\nItalia es parte del **Espacio Schengen**.\n\n🇪🇺 **UE:** Entrada con DNI, sin visa.\n🌎 **Latinoamérica:** Muchos países no necesitan visa para estancias de hasta **90 días**.\n\n⚠️ **ETIAS (desde 2025):** Nueva autorización electrónica obligatoria similar al ESTA de EEUU. Coste: **€7**. Trámite en minutos online.\n\n⬇️ He hecho scroll al widget de visado con el enlace oficial."
+    },
+    {
+      "id": "itinerary_1day",
+      "triggers": ["un dia", "un día", "1 dia", "1 día", "express", "poco tiempo", "pocas horas", "solo tengo", "rápido"],
+      "scrollTo": "sec-itinerarios",
+      "response": "⏱️ **Roma Express (1 día perfecto):**\n\n🌅 **Mañana:** Coliseo → Foro Romano → Monte Palatino (misma entrada).\n🌆 **Tarde:** Monti (almuerzo) → Panteón → Piazza Navona → Fontana di Trevi.\n🌙 **Noche:** Cena en Trastevere + Aperol Spritz en sus callejuelas iluminadas.\n\n💡 **Clave:** Reserva el Coliseo online para saltarte la cola. Llega a las 9 AM.\n\n⬇️ He hecho scroll al itinerario detallado."
+    },
+    {
+      "id": "itinerary_2days",
+      "triggers": ["dos dias", "dos días", "2 dias", "2 días", "fin de semana", "finde", "weekend", "itinerario", "ruta", "que hacer", "qué hacer", "plan", "visitar"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🎒 **Fin de Semana Perfecto en Roma (2 días):**\n\n**Día 1 — La Roma Imperial:**\nColiseo → Foro Romano → Monti (almuerzo) → Panteón → Piazza Navona → Trevi → Trastevere (noche).\n\n**Día 2 — La Roma Papal:**\nMuseos Vaticanos → Capilla Sixtina → Basílica de San Pedro (cúpula) → Prati (almuerzo) → Castel Sant'Angelo → Atardecer en el Pincio.\n\n💡 **Reserva obligatoria:** Vaticano (con semanas de antelación) y Galería Borghese.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "trastevere", "monti", "prati", "centro historico", "centro histórico"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en Roma:**\n\n🏛️ **Centro Histórico** — Turismo clásico, muy caro para dormir. Trevi, Panteón, Navona.\n🍷 **Trastevere** — El más auténtico. Mejor para cenar y vivir como local.\n⛪ **Prati (Vaticano)** — Elegante, tranquilo, ideal para familias. Metro directo al Vaticano.\n🎨 **Monti** — Trendy, alternativo, precios justos. A pasos del Coliseo.\n\n⬇️ He hecho scroll al mapa de zonas completo."
+    },
+    {
+      "id": "atracciones",
+      "triggers": [
+        "coliseo", "vaticano", "capilla sixtina", "fontana di trevi", "trevi", "panteón", "panteon",
+        "piazza navona", "foro romano", "castel sant angelo", "galería borghese", "borghese",
+        "que ver", "qué ver", "lugares", "visitar", "monumentos", "atracciones", "imperdibles"
+      ],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Imperdibles de Roma:**\n\n🆓 **Gratis:** Fontana di Trevi, Piazza Navona, Panteón (€5 ahora), Trastevere.\n💶 **De pago:** Coliseo (~€18), Vaticano (~€20), Galería Borghese (~€15).\n\n💡 **Pro tips:**\n• **Coliseo:** Reserva en colosseumrome.it. Nunca en la calle.\n• **Galería Borghese:** Solo 2h por turno, reserva OBLIGATORIA con semanas de antelación.\n• **Vaticano:** Las colas sin reserva pueden ser de 2-3 horas. Reserva online.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "frio", "frío", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "primavera", "otoño"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Roma:**\n\n☀️ **Mejor época:** Abril-Junio y Septiembre-Octubre (18-26°C, menos turistas que en verano).\n🔥 **Verano (Jul-Ago):** Hasta 32°C. Muy caluroso y lleno de turistas. Muchos locales se van.\n❄️ **Invierno (Dic-Feb):** 5-13°C. Poca lluvia, mucho menos turista, precios más bajos.\n\n⚠️ **Agosto:** La ciudad se vacía de romanos pero se llena de turistas. Muchos negocios locales cierran.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "eur"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Roma:**\n\n🏨 Alojamiento (medio): **€120**\n🍽️ Comida (3 comidas): **€50**\n🚇 Transporte: **€8**\n🎭 Atracciones: **€35**\n\n📊 **Total aprox: €213/día** (viajero medio)\n\n💡 Ahorros clave:\n• Lleva botella reutilizable (hay 2.500 fuentes gratis llamadas 'nasoni').\n• Come en trattorias alejadas de los monumentos principales (mismo precio, mejor calidad).\n• Usa museos gratuitos (MAXXI, Museo Nazionale Romano).\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "trattoria", "pizza", "pasta", "gelato", "helado", "desayunar", "cenar", "gastronomía", "gastronomia", "amatriciana", "cacio e pepe"],
+      "scrollTo": null,
+      "response": "🍝 **Comer en Roma:**\n\n🍕 **Pizza:** Prueba la pizza 'al taglio' (por porciones) — más barata y auténtica que en restaurante.\n🍝 **Pasta:** Los platos romanos clásicos son: Cacio e Pepe, Amatriciana, Carbonara y Gricia.\n🍦 **Gelato:** Busca 'gelato artigianale'. Si tiene colores brillantes y está amontonado, es turístico y malo.\n☕ **Café:** Los italianos lo toman de pie en la barra. Pedir 'un espresso' sentado cuesta el doble.\n\n⚠️ Evita restaurantes con fotos en el menú y personas en la puerta llamándote — trampa turística."
+    },
+    {
+      "id": "hotels_parking",
+      "triggers": ["parking", "coche", "aparcar", "estacionamiento", "aparcamiento", "auto", "carro"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterParking",
+      "response": "🚗 He filtrado los hoteles con **parking disponible** en Roma:\n\n• **Castello della Castelluccia** (Lujo · $$$) — Vaticano/Prati\n• **Hotel Artorius** (Económico · $) — Termini\n\n⚠️ El centro de Roma tiene zona de **ZTL** (Zona de Tráfico Limitado). Si entras con coche sin permiso, multa garantizada. Los GPS no siempre la detectan. Mejor aparcar en los límites y usar metro o bus.\n\n⬇️ He hecho scroll y filtrado hoteles con parking."
+    },
+    {
+      "id": "hotels_center",
+      "triggers": ["centro", "central", "céntrico", "centrico", "cerca de todo"],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterCentro",
+      "response": "📍 **Hoteles céntricos en Roma:**\n\n⭐ **Hotel Hassler Roma** (Lujo · $$$) — Plaza de España\n⭐ **Hotel de Russie** (Lujo · $$$) — Piazza del Popolo\n🏨 **Nerva Boutique Hotel** (Medio · $$) — Monti/Coliseo\n🏨 **iQ Hotel Roma** (Medio · $$) — Termini\n🛌 **The Yellow Hostel** (Económico · $) — Termini\n\n⬇️ He hecho scroll y filtrado hoteles céntricos."
+    },
+    {
+      "id": "colosseum_tips",
+      "triggers": ["consejo coliseo", "tip coliseo", "entrada coliseo", "reservar coliseo", "cola coliseo", "fila coliseo"],
+      "scrollTo": "sec-lugares",
+      "response": "🏟️ **Todo sobre el Coliseo:**\n\n✅ **Reserva en:** colosseumrome.it (oficial). NUNCA en la calle — son estafas.\n🕘 **Mejor hora:** Abre a las 9 AM — llega antes para entrar de los primeros.\n🎟️ **Precio:** ~€18 (incluye Foro Romano + Monte Palatino).\n⏱️ **Tiempo recomendado:** 2-3 horas para los tres sitios.\n\n💡 **Tour con guía:** Compensa mucho en el Coliseo — sin contexto histórico, ves 'piedras viejas'. Con guía, lo ves todo de otra manera."
+    },
+    {
+      "id": "water",
+      "triggers": ["agua", "nasoni", "fuente", "sed", "botella", "gratuito", "gratis"],
+      "scrollTo": null,
+      "response": "💧 **El secreto mejor guardado de Roma: los NASONI**\n\nRoma tiene más de **2.500 fuentes de agua potable gratuita** llamadas 'nasoni' (naricitas) repartidas por toda la ciudad.\n\n✅ El agua es fresca, limpia y deliciosa — es agua potable de los mismos acueductos que usaban los romanos (modernizados).\n\n🪣 **Pro tip:** Lleva una botella reutilizable y nunca más pagues €3 por un agua embotellada turística."
+    }
+  ]
+}

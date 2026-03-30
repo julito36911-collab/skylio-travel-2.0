@@ -1,0 +1,131 @@
+{
+  "destination": "Roma",
+  "version": "2.0",
+  "intents": [
+    {
+      "id": "atracciones",
+      "triggers": [
+        "coliseo", "colosseo", "vaticano", "capilla sixtina", "sixtina",
+        "fontana di trevi", "trevi", "fontana", "foro romano", "foro",
+        "lugares", "lugares de interes", "atracciones", "atraccion",
+        "museos", "museo", "ver", "visitar", "que ver", "imperdible",
+        "panteon", "pantheon", "piazza navona", "navona",
+        "castel sant", "castel", "borghese", "san pedro", "basilica"
+      ],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ Roma tiene joyas invaluables. Te recomiendo empezar por el **Coliseo** (reserva online para evitar colas), visitar los **Museos Vaticanos y la Capilla Sixtina** (reserva obligatoria con semanas de antelación), y lanzar una moneda en la **Fontana di Trevi**.\n\n🆓 **Gratis:** Panteón (€5 voluntario), Piazza Navona, Villa Borghese park.\n💡 **Pro tip Galería Borghese:** solo 2h por turno, se agota semanas antes. Reserva ya.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "transporte_aeropuerto",
+      "triggers": [
+        "aeropuerto", "fiumicino", "ciampino", "llegar", "aterrizar", "vuelo",
+        "leonardo express", "tren aeropuerto", "como llegar", "desde el aeropuerto"
+      ],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde Fiumicino (FCO):** toma el **Leonardo Express** — tren directo a Termini en **32 minutos** (~€14). O tren regional más barato (€8, ~45 min).\n\n**Desde Ciampino (CIA):** bus lanzadera **Terravision o SIT Bus** hasta Termini (~45 min, €5-6). Taxi oficial: tarifa fija **€30** al centro.\n\n⚠️ **ZTL:** si alquilas coche, ojo con la Zona de Tráfico Limitado — las multas llegan semanas después. Mejor usar transporte público en el centro.\n\n⬇️ He hecho scroll a la sección de aeropuertos."
+    },
+    {
+      "id": "transporte_metro",
+      "triggers": [
+        "metro", "autobus", "bus", "atac", "transporte", "moverme", "moverte",
+        "billete", "tarjeta", "pagar", "linea a", "linea b", "termini"
+      ],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Metro de Roma:** 2 líneas (A y B). Billete único: **€1,50** (válido 100 min en metro+bus). Compra en máquinas o estancos (tabacchi).\n\n💡 Para el centro histórico (Fontana di Trevi, Panteón) el metro no llega — usa **autobús o camina**. Roma es sorprendentemente caminable.\n\n⚠️ Cuidado con carteristas en la línea A (especialmente en Termini y Spagna). Guarda el móvil y la cartera."
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": [
+        "visa", "schengen", "requisitos", "pasaporte", "entrar", "entrada",
+        "documentos", "permiso", "autorizacion", "necesito para entrar"
+      ],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Italia forma parte del Espacio Schengen.** Los ciudadanos de la UE entran con DNI o pasaporte.\n\nPara latinoamericanos: la mayoría no necesita visa Schengen para estancias de hasta 90 días (Argentina, Colombia, México, Brasil, Chile…), pero verifica siempre según tu pasaporte.\n\n💡 Italia no requiere el ETA británico — es diferente al caso de Londres/UK.\n\n⬇️ He hecho scroll al widget de Requisitos de Entrada."
+    },
+    {
+      "id": "zonas_barrios",
+      "triggers": [
+        "zona", "zonas", "barrio", "barrios", "donde dormir", "quedarse",
+        "trastevere", "centro historico", "prati", "monti", "esquilino",
+        "mejor zona", "que zona", "donde alojarse"
+      ],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de barrios de Roma:**\n\n🏛️ **Centro Histórico** — la zona más turística. Fontana di Trevi, Panteón, Piazza Navona. Caro pero insuperable en ubicación.\n🍷 **Trastevere** — bohemio y auténtico. Las mejores trattorias. Precios más razonables. Ideal para cenar.\n⛪ **Prati** — elegante, tranquilo, junto al Vaticano. Perfecto para familias.\n🎨 **Monti** — el barrio trendy. Arte, vintage, restaurantes de moda. Junto al Coliseo. Precio justo.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "itinerarios",
+      "triggers": [
+        "itinerario", "ruta", "plan", "que hacer", "un dia", "dos dias",
+        "1 dia", "2 dias", "fin de semana", "tres dias", "3 dias",
+        "como organizar", "primero", "segunda visita"
+      ],
+      "scrollTo": "sec-itinerarios",
+      "response": "🗺️ **Roma en 2 días — el plan perfecto:**\n\n**Día 1 — Roma Clásica:**\nColiseo (mañana, reserva previa) → Foro Romano → Campidoglio → Fontana di Trevi → Piazza Navona → cena en Trastevere.\n\n**Día 2 — El Vaticano:**\nMuseos Vaticanos + Capilla Sixtina (reserva obligatoria) → Cúpula de San Pedro → Castel Sant'Angelo → aperitivo en Prati.\n\n⏱️ **¿Solo 1 día?** Coliseo → Foro → Fontana di Trevi → Panteón → gelato.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "hoteles_parking",
+      "triggers": [
+        "parking", "coche", "aparcar", "estacionamiento", "aparcamiento",
+        "alquiler de coche", "conducir en roma", "auto"
+      ],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterParking",
+      "response": "🚗 He filtrado los hoteles con **parking disponible**:\n\n• **Castello della Castelluccia** (Lujo) — Prati/Vaticano\n• **Hotel Artorius** (Económico) — Termini\n\n⚠️ **Consejo importante:** Roma tiene la **ZTL** (Zona de Tráfico Limitado) que cubre casi todo el centro histórico. Si entras sin permiso, la multa automática llega semanas después a casa. Mejor aparcar en los límites y usar metro/bus."
+    },
+    {
+      "id": "hoteles_centro",
+      "triggers": [
+        "centro", "centrico", "cerca de todo", "bien ubicado", "bien situado"
+      ],
+      "scrollTo": "sec-hoteles",
+      "scrollAction": "filterCentro",
+      "response": "📍 He filtrado los hoteles **céntricos** de Roma:\n\n⭐ **Hotel de Russie** (Lujo) — Piazza del Popolo\n⭐ **Hotel Hassler** (Lujo) — Plaza de España\n🏨 **Nerva Boutique Hotel** (Medio) — junto al Coliseo\n🏨 **iQ Hotel Roma** (Medio) — Termini\n🛌 **The Yellow Hostel** (Económico) — Termini\n\n⬇️ He hecho scroll y filtrado los hoteles céntricos."
+    },
+    {
+      "id": "hoteles_lujo",
+      "triggers": [
+        "lujo", "luxury", "cinco estrellas", "5 estrellas", "hotel de lujo",
+        "exclusivo", "premium", "mejor hotel"
+      ],
+      "scrollTo": "sec-hoteles",
+      "response": "⭐ **Hoteles de lujo en Roma:**\n\n🏰 **Hotel de Russie** (Rocco Forte) — Piazza del Popolo. Jardín secreto y spa icónico.\n🏛️ **Hotel Hassler Roma** — Plaza de España. Las mejores vistas de los tejados de Roma desde la terraza.\n🏰 **Castello della Castelluccia** — Con parking, ideal si llegas en coche.\n\n💡 Reserva con meses de antelación en temporada alta (abril–octubre)."
+    },
+    {
+      "id": "clima",
+      "triggers": [
+        "clima", "tiempo", "temperatura", "cuando ir", "mejor epoca", "mejor mes",
+        "lluvia", "calor", "frio", "verano", "invierno", "primavera", "otono"
+      ],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Roma:**\n\n☀️ **Mejor época:** **abril–junio** y **septiembre–octubre** — temperaturas perfectas (18–25°C), menos aglomeraciones que en verano.\n🔥 **Julio–agosto:** muy caluroso (32–36°C) y lleno de turistas. Muchos romanos se van de vacaciones.\n❄️ **Invierno (dic–feb):** fresco (5–12°C) pero las colas son mucho más cortas y los precios bajan.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "presupuesto",
+      "triggers": [
+        "presupuesto", "precio", "precios", "cuanto cuesta", "caro",
+        "barato", "euros", "dinero", "cuanto dinero", "coste", "gasto"
+      ],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Roma:**\n\n🏨 Alojamiento (medio): **€100–150**\n🍽️ Comida (3 comidas): **€40–60** (trattoria local ~€15-20 por persona)\n🚇 Transporte: **€4–8** (metro + bus)\n🎭 Atracciones: **€30–50** (Coliseo + Vaticano)\n\n📊 **Total aprox: €180–270/día**\n\n💡 Ahorra mucho comiendo en **mercados** (Campo de' Fiori, Testaccio) y aprovechando los **museos gratuitos** los primeros domingos de mes.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "comida",
+      "triggers": [
+        "comer", "comida", "restaurante", "trattoría", "trattoria", "carbonara",
+        "pizza", "pasta", "gelato", "helado", "cena", "desayuno", "bar",
+        "mercado", "campo de fiori", "testaccio", "gastronomia"
+      ],
+      "scrollTo": null,
+      "response": "🍝 **Comer en Roma:**\n\n🍕 **Pizza:** busca sitios con horno de leña. La pizza al taglio (por porciones) es el almuerzo de los romanos.\n🍝 **Pasta imprescindible:** Carbonara, Cacio e Pepe, Amatriciana — los 4 platos romanos. Pide siempre en trattorias sin menú en inglés en la puerta.\n🍦 **Gelato:** busca el cartel 'artigianale' (artesanal). Si tiene colores fluorescentes exagerados, es industrial.\n\n📍 **Zonas para comer bien sin trampa:** Trastevere, Testaccio, Pigneto.\n⚠️ Evita restaurantes justo en Piazza Navona o junto al Coliseo — son caros y mediocres."
+    },
+    {
+      "id": "museos_gratis",
+      "triggers": [
+        "gratis", "gratuito", "free", "museos gratis", "entrada gratis",
+        "primer domingo", "sin pagar", "capitolino", "villa borghese parque"
+      ],
+      "scrollTo": "sec-lugares",
+      "response": "🆓 **Roma gratis o casi gratis:**\n\n**Siempre gratis:**\n• Basílica de San Pedro (solo la iglesia, no la cúpula)\n• Panteón (donativo €5 sugerido)\n• Piazza Navona, Campo de' Fiori, Piazza di Spagna\n• Villa Borghese (el parque)\n• Todos los barrios: pasear por Trastevere, Monti…\n\n**Primer domingo del mes — GRATIS:**\n• Museos Capitolinos, Castel Sant'Angelo, Galleria Nazionale, y muchos más.\n\n💡 El primer domingo de mes las colas son enormes — llega muy temprano o evítalo."
+    }
+  ]
+}

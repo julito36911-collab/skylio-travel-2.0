@@ -18,121 +18,505 @@
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative">
 
   <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-6">
         <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
           Skylio Viajes
         </a>
-        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
+        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors">
+          <span class="text-white">Skylio</span> Destinos
+        </a>
       </div>
-      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
   <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540959733332-e946fbaae25e?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-pink-900/20 mix-blend-color pointer-events-none"></div>
     <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
     <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇯🇵 Futuro y Tradición</span>
       <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Tokio</h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Neones que nunca duermen, santuarios silenciosos y la mejor gastronomía del planeta.</p>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">La guía definitiva: Shibuya, templos milenarios, gastronomía única y el futuro hecho ciudad.</p>
     </div>
   </header>
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+
       <div class="lg:col-span-8 space-y-12">
-        <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Distritos de Contraste (Zonas)</h2>
+
+        <!-- ZONAS -->
+        <section id="sec-zonas" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-pink-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Shinjuku</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🏙️ Rascacielos</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🍺 Golden Gai</span>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌃 VIDA NOCTURNA</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🚉 ESTACIÓN CENTRAL</span>
               </div>
-              <p class="text-sm text-gray-400">El alma nocturna. Bares diminutos, neones gigantes y la estación de tren más transitada del mundo.</p>
+              <p class="text-sm text-gray-400 mt-3">El barrio más caótico y fascinante de Tokio. La estación de Shinjuku es la más transitada del mundo con 3.5 millones de pasajeros al día. Kabukicho es el distrito de ocio nocturno más grande de Asia, Golden Gai tiene 200 bares diminutos en 6 callejuelas, y el Parque Shinjuku Gyoen es perfecto para ver los cerezos en primavera.</p>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-cyan-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Shibuya & Harajuku</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🚶 CRUCE ICÓNICO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">👗 MODA</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Shibuya tiene el cruce peatonal más fotografiado del mundo — cada vez que cambia el semáforo, 3.000 personas cruzan simultáneamente desde todas las direcciones. Harajuku es el barrio de la moda alternativa y la cultura kawaii, con la calle Takeshita llena de jóvenes con disfraces extravagantes. Zona perfecta para alojarse.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
               <h3 class="text-xl font-bold text-white mb-2">Asakusa</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">⛩️ Templo Senso-ji</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🏮 Tradicional</span>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">⛩️ TRADICIÓN</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏮 OLD TOKYO</span>
               </div>
-              <p class="text-sm text-gray-400">El Tokio de ayer. Artesanías, templos históricos y la majestuosidad de la linterna roja gigante.</p>
+              <p class="text-sm text-gray-400 mt-3">El Tokio antiguo. El Templo Sensoji con su gran tori rojo es el templo más visitado del mundo con 30 millones de visitantes al año. La calle Nakamise es la más antigua del Japón con tiendas de souvenirs tradicionales. Los rickshaws y los kimonos de alquiler hacen de Asakusa el barrio más fotogénico de Tokio.</p>
             </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Akihabara & Ginza</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🎮 TECNOLOGÍA</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💎 LUJO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Akihabara es el paraíso de la electrónica, el anime y la cultura otaku — tiendas de 8 pisos con gadgets, figuras y videojuegos. Ginza es el Champs-Élysées tokiota, con las tiendas de lujo más elegantes de Asia, galerías de arte y los mejores restaurantes de la ciudad. Son opuestos perfectos a 15 minutos en metro.</p>
+            </div>
+
           </div>
         </section>
 
-        <section>
+        <!-- LUGARES IMPERDIBLES -->
+        <section id="sec-lugares" class="scroll-mt-20">
           <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=tokyo+skytree&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1540959733332-e946fbaae25e?w=800&q=80" class="h-48 w-full object-cover">
+
+            <a href="https://www.klook.com/search/result/?query=shibuya+crossing+tokyo+tour&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80" alt="Cruce Shibuya Tokio" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Cruce de Shibuya</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Gratuito — El cruce más famoso del mundo</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Cuando el semáforo cambia, hasta 3.000 personas cruzan desde todas las direcciones simultáneamente. De noche, las pantallas gigantes y los neones crean el escenario más futurista del planeta. Vívelo desde el café del Starbucks del piso 2 para la vista perfecta.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Tour por Shibuya
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.klook.com/search/result/?query=senso-ji+temple+asakusa+tokyo&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="Templo Senso-ji Asakusa Tokio" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Templo Senso-ji, Asakusa</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Entrada gratuita — El templo más visitado del mundo</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Fundado en el año 645 d.C., el Senso-ji es el templo más antiguo y visitado de Tokio. La Kaminarimon (Puerta del Trueno) con su gigantesca linterna roja es la imagen más icónica del Japón tradicional. Ve al amanecer para evitar multitudes.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Tour por Asakusa
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.klook.com/search/result/?query=mount+fuji+day+trip+tokyo&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1200&q=80" alt="Monte Fuji Tokio" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Monte Fuji (Excursión)</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour desde €60 — A 2h de Tokio en tren</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El volcán más sagrado de Japón y símbolo del país. En verano (julio-agosto) puedes subir a la cima en 5-6 horas. El resto del año, el lago Kawaguchiko ofrece las vistas más espectaculares del Fuji reflejado en el agua.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Excursión
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.klook.com/search/result/?query=tokyo+tower+skytree+observation&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=1200&q=80" alt="Tokyo Skytree Torre Tokio" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
                 <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Tokyo Skytree</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox 3000 JPY (€18)</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Entradas ↗</div>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €15 — La torre más alta de Japón</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">634 metros de altura con miradores en los pisos 350 y 450. En días claros se ve el Monte Fuji desde arriba. La base del Skytree tiene un centro comercial gigante, un acuario y decenas de restaurantes. Reserva online para evitar colas de 2 horas.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar Entradas
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=shibuya+sky&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1533235084705-04538ee5915d?w=800&q=80" class="h-48 w-full object-cover">
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Shibuya Sky (Cruce)</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox 2000 JPY (€12)</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Reservar ahora ↗</div>
-              </div>
-            </a>
+
           </div>
         </section>
 
-        <section class="mt-16">
-          <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-            <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            Tokio en Video
-          </h2>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"></div>
+        <!-- ITINERARIOS -->
+        <section id="sec-itinerarios" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Tokio sin estrés</h2>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Tokio Express (4 Días)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1 — Asakusa y el Tokio Tradicional</h4>
+                <p class="text-gray-400 text-sm mt-1">Empieza al amanecer en el Templo Senso-ji — sin turistas y con los monjes rezando es una experiencia única. Camina la calle Nakamise para comprar souvenirs. Después el Skytree para las mejores vistas de la ciudad. Tarde en el barrio de Ueno con sus museos y el zoo. Cena en un restaurante de ramen auténtico.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2 — Shibuya, Harajuku y Shinjuku</h4>
+                <p class="text-gray-400 text-sm mt-1">Mañana en el Santuario Meiji rodeado de bosque centenario. Después Harajuku — la calle Takeshita y el parque Yoyogi. Cruce de Shibuya al mediodía para la experiencia completa. Por la tarde Shinjuku: el jardín Gyoen y de noche el Golden Gai para tomar algo en uno de sus bares diminutos de 6 taburetes.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 3 — Monte Fuji (Excursión)</h4>
+                <p class="text-gray-400 text-sm mt-1">Tren desde la estación de Shinjuku hasta el lago Kawaguchiko (2h, €15). Las vistas del Monte Fuji reflejado en el lago son el símbolo del Japón eterno. Paseo en barca por el lago, visita a un onsen (baño termal) con vistas al volcán y regreso a Tokio por la tarde.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 4 — Akihabara y Ginza</h4>
+                <p class="text-gray-400 text-sm mt-1">Mañana en Akihabara explorando tiendas de 8 pisos con electrónica, anime y gaming. Después Ginza para ver la arquitectura y las tiendas de lujo. Tarde en el Palacio Imperial y los jardines. Última cena con sushi de alta calidad en Tsukiji (el nuevo mercado exterior de pescado más fresco de Japón).</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 Tokio + Japón Clásico (7-10 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Haz los 4 días de Tokio y añade:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 5-6</div>
+                <h4 class="text-white font-bold">Kioto — La Capital Imperial</h4>
+                <p class="text-gray-400 text-sm mt-1">Shinkansen desde Tokio en solo 2h15min (€100). Kioto tiene más de 1.600 templos budistas y 400 santuarios sintoístas. Fushimi Inari (miles de toriis rojos), el distrito Gion con geishas, el Templo Dorado Kinkakuji y el bambú de Arashiyama son imprescindibles.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 7-10</div>
+                <h4 class="text-white font-bold">Osaka y Nara</h4>
+                <p class="text-gray-400 text-sm mt-1">Osaka es la capital gastronómica de Japón — Dotonbori de noche con sus neones y el takoyaki es una experiencia única. Nara tiene ciervos sagrados sueltos por las calles que comen de tu mano. El JR Pass cubre todos los trenes de alta velocidad entre estas ciudades.</p>
+              </div>
+
+            </div>
+          </div>
+
         </section>
+
+        <!-- HOTELES -->
+        <section id="sec-hoteles" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-pink-900/50 text-pink-200 mb-3 self-start">🌃 SHINJUKU</span>
+              <h4 class="text-base font-bold text-white">Park Hyatt Tokyo</h4>
+              <p class="text-xs text-gray-400 mb-4">El de Lost in Translation, piso 41+</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏮 ASAKUSA</span>
+              <h4 class="text-base font-bold text-white">The Gate Hotel Asakusa</h4>
+              <p class="text-xs text-gray-400 mb-4">Vistas al Skytree y al templo</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🚶 SHIBUYA</span>
+              <h4 class="text-base font-bold text-white">Cerulean Tower Tokyu Hotel</h4>
+              <p class="text-xs text-gray-400 mb-4">Vistas al cruce, teatro Noh</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-pink-900/50 text-pink-200 mb-3 self-start">🌃 SHINJUKU</span>
+              <h4 class="text-base font-bold text-white">Hotel Gracery Shinjuku</h4>
+              <p class="text-xs text-gray-400 mb-4">Godzilla en la fachada, céntrico</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🚶 SHIBUYA</span>
+              <h4 class="text-base font-bold text-white">Shibuya Excel Hotel Tokyu</h4>
+              <p class="text-xs text-gray-400 mb-4">Sobre el cruce, vistas únicas</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏮 ASAKUSA</span>
+              <h4 class="text-base font-bold text-white">Dormy Inn Asakusa</h4>
+              <p class="text-xs text-gray-400 mb-4">Onsen en el hotel, céntrico</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-pink-900/50 text-pink-200 mb-3 self-start">🌃 SHINJUKU</span>
+              <h4 class="text-base font-bold text-white">Capsule Hotel Anshin Oyado</h4>
+              <p class="text-xs text-gray-400 mb-4">Cápsula japonesa auténtica</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🚶 SHIBUYA</span>
+              <h4 class="text-base font-bold text-white">Millennials Shibuya</h4>
+              <p class="text-xs text-gray-400 mb-4">Hostel con camas en cabinas</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🏮 ASAKUSA</span>
+              <h4 class="text-base font-bold text-white">Khaosan Tokyo Kabuki</h4>
+              <p class="text-xs text-gray-400 mb-4">Hostel en antigua casa japonesa</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Tokyo%2C%20Japan&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- YOUTUBE -->
+        <section class="mt-16">
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Explora Tokio en Video
+            </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
+          </div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <!-- AEROPUERTO -->
+        <section id="sec-aeropuertos" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Narita (NRT) → Centro en Narita Express</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">Narita Express (N'EX)</strong> conecta el aeropuerto con Shibuya, Shinjuku y Tokyo Station en <strong class="text-white">60-90 minutos por €25</strong>. El billete de ida y vuelta (€40) vale la pena. Sale cada 30 minutos de 7 AM a 10 PM.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Narita → Limousine Bus</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">Limousine Bus</strong> te lleva directamente a la puerta de los principales hoteles de Shinjuku, Shibuya y Ginza por <strong class="text-white">€25-€30</strong> en 60-90 minutos. La opción más cómoda con maletas grandes — el conductor carga el equipaje.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Haneda (HND) → Centro en Monorraíl</h3>
+              <p class="text-sm text-gray-400">El aeropuerto más cercano al centro. El <strong class="text-white">Tokyo Monorail</strong> llega a la estación de Hamamatsucho en <strong class="text-white">13 minutos por €4</strong>. Desde ahí metro a cualquier punto. El <strong class="text-white">Keikyu Line</strong> conecta con Shinagawa en 11 minutos.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuertos → Taxi</h3>
+              <p class="text-sm text-gray-400">Los taxis en Tokio son caros pero impecables. Desde Narita al centro: aprox <strong class="text-white">€180-€220</strong>. Desde Haneda: <strong class="text-white">€35-€50</strong>. Solo recomendable desde Haneda o en grupos de 4 personas. Los taxistas son honestos — no hay estafas.</p>
+            </div>
+
+          </div>
+
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: IC Card y Metro de Tokio</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">Compra una <strong class="text-white">Suica o Pasmo Card</strong> (tarjeta recargable, €5 depósito) nada más llegar — funciona en todo el metro, autobuses, trenes y hasta en máquinas de vending. El metro de Tokio cubre toda la ciudad con 13 líneas y 285 estaciones. Una sola tarjeta para todo Japón.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIRECTORIO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo (Más lugares por descubrir)</h2>
+          <ul class="divide-y divide-white/10">
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Santuario Meiji</h3>
+              <p class="text-sm text-gray-400 mt-1">Un bosque de 70.000 árboles en pleno Harajuku dedicado al Emperador Meiji. El silencio absoluto dentro del bosque contrasta con el caos urbano a metros de distancia. Los fines de semana es habitual ver bodas tradicionales sintoístas en el recinto.</p>
+              <a href="https://es.wikipedia.org/wiki/Santuario_Meiji" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Teamlab Planets / Borderless</h3>
+              <p class="text-sm text-gray-400 mt-1">Los museos de arte digital inmersivo más avanzados del mundo. Caminas descalzo por salas donde el arte digital te rodea completamente — flores digitales, océanos de luz y espejos infinitos. Reserva con semanas de antelación. Una experiencia que no existe en ningún otro lugar del planeta.</p>
+              <a href="https://es.wikipedia.org/wiki/TeamLab" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Mercado de Tsukiji (Exterior)</h3>
+              <p class="text-sm text-gray-400 mt-1">El antiguo mercado del pescado más grande del mundo. La parte exterior sigue siendo el mejor lugar del mundo para comer sushi a las 8 AM recién salido del mar. Atún, erizo, ostra y salmón fresquísimos a precios razonables en puestos diminutos.</p>
+              <a href="https://es.wikipedia.org/wiki/Mercado_de_Tsukiji" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Jardín Nacional Shinjuku Gyoen</h3>
+              <p class="text-sm text-gray-400 mt-1">El jardín más impresionante de Tokio con tres estilos distintos: japonés tradicional, francés formal e inglés paisajístico. En primavera durante el hanami (floración de cerezos) es el lugar más hermoso de todo Japón. Entrada solo €2.</p>
+              <a href="https://es.wikipedia.org/wiki/Shinjuku_Gyoen" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Akihabara Electric Town</h3>
+              <p class="text-sm text-gray-400 mt-1">La meca mundial de la electrónica, el anime y la cultura otaku. Tiendas de 8 pisos con gadgets imposibles, figuras de colección, videojuegos retro y los mejores maid cafés de Japón. El escaparate más intenso de la cultura pop japonesa en una sola calle.</p>
+              <a href="https://es.wikipedia.org/wiki/Akihabara" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Palacio Imperial de Tokio</h3>
+              <p class="text-sm text-gray-400 mt-1">La residencia del Emperador de Japón en el corazón de Tokio, rodeada de fosos y jardines centenarios. Solo el exterior y los jardines del Este son accesibles normalmente. Las vistas desde el Puente Nijubashi con el palacio de fondo son el símbolo clásico de Tokio.</p>
+              <a href="https://es.wikipedia.org/wiki/Palacio_Imperial_de_Tokio" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+          </ul>
+        </section>
+
       </div>
 
-      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8 text-sm">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3><ul class="space-y-3">
-          <li class="flex justify-between"><span>🏨 Hotel Cápsula</span><span class="text-white font-bold">€30</span></li>
-          <li class="flex justify-between"><span>🍣 Ramen / Sushi</span><span class="text-white font-bold">€40</span></li>
-          <li class="flex justify-between"><span>🚇 Day Pass (Metropolitano)</span><span class="text-white font-bold">€6</span></li>
-        </ul></div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-sm font-bold text-gray-500 mb-4 uppercase tracking-widest">Clima Promedio</h3><table class="w-full text-[10px] text-center">
-          <tr><th class="border-b border-white/5 pb-1">Mes</th><th>Max</th><th>Min</th><th>Vibe</th></tr>
-          <tr><td class="py-1">Abr</td><td class="text-yellow-200">19°C</td><td class="text-yellow-400">10°C</td><td>🌸 Sakura</td></tr>
-          <tr><td class="py-1">Ago</td><td class="text-orange-200">31°C</td><td class="text-orange-400">24°C</td><td>🔥 Humid</td></tr>
-          <tr><td class="py-1">Dic</td><td class="text-blue-200">12°C</td><td class="text-blue-400">2°C</td><td>❄️ Cold</td></tr>
-        </table></div>
-        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine"><h3 class="text-xl font-bold text-amber-500 mb-4">¿Sabías que...?</h3><p class="text-xs text-gray-300">Hay más de <strong class="text-white">5 millones</strong> de máquinas expendedoras. Venden desde café caliente hasta paraguas y sopa.</p></div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><p class="text-[10px] text-green-400 font-bold tracking-widest uppercase">JR East Status: OK</p></div>
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+
+        <div id="sec-visa" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+            </svg>
+            Requisitos de Entrada
+          </h3>
+          <p class="text-sm text-gray-400">España y la mayoría de países latinoamericanos pueden entrar a Japón <strong class="text-white">sin visa por 90 días</strong>. Solo necesitas pasaporte válido. Desde 2027 Japón implementará el <strong class="text-white">JESTA</strong> (sistema similar al ESTA americano). Por ahora no se necesita ningún trámite previo.</p>
+          <a href="https://www.mofa.go.jp/j_info/visit/visa/index.html" target="_blank"
+            class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Ministerio de Exteriores Japón</a>
+        </div>
+
+        <div id="sec-presupuesto" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Hotel (gama media)</span><span class="font-semibold text-white">€80-€150</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (ramen + sushi)</span><span class="font-semibold text-white">€25-€50</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Metro / Suica Card</span><span class="font-semibold text-white">€5-€10</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Entradas y actividades</span><span class="font-semibold text-white">€15-€40</span></li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+            <span class="text-gray-400">Total aprox:</span>
+            <span class="font-bold text-amber-500 text-2xl">€130<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
+          </div>
+        </div>
+
+        <div id="sec-clima" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">10°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">2°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">11°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">3°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">15°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">6°C</td><td class="py-2 text-gray-400">10 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">19°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">11°C</td><td class="py-2 text-gray-400">11 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">24°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">16°C</td><td class="py-2 text-gray-400">11 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">27°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">20°C</td><td class="py-2 text-gray-400">16 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">12 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">9 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">27°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">16 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">21°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">15°C</td><td class="py-2 text-gray-400">12 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">16°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">9°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">12°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">4°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Temporada perfecta: Marzo-Mayo y Oct-Nov</span>
+              La primavera con los cerezos en flor (sakura) es mágica — finales de marzo y principios de abril. El otoño con los arces rojos (koyo) en octubre-noviembre es igualmente espectacular. Julio y agosto son muy calurosos y húmedos.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Japón es 90% efectivo</span>
+              Aunque modernísimo, muchos restaurantes, templos y tiendas pequeñas solo aceptan efectivo (yenes). Lleva siempre yenes en el bolsillo — los cajeros 7-Eleven y Japan Post aceptan tarjetas extranjeras sin comisión.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">JR Pass — Vale la pena</span>
+              Si viajas más de 2 días fuera de Tokio (Kioto, Osaka, Hiroshima) el <strong class="text-white">JR Pass de 7 días (€250)</strong> cubre todos los Shinkansen y trenes nacionales. Compra online antes de salir de España.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado Metro</p>
+              <p class="text-xs text-green-400 font-bold">Tokyo Metro: Servicio Normal</p>
+            </div>
+          </div>
+          <a href="https://www.tokyometro.jp/en/" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">Metro Oficial</a>
+        </div>
+
       </aside>
     </div>
   </main>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">© 2024 Skylio Travel 2.0. Enlaces de afiliados — Tokio es el futuro.</footer>
-
   <script>
-    async function loadTokyoVideo() {
+    async function loadTokyoVideos() {
+      const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: 'xywWUb4XaL8', title: 'TOKIO: Guía definitiva para principiantes' },
-        { id: '-54PGS09v5s', title: 'DONDE COMER EN TOKIO' },
-        { id: 'EmAErjY5XbA', title: 'CONSEJOS PARA VIAJAR A JAPON' }
+        { id: 'GwVHb_vFJ2w', title: 'TOKIO: Guía de viaje completa en español' },
+        { id: 'iI8LsD5eMoY', title: 'Qué ver y hacer en Tokio — Consejos esenciales' },
+        { id: 'TQMeCmEPwSQ', title: 'Tokio: Todo lo que necesitas saber antes de ir' }
       ];
       try {
         const response = await fetch('/api/youtube-search?query=tokio+guia+viaje+español');
-        if (!response.ok) throw new Error();
+        if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
       } catch (e) { renderVideos(fallbackVideos); }
     }
+
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
@@ -140,14 +524,182 @@
           <div class="relative aspect-video">
             <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
             </div>
           </div>
-          <div class="p-4"><h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3><a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a></div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
+          </div>
         </div>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadTokyoVideo);
+
+    document.addEventListener('DOMContentLoaded', loadTokyoVideos);
   </script>
+
+  <!-- =============================================
+       BOTON FLOTANTE: ASISTENTE IA
+  ============================================== -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()"
+    style="
+      position: fixed; bottom: 24px; right: 32px; z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(10,15,22,0.9);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #fbbf24; font-weight: 700; font-size: 14px;
+      padding: 12px 20px; border-radius: 999px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5);
+      cursor: pointer; transition: all 0.2s;
+    "
+    onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'"
+    onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">
+    ✨ Asistente IA
+  </button>
+
+  <!-- =============================================
+       WIDGET FLOTANTE: CHAT IA (NO BLOQUEANTE)
+  ============================================== -->
+  <div id="skylio-chat-panel" style="
+    display: none;
+    position: fixed; bottom: 84px; right: 32px; z-index: 9998;
+    width: 360px; height: 500px;
+    background: rgba(10,15,22,0.97);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 24px;
+    display: none; flex-direction: column;
+    box-shadow: 0 0 60px rgba(245,158,11,0.12), 0 20px 60px rgba(0,0,0,0.7);
+    overflow: hidden;
+  ">
+    <!-- Header -->
+    <div style="
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.05);
+      flex-shrink: 0;
+    ">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Tokio</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre transporte, hoteles, visas…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()"
+        style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;"
+        onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="skylio-chat-messages" style="
+      flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,158,11,0.2) transparent;
+    ">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">こんにちは! Soy tu guía IA para Tokio. Prueba con:<br><br>
+            <strong style="color:#fbbf24;">shibuya</strong> · <strong style="color:#fbbf24;">transporte</strong> · <strong style="color:#fbbf24;">ramen</strong><br>
+            o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…"
+        style="
+          flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+          border-radius:12px; padding:9px 13px; color:#e5e7eb; font-size:13px; outline:none;
+        "
+        onkeydown="if(event.key==='Enter')window.SkylioChat.send()"
+        onfocus="this.style.borderColor='rgba(245,158,11,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.1)'"
+      />
+      <button onclick="window.SkylioChat.send()" style="
+        background:rgba(245,158,11,0.9); border:none; color:#000; font-weight:700;
+        padding:9px 15px; border-radius:12px; cursor:pointer; font-size:14px; transition:background 0.15s;
+      "
+      onmouseover="this.style.background='#f59e0b'"
+      onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: CityBridge -->
+  <script>window.SKYLIO_CITY_DATA_URL = '../tokio_full.json';</script>
+  <script src="../../../js/logic/city-bridge.js"></script>
+
+  <script>
+    // SkylioChat — widget flotante no-bloqueante conectado a CityBridge
+    window.SkylioChat = {
+      _open: false,
+
+      toggle() {
+        const panel = document.getElementById('skylio-chat-panel');
+        this._open = !this._open;
+        panel.style.display = this._open ? 'flex' : 'none';
+        if (this._open) {
+          setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+        }
+      },
+
+      send() {
+        const input = document.getElementById('skylio-chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+
+        const messages = document.getElementById('skylio-chat-messages');
+
+        // Burbuja del usuario
+        const userBubble = document.createElement('div');
+        userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+        const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        userBubble.innerHTML = `
+          <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;">
+            <p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">${safeText}</p>
+          </div>`;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Respuesta desde CityBridge o fallback
+        let response = window.CityBridge ? window.CityBridge.handleChatQuery(text) : null;
+        if (!response) response = this._fallback(text);
+
+        // Renderizar respuesta con markdown minimo (**bold** y \n)
+        const safeResponse = response
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>')
+          .replace(/\n/g,'<br>');
+
+        const aiBubble = document.createElement('div');
+        aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+        aiBubble.innerHTML = `
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+            <p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">${safeResponse}</p>
+          </div>`;
+
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+      },
+
+      _fallback(text) {
+        const t = text.toLowerCase();
+        if (t.includes('shibuya') || t.includes('cruce')) return 'El **Cruce de Shibuya** es el más famoso del mundo — hasta 3.000 personas cruzan simultáneamente. De noche las pantallas gigantes crean el escenario más futurista del planeta. Vista perfecta desde el Starbucks del piso 2.';
+        if (t.includes('transporte') || t.includes('metro') || t.includes('tren')) return '🚇 El metro de Tokio tiene **13 líneas y 285 estaciones**. Compra una tarjeta **Suica/Pasmo** (5€ depósito) nada más llegar — funciona en todo el transporte y hasta máquinas de vending.';
+        if (t.includes('templo') || t.includes('senso')) return '⛩️ El **Templo Senso-ji** en Asakusa es el más antiguo de Tokio (645 d.C.). La Puerta del Trueno con su linterna roja gigante es la imagen más icónica de Japón. Ve al amanecer para evitar multitudes.';
+        if (t.includes('visa') || t.includes('pasaporte')) return '🛂 España y mayoría de LATAM pueden entrar **sin visa por 90 días**. Solo pasaporte válido. Sin trámites previos.';
+        if (t.includes('clima') || t.includes('tiempo') || t.includes('temperatura')) return '🌸 La mejor época es **marzo-mayo** (cerezos en flor) y **octubre-noviembre** (arces rojos). Julio-agosto son muy calurosos y húmedos (31-33°C).';
+        if (t.includes('ramen') || t.includes('sushi') || t.includes('comida')) return '🍜 Tokio tiene más **estrellas Michelin** que cualquier ciudad del mundo. Ramen desde 7€, sushi fresco en Tsukiji, yakitori en Golden Gai. Los combini (7-Eleven) tienen comida increíble a precios de risa.';
+        return 'No tengo información sobre eso. Prueba con **shibuya**, **transporte**, **templos**, **visa** o **clima**.';
+      }
+    };
+  </script>
+
 </body>
 </html>

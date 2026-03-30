@@ -4,6 +4,7 @@ import { drivingRestrictions as drivingRestrictionsEs } from '../data/drivingRes
 import { drivingRestrictions as drivingRestrictionsEn } from '../data/drivingRestrictions_en';
 import { mustSeeDestinations as destinationsEs, continents as continentsEs } from '../data/mustSeeDestinations_es';
 import { mustSeeDestinations as destinationsEn, continents as continentsEn } from '../data/mustSeeDestinations_en';
+import InteractiveMap from '../components/InteractiveMap';
 
 function GuidesHub() {
   const { t, i18n } = useTranslation();
@@ -139,110 +140,131 @@ function GuidesHub() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+    <div className="w-full text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
+        
+        {/* TITULO Y BUSCADOR - Hub Unificado */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4">
-            {t('guides.title', 'Guías de Viaje')}
-          </h1>
-          <p className="text-xl text-gray-300">
-            {t('guides.subtitle', 'Información esencial para tus próximos destinos')}
-          </p>
+           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-6 animate-pulse">
+             <span className="relative flex h-2 w-2">
+               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+             </span>
+             {t('guides.premium_hub', 'HUB DE DESTINOS 2.0')}
+           </div>
+           <h1 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+             {t('guides.new_title', 'Explora el Mundo con Skylio')}
+           </h1>
+           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
+             {t('guides.new_subtitle', 'Navega nuestro mapa interactivo o descubre guías premium detalladas por expertos.')}
+           </p>
+           
+           <div className="max-w-2xl mx-auto relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-purple-500/20 blur-xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 rounded-full"></div>
+              <div className="relative flex items-center">
+                <svg className="absolute left-6 w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  placeholder={t('guides.search', 'Buscar destino, ciudad o país...')}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-16 pr-8 py-5 rounded-full bg-white/5 backdrop-blur-3xl border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 transition-all text-lg shadow-2xl"
+                />
+              </div>
+           </div>
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center gap-3 mb-8 flex-wrap">
-          <button
-            onClick={() => { setActiveTab('destinations'); setSelectedContinent('all'); }}
-            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
-              activeTab === 'destinations'
-                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            🌍 {t('guides.destinations', 'Destinos Imperdibles')}
-          </button>
-          <button
-            onClick={() => { setActiveTab('countries'); setSelectedContinent('all'); }}
-            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
-              activeTab === 'countries'
-                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            🏳️ {t('guides.countries', 'Países')}
-          </button>
-          <button
-            onClick={() => { setActiveTab('aiassistant'); setSelectedContinent('all'); }}
-            className={`px-6 py-3 rounded-2xl font-semibold transition-all flex items-center gap-2 ${
-              activeTab === 'aiassistant'
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-105'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            <span>✨</span>
-            {t('guides.aiAssistant', 'Asistente IA')}
-          </button>
-          <button
-            onClick={() => { setActiveTab('driving'); setSelectedContinent('all'); }}
-            className={`px-6 py-3 rounded-2xl font-semibold transition-all ${
-              activeTab === 'driving'
-                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            🚗 {t('guides.driving', 'Restricciones de Conducción')}
-          </button>
+        {/* MAPA INTERACTIVO - Full Width */}
+        <div className="mb-16 relative">
+            <div className="absolute -inset-4 bg-gradient-to-b from-amber-500/5 to-transparent blur-3xl opacity-50 -z-10"></div>
+            <InteractiveMap />
         </div>
 
-        {/* Search Bar - Hidden for AI Assistant tab */}
-        {activeTab !== 'aiassistant' && (
-          <div className="max-w-2xl mx-auto mb-8">
-            <input
-              type="text"
-              placeholder={t('guides.search', 'Buscar destino, ciudad o país...')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        )}
-
-        {/* Continent Filter (para destinos y países) */}
-        {(activeTab === 'destinations' || activeTab === 'countries') && (
-          <div className="flex justify-center gap-3 mb-8 flex-wrap">
+        {/* NAVEGACIÓN (Tabs) */}
+        <div className="flex justify-center gap-2 mb-10 flex-wrap sticky top-4 z-40">
+          <div className="bg-black/40 backdrop-blur-2xl p-1.5 rounded-2xl border border-white/10 flex flex-wrap justify-center gap-1 shadow-2xl">
             <button
-              onClick={() => setSelectedContinent('all')}
-              className={`px-6 py-2 rounded-xl font-medium transition-all ${
-                selectedContinent === 'all'
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              onClick={() => { setActiveTab('destinations'); setSelectedContinent('all'); }}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
+                activeTab === 'destinations'
+                  ? 'bg-white/10 text-white shadow-inner border border-white/10'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
               }`}
             >
-              {t('guides.all', 'Todos')}
+              🌍 {t('guides.destinations', 'Must-See')}
             </button>
-            {continents.map(continent => (
+            <button
+              onClick={() => { setActiveTab('countries'); setSelectedContinent('all'); }}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
+                activeTab === 'countries'
+                  ? 'bg-white/10 text-white shadow-inner border border-white/10'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              🏳️ {t('guides.countries', 'Countries')}
+            </button>
+            <button
+              onClick={() => { setActiveTab('aiassistant'); setSelectedContinent('all'); }}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
+                activeTab === 'aiassistant'
+                  ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-white border border-purple-500/30'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              <span>✨</span> {t('guides.aiAssistant', 'AI Assistant')}
+            </button>
+            <button
+              onClick={() => { setActiveTab('driving'); setSelectedContinent('all'); }}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${
+                activeTab === 'driving'
+                  ? 'bg-white/10 text-white shadow-inner border border-white/10'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              🚗 {t('guides.driving', 'Driving')}
+            </button>
+          </div>
+        </div>
+
+        {/* Filters and Content */}
+        <div className="space-y-8">
+          {(activeTab === 'destinations' || activeTab === 'countries') && (
+            <div className="flex justify-center gap-2 mb-8 flex-wrap">
               <button
-                key={continent}
-                onClick={() => setSelectedContinent(continent)}
-                className={`px-6 py-2 rounded-xl font-medium transition-all ${
-                  selectedContinent === continent
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                onClick={() => setSelectedContinent('all')}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
+                  selectedContinent === 'all'
+                    ? 'bg-amber-500 border-amber-400 text-black shadow-lg shadow-amber-500/20'
+                    : 'bg-white/5 border-white/10 text-slate-400 hover:border-white/20'
                 }`}
               >
-                {continent}
+                {t('guides.all', 'TODOS')}
               </button>
-            ))}
-          </div>
-        )}
+              {continents.map(continent => (
+                <button
+                  key={continent}
+                  onClick={() => setSelectedContinent(continent)}
+                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all border ${
+                    selectedContinent === continent
+                      ? 'bg-amber-500 border-amber-400 text-black shadow-lg shadow-amber-500/20'
+                      : 'bg-white/5 border-white/10 text-slate-400 hover:border-white/20'
+                  }`}
+                >
+                  {continent.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          )}
 
-        {/* Content */}
-        {activeTab === 'destinations' && <DestinationsGrid destinations={filteredDestinations} />}
-        {activeTab === 'countries' && <CountriesGrid countries={filteredCountries} />}
-        {activeTab === 'aiassistant' && <AIAssistantTab />}
-        {activeTab === 'driving' && <DrivingGrid cities={transformedDriving} />}
+          <div className="min-h-[400px]">
+            {activeTab === 'destinations' && <DestinationsGrid destinations={filteredDestinations} />}
+            {activeTab === 'countries' && <CountriesGrid countries={filteredCountries} />}
+            {activeTab === 'aiassistant' && <AIAssistantTab />}
+            {activeTab === 'driving' && <DrivingGrid cities={transformedDriving} />}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -461,7 +483,7 @@ function DestinationCard({ destination }) {
     <>
       <div
         onClick={() => setShowDetails(true)}
-        className="group cursor-pointer bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 hover:shadow-2xl"
+        className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
       >
         <div className="flex items-start justify-between mb-4">
           <div>
@@ -497,9 +519,9 @@ function DestinationModal({ destination, onClose }) {
   const { t, i18n } = useTranslation();
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl" onClick={onClose}>
       <div
-        className="bg-gray-900 rounded-3xl max-w-4xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
+        className="bg-slate-900/90 backdrop-blur-2xl rounded-[32px] max-w-4xl max-h-[92vh] overflow-y-auto border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -611,7 +633,7 @@ function DestinationModal({ destination, onClose }) {
 
           {/* Cómo llegar */}
           {destination.howToGetThere && Object.keys(destination.howToGetThere).length > 0 && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-4">🚌 {t('guides.howToGetThere')}</h3>
               <div className="space-y-2">
                 {Object.entries(destination.howToGetThere).map(([key, value]) => (
@@ -625,7 +647,7 @@ function DestinationModal({ destination, onClose }) {
 
           {/* Tickets */}
           {destination.tickets && Object.keys(destination.tickets).length > 0 && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-4">🎫 {t('guides.prices')}</h3>
               <div className="space-y-2">
                 {Object.entries(destination.tickets).map(([key, value]) => (
@@ -639,7 +661,7 @@ function DestinationModal({ destination, onClose }) {
 
           {/* Mejor momento */}
           {destination.bestTime && Object.keys(destination.bestTime).length > 0 && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-4">📅 {t('guides.bestTimeToVisit')}</h3>
               <div className="space-y-2">
                 {Object.entries(destination.bestTime).map(([key, value]) => (
@@ -779,7 +801,7 @@ function DrivingCard({ city }) {
     <>
       <div
         onClick={() => setShowDetails(true)}
-        className="group cursor-pointer bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 hover:shadow-2xl"
+        className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
       >
         <div className="flex items-start justify-between mb-4">
           <div>
@@ -824,9 +846,9 @@ function DrivingModal({ city, onClose }) {
   const { t } = useTranslation();
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl" onClick={onClose}>
       <div
-        className="bg-gray-900 rounded-3xl max-w-3xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
+        className="bg-slate-900/90 backdrop-blur-2xl rounded-[32px] max-w-3xl max-h-[92vh] overflow-y-auto border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -882,7 +904,7 @@ function DrivingModal({ city, onClose }) {
 
           {/* Info adicional */}
           {city.payment && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-2">💳 {t('guides.howToPay')}</h3>
               <p className="text-gray-300">{city.payment}</p>
             </div>
@@ -923,7 +945,7 @@ function CountryCard({ country }) {
     <>
       <div
         onClick={() => setShowDetails(true)}
-        className="group cursor-pointer bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 hover:shadow-2xl"
+        className="group cursor-pointer bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
       >
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -979,9 +1001,9 @@ function CountryModal({ country, onClose }) {
   const { t } = useTranslation();
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl" onClick={onClose}>
       <div
-        className="bg-gray-900 rounded-3xl max-w-5xl max-h-[90vh] overflow-y-auto border border-white/20 shadow-2xl"
+        className="bg-slate-900/90 backdrop-blur-2xl rounded-[32px] max-w-5xl max-h-[92vh] overflow-y-auto border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -1031,7 +1053,7 @@ function CountryModal({ country, onClose }) {
 
           {/* Ciudades solo nombres (si no hay info detallada) */}
           {(!country.cities || country.cities.length === 0) && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
                 🏙️ {t('guides.mainCities')}
               </h3>
@@ -1180,7 +1202,7 @@ function CityCard({ city, countryName }) {
           e.stopPropagation();
           setShowCityModal(true);
         }}
-        className="cursor-pointer bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all hover:scale-105 group"
+        className="cursor-pointer bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all hover:scale-[1.03] group shadow-lg"
       >
         <h4 className="text-lg font-bold text-white mb-2">{city.name}</h4>
         <p className="text-sm text-gray-300 mb-2">👥 {city.population}</p>
@@ -1410,7 +1432,7 @@ function CityModal({ city, countryName, onClose }) {
 
           {/* Atracciones principales */}
           {city.topAttractions && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-3">{t('cities.topAttractions')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {city.topAttractions.map((attraction, idx) => {
@@ -1447,7 +1469,7 @@ function CityModal({ city, countryName, onClose }) {
 
           {/* Barrios */}
           {city.neighborhoods && (
-            <div className="bg-white/5 rounded-2xl p-5 border border-white/10">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
               <h3 className="text-xl font-bold text-white mb-3">{t('cities.neighborhoods')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {city.neighborhoods.map((neighborhood, idx) => (

@@ -8,7 +8,6 @@ const ScriptWidget = ({ scriptSrc }) => {
   useEffect(() => {
     if (!scriptSrc || !containerRef.current) return;
 
-    console.log("Cargando widget desde:", scriptSrc);
     containerRef.current.innerHTML = '';
 
     const script = document.createElement('script');
@@ -55,7 +54,6 @@ const ScriptWidget = ({ scriptSrc }) => {
 
     return () => {
       if (containerRef.current) {
-         console.log("Desmontando widget...");
          containerRef.current.innerHTML = '';
       }
     };

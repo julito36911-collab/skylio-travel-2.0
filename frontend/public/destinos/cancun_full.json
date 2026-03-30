@@ -1,0 +1,162 @@
+{
+  "destination": "Cancún",
+  "id": "cancun",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Hyatt Ziva Cancún",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 21.1383, "lng": -86.7530 },
+      "labels": ["ZONA HOTELERA", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Le Blanc Spa Resort",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 21.1320, "lng": -86.7480 },
+      "labels": ["ZONA HOTELERA", "SOLO ADULTOS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Nizuc Resort & Spa",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 21.0530, "lng": -86.7770 },
+      "labels": ["ZONA HOTELERA", "BOUTIQUE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Krystal Grand Cancún",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 21.1300, "lng": -86.7510 },
+      "labels": ["ZONA HOTELERA", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Holiday Inn Cancún",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 21.1619, "lng": -86.8281 },
+      "labels": ["CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Oasis Cancún Lite",
+      "category": "Medio",
+      "rating": 3,
+      "coords": { "lat": 21.0890, "lng": -86.7690 },
+      "labels": ["ZONA HOTELERA", "TODO INCLUIDO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hostel Mundo Joven",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 21.1610, "lng": -86.8260 },
+      "labels": ["CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hotel El Rey del Caribe",
+      "category": "Económico",
+      "rating": 4,
+      "coords": { "lat": 21.1625, "lng": -86.8270 },
+      "labels": ["CENTRO", "ECO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Ambiance Villas",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 21.1200, "lng": -86.7600 },
+      "labels": ["ZONA HOTELERA"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Cancun%2C%20Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "chichen_itza",
+      "triggers": ["chichen", "chichén", "chichen itza", "chichén itzá", "kukulcan", "kukulcán", "piramide", "pirámide", "maravilla", "maya", "mayas", "ruinas mayas"],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Chichén Itzá — Maravilla del Mundo:**\n\nUna de las **7 Maravillas del Mundo Moderno**. La pirámide de Kukulcán es el símbolo de México.\n\n📍 A **3 horas** de Cancún en tour organizado.\n💶 Tour desde **€60** (incluye guía, transporte y cenote).\n\n💡 **Tips:**\n• Sal a las **7 AM** para llegar antes del calor y las multitudes.\n• Reserva tour con guía para entender la historia maya.\n• Normalmente incluye parada en el **Cenote Ik Kil**.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "cenotes",
+      "triggers": ["cenote", "cenotes", "ik kil", "dos ojos", "cenote azul", "gran cenote", "calavera", "subterráneo", "subterraneo", "nadar cueva"],
+      "scrollTo": "sec-lugares",
+      "response": "💧 **Cenotes de Yucatán:**\n\nPozos naturales de agua cristalina formados hace millones de años. Los mayas los consideraban puertas al inframundo.\n\n⭐ **Los mejores:**\n• **Ik Kil** — El más fotogénico, junto a Chichén Itzá.\n• **Dos Ojos** — Snorkel y buceo espectacular, cerca de Tulum.\n• **Cenote Azul** — Abierto, ideal para familias.\n• **Gran Cenote** — Caverna con estalactitas, Tulum.\n\n💶 Entrada: **€15-€30** por cenote.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "isla_mujeres",
+      "triggers": ["isla mujeres", "isla", "ferry", "playa norte", "golf cart", "manchones", "snorkel isla"],
+      "scrollTo": "sec-lugares",
+      "response": "🏝️ **Isla Mujeres:**\n\nLa joya a **20 minutos en ferry** desde Cancún. Mucho más tranquila y auténtica.\n\n⭐ **Imperdible:**\n• **Playa Norte** — Una de las playas más bonitas del Caribe.\n• Recorre toda la isla en **golf cart** (€35/día).\n• Snorkel en el arrecife de **Manchones**.\n• Mariscos frescos frente al mar.\n\n💶 Ferry: **€15** ida y vuelta (Puerto Juárez, 20 min).\n\n💡 Recomendada para al menos **1 noche**.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "tulum",
+      "triggers": ["tulum", "ruinas tulum", "castillo tulum", "playa del carmen", "quinta avenida", "riviera maya", "xcaret", "xel-ha", "xel-há", "cobá", "coba"],
+      "scrollTo": "sec-lugares",
+      "response": "🌴 **Tulum y Playa del Carmen:**\n\n**Tulum** (2h de Cancún): Las únicas ruinas mayas frente al mar Caribe. El Templo del Castillo sobre el acantilado es icónico. Cenotes salvajes, playas y ambiente bohemio.\n💶 Entrada ruinas: **€5** — Tour desde **€40**.\n\n**Playa del Carmen** (1h de Cancún): La animada Quinta Avenida peatonal. Xcaret y Xel-Há para snorkel.\n\n🚌 Autobús **ADO** desde Cancún: Playa **€5** (1h), Tulum **€8** (2h). Cómodos y con AC.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "zona_hotelera",
+      "triggers": ["zona hotelera", "hotel zona", "all inclusive", "todo incluido", "resort", "coco bongo", "mandala", "antros", "vida nocturna", "fiesta", "night", "club", "playa cancun", "playa cancún"],
+      "scrollTo": "sec-zonas",
+      "response": "🏖️ **Zona Hotelera de Cancún:**\n\nLa franja de **22 km** de hoteles y playas de arena blanca que hizo famoso a Cancún.\n\n⭐ Lo mejor:\n• Resorts **all-inclusive** frente al mar turquesa.\n• Clubs de playa y la famosa zona de antros (**Coco Bongo**, **Mandala**).\n• El agua más azul del Caribe.\n\n💡 Ideal para quien busca comodidad total y playa perfecta.\n\n🚌 El **bus R-1/R-2** conecta toda la zona con el Centro por solo **€0.70**.\n\n⬇️ He hecho scroll a la sección de zonas."
+    },
+    {
+      "id": "transport_airport",
+      "triggers": ["aeropuerto", "cun", "llegar", "aterrizar", "vuelo", "transfer", "ado", "autobus", "autobús", "bus", "taxi", "transporte", "moverme", "mover", "r-1", "r-2"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Transporte desde el Aeropuerto CUN:**\n\n🚐 **Transfer privado:** €15-€25/persona (reserva online antes).\n🚌 **Autobús ADO:** €3-€4 (terminal 2, 20-40 min).\n🚕 **Taxi oficial:** €25-€35 fijo a Zona Hotelera.\n\n**Dentro de Cancún:**\n🚌 Bus **R-1 y R-2**: Zona Hotelera ↔ Centro por **€0.70** (cada 10-15 min).\n\n🚌 **ADO a Playa del Carmen:** 1h, €5. **A Tulum:** 2h, €8.\n\n⚠️ **Evita los transportistas** que te abordan al salir — cobran el triple. Ve al mostrador oficial de ADO.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_requisitos",
+      "triggers": ["visa", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "migración", "migracion", "fmm"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a México (Cancún):**\n\nCiudadanos españoles y latinoamericanos entran **sin visa** con pasaporte válido.\n\n📋 Al aterrizar completa la **Forma Migratoria Múltiple (FMM)** — digital y gratuita.\n\n⏰ Estancia máxima: **180 días**.\n\n🔗 Más info en el **Instituto Nacional de Migración** (inm.gob.mx).\n\n⬇️ He hecho scroll al widget de visado."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "4 dias", "4 días", "7 dias", "7 días", "express", "semana", "visitar"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🗓️ **Itinerarios para Cancún:**\n\n⏱️ **Express (4 días):**\n• Día 1 — Llegada + Zona Hotelera + vida nocturna.\n• Día 2 — Isla Mujeres en ferry (golf cart + Playa Norte).\n• Día 3 — Chichén Itzá + Cenote Ik Kil (tour 7AM-7PM).\n• Día 4 — Playa + Mercado 28 + vuelo.\n\n🎒 **Riviera Completa (7-10 días):**\nSuma Playa del Carmen (Quinta Avenida, Xcaret) + Tulum (ruinas, cenotes, bohemio).\n\n🚌 Todo conectado con autobuses **ADO** baratos y cómodos.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "centro", "downtown", "alojamiento"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Zonas de Cancún:**\n\n🏖️ **Zona Hotelera** — 22 km de resorts all-inclusive y playas. Mar turquesa, antros, comodidad total. Más caro.\n🌮 **Centro (Downtown)** — La Cancún real. Precios 3x más baratos, tacos y cochinita pibil auténticos, mercados.\n🏝️ **Isla Mujeres** — A 20 min en ferry. Tranquila, colorida, Playa Norte espectacular.\n🧘 **Playa del Carmen / Tulum** — A 1-2h. Quinta Avenida, ruinas, cenotes, bohemio.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "humedad", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "huracán", "huracan", "sargazo", "temporada"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Cancún:**\n\n☀️ **Mejor época: Diciembre-Abril** — Temporada seca, 28-31°C, sin huracanes.\n🌧️ **Jun-Nov:** Temporada de huracanes. Precios bajan mucho pero el riesgo existe. Septiembre es el mes más lluvioso (15 días de lluvia).\n🌡️ **Todo el año:** 28-33°C máxima. Siempre caliente y húmedo.\n\n⚠️ **Sargazo (May-Oct):** Algas en las playas. La Zona Hotelera lo retira a diario pero puede afectar. **Playa Norte** en Isla Mujeres suele estar más limpia.\n\n⬇️ He hecho scroll a la tabla de clima."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "peso", "pesos", "cambio", "moneda"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en Cancún:**\n\n🏨 Hotel todo incluido (medio): **€80-€150**\n🍽️ Comida (fuera del hotel): **€15-€30**\n🚌 Transporte (buses + taxi): **€5-€15**\n🎭 Excursiones y actividades: **€30-€80**\n\n📊 **Total aprox: €130/día** (viajero medio)\n\n💡 **Ahorro clave:** Paga siempre en **pesos mexicanos**, no en dólares — el tipo de cambio es muy malo. Saca pesos en cajeros (OXXO o Banorte) y ahorra un **15-20%**.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "tacos", "taco", "cochinita", "pibil", "mariscos", "cenar", "gastronomía", "gastronomia", "comida mexicana", "desayunar", "mercado 28"],
+      "scrollTo": "sec-zonas",
+      "response": "🌮 **Comer en Cancún:**\n\n🌮 **Tacos y cochinita pibil:** En el **Centro (Downtown)** — precios hasta 3x más baratos que la Zona Hotelera. Auténtica comida mexicana.\n🦐 **Mariscos frescos:** En **Isla Mujeres** frente al mar o en el Centro.\n🛍️ **Mercado 28:** El mercado artesanal del Centro con comida local a precio justo.\n\n💡 **Tips:**\n• Los restaurantes de la Zona Hotelera cobran precio turista. El Centro es más auténtico y barato.\n• Si tienes **todo incluido**, aprovéchalo pero no te pierdas la comida callejera del Centro.\n• Paga en **pesos** para mejor precio."
+    }
+  ]
+}

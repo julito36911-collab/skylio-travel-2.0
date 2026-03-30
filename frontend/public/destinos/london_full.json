@@ -1,0 +1,125 @@
+{
+  "destination": "Londres",
+  "id": "london",
+  "hotels": [
+    {
+      "name": "The Savoy",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 51.5103, "lng": -0.1205 },
+      "labels": ["CENTRO"],
+      "link": "https://www.booking.com/hotel/gb/the-savoy.es.html",
+      "price_level": "$$$"
+    },
+    {
+      "name": "The Dorchester",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 51.5074, "lng": -0.1523 },
+      "labels": ["PARKING"],
+      "link": "https://www.booking.com/hotel/gb/the-dorchester.es.html",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Shangri-La The Shard",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 51.5042, "lng": -0.0864 },
+      "labels": ["CENTRO"],
+      "link": "https://www.booking.com/hotel/gb/shangri-la-at-the-shard.es.html",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Park Plaza Westminster Bridge",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 51.5015, "lng": -0.1174 },
+      "labels": ["CENTRO", "PARKING"],
+      "link": "https://www.booking.com/hotel/gb/park-plaza-westminster-bridge-london.es.html",
+      "price_level": "$$"
+    },
+    {
+      "name": "Novotel London Canary Wharf",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 51.5037, "lng": -0.0214 },
+      "labels": ["PARKING"],
+      "link": "https://www.booking.com/hotel/gb/novotel-london-canary-wharf.es.html",
+      "price_level": "$$"
+    },
+    {
+      "name": "citizenM London Bankside",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 51.5044, "lng": -0.1032 },
+      "labels": ["CENTRO"],
+      "link": "https://www.booking.com/hotel/gb/citizenm-london-bankside.es.html",
+      "price_level": "$$"
+    },
+    {
+      "name": "Travelodge London Central City Road",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 51.5235, "lng": -0.0876 },
+      "labels": ["CENTRO"],
+      "link": "https://www.booking.com/hotel/gb/travelodge-london-city-road.es.html",
+      "price_level": "$"
+    },
+    {
+      "name": "Premier Inn London County Hall",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 51.5028, "lng": -0.1189 },
+      "labels": ["CENTRO"],
+      "link": "https://www.booking.com/hotel/gb/premier-inn-london-county-hall.es.html",
+      "price_level": "$"
+    },
+    {
+      "name": "Ibis London Blackfriars",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 51.5056, "lng": -0.1038 },
+      "labels": ["CENTRO", "PARKING"],
+      "link": "https://www.booking.com/hotel/gb/ibis-london-blackfriars.es.html",
+      "price_level": "$"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "British Museum",
+      "image": "museum.jpg",
+      "description": "Gran museo de historia y cultura humana."
+    },
+    {
+      "name": "Tower of London",
+      "image": "tower.jpg",
+      "description": "Castillo histórico a orillas del Támesis."
+    },
+    {
+      "name": "London Eye",
+      "image": "londoneye.jpg",
+      "description": "Famosa noria mirador."
+    },
+    {
+      "name": "Big Ben / Elizabeth Tower",
+      "image": "Elizabeth_Tower.jpg",
+      "description": "El icono de Londres."
+    }
+  ],
+  "itineraries": {
+    "day_1": [
+      { "time": "09:00", "activity": "Visita al Big Ben y Palacio de Westminster." },
+      { "time": "11:00", "activity": "Paseo por el London Eye." },
+      { "time": "13:00", "activity": "Almuerzo en South Bank." },
+      { "time": "15:00", "activity": "British Museum." },
+      { "time": "18:00", "activity": "Cena en Covent Garden." }
+    ],
+    "day_2": [
+      { "time": "09:30", "activity": "Torre de Londres y Joyas de la Corona." },
+      { "time": "12:00", "activity": "Cruzando el Tower Bridge." },
+      { "time": "13:30", "activity": "Borough Market (Almuerzo)." },
+      { "time": "15:30", "activity": "The Shard Mirador." },
+      { "time": "17:30", "activity": "Paseo en barco por el Támesis." }
+    ]
+  }
+}

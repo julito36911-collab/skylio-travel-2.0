@@ -1,0 +1,16 @@
+{
+  "name": "skylio-v2",
+  "tier": "pro",
+  "version": "1.107.0",
+  "extensions": ["storage", "telemetry"],
+  "content_agent": {
+    "role": "AntiGravity Content Agent",
+    "project": "Skylio Travel 2.0",
+    "status": "ready"
+  },
+  "shared_state": {
+    "transportMode": "Transporte Público",
+    "currency": "GBP",
+    "language": "es"
+  }
+}

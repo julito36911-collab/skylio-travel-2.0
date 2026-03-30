@@ -1,0 +1,174 @@
+{
+  "destination": "París",
+  "id": "paris",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Le Meurice",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 48.8651, "lng": 2.3281 },
+      "labels": ["1ER ARRON."],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Shangri-La Paris",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 48.8628, "lng": 2.2937 },
+      "labels": ["TORRE EIFFEL"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hôtel de la Place du Louvre",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 48.8594, "lng": 2.3414 },
+      "labels": ["MARAIS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Hôtel Caron de Beaumarchais",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 48.8554, "lng": 2.3589 },
+      "labels": ["MARAIS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Hôtel Le Clément",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 48.8531, "lng": 2.3347 },
+      "labels": ["ST-GERMAIN"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Timhotel Montmartre",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 48.8867, "lng": 2.3407 },
+      "labels": ["MONTMARTRE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Generator Paris",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 48.8765, "lng": 2.3635 },
+      "labels": ["RÉPUBLIQUE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Le Village Hostel",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 48.8862, "lng": 2.3399 },
+      "labels": ["MONTMARTRE"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "Hôtel de Roubaix",
+      "category": "Económico",
+      "rating": 3,
+      "coords": { "lat": 48.8672, "lng": 2.3540 },
+      "labels": ["MARAIS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Paris%2C%20France&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "intents": [
+    {
+      "id": "torre_eiffel",
+      "triggers": ["torre eiffel", "eiffel", "torre", "trocadero", "trocadéro", "champ de mars"],
+      "scrollTo": "sec-lugares",
+      "response": "🗼 **Torre Eiffel:**\n\nEl monumento más visitado del mundo con 7 millones de visitas al año. Sube al segundo piso para las mejores vistas o a la cima para ver París a 276 metros.\n\n💶 **Desde €11** — Reserva online obligatoria.\n🌙 De noche brilla con miles de luces durante 5 minutos cada hora en punto.\n📸 **Mejor foto:** Desde el Trocadéro, enfrente.\n\n💡 **Pro tip:** Reserva con semanas de antelación en temporada alta. Sin reserva puedes esperar 2-3 horas.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "louvre",
+      "triggers": ["louvre", "museo louvre", "mona lisa", "gioconda", "venus de milo"],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Museo del Louvre:**\n\nEl museo más visitado del mundo con 380.000 obras en 73.000 m². La Mona Lisa, la Venus de Milo y la Victoria de Samotracia.\n\n💶 **€22** — Reserva online obligatoria.\n⏱️ Dedica al menos **3 horas** para lo esencial.\n⚠️ Las colas sin reserva pueden ser de **2-3 horas**.\n\n💡 **Pro tip:** Ve por la mañana temprano. Los miércoles y viernes cierra más tarde (hasta las 21:45).\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "versalles",
+      "triggers": ["versalles", "versailles", "palacio versalles", "galería espejos", "galeria espejos", "luis xiv"],
+      "scrollTo": "sec-lugares",
+      "response": "👑 **Palacio de Versalles:**\n\nEl palacio más impresionante del mundo, residencia de Luis XIV, XV y XVI. La Galería de los Espejos, los jardines geométricos de Le Nôtre y el Palacio del Trianón.\n\n💶 **€21** — A 40 minutos en tren (RER C desde Saint-Michel, €4 ida).\n🕘 Llega a las **9 AM** cuando abre — imprescindible llegar temprano.\n🧺 Lleva picnic para los jardines.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "montmartre_sacrecoeur",
+      "triggers": ["sacre coeur", "sacré coeur", "sacré-coeur", "sacre-coeur", "montmartre", "moulin rouge", "place du tertre", "pintores"],
+      "scrollTo": "sec-lugares",
+      "response": "⛪ **Montmartre & Sacré-Cœur:**\n\nLa basílica más icónica de París sobre la colina más alta de la ciudad con vistas panorámicas de 360°. El barrio de artistas más bohemio de Europa.\n\n🆓 **Entrada gratuita** a la basílica.\n🎨 La Place du Tertre tiene pintores callejeros.\n🎭 El Moulin Rouge está a sus pies.\n\n💡 Sube a pie por las escalinatas para las mejores vistas. El funicular también es una opción.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "champs_elysees",
+      "triggers": ["champs elysees", "champs élysées", "campos eliseos", "arco del triunfo", "arco triunfo"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🏛️ **Champs-Élysées & Arco del Triunfo:**\n\nLa avenida más famosa del mundo, desde la Place de la Concorde hasta el Arco del Triunfo. Tiendas de lujo, cines y cafés.\n\n🆓 El Arco del Triunfo es **gratis los primeros domingos** del mes. Sube a la cima para vistas espectaculares.\n\n💡 Camina desde el Trocadéro por la Torre Eiffel y luego sube por los Campos Elíseos — un recorrido perfecto para el primer día.\n\n⬇️ He hecho scroll a los itinerarios."
+    },
+    {
+      "id": "transport_airports",
+      "triggers": ["aeropuerto", "cdg", "charles de gaulle", "orly", "llegar", "aterrizar", "vuelo", "roissybus", "orlyval"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde Charles de Gaulle (CDG):**\n**RER B** → Gare du Nord/Châtelet en **35-40 min por €11.80**.\n**Roissybus** → Ópera Garnier en 60 min por **€16.60** (más cómodo con maletas).\n**Taxi oficial:** Tarifa fija **€56** (margen derecha) / **€65** (margen izquierda).\n\n**Desde Orly (ORY):**\n**Orlyval + RER B** → Centro en 35 min por **€12.10**.\n**Taxi oficial:** **€32-€37** según destino.\n\n⚠️ Coge siempre taxis con el logo oficial.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "transport_metro",
+      "triggers": ["metro", "rer", "transporte", "moverme", "mover", "navigo", "bus", "autobús", "billetes", "tarjeta", "ticket", "ratp"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por París:**\n\nEl metro de París es el más denso de Europa — nunca estarás a más de 500m de una estación.\n\n💳 **Navigo Semaine (€30):** Viajes ilimitados de lunes a domingo en metro, RER, bus y tranvía. Vale la pena si te quedas 3+ días.\n🎫 **Billete sencillo:** ~€2.15 por viaje.\n\n📱 El **RER** conecta con aeropuertos y Versalles.\n\n💡 **Pro tip:** Descarga la app RATP para rutas en tiempo real.\n\n⬇️ He hecho scroll a la sección de transporte."
+    },
+    {
+      "id": "visa_etias",
+      "triggers": ["visa", "etias", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "schengen"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a Francia:**\n\nFrancia es parte de la **UE y zona Schengen**.\n\n🇪🇺 **UE:** Entrada con DNI, sin visa.\n🌎 **Latinoamérica (México, Colombia, Argentina, Chile, Perú...):** Sin visa por **90 días** con pasaporte válido.\n\n⚠️ **ETIAS (desde 2025):** Nueva autorización electrónica obligatoria. Coste: **€7**. Trámite en minutos online.\n\n⬇️ He hecho scroll al widget de visado con el enlace oficial."
+    },
+    {
+      "id": "itinerary",
+      "triggers": ["itinerario", "ruta", "que hacer", "qué hacer", "plan", "dias", "días", "3 dias", "3 días", "5 dias", "5 días", "semana", "express", "visitar"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🎒 **Itinerario París Express (3 días):**\n\n**Día 1:** Trocadéro + Torre Eiffel (atardecer) → Champs-Élysées → Arco del Triunfo → bistró clásico.\n**Día 2:** Louvre (mañana temprano) → Les Halles → Le Marais → Place des Vosges → cena en Île Saint-Louis.\n**Día 3:** Montmartre + Sacré-Cœur → Place du Tertre → Notre-Dame → Sainte-Chapelle → paseo en barco por el Sena.\n\n**¿Más días?** Añade Versalles (día completo), Musée d'Orsay, Catacumbas y el Père Lachaise.\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "neighborhoods",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "marais", "latin", "quartier latin", "barrio latino", "saint-germain", "saint germain", "oberkampf", "république"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guía rápida de zonas en París:**\n\n🏛️ **Le Marais (3º-4º)** — El más de moda. Historia, galerías, Place des Vosges. Mejor equilibrio.\n🎨 **Montmartre (18º)** — Bohemio, romántico, Sacré-Cœur. Las mejores vistas.\n☕ **Saint-Germain (6º)** — Intelectual, elegante, cerca del Louvre. El más caro.\n🍻 **Oberkampf (11º)** — Auténtico, económico, vida nocturna. La elección inteligente.\n\n⬇️ He hecho scroll al mapa de zonas completo."
+    },
+    {
+      "id": "climate",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "frio", "frío", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "verano", "invierno", "primavera", "otoño"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de París:**\n\n🌸 **Mejor época: Abril-Junio** — Primavera con castañas en flor y terrazas llenas (17-25°C).\n🍂 **Sep-Oct** también excelente — menos turistas, precios más bajos.\n🔥 **Verano (Jul-Ago):** Hasta 28°C. Agosto los parisinos se van de vacaciones.\n❄️ **Invierno (Dic-Feb):** 7-8°C máxima. Frío pero con encanto navideño.\n\n☔ Llueve unos 8-9 días al mes todo el año — lleva siempre un paraguas compacto.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "budget",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euro", "euros"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💶 **Presupuesto diario en París:**\n\n🏨 Hotel (gama media): **€100-€180**\n🍽️ Comida (bistró + brasserie): **€35-€65**\n🚇 Metro (Navigo día): **€8-€10**\n🎭 Museos y actividades: **€20-€45**\n\n📊 **Total aprox: ~€180/día** (viajero medio)\n\n💡 Ahorros clave:\n• Alójate en el 11º (Oberkampf) — precios mucho más razonables.\n• Compra Navigo Semaine (€30) si te quedas 3+ días.\n• Come en bistrós de barrio alejados de los monumentos.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "food",
+      "triggers": ["comer", "comida", "restaurante", "bistró", "bistro", "brasserie", "croissant", "baguette", "queso", "vino", "crepe", "crêpe", "desayunar", "cenar", "gastronomía", "gastronomia", "café"],
+      "scrollTo": null,
+      "response": "🥐 **Comer en París:**\n\n🥖 **Baguette:** Compra en boulangeries con sello 'Artisan Boulanger'. La mejor del mundo se elige cada año.\n🥐 **Croissant:** Pruébalo au beurre (con mantequilla) — más caro pero incomparable.\n🧀 **Queso:** Visita una fromagerie y prueba Comté, Brie de Meaux y Roquefort.\n🍷 **Vino:** Un verre de vin en cualquier bistró cuesta €4-€7.\n☕ **Café:** En la barra es más barato que sentado en terraza.\n\n💡 Los bistrós de barrio en Le Marais, Oberkampf y Montmartre tienen la mejor relación calidad-precio. Evita restaurantes turísticos cerca de los monumentos."
+    },
+    {
+      "id": "atracciones",
+      "triggers": ["que ver", "qué ver", "lugares", "monumentos", "atracciones", "imperdibles", "notre dame", "notre-dame", "orsay", "catacumbas", "pompidou", "luxemburgo", "sainte chapelle"],
+      "scrollTo": "sec-lugares",
+      "response": "🏛️ **Imperdibles de París:**\n\n🆓 **Gratis:** Sacré-Cœur, Notre-Dame (exterior), Jardín de Luxemburgo, Champs-Élysées.\n💶 **De pago:** Torre Eiffel (desde €11), Louvre (€22), Versalles (€21), Catacumbas (~€29).\n\n💡 **Pro tips:**\n• **Louvre y Torre Eiffel:** Reserva online SIEMPRE — sin reserva son 2-3h de cola.\n• **Musée d'Orsay:** Gratis el primer domingo del mes.\n• **Sainte-Chapelle:** Joya oculta con los vitrales más espectaculares de Europa.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    }
+  ]
+}

@@ -18,116 +18,642 @@
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative">
 
   <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-6">
         <a href="/" class="text-sm font-bold text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+          </svg>
           Skylio Viajes
         </a>
-        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors"><span class="text-white">Skylio</span> Destinos</a>
+        <a href="../" class="text-sm font-bold text-amber-500 hover:text-amber-400 transition-colors">
+          <span class="text-white">Skylio</span> Destinos
+        </a>
       </div>
-      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
   <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518107616385-ad3089109f59?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-teal-900/20 mix-blend-color pointer-events-none"></div>
     <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
     <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇲🇽 Selva, Mar y Espíritu Maya</span>
       <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Riviera Maya</h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Cenotes sagrados, ruinas frente al azul turquesa y el lujo más eco-chic del mundo.</p>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">La guía definitiva: Cancún, Playa del Carmen, Tulum, cenotes, parques temáticos, Bacalar y los secretos del Caribe Mexicano.</p>
     </div>
   </header>
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+
       <div class="lg:col-span-8 space-y-12">
-        <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Corredor Turístico (Zonas)</h2>
+
+        <!-- ZONAS -->
+        <section id="sec-zonas" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas de la Riviera Maya</h2>
+          <p class="text-gray-400 mb-6">La Riviera Maya se extiende 130 km a lo largo de la costa del Caribe Mexicano, desde Cancún hasta Tulum. Cada zona tiene un carácter completamente diferente — elige según tus prioridades.</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <h3 class="text-xl font-bold text-white mb-2">Playa del Carmen</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🛍️ Quinta Avenida</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🍹 Vida Nocturna</span>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-cyan-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Cancún — El Hub Principal</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">✈️ AEROPUERTO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏨 RESORTS</span>
               </div>
-              <p class="text-sm text-gray-400">El epicentro de la Riviera. Hoteles boutique, compras y la famosa movida de la calle 12.</p>
+              <p class="text-sm text-gray-400 mt-3">La entrada principal a toda la Riviera Maya. La Zona Hotelera de Cancún tiene 25 km de playas perfectas con los grandes resorts todo incluido. El agua aquí es turquesa y absolutamente calmada. Para partes, vida nocturna y beach clubs de lujo, Cancún es imbatible. El precio de los resorts es más económico que en Tulum.</p>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <h3 class="text-xl font-bold text-white mb-2">Tulum</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🧘 Eco-Chic</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🏛️ Ruinas Mayas</span>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-amber-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Playa del Carmen — El Equilibrio Perfecto</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🛍️ LA 5TA AVENIDA</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🎶 AMBIENTE</span>
               </div>
-              <p class="text-sm text-gray-400">Donde la selva toca el mar. Retiros de yoga, beach clubs exclusivos y arqueología única.</p>
+              <p class="text-sm text-gray-400 mt-3">A 68 km de Cancún, Playa del Carmen es el punto más equilibrado de toda la Riviera Maya. La Quinta Avenida (5TA AVE) es la calle peatonal más animada del Caribe con 20 manzanas de restaurantes, tiendas y bares. La playa es preciosa y está a pasos del centro. Ferry a Cozumel en 45 minutos. La mejor base para explorar toda la zona.</p>
             </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Tulum — Bohemio y Selva</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏛️ RUINAS MAYAS</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🌿 ECO-LUJO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">El destino más de moda del mundo en los últimos años. Tulum combina ruinas mayas sobre un acantilado con el mejor cenote y las playas más salvajes del Caribe. La zona hotelera de Tulum tiene hoteles boutique de bambú y palapa entre la selva a pie de playa. Más caro que Cancún o Playa, pero la experiencia es única e inigualable.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-purple-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Bacalar — El Lago de los 7 Colores</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💎 SECRETO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🚤 LAGUNA</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">A 3.5 horas al sur de Tulum, Bacalar es el secreto mejor guardado de México. Un lago de agua dulce de 42 km con 7 tonalidades de azul y turquesa imposibles de creer. Sin olas, sin sal, sin sargazo — el agua más cristalina del país. Los locales lo llaman "el Caribe sin turistas". Visita obligatoria si tienes tiempo extra.</p>
+            </div>
+
           </div>
         </section>
 
-        <section>
+        <!-- LUGARES IMPERDIBLES — EXTENDIDO -->
+        <section id="sec-lugares" class="scroll-mt-20">
           <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=xcaret+riviera+maya&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1518107616385-ad3089109f59?w=800&q=80" class="h-48 w-full object-cover">
+
+            <!-- Cenotes -->
+            <a href="https://www.klook.com/search/result/?query=cenote+riviera+maya+tulum+tour&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="/destinos/riviera-maya/img/cenote.png" alt="Cenote Riviera Maya México" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Parque Xcaret / Xel-Há</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €100-€150</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Entradas ↗</div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Los Cenotes — Tesoros Subterráneos</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €15-€30 por cenote</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Más de 10.000 cenotes conectan bajo tierra toda la Riviera Maya. Gran Cenote, Dos Ojos, Ik Kil, Cenote Azul, Tankah y El Eden son los más espectaculares. Nadar en agua cristalina entre estalactitas y raíces de árbol es la experiencia más memorable de México.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour Cenotes
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=cenotes+riviera+maya&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1504730655501-24c39ac53f0e?w=800&q=80" class="h-48 w-full object-cover">
+
+            <!-- Ruinas de Tulum -->
+            <a href="https://www.klook.com/search/result/?query=tulum+ruins+tour+riviera+maya&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="/destinos/riviera-maya/img/tulum.png" alt="Ruinas Tulum Caribe México" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Ruta de los Cenotes</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €20-€50</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Explorar ahora ↗</div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Ruinas Mayas de Tulum</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Entrada €5 — La imagen más icónica de México</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El único sitio arqueológico maya construido sobre un acantilado frente al mar Caribe. Llega a las 8 AM — a las 10 ya hay miles de personas. Debajo del acantilado hay una playa paradisíaca de acceso exclusivo para los visitantes del sitio.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour Guiado
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
+
+            <!-- Xcaret -->
+            <a href="https://www.klook.com/search/result/?query=xcaret+park+riviera+maya&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="/destinos/riviera-maya/img/xcaret.png" alt="Xcaret Xel-Ha parque tematico Riviera Maya" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Xcaret, Xel-Há y Parques Temáticos</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Xcaret desde €90 — Xel-Há desde €70</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El Grupo Xcaret opera los parques más famosos de México. Xcaret tiene ríos subterráneos, arrecife de snorkel, tortugas, flamingos y el espectáculo nocturno de cultura mexicana más impresionante del mundo. Xel-Há es un parque acuático natural en una laguna. Día completo garantizado.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Entradas
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- Bacalar -->
+            <a href="https://www.klook.com/search/result/?query=bacalar+lake+tour+mexico&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="/destinos/riviera-maya/img/bacalar.png" alt="Bacalar lago 7 colores México" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Bacalar — Laguna de los 7 Colores</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Tour en velero desde €30 — 3.5h desde Tulum</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">Una laguna de agua dulce de 42 km con 7 tonalidades de azul imposibles de fotografiar sin editar. Sin olas, sin sal, sin sargazo. Los tours en velero al atardecer son los más románticos del Caribe Mexicano. Alójate 2 noches para vivir la experiencia completa.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Reservar Tour Bacalar
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
           </div>
         </section>
 
-        <section class="mt-16">
-          <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-            <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            Riviera Maya en Video
-          </h2>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"></div>
+        <!-- SECCIÓN ESPECIAL: CENOTES GUÍA COMPLETA -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🌀 Guía de Cenotes — Los Mejores de la Riviera Maya</h2>
+          <p class="text-gray-400 mb-6">Hay más de 10.000 cenotes en la Península de Yucatán. Estos son los más espectaculares, organizados por tipo y ubicación:</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Gran Cenote (Tulum)</h3>
+              <p class="text-sm text-gray-400">El más famoso y fotogénico. Semiabierto con luz solar que entra creando destellos en el agua. Tortugas y peces nadan libremente. Ideal para snorkel y buceo. Llega antes de las 9 AM para evitar grupos.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Dos Ojos (Tulum)</h3>
+              <p class="text-sm text-gray-400">Dos cenotes conectados por un túnel subterráneo. El sistema de cuevas más espectacular de la Riviera Maya. El Barbie Line y el Bat Cave son sus galerías más impresionantes. Buceo con instructor incluido.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Ik Kil (Chichén Itzá)</h3>
+              <p class="text-sm text-gray-400">El cenote más impresionante visualmente: un pozo perfecto de 60 metros de diámetro con cascadas naturales, raíces colgantes y agua turquesa 26 metros abajo. Se salta desde la plataforma. Combínalo con Chichén Itzá.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Cenote Azul (Playa del Carmen)</h3>
+              <p class="text-sm text-gray-400">El más accesible desde Playa del Carmen — a solo 20 min. Abierto y soleado con agua de un azul intenso perfecto para fotos. Menos masificado que los de Tulum y con acceso directo desde la carretera federal.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Cenote Suytun (Valladolid)</h3>
+              <p class="text-sm text-gray-400">El cenote "de la luz de dios" — un rayo de luz solar cae perpendicular al agua a ciertas horas creando un efecto visual sobrenatural. Solo 1.5h de Cancún. La foto más reproducida de México en Instagram.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">💧 Sistema Sac Actun</h3>
+              <p class="text-sm text-gray-400">El río subterráneo más largo del mundo (263 km descubiertos) discurre bajo toda la Riviera Maya. Las excursiones de buceo en cueva por este sistema son la experiencia más avanzada y mística del Caribe.</p>
+            </div>
+
+          </div>
         </section>
+
+        <!-- SECCIÓN: PARQUES TEMÁTICOS -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🎡 Parques Temáticos — Guía Completa</h2>
+          <div class="space-y-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-xl font-bold text-white">Xcaret</h3>
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-amber-600/20 text-amber-400">⭐ El más completo</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-3">El parque eco-arqueológico más famoso de México. Ríos subterráneos para nadar, arrecife de snorkel, tortugas marinas, flamencos, mariposas, jaguares, delfines y el espectáculo nocturno "Xcaret México Espectacular" de 2 horas con 300 artistas que resume toda la historia y cultura mexicana. Un día completo no es suficiente.</p>
+              <div class="flex gap-3 flex-wrap">
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">📍 75 km de Cancún</span>
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">⏱️ Día completo</span>
+                <span class="text-xs text-amber-400 bg-amber-600/10 px-3 py-1 rounded-full">💰 Desde €90</span>
+              </div>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-xl font-bold text-white">Xel-Há</h3>
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-cyan-600/20 text-cyan-400">🐠 Mejor snorkel</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-3">Un parque acuático natural en una laguna donde el agua dulce del cenote se mezcla con el mar. Snorkel en el río de peces, tirolinas sobre la laguna, kayak, bicicletas acuáticas y todo incluido (comida y bebida ilimitada). Menos cultural que Xcaret pero más refrescante para familias con niños.</p>
+              <div class="flex gap-3 flex-wrap">
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">📍 122 km de Cancún</span>
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">⏱️ Día completo</span>
+                <span class="text-xs text-amber-400 bg-amber-600/10 px-3 py-1 rounded-full">💰 Desde €70</span>
+              </div>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-xl font-bold text-white">Xplor</h3>
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-green-600/20 text-green-400">🚀 Más adrenalina</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-3">Para los amantes de la adrenalina. 14 tirolinas sobre cenotes y selva, rafting en ríos subterráneos, buggy por la jungla y nado en cuevas con estalagmitas iluminadas. El parque más activo de la familia Xcaret. Hay también versión nocturna: "Xplor Fuego" con todo iluminado con antorchas.</p>
+              <div class="flex gap-3 flex-wrap">
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">📍 70 km de Cancún</span>
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">⏱️ Día completo</span>
+                <span class="text-xs text-amber-400 bg-amber-600/10 px-3 py-1 rounded-full">💰 Desde €85</span>
+              </div>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-xl font-bold text-white">Xenses & Xavage</h3>
+                <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-purple-600/20 text-purple-400">🤯 Más original</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-3">Xenses desafía tus sentidos con ilusiones ópticas y experiencias únicas (caminar por paredes, ríos extraños, vértigo controlado). Xavage es el más extremo: kayak de aguas bravas, jet boats, escalada, tirolinas y rafting. Para quienes ya conocen los otros parques del grupo.</p>
+              <div class="flex gap-3 flex-wrap">
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">📍 75 km de Cancún</span>
+                <span class="text-xs text-gray-300 bg-white/5 px-3 py-1 rounded-full">⏱️ Medio día</span>
+                <span class="text-xs text-amber-400 bg-amber-600/10 px-3 py-1 rounded-full">💰 Desde €60</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ITINERARIOS -->
+        <section id="sec-itinerarios" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Riviera Maya sin estrés</h2>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Riviera Maya Express (7 Días)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 1 — Cancún: Llegada y Zona Hotelera</h4>
+                <p class="text-gray-400 text-sm mt-1">Aterriza en el aeropuerto de Cancún (CUN). Instálate en el resort o hotel. Primera tarde en la playa de Bávaro o Cancún. Por la noche pasea por la Zona Hotelera para ver las opciones de restaurantes y beach clubs. Cena en un restaurant frente al mar.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 2 — Chichén Itzá + Cenote Ik Kil + Valladolid</h4>
+                <p class="text-gray-400 text-sm mt-1">Salida a las 7 AM para llegar antes del calor. Chichén Itzá (una de las 7 Maravillas del Mundo). Después el cenote Ik Kil — el más espectacular de todos con sus cascadas. Tarde en Valladolid, el pueblo colonial más hermoso de Yucatán, con el cenote Suytun de la luz celestial. Regreso a base nocturna.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 3 — Playa del Carmen y Cozumel</h4>
+                <p class="text-gray-400 text-sm mt-1">Bus ADO desde Cancún a Playa del Carmen (1h, €8). Mañana paseando la Quinta Avenida. Ferry a Cozumel (45 min, €15 ida y vuelta) — el arrecife de Cozumel es el segundo más grande del mundo. Snorkel o buceo con tortugas y corales perfectos. Regreso a Playa para cenar. La 5TA de noche es mágica.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 4 — Xcaret (Día Completo)</h4>
+                <p class="text-gray-400 text-sm mt-1">Reserva Xcaret para un día completo — compra el paquete "Plus" que incluye todo. Llega a las 8:30 AM al abrir para aprovechar los ríos subterráneos sin colas. Nado con tortugas, snorkel en el arrecife, zoo de mariposas. Quédate para el espectáculo nocturno "Xcaret México Espectacular" a las 7 PM — imprescindible.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 5 — Tulum: Ruinas y Cenotes</h4>
+                <p class="text-gray-400 text-sm mt-1">Bus ADO a Tulum (2h desde Cancún, €12). Ruinas de Tulum a las 8 AM — llega temprano para tener las pirámides sin gente y bajar a la playa exclusiva debajo del acantilado. Después Gran Cenote a 5 min en taxi (€5). Por la tarde la zona hotelera de Tulum con sus hoteles boutique en la selva y cena en algún restaurante entre palmeras.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 6 — Cenote Dos Ojos y Cobá</h4>
+                <p class="text-gray-400 text-sm mt-1">Mañana en el cenote Dos Ojos — el sistema de cuevas más espectacular de la región. Tarde en las ruinas de Cobá (25 km al norte de Tulum) donde todavía puedes subir a la pirámide Nohoch Mul de 42 metros para una vista de la selva hasta el horizonte. Regreso a base para la noche.</p>
+              </div>
+
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Día 7 — Playa Libre y Vuelo</h4>
+                <p class="text-gray-400 text-sm mt-1">Último día para la playa, compras de artesanías en el Mercado 28 de Cancún o en la 5TA de Playa del Carmen. Cena de despedida con tacos de marlin y ceviche. Los vuelos internacionales suelen salir por la tarde-noche desde el aeropuerto de Cancún.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 Riviera Maya Completa (14 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Con 2 semanas puedes descubrir los secretos que los turistas normales nunca ven:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 1-7</div>
+                <h4 class="text-white font-bold">Itinerario Express de arriba</h4>
+                <p class="text-gray-400 text-sm mt-1">Completa los 7 días anteriores con Cancún, Chichén Itzá, Playa del Carmen, Xcaret y Tulum.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 8-9</div>
+                <h4 class="text-white font-bold">Bacalar — El Secreto de México</h4>
+                <p class="text-gray-400 text-sm mt-1">Bus desde Tulum a Bacalar (2.5h, €12). Dos noches en una casa de huéspedes frente al lago. Tour en velero con paradas en los mejores puntos de nado. El Canal de los Piratas, los estromatolitos (los seres vivos más antiguos del planeta) y el atardecer desde el muelle con el lago de 7 colores.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 10-11</div>
+                <h4 class="text-white font-bold">Mérida — La Ciudad Blanca</h4>
+                <p class="text-gray-400 text-sm mt-1">Bus nocturno desde Bacalar a Mérida (5h, €15). La capital de Yucatán es la ciudad más segura de México y una de las más bonitas. Paseo Montejo (el Champs-Élysées yucateco), el Mercado Lucas de Gálvez, haciendas coloniales y la mejor cochinita pibil del mundo. Excursión a las ruinas de Uxmal.</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍAS 12-14</div>
+                <h4 class="text-white font-bold">Isla Holbox — El Paraíso sin Coches</h4>
+                <p class="text-gray-400 text-sm mt-1">Bus desde Mérida a Chiquilá (2.5h) y ferry a Isla Holbox (25 min, €8). Esta isla sin coches tiene las aguas más turquesas del Golfo de México, flamencos rosados en la laguna y el famoso tiburón ballena en temporada (junio-septiembre). Calles de arena, hamacas y una paz absoluta. Vuelo de regreso desde Cancún.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- HOTELES -->
+        <section id="sec-hoteles" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 TULUM</span>
+              <h4 class="text-base font-bold text-white">Azulik Resort Tulum</h4>
+              <p class="text-xs text-gray-400 mb-4">Villas de madera sobre la selva</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ CANCÚN</span>
+              <h4 class="text-base font-bold text-white">Hyatt Ziva Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Todo incluido, punta de la zona</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🛍️ PLAYA DEL CARMEN</span>
+              <h4 class="text-base font-bold text-white">Rosewood Mayakoba</h4>
+              <p class="text-xs text-gray-400 mb-4">Lagunas, lujo, canales privados</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🛍️ PLAYA DEL CARMEN</span>
+              <h4 class="text-base font-bold text-white">Hotel Indigo Playa del Carmen</h4>
+              <p class="text-xs text-gray-400 mb-4">5ta avenida, diseño, piscina</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 TULUM</span>
+              <h4 class="text-base font-bold text-white">Be Tulum Hotel</h4>
+              <p class="text-xs text-gray-400 mb-4">Selva y playa, palapa auténtica</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ CANCÚN</span>
+              <h4 class="text-base font-bold text-white">Krystal Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Zona Hotelera, frente al mar</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-amber-900/50 text-amber-200 mb-3 self-start">🛍️ PLAYA DEL CARMEN</span>
+              <h4 class="text-base font-bold text-white">Selina Playa del Carmen</h4>
+              <p class="text-xs text-gray-400 mb-4">Coworking, piscina, social</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🌿 TULUM</span>
+              <h4 class="text-base font-bold text-white">Mama's Home Tulum</h4>
+              <p class="text-xs text-gray-400 mb-4">Hostel boutique, ambiente mágico</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-cyan-900/50 text-cyan-200 mb-3 self-start">🏖️ CANCÚN</span>
+              <h4 class="text-base font-bold text-white">Hostel Natura Cancún</h4>
+              <p class="text-xs text-gray-400 mb-4">Centro, limpio, precio bajo</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Riviera+Maya%2C+Mexico&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- YOUTUBE -->
+        <section class="mt-16">
+          <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
+            <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Explora la Riviera Maya en Video
+            </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
+          </div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <!-- AEROPUERTO -->
+        <section id="sec-aeropuertos" class="scroll-mt-20">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo moverse por la Riviera Maya</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto Cancún (CUN) → Playa del Carmen</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">ADO</strong> sale del aeropuerto directo a Playa del Carmen en <strong class="text-white">1 hora por €12</strong>. Buses cada 30 minutos de 6 AM a 12 AM. También hay colectivos (furgonetas) por €5-€8 que salen llenos desde la salida del aeropuerto.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Aeropuerto → Tulum</h3>
+              <p class="text-sm text-gray-400">ADO directo desde el aeropuerto a Tulum en <strong class="text-white">2 horas por €18</strong>. O toma el ADO a Playa del Carmen y allí haz transbordo a otro ADO a Tulum (más opciones de horario). Los taxis del aeropuerto a Tulum cuestan aprox <strong class="text-white">€60-€80</strong>.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Moverse entre ciudades: ADO Bus</h3>
+              <p class="text-sm text-gray-400">El <strong class="text-white">ADO</strong> es la mejor forma de moverse por toda la Riviera Maya. Cancún-Playa: €8 (1h). Playa-Tulum: €7 (1h). Tulum-Bacalar: €12 (2.5h). Tulum-Mérida: €18 (4h). Buses cómodos, puntuales y con AC. Compra en <strong class="text-white">ado.com.mx</strong>.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Alquiler de Coche</h3>
+              <p class="text-sm text-gray-400">Si quieres total libertad para cenotes y ruinas alejadas, alquila un coche en el aeropuerto de Cancún (desde €25/día). La carretera federal 307 conecta toda la costa — perfectamente señalizada y segura. Imprescindible para llegar a los cenotes más escondidos.</p>
+            </div>
+
+          </div>
+
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: Base recomendada — Playa del Carmen</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">Si tuviéramos que elegir solo una base para explorar toda la Riviera Maya, sería <strong class="text-white">Playa del Carmen</strong>. Está exactamente en el centro de todo: a 1h de Cancún, a 1h de Tulum, cerca de los mejores cenotes, con ferry a Cozumel y con la mejor infraestructura de transporte. Mucho más auténtica que Cancún y más económica que Tulum.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIRECTORIO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo — Más Destinos de la Riviera Maya</h2>
+          <ul class="divide-y divide-white/10">
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Cobá — La Pirámide que se puede Subir</h3>
+              <p class="text-sm text-gray-400 mt-1">A 45 km de Tulum en la selva. La pirámide Nohoch Mul de 42 metros es la única en la Riviera Maya donde todavía se puede subir a la cima (con una cuerda). Vistas de 360° sobre la selva hasta donde alcanza la vista. Menos masificado que Chichén Itzá y mucho más auténtico.</p>
+              <a href="https://es.wikipedia.org/wiki/Cobá" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Isla Holbox — Sin Coches y Sin Sal</h3>
+              <p class="text-sm text-gray-400 mt-1">Una isla sin coches, sin cajeros y sin prisas en el extremo norte de Yucatán. Las aguas del Golfo de México son turquesas y sin olas. En temporada (junio-septiembre) puedes nadar con el tiburón ballena. Los flamencos rosados son visibles en la laguna casi todo el año.</p>
+              <a href="https://es.wikipedia.org/wiki/Isla_Holbox" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Valladolid — El Pueblo Colonial</h3>
+              <p class="text-sm text-gray-400 mt-1">A 160 km de Cancún, Valladolid es el pueblo colonial más hermoso de Yucatán con su parque central, iglesias coloniales y el cenote Zaci en el centro del pueblo. El cenote Suytun (a 7 km) con su rayo de luz celestial es el más fotografiado de México. Perfecto para combinar con Chichén Itzá.</p>
+              <a href="https://es.wikipedia.org/wiki/Valladolid_(Yucatán)" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Cozumel — El Mejor Buceo del Atlántico</h3>
+              <p class="text-sm text-gray-400 mt-1">Una isla a 45 minutos en ferry de Playa del Carmen con el segundo arrecife de coral más grande del mundo (Sistema Arrecifal Mesoamericano). La visibilidad puede llegar a 40 metros y la abundancia de vida marina es incomparable. Incluso el snorkel desde la orilla es espectacular.</p>
+              <a href="https://es.wikipedia.org/wiki/Cozumel" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Sian Ka'an — Reserva de la Biosfera UNESCO</h3>
+              <p class="text-sm text-gray-400 mt-1">El área protegida más grande de México, justo al sur de Tulum. Tours en lancha por lagunas cristalinas, flota en un canal maya de 2.000 años, avistamiento de flamencos, delfines y tortugas en su hábitat natural. La naturaleza más salvaje y pura de toda la Riviera Maya.</p>
+              <a href="https://es.wikipedia.org/wiki/Reserva_de_la_biosfera_de_Sian_Ka'an" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Chichén Itzá — Maravilla del Mundo</h3>
+              <p class="text-sm text-gray-400 mt-1">Una de las 7 Maravillas del Mundo Moderno a 2.5h de Cancún. El Castillo de Kukulcán, el Juego de Pelota, el Cenote Sagrado y el Observatorio. El equinoccio de primavera (21 marzo) la sombra forma una serpiente bajando por la pirámide — un espectáculo que atrae 30.000 personas ese día.</p>
+              <a href="https://es.wikipedia.org/wiki/Chichén_Itzá" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+
+          </ul>
+        </section>
+
       </div>
 
-      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8 text-sm">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3><ul class="space-y-3">
-          <li class="flex justify-between"><span>🏨 Hotel Luxury Tulum</span><span class="text-white font-bold">€300+</span></li>
-          <li class="flex justify-between"><span>🥘 Buffet Resort</span><span class="text-white font-bold">€40</span></li>
-          <li class="flex justify-between"><span>🚐 Colectivos (Bus)</span><span class="text-white font-bold">€3</span></li>
-        </ul></div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><h3 class="text-sm font-bold text-gray-500 mb-4 uppercase tracking-widest">Sargazo Watch</h3><p class="text-[10px] text-green-400 font-bold uppercase tracking-widest">ESTADO ACTUAL: BAJO</p><p class="text-[10px] text-gray-400 mt-2">Revisa las webcams en vivo antes de ir a Playa del Carmen o Tulum.</p></div>
-        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine"><h3 class="text-xl font-bold text-amber-500 mb-4">¿Sabías que...?</h3><p class="text-xs text-gray-300">Los <strong class="text-white">Cenotes</strong> eran considerados entradas al inframundo (Xibalbá) por los antiguos Mayas.</p></div>
-        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3"><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div><p class="text-[10px] text-green-400 font-bold tracking-widest uppercase">Tren Maya: En Operación</p></div>
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+
+        <div id="sec-visa" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+            </svg>
+            Requisitos de Entrada
+          </h3>
+          <p class="text-sm text-gray-400">México permite entrada <strong class="text-white">sin visa</strong> a ciudadanos de España y la mayoría de países latinoamericanos por hasta <strong class="text-white">180 días</strong>. Solo necesitas pasaporte válido y llenar la <strong class="text-white">Forma Migratoria Múltiple (FMM)</strong> — actualmente digital y gratuita. Guarda el comprobante durante todo el viaje.</p>
+          <a href="https://www.inm.gob.mx/" target="_blank"
+            class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">INM México Oficial</a>
+        </div>
+
+        <div id="sec-presupuesto" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Resort todo incluido</span><span class="font-semibold text-white">€80-€200</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Hotel boutique (Tulum)</span><span class="font-semibold text-white">€60-€150</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida local (tacos)</span><span class="font-semibold text-white">€8-€20</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Excursiones / parques</span><span class="font-semibold text-white">€40-€90</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Transporte ADO</span><span class="font-semibold text-white">€5-€15</span></li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
+            <span class="text-gray-400">Total aprox:</span>
+            <span class="font-bold text-amber-500 text-2xl">€130<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
+          </div>
+        </div>
+
+        <div id="sec-clima" class="scroll-mt-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">28°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">20°C</td><td class="py-2 text-gray-400">4 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">28°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">20°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">32°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">6 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">12 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">33°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">25°C</td><td class="py-2 text-gray-400">14 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">32°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">24°C</td><td class="py-2 text-gray-400">16 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-red-900/40 text-red-200 rounded-l-md font-medium">31°C</td><td class="py-2 bg-red-900/40 text-red-200 rounded-r-md font-medium">23°C</td><td class="py-2 text-gray-400">13 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">30°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">22°C</td><td class="py-2 text-gray-400">7 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Temporada perfecta: Dic-Abril</span>
+              La temporada seca con menos lluvia, agua más cristalina y sin riesgo de huracanes. De mayo a noviembre llueve más y es temporada de huracanes, pero los precios caen hasta un 40%.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">El sargazo — consúltalo antes</span>
+              De abril a octubre el sargazo (algas marinas) puede afectar algunas playas. Tulum sufre más que Cancún o Playa. Consulta el estado en tiempo real en <strong class="text-white">sargazo.mx</strong> antes de reservar.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Protector solar — solo mineral</span>
+              Los cenotes y arrecifes de coral son ecosistemas frágiles. Está <strong class="text-white">prohibido el protector solar químico</strong> en cenotes y parques nacionales. Usa solo protector mineral (zinc) o lleva traje de neopreno para protegerte del sol.
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado Aeropuerto</p>
+              <p class="text-xs text-green-400 font-bold">CUN Cancún: Operativo</p>
+            </div>
+          </div>
+          <a href="https://www.asur.com.mx/aeropuertos/cancun" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">Oficial</a>
+        </div>
+
       </aside>
     </div>
   </main>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">© 2024 Skylio Travel 2.0. Enlaces de afiliados — Riviera Maya es vida.</footer>
-
   <script>
-    async function loadRivVideo() {
+    async function loadRivieraMayaVideos() {
+      const container = document.getElementById('youtube-gallery');
       const fallbackVideos = [
-        { id: 'xywWUb4XaL8', title: 'RIVIERA MAYA: Guía de viaje completa' },
-        { id: '-54PGS09v5s', title: 'TULUM: Lo que nadie te cuenta' },
-        { id: 'EmAErjY5XbA', title: 'PLAYA DEL CARMEN: Guía 2024' }
+        { id: 'q6xsZR7lyY4', title: 'RIVIERA MAYA: Guía completa Cancún, Tulum y más' },
+        { id: 'PpLEBOP0TxA', title: 'Tulum, cenotes y Playa del Carmen — Todo en español' },
+        { id: 'FHTVtcoZFK0', title: 'Riviera Maya: Qué hacer, dónde ir y cuánto cuesta' }
       ];
       try {
         const response = await fetch('/api/youtube-search?query=riviera+maya+guia+viaje+español');
-        if (!response.ok) throw new Error();
+        if (!response.ok) throw new Error('API Fallback');
         const videos = await response.json();
         renderVideos(videos.slice(0, 3));
       } catch (e) { renderVideos(fallbackVideos); }
     }
+
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
@@ -135,14 +661,175 @@
           <div class="relative aspect-video">
             <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
             </div>
           </div>
-          <div class="p-4"><h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3><a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a></div>
+          <div class="p-4">
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
+          </div>
         </div>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadRivVideo);
+
+    document.addEventListener('DOMContentLoaded', loadRivieraMayaVideos);
   </script>
+
+  <!-- ==============================================
+       BOTON FLOTANTE: ASISTENTE IA
+  ============================================== -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()"
+    style="
+      position: fixed; bottom: 24px; right: 32px; z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(10,15,22,0.9);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: #fbbf24; font-weight: 700; font-size: 14px;
+      padding: 12px 20px; border-radius: 999px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5);
+      cursor: pointer; transition: all 0.2s;
+    "
+    onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'"
+    onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2), 0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">
+    ✨ Asistente IA
+  </button>
+
+  <!-- ==============================================
+       WIDGET FLOTANTE: CHAT IA (NO BLOQUEANTE)
+  ============================================== -->
+  <div id="skylio-chat-panel" style="
+    display: none;
+    position: fixed; bottom: 84px; right: 32px; z-index: 9998;
+    width: 360px; height: 500px;
+    background: rgba(10,15,22,0.97);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 24px;
+    display: none; flex-direction: column;
+    box-shadow: 0 0 60px rgba(245,158,11,0.12), 0 20px 60px rgba(0,0,0,0.7);
+    overflow: hidden;
+  ">
+    <!-- Header -->
+    <div style="
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.05);
+      flex-shrink: 0;
+    ">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Riviera Maya</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre cenotes, ruinas, transporte…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()"
+        style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;"
+        onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="skylio-chat-messages" style="
+      flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px;
+      scrollbar-width: thin; scrollbar-color: rgba(245,158,11,0.2) transparent;
+    ">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">¡Hola! Soy tu guía IA para la Riviera Maya. Prueba con:<br><br>
+            <strong style="color:#fbbf24;">cenotes</strong> · <strong style="color:#fbbf24;">tulum</strong> · <strong style="color:#fbbf24;">transporte</strong><br>
+            o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…"
+        style="
+          flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+          border-radius:12px; padding:9px 13px; color:#e5e7eb; font-size:13px; outline:none;
+        "
+        onkeydown="if(event.key==='Enter')window.SkylioChat.send()"
+        onfocus="this.style.borderColor='rgba(245,158,11,0.5)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.1)'"
+      />
+      <button onclick="window.SkylioChat.send()" style="
+        background:rgba(245,158,11,0.9); border:none; color:#000; font-weight:700;
+        padding:9px 15px; border-radius:12px; cursor:pointer; font-size:14px; transition:background 0.15s;
+      "
+      onmouseover="this.style.background='#f59e0b'"
+      onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS: COMPONENTES SKYLIO -->
+  <script>window.SKYLIO_CITY_DATA_URL = '../riviera-maya_full.json';</script>
+  <script src="../../../js/logic/city-bridge.js"></script>
+
+  <script>
+    // SkylioChat — widget flotante no-bloqueante conectado a CityBridge
+    window.SkylioChat = {
+      _open: false,
+
+      toggle() {
+        const panel = document.getElementById('skylio-chat-panel');
+        this._open = !this._open;
+        panel.style.display = this._open ? 'flex' : 'none';
+        if (this._open) {
+          setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+        }
+      },
+
+      send() {
+        const input = document.getElementById('skylio-chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+
+        const messages = document.getElementById('skylio-chat-messages');
+
+        // Burbuja del usuario
+        const userBubble = document.createElement('div');
+        userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+        const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        userBubble.innerHTML = `
+          <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;">
+            <p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">${safeText}</p>
+          </div>`;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Respuesta desde CityBridge o fallback
+        let response = window.CityBridge ? window.CityBridge.handleChatQuery(text) : null;
+        if (!response) response = this._fallback(text);
+
+        // Renderizar respuesta con markdown minimo (**bold** y \n)
+        const safeResponse = response
+          .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>')
+          .replace(/\n/g,'<br>');
+
+        const aiBubble = document.createElement('div');
+        aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+        aiBubble.innerHTML = `
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+            <p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">${safeResponse}</p>
+          </div>`;
+
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+      },
+
+      _fallback(text) {
+        return 'No tengo información sobre eso. Prueba con **cenotes**, **tulum**, **xcaret**, **transporte** o **clima**.';
+      }
+    };
+  </script>
+
 </body>
 </html>

@@ -9,41 +9,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .font-serif {
-      font-family: 'Playfair Display', serif;
-    }
+    .font-serif { font-family: 'Playfair Display', serif; }
     @keyframes pulse-soft {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.4); opacity: 0.7; }
     }
-    .animate-pulse-soft {
-      animation: pulse-soft 2s infinite;
-    }
-    .glass-shine {
-      position: relative;
-      overflow: hidden;
-    }
+    .animate-pulse-soft { animation: pulse-soft 2s infinite; }
+    .glass-shine { position: relative; overflow: hidden; }
     .glass-shine::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
+      content: ''; position: absolute; top: -50%; left: -50%;
+      width: 200%; height: 200%;
       background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
-      transform: rotate(45deg);
-      transition: 0.5s;
+      transform: rotate(45deg); transition: 0.5s;
     }
-    .glass-shine:hover::after {
-      left: 100%;
-      top: 100%;
-    }
+    .glass-shine:hover::after { left: 100%; top: 100%; }
+
   </style>
 </head>
 
-<body class="bg-[#0a0f16] text-gray-300 relative selection:bg-amber-500/30">
+<body class="bg-[#0a0f16] text-gray-300 relative">
 
-  <!-- NAVBAR FLOTANTE -->
+  <!-- ══════════════════════════════════════════ -->
+  <!--  NAVBAR                                    -->
+  <!-- ══════════════════════════════════════════ -->
   <nav class="fixed top-0 inset-x-0 z-50 bg-[#0a0f16]/80 backdrop-blur-md border-b border-white/10 px-4 py-3">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-6">
@@ -57,260 +45,564 @@
           <span class="text-white">Skylio</span> Destinos
         </a>
       </div>
-      <a href="/" class="bg-white text-black px-4 py-1.5 rounded-full text-xs font-bold hover:bg-amber-500 transition-colors">Volver al Hub</a>
     </div>
   </nav>
 
-  <!-- CAPA 1: HERO SECTION -->
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HERO                                      -->
+  <!-- ══════════════════════════════════════════ -->
   <header class="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-center items-center text-center px-4 overflow-hidden bg-[#0a0f16]">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
-    <div class="absolute inset-0 bg-blue-900/10 mix-blend-color pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity pointer-events-none"></div>
+    <div class="absolute inset-0 bg-orange-900/20 mix-blend-color pointer-events-none"></div>
     <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0a0f16] via-[#0a0f16]/80 to-transparent pointer-events-none"></div>
-
     <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-      <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">🇮🇹 La Ciudad Eterna</span>
       <h1 class="text-5xl md:text-7xl font-serif text-white font-bold tracking-wide drop-shadow-xl">Roma</h1>
-      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">Donde cada piedra cuenta una leyenda de emperadores y artistas.</p>
+      <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-lg">
+        La guía definitiva: La Ciudad Eterna, el Vaticano y 2.700 años de historia.
+      </p>
     </div>
   </header>
 
+  <!-- ══════════════════════════════════════════ -->
+  <!--  CONTENIDO PRINCIPAL                       -->
+  <!-- ══════════════════════════════════════════ -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0" style="background-image: url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.12;"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden -z-0 rounded-none"
+      style="background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center top; opacity: 0.07;"></div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
-      
-      <!-- COLUMNA IZQUIERDA -->
+
+      <!-- ────────────────────────────────────── -->
+      <!--  COLUMNA IZQUIERDA (Contenido)         -->
+      <!-- ────────────────────────────────────── -->
       <div class="lg:col-span-8 space-y-12">
-        
-        <!-- SECCIÓN: ZONAS -->
-        <section>
-          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las Colinas de la Urbe (Zonas)</h2>
+
+        <!-- ZONAS -->
+        <section id="sec-zonas">
+          <h2 class="text-3xl font-bold text-white mb-6 border-b border-white/10 pb-4">Las mejores zonas para tu viaje</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Trastevere</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🍷 Bohemio & Noche</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🍝 Trattorias TOP</span>
+              <svg class="w-8 h-8 text-amber-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Centro Histórico</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">📸 TURISMO CLÁSICO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💸 CARO PARA DORMIR</span>
               </div>
-              <p class="text-sm text-gray-400">Calles empedradas, hiedra colgando y el ambiente más auténtico de Roma. Ideal para cenar.</p>
+              <p class="text-sm text-gray-400 mt-3">El corazón de Roma. Aquí están la Fontana di Trevi, el Panteón y Piazza Navona. Es la zona más turística y cara, pero estar a pasos de todo lo hace irresistible. Prepárate para multitudes en temporada alta.</p>
             </div>
+
             <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-              <h3 class="text-xl font-bold text-white mb-2">Centro Storico</h3>
-              <div class="flex items-center gap-2 mb-2 flex-wrap text-[10px] font-bold uppercase">
-                <span class="px-2 py-1 rounded bg-white/10 text-amber-500">🏛️ Corazón Museo</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-gray-400">🚶 Todo a Pie</span>
+              <svg class="w-8 h-8 text-red-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Trastevere</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🍷 VIDA NOCTURNA</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🏠 AUTÉNTICO LOCAL</span>
               </div>
-              <p class="text-sm text-gray-400">Panteón, Piazza Navona y la Fontana di Trevi. La zona más turística pero fascinante.</p>
+              <p class="text-sm text-gray-400 mt-3">El barrio más bohemio y auténtico de Roma. Callejuelas adoquinadas, hiedra en las paredes y las mejores trattorias de la ciudad. Ideal para cenar y vivir Roma como un local. Precios más razonables que el centro.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-blue-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Prati (Vaticano)</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🛌 IDEAL FAMILIAS</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">⛪ VATICANO CERCA</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">Barrio elegante, tranquilo y seguro justo al lado del Vaticano. Amplias avenidas, buenos restaurantes y hoteles de calidad. La mejor opción si tu prioridad son los Museos Vaticanos y la Capilla Sixtina.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+              <svg class="w-8 h-8 text-green-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.105 0-2-.895-2-2V7c0-1.105.895-2 2-2h.01M9 19h12"/>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Monti & Esquilino</h3>
+              <div class="flex items-center gap-2 mb-2 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">🎨 ALTERNATIVO</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/10 text-gray-300">💰 PRECIO JUSTO</span>
+              </div>
+              <p class="text-sm text-gray-400 mt-3">El barrio más trendy de Roma. Galerías de arte, tiendas vintage y restaurantes de moda a pasos del Coliseo. Monti es el preferido de viajeros independientes que buscan autenticidad sin pagar precios de lujo.</p>
             </div>
           </div>
         </section>
 
-        <!-- SECCIÓN: IMPERDIBLES -->
-        <section>
+        <!-- LUGARES IMPERDIBLES -->
+        <section id="sec-lugares">
           <h2 class="text-3xl font-bold text-white mt-12 mb-8 border-b border-white/10 pb-4">Lugares Imperdibles</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a href="https://www.klook.com/search/result/?query=rome+colosseum&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+            <a href="https://www.klook.com/search/result/?query=Roma+Coliseo+entradas&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format" alt="Coliseo Romano" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Coliseo y Foro Romano</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €18-€25</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Ver Disponibilidad ↗</div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Coliseo Romano</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €18</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El anfiteatro más grande del mundo. Símbolo eterno de Roma con 2.000 años de historia. Reserva siempre con antelación en línea.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
-            <a href="https://www.klook.com/search/result/?query=vatican+museums&needQueryIdentification=true" target="_blank" class="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all hover:-translate-y-1">
-              <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+            <a href="https://www.klook.com/search/result/?query=Roma+Vaticano+Museos+Capilla+Sixtina&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?q=80&w=1200&auto=format" alt="Vaticano" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="p-5">
-                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Museos Vaticanos</h3>
-                <p class="text-sm text-amber-500 font-semibold mt-1">Aprox €20-€30</p>
-                <div class="mt-4 text-xs font-bold text-amber-500 uppercase tracking-widest flex items-center gap-2">Evitar colas ↗</div>
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Museos Vaticanos y Capilla Sixtina</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Desde €20</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">La mayor colección de arte del mundo, con el techo de la Capilla Sixtina pintado por Miguel Ángel. Reserva online para evitar colas de horas.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
               </div>
             </a>
+
+            <a href="https://www.klook.com/search/result/?query=Roma+Fontana+di+Trevi+tour&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1200&auto=format" alt="Fontana di Trevi" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Fontana di Trevi</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Gratis (€1 reserva nocturna)</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">La fuente barroca más famosa del mundo. Lanza una moneda para volver a Roma. Ve muy temprano o de noche para evitar las masas.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="https://www.klook.com/search/result/?query=Roma+Foro+Romano+Palatino&needQueryIdentification=true" target="_blank" rel="noopener"
+              class="group relative block overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+              <img src="/destinos/roma/img/panteon.png" alt="Panteón de Agripa" class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="p-5">
+                <h3 class="text-xl font-bold text-white group-hover:text-amber-500 transition-colors">Foro Romano y Monte Palatino</h3>
+                <p class="text-sm text-amber-500 font-semibold mt-1">Incluido con la entrada al Coliseo</p>
+                <p class="text-gray-400 text-sm mt-3 line-clamp-2">El corazón político del Imperio Romano. Ruinas de templos, arcos triunfales y la colina donde nació la ciudad hace 2.700 años.</p>
+                <div class="mt-5 text-sm font-bold text-amber-500 flex items-center gap-2">Comprar entradas / Ver tours
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </a>
+
           </div>
         </section>
 
-        <!-- SECCIÓN: ITINERARIOS -->
-        <section>
+        <!-- ITINERARIOS -->
+        <section id="sec-itinerarios">
           <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Itinerarios: Roma sin estrés</h2>
+
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
-            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Visita Express (1 Día)</h3>
-            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative text-sm">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">⏱️ Roma Express (1 Día)</h3>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
               <div class="relative group">
                 <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-                <h4 class="text-white font-bold">Mañana: Imperio y Piedra</h4>
-                <p class="text-gray-400 mt-1">Coliseo (temprano), Foro Romano y Columna de Trajano. Camina hasta Piazza Venezia.</p>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Mañana (8:00 AM) – El Imperio Romano</h4>
+                <p class="text-gray-400 text-sm mt-1">Arranca en el Coliseo (entra a las 9 AM, reserva online para evitar colas). Dedica 2 horas a explorar el Foro Romano y el Monte Palatino, incluidos en la misma entrada. Vista espectacular de la historia viva.</p>
               </div>
               <div class="relative group">
                 <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
-                <h4 class="text-white font-bold">Tarde: Monedas y Deseos</h4>
-                <p class="text-gray-400 mt-1">Fontana di Trevi, Panteón, Piazza Navona y helado obligatorio en el camino.</p>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Tarde (1:30 PM) – Centro y Barroco</h4>
+                <p class="text-gray-400 text-sm mt-1">Come en Monti (trattorias locales sin trampa turística). Luego al Panteón, Piazza Navona con las fuentes de Bernini, y remata con la Fontana di Trevi para la foto clásica.</p>
+              </div>
+              <div class="relative group">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500 group-hover:animate-pulse-soft transition-all"></div>
+                <h4 class="text-white font-bold group-hover:text-amber-500 transition-colors">Noche (7:30 PM) – Cena en Trastevere</h4>
+                <p class="text-gray-400 text-sm mt-1">Cruza el Tíber hasta Trastevere. Cena en una trattoria con mesas en la calle, tómate un Aperol Spritz y piérdete por sus callejuelas iluminadas. La Roma más auténtica y mágica de noche.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-amber-500 mb-6 flex items-center gap-2">🎒 El Fin de Semana Perfecto (2 Días)</h3>
+            <p class="text-sm text-gray-400 mb-6">Haz el "Día 1" del itinerario anterior. Para tu segundo día, sigue esta ruta:</p>
+            <div class="border-l-2 border-white/10 ml-3 pl-6 space-y-6 relative">
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <div class="inline-block bg-amber-500 text-black text-xs font-bold px-2 py-1 rounded mb-2">DÍA 2</div>
+                <h4 class="text-white font-bold">Mañana (8:30 AM) – El Vaticano</h4>
+                <p class="text-gray-400 text-sm mt-1">Reserva los Museos Vaticanos con antelación para entrar directo. La Capilla Sixtina te dejará sin palabras. Luego sube a la cúpula de la Basílica de San Pedro para las mejores vistas de Roma.</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <h4 class="text-white font-bold">Tarde (2:00 PM) – Castel Sant'Angelo y Pincio</h4>
+                <p class="text-gray-400 text-sm mt-1">El Castel Sant'Angelo (antigua fortaleza papal) con vistas al Tíber. Come en Prati, muy local. Termina subiendo al Pincio (Piazza del Popolo) para el mejor atardecer sobre los tejados de Roma — y es gratis.</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-[#0a0f16] bg-amber-500"></div>
+                <h4 class="text-white font-bold">Noche (8:00 PM) – Campo de' Fiori</h4>
+                <p class="text-gray-400 text-sm mt-1">Cena cerca de Campo de' Fiori. El mercado de noche es mágico, lleno de gente local tomando vino al aire libre. Termina con el mejor gelato artesanal de Roma buscando 'gelato artigianale'.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- SECCIÓN: HOTELES CATEGORIZADOS -->
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir</h2>
-          <div class="space-y-8">
-            <div>
-              <h3 class="text-lg font-semibold text-amber-500 mb-4">💎 Lujo</h3>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col hover:border-amber-500/50 transition-colors">
-                  <h4 class="text-sm font-bold text-white">Hotel de Russie</h4>
-                  <p class="text-[10px] text-gray-500 mb-4">Piazza del Popolo</p>
-                  <a href="https://www.hotels.com/Hotel-Search?destination=Rome&regionId=3023" target="_blank" class="mt-auto text-center text-xs font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
-                </div>
-              </div>
+        <!-- HOTELES -->
+        <section id="sec-hoteles">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-8 border-b border-white/10 pb-4">Dónde Dormir (Nuestra Selección)</h2>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Lujo</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="CENTRO">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
+              <h4 class="text-base font-bold text-white">Hotel de Russie</h4>
+              <p class="text-xs text-gray-400 mb-4">Piazza del Popolo</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-amber-500 mb-4">🏨 Precio Medio</h3>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col hover:border-amber-500/50 transition-colors">
-                  <h4 class="text-sm font-bold text-white">Hotel Artemide</h4>
-                  <p class="text-[10px] text-gray-500 mb-4">Via Nazionale</p>
-                  <a href="https://www.hotels.com/Hotel-Search?destination=Rome&regionId=3023" target="_blank" class="mt-auto text-center text-xs font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
-                </div>
-              </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="CENTRO">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
+              <h4 class="text-base font-bold text-white">Hotel Hassler Roma</h4>
+              <p class="text-xs text-gray-400 mb-4">Trinità dei Monti – Plaza de España</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="PARKING">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🚗 PARKING</span>
+              <h4 class="text-base font-bold text-white">Castello della Castelluccia</h4>
+              <p class="text-xs text-gray-400 mb-4">Prati / Vaticano</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Precio Medio</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="TRASTEVERE">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 TRASTEVERE</span>
+              <h4 class="text-base font-bold text-white">Hotel Santa Maria</h4>
+              <p class="text-xs text-gray-400 mb-4">Trastevere</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="CENTRO">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 MONTI</span>
+              <h4 class="text-base font-bold text-white">Nerva Boutique Hotel</h4>
+              <p class="text-xs text-gray-400 mb-4">Barrio Monti – junto al Coliseo</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="CENTRO">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
+              <h4 class="text-base font-bold text-white">iQ Hotel Roma</h4>
+              <p class="text-xs text-gray-400 mb-4">Termini – Centro</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-amber-500 mb-4 mt-8">Económico</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="CENTRO">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 CENTRO</span>
+              <h4 class="text-base font-bold text-white">The Yellow Hostel</h4>
+              <p class="text-xs text-gray-400 mb-4">Termini</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="TRASTEVERE">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-blue-900/50 text-blue-200 mb-3 self-start">📍 TRASTEVERE</span>
+              <h4 class="text-base font-bold text-white">Hotel San Francesco</h4>
+              <p class="text-xs text-gray-400 mb-4">Trastevere</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-colors" data-label="PARKING">
+              <span class="text-[10px] font-bold px-2 py-1 rounded bg-green-900/50 text-green-200 mb-3 self-start">🚗 PARKING</span>
+              <h4 class="text-base font-bold text-white">Hotel Artorius</h4>
+              <p class="text-xs text-gray-400 mb-4">Termini</p>
+              <a href="https://www.hotels.com/Hotel-Search?destination=Roma%2C+Italia&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697" target="_blank" rel="noopener" class="mt-auto text-center text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white py-2 rounded-lg transition-colors">Ver Disponibilidad</a>
             </div>
           </div>
         </section>
 
-        <!-- SECCIÓN: AEROPUERTOS -->
-        <section>
-          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Logística: Aeropuertos</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
-              <h3 class="text-lg font-bold text-amber-500 mb-2">Fiumicino (FCO)</h3>
-              <p class="text-gray-400">Toma el tren <strong class="text-white">Leonardo Express</strong> (32 min directo a Termini). Salen cada 15-30 min. €14.</p>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
-              <h3 class="text-lg font-bold text-amber-500 mb-2">Ciampino (CIA)</h3>
-              <p class="text-gray-400">Usa el <strong class="text-white">Terravision Bus</strong> hacia Termini. Es más barato pero depende mucho del tráfico.</p>
-            </div>
-          </div>
-          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start mt-8">
-            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <div>
-              <h4 class="text-blue-300 font-bold mb-1 text-sm">Pro Tip: Transporte Romano</h4>
-              <p class="text-xs text-gray-300 leading-relaxed">Usa la tarjeta <strong class="text-white">Tap & Go</strong> (tarjeta bancaria) directamente en el bus o metro. Si vas al Vaticano, la línea A del metro (Ottaviano) es tu mejor amiga.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- VIDEOS -->
+        <!-- YOUTUBE -->
         <section class="mt-16">
           <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
             <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Roma en Video
+              <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              Explora Roma en Video
             </h2>
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-widest hidden md:block">Top Vlogs de Viajes</span>
           </div>
-          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <div id="youtube-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden md:block"></div>
+            <div class="animate-pulse bg-white/5 rounded-2xl h-64 hidden lg:block"></div>
+          </div>
+        </section>
+
+        <!-- AEROPUERTOS -->
+        <section id="sec-aeropuertos">
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">✈️ Cómo llegar desde el Aeropuerto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Fiumicino (FCO) – Leonardo da Vinci</h3>
+              <p class="text-sm text-gray-400">La opción más rápida es el <strong class="text-white">Leonardo Express</strong> — tren directo a la Estación Termini en <strong class="text-white">32 minutos</strong> (~€14). También hay trenes regionales más baratos (€8, ~45 min) que paran en otras estaciones.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Ciampino (CIA)</h3>
+              <p class="text-sm text-gray-400">Aeropuerto de las aerolíneas low-cost. Toma un bus lanzadera de <strong class="text-white">Terravision o SIT Bus</strong> hasta Termini (~45 min, €5-6). El taxi oficial al centro tiene tarifa fija de <strong class="text-white">€30</strong>.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Metro de Roma (Líneas A y B)</h3>
+              <p class="text-sm text-gray-400">Roma tiene <strong class="text-white">2 líneas de metro</strong>. Un billete cuesta €1,50. Para el centro histórico el autobús y caminar son más prácticos. Cuidado con carteristas en la línea A.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h3 class="text-lg font-bold text-amber-500 mb-2">Taxi y Apps</h3>
+              <p class="text-sm text-gray-400">Los taxis de Roma tienen <strong class="text-white">tarifas planas fijas</strong>: €48 desde Fiumicino y €30 desde Ciampino al centro. Usa solo taxis blancos oficiales. <strong class="text-white">Free Now</strong> e <strong class="text-white">Italo Taxi</strong> son las apps más seguras.</p>
+            </div>
+          </div>
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-xl p-5 flex gap-4 items-start shadow-lg shadow-blue-900/10 mt-8">
+            <svg class="w-6 h-6 text-blue-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+              <h4 class="text-blue-300 font-bold mb-1">Pro Tip: ZTL – La trampa invisible</h4>
+              <p class="text-sm text-gray-300 leading-relaxed">Roma tiene una <strong>Zona de Tráfico Limitado (ZTL)</strong> en el centro histórico. Si entras con coche sin permiso, la multa llega a tu casa semanas después. Los GPS no siempre la detectan. Lo mejor: estaciona en los límites de la ciudad y usa transporte público.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- DIRECTORIO -->
+        <section>
+          <h2 class="text-3xl font-bold text-white mt-16 mb-6 border-b border-white/10 pb-4">🏛️ Directorio Completo (Más lugares por descubrir)</h2>
+          <ul class="divide-y divide-white/10">
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Panteón de Roma</h3>
+              <p class="text-sm text-gray-400 mt-1">El edificio antiguo mejor conservado del mundo. Cúpula sin refuerzo de concreto y óculo de 9m abierto al cielo. Ahora requiere entrada (~€5).</p>
+              <a href="https://es.wikipedia.org/wiki/Pante%C3%B3n_de_Agripa" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Piazza Navona</h3>
+              <p class="text-sm text-gray-400 mt-1">La plaza barroca más bella de Roma. Tres fuentes monumentales de Bernini, construida sobre el antiguo Estadio de Domiciano. Gratis.</p>
+              <a href="https://es.wikipedia.org/wiki/Piazza_Navona" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Castel Sant'Angelo</h3>
+              <p class="text-sm text-gray-400 mt-1">Antigua tumba del Emperador Adriano, luego fortaleza papal y prisión. Vistas panorámicas del Tíber y la cúpula de San Pedro. Entrada ~€15.</p>
+              <a href="https://es.wikipedia.org/wiki/Castel_Sant%27Angelo" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Galería Borghese</h3>
+              <p class="text-sm text-gray-400 mt-1">Una de las colecciones de arte más importantes del mundo: Bernini, Caravaggio, Raphael. Solo 2 horas por turno. Reserva OBLIGATORIA con semanas de antelación.</p>
+              <a href="https://es.wikipedia.org/wiki/Galer%C3%ADa_Borghese" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Basílica de San Pedro</h3>
+              <p class="text-sm text-gray-400 mt-1">La iglesia más grande del mundo, centro de la fe católica. Basílica gratis; subir a la cúpula cuesta €8 (a pie) o €10 (ascensor). Requiere ropa que cubra hombros y rodillas.</p>
+              <a href="https://es.wikipedia.org/wiki/Bas%C3%ADlica_de_San_Pedro" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+            <li class="py-4 group">
+              <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-all group-hover:translate-x-1">Campo de' Fiori</h3>
+              <p class="text-sm text-gray-400 mt-1">Animada plaza con mercado de flores por la mañana y ambiente de bares por la noche. Muy popular entre locales. La estatua central es de Giordano Bruno, quemado en este mismo lugar en 1600.</p>
+              <a href="https://es.wikipedia.org/wiki/Campo_de%27_Fiori" target="_blank" class="text-xs text-amber-500 hover:text-amber-400 mt-2 inline-flex items-center gap-1">Ver en Wikipedia ↗</a>
+            </li>
+          </ul>
         </section>
 
       </div>
 
-      <!-- SIDEBAR STICKY -->
-      <aside class="lg:col-span-4 sticky top-20 self-start space-y-8">
-        
-        <!-- REQUISITOS -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h3 class="text-xl font-bold text-white mb-4">Requisitos 2025</h3>
-          <p class="text-xs text-gray-400 mb-4">Recuerda tramitar tu <strong class="text-white">ETIAS</strong> (€7) si viajas desde Latinoamérica o USA a partir de 2025.</p>
-          <a href="#" class="block text-center bg-amber-600 font-bold py-3 rounded-xl text-white text-xs">Información Oficial</a>
+      <!-- ────────────────────────────────────── -->
+      <!--  SIDEBAR DERECHO                       -->
+      <!-- ────────────────────────────────────── -->
+      <aside class="lg:col-span-4 sticky top-8 self-start space-y-8">
+
+        <!-- VISA -->
+        <div id="sec-visa" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+            Visa y Entrada a Italia
+          </h3>
+          <p class="text-sm text-gray-400">Italia forma parte del <strong class="text-white">Espacio Schengen</strong>. Ciudadanos de la UE entran con DNI. Latinoamericanos de muchos países no necesitan visa para estancias de hasta 90 días. Desde 2025 es obligatorio el <strong class="text-white">ETIAS</strong> (~€7).</p>
+          <a href="https://travel.ec.europa.eu/etias_es" target="_blank" class="w-full text-center bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-amber-900/20">Solicitar ETIAS Oficial</a>
         </div>
 
         <!-- PRESUPUESTO -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h3 class="text-xl font-bold text-white mb-4">Presupuesto Diario</h3>
-          <ul class="text-sm space-y-3">
-            <li class="flex justify-between"><span>🏨 Hotel Medio</span><span class="text-white font-bold">€110</span></li>
-            <li class="flex justify-between"><span>🍝 Comida + Vino</span><span class="text-white font-bold">€45</span></li>
-            <li class="flex justify-between"><span>🚌 Transporte</span><span class="text-white font-bold">€7</span></li>
+        <div id="sec-presupuesto" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Presupuesto Diario
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Alojamiento (Medio)</span><span class="font-semibold text-white">€120</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Comida (3 comidas)</span><span class="font-semibold text-white">€50</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Transporte</span><span class="font-semibold text-white">€8</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Atracciones</span><span class="font-semibold text-white">€35</span></li>
           </ul>
           <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center">
-            <span class="text-gray-400">Total:</span><span class="text-amber-500 font-bold text-2xl">€162<span class="text-xs font-normal"> / día</span></span>
+            <span class="text-gray-400">Total aprox:</span>
+            <span class="font-bold text-amber-500 text-2xl">€213<span class="text-sm font-normal text-amber-500/70"> / día</span></span>
           </div>
         </div>
 
         <!-- CLIMA -->
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
-          <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-widest text-gray-500">Clima Promedio</h3>
-          <table class="w-full text-[10px] text-center">
-            <tr class="text-gray-500 uppercase border-b border-white/5">
-              <th class="pb-1">Mes</th><th>Max</th><th>Min</th><th>Sol</th>
-            </tr>
-            <tr><td class="py-1">Ene</td><td class="text-blue-200">12°C</td><td class="text-blue-400">3°C</td><td>☁️</td></tr>
-            <tr><td class="py-1">Abr</td><td class="text-yellow-200">19°C</td><td class="text-yellow-400">8°C</td><td>🌤️</td></tr>
-            <tr><td class="py-1">Jul</td><td class="text-orange-200">31°C</td><td class="text-orange-400">18°C</td><td>☀️</td></tr>
-            <tr><td class="py-1">Oct</td><td class="text-yellow-200">22°C</td><td class="text-yellow-400">12°C</td><td>🌤️</td></tr>
+        <div id="sec-clima" class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Clima Promedio</h3>
+          <table class="w-full text-sm text-center border-separate border-spacing-y-1">
+            <thead>
+              <tr class="text-gray-400 text-xs uppercase tracking-wider">
+                <th class="font-normal text-left pb-2">Mes</th>
+                <th class="font-normal pb-2">Máx</th>
+                <th class="font-normal pb-2">Mín</th>
+                <th class="font-normal pb-2">Lluvia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ene</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">12°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">3°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Feb</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">13°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">4°C</td><td class="py-2 text-gray-400">7 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Mar</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">16°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">7°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Abr</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">19°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">10°C</td><td class="py-2 text-gray-400">7 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">May</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">24°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">14°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jun</td><td class="py-2 bg-red-900/30 text-red-200 rounded-l-md font-medium">29°C</td><td class="py-2 bg-red-900/30 text-red-200 rounded-r-md font-medium">18°C</td><td class="py-2 text-gray-400">3 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Jul</td><td class="py-2 bg-red-900/30 text-red-200 rounded-l-md font-medium">32°C</td><td class="py-2 bg-red-900/30 text-red-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">1 día</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Ago</td><td class="py-2 bg-red-900/30 text-red-200 rounded-l-md font-medium">32°C</td><td class="py-2 bg-red-900/30 text-red-200 rounded-r-md font-medium">21°C</td><td class="py-2 text-gray-400">2 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Sep</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-l-md font-medium">27°C</td><td class="py-2 bg-orange-900/40 text-orange-200 rounded-r-md font-medium">18°C</td><td class="py-2 text-gray-400">5 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Oct</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-l-md font-medium">22°C</td><td class="py-2 bg-yellow-900/30 text-yellow-200 rounded-r-md font-medium">14°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Nov</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">16°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">9°C</td><td class="py-2 text-gray-400">9 días</td></tr>
+              <tr><td class="py-2 text-left text-gray-300 font-semibold">Dic</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-l-md font-medium">13°C</td><td class="py-2 bg-blue-900/40 text-blue-200 rounded-r-md font-medium">5°C</td><td class="py-2 text-gray-400">8 días</td></tr>
+            </tbody>
           </table>
         </div>
 
-        <!-- DID YOU KNOW -->
+        <!-- TIPS EXCLUSIVOS -->
         <div class="bg-amber-600/10 border border-amber-600/20 rounded-2xl p-6 glass-shine">
-          <h3 class="text-xl font-bold text-amber-500 mb-4">¿Sabías que...?</h3>
-          <p class="text-xs text-gray-300">Hay más de <strong class="text-white">2,500 fuentes (nasoni)</strong> gratuitas. No compres botellas de plástico, rellena la tuya con agua helada.</p>
+          <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674m-6.733-7.31L12 3m0 0l2.733 6.69M12 3v14m-5.4 1a1 1 0 01-1-1 7 7 0 1112.8 0 1 1 0 01-1 1H6.6z"/></svg>
+            ¿Sabías que...?
+          </h3>
+          <ul class="space-y-4 text-sm">
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Reserva el Coliseo con meses de antelación</span>
+              En temporada alta (abril-octubre) las entradas se agotan semanas antes. Reserva en el sitio oficial colosseumrome.it. Nunca compres en la calle.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Agua gratis: los Nasoni</span>
+              Roma tiene más de 2.500 fuentes de agua potable gratis llamadas "nasoni". Lleva una botella reutilizable y ahorra dinero todo el viaje.
+            </li>
+            <li class="text-gray-300">
+              <span class="text-amber-500 font-bold block mb-1">Código de vestimenta en iglesias</span>
+              Hombros y rodillas cubiertos para entrar al Vaticano y muchas basílicas. Lleva siempre un pañuelo o camiseta extra en la mochila.
+            </li>
+          </ul>
         </div>
 
-        <!-- STATUS -->
+        <!-- TRANSPORTE STATUS -->
         <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <p class="text-[10px] text-green-400 font-bold">Metro ATAC Status: OK</p>
+            <div class="relative">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div class="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+            </div>
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Estado del Metro</p>
+              <p class="text-xs text-green-400 font-bold">Servicio Normal (Líneas A y B)</p>
+            </div>
           </div>
+          <a href="https://www.atac.roma.it/" target="_blank" class="text-[10px] text-gray-400 hover:text-white underline font-bold">ATAC Oficial</a>
         </div>
 
       </aside>
-
     </div>
   </main>
 
-  <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-    © 2024 Skylio Travel 2.0. Enlaces de afiliados — Roma te espera.
-  </footer>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  SCRIPTS                                   -->
+  <!-- ══════════════════════════════════════════ -->
 
   <script>
-    async function loadRomeVideos() {
-      const container = document.getElementById('youtube-gallery');
-      const fallbackVideos = [
-        { id: 'xywWUb4XaL8', title: 'ROMA: La Guía Definitiva' },
-        { id: '-54PGS09v5s', title: 'GUÍA COMPLETA ROMA: Qué ver y hacer' },
-        { id: 'EmAErjY5XbA', title: 'RUTA DE 3 DÍAS EN ROMA Y VATICANO' }
-      ];
-
-      try {
-        const response = await fetch('/api/youtube-search?query=roma+guia+viaje+español');
-        if (!response.ok) throw new Error();
-        const videos = await response.json();
-        renderVideos(videos.slice(0, 3));
-      } catch (e) {
-        renderVideos(fallbackVideos);
-      }
-    }
-
+    // ─── VIDEOS YOUTUBE ───────────────────────────────────────────────────
     function renderVideos(videos) {
       const container = document.getElementById('youtube-gallery');
       container.innerHTML = videos.map(v => `
         <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all hover:-translate-y-1">
           <div class="relative aspect-video">
-            <img src="https://img.youtube.com/vi/${v.id || v.videoId}/mqdefault.jpg" class="w-full h-full object-cover">
+            <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
           </div>
           <div class="p-4">
-            <h3 class="text-xs font-bold text-white line-clamp-2">${v.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${v.id || v.videoId}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-widest hover:underline">Ver en YouTube ↗</a>
+            <h3 class="text-sm font-bold text-white line-clamp-2">${v.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" class="mt-3 inline-block text-[10px] font-bold text-red-500 uppercase tracking-wider hover:underline">Ver en YouTube ↗</a>
           </div>
         </div>
       `).join('');
     }
-    document.addEventListener('DOMContentLoaded', loadRomeVideos);
+
+    // ─── INIT ─────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      renderVideos([
+        { id: 'Nai-Ipc77X0', title: 'Qué hacer y ver en ROMA 2026 | TODO lo que debes saber 🇮🇹' },
+        { id: 'EmAErjY5XbA', title: 'RUTA DE 3 DÍAS EN ROMA 🇮🇹 Que VER y HACER | Guía de viaje ROMA Y VATICANO' },
+        { id: '_Sq-yV_M2BA', title: '🧳️ TOP 10 Que Ver en Roma 🍕 Guía Turística' }
+      ]);
+    });
+  </script>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  SKYLIO CHAT (CityBridge)                  -->
+  <!-- ══════════════════════════════════════════ -->
+  <button id="skylio-ai-btn" onclick="window.SkylioChat.toggle()" style="position:fixed;bottom:24px;right:32px;z-index:9999;display:flex;align-items:center;gap:8px;background:rgba(10,15,22,0.9);border:1px solid rgba(245,158,11,0.5);color:#fbbf24;font-weight:700;font-size:14px;padding:12px 20px;border-radius:999px;backdrop-filter:blur(16px);box-shadow:0 0 24px rgba(245,158,11,0.2),0 4px 20px rgba(0,0,0,0.5);cursor:pointer;transition:all 0.2s;" onmouseover="this.style.boxShadow='0 0 36px rgba(245,158,11,0.4),0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.8)'" onmouseout="this.style.boxShadow='0 0 24px rgba(245,158,11,0.2),0 4px 20px rgba(0,0,0,0.5)';this.style.borderColor='rgba(245,158,11,0.5)'">✨ Asistente IA</button>
+
+  <div id="skylio-chat-panel" style="display:none;position:fixed;bottom:84px;right:32px;z-index:9998;width:360px;height:500px;background:rgba(10,15,22,0.97);border:1px solid rgba(245,158,11,0.3);border-radius:24px;flex-direction:column;box-shadow:0 0 60px rgba(245,158,11,0.12),0 20px 60px rgba(0,0,0,0.7);overflow:hidden;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(245,158,11,0.2);background:rgba(245,158,11,0.05);flex-shrink:0;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;font-size:15px;">✨</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:13px;">Skylio IA · Roma</div>
+          <div style="color:#6b7280;font-size:11px;">Pregunta sobre transporte, hoteles, visas…</div>
+        </div>
+      </div>
+      <button onclick="window.SkylioChat.toggle()" style="background:none;border:none;color:#6b7280;font-size:20px;cursor:pointer;line-height:1;padding:4px 6px;" onmouseover="this.style.color='#e5e7eb'" onmouseout="this.style.color='#6b7280'">✕</button>
+    </div>
+    <div id="skylio-chat-messages" style="flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:rgba(245,158,11,0.2) transparent;">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;">
+          <p style="color:#e5e7eb;font-size:13px;line-height:1.5;margin:0;">¡Ciao! Soy tu guía IA para Roma. Prueba con:<br><br><strong style="color:#fbbf24;">coliseo</strong> · <strong style="color:#fbbf24;">vaticano</strong> · <strong style="color:#fbbf24;">transporte</strong><br>o pregunta lo que quieras 👇</p>
+        </div>
+      </div>
+    </div>
+    <div style="padding:10px 14px;border-top:1px solid rgba(245,158,11,0.15);display:flex;gap:8px;background:rgba(10,15,22,0.8);flex-shrink:0;">
+      <input id="skylio-chat-input" type="text" placeholder="Escribe tu pregunta…" style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:9px 13px;color:#e5e7eb;font-size:13px;outline:none;" onkeydown="if(event.key==='Enter')window.SkylioChat.send()" onfocus="this.style.borderColor='rgba(245,158,11,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'" />
+      <button onclick="window.SkylioChat.send()" style="background:rgba(245,158,11,0.9);border:none;color:#000;font-weight:700;padding:9px 15px;border-radius:12px;cursor:pointer;font-size:14px;transition:background 0.15s;" onmouseover="this.style.background='#f59e0b'" onmouseout="this.style.background='rgba(245,158,11,0.9)'">↑</button>
+    </div>
+  </div>
+
+  <script>window.SKYLIO_CITY_DATA_URL = '../roma_full.json';</script>
+  <script src="../../../js/logic/city-bridge.js"></script>
+  <script>
+window.SkylioChat = {
+  _open: false,
+  toggle() {
+    const panel = document.getElementById('skylio-chat-panel');
+    this._open = !this._open;
+    panel.style.display = this._open ? 'flex' : 'none';
+    if (this._open) setTimeout(() => document.getElementById('skylio-chat-input').focus(), 50);
+  },
+  send() {
+    const input = document.getElementById('skylio-chat-input');
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = '';
+    const messages = document.getElementById('skylio-chat-messages');
+    const safeText = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const userBubble = document.createElement('div');
+    userBubble.style.cssText = 'display:flex;justify-content:flex-end;';
+    userBubble.innerHTML = '<div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.25);border-radius:14px 0 14px 14px;padding:9px 13px;max-width:88%;"><p style="color:#fbbf24;font-size:13px;line-height:1.5;margin:0;">' + safeText + '</p></div>';
+    messages.appendChild(userBubble);
+    messages.scrollTop = messages.scrollHeight;
+    let response = window.CityBridge ? window.CityBridge.handleChatQuery(text) : null;
+    if (!response) response = 'No tengo información sobre eso. Prueba con **coliseo**, **vaticano**, **transporte**, **visa** o **clima**.';
+    const safeResponse = response.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\*\*(.*?)\*\*/g,'<strong style="color:#fbbf24">$1</strong>').replace(/\n/g,'<br>');
+    const aiBubble = document.createElement('div');
+    aiBubble.style.cssText = 'display:flex;gap:8px;align-items:flex-start;';
+    aiBubble.innerHTML = '<div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✨</div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:0 14px 14px 14px;padding:10px 13px;max-width:88%;"><p style="color:#e5e7eb;font-size:13px;line-height:1.6;margin:0;">' + safeResponse + '</p></div>';
+    messages.appendChild(aiBubble);
+    messages.scrollTop = messages.scrollHeight;
+  }
+};
   </script>
 
 </body>
-
 </html>

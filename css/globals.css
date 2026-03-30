@@ -1,0 +1,57 @@
+/* Skylio 2.0 - Global Premium Dark Theme */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --skylio-bg: #0a0f16;
+  --skylio-orange: rgb(249, 115, 22); /* Tailwind Orange-500 */
+  --skylio-glass-bg: rgba(255, 255, 255, 0.03);
+  --skylio-glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0f16] text-slate-200 antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .glassmorphism-premium {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hover-glow-orange {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow-orange:hover {
+    @apply border-orange-500/50 shadow-[0_0_20px_rgba(249,115,22,0.15)];
+    background: rgba(255, 255, 255, 0.07);
+  }
+}
+
+/* Specific AntiGravity UI Utility */
+.antigravity-state-indicator {
+  @apply fixed bottom-5 right-5 w-3 h-3 rounded-full animate-pulse;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.antigravity-state-indicator[data-mode="Coche"] {
+  @apply bg-blue-500;
+}
+
+.antigravity-state-indicator[data-mode="Transporte Público"] {
+  @apply bg-green-500;
+}

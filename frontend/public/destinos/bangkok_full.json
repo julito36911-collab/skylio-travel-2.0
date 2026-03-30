@@ -1,0 +1,224 @@
+{
+  "destination": "Bangkok",
+  "id": "bangkok",
+  "version": "2.0",
+  "hotels": [
+    {
+      "name": "Mandarin Oriental",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 13.7234, "lng": 100.5167 },
+      "labels": ["SUKHUMVIT", "RIO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Banyan Tree Bangkok",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 13.7222, "lng": 100.5283 },
+      "labels": ["SILOM", "ROOFTOP"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Capella Bangkok",
+      "category": "Lujo",
+      "rating": 5,
+      "coords": { "lat": 13.7198, "lng": 100.5135 },
+      "labels": ["OLD CITY", "RIO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$$"
+    },
+    {
+      "name": "Novotel Bangkok Sukhumvit",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 13.7377, "lng": 100.5605 },
+      "labels": ["SUKHUMVIT", "BTS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "ibis Bangkok Sathorn",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 13.7207, "lng": 100.5311 },
+      "labels": ["SILOM", "CENTRO"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Riva Arun Bangkok",
+      "category": "Medio",
+      "rating": 4,
+      "coords": { "lat": 13.7440, "lng": 100.4888 },
+      "labels": ["OLD CITY", "WAT ARUN"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$$"
+    },
+    {
+      "name": "Lub d Bangkok Silom",
+      "category": "Economico",
+      "rating": 3,
+      "coords": { "lat": 13.7267, "lng": 100.5305 },
+      "labels": ["SILOM"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "The Yard Hostel",
+      "category": "Economico",
+      "rating": 3,
+      "coords": { "lat": 13.7380, "lng": 100.5610 },
+      "labels": ["SUKHUMVIT", "BTS"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    },
+    {
+      "name": "HQ Hostel Bangkok",
+      "category": "Economico",
+      "rating": 3,
+      "coords": { "lat": 13.7260, "lng": 100.5295 },
+      "labels": ["SILOM"],
+      "link": "https://www.hotels.com/Hotel-Search?destination=Bangkok%2C%20Thailand&sort=RECOMMENDED&tmid=hcom-us.dps.cj.package-.package&PSRC=AFF10&sub_publisher=7702066&sub_site=101526697&sub_ad=13828058&affcid=HCOM-NA.NETWORK.CJ.101526697",
+      "price_level": "$"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "name": "Gran Palacio & Wat Phra Kaew",
+      "description": "El complejo mas impresionante de Tailandia. El Palacio Real y el Templo del Buda de Esmeralda en un solo recinto.",
+      "price": "500 THB (13 EUR)",
+      "klook_url": "https://www.klook.com/search/result/?query=grand+palace+bangkok+tour&needQueryIdentification=true"
+    },
+    {
+      "name": "Wat Arun (Templo del Amanecer)",
+      "description": "La torre de porcelana mas fotografiada de Bangkok. Accesible en ferry por 5 THB. Espectacular al atardecer.",
+      "price": "100 THB (3 EUR)",
+      "klook_url": "https://www.klook.com/search/result/?query=wat+arun+bangkok&needQueryIdentification=true"
+    },
+    {
+      "name": "Wat Pho - El Buda Reclinado",
+      "description": "Un Buda de oro de 46 metros de largo cubierto de pan de oro. El templo mas antiguo y grande de Bangkok, cuna del masaje thai.",
+      "price": "200 THB (5 EUR)",
+      "klook_url": "https://www.klook.com/search/result/?query=wat+pho+reclining+buddha+bangkok&needQueryIdentification=true"
+    },
+    {
+      "name": "Mercado Flotante de Damnoen Saduak",
+      "description": "Barcas cargadas de frutas y comida navegando por canales centenarios. Imagen iconica de Tailandia a 1 hora de Bangkok.",
+      "price": "Tour desde 20-30 EUR",
+      "klook_url": "https://www.klook.com/search/result/?query=floating+market+bangkok+damnoen&needQueryIdentification=true"
+    }
+  ],
+  "itineraries": {
+    "day_1": [
+      { "time": "08:00", "activity": "Gran Palacio y Wat Phra Kaew (llegar antes de las 9 AM para evitar colas)." },
+      { "time": "10:30", "activity": "Caminar a Wat Pho para ver el Buda Reclinado." },
+      { "time": "14:00", "activity": "Ferry al otro lado del rio y subir a Wat Arun." },
+      { "time": "18:00", "activity": "Cena en un restaurante flotante en el Chao Phraya." }
+    ],
+    "day_2": [
+      { "time": "09:00", "activity": "BTS a Sukhumvit. Explorar Terminal 21 (centro comercial tematico por paises)." },
+      { "time": "13:00", "activity": "Almuerzo en Sukhumvit. Chatuchak si es fin de semana." },
+      { "time": "18:00", "activity": "Rooftop bar: Vertigo en Banyan Tree o Sky Bar del State Tower." }
+    ],
+    "day_3": [
+      { "time": "09:00", "activity": "Museo Nacional o Jim Thompson House." },
+      { "time": "14:00", "activity": "Masaje thai tradicional en Wat Pho (8 EUR/hora)." },
+      { "time": "20:00", "activity": "Noche en Yaowarat (Chinatown): mariscos frescos y pad thai." }
+    ]
+  },
+  "intents": [
+    {
+      "id": "gran_palacio",
+      "triggers": ["gran palacio", "palacio real", "wat phra kaew", "buda de esmeralda", "grand palace", "palacio"],
+      "scrollTo": "sec-lugares",
+      "response": "🏯 **Gran Palacio & Wat Phra Kaew:**\n\nEl complejo mas impresionante de Tailandia. El Palacio Real y el Templo del Buda de Esmeralda en un solo recinto.\n\n🎟️ **Precio:** 500 THB (~€13)\n👔 **Codigo de vestimenta obligatorio:** Ropa que cubra hombros y rodillas.\n🕘 **Consejo:** Llega antes de las 9 AM para evitar las colas.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "wat_arun",
+      "triggers": ["wat arun", "templo del amanecer", "templo amanecer", "arun"],
+      "scrollTo": "sec-lugares",
+      "response": "🌅 **Wat Arun (Templo del Amanecer):**\n\nLa torre de porcelana mas fotografiada de Bangkok. Al otro lado del rio Chao Phraya.\n\n🎟️ **Precio:** 100 THB (~€3)\n⛴️ **Acceso:** Ferry por solo 5 THB\n📸 **Mejor momento:** Espectacular al atardecer desde el lado opuesto del rio.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "wat_pho",
+      "triggers": ["wat pho", "buda reclinado", "buda de oro", "buda gigante", "masaje thai"],
+      "scrollTo": "sec-lugares",
+      "response": "🙏 **Wat Pho — El Buda Reclinado:**\n\nUn Buda de oro de **46 metros de largo** cubierto de pan de oro. Es el templo mas antiguo y grande de Bangkok, y la **cuna del masaje thai tradicional**.\n\n🎟️ **Precio:** 200 THB (~€5)\n💆 **Masaje thai en Wat Pho:** ~€8/hora (de los mejores y mas autenticos).\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "mercado_flotante",
+      "triggers": ["mercado flotante", "floating market", "damnoen", "damnoen saduak", "barcas", "canales"],
+      "scrollTo": "sec-lugares",
+      "response": "🛶 **Mercado Flotante de Damnoen Saduak:**\n\nBarcas cargadas de frutas y comida navegando por canales centenarios. Una imagen iconica de Tailandia a **1 hora de Bangkok**.\n\n💰 **Tour:** Desde €20-€30\n🕘 **Consejo clave:** Ir muy temprano, **antes de las 9 AM**. Despues se llena de turistas.\n\n⬇️ He hecho scroll a Lugares Imperdibles."
+    },
+    {
+      "id": "khao_san",
+      "triggers": ["khao san", "khaosan", "mochilero", "mochileros", "backpacker"],
+      "scrollTo": "sec-directorio",
+      "response": "🎒 **Khao San Road:**\n\nLa calle mas famosa del mundo mochilero. Bares, puestos de comida, tatuajes, vendedores de todo tipo y viajeros de cada rincon del planeta.\n\nEs caotica, ruidosa y absolutamente indispensable para entender Bangkok. Mejor ir de noche cuando cobra vida.\n\n⬇️ He hecho scroll al Directorio."
+    },
+    {
+      "id": "transporte",
+      "triggers": ["transporte", "tuk tuk", "tuk-tuk", "tuktuk", "bts", "skytrain", "metro", "mrt", "moverme", "mover", "grab", "taxi", "rabbit card", "moverse"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "🚇 **Moverse por Bangkok:**\n\n🚈 **BTS Skytrain** y **MRT Metro** son la mejor forma — rapidos, baratos (€0.30-€1 por viaje) y con aire acondicionado.\n💳 Compra una **Rabbit Card** (BTS) o **MRT Card** para no hacer colas.\n📱 Usa la app **Grab** (el Uber de Asia) para taxis sin regateo.\n\n⚠️ **Cuidado con Tuk-Tuks:** Si te ofrecen un tour por solo 50 THB, te llevaran a sastrerias y joyerias donde ganan comision. Fija el precio antes de subir.\n\n⬇️ He hecho scroll a la seccion de transporte."
+    },
+    {
+      "id": "aeropuerto",
+      "triggers": ["aeropuerto", "suvarnabhumi", "don mueang", "don muang", "bkk", "dmk", "llegar", "aterrizar", "vuelo", "airport rail link"],
+      "scrollTo": "sec-aeropuertos",
+      "response": "✈️ **Desde Suvarnabhumi (BKK):**\nToma el **Airport Rail Link** — tren directo a Phaya Thai en **30 minutos por 45 THB (€1.20)**. Conecta con BTS. Funciona de 6 AM a 12 AM.\nTaxi oficial: ~€8-€15 al centro (añade 50 THB de peaje).\n\n**Desde Don Mueang (DMK)** (low-cost):\nBus **A1 o A2** hasta Mo Chit BTS (30 min, 30 THB). Taxi: ~€8-€12.\n\n🔄 **Entre aeropuertos:** Bus gratuito para pasajeros con billete (45-60 min).\n\n⬇️ He hecho scroll a la seccion de aeropuertos."
+    },
+    {
+      "id": "visa",
+      "triggers": ["visa", "requisitos", "entrar", "entrada", "pasaporte", "permiso", "documentos", "papeles", "inmigración", "inmigracion"],
+      "scrollTo": "sec-visa",
+      "response": "🛂 **Requisitos de entrada a Tailandia:**\n\nDesde 2024, Tailandia ofrece **entrada sin visa por 60 dias** para ciudadanos de España, Mexico, Argentina, Colombia y la mayoria de paises hispanohablantes.\n\n📋 Solo necesitas:\n• Pasaporte valido con **minimo 6 meses de vigencia**\n• Billete de regreso\n\n⬇️ He hecho scroll al widget de visado con el enlace oficial."
+    },
+    {
+      "id": "itinerario",
+      "triggers": ["itinerario", "que hacer", "qué hacer", "ruta", "plan", "dias", "días", "visitar", "recorrido", "express", "3 dias", "3 días", "7 dias", "7 días"],
+      "scrollTo": "sec-itinerarios",
+      "response": "🗓️ **Itinerarios para Bangkok:**\n\n⏱️ **3 Dias Express:**\n• **Dia 1:** Gran Palacio + Wat Pho + Wat Arun + cena flotante en el rio.\n• **Dia 2:** BTS a Sukhumvit, Terminal 21, Chatuchak (finde), rooftop bar de noche.\n• **Dia 3:** Jim Thompson House, masaje en Wat Pho, noche en Chinatown (Yaowarat).\n\n🎒 **7 Dias:** Añade Ayutthaya (dia 4, tren €2, 1.5h) + 3 dias en islas del Golfo (Koh Samui/Koh Phangan).\n\n⬇️ He hecho scroll a los itinerarios detallados."
+    },
+    {
+      "id": "zonas",
+      "triggers": ["zona", "zonas", "barrio", "barrios", "donde dormir", "dónde dormir", "quedarse", "sukhumvit", "silom", "sathorn", "rattanakosin", "yaowarat", "chinatown", "alojarse"],
+      "scrollTo": "sec-zonas",
+      "response": "📍 **Guia rapida de zonas en Bangkok:**\n\n🏯 **Rattanakosin (Ciudad Antigua)** — Gran Palacio, Wat Pho, Wat Arun. Turistica pero impresionante.\n🏙️ **Sukhumvit** — Moderna, hoteles de lujo, rooftops, mejor conexion BTS. Ideal para comodidad occidental.\n💼 **Silom & Sathorn** — Distrito financiero, Sky Bar, Chinatown cerca. Precios mas razonables.\n🏮 **Chinatown (Yaowarat)** — El mejor street food de Bangkok. Imprescindible de noche.\n\n⬇️ He hecho scroll al mapa de zonas."
+    },
+    {
+      "id": "clima",
+      "triggers": ["clima", "tiempo", "temperatura", "lluvia", "calor", "monzón", "monzon", "cuando ir", "cuándo ir", "mejor época", "mejor mes", "mejor epoca", "verano", "seca", "humedo"],
+      "scrollTo": "sec-clima",
+      "response": "🌤️ **Clima de Bangkok:**\n\n☀️ **Mejor epoca:** Nov-Feb (temporada seca, 28-32°C, relativamente fresco).\n🔥 **Mar-May:** Periodo mas caluroso, hasta 36-38°C. Evitalo si puedes.\n🌧️ **Jun-Oct:** Temporada de monzones, lluvias fuertes pero cortas (14-18 dias de lluvia/mes).\n\n💡 Bangkok es calurosa todo el año (minimo 22°C incluso en 'invierno'). Lleva ropa ligera y proteccion solar siempre.\n\n⬇️ He hecho scroll a la tabla de clima mensual."
+    },
+    {
+      "id": "presupuesto",
+      "triggers": ["presupuesto", "precio", "precios", "caro", "barato", "cuanto cuesta", "cuánto cuesta", "dinero", "coste", "costo", "euros", "baht", "thb", "cambio"],
+      "scrollTo": "sec-presupuesto",
+      "response": "💰 **Presupuesto diario en Bangkok:**\n\n🏨 Alojamiento (medio): **€30-€60**\n🍽️ Comida (street food + rest.): **€10-€20**\n🚇 BTS/MRT + Grab: **€5-€10**\n🏯 Templos y actividades: **€10-€20**\n\n📊 **Total aprox: ~€55/dia** (viajero medio)\n\n💡 Bangkok es muy economica. Un plato de pad thai callejero cuesta €1-€2. Una cerveza en 7-Eleven: €1.50.\n\n⬇️ He hecho scroll al widget de presupuesto."
+    },
+    {
+      "id": "comida",
+      "triggers": ["comer", "comida", "restaurante", "pad thai", "street food", "comida callejera", "gastronomia", "gastronomía", "curry", "som tam", "mango sticky rice", "desayunar", "cenar", "mariscos"],
+      "scrollTo": "sec-zonas",
+      "response": "🍜 **Comer en Bangkok:**\n\n🥘 **Street food imprescindible:** Pad Thai, Som Tam (ensalada de papaya), Mango Sticky Rice, curry verde, brochetas de cerdo.\n🏮 **Chinatown (Yaowarat):** El mejor street food de Bangkok. Ir despues de las 8 PM cuando los puestos cobran vida. Mariscos frescos increibles.\n🍽️ **Sukhumvit:** Restaurantes internacionales y rooftops.\n\n💰 **Precios:** Plato callejero: €1-€2. Restaurante medio: €5-€10.\n\n⚠️ Evita comer en puestos vacios — los locales saben donde esta lo bueno. Sigue a la multitud."
+    },
+    {
+      "id": "chatuchak",
+      "triggers": ["chatuchak", "mercado grande", "mercado fin de semana", "weekend market", "compras", "shopping"],
+      "scrollTo": "sec-directorio",
+      "response": "🛍️ **Mercado de Chatuchak:**\n\nEl mercado mas grande de Asia con mas de **15.000 puestos**. Solo abre **sabados y domingos**.\n\nRopa, antiguedades, plantas, comida y absolutamente todo. Llega **antes de las 10 AM** para evitar el calor y las multitudes.\n\n📍 Acceso: BTS Mo Chit o MRT Chatuchak Park.\n\n⬇️ He hecho scroll al Directorio."
+    },
+    {
+      "id": "hoteles",
+      "triggers": ["hotel", "hoteles", "hostel", "hostales", "alojamiento", "dormir", "reservar", "mandarin", "banyan tree", "novotel", "ibis"],
+      "scrollTo": "sec-hoteles",
+      "response": "🏨 **Donde dormir en Bangkok:**\n\n⭐ **Lujo:** Mandarin Oriental (rio), Banyan Tree (rooftop Vertigo), Capella (villas privadas).\n🏨 **Medio:** Novotel Sukhumvit (BTS a 2 min), ibis Sathorn (centrico), Riva Arun (vistas a Wat Arun desde €60).\n🛌 **Economico:** Lub d Silom (desde €15), The Yard Hostel (piscina), HQ Hostel.\n\n💡 **Mejor zona para alojarse:** Sukhumvit si quieres comodidad y conexion BTS. Old City si prefieres estar cerca de templos.\n\n⬇️ He hecho scroll a la seccion de hoteles."
+    }
+  ]
+}

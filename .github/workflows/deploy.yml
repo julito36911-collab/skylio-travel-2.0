@@ -26,6 +26,9 @@ jobs:
 
       - name: Build de produccion
         working-directory: ./frontend
+        env:
+          REACT_APP_BACKEND_URL: https://skylio-travel-2-0.onrender.com
+          REACT_APP_NEWS_API_KEY: 93565e60323046efb9dbcb4c1cc968e4
         run: npm run build
 
       - name: Preparar permisos locales antes de subir

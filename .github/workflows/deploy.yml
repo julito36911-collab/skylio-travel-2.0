@@ -28,6 +28,12 @@ jobs:
         working-directory: ./frontend
         run: npm run build
 
+      - name: Debug FTP - ver directorio raiz
+        run: |
+          curl -v --list-only ftp://${{ secrets.FTP_SERVER }}/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 | head -50
+          echo "---LISTING public_html---"
+          curl -v --list-only ftp://${{ secrets.FTP_SERVER }}/public_html/ --user "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" 2>&1 | head -50
+
       - name: Subir a Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

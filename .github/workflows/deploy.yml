@@ -4,11 +4,7 @@ on:
   push:
     branches:
       - prueva-1
-defaults:
-  run:
-      working-directory: ./frontend
 
-      
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,12 +21,12 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Instalar dependencias
-        run: |
-          npm install --legacy-peer-deps
+        working-directory: ./frontend
+        run: npm install --legacy-peer-deps
 
-      - name: Build de producción
-        run: |
-          npm run build
+      - name: Build de produccion
+        working-directory: ./frontend
+        run: npm run build
 
       - name: Subir a Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -38,8 +34,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: frontend/build/
-          server-dir: ./public_html/
+          local-dir: ./frontend/build/
+          server-dir: /public_html/
           dangerous-clean-slate: true
           exclude: |
             **/.git*
